@@ -212,6 +212,7 @@ export namespace Components {
          */
         "color"?: Color;
         "dsSize"?: 'sm' | 'md' | 'lg';
+        "fill"?: 'outline';
         /**
           * The mode determines which platform styles to use.
          */
@@ -2732,7 +2733,7 @@ export namespace Components {
         "respostaCorreta": string;
     }
     interface MedAutocomplete {
-        "disable": boolean;
+        "list": boolean;
     }
     interface MedBanner {
         "btnLeft": string;
@@ -3340,7 +3341,6 @@ declare global {
     var HTMLMedEnunciadoDiscursivaElement: {
         prototype: HTMLMedEnunciadoDiscursivaElement;
         new (): HTMLMedEnunciadoDiscursivaElement;
-
     };
     interface HTMLMedFontZoomElement extends Components.MedFontZoom, HTMLStencilElement {
     }
@@ -3490,6 +3490,7 @@ declare global {
         "med-cartao-resposta-item": HTMLMedCartaoRespostaItemElement;
         "med-cartao-resposta-lista": HTMLMedCartaoRespostaListaElement;
         "med-enunciado": HTMLMedEnunciadoElement;
+        "med-enunciado-discursiva": HTMLMedEnunciadoDiscursivaElement;
         "med-font-zoom": HTMLMedFontZoomElement;
         "med-header": HTMLMedHeaderElement;
         "med-image-zoom": HTMLMedImageZoomElement;
@@ -3698,6 +3699,7 @@ declare namespace LocalJSX {
          */
         "color"?: Color;
         "dsSize"?: 'sm' | 'md' | 'lg';
+        "fill"?: 'outline';
         /**
           * The mode determines which platform styles to use.
          */
@@ -6247,7 +6249,7 @@ declare namespace LocalJSX {
         "respostaCorreta": string;
     }
     interface MedAutocomplete {
-        "disable"?: boolean;
+        "list"?: boolean;
     }
     interface MedBanner {
         "btnLeft": string;

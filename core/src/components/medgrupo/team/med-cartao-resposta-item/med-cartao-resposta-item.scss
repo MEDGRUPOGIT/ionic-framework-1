@@ -9,7 +9,7 @@
   --color: rgba(#{$med-color-neutral-light-prime-rgb}, #{$med-opacity-level-semiopaque});
   --spacing: #{$med-spacing-inset-nano};
   --background: transparent;
-  --font-size: #{$med-font-size-md};
+  --font-size: #{$med-font-size-sm};
   --font-weight: #{$med-font-weight-regular};
   --line-height: #{$med-line-height-compressed};
   --icon-opacity: #{$med-opacity-level-half};
@@ -18,12 +18,13 @@
   border-style: var(--border-style);
   border-color: var(--border-color);
   background: var(--background);
-  padding: var(--spacing);
+  padding: 0;
   font-size: var(--font-size);
   font-weight: var(--font-weight);
   line-height: var(--line-height);
 
-  width: 100%;
+  width: 20%;
+  max-width: 80px;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -44,6 +45,11 @@
     outline: none;
     font: inherit;
     cursor: pointer;
+  }
+
+  @include breakpoint-up('md') {
+    width: 10%;
+    max-width: 80px;
   }
 }
 

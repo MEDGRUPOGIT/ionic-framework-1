@@ -1,3 +1,4 @@
+// ionic
 import { defineCustomElements} from '../loader/index.js';
 import '../css/core.css';
 import '../css/display.css';
@@ -11,10 +12,14 @@ import '../css/structure.css';
 import '../css/text-alignment.css';
 import '../css/text-transformation.css';
 import '../css/typography.css';
-import '../src/stories/assets/fsemeric.css';
-import '../src/stories/assets/custom.css';
-
 defineCustomElements();
+
+// storybook canvas
+import '../src/stories/assets/canvas.css';
+
+// med-components
+import '../src/stories/assets/fsemeric.css';
+import '../css/medsoft-theme.css';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

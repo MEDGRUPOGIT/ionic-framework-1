@@ -6,13 +6,13 @@ export default {
   decorators: [withDesign],
 };
 
-const TemplateTertiary = ({ disabled, expand, size, label }) => {
+const TemplateTertiary = ({ disabled, expand, size, slot }) => {
   return html`
     <ion-app class="storybook-only">
       <div class="storybook-only__container">
 
         <!-- component -->
-        <ion-button ds-name="tertiary" ?disabled=${disabled} .expand=${expand} ds-size=${size}>${label}</ion-button>
+        <ion-button ds-name="tertiary" ?disabled=${disabled} .expand=${expand} ds-size=${size}>${slot}</ion-button>
         <!-- component -->
 
       </div>
@@ -56,12 +56,13 @@ ButtonTertiary.argTypes = {
       defaultValue: { summary: 'undefined' },
     },
   },
-  label: {
+  slot: {
     control: { type: 'text' },
     defaultValue: 'button',
-    description: "Digite algo!",
+    description: '**Atributo utilizado apenas no storybook para visualização.**',
     table: {
-      type:  { summary: 'Atributo para testes no storybook apenas' },
+      type:  { summary: ['string'] },
+      defaultValue: { summary: 'button' },
     },
   },
 };

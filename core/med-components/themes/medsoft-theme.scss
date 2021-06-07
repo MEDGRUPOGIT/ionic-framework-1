@@ -1,0 +1,19 @@
+:root body.dark-mode {
+  --on-surface: #fff;
+  --surface: #121212;
+
+  ion-content {
+    --background: #141414;
+  }
+}
+
+:root body.light-mode {
+  --on-surface: #121212;
+  --surface: #fff;
+
+  ion-content {
+    --background: #fafafa;
+  }
+}
+
+@import "../../src/components/button/medgrupo/button.med.theme";
