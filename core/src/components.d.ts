@@ -10,7 +10,7 @@ import { IonicSafeString } from "./utils/sanitization";
 import { NavigationHookCallback } from "./components/route/route-interface";
 import { SelectCompareFn } from "./components/select/select-interface";
 import { MedAlternativaInterface } from "./components/medgrupo/team/med-alternativas/med-alternativas-interface";
-import { RangeValue as RangeValue1 } from "./components/range/range-interface";
+import { MedFontSize } from "./global/med-components/font-size.enum";
 import { headerResizeEventDetail } from "./components/medgrupo/global/med-header/med-header-interface";
 import { MedImagensZoomInterface } from "./components/medgrupo/global/med-image-zoom/med-image-zoom-interface";
 import { navbarResizeEventDetail } from "./components/medgrupo/global/med-navbar/med-navbar-interface";
@@ -2752,7 +2752,8 @@ export namespace Components {
         "imagens": string[] | string;
     }
     interface MedFontZoom {
-        "emitter": {emit: (value: RangeValue) => void};
+        "emitter": { emit: (value: MedFontSize) => void };
+        "value": MedFontSize;
     }
     interface MedHeader {
     }
@@ -6272,7 +6273,8 @@ declare namespace LocalJSX {
         "onMedGalleryRequest"?: (event: CustomEvent<string>) => void;
     }
     interface MedFontZoom {
-        "emitter": {emit: (value: RangeValue) => void};
+        "emitter": { emit: (value: MedFontSize) => void };
+        "value"?: MedFontSize;
     }
     interface MedHeader {
         "onMedResize"?: (event: CustomEvent<headerResizeEventDetail>) => void;

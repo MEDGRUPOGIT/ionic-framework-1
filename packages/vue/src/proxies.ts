@@ -856,7 +856,8 @@ export const MedEnunciadoDiscursiva = /*@__PURE__*/ defineContainer<JSX.MedEnunc
 
 
 export const MedFontZoom = /*@__PURE__*/ defineContainer<JSX.MedFontZoom>('med-font-zoom', [
-  'emitter'
+  'emitter',
+  'value'
 ]);
 
 
