@@ -1,19 +1,8 @@
 @import "../../../../../med-components/abstracts";
 
 :host {
-  --alternativa-spacing: #{$med-spacing-stack-xs};
-  --alternativa-color: #{$med-color-neutral-dark-10};
-  --alternativa-font-size: #{$med-font-size-xs};
-  --alternativa-font-weight: #{$med-font-weight-regular};
-  --alternativa-line-height: #{line-height()};
-  --alternativa-text-align: justify;
-  --alternativa-text-spacing: #{$med-spacing-inline-base};
-  --alternativa-image-spacing: #{$med-spacing-inline-base};
-
-  --background-correto: #{$med-color-feedback-success-medium};
-  --background-incorreto: #{$med-color-feedback-error-medium};
-
-  --progess-background: #{$med-color-feedback-success-light};
+  --riscar-flex-direction: column;
+  --riscar-icon-margin: 0 0 #{$med-spacing-stack-quark} 0;
 
   .alternativas {
     list-style: none;
@@ -27,12 +16,14 @@
       }
 
       .alternativa {
+        align-items: flex-start;
+
         &:nth-of-type(odd) {
           margin-right: auto;
           padding-right: 0;
 
           @include breakpoint-up('md') {
-           padding-right: #{$med-spacing-inline-base};
+           padding-right: $med-spacing-inline-base;
           }
         }
 
@@ -53,10 +44,11 @@
 
   .alternativa {
     display: flex;
+    padding: $med-spacing-stack-base;
 
-    &:not(:last-child) {
-      padding-bottom: var(--alternativa-spacing);
-    }
+    /* &:not(:last-child) {
+      padding-bottom: $med-spacing-stack-xs;
+    } */
 
     .image-container {
       position: relative;
@@ -92,16 +84,16 @@
 
     &__right {
       flex: 1;
-      margin-left: var(--alternativa-text-spacing);
+      margin-left: $med-spacing-inline-base;
       overflow: hidden;
     }
 
     &__text {
-      text-align: var(--alternativa-text-align);
-      color: var(--alternativa-color);
-      font-size: var(--alternativa-font-size);
-      font-weight: var(--alternativa-font-weight);
-      line-height: var(--alternativa-line-height);
+      text-align: justify;
+      color: $med-color-neutral-dark-10;
+      font-size: $med-font-size-xs;
+      font-weight: $med-font-weight-regular;
+      line-height: line-height();
       margin: 0;
     }
 
@@ -116,13 +108,27 @@
 
     &--correta {
       med-option {
-        --background: var(--background-correto);
+        --background: $med-color-feedback-success-medium;
       }
     }
 
     &--incorreto {
       med-option {
-        --background: var(--background-incorreto);
+        --background: $med-color-feedback-error-medium;
+      }
+    }
+
+    &--pressed {
+      background-color: $med-color-neutral-light-40;
+    }
+
+    &--riscada {
+      opacity: $med-opacity-level-half;
+      pointer-events: none;
+
+      .alternativa__text {
+        text-decoration: line-through;
+
       }
     }
   }
@@ -138,7 +144,27 @@
     }
 
     &--100 {
-      --progress-background: var(--progess-background);
+      --progress-background: $med-color-feedback-success-light;
+    }
+  }
+
+  .riscar {
+    margin-left: $med-spacing-inline-md;
+    display: flex;
+    flex-direction: var(--riscar-flex-direction);
+    align-items: center;
+
+    ion-icon {
+      font-size: 32px;
+      color: $med-color-neutral-dark-10;
+      margin: var(--riscar-icon-margin);
+    }
+
+    &__label {
+      font-size: $med-font-size-xxs;
+      font-weight: $med-font-weight-regular;
+      color: $med-color-neutral-dark-10;
+      line-height: $med-line-height-compressed;
     }
   }
 }
