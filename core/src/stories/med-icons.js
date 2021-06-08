@@ -5,6 +5,7 @@ export const medIcons = [
   'med-check-circle',
   'med-chevron-left',
   'med-close',
+  'med-configuracoes',
   'med-comentario-questao',
   'med-discursiva',
   'med-dislike',
