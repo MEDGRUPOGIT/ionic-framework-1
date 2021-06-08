@@ -41,6 +41,14 @@ const TemplateIcon = ({ color }) => {
             <span class="list__span">med-arrow-right-circle</span>
           </li>
           <li class="list__item">
+            <ion-icon .color=${color} name="med-arrow-up"></ion-icon>
+            <span class="list__span">med-arrow-up</span>
+          </li>
+          <li class="list__item">
+            <ion-icon .color=${color} name="med-arrow-down"></ion-icon>
+            <span class="list__span">med-arrow-down</span>
+          </li>
+          <li class="list__item">
             <ion-icon .color=${color} name="med-cartao-resposta"></ion-icon>
             <span class="list__span">med-cartao-resposta</span>
           </li>
@@ -119,10 +127,6 @@ const TemplateIcon = ({ color }) => {
           <li class="list__item">
             <ion-icon .color=${color} name="med-plus"></ion-icon>
             <span class="list__span">med-plus</span>
-          </li>
-          <li class="list__item">
-            <ion-icon .color=${color} name="med-pointer"></ion-icon>
-            <span class="list__span">med-pointer</span>
           </li>
           <li class="list__item">
             <ion-icon .color=${color} name="med-questao"></ion-icon>

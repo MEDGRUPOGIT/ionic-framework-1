@@ -1,6 +1,8 @@
 export const medIcons = [
   'med-arrow-left-circle',
   'med-arrow-right-circle',
+  'med-arrow-up',
+  'med-arrow-down',
   'med-cartao-resposta',
   'med-check-circle',
   'med-chevron-left',
@@ -21,7 +23,6 @@ export const medIcons = [
   'med-minus',
   'med-notes',
   'med-plus',
-  'med-pointer',
   'med-questao',
   'med-retomar',
   'med-riscar',
