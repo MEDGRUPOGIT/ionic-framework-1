@@ -68,7 +68,7 @@ export class MedAlternativas implements MedAlternativasInterface {
           <ul class={`alternativas ${hasImage ? 'alternativas--imagem' : ''}`}>
 
             {this.alternativas.map((alternativa: any) => (
-              <li class={this.cssClassAlternativa(alternativa[this.keyAlternativa])}>
+              <li class={`${this.cssClassAlternativa(alternativa[this.keyAlternativa])}`}>
                 <med-option class='alternativa__option'>
                   <ion-radio
                     value={alternativa[this.keyAlternativa]}
@@ -77,7 +77,7 @@ export class MedAlternativas implements MedAlternativasInterface {
                 </med-option>
 
                 <div class='alternativa__right'>
-                  {alternativa[this.keyEnunciado] && <div class='alternativa__text' innerHTML={alternativa[this.keyEnunciado]} ></div>}
+                  {alternativa[this.keyEnunciado] && <div class='alternativa__text' innerHTML={alternativa[this.keyEnunciado]}></div>}
 
                   <div class='image-container' onClick={() => this.imageRequest(alternativa)}>
                     {alternativa[this.keyImagem] && <img class='alternativa__image' src={alternativa[this.keyImagem]} />}
@@ -95,6 +95,11 @@ export class MedAlternativas implements MedAlternativasInterface {
                     ${alternativa[this.keyPorcentagem] === 1 ? 'ion-progress-bar--100' : '' }`}
                     value={alternativa[this.keyPorcentagem]}>
                   </ion-progress-bar>
+                </div>
+
+                <div class="riscar">
+                  <ion-icon name="med-riscar"></ion-icon>
+                  <span class="riscar__label">Riscar</span>
                 </div>
               </li>
             ))}
