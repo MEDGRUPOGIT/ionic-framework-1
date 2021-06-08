@@ -21,7 +21,7 @@ export const medIcons = [
   'med-minus',
   'med-notes',
   'med-plus',
-  'med-plus',
+  'med-pointer',
   'med-questao',
   'med-retomar',
   'med-riscar',
