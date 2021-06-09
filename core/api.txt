@@ -1405,7 +1405,8 @@ med-enunciado-discursiva,prop,imagens,string | string[],undefined,true,true
 med-enunciado-discursiva,event,medGalleryRequest,string,true
 
 med-font-zoom,shadow
-med-font-zoom,prop,emitter,{ emit: (value: RangeValue) => void; },undefined,true,false
+med-font-zoom,prop,emitter,{ emit: (value: MedFontSize) => void; },undefined,true,false
+med-font-zoom,prop,value,MedFontSize.MD | MedFontSize.SM | MedFontSize.XS | MedFontSize.XXS | MedFontSize.XXXS,MedFontSize.XS,false,false
 
 med-header,shadow
 med-header,event,medResize,headerResizeEventDetail,true
