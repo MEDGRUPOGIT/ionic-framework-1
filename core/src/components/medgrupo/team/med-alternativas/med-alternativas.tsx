@@ -28,7 +28,7 @@ export class MedAlternativas implements MedAlternativasInterface {
       if (alternativa === this.respostaCorreta) {
         classe += ' alternativa--correta';
       } else if (alternativa === this.alternativaSelecionada) {
-         classe += ' alternativa--incorreto';
+        classe += ' alternativa--incorreto';
       }
     }
 
@@ -97,10 +97,10 @@ export class MedAlternativas implements MedAlternativasInterface {
                   </ion-progress-bar>
                 </div>
 
-                <div class="riscar">
+                {/* <div class="riscar">
                   <ion-icon name="med-riscar"></ion-icon>
                   <span class="riscar__label">Riscar</span>
-                </div>
+                </div> */}
               </li>
             ))}
 

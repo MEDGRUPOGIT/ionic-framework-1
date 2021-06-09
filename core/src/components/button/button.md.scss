@@ -322,7 +322,7 @@
   }
 }
 
-// storybook
+// hover storybook
 :host(.med-button-outline.med-hovered) {
   --border-color: #{$med-color-brand-primary-medium};
   --color: #{$med-color-brand-primary-medium};
@@ -349,38 +349,6 @@
 :host(.ion-color.med-button-outline.med-button-disabled) {
   --ion-color-base: #{$med-color-neutral-light-10} !important;
 }
-
-// light-mode
-/* :host-context(.light-mode):host(.med-button-outline) {
-  --border-color: #{$med-color-brand-primary-medium};
-  --color: #{$med-color-brand-primary-medium};
-} */
-
-// light-mode hover
-/* @media (any-hover: hover) {
-  :host-context(.light-mode):host(.med-button-outline:hover) {
-    --border-color: #{$med-color-brand-primary-dark};
-    --color: #{$med-color-brand-primary-dark};
-  }
-} */
-
-// light-mode active
-/* :host-context(.light-mode):host(.med-button-outline.ion-activated) {
-  --border-color: #{$med-color-brand-primary-light};
-  --color: #{$med-color-brand-primary-light};
-} */
-
-// light-mode focus
-/* :host-context(.light-mode):host(.med-button-outline.ion-focused) {
-  --border-color: #{$med-color-brand-primary-dark};
-  --color: #{$med-color-brand-primary-dark};
-} */
-
-// light-mode disabled
-/* :host-context(.light-mode):host(.med-button-outline.med-button-disabled) {
-  --border-color: #{$med-color-neutral-light-10};
-  --color: #{$med-color-neutral-light-10};
-} */
 
 //
 // tertiary
@@ -436,16 +404,6 @@
 :host(.ion.med-button-clear.med-button-disabled) {
   --ion-color-base: #{$med-color-neutral-light-10} !important;
 }
-
-// light-mode
-/* :host-context(.light-mode):host(.med-button-clear) {
-  --color: #{$med-color-neutral-dark-10};
-}
- */
-// light-mode disabled
-/* :host-context(.light-mode):host(.med-button-clear.med-button-disabled) {
-  --color: #{$med-color-neutral-light-10};
-} */
 
 //
 // icon-only
@@ -784,28 +742,28 @@
 
 :host(.med-button-solid.ion-color.ion-focused) .button-native::before {
   background: current-color(contrast);
-  opacity: .24;
+  //opacity: .24;
 }
 
 :host(.med-button-outline.ion-color.ion-focused) .button-native::before {
   background: current-color(base);
-  opacity: 0;
+  //opacity: 0;
 }
 
 :host(.med-button-clear.ion-color.ion-focused) .button-native::before {
   background: current-color(base);
-  opacity: .12;
+  //opacity: .12;
 }
 
 @media (any-hover: hover) {
   :host(.med-button-outline.ion-color:hover) .button-native::before {
     background: current-color(base);
-    opacity: .04;
+    //opacity: .04;
   }
 
   :host(.med-button-clear.ion-color:hover) .button-native::before {
     background: current-color(base);
-    opacity: .04;
+    //opacity: .04;
   }
 }
 
@@ -819,21 +777,16 @@
 }
 
 :host(.med-hovered.med-button-solid.ion-color) .button-native::before {
-  background: current-color(contrast);
-  opacity: .08;
+  background: current-color(base);
+  //opacity: .08;
 }
 
 :host(.med-hovered.med-button-clear.ion-color) .button-native::before {
   background: current-color(base);
-  opacity: .04;
+  //opacity: .04;
 }
 
 :host(.med-hovered.med-button-outline.ion-color) .button-native::before {
   background: current-color(base);
-  opacity: .04;
-}
-
-:host(.med-hovered.med-button-solid.ion-color) .button-native::before {
-  background: current-color(contrast);
-  opacity: .08;
+  //opacity: .04;
 }

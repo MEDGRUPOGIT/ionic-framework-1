@@ -7,9 +7,91 @@
 
 @import "../../../../med-components/abstracts";
 
+//
+// secondary
+//
 
 body.light-mode {
-  hv-header {
-    --on-surface: #{ion-color(primary, base)};
+  // hover
+  @media (any-hover: hover) {
+    ion-button[ds-name="secondary"]:hover {
+      --border-color: #{$med-color-brand-primary-dark};
+      --color: #{$med-color-brand-primary-dark};
+    }
+  }
+
+  // hover storybook
+  ion-button[ds-name="secondary"].med-hovered {
+    --border-color: #{$med-color-brand-primary-dark};
+    --color: #{$med-color-brand-primary-dark};
+  }
+
+  // activated
+  ion-button[ds-name="secondary"].ion-activated {
+    --border-color: #{$med-color-brand-primary-light};
+    --color: #{$med-color-brand-primary-light};
+  }
+
+  // focus
+  ion-button[ds-name="secondary"].ion-focused {
+    --border-color: #{$med-color-brand-primary-dark};
+    --color: #{$med-color-brand-primary-dark};
+  }
+}
+
+//
+// tertiary
+//
+
+body.light-mode {
+  ion-button[ds-name="tertiary"] {
+    --color: #{$med-color-neutral-dark-10};
+  }
+
+  // hover
+  @media (any-hover: hover) {
+    ion-button[ds-name="tertiary"]:hover {
+      --background-hover: #{$med-color-brand-primary-medium};
+      --background-hover-opacity: #{$med-opacity-level-light};
+    }
+  }
+
+  // hover storybook
+  ion-button[ds-name="tertiary"].med-hovered {
+    --background-hover: #{$med-color-brand-primary-medium};
+    --background-hover-opacity: #{$med-opacity-level-light};
+  }
+
+  // disabled
+  ion-button[ds-name="tertiary"].med-button-disabled {
+    --color: #{$med-color-neutral-light-10};
+  }
+
+  ion-button[ds-name="tertiary"].med-button-disabled {
+    --ion-color-base: #{$med-color-neutral-light-10} !important;
+  }
+}
+
+//
+// icon-only
+//
+
+body.light-mode {
+  ion-button[ds-name="icon-only"] ion-icon[slot="icon-only"]{
+    color: $med-color-neutral-dark-10;
+  }
+
+  // hover
+  @media (any-hover: hover) {
+    ion-button[ds-name="icon-only"]:hover {
+      --background-hover: #{$med-color-brand-primary-medium};
+      --background-hover-opacity: #{$med-opacity-level-light};
+    }
+  }
+
+  // hover storybook
+  ion-button[ds-name="icon-only"].med-hovered {
+    --background-hover: #{$med-color-brand-primary-medium};
+    --background-hover-opacity: #{$med-opacity-level-light};
   }
 }
