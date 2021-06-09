@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
-import { medColors } from '../../med-colors'
+import { medColors } from '../../med-colors';
 
 export default {
   title: 'Components/Global/Button',

@@ -68,7 +68,7 @@ export class MedAlternativas implements MedAlternativasInterface {
           <ul class={`alternativas ${hasImage ? 'alternativas--imagem' : ''}`}>
 
             {this.alternativas.map((alternativa: any) => (
-              <li class={`${this.cssClassAlternativa(alternativa[this.keyAlternativa])}`}>
+              <li class={this.cssClassAlternativa(alternativa[this.keyAlternativa])}>
                 <med-option class='alternativa__option'>
                   <ion-radio
                     value={alternativa[this.keyAlternativa]}

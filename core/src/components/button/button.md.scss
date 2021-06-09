@@ -399,6 +399,7 @@
 // disabled
 :host(.med-button-clear.med-button-disabled) {
   --color: #{$med-color-neutral-light-10};
+  --ion-color-base: #{$med-color-neutral-light-10} !important;
 }
 
 :host(.ion.med-button-clear.med-button-disabled) {
@@ -420,8 +421,8 @@
   // design system
   --padding: 0;
   --color: #{$med-color-neutral-light-prime};
-  --min-height: 40px;
-  --min-width: 40px;
+  --min-height: 32px;
+  --min-width: 32px;
 
   font-size: 32px;
 }
@@ -447,6 +448,20 @@
 
 // sizes
 :host([ds-size="xs"].button-has-icon-only) {
+  --min-height: 16px;
+  --min-width: 16px;
+  --padding: 0;
+  font-size: 16px;
+}
+
+:host([ds-size="sm"].button-has-icon-only) {
+  --min-height: 24px;
+  --min-width: 24px;
+  --padding: 0;
+  font-size: 24px;
+}
+
+/* :host([ds-size="xs"].button-has-icon-only) {
   --min-height: 24px;
   --min-width: 24px;
   --padding: 0;
@@ -472,13 +487,6 @@
   --min-width: 48px;
   --padding: 0;
   font-size: 32px;
-}
-
-// light-mode
-/* :host-context(.light-mode) {
-  ::slotted(ion-icon[slot="icon-only"]) {
-    color: $med-color-neutral-dark-10;
-  }
 } */
 
 // desktop
