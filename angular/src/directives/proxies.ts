@@ -969,8 +969,8 @@ export class MedEnunciadoDiscursiva {
 }
 export declare interface MedFontZoom extends Components.MedFontZoom {
 }
-@ProxyCmp({ inputs: ["emitter"] })
-@Component({ selector: "med-font-zoom", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["emitter"] })
+@ProxyCmp({ inputs: ["emitter", "value"] })
+@Component({ selector: "med-font-zoom", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["emitter", "value"] })
 export class MedFontZoom {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
