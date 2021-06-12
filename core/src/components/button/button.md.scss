@@ -229,7 +229,7 @@
 //
 
 :host(.med-button-solid) {
-  --background: #{$med-color-brand-primary-gradient};
+  --background: #{ion-color(primary-medium, base)}; //#{$med-color-brand-primary-gradient};
   --background-hover: #{$med-color-brand-primary-medium};
   --background-hover-opacity: 1;
   --background-focused: #{$med-color-brand-primary-medium};

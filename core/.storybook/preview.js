@@ -39,12 +39,12 @@ export const parameters = {
     },
     {
       name: 'Gold - Dark Mode',
-      class: ['dark-mode', 'gold-mode'],
+      class: ['dark-mode', 'theme-gold'],
       color: '#b89d58'
     },
     {
       name: 'Gold - Light Mode',
-      class: ['light-mode', 'gold-mode'],
+      class: ['light-mode', 'theme-gold'],
       color: '#b89d58'
     },
     {
