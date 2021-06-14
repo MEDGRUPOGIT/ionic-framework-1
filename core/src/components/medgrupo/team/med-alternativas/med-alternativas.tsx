@@ -40,14 +40,8 @@ export class MedAlternativas implements MedAlternativasInterface {
         }
       }
     }
-
-    if (this.podeRiscar) {
-      classe += ' alternativa--pode-riscar';
-    }
- 
-    if(objAlternativa.Riscada) {
-      classe += ' alternativa--riscada';
-    }
+    
+    classe += this.getCssClassAlternativaRiscada(objAlternativa);
 
     return classe;
   }
@@ -56,6 +50,18 @@ export class MedAlternativas implements MedAlternativasInterface {
     let classe = 'alternativa__option';
     if (alternativa.Riscada) {
       classe += ' alternativa__option--riscada';
+    }
+    return classe;
+  }
+
+  private getCssClassAlternativaRiscada(objAlternativa: any) {
+    let classe = '';
+    if (this.podeRiscar) {
+      classe += ' alternativa--pode-riscar';
+ 
+      if(objAlternativa && objAlternativa.Riscada) {
+        classe += ' alternativa--riscada';
+      }
     }
     return classe;
   }
@@ -72,13 +78,13 @@ export class MedAlternativas implements MedAlternativasInterface {
     this.medGalleryRequest.emit(alternativa);
   }
 
-  private riscar(alternativa: any) {
+  private riscar(alternativa: any) {    
     if (this.permiteRiscar(alternativa)) {
       alternativa.Riscada = !alternativa.Riscada;
       if (alternativa.Alternativa === this.alternativaSelecionada) {
         this.respostaAlterada('');
       }
-      this.alternativaRiscada = alternativa;
+      this.alternativaRiscada = { alternativa };
     }
   }
 
