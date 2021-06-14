@@ -115,6 +115,10 @@
 
     &__option {
       position: relative;
+
+      &--riscada {
+        pointer-events: none;
+      }
     }
 
     &--correta {
@@ -129,17 +133,46 @@
       }
     }
 
-    &--pressed {
+    &--pode-riscar:not(:hover) {
+      .riscar {
+        display: none;
+      }
+    }
+
+    &--pode-riscar:hover {
       background-color: $med-color-neutral-light-40;
+      .riscar {
+        cursor: pointer;
+        flex-direction: var(--riscar-flex-direction);
+        margin-left: $med-spacing-inline-md;
+        display: flex;
+        align-items: center;
+    
+        ion-icon {
+          margin: var(--riscar-icon-margin);
+          color: $med-color-neutral-dark-10;
+          font-size: 32px;
+        }
+    
+        &__label {
+          font-size: $med-font-size-xxs;
+          font-weight: $med-font-weight-regular;
+          color: $med-color-neutral-dark-10;
+          line-height: $med-line-height-compressed;
+        }
+      }
     }
 
     &--riscada {
       opacity: $med-opacity-level-half;
-      pointer-events: none;
 
       .alternativa__text {
         text-decoration: line-through;
       }
+    }
+
+    &--pressed {
+      background-color: $med-color-neutral-light-40;
     }
   }
 
@@ -158,23 +191,23 @@
     }
   }
 
-  .riscar {
-    flex-direction: var(--riscar-flex-direction);
-    margin-left: $med-spacing-inline-md;
-    display: flex;
-    align-items: center;
+  // .riscar {
+  //   flex-direction: var(--riscar-flex-direction);
+  //   margin-left: $med-spacing-inline-md;
+  //   display: flex;
+  //   align-items: center;
 
-    ion-icon {
-      margin: var(--riscar-icon-margin);
-      color: $med-color-neutral-dark-10;
-      font-size: 32px;
-    }
+  //   ion-icon {
+  //     margin: var(--riscar-icon-margin);
+  //     color: $med-color-neutral-dark-10;
+  //     font-size: 32px;
+  //   }
 
-    &__label {
-      font-size: $med-font-size-xxs;
-      font-weight: $med-font-weight-regular;
-      color: $med-color-neutral-dark-10;
-      line-height: $med-line-height-compressed;
-    }
-  }
+  //   &__label {
+  //     font-size: $med-font-size-xxs;
+  //     font-weight: $med-font-weight-regular;
+  //     color: $med-color-neutral-dark-10;
+  //     line-height: $med-line-height-compressed;
+  //   }
+  // }
 }

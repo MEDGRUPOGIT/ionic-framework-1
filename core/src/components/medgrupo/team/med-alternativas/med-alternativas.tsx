@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, Event, EventEmitter } from '@stencil/core';
+import { Component, Host, h, Prop, Event, EventEmitter, State } from '@stencil/core';
 import { MedAlternativaInterface, MedAlternativasInterface } from './med-alternativas-interface';
 
 @Component({
@@ -7,6 +7,8 @@ import { MedAlternativaInterface, MedAlternativasInterface } from './med-alterna
   shadow: true,
 })
 export class MedAlternativas implements MedAlternativasInterface {
+  @Prop() podeRiscar = true;
+
   @Prop() alternativas: MedAlternativaInterface | any = [];
 
   @Prop() keyAlternativa = 'Alternativa';
@@ -20,37 +22,85 @@ export class MedAlternativas implements MedAlternativasInterface {
 
   @Event() medChange!: EventEmitter<MedAlternativaInterface>;
   @Event() medGalleryRequest!: EventEmitter<MedAlternativaInterface>;
+  
+  @State() tick = {}
 
   private cssClassAlternativa(alternativa: string) {
+    let objAlternativa = this.getAlternativa(alternativa);   
     let classe = 'alternativa';
 
-    if (this.mostraResposta && this.alternativaSelecionada) {
-      if (alternativa === this.respostaCorreta) {
-        classe += ' alternativa--correta';
-      } else if (alternativa === this.alternativaSelecionada) {
-        classe += ' alternativa--incorreto';
+    if (!objAlternativa.Riscada) {
+      if (this.mostraResposta && this.alternativaSelecionada) {
+        if (alternativa === this.respostaCorreta) {
+          classe += ' alternativa--correta';
+        } else if (alternativa === this.alternativaSelecionada) {
+          classe += ' alternativa--incorreto';
+        }
       }
+    }
+
+    if (this.podeRiscar) {
+      classe += ' alternativa--pode-riscar';
+    }
+ 
+    if(objAlternativa.Riscada) {
+      classe += ' alternativa--riscada';
     }
 
     return classe;
   }
 
+  private cssClassOption(alternativa: any) {
+    let classe = 'alternativa__option';
+    if (alternativa.Riscada) {
+      classe += ' alternativa__option--riscada';
+    }
+    return classe;
+  }
+
   private respostaAlterada(alternativa: string) {
     this.alternativaSelecionada = alternativa;
-
-    let objAlternativa;
-    for (const item of this.alternativas) {
-      if(item[this.keyAlternativa] === alternativa) {
-        objAlternativa = item;
-        break;
-      }
+    let objAlternativa = this.getAlternativa(alternativa);
+    if (objAlternativa && !objAlternativa.Riscada) {      
+      this.medChange.emit(objAlternativa);
     }
-
-    this.medChange.emit(objAlternativa);
   }
 
   private imageRequest(alternativa: any) {
     this.medGalleryRequest.emit(alternativa);
+  }
+
+  private riscar(alternativa: any) {
+    if (this.permiteRiscar(alternativa)) {
+      alternativa.Riscada = !alternativa.Riscada;
+      if (alternativa.Alternativa === this.alternativaSelecionada) {
+        this.respostaAlterada('');
+      }
+      this.refresh();
+    }
+  }
+
+  permiteRiscar(alternativa: any) {
+    let countNaoRiscadas = 0;
+    for (const alternativa of this.alternativas) {
+      countNaoRiscadas += !alternativa.Riscada ? 1 : 0;
+    }
+    return alternativa.Riscada || (!alternativa.Riscada && countNaoRiscadas > 1);
+  }
+
+  private refresh() {
+    this.tick = {};
+  }
+
+  private getAlternativa(key: string) {
+    let objAlternativa;
+    for (const item of this.alternativas) {
+      if(item[this.keyAlternativa] === key) {
+        objAlternativa = item;
+        break;
+      }
+    }
+    return objAlternativa;
   }
 
   render() {
@@ -69,7 +119,7 @@ export class MedAlternativas implements MedAlternativasInterface {
 
             {this.alternativas.map((alternativa: any) => (
               <li class={this.cssClassAlternativa(alternativa[this.keyAlternativa])}>
-                <med-option class='alternativa__option'>
+                <med-option class={this.cssClassOption(alternativa)}>
                   <ion-radio
                     value={alternativa[this.keyAlternativa]}
                   ></ion-radio>
@@ -89,18 +139,22 @@ export class MedAlternativas implements MedAlternativasInterface {
                     </div>
                   </div>
 
-                  <ion-progress-bar percentage class={`
-                    ion-progress-bar
-                    ${this.mostraResposta && this.alternativaSelecionada ? 'ion-progress-bar--toggle' : '' }
-                    ${alternativa[this.keyPorcentagem] === 1 ? 'ion-progress-bar--100' : '' }`}
-                    value={alternativa[this.keyPorcentagem]}>
-                  </ion-progress-bar>
+                  {!alternativa.Riscada &&
+                    <ion-progress-bar percentage class={`
+                      ion-progress-bar
+                      ${this.mostraResposta && this.alternativaSelecionada ? 'ion-progress-bar--toggle' : '' }
+                      ${alternativa[this.keyPorcentagem] === 1 ? 'ion-progress-bar--100' : '' }`}
+                      value={alternativa[this.keyPorcentagem]}>
+                    </ion-progress-bar>
+                  }
                 </div>
-
-                {/* <div class="riscar">
-                  <ion-icon name="med-riscar"></ion-icon>
-                  <span class="riscar__label">Riscar</span>
-                </div> */}
+                
+                {this.podeRiscar &&
+                  <div class="riscar" onClick={() => this.riscar(alternativa)}>
+                    <ion-icon name="med-riscar"></ion-icon>
+                    <span class="riscar__label">{alternativa.Riscada ? 'Retornar' : 'Riscar' }</span>
+                  </div>
+                }
               </li>
             ))}
 
