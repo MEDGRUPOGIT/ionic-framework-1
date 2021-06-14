@@ -7,7 +7,8 @@ import { MedAlternativaInterface, MedAlternativasInterface } from './med-alterna
   shadow: true,
 })
 export class MedAlternativas implements MedAlternativasInterface {
-  @Prop() podeRiscar = true;
+  @Prop() podeRiscar!: boolean;
+  @Prop() isDesktop!: boolean;
 
   @Prop() alternativas: MedAlternativaInterface | any = [];
 
@@ -23,9 +24,10 @@ export class MedAlternativas implements MedAlternativasInterface {
   @Event() medChange!: EventEmitter<MedAlternativaInterface>;
   @Event() medGalleryRequest!: EventEmitter<MedAlternativaInterface>;
   
-  @State() tick = {}
+  @State() alternativaRiscada: any;
 
   private cssClassAlternativa(alternativa: string) {
+    this.podeRiscar = true;
     let objAlternativa = this.getAlternativa(alternativa);   
     let classe = 'alternativa';
 
@@ -76,7 +78,7 @@ export class MedAlternativas implements MedAlternativasInterface {
       if (alternativa.Alternativa === this.alternativaSelecionada) {
         this.respostaAlterada('');
       }
-      this.refresh();
+      this.alternativaRiscada = alternativa;
     }
   }
 
@@ -86,10 +88,6 @@ export class MedAlternativas implements MedAlternativasInterface {
       countNaoRiscadas += !alternativa.Riscada ? 1 : 0;
     }
     return alternativa.Riscada || (!alternativa.Riscada && countNaoRiscadas > 1);
-  }
-
-  private refresh() {
-    this.tick = {};
   }
 
   private getAlternativa(key: string) {
