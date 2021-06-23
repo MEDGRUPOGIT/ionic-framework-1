@@ -1372,11 +1372,13 @@ ion-virtual-scroll,method,positionForItem,positionForItem(index: number) => Prom
 med-alternativas,shadow
 med-alternativas,prop,alternativaSelecionada,string,undefined,true,true
 med-alternativas,prop,alternativas,any,[],false,false
+med-alternativas,prop,isDesktop,boolean,undefined,true,false
 med-alternativas,prop,keyAlternativa,string,'Alternativa',false,false
 med-alternativas,prop,keyEnunciado,string,'Enunciado',false,false
 med-alternativas,prop,keyImagem,string,'Imagem',false,false
 med-alternativas,prop,keyPorcentagem,string,'Porcentagem',false,false
 med-alternativas,prop,mostraResposta,boolean,undefined,true,true
+med-alternativas,prop,podeRiscar,boolean,undefined,true,false
 med-alternativas,prop,respostaCorreta,string,undefined,true,true
 med-alternativas,event,medChange,MedAlternativaInterface,true
 med-alternativas,event,medGalleryRequest,MedAlternativaInterface,true

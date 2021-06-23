@@ -11,11 +11,13 @@
 | ------------------------------------- | ------------------------- | ----------- | --------- | --------------- |
 | `alternativaSelecionada` _(required)_ | `alternativa-selecionada` |             | `string`  | `undefined`     |
 | `alternativas`                        | `alternativas`            |             | `any`     | `[]`            |
+| `isDesktop` _(required)_              | `is-desktop`              |             | `boolean` | `undefined`     |
 | `keyAlternativa`                      | `key-alternativa`         |             | `string`  | `'Alternativa'` |
 | `keyEnunciado`                        | `key-enunciado`           |             | `string`  | `'Enunciado'`   |
 | `keyImagem`                           | `key-imagem`              |             | `string`  | `'Imagem'`      |
 | `keyPorcentagem`                      | `key-porcentagem`         |             | `string`  | `'Porcentagem'` |
 | `mostraResposta` _(required)_         | `mostra-resposta`         |             | `boolean` | `undefined`     |
+| `podeRiscar` _(required)_             | `pode-riscar`             |             | `boolean` | `undefined`     |
 | `respostaCorreta` _(required)_        | `resposta-correta`        |             | `string`  | `undefined`     |
 
 

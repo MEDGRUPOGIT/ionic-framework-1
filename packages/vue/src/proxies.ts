@@ -808,6 +808,8 @@ export const IonVirtualScroll = /*@__PURE__*/ defineContainer<JSX.IonVirtualScro
 
 
 export const MedAlternativas = /*@__PURE__*/ defineContainer<JSX.MedAlternativas>('med-alternativas', [
+  'podeRiscar',
+  'isDesktop',
   'alternativas',
   'keyAlternativa',
   'keyEnunciado',

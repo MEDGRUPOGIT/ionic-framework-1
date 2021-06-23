@@ -139,7 +139,7 @@
       }
     }
 
-    &--pode-riscar:hover {
+    &--pode-riscar:hover, &--pode-riscar-mobile {
       background-color: $med-color-neutral-light-40;
       .riscar {
         cursor: pointer;
@@ -164,10 +164,13 @@
     }
 
     &--riscada {
-      opacity: $med-opacity-level-half;
+      .alternativa__option {
+        opacity: $med-opacity-level-half;
+      }
 
       .alternativa__text {
         text-decoration: line-through;
+        opacity: $med-opacity-level-half;
       }
     }
 
