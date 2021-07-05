@@ -291,8 +291,8 @@
   @each $key, $value in $new-medsoft-colors-feedback {
     $medium: map-get(map-get($new-medsoft-colors-feedback, $key), 3);
 
-    --med-color-#{$key}-3: #{$medium};
-    --med-color-#{$key}-3-rgb: #{color-to-rgb-list($medium)};
+    --med-color-#{$key}: #{$medium};
+    --med-color-#{$key}-rgb: #{color-to-rgb-list($medium)};
   }
 }
 
@@ -323,12 +323,10 @@
 
 @mixin new-generate-medsoft-feedback-color-classes($color-name) {
   $value: map-get($new-medsoft-colors-feedback, $color-name);
-
   $medium: map-get($value, 3);
 
-  --med-color-3: var(--med-color-#{$color-name}-3, #{$medium});
-
-  --med-color-3-rgb: var(--med-color-#{$color-name}-3-rgb, #{color-to-rgb-list($medium)});
+  --med-color-3: var(--med-color-#{$color-name}, #{$medium});
+  --med-color-3-rgb: var(--med-color-#{$color-name}-rgb, #{color-to-rgb-list($medium)});
 }
 
 @mixin new-generate-medsoft-color-classes($color-name) {
@@ -383,16 +381,6 @@
         --med-color-gradient: var(--med-color-#{$key}-gradient, #{$gradient});
       }
 
-      @each $key, $value in $new-medsoft-colors-feedback {
-        $medium: map-get(map-get($new-medsoft-colors-feedback, $key), 3);
-
-        --med-color-#{$key}-3: #{$medium};
-
-        --med-color-#{$key}-3-rgb: #{color-to-rgb-list($medium)};
-      }
-    }
-    .color-scheme-#{$scheme},
-    [color-scheme='#{$scheme}'] {
       @each $key, $value in $new-medsoft-colors {
         .ion-color-#{$key} {
           $darkest: map-get(map-get($new-medsoft-colors, $key), 1);
@@ -415,15 +403,6 @@
           --med-color-#{$key}-5-rgb: #{color-to-rgb-list($lightest)};
 
           --med-color-gradient: var(--med-color-#{$key}-gradient, #{$gradient});
-        }
-      }
-
-      @each $key, $value in $new-medsoft-colors-feedback {
-        .ion-color-#{$key} {
-          $medium: map-get(map-get($new-medsoft-colors-feedback, $key), 3);
-
-          --med-color-#{$key}-3: #{$medium};
-          --med-color-#{$key}-3-rgb: #{color-to-rgb-list($medium)};
         }
       }
 
@@ -454,18 +433,6 @@
 
         --med-color-gradient: var(--med-color-#{$key}-gradient, #{$gradient});
       }
-
-      @each $key, $value in $new-medsoft-colors-feedback {
-        $medium: map-get(map-get($new-medsoft-colors-feedback, $key), 3);
-
-        --med-color-#{$key}-3: #{$medium};
-
-        --med-color-#{$key}-3-rgb: #{color-to-rgb-list($medium)};
-      }
-    }
-
-    .color-theme-#{$theme},
-    [color-theme='#{$theme}'] {
       @each $key, $value in $new-medsoft-colors {
         .ion-color-#{$key} {
           $darkest: map-get(map-get($new-medsoft-colors, $key), 1);
@@ -490,17 +457,6 @@
           --med-color-gradient: var(--med-color-#{$key}-gradient, #{$gradient});
         }
       }
-
-      @each $key, $value in $new-medsoft-colors-feedback {
-        .ion-color-#{$key} {
-          $medium: map-get(map-get($new-medsoft-colors-feedback, $key), 3);
-
-          --med-color-#{$key}-3: #{$medium};
-          --med-color-#{$key}-3-rgb: #{color-to-rgb-list($medium)};
-        }
-      }
-
-      @include new-generate-neutral-colors(true);
     }
   } @else {
     .color-theme-#{$theme}.color-scheme-#{$scheme},
@@ -528,16 +484,6 @@
         --med-color-gradient: var(--med-color-#{$key}-gradient, #{$gradient});
       }
 
-      @each $key, $value in $new-medsoft-colors-feedback {
-        $medium: map-get(map-get($new-medsoft-colors-feedback, $key), 3);
-
-        --med-color-#{$key}-3: #{$medium};
-
-        --med-color-#{$key}-3-rgb: #{color-to-rgb-list($medium)};
-      }
-    }
-    .color-theme-#{$theme}.color-scheme-#{$scheme},
-    [color-theme='#{$theme}'][color-scheme='#{$scheme}'] {
       @each $key, $value in $new-medsoft-colors {
         .ion-color-#{$key} {
           $darkest: map-get(map-get($new-medsoft-colors, $key), 1);
@@ -560,16 +506,6 @@
           --med-color-#{$key}-5-rgb: #{color-to-rgb-list($lightest)};
 
           --med-color-gradient: var(--med-color-#{$key}-gradient, #{$gradient});
-        }
-      }
-
-      @each $key, $value in $new-medsoft-colors-feedback {
-        .ion-color-#{$key} {
-          $medium: map-get(map-get($new-medsoft-colors-feedback, $key), 3);
-
-          --med-color-#{$key}-3: #{$medium};
-
-          --med-color-#{$key}-3-rgb: #{color-to-rgb-list($medium)};
         }
       }
 

@@ -14,22 +14,8 @@
 
 :root {
   @include new-generate-neutral-colors();
-
   @include new-generate-medsoft-color();
-
   @include new-generate-medsoft-feedback-color();
-}
-
-:root .color-mode-dark {
-  ion-content {
-    --background: #141414;
-  }
-}
-
-:root .color-mode-light {
-  ion-content {
-    --background: #fafafa;
-  }
 }
 
 @each $color-name, $value in $new-medsoft-colors {
@@ -41,5 +27,17 @@
 @each $color-name, $value in $new-medsoft-colors-feedback {
   .ion-color-#{$color-name} {
     @include new-generate-medsoft-feedback-color-classes($color-name);
+  }
+}
+
+:root .color-mode-dark {
+  ion-content {
+    --background: #141414;
+  }
+}
+
+:root .color-mode-light {
+  ion-content {
+    --background: #fafafa;
   }
 }
