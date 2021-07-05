@@ -39,7 +39,7 @@ $medsoft-colors: (
   ),
 );
 
-@include generate-custom-theme('gold');
+@include new-generate-custom-theme('gold');
 
 // components
 

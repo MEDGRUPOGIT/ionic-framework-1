@@ -21,6 +21,12 @@ import '../src/stories/assets/canvas.css';
 import '../src/stories/assets/fsemeric.css';
 import '../css/medsoft-theme.css';
 
+// novo
+import '../css/medsoft.css';
+import '../css/medsoft-scheme-light.css';
+import '../css/medsoft-theme-gold.css';
+import '../css/medsoft-theme-gold-light.css';
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: { expanded: true },
