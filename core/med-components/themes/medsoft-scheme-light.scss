@@ -1,0 +1,62 @@
+@import "../functions";
+@import "../variables";
+@import "../mixins";
+
+$medsoft-colors: (
+  brand: (
+    1: hsl($brand, $saturation, $lightest),
+    2: hsl($brand, $saturation, $light),
+    3: hsl($brand, $saturation, $medium),
+    4: hsl($brand, $saturation, $dark),
+    5: hsl($brand, $saturation, $darkest),
+    gradient: linear-gradient(to right, hsl($brand, $saturation, $medium), hsl($brand, $saturation, $lightest)),
+  ),
+  aulas: (
+    1: hsl($aulas, $saturation, $lightest),
+    2: hsl($aulas, $saturation, $light),
+    3: hsl($aulas, $saturation, $medium),
+    4: hsl($aulas, $saturation, $dark),
+    5: hsl($aulas, $saturation, $darkest),
+    gradient: linear-gradient(to right, hsl($aulas, $saturation, $medium), hsl($aulas, $saturation, $lightest)),
+  ),
+  material: (
+    1: hsl($material, $saturation, $lightest),
+    2: hsl($material, $saturation, $light),
+    3: hsl($material, $saturation, $medium),
+    4: hsl($material, $saturation, $dark),
+    5: hsl($material, $saturation, $darkest),
+    gradient: linear-gradient(to right, hsl($material, $saturation, $medium), hsl($material, $saturation, $lightest)),
+  ),
+  questoes: (
+    1: hsl($questoes, $saturation, $lightest),
+    2: hsl($questoes, $saturation, $light),
+    3: hsl($questoes, $saturation, $medium),
+    4: hsl($questoes, $saturation, $dark),
+    5: hsl($questoes, $saturation, $darkest),
+    gradient: linear-gradient(to right, hsl($questoes, $saturation, $medium), hsl($questoes, $saturation, $lightest)),
+  ),
+  revalida: (
+    1: hsl($revalida, $saturation, $lightest),
+    2: hsl($revalida, $saturation, $light),
+    3: hsl($revalida, $saturation, $medium),
+    4: hsl($revalida, $saturation, $dark),
+    5: hsl($revalida, $saturation, $darkest),
+    gradient: linear-gradient(to right, hsl($revalida, $saturation, $medium), hsl($revalida, $saturation, $lightest)),
+  ),
+  provas: (
+    1: hsl($provas, $saturation, $lightest),
+    2: hsl($provas, $saturation, $light),
+    3: hsl($provas, $saturation, $medium),
+    4: hsl($provas, $saturation, $dark),
+    5: hsl($provas, $saturation, $darkest),
+    gradient: linear-gradient(to right, hsl($provas, $saturation, $medium), hsl($provas, $saturation, $lightest)),
+  ),
+);
+
+:root {
+  --med-colors-fb-green: #{$med-colors-fb-green};
+  --med-colors-fb-yellow: #{$med-colors-fb-yellow};
+  --med-colors-fb-red: #{$med-colors-fb-red};
+}
+
+@include generate-custom-theme('light');

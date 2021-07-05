@@ -395,104 +395,75 @@ $med-shadow-level-10: 0 24px 38px rgba(0, 0, 0, 0.14), 0 9px 46px rgba(0, 0, 0, 
 // cores
 //
 
+//hue
+$brand: 188;
+$aulas: 168;
+$material: 24;
+$questoes: 200;
+$revalida: 342;
+$provas: 268;
+
+//saturation
+$saturation: 80%;
+
+// luminosity
+$darkest: 20%;
+$dark: 30%;
+$medium: 40%;
+$light: 60%;
+$lightest: 80%;
+
 $medsoft-colors: (
-  brand-primary: (
-    contrast:  $med-color-neutral-light-prime,
-    darkest:   $med-color-brand-primary-darkest,
-    dark:      $med-color-brand-primary-dark,
-    medium:    $med-color-brand-primary-medium,
-    light:     $med-color-brand-primary-light,
-    lightest:  $med-color-brand-primary-lightest,
-    gradient:  linear-gradient(to right, $med-color-brand-primary-medium, $med-color-brand-primary-dark)
+  brand: (
+    1: hsl($brand, $saturation, $darkest),
+    2: hsl($brand, $saturation, $dark),
+    3: hsl($brand, $saturation, $medium),
+    4: hsl($brand, $saturation, $light),
+    5: hsl($brand, $saturation, $lightest),
+    gradient: linear-gradient(to right, hsl($brand, $saturation, $medium), hsl($brand, $saturation, $darkest)),
   ),
-  aula: (
-    contrast:  $med-color-neutral-light-prime,
-    darkest:   $med-color-aula-darkest,
-    dark:      $med-color-aula-dark,
-    medium:    $med-color-aula-medium,
-    light:     $med-color-aula-light,
-    lightest:  $med-color-aula-lightest,
-    gradient:  linear-gradient(to right, $med-color-aula-medium, $med-color-aula-dark)
+  aulas: (
+    1: hsl($aulas, $saturation, $darkest),
+    2: hsl($aulas, $saturation, $dark),
+    3: hsl($aulas, $saturation, $medium),
+    4: hsl($aulas, $saturation, $light),
+    5: hsl($aulas, $saturation, $lightest),
+    gradient: linear-gradient(to right, hsl($aulas, $saturation, $medium), hsl($aulas, $saturation, $darkest)),
   ),
   material: (
-    contrast:  $med-color-neutral-light-prime,
-    darkest:   $med-color-material-darkest,
-    dark:      $med-color-material-dark,
-    medium:    $med-color-material-medium,
-    light:     $med-color-material-light,
-    lightest:  $med-color-material-lightest,
-    gradient:  linear-gradient(to right, $med-color-material-medium, $med-color-material-dark)
+    1: hsl($material, $saturation, $darkest),
+    2: hsl($material, $saturation, $dark),
+    3: hsl($material, $saturation, $medium),
+    4: hsl($material, $saturation, $light),
+    5: hsl($material, $saturation, $lightest),
+    gradient: linear-gradient(to right, hsl($material, $saturation, $medium), hsl($material, $saturation, $darkest)),
   ),
   questoes: (
-    contrast:  $med-color-neutral-light-prime,
-    darkest:   $med-color-questoes-darkest,
-    dark:      $med-color-questoes-dark,
-    medium:    $med-color-questoes-medium,
-    light:     $med-color-questoes-light,
-    lightest:  $med-color-questoes-lightest,
-    gradient:  linear-gradient(to right, $med-color-questoes-medium, $med-color-questoes-dark)
+    1: hsl($questoes, $saturation, $darkest),
+    2: hsl($questoes, $saturation, $dark),
+    3: hsl($questoes, $saturation, $medium),
+    4: hsl($questoes, $saturation, $light),
+    5: hsl($questoes, $saturation, $lightest),
+    gradient: linear-gradient(to right, hsl($questoes, $saturation, $medium), hsl($questoes, $saturation, $darkest)),
   ),
   revalida: (
-    contrast:  $med-color-neutral-light-prime,
-    darkest:   $med-color-revalida-darkest,
-    dark:      $med-color-revalida-dark,
-    medium:    $med-color-revalida-medium,
-    light:     $med-color-revalida-light,
-    lightest:  $med-color-revalida-lightest,
-    gradient:  linear-gradient(to right, $med-color-revalida-medium, $med-color-revalida-dark)
+    1: hsl($revalida, $saturation, $darkest),
+    2: hsl($revalida, $saturation, $dark),
+    3: hsl($revalida, $saturation, $medium),
+    4: hsl($revalida, $saturation, $light),
+    5: hsl($revalida, $saturation, $lightest),
+    gradient: linear-gradient(to right, hsl($revalida, $saturation, $medium), hsl($revalida, $saturation, $darkest)),
   ),
-  provaschecklist: (
-    contrast:  $med-color-neutral-light-prime,
-    darkest:   $med-color-provaschecklist-darkest,
-    dark:      $med-color-provaschecklist-dark,
-    medium:    $med-color-provaschecklist-medium,
-    light:     $med-color-provaschecklist-light,
-    lightest:  $med-color-provaschecklist-lightest,
-    gradient:  linear-gradient(to right, $med-color-provaschecklist-medium, $med-color-provaschecklist-dark)
-  ),
-  feedback-warning: (
-    contrast:  $med-color-neutral-light-prime,
-    darkest:   $med-color-feedback-warning-darkest,
-    dark:      $med-color-feedback-warning-dark,
-    medium:    $med-color-feedback-warning-medium,
-    light:     $med-color-feedback-warning-light,
-    lightest:  $med-color-feedback-warning-lightest,
-    gradient:  linear-gradient(to right, $med-color-feedback-warning-medium, $med-color-feedback-warning-dark)
-  ),
-  feedback-error: (
-    contrast:  $med-color-neutral-light-prime,
-    darkest:   $med-color-feedback-error-darkest,
-    dark:      $med-color-feedback-error-dark,
-    medium:    $med-color-feedback-error-medium,
-    light:     $med-color-feedback-error-light,
-    lightest:  $med-color-feedback-error-lightest,
-    gradient:  linear-gradient(to right, $med-color-feedback-error-medium, $med-color-feedback-error-dark)
-  ),
-  feedback-success: (
-    contrast:  $med-color-neutral-light-prime,
-    darkest:   $med-color-feedback-success-darkest,
-    dark:      $med-color-feedback-success-dark,
-    medium:    $med-color-feedback-success-medium,
-    light:     $med-color-feedback-success-light,
-    lightest:  $med-color-feedback-success-lightest,
-    gradient:  linear-gradient(to right, $med-color-feedback-success-medium, $med-color-feedback-success-dark)
-  ),
-  neutral-light: (
-    contrast:  $med-color-neutral-dark-40,
-    prime:     $med-color-neutral-light-prime,
-    40:        $med-color-neutral-light-40,
-    30:        $med-color-neutral-light-30,
-    20:        $med-color-neutral-light-20,
-    10:        $med-color-neutral-light-10,
-    gradient:  linear-gradient(to right, $med-color-neutral-dark-prime, $med-color-neutral-light-prime)
-  ),
-  neutral-dark: (
-    contrast:  $med-color-neutral-light-40,
-    prime:     $med-color-neutral-dark-prime,
-    40:        $med-color-neutral-dark-40,
-    30:        $med-color-neutral-dark-30,
-    20:        $med-color-neutral-dark-20,
-    10:        $med-color-neutral-dark-10,
-    gradient:  linear-gradient(to right, $med-color-neutral-light-prime, $med-color-neutral-dark-prime)
+  provas: (
+    1: hsl($provas, $saturation, $darkest),
+    2: hsl($provas, $saturation, $dark),
+    3: hsl($provas, $saturation, $medium),
+    4: hsl($provas, $saturation, $light),
+    5: hsl($provas, $saturation, $lightest),
+    gradient: linear-gradient(to right, hsl($provas, $saturation, $medium), hsl($provas, $saturation, $darkest)),
   )
 );
+
+$med-colors-fb-green: hsl(128,80,60);
+$med-colors-fb-yellow: hsl(43,80,60);
+$med-colors-fb-red: hsl(4,80,65);

@@ -208,4 +208,35 @@ ion-card-header.ion-color .ion-inherit-color {
 @import "../../med-components/variables";
 @import "../../med-components/mixins";
 
-@include generate-medsoft-color-classes();
+:root {
+  @include generate-gray-colors();
+
+  --med-colors-fb-green: #{$med-colors-fb-green};
+  --med-colors-fb-yellow: #{$med-colors-fb-yellow};
+  --med-colors-fb-red: #{$med-colors-fb-red};
+
+  @include generate-medsoft-color();
+
+  @each $color-name, $value in $medsoft-colors {
+    @include generate-medsoft-color-classes($color-name);
+  }
+}
+
+:root .color-mode-dark {
+  ion-content {
+    --background: #141414;
+  }
+}
+
+:root .color-mode-light {
+  ion-content {
+    --background: #fafafa;
+  }
+}
+
+
+@each $color-name, $value in $medsoft-colors {
+  .ion-color-#{$color-name} {
+    @include generate-medsoft-color-classes($color-name);
+  }
+}

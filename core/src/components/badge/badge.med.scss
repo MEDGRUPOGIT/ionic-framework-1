@@ -6,8 +6,8 @@
 
 :host {
   // ionic css custom properties
-  --color: #{medsoft-color(brand-primary, contrast)};
-  --background: #{medsoft-color(brand-primary, medium)};
+  --color: #{medsoft-color(brand, contrast)};
+  --background: #{medsoft-color(brand, 3)};
   --padding-bottom: 0;
   --padding-end: #{$med-spacing-inline-base};
   --padding-start: #{$med-spacing-inline-base};
@@ -19,7 +19,7 @@
   font-weight: $med-font-weight-medium;
   line-height: $med-line-height-compressed;
   border-radius: $med-border-radius-pill;
-  border-color: medsoft-color(brand-primary, medium);
+  border-color: medsoft-color(brand, 3);
   border-width: $med-border-width-hairline;
   font-family: inherit;
   min-width: auto;
@@ -34,8 +34,8 @@
 //
 
 :host(.ion-color) {
-  background: medsoft-current-color(medium);
-  border-color: medsoft-current-color(medium);
+  background: medsoft-current-color(3);
+  border-color: medsoft-current-color(3);
   color: medsoft-current-color(contrast);
 }
 
@@ -46,13 +46,13 @@
 :host([fill="outline"]){
   background: transparent;
   border-style: solid;
-  color: #{medsoft-color(brand-primary, medium)};
+  color: #{medsoft-color(brand, 3)};
 }
 
 // color
 :host(.ion-color[fill="outline"]) {
-  border-color: medsoft-current-color(medium);
-  color: medsoft-current-color(medium);
+  border-color: medsoft-current-color(3);
+  color: medsoft-current-color(3);
 }
 
 //

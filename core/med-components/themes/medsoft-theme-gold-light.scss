@@ -1,0 +1,19 @@
+@import "../functions";
+@import "../variables";
+@import "../mixins";
+
+$brand: 43;
+
+$medsoft-colors: (
+  brand: (
+    1: hsl($brand, $saturation, $lightest),
+    2: hsl($brand, $saturation, $light),
+    3: hsl($brand, $saturation, $medium),
+    4: hsl($brand, $saturation, $dark),
+    5: hsl($brand, $saturation, $darkest),
+    gradient: linear-gradient(to right, hsl($brand, $saturation, $medium), hsl($brand, $saturation, $lightest)),
+  )
+);
+
+@include generate-custom-theme(null, 'gold');
+
