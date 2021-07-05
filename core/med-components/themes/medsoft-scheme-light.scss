@@ -67,6 +67,4 @@ $new-medsoft-colors: (
   ),
 );
 
-:root {
-  @include new-generate-custom-theme('light');
-}
+@include new-generate-custom-scheme('light');
