@@ -40,27 +40,27 @@ export const parameters = {
     },
     {
       name: 'Light Mode',
-      class: ['light-mode'],
+      class: ['color-scheme-light'],
       color: '#fff',
     },
     {
       name: 'Gold - Dark Mode',
-      class: ['dark-mode', 'theme-gold'],
+      class: ['color-theme-gold'],
       color: '#b89d58'
     },
     {
       name: 'Gold - Light Mode',
-      class: ['light-mode', 'theme-gold'],
+      class: ['color-scheme-light', 'color-theme-gold'],
       color: '#b89d58'
     },
     {
       name: 'Image Mode - Dark Mode',
-      class: ['dark-mode', 'image-mode'],
+      class: ['image-mode'],
       color: '#000'
     },
     {
       name: 'Image Mode - Light Mode',
-      class: ['light-mode', 'image-mode'],
+      class: ['color-scheme-light', 'image-mode'],
       color: '#fff'
     },
   ],

@@ -15,5 +15,5 @@ $new-medsoft-colors: (
   )
 );
 
-@include new-generate-custom-theme(null, 'gold');
+@include new-generate-custom-theme('light', 'gold');
 
