@@ -14,7 +14,7 @@
 
 :root {
   @include new-generate-neutral-colors();
-  @include new-generate-medsoft-feedback-color();
+  // @include new-generate-medsoft-feedback-color();
   @include new-generate-medsoft-color();
 }
 
@@ -24,8 +24,8 @@
   }
 }
 
-@each $color-name, $value in $new-medsoft-colors-feedback {
-  .ion-color-#{$color-name} {
-    @include new-generate-medsoft-feedback-color-classes($color-name);
-  }
-}
+// /* @each $color-name, $value in $new-medsoft-colors-feedback {
+//   .ion-color-#{$color-name} {
+//     @include new-generate-medsoft-feedback-color-classes($color-name);
+//   }
+// } */

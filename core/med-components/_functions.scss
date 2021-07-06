@@ -65,6 +65,10 @@
 // theme
 //
 
+@function color-to-rgb-list($color) {
+  @return #{red($color)},#{green($color)},#{blue($color)};
+}
+
 @function medsoft-current-color($variation, $alpha: null) {
   $new-variation: null;
 
