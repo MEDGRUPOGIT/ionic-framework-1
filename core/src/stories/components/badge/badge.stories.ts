@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
-import { medsoftColors } from '../../med-colors'
+import { medColors } from '../../med-colors'
 
 export default {
   title: 'Components/Global/Badge',
@@ -30,7 +30,7 @@ Badge.parameters = {
 }
 Badge.argTypes = {
   color: {
-    options: medsoftColors,
+    options: medColors,
     control: { type: 'select'},
     description: "Define a cor do badge.",
     table: {
