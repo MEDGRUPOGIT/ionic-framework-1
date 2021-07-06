@@ -439,8 +439,8 @@
 }
 
 @mixin new-generate-custom-theme($theme, $feedback: false) {
-  .color-scheme-#{$theme},
-  [color-scheme='#{$theme}'] {
+  .color-theme-#{$theme},
+  [color-theme='#{$theme}'] {
 
     @if $feedback {
       @include new-generate-medsoft-feedback-color();
