@@ -14,14 +14,14 @@ export class MedAgrupador {
   @State() toggle = false;
 
   onClick = () => {
-    this.toggle = this.toggle ? !this.toggle : !this.toggle
+    this.toggle = this.toggle ? !this.toggle : !this.toggle;
   }
 
   render() {
     const {color} = this;
 
     return (
-      <Host from-stencil class={createColorClasses(color, {null:true,'toggle': this.toggle})} onClick={this.onClick}>
+      <Host from-stencil class={createColorClasses(color, {'toggle': this.toggle})} onClick={this.onClick}>
         <div class="toggle__expandir">Expandir a lista</div>
         <div class="toggle__ocultar">Ocultar a lista</div>
         <ion-icon class="toggle__img" name="med-arrow-down"></ion-icon>
