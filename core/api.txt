@@ -1371,8 +1371,10 @@ ion-virtual-scroll,method,checkRange,checkRange(offset: number, len?: number) =>
 ion-virtual-scroll,method,positionForItem,positionForItem(index: number) => Promise<number>
 
 med-accordion,shadow
+med-accordion,prop,collapsed,boolean,true,false,true
 med-accordion,prop,color,string | undefined,undefined,false,false
-med-accordion,prop,dsSize,"full" | undefined,undefined,false,false
+med-accordion,prop,size,"full" | undefined,undefined,false,false
+med-accordion,method,toggle,toggle() => Promise<void>
 
 med-agrupador,shadow
 med-agrupador,prop,color,string | undefined,undefined,false,false
