@@ -1014,8 +1014,8 @@ export class MedHeader {
 }
 export declare interface MedImageZoom extends Components.MedImageZoom {
 }
-@ProxyCmp({ inputs: ["imagens"] })
-@Component({ selector: "med-image-zoom", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["imagens"] })
+@ProxyCmp({ inputs: ["imagens", "marcaAguaInferior", "marcaAguaSuperior", "titulo"] })
+@Component({ selector: "med-image-zoom", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["imagens", "marcaAguaInferior", "marcaAguaSuperior", "titulo"] })
 export class MedImageZoom {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

@@ -880,7 +880,10 @@ export const MedHeader = /*@__PURE__*/ defineContainer<JSX.MedHeader>('med-heade
 
 
 export const MedImageZoom = /*@__PURE__*/ defineContainer<JSX.MedImageZoom>('med-image-zoom', [
-  'imagens'
+  'imagens',
+  'marcaAguaSuperior',
+  'marcaAguaInferior',
+  'titulo'
 ]);
 
 
