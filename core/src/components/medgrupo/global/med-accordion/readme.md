@@ -10,7 +10,20 @@
 | Property | Attribute | Description | Type                  | Default     |
 | -------- | --------- | ----------- | --------------------- | ----------- |
 | `color`  | `color`   |             | `string \| undefined` | `undefined` |
-| `dsSize` | `ds-size` |             | `"full" \| undefined` | `undefined` |
+| `size`   | `size`    |             | `"full" \| undefined` | `undefined` |
+
+
+## Methods
+
+### `toggle() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
 
 
 ## Dependencies

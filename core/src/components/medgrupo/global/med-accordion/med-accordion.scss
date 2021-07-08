@@ -1,46 +1,41 @@
 @import "../../../../../med-components/abstracts";
 
 :host {
-  --color-title: #{medsoft-color(neutral-light, prime)};
-  --color-text: #{medsoft-color(neutral-light, 30)};
+  --background: var(--med-color-neutral-3);
+  --icon-color: var(--med-color-neutral-10);
 
+  display: block;
   padding: $med-spacing-squish-md;
   border-radius: $med-border-radius-sm;
-  background: $med-color-neutral-dark-30;
-  display: flex;
+  background: var(--background);
   width: 100%;
+}
+
+.med-accordion__header {
+  display: flex;
   cursor: pointer;
+  width: 100%;
+}
 
-  .content {
-    flex: 1;
-    padding: 0 $med-spacing-inline-xxxs;
-  }
+.med-accordion__icon {
+  color: var(--icon-color);
+  margin-left: auto;
+  font-size: 24px;
+}
 
-  ion-icon {
-    font-size: 24px;
-  }
+.med-accordion__content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
 }
 
 :host(.med-accordion--full) {
   border-radius: 0;
 }
 
-::slotted([slot="title"]) {
-  text-align: left;
-  margin: 0 0 $med-spacing-stack-base 0 !important;
-  padding: 0 !important;
-  font-size: $med-font-size-xs;
-  font-weight: $med-font-weight-semibold;
-  line-height: line-height();
-  color: var(--color-title);
-}
+:host(.med-accordion--toggle) {
 
-::slotted([slot="content"]) {
-  text-align: left;
-  margin: 0 !important;
-  padding: 0 !important;
-  color: var(--color-text);
-  font-size: $med-font-size-xxs;
-  font-weight: $med-font-weight-regular;
+  ion-icon {
+    transform: rotate(180deg);
+  }
 }
-
