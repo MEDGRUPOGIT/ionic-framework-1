@@ -2724,6 +2724,7 @@ export namespace Components {
         "renderItem"?: (item: any, index: number) => any;
     }
     interface MedAccordion {
+        "collapsed": boolean;
         "color"?: Color;
         "size"?: 'full';
         "toggle": () => Promise<void>;
@@ -6265,6 +6266,7 @@ declare namespace LocalJSX {
         "renderItem"?: (item: any, index: number) => any;
     }
     interface MedAccordion {
+        "collapsed"?: boolean;
         "color"?: Color;
         "size"?: 'full';
     }

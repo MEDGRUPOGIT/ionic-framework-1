@@ -5,7 +5,6 @@
   --icon-color: var(--med-color-neutral-10);
 
   display: block;
-  padding: $med-spacing-squish-md;
   border-radius: $med-border-radius-sm;
   background: var(--background);
   width: 100%;
@@ -15,27 +14,34 @@
   display: flex;
   cursor: pointer;
   width: 100%;
+  padding: $med-spacing-squish-md;
+  box-sizing: border-box;
 }
 
 .med-accordion__icon {
   color: var(--icon-color);
   margin-left: auto;
   font-size: 24px;
+  transform: rotate(180deg);
+}
+
+:host(.med-accordion--collapsed) .med-accordion__icon {
+  transform: rotate(0);
+}
+
+.med-accordion__content--fake {
+  overflow: hidden;
 }
 
 .med-accordion__content {
   overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
 }
+
+
+//
+// full
+//
 
 :host(.med-accordion--full) {
   border-radius: 0;
-}
-
-:host(.med-accordion--toggle) {
-
-  ion-icon {
-    transform: rotate(180deg);
-  }
 }
