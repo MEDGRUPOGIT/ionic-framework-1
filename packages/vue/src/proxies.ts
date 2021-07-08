@@ -22,6 +22,7 @@ export const IonBackdrop = /*@__PURE__*/ defineContainer<JSX.IonBackdrop>('ion-b
 export const IonBadge = /*@__PURE__*/ defineContainer<JSX.IonBadge>('ion-badge', [
   'dsSize',
   'fill',
+  'invert',
   'color'
 ]);
 

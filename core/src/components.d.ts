@@ -213,6 +213,7 @@ export namespace Components {
         "color"?: Color;
         "dsSize"?: 'sm' | 'md' | 'lg';
         "fill"?: 'outline';
+        "invert": boolean;
         /**
           * The mode determines which platform styles to use.
          */
@@ -3722,6 +3723,7 @@ declare namespace LocalJSX {
         "color"?: Color;
         "dsSize"?: 'sm' | 'md' | 'lg';
         "fill"?: 'outline';
+        "invert"?: boolean;
         /**
           * The mode determines which platform styles to use.
          */
