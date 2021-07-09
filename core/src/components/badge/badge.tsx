@@ -18,7 +18,8 @@ import { createColorClasses } from '../../utils/theme';
 export class Badge implements ComponentInterface {
   // custom
   @Prop() dsSize?: 'sm' | 'md' | 'lg';
-  @Prop() fill?: 'outline'
+  @Prop() fill?: 'outline';
+  @Prop({ reflect: true }) invert = false;
 
   /**
    * The color to use from your application's color palette.
@@ -33,11 +34,10 @@ export class Badge implements ComponentInterface {
       <Host
         class={createColorClasses(this.color, {
           [mode]: true,
+          'invert': this.invert,
         })}
       >
-        <span class="inner">
-          <slot></slot>
-        </span>
+        <slot></slot>
       </Host>
     );
   }

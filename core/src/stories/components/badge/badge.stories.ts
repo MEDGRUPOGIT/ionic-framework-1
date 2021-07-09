@@ -7,13 +7,13 @@ export default {
   decorators: [withDesign],
 };
 
-const TemplateDefault = ({ color, fill, size, slot }) => {
+const TemplateDefault = ({ color, fill, size, slot, invert }) => {
   return html`
     <ion-app class="storybook-only">
       <div class="storybook-only__container">
 
         <!-- component -->
-        <ion-badge .color=${color} fill=${fill} ds-size=${size}>${slot}</ion-badge>
+        <ion-badge .color=${color} fill=${fill} ds-size=${size} ?invert=${invert}>${slot}</ion-badge>
         <!-- component -->
 
       </div>
@@ -48,16 +48,25 @@ Badge.argTypes = {
     },
   },
   size: {
-    options: [undefined, 'sm', 'md', 'lg'],
+    options: [undefined, 'xs', 'sm', 'md', 'lg'],
     control: { type: 'radio'},
     description: "Define o tamanho do badge.",
     table: {
-      type:  { summary: 'sm | md | lg' },
+      type:  { summary: 'xs | sm | md | lg' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  invert: {
+    disabled: false,
+    control: { type: 'boolean' },
+    description: 'Inverte a cor de componente para tom de cinza.',
+    table: {
+      type:  { summary: 'boolean' },
       defaultValue: { summary: 'undefined' },
     },
   },
   slot: {
     control: { type: 'text' },
-    defaultValue: 'badge',
+    defaultValue: 'UNIFESP 2020',
   },
 };

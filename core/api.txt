@@ -134,6 +134,7 @@ ion-badge,shadow
 ion-badge,prop,color,string | undefined,undefined,false,false
 ion-badge,prop,dsSize,"lg" | "md" | "sm" | undefined,undefined,false,false
 ion-badge,prop,fill,"outline" | undefined,undefined,false,false
+ion-badge,prop,invert,boolean,false,false,true
 ion-badge,prop,mode,"ios" | "md",undefined,false,false
 ion-badge,css-prop,--background
 ion-badge,css-prop,--color
@@ -1369,6 +1370,15 @@ ion-virtual-scroll,method,checkEnd,checkEnd() => Promise<void>
 ion-virtual-scroll,method,checkRange,checkRange(offset: number, len?: number) => Promise<void>
 ion-virtual-scroll,method,positionForItem,positionForItem(index: number) => Promise<number>
 
+med-accordion,shadow
+med-accordion,prop,collapsed,boolean,true,false,true
+med-accordion,prop,color,string | undefined,undefined,false,false
+med-accordion,prop,size,"full" | undefined,undefined,false,false
+med-accordion,method,toggle,toggle() => Promise<void>
+
+med-agrupador,shadow
+med-agrupador,prop,color,string | undefined,undefined,false,false
+
 med-alternativas,shadow
 med-alternativas,prop,alternativaSelecionada,string,undefined,true,true
 med-alternativas,prop,alternativas,any,[],false,false
@@ -1413,6 +1423,9 @@ med-header,event,medResize,headerResizeEventDetail,true
 
 med-image-zoom,shadow
 med-image-zoom,prop,imagens,any,[],false,true
+med-image-zoom,prop,marcaAguaInferior,string | undefined,undefined,false,true
+med-image-zoom,prop,marcaAguaSuperior,string | undefined,undefined,false,true
+med-image-zoom,prop,titulo,string | undefined,undefined,false,true
 
 med-navbar,shadow
 med-navbar,event,medResize,navbarResizeEventDetail,true
