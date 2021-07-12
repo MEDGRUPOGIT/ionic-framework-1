@@ -507,3 +507,31 @@
     }
   }
 }
+
+@mixin generate-neutrals() {
+  $index: 1;
+
+  @each $key, $value in $med-neutrals {
+    @if $index <= 5 {
+      .med-neutral-#{$key} {
+        $neutral: map-get($med-neutrals, $key);
+
+        --med-neutral: var(--med-neutral-#{$key}, #{$neutral}) !important;
+        --med-neutral-rgb: var(--med-neutral-#{$key}-rgb, #{color-to-rgb-list($neutral)}) !important;
+        --med-neutral-contrast: #f1f3f4 !important;
+        --med-neutral-contrast-rgb: #{color-to-rgb-list(#f1f3f4)} !important;
+      }
+    } @else {
+      .med-neutral-#{$key} {
+        $neutral: map-get($med-neutrals, $key);
+
+        --med-neutral: var(--med-neutral-#{$key}, #{$neutral}) !important;
+        --med-neutral-rgb: var(--med-neutral-#{$key}-rgb, #{color-to-rgb-list($neutral)}) !important;
+        --med-neutral-contrast: #0b0e0e !important;
+        --med-neutral-contrast-rgb: #{color-to-rgb-list(#0b0e0e)} !important;
+      }
+    }
+
+    $index: $index + 1;
+  }
+}

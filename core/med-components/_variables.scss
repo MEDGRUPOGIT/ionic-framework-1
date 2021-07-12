@@ -643,3 +643,16 @@ $new-medsoft-colors: (
     gradient: linear-gradient(to right, hsl($med-brand, 10, 25), hsl($med-brand, 10, 45)),
   ),
 );
+
+$med-neutrals: (
+  '01': #0b0e0e,
+  '02': #22292a,
+  '03': #394446,
+  '04': #506062,
+  '05': #677b7e,
+  '06': #819598,
+  '07': #9dacaf,
+  '08': #b9c4c6,
+  '09': #d5dcdd,
+  '10': #f1f3f4,
+) !default;

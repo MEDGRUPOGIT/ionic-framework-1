@@ -218,6 +218,7 @@ export namespace Components {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        "neutral"?: Color;
     }
     interface IonButton {
         /**
@@ -3734,6 +3735,7 @@ declare namespace LocalJSX {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        "neutral"?: Color;
     }
     interface IonButton {
         /**
