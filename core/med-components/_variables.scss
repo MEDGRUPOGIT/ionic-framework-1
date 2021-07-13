@@ -593,7 +593,7 @@ $new-medsoft-colors: (
     gradient: linear-gradient(to right, hsl($med-provas, $med-saturation, $med-medium), hsl($med-provas, $med-saturation, $med-darkest)),
   ),
   success: (
-    contrast-1: #fff,
+    contrast-1: #000,
     contrast-2: #000,
     1: hsl(128, 80, 60),
     2: hsl(128, 80, 60),
