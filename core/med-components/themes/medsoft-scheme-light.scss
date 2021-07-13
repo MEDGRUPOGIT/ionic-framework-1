@@ -124,7 +124,6 @@ $new-medsoft-colors: (
 );
 
 $med-neutrals: (
-  '0': #fff,
   '1': #f1f3f4,
   '2': #d5dcdd,
   '3': #b9c4c6,
@@ -135,7 +134,6 @@ $med-neutrals: (
   '8': #394446,
   '9': #22292a,
   '10': #0b0e0e,
-  '11': #000,
 ) !default;
 
 @include new-generate-custom-scheme('light');
