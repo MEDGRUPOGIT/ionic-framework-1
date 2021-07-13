@@ -269,7 +269,7 @@
   --med-color-gradient: var(--med-color-#{$color-name}-gradient, #{$gradient}) !important;
 }
 
-@mixin generate-medsoft-color-classes {
+@mixin generate-medsoft-color-classes() {
   @each $color-name, $value in $medsoft-colors {
     @if $color-name != 'neutral-light' and $color-name != 'neutral-dark'{
       .ion-color-#{$color-name} {
@@ -518,8 +518,8 @@
 
         --med-neutral: var(--med-neutral-#{$key}, #{$neutral}) !important;
         --med-neutral-rgb: var(--med-neutral-#{$key}-rgb, #{color-to-rgb-list($neutral)}) !important;
-        --med-neutral-contrast: #f1f3f4 !important;
-        --med-neutral-contrast-rgb: #{color-to-rgb-list(#f1f3f4)} !important;
+        --med-neutral-contrast: #fff !important;
+        --med-neutral-contrast-rgb: #{color-to-rgb-list(#fff)} !important;
       }
     } @else {
       .med-neutral-#{$key} {
@@ -527,8 +527,8 @@
 
         --med-neutral: var(--med-neutral-#{$key}, #{$neutral}) !important;
         --med-neutral-rgb: var(--med-neutral-#{$key}-rgb, #{color-to-rgb-list($neutral)}) !important;
-        --med-neutral-contrast: #0b0e0e !important;
-        --med-neutral-contrast-rgb: #{color-to-rgb-list(#0b0e0e)} !important;
+        --med-neutral-contrast: #000 !important;
+        --med-neutral-contrast-rgb: #{color-to-rgb-list(#000)} !important;
       }
     }
 

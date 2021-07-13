@@ -137,6 +137,12 @@ ion-badge,prop,fill,"outline" | undefined,undefined,false,false
 ion-badge,prop,invert,boolean,false,false,true
 ion-badge,prop,mode,"ios" | "md",undefined,false,false
 ion-badge,prop,neutral,string | undefined,undefined,false,false
+ion-badge,css-prop,--background
+ion-badge,css-prop,--color
+ion-badge,css-prop,--padding-bottom
+ion-badge,css-prop,--padding-end
+ion-badge,css-prop,--padding-start
+ion-badge,css-prop,--padding-top
 
 ion-button,shadow
 ion-button,prop,buttonType,string,'button',false,false
@@ -487,6 +493,16 @@ ion-input,event,ionBlur,FocusEvent,true
 ion-input,event,ionChange,InputChangeEventDetail,true
 ion-input,event,ionFocus,FocusEvent,true
 ion-input,event,ionInput,KeyboardEvent,true
+ion-input,css-prop,--background
+ion-input,css-prop,--color
+ion-input,css-prop,--padding-bottom
+ion-input,css-prop,--padding-end
+ion-input,css-prop,--padding-start
+ion-input,css-prop,--padding-top
+ion-input,css-prop,--placeholder-color
+ion-input,css-prop,--placeholder-font-style
+ion-input,css-prop,--placeholder-font-weight
+ion-input,css-prop,--placeholder-opacity
 
 ion-item,shadow
 ion-item,prop,button,boolean,false,false,false
@@ -994,6 +1010,17 @@ ion-searchbar,event,ionChange,SearchbarChangeEventDetail,true
 ion-searchbar,event,ionClear,void,true
 ion-searchbar,event,ionFocus,void,true
 ion-searchbar,event,ionInput,KeyboardEvent,true
+ion-searchbar,css-prop,--background
+ion-searchbar,css-prop,--border-radius
+ion-searchbar,css-prop,--box-shadow
+ion-searchbar,css-prop,--cancel-button-color
+ion-searchbar,css-prop,--clear-button-color
+ion-searchbar,css-prop,--color
+ion-searchbar,css-prop,--icon-color
+ion-searchbar,css-prop,--placeholder-color
+ion-searchbar,css-prop,--placeholder-font-style
+ion-searchbar,css-prop,--placeholder-font-weight
+ion-searchbar,css-prop,--placeholder-opacity
 
 ion-segment,shadow
 ion-segment,prop,color,string | undefined,undefined,false,false
