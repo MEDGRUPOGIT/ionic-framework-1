@@ -1,6 +1,6 @@
 import { Component, Host, h, Prop } from '@stencil/core';
 
-export interface MedDonutItem {
+export interface MedRadialItem {
   cor: string;
   label: string;
   quantia: number;
@@ -13,14 +13,14 @@ export interface MedDonutItem {
   scoped: true
 })
 export class MedChartLabel {
-  @Prop({reflect: true}) valores: MedDonutItem[] = [];
+  @Prop({reflect: true}) valores: MedRadialItem[] = [];
 
   render() {
     return (
       <Host>
         <ul class="list">
           {
-            this.valores.map((item: MedDonutItem) => {
+            this.valores.map((item: MedRadialItem) => {
               return <li class="item"><span class={{'quantia': true, [item.cor]: true}}>{item.quantia}</span> {item.label}</li>
             })
           }

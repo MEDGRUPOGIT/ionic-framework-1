@@ -1408,11 +1408,11 @@ med-cartao-resposta-item,prop,color,string | undefined,undefined,false,false
 
 med-cartao-resposta-lista,shadow
 
-med-chart-donut,scoped
-med-chart-donut,prop,valores,MedDonutItem[],[],false,false
-
 med-chart-label,scoped
-med-chart-label,prop,valores,MedDonutItem[],[],false,false
+med-chart-label,prop,valores,MedRadialItem[],[],false,false
+
+med-chart-radial,scoped
+med-chart-radial,prop,valores,MedRadialItem[],[],false,false
 
 med-divider,shadow
 med-divider,prop,text,string,undefined,true,false
