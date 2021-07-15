@@ -1,15 +1,25 @@
 :host {
-  opacity: $med-opacity-level-semiopaque;
-  background: #0b0e0e;
-  display: flex;
+  --z-index: 1000;
+
+  display: block;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  pointer-events: none;
+
+  .wrapper {
+    opacity: $med-opacity-level-semiopaque;
+    background: #0b0e0e;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    pointer-events: none;
+    z-index: var(--z-index);
+  }
 
   .icon {
     width: 48px;
