@@ -13,6 +13,10 @@ export class MedHeader {
   private hostHeight = 0;
   private hostResizeObserver!: ResizeObserver;
 
+  connectedCallback(){
+    this.setSize()
+  }
+
   componentDidLoad() {
     this.setSize();
   }
