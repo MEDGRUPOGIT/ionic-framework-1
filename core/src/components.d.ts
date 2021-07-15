@@ -10,8 +10,8 @@ import { IonicSafeString } from "./utils/sanitization";
 import { NavigationHookCallback } from "./components/route/route-interface";
 import { SelectCompareFn } from "./components/select/select-interface";
 import { MedAlternativaInterface } from "./components/medgrupo/team/med-alternativas/med-alternativas-interface";
-import { MedDonutItem } from "./components/medgrupo/01-core/med-chart-donut/med-chart-donut";
-import { MedDonutItem as MedDonutItem1 } from "./components/medgrupo/01-core/med-chart-label/med-chart-label";
+import { MedRadialItem } from "./components/medgrupo/01-core/med-chart-label/med-chart-label";
+import { MedRadialItem as MedRadialItem1 } from "./components/medgrupo/01-core/med-chart-radial/med-chart-radial";
 import { MedFontSize } from "./global/med-components/font-size.enum";
 import { headerResizeEventDetail } from "./components/medgrupo/global/med-header/med-header-interface";
 import { MedImageZoomItemInterface } from "./components/medgrupo/global/med-image-zoom/med-image-zoom-interface";
@@ -2759,11 +2759,11 @@ export namespace Components {
     }
     interface MedCartaoRespostaLista {
     }
-    interface MedChartDonut {
-        "valores": MedDonutItem[];
-    }
     interface MedChartLabel {
-        "valores": MedDonutItem[];
+        "valores": MedRadialItem[];
+    }
+    interface MedChartRadial {
+        "valores": MedRadialItem[];
     }
     interface MedDivider {
         "text": string;
@@ -3369,17 +3369,17 @@ declare global {
         prototype: HTMLMedCartaoRespostaListaElement;
         new (): HTMLMedCartaoRespostaListaElement;
     };
-    interface HTMLMedChartDonutElement extends Components.MedChartDonut, HTMLStencilElement {
-    }
-    var HTMLMedChartDonutElement: {
-        prototype: HTMLMedChartDonutElement;
-        new (): HTMLMedChartDonutElement;
-    };
     interface HTMLMedChartLabelElement extends Components.MedChartLabel, HTMLStencilElement {
     }
     var HTMLMedChartLabelElement: {
         prototype: HTMLMedChartLabelElement;
         new (): HTMLMedChartLabelElement;
+    };
+    interface HTMLMedChartRadialElement extends Components.MedChartRadial, HTMLStencilElement {
+    }
+    var HTMLMedChartRadialElement: {
+        prototype: HTMLMedChartRadialElement;
+        new (): HTMLMedChartRadialElement;
     };
     interface HTMLMedDividerElement extends Components.MedDivider, HTMLStencilElement {
     }
@@ -3548,8 +3548,8 @@ declare global {
         "med-banner": HTMLMedBannerElement;
         "med-cartao-resposta-item": HTMLMedCartaoRespostaItemElement;
         "med-cartao-resposta-lista": HTMLMedCartaoRespostaListaElement;
-        "med-chart-donut": HTMLMedChartDonutElement;
         "med-chart-label": HTMLMedChartLabelElement;
+        "med-chart-radial": HTMLMedChartRadialElement;
         "med-divider": HTMLMedDividerElement;
         "med-enunciado": HTMLMedEnunciadoElement;
         "med-enunciado-discursiva": HTMLMedEnunciadoDiscursivaElement;
@@ -6336,11 +6336,11 @@ declare namespace LocalJSX {
     }
     interface MedCartaoRespostaLista {
     }
-    interface MedChartDonut {
-        "valores"?: MedDonutItem[];
-    }
     interface MedChartLabel {
-        "valores"?: MedDonutItem[];
+        "valores"?: MedRadialItem[];
+    }
+    interface MedChartRadial {
+        "valores"?: MedRadialItem[];
     }
     interface MedDivider {
         "text": string;
@@ -6480,8 +6480,8 @@ declare namespace LocalJSX {
         "med-banner": MedBanner;
         "med-cartao-resposta-item": MedCartaoRespostaItem;
         "med-cartao-resposta-lista": MedCartaoRespostaLista;
-        "med-chart-donut": MedChartDonut;
         "med-chart-label": MedChartLabel;
+        "med-chart-radial": MedChartRadial;
         "med-divider": MedDivider;
         "med-enunciado": MedEnunciado;
         "med-enunciado-discursiva": MedEnunciadoDiscursiva;
@@ -6594,8 +6594,8 @@ declare module "@stencil/core" {
             "med-banner": LocalJSX.MedBanner & JSXBase.HTMLAttributes<HTMLMedBannerElement>;
             "med-cartao-resposta-item": LocalJSX.MedCartaoRespostaItem & JSXBase.HTMLAttributes<HTMLMedCartaoRespostaItemElement>;
             "med-cartao-resposta-lista": LocalJSX.MedCartaoRespostaLista & JSXBase.HTMLAttributes<HTMLMedCartaoRespostaListaElement>;
-            "med-chart-donut": LocalJSX.MedChartDonut & JSXBase.HTMLAttributes<HTMLMedChartDonutElement>;
             "med-chart-label": LocalJSX.MedChartLabel & JSXBase.HTMLAttributes<HTMLMedChartLabelElement>;
+            "med-chart-radial": LocalJSX.MedChartRadial & JSXBase.HTMLAttributes<HTMLMedChartRadialElement>;
             "med-divider": LocalJSX.MedDivider & JSXBase.HTMLAttributes<HTMLMedDividerElement>;
             "med-enunciado": LocalJSX.MedEnunciado & JSXBase.HTMLAttributes<HTMLMedEnunciadoElement>;
             "med-enunciado-discursiva": LocalJSX.MedEnunciadoDiscursiva & JSXBase.HTMLAttributes<HTMLMedEnunciadoDiscursivaElement>;

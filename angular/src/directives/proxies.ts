@@ -963,22 +963,22 @@ export class MedCartaoRespostaLista {
     this.el = r.nativeElement;
   }
 }
-export declare interface MedChartDonut extends Components.MedChartDonut {
+export declare interface MedChartLabel extends Components.MedChartLabel {
 }
 @ProxyCmp({ inputs: ["valores"] })
-@Component({ selector: "med-chart-donut", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["valores"] })
-export class MedChartDonut {
+@Component({ selector: "med-chart-label", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["valores"] })
+export class MedChartLabel {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
   }
 }
-export declare interface MedChartLabel extends Components.MedChartLabel {
+export declare interface MedChartRadial extends Components.MedChartRadial {
 }
 @ProxyCmp({ inputs: ["valores"] })
-@Component({ selector: "med-chart-label", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["valores"] })
-export class MedChartLabel {
+@Component({ selector: "med-chart-radial", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["valores"] })
+export class MedChartRadial {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();

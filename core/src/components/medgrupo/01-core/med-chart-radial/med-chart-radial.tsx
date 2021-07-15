@@ -1,6 +1,6 @@
 import { Component, Host, h, Prop } from '@stencil/core';
 
-export interface MedDonutItem {
+export interface MedRadialItem {
   cor: string;
   label: string;
   quantia: number;
@@ -8,12 +8,12 @@ export interface MedDonutItem {
 };
 
 @Component({
-  tag: 'med-chart-donut',
-  styleUrl: 'med-chart-donut.scss',
+  tag: 'med-chart-radial',
+  styleUrl: 'med-chart-radial.scss',
   scoped: true
 })
-export class MedChartDonut {
-  @Prop({reflect: true}) valores: MedDonutItem[] = [];
+export class MedChartRadial {
+  @Prop({reflect: true}) valores: MedRadialItem[] = [];
 
   private getTotal() {
     const totais = {
@@ -21,7 +21,7 @@ export class MedChartDonut {
       subtotais: [] as number[]
     }
 
-    this.valores.forEach((item: MedDonutItem) => {
+    this.valores.forEach((item: MedRadialItem) => {
       totais.total += item.quantia;
       totais.subtotais.push(totais.total);
     })
@@ -37,7 +37,7 @@ export class MedChartDonut {
         <svg viewBox="0 0 36 36">
           <circle cx="18" cy="18" r="16" />
           {
-            this.valores.reverse().map((item: MedDonutItem, index: number) => {
+            this.valores.reverse().map((item: MedRadialItem, index: number) => {
               const subtotalIndex = this.valores.length - index - 1;
 
               if (!item.ignoreBarra) {
