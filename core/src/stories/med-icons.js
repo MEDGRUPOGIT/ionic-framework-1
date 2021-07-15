@@ -25,6 +25,7 @@ export const medIcons = [
   'med-like',
   'med-minus',
   'med-notes',
+  'med-offline',
   'med-plus',
   'med-questao',
   'med-retomar',
