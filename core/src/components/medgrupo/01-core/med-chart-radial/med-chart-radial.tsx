@@ -33,7 +33,7 @@ export class MedChartRadial {
     const totais = this.getTotal();
 
     return (
-      <Host>
+      <Host from-stencil>
         <svg viewBox="0 0 36 36">
           <circle cx="18" cy="18" r="16" />
           {

@@ -1,4 +1,6 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
+import { Color, Neutral } from '../../../../interface';
+import { createColorClasses } from '../../../../utils/theme';
 
 @Component({
   tag: 'med-toolbar',
@@ -6,10 +8,14 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class MedToolbar {
+  @Prop() color?: Color;
+  @Prop() neutral?: Neutral;
 
   render() {
     return (
-      <Host from-stencil>
+      <Host from-stencil class={createColorClasses(this.color, {
+        'med-toolbar': true
+      }, this.neutral)}>
         <div class="container">
           <slot name="start"></slot>
           <div class="container__center">

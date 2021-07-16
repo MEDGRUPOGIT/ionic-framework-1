@@ -2,7 +2,7 @@ import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Meth
 
 import { config } from '../../global/config';
 import { getIonMode } from '../../global/ionic-global';
-import { AutocompleteTypes, Color, SearchbarChangeEventDetail, StyleEventDetail } from '../../interface';
+import { AutocompleteTypes, Color, SearchbarChangeEventDetail, StyleEventDetail, Neutral } from '../../interface';
 import { debounceEvent, raf } from '../../utils/helpers';
 import { createColorClasses } from '../../utils/theme';
 
@@ -18,6 +18,8 @@ import { createColorClasses } from '../../utils/theme';
   scoped: true
 })
 export class Searchbar implements ComponentInterface {
+
+  @Prop() neutral?: Neutral;
 
   private nativeInput?: HTMLInputElement;
   private isCancelVisible = false;
@@ -496,7 +498,7 @@ export class Searchbar implements ComponentInterface {
           'searchbar-has-focus': this.focused,
           'searchbar-should-show-clear': this.shouldShowClearButton(),
           'searchbar-should-show-cancel': this.shouldShowCancelButton()
-        })}
+        }, this.neutral)}
       >
 
         <div class="searchbar-input-container">

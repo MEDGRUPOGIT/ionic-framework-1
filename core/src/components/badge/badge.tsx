@@ -1,7 +1,7 @@
 import { Component, ComponentInterface, Host, Prop, h } from '@stencil/core';
 
 import { getIonMode } from '../../global/ionic-global';
-import { Color } from '../../interface';
+import { Color, Neutral } from '../../interface';
 import { createColorClasses } from '../../utils/theme';
 
 /**
@@ -19,8 +19,7 @@ export class Badge implements ComponentInterface {
   // custom
   @Prop() dsSize?: 'sm' | 'md' | 'lg';
   @Prop() fill?: 'outline';
-  @Prop({ reflect: true }) invert = false;
-  @Prop() neutral?: Color;
+  @Prop() neutral?: Neutral;
 
   /**
    * The color to use from your application's color palette.
@@ -34,8 +33,7 @@ export class Badge implements ComponentInterface {
     return (
       <Host
         class={createColorClasses(this.color, {
-          [mode]: true,
-          'invert': this.invert,
+          [mode]: true
         }, this.neutral)}
       >
         <slot></slot>

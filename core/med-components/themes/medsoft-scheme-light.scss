@@ -99,7 +99,7 @@ $new-medsoft-colors: (
     3: hsl(128, 80, 30),
     4: hsl(128, 80, 30),
     5: hsl(128, 80, 30),
-    gradient: linear-gradient(to right, hsl($med-brand, 10, 25), hsl($med-brand, 10, 45)),
+    gradient: hsl(128, 80, 30),
   ),
   warning: (
     contrast-1: #000,
@@ -109,7 +109,7 @@ $new-medsoft-colors: (
     3: hsl(43, 80, 45),
     4: hsl(43, 80, 45),
     5: hsl(43, 80, 45),
-    gradient: linear-gradient(to right, hsl($med-brand, 10, 25), hsl($med-brand, 10, 45)),
+    gradient: hsl(43, 80, 45),
   ),
   caution: (
     contrast-1: #000,
@@ -119,7 +119,7 @@ $new-medsoft-colors: (
     3: hsl(4, 80, 40),
     4: hsl(4, 80, 40),
     5: hsl(4, 80, 40),
-    gradient: linear-gradient(to right, hsl($med-brand, 10, 75), hsl($med-brand, 10, 95)),
+    gradient: hsl(4, 80, 40),
   ),
 );
 

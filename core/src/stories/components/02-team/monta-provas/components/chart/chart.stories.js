@@ -15,19 +15,33 @@ const TemplateDefault = ({valores}) => {
 
   return html`
     <style>
-      .header__heading {
+      .med-accordion-header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+
+      .med-accordion-header__heading {
         font-size: var(--med-font-size-xs);
         font-weight: var(--med-font-weight-semibold);
         line-height: var(--med-line-height-default);
         color: var(--med-color-neutral-10);
         margin: 0;
-        padding; 0;
+        padding: 0;
         width: 100%;
+        text-align: center;
+      }
+
+      .monta-provas-accordion__button {
+        --font-size: 24px;
+        --padding: 0;
+        --width: 24px;
+        --height: 24px;
       }
 
       .monta-provas-chart {
         background: var(--med-color-neutral-2);
-        padding: var(--med-spacing-stretch-md);
+        padding: 0 var(--med-spacing-stretch-md);
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -41,6 +55,7 @@ const TemplateDefault = ({valores}) => {
         top: 50%;
         transform: translate(-50%, -50%);
         line-height: var(--med-line-height-compressed);
+        text-align: center;
       }
 
       .monta-provas-chart__label {
@@ -61,14 +76,16 @@ const TemplateDefault = ({valores}) => {
 
         <!-- component -->
         <med-accordion class="monta-provas-accordion" icon="left">
-          <div class="header" slot="header">
-            <h4 class="header__heading">Nome da Prova</h4>
-            <ion-icon class="header__icon" name="med-context-menu"></ion-icon>
+          <div class="med-accordion-header" slot="header">
+            <h4 class="med-accordion-header__heading">Nome da Prova</h4>
+
+            <ion-button class="monta-provas-accordion__button" ds-name="icon-only">
+              <ion-icon name="med-context-menu"></ion-icon>
+            </ion-button>
           </div>
 
           <div class="monta-provas-chart" slot="content">
-
-            <med-chart-radial>
+            <med-chart-radial class="monta-provas-chart__radial">
               <div class="monta-provas-chart__total">
                 <span class="monta-provas-chart__label">Total de</span>
                 <span class="monta-provas-chart__number">100</span>
@@ -76,8 +93,7 @@ const TemplateDefault = ({valores}) => {
               </div>
             </med-chart-radial>
 
-            <med-chart-label></med-chart-label>
-
+            <med-chart-label class="monta-provas-chart__label"></med-chart-label>
           </div>
         </med-accordion>
         <!-- component -->

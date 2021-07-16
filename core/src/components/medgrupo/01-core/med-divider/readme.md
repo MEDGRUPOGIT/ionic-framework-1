@@ -7,9 +7,11 @@
 
 ## Properties
 
-| Property            | Attribute | Description | Type     | Default     |
-| ------------------- | --------- | ----------- | -------- | ----------- |
-| `text` _(required)_ | `text`    |             | `string` | `undefined` |
+| Property            | Attribute | Description | Type                  | Default     |
+| ------------------- | --------- | ----------- | --------------------- | ----------- |
+| `color`             | `color`   |             | `string \| undefined` | `undefined` |
+| `neutral`           | `neutral` |             | `string \| undefined` | `undefined` |
+| `text` _(required)_ | `text`    |             | `string`              | `undefined` |
 
 
 ----------------------------------------------

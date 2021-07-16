@@ -1,34 +1,34 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
-import { medColors, medNeutrals } from '../../med-colors';
+import { medColors, medNeutrals } from '../../../med-colors';
 
 export default {
-  title: 'Components/Global/Search Bar',
+  title: 'Components/Core/Divider',
   decorators: [withDesign],
 };
 
-const TemplateDefault = ({color, neutral}) => {
+const TemplateDefault = ({color, neutral, text}) => {
   return html`
-    <ion-app>
-      <ion-content>
+    <ion-app class="storybook-only">
+      <div class="storybook-only__container">
 
         <!-- component -->
-        <ion-searchbar .color=${color} .neutral=${neutral} show-clear-button="never" show-cancel-button="focus" cancel-button-text="Cancelar" mode="ios" search-icon="med-search"></ion-searchbar>
+          <med-divider .color=${color} .neutral=${neutral} text="${text}"></med-divider>
         <!-- component -->
 
-      <ion-content>
+      <div>
     </ion-app>
-    `
+  `
 }
 
-export const SearchBar = TemplateDefault.bind({});
-SearchBar.parameters = {
+export const Divider = TemplateDefault.bind({});
+Divider.parameters = {
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/Componentes?node-id=2200%3A0',
+    url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/Componentes?node-id=4334%3A21616',
   },
-};
-SearchBar.argTypes = {
+}
+Divider.argTypes = {
   color: {
     options: medColors,
     control: { type: 'select'},
@@ -46,5 +46,10 @@ SearchBar.argTypes = {
       type:  { summary: 'Neutrals' },
       defaultValue: { summary: 'undefined' },
     },
+  },
+  text: {
+    control: { type: 'text' },
+    description: "Define o texto do componente.",
+    defaultValue: 'Monta Provas',
   },
 };

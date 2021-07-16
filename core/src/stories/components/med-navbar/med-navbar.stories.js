@@ -1,12 +1,13 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
+import { medColors, medNeutrals } from '../../med-colors';
 
 export default {
   title: 'Components/Global/Navbar',
   decorators: [withDesign],
 };
 
-const TemplateDefault = ({ platform }) => {
+const TemplateDefault = ({ platform, color, neutral }) => {
   if (platform === 'Mobile') {
     document.querySelector('html').classList.remove('plt-desktop');
     document.querySelector('html').classList.remove('plt-electron');
@@ -19,7 +20,7 @@ const TemplateDefault = ({ platform }) => {
     <ion-app>
 
       <!-- component -->
-      <med-navbar>
+      <med-navbar .color=${color} .neutral=${neutral}>
         <ion-button ds-name="icon-label" slot="left">
           <ion-icon name="med-chevron-left"></ion-icon>
           voltar
@@ -55,4 +56,22 @@ Navbar.argTypes = {
     control: { type: 'radio' },
     description: 'Muda a visualização do componente entre plataformas. **Usado apenas no storybook para visualização.**'
   },
-};
+  color: {
+    options: medColors,
+    control: { type: 'select'},
+    description: "Define a cor do componente.",
+    table: {
+      type:  { summary: 'Color' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  neutral: {
+    options: medNeutrals,
+    control: { type: 'select'},
+    description: "Define a cor neutral do componente.",
+    table: {
+      type:  { summary: 'Neutrals' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+}

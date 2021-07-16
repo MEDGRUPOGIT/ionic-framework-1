@@ -1,12 +1,21 @@
 @import "../../../../../med-components/abstracts";
 
-:host(.med-navbar) {
-  --background: var(--surface, #{medsoft-color(neutral-dark, prime)});
+:host {
+  /**
+   * @prop --background: Define a cor de background do componente.
+   * @prop --color: Defines a cor de texto do componente.
+   */
+  --background: var(--med-color-neutral-1);
+  --color: var(--med-color-neutral-10);
+}
 
+:host(.med-navbar) {
   display: block;
 
-  .header {
-    background: var(--background);
+  .med-navbar {
+    &__header {
+      background: var(--background);
+    }
 
     &__container {
       padding: var(--ion-safe-area-top, 0) #{$med-spacing-inset-sm} 0 #{$med-spacing-inset-sm};
@@ -17,83 +26,111 @@
       box-sizing: border-box;
       min-height: 48px;
     }
-  }
 
-  .left,
-  .right {
-    display: flex;
-    align-items: center;
-  }
+    &__left,
+    &__right {
+      display: flex;
+      align-items: center;
+    }
 
-  .left {
-    justify-content: flex-start;
-  }
+    &__left {
+      justify-content: flex-start;
+    }
 
-  .right {
-    justify-content: flex-end;
-  }
+    &__right {
+      justify-content: flex-end;
+    }
 
-  .center {
-    // setado via tsx //
-    padding-left: var(--padding-left);
-    padding-right: var(--padding-right);
-    // setado via tsx //
+    &__center {
+      // setado via tsx //
+      padding-left: var(--padding-left);
+      padding-right: var(--padding-right);
+      // setado via tsx //
 
-    padding-top: $med-spacing-stack-xxxs;
-    padding-bottom: $med-spacing-stack-xxxs;
+      padding-top: $med-spacing-stack-xxxs;
+      padding-bottom: $med-spacing-stack-xxxs;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-transform: uppercase;
-    text-align: center;
-    width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-transform: uppercase;
+      text-align: center;
+      width: 100%;
+    }
   }
 }
 
-//
+// ////////////////////
 // slotted
-//
+// ////////////////////
 
 :host(.med-navbar) ::slotted(*) {
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0;
+  padding: 0;
 }
 
 :host(.med-navbar) ::slotted([slot="left"]) {
-  margin-right: $med-spacing-inline-base !important;
-
+  color: var(--color);
+  margin-right: $med-spacing-inline-base;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
 :host(.med-navbar) ::slotted([slot="title"]) {
-  color: #{medsoft-color(neutral-light, prime)};
-  font-size: $med-font-size-xs !important;
-  font-weight: $med-font-weight-semibold !important;
-  line-height: $med-line-height-compressed !important;
-
+  color: var(--color);
+  font-size: $med-font-size-xs;
+  font-weight: $med-font-weight-semibold;
+  line-height: $med-line-height-compressed;
   display: block;
 }
 
 :host(.med-navbar) ::slotted([slot="subtitle"]) {
-  color: #{medsoft-color(neutral-light, prime)};
-  font-size: $med-font-size-xxxs !important;
-  font-weight: $med-font-weight-semibold !important;
-  line-height: line-height($med-font-size-xxxs) !important;
-
+  color: var(--color);
+  font-size: $med-font-size-xxxs;
+  font-weight: $med-font-weight-semibold;
+  line-height: line-height($med-font-size-xxxs);
   display: block;
 }
 
 :host(.med-navbar) ::slotted([slot="right"]) {
-  margin-left: $med-spacing-inline-base !important;
-
+  color: var(--color);
+  margin-left: $med-spacing-inline-base;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
+
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-navbar.ion-color) ::slotted([slot="left"]),
+:host(.med-navbar.ion-color) ::slotted([slot="right"]),
+:host(.med-navbar.ion-color) ::slotted([slot="title"]),
+:host(.med-navbar.ion-color) ::slotted([slot="subtitle"]) {
+  --color: #{md-current-color(3)};
+}
+
+// ////////////////////
+// neutral
+// ////////////////////
+
+:host(.med-navbar.med-neutral) {
+  --background: #{var(--med-neutral)};
+}
+
+:host(.med-navbar.med-neutral) ::slotted([slot="left"]),
+:host(.med-navbar.med-neutral) ::slotted([slot="right"]),
+:host(.med-navbar.med-neutral) ::slotted([slot="title"]),
+:host(.med-navbar.med-neutral) ::slotted([slot="subtitle"]) {
+  --color: #{var(--med-neutral-contrast)};
+}
+
+// //////////////////////////////
+// solid
+// //////////////////////////////
 
 //
 // secondary

@@ -17,7 +17,7 @@ export class MedChartLabel {
 
   render() {
     return (
-      <Host>
+      <Host from-stencil>
         <ul class="list">
           {
             this.valores.map((item: MedRadialItem) => {

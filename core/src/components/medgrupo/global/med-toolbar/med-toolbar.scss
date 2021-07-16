@@ -1,7 +1,9 @@
 @import "../../../../../med-components/abstracts";
 
 :host {
-  --background: var(--surface, #{medsoft-color(neutral-dark, 40)});
+  --background: var(--med-color-neutral-2);
+  --center-width: auto;
+  --center-margin: 0 #{$med-spacing-inline-base};
 
   padding: $med-spacing-squish-xs;
   background: var(--background);
@@ -22,9 +24,19 @@
   justify-content: space-between;
 
   &__center {
-    margin: 0 #{$med-spacing-inline-base};
+    margin: var(--center-margin);
+    width: var(--center-width);
   }
 }
+
+:host(.ion-color) {
+  --background: #{md-current-color(1)};
+}
+
+:host(.med-neutral) {
+  --background: var(--med-neutral);
+}
+
 
 //
 // slotted

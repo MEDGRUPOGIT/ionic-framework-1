@@ -5,7 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { ActionSheetButton, AlertButton, AlertInput, AnimationBuilder, AutocompleteTypes, CheckboxChangeEventDetail, Color, ComponentProps, ComponentRef, DatetimeChangeEventDetail, DatetimeOptions, DomRenderFn, FooterHeightFn, FrameworkDelegate, HeaderFn, HeaderHeightFn, InputChangeEventDetail, ItemHeightFn, ItemRenderFn, ItemReorderEventDetail, MenuChangeEventDetail, NavComponent, NavComponentWithProps, NavOptions, OverlayEventDetail, PickerButton, PickerColumn, RadioGroupChangeEventDetail, RangeChangeEventDetail, RangeValue, RefresherEventDetail, RouteID, RouterDirection, RouterEventDetail, RouterOutletOptions, RouteWrite, ScrollBaseDetail, ScrollDetail, SearchbarChangeEventDetail, SegmentButtonLayout, SegmentChangeEventDetail, SelectChangeEventDetail, SelectInterface, SelectPopoverOption, Side, SpinnerTypes, StyleEventDetail, SwipeGestureHandler, TabBarChangedEventDetail, TabBarResizeEventDetail, TabButtonClickEventDetail, TabButtonLayout, TextareaChangeEventDetail, TextFieldTypes, ToastButton, ToggleChangeEventDetail, TransitionDoneFn, TransitionInstruction, ViewController } from "./interface";
+import { ActionSheetButton, AlertButton, AlertInput, AnimationBuilder, AutocompleteTypes, CheckboxChangeEventDetail, Color, ComponentProps, ComponentRef, DatetimeChangeEventDetail, DatetimeOptions, DomRenderFn, FooterHeightFn, FrameworkDelegate, HeaderFn, HeaderHeightFn, InputChangeEventDetail, ItemHeightFn, ItemRenderFn, ItemReorderEventDetail, MenuChangeEventDetail, NavComponent, NavComponentWithProps, NavOptions, Neutral, OverlayEventDetail, PickerButton, PickerColumn, RadioGroupChangeEventDetail, RangeChangeEventDetail, RangeValue, RefresherEventDetail, RouteID, RouterDirection, RouterEventDetail, RouterOutletOptions, RouteWrite, ScrollBaseDetail, ScrollDetail, SearchbarChangeEventDetail, SegmentButtonLayout, SegmentChangeEventDetail, SelectChangeEventDetail, SelectInterface, SelectPopoverOption, Side, SpinnerTypes, StyleEventDetail, SwipeGestureHandler, TabBarChangedEventDetail, TabBarResizeEventDetail, TabButtonClickEventDetail, TabButtonLayout, TextareaChangeEventDetail, TextFieldTypes, ToastButton, ToggleChangeEventDetail, TransitionDoneFn, TransitionInstruction, ViewController } from "./interface";
 import { IonicSafeString } from "./utils/sanitization";
 import { NavigationHookCallback } from "./components/route/route-interface";
 import { SelectCompareFn } from "./components/select/select-interface";
@@ -215,12 +215,11 @@ export namespace Components {
         "color"?: Color;
         "dsSize"?: 'sm' | 'md' | 'lg';
         "fill"?: 'outline';
-        "invert": boolean;
         /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
-        "neutral"?: Color;
+        "neutral"?: Neutral;
     }
     interface IonButton {
         /**
@@ -733,6 +732,7 @@ export namespace Components {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        "neutral"?: Neutral;
         /**
           * Specifies the relationship of the target object to the link object. The value is a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types).
          */
@@ -2038,6 +2038,7 @@ export namespace Components {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        "neutral"?: Neutral;
         /**
           * Set the input's placeholder. `placeholder` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Ionic>` would become `&lt;Ionic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
          */
@@ -2766,6 +2767,8 @@ export namespace Components {
         "valores": MedRadialItem[];
     }
     interface MedDivider {
+        "color"?: Color;
+        "neutral"?: Neutral;
         "text": string;
     }
     interface MedEnunciado {
@@ -2787,6 +2790,9 @@ export namespace Components {
         "titulo"?: string;
     }
     interface MedNavbar {
+        "color"?: Color;
+        "dsName"?: 'solid' | 'secondary' | 'transparent';
+        "neutral"?: Neutral;
     }
     interface MedOption {
     }
@@ -2796,6 +2802,8 @@ export namespace Components {
         "status"?: RateStatus;
     }
     interface MedToolbar {
+        "color"?: Color;
+        "neutral"?: Neutral;
     }
     interface MedTooltip {
         "buttonLeft": { label: string, icon: string };
@@ -3762,12 +3770,11 @@ declare namespace LocalJSX {
         "color"?: Color;
         "dsSize"?: 'sm' | 'md' | 'lg';
         "fill"?: 'outline';
-        "invert"?: boolean;
         /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
-        "neutral"?: Color;
+        "neutral"?: Neutral;
     }
     interface IonButton {
         /**
@@ -4300,6 +4307,7 @@ declare namespace LocalJSX {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        "neutral"?: Neutral;
         /**
           * Emitted when the button loses focus.
          */
@@ -5556,6 +5564,7 @@ declare namespace LocalJSX {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        "neutral"?: Neutral;
         /**
           * Emitted when the input loses focus.
          */
@@ -6343,6 +6352,8 @@ declare namespace LocalJSX {
         "valores"?: MedRadialItem[];
     }
     interface MedDivider {
+        "color"?: Color;
+        "neutral"?: Neutral;
         "text": string;
     }
     interface MedEnunciado {
@@ -6367,6 +6378,9 @@ declare namespace LocalJSX {
         "titulo"?: string;
     }
     interface MedNavbar {
+        "color"?: Color;
+        "dsName"?: 'solid' | 'secondary' | 'transparent';
+        "neutral"?: Neutral;
         "onMedResize"?: (event: CustomEvent<navbarResizeEventDetail>) => void;
     }
     interface MedOption {
@@ -6378,6 +6392,8 @@ declare namespace LocalJSX {
         "status"?: RateStatus;
     }
     interface MedToolbar {
+        "color"?: Color;
+        "neutral"?: Neutral;
     }
     interface MedTooltip {
         "buttonLeft": { label: string, icon: string };

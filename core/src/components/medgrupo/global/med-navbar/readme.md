@@ -5,6 +5,15 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property  | Attribute | Description | Type                                                   | Default     |
+| --------- | --------- | ----------- | ------------------------------------------------------ | ----------- |
+| `color`   | `color`   |             | `string \| undefined`                                  | `undefined` |
+| `dsName`  | `ds-name` |             | `"secondary" \| "solid" \| "transparent" \| undefined` | `undefined` |
+| `neutral` | `neutral` |             | `string \| undefined`                                  | `undefined` |
+
+
 ## Events
 
 | Event       | Description | Type                                   |

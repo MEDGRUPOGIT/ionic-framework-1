@@ -124,35 +124,3 @@
   font-weight: $med-font-weight-medium;
   height: 40px;
 }
-
-//
-// invert
-//
-
-/* :host(.invert) {
-  background: var(--med-color-neutral-3);
-  border-color: var(--med-color-neutral-3);
-  color: var(--med-color-neutral-8);
-}
-
-// color invert
-:host(.invert.ion-color) {
-  background: var(--med-color-neutral-3);
-  color: var(--med-color-neutral-8);
-  border-color: var(--med-color-neutral-3);
-}
-
-// outline invert
-:host([fill="outline"].invert){
-  background: transparent;
-  border-style: solid;
-  border-color: var(--med-color-neutral-8);
-  color: var(--med-color-neutral-8);
-}
-
-// outline invert color
-:host(.ion-color[fill="outline"].invert) {
-  border-color: var(--med-color-neutral-8);
-  color: var(--med-color-neutral-8);
-}
- */

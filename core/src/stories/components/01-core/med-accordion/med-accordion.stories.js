@@ -46,7 +46,7 @@ const TemplateDefault = ({size, icon, collapsed}) => {
           </med-accordion>
         <!-- component -->
 
-      <ion-content>
+      </div>
     </ion-app>
   `
 }

@@ -1,12 +1,13 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
+import { medColors, medNeutrals } from '../../med-colors';
 
 export default {
   title: 'Components/Global/Toolbar',
   decorators: [withDesign],
 };
 
-const TemplateToolbar = ({ platform }) => {
+const TemplateToolbar = ({ color, neutral, platform }) => {
   if (platform === 'Mobile') {
     document.querySelector('html').classList.remove('plt-desktop');
     document.querySelector('html').classList.remove('plt-electron');
@@ -19,7 +20,7 @@ const TemplateToolbar = ({ platform }) => {
     <ion-app>
 
       <!-- component -->
-      <med-toolbar>
+      <med-toolbar .color=${color} .neutral=${neutral}>
         <ion-button ds-name="icon-only" slot="start">
           <ion-icon slot="icon-only" name="med-arrow-left-circle"></ion-icon>
         </ion-button>
@@ -62,5 +63,23 @@ Toolbar.argTypes = {
     options: ['Desktop', 'Mobile'],
     control: { type: 'radio' },
     description: 'Muda a visualização do componente entre plataformas. **Usado apenas no storybook para visualização.**'
+  },
+  color: {
+    options: medColors,
+    control: { type: 'select'},
+    description: "Define a cor do componente.",
+    table: {
+      type:  { summary: 'Color' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  neutral: {
+    options: medNeutrals,
+    control: { type: 'select'},
+    description: "Define a cor neutral do componente.",
+    table: {
+      type:  { summary: 'Neutrals' },
+      defaultValue: { summary: 'undefined' },
+    },
   },
 };

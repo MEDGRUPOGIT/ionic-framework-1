@@ -1,5 +1,10 @@
 :host {
+  --color: var(--med-color-neutral-5);
+}
+
+:host {
   display: block;
+  text-align: left;
 
   .heading {
     padding: 0;
@@ -7,7 +12,14 @@
     padding-top: $med-spacing-stack-base;
     line-height: $med-line-height-compressed;
     font-weight: $med-font-weight-semibold;
-    color: var(--med-color-neutral-5);
+    color: var(--color);
   }
+}
 
+:host(.ion-color) {
+  --color: #{md-current-color(3)};
+}
+
+:host(.med-neutral) {
+  --color: var(--med-neutral);
 }

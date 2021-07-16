@@ -1,4 +1,11 @@
 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    path {
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
   <title>context menu</title>
   <path d="M12 13a1 1 0 100-2 1 1 0 000 2z"/>
   <path d="M12 6a1 1 0 100-2 1 1 0 000 2z"/>

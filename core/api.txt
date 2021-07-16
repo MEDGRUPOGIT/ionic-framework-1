@@ -134,7 +134,6 @@ ion-badge,shadow
 ion-badge,prop,color,string | undefined,undefined,false,false
 ion-badge,prop,dsSize,"lg" | "md" | "sm" | undefined,undefined,false,false
 ion-badge,prop,fill,"outline" | undefined,undefined,false,false
-ion-badge,prop,invert,boolean,false,false,true
 ion-badge,prop,mode,"ios" | "md",undefined,false,false
 ion-badge,prop,neutral,string | undefined,undefined,false,false
 ion-badge,css-prop,--background
@@ -374,6 +373,7 @@ ion-fab-button,prop,dsName,"icon-label" | "label" | undefined,undefined,false,fa
 ion-fab-button,prop,dsSize,"lg" | "md" | undefined,undefined,false,false
 ion-fab-button,prop,href,string | undefined,undefined,false,false
 ion-fab-button,prop,mode,"ios" | "md",undefined,false,false
+ion-fab-button,prop,neutral,string | undefined,undefined,false,false
 ion-fab-button,prop,rel,string | undefined,undefined,false,false
 ion-fab-button,prop,routerAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
 ion-fab-button,prop,routerDirection,"back" | "forward" | "root",'forward',false,false
@@ -995,6 +995,7 @@ ion-searchbar,prop,disabled,boolean,false,false,false
 ion-searchbar,prop,enterkeyhint,"done" | "enter" | "go" | "next" | "previous" | "search" | "send" | undefined,undefined,false,false
 ion-searchbar,prop,inputmode,"decimal" | "email" | "none" | "numeric" | "search" | "tel" | "text" | "url" | undefined,undefined,false,false
 ion-searchbar,prop,mode,"ios" | "md",undefined,false,false
+ion-searchbar,prop,neutral,string | undefined,undefined,false,false
 ion-searchbar,prop,placeholder,string,'Pesquisar',false,false
 ion-searchbar,prop,searchIcon,string | undefined,undefined,false,false
 ion-searchbar,prop,showCancelButton,"always" | "focus" | "never",'never',false,false
@@ -1415,6 +1416,8 @@ med-chart-radial,scoped
 med-chart-radial,prop,valores,MedRadialItem[],[],false,false
 
 med-divider,shadow
+med-divider,prop,color,string | undefined,undefined,false,false
+med-divider,prop,neutral,string | undefined,undefined,false,false
 med-divider,prop,text,string,undefined,true,false
 
 med-enunciado,shadow
@@ -1439,6 +1442,9 @@ med-image-zoom,prop,marcaAguaSuperior,string | undefined,undefined,false,true
 med-image-zoom,prop,titulo,string | undefined,undefined,false,true
 
 med-navbar,shadow
+med-navbar,prop,color,string | undefined,undefined,false,false
+med-navbar,prop,dsName,"secondary" | "solid" | "transparent" | undefined,undefined,false,false
+med-navbar,prop,neutral,string | undefined,undefined,false,false
 med-navbar,event,medResize,navbarResizeEventDetail,true
 
 med-option,shadow
@@ -1450,6 +1456,8 @@ med-rate-like,prop,status,RateStatus.DISLIKE | RateStatus.LIKE | undefined,undef
 med-rate-like,event,medChange,RateStatus.DISLIKE | RateStatus.LIKE,true
 
 med-toolbar,shadow
+med-toolbar,prop,color,string | undefined,undefined,false,false
+med-toolbar,prop,neutral,string | undefined,undefined,false,false
 
 med-tooltip,shadow
 med-tooltip,prop,buttonLeft,{ label: string; icon: string; },undefined,true,false

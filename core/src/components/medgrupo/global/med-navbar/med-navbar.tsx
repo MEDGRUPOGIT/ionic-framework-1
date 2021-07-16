@@ -1,6 +1,8 @@
-import { Component, Host, h, Element, Event, EventEmitter } from '@stencil/core';
+import { Component, Host, h, Element, Event, EventEmitter, Prop } from '@stencil/core';
 import ResizeObserver from "resize-observer-polyfill";
 import { navbarResizeEventDetail } from './med-navbar-interface';
+import { Color, Neutral } from '../../../../interface';
+import { createColorClasses } from '../../../../utils/theme';
 
 @Component({
   tag: 'med-navbar',
@@ -9,6 +11,12 @@ import { navbarResizeEventDetail } from './med-navbar-interface';
 })
 export class MedNavbar {
   @Element() el!: HTMLElement;
+
+  @Prop() color?: Color;
+  @Prop() neutral?: Neutral;
+
+  @Prop() dsName?: 'solid' | 'secondary' | 'transparent';
+
   @Event() medResize!: EventEmitter<navbarResizeEventDetail>;
 
   private leftEl!: HTMLDivElement;
@@ -68,28 +76,38 @@ export class MedNavbar {
   }
 
   render() {
+    const { color, neutral, dsName } = this;
+
     return (
-      <Host class="med-navbar" from-stencil>
-        <header class="header">
+      <Host from-stencil class={createColorClasses(color, {
+        'med-navbar': true,
+        'med-navbar--solid': dsName === 'solid',
+        'med-navbar--secondary': dsName === 'secondary',
+        'med-navbar--transparent': dsName === 'transparent'
+        }, neutral)}>
+        <header class="med-navbar__header">
           <slot name="top"></slot>
 
-          <div class="header__container">
-            <div id="left" class="left" ref={(el) => this.leftEl = el as HTMLDivElement}>
+          <div class="med-navbar__container">
+            <div id="left" class="med-navbar__left" ref={(el) => this.leftEl = el as HTMLDivElement}>
+
               <slot name="left"></slot>
+
             </div>
 
-            <div class="center" ref={(el) => this.centerEl = el as HTMLDivElement}>
+            <div class="med-navbar__center" ref={(el) => this.centerEl = el as HTMLDivElement}>
 
               <slot name="title"></slot>
               <slot name="subtitle"></slot>
 
             </div>
 
-            <div id="right" class="right" ref={(el) => this.rightEl = el as HTMLDivElement}>
+            <div id="right" class="med-navbar__right" ref={(el) => this.rightEl = el as HTMLDivElement}>
+
               <slot name="right"></slot>
+
             </div>
           </div>
-
         </header>
       </Host>
     );

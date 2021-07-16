@@ -22,7 +22,6 @@ export const IonBackdrop = /*@__PURE__*/ defineContainer<JSX.IonBackdrop>('ion-b
 export const IonBadge = /*@__PURE__*/ defineContainer<JSX.IonBadge>('ion-badge', [
   'dsSize',
   'fill',
-  'invert',
   'neutral',
   'color'
 ]);
@@ -209,6 +208,7 @@ export const IonFab = /*@__PURE__*/ defineContainer<JSX.IonFab>('ion-fab', [
 export const IonFabButton = /*@__PURE__*/ defineContainer<JSX.IonFabButton>('ion-fab-button', [
   'dsSize',
   'dsName',
+  'neutral',
   'color',
   'activated',
   'disabled',
@@ -559,6 +559,7 @@ export const IonRow = /*@__PURE__*/ defineContainer<JSX.IonRow>('ion-row');
 
 
 export const IonSearchbar = /*@__PURE__*/ defineContainer<JSX.IonSearchbar>('ion-searchbar', [
+  'neutral',
   'color',
   'animated',
   'autocomplete',
@@ -869,7 +870,9 @@ export const MedChartRadial = /*@__PURE__*/ defineContainer<JSX.MedChartRadial>(
 
 
 export const MedDivider = /*@__PURE__*/ defineContainer<JSX.MedDivider>('med-divider', [
-  'text'
+  'text',
+  'color',
+  'neutral'
 ]);
 
 
@@ -905,6 +908,9 @@ export const MedImageZoom = /*@__PURE__*/ defineContainer<JSX.MedImageZoom>('med
 
 
 export const MedNavbar = /*@__PURE__*/ defineContainer<JSX.MedNavbar>('med-navbar', [
+  'color',
+  'neutral',
+  'dsName',
   'medResize'
 ]);
 
@@ -921,7 +927,10 @@ export const MedRateLike = /*@__PURE__*/ defineContainer<JSX.MedRateLike>('med-r
 ]);
 
 
-export const MedToolbar = /*@__PURE__*/ defineContainer<JSX.MedToolbar>('med-toolbar');
+export const MedToolbar = /*@__PURE__*/ defineContainer<JSX.MedToolbar>('med-toolbar', [
+  'color',
+  'neutral'
+]);
 
 
 export const MedTooltip = /*@__PURE__*/ defineContainer<JSX.MedTooltip>('med-tooltip', [

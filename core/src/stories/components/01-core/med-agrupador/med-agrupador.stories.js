@@ -16,7 +16,7 @@ const TemplateDefault = ({color}) => {
           <med-agrupador .color=${color}></med-agrupador>
         <!-- component -->
 
-      <ion-content>
+      </div>
     </ion-app>
   `
 }
