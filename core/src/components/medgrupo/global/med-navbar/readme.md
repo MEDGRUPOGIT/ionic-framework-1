@@ -17,11 +17,13 @@
 ### Used by
 
  - [med-image-zoom](../med-image-zoom)
+ - [med-offline](../../01-core/med-offline)
 
 ### Graph
 ```mermaid
 graph TD;
   med-image-zoom --> med-navbar
+  med-offline --> med-navbar
   style med-navbar fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
