@@ -1447,6 +1447,9 @@ med-navbar,prop,dsName,"secondary" | "solid" | "transparent" | undefined,undefin
 med-navbar,prop,neutral,string | undefined,undefined,false,false
 med-navbar,event,medResize,navbarResizeEventDetail,true
 
+med-offline,shadow
+med-offline,event,medClick,void,true
+
 med-option,shadow
 
 med-rate-bar,shadow

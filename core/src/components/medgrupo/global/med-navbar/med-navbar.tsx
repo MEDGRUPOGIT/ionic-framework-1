@@ -30,7 +30,9 @@ export class MedNavbar {
   }
 
   disconnectedCallback() {
-    this.sidesResizeObserver.disconnect();
+    if(this.sidesResizeObserver){
+      this.sidesResizeObserver.disconnect();
+    }
   }
 
   private setSize() {

@@ -18,7 +18,9 @@ export class MedHeader {
   }
 
   disconnectedCallback() {
-    this.hostResizeObserver.disconnect();
+    if(this.hostResizeObserver){
+      this.hostResizeObserver.disconnect();
+    }
   }
 
   private setSize() {

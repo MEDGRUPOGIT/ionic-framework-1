@@ -370,6 +370,7 @@ export default defineComponent({
 ### Used by
 
  - [med-image-zoom](../medgrupo/global/med-image-zoom)
+ - [med-offline](../medgrupo/01-core/med-offline)
  - [med-tooltip](../medgrupo/global/med-tooltip)
 
 ### Depends on
@@ -381,6 +382,7 @@ export default defineComponent({
 graph TD;
   ion-button --> ion-ripple-effect
   med-image-zoom --> ion-button
+  med-offline --> ion-button
   med-tooltip --> ion-button
   style ion-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
