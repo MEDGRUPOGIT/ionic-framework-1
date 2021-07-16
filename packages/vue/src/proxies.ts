@@ -909,6 +909,11 @@ export const MedNavbar = /*@__PURE__*/ defineContainer<JSX.MedNavbar>('med-navba
 ]);
 
 
+export const MedOffline = /*@__PURE__*/ defineContainer<JSX.MedOffline>('med-offline', [
+  'medClick'
+]);
+
+
 export const MedOption = /*@__PURE__*/ defineContainer<JSX.MedOption>('med-option');
 
 

@@ -1441,6 +1441,9 @@ med-image-zoom,prop,titulo,string | undefined,undefined,false,true
 med-navbar,shadow
 med-navbar,event,medResize,navbarResizeEventDetail,true
 
+med-offline,shadow
+med-offline,event,medClick,void,true
+
 med-option,shadow
 
 med-rate-bar,shadow

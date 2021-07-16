@@ -2788,6 +2788,8 @@ export namespace Components {
     }
     interface MedNavbar {
     }
+    interface MedOffline {
+    }
     interface MedOption {
     }
     interface MedRateBar {
@@ -3423,6 +3425,12 @@ declare global {
         prototype: HTMLMedNavbarElement;
         new (): HTMLMedNavbarElement;
     };
+    interface HTMLMedOfflineElement extends Components.MedOffline, HTMLStencilElement {
+    }
+    var HTMLMedOfflineElement: {
+        prototype: HTMLMedOfflineElement;
+        new (): HTMLMedOfflineElement;
+    };
     interface HTMLMedOptionElement extends Components.MedOption, HTMLStencilElement {
     }
     var HTMLMedOptionElement: {
@@ -3557,6 +3565,7 @@ declare global {
         "med-header": HTMLMedHeaderElement;
         "med-image-zoom": HTMLMedImageZoomElement;
         "med-navbar": HTMLMedNavbarElement;
+        "med-offline": HTMLMedOfflineElement;
         "med-option": HTMLMedOptionElement;
         "med-rate-bar": HTMLMedRateBarElement;
         "med-rate-like": HTMLMedRateLikeElement;
@@ -6369,6 +6378,9 @@ declare namespace LocalJSX {
     interface MedNavbar {
         "onMedResize"?: (event: CustomEvent<navbarResizeEventDetail>) => void;
     }
+    interface MedOffline {
+        "onMedClick"?: (event: CustomEvent<void>) => void;
+    }
     interface MedOption {
     }
     interface MedRateBar {
@@ -6489,6 +6501,7 @@ declare namespace LocalJSX {
         "med-header": MedHeader;
         "med-image-zoom": MedImageZoom;
         "med-navbar": MedNavbar;
+        "med-offline": MedOffline;
         "med-option": MedOption;
         "med-rate-bar": MedRateBar;
         "med-rate-like": MedRateLike;
@@ -6603,6 +6616,7 @@ declare module "@stencil/core" {
             "med-header": LocalJSX.MedHeader & JSXBase.HTMLAttributes<HTMLMedHeaderElement>;
             "med-image-zoom": LocalJSX.MedImageZoom & JSXBase.HTMLAttributes<HTMLMedImageZoomElement>;
             "med-navbar": LocalJSX.MedNavbar & JSXBase.HTMLAttributes<HTMLMedNavbarElement>;
+            "med-offline": LocalJSX.MedOffline & JSXBase.HTMLAttributes<HTMLMedOfflineElement>;
             "med-option": LocalJSX.MedOption & JSXBase.HTMLAttributes<HTMLMedOptionElement>;
             "med-rate-bar": LocalJSX.MedRateBar & JSXBase.HTMLAttributes<HTMLMedRateBarElement>;
             "med-rate-like": LocalJSX.MedRateLike & JSXBase.HTMLAttributes<HTMLMedRateLikeElement>;

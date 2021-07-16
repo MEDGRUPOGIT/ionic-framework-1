@@ -1068,6 +1068,18 @@ export class MedNavbar {
     proxyOutputs(this, this.el, ["medResize"]);
   }
 }
+export declare interface MedOffline extends Components.MedOffline {
+}
+@Component({ selector: "med-offline", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class MedOffline {
+  medClick!: EventEmitter<CustomEvent>;
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ["medClick"]);
+  }
+}
 export declare interface MedOption extends Components.MedOption {
 }
 @Component({ selector: "med-option", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
