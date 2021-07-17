@@ -65,19 +65,10 @@ Default.argTypes = {
       defaultValue: { summary: 'undefined' },
     },
   },
-  size: {
-    options: [undefined, 'xs', 'sm', 'md', 'lg'],
-    control: { type: 'radio'},
-    description: "Define a variação de tamanho componente.",
-    table: {
-      type:  { summary: 'xs | sm | md | lg' },
-      defaultValue: { summary: 'undefined' },
-    },
-  },
   platform: {
     defaultValue: 'Desktop',
     options: ['Desktop', 'Mobile'],
     control: { type: 'radio' },
-    description: 'Muda a visualização do componente entre plataformas. **Usado apenas no storybook para visualização.**'
+    description: 'Muda a visualização do componente entre plataformas. **Atributo utilizado apenas no storybook. Não é um atributo do componente!.**'
   },
 }

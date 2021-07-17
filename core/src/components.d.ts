@@ -429,9 +429,17 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'secondary';
+        /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        /**
+          * Define a cor neutra do componente.
+         */
+        "neutral"?: Neutral;
         /**
           * Display an outline style button.
          */
@@ -4035,9 +4043,17 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'secondary';
+        /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        /**
+          * Define a cor neutra do componente.
+         */
+        "neutral"?: Neutral;
         /**
           * Display an outline style button.
          */

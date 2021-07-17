@@ -69,6 +69,6 @@ Secondary.argTypes = {
     defaultValue: 'Desktop',
     options: ['Desktop', 'Mobile'],
     control: { type: 'radio' },
-    description: 'Muda a visualização do componente entre plataformas. **Usado apenas no storybook para visualização.**'
+    description: 'Muda a visualização do componente entre plataformas. **Atributo utilizado apenas no storybook. Não é um atributo do componente!.**'
   },
 };

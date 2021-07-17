@@ -6,8 +6,8 @@
    * @prop --background: Define a cor de background do componente.
    * @prop --color: Define a cor de texto do componente.
    */
+  --background: #{md-color(brand, 3)};
   --color: md-color(brand, contrast-1);
-  --background: #{md-color(brand, 2)};
   --padding-bottom: 0;
   --padding-end: #{$med-spacing-inline-base};
   --padding-start: #{$med-spacing-inline-base};
@@ -16,7 +16,7 @@
   /**
    * @prop --border-color: Define a cor da borda do componente.
    */
-  --border-color: #{md-color(brand, 2)};
+  --border-color: #{md-color(brand, 3)};
 }
 
 :host(.med-badge) {
@@ -75,8 +75,8 @@
 // ////////////////////
 
 :host(.ion-color) {
-  --border-color: #{md-current-color(2)};
-  background: md-current-color(2);
+  --border-color: #{md-current-color(3)};
+  background: md-current-color(3);
   color: md-current-color(contrast-1);
 }
 
@@ -94,10 +94,10 @@
 // secondary
 // //////////////////////////////
 
-:host(.med-badge--secondary){
+:host(.med-badge--secondary) {
   border-style: solid;
   background: transparent;
-  color: #{md-color(brand, 2)};
+  color: #{md-color(brand, 3)};
 }
 
 // ////////////////////
@@ -105,8 +105,8 @@
 // ////////////////////
 
 :host(.med-badge--secondary.ion-color) {
-  --border-color: #{md-current-color(2)};
-  color: md-current-color(2);
+  --border-color: #{md-current-color(3)};
+  color: md-current-color(3);
 }
 
 // ////////////////////

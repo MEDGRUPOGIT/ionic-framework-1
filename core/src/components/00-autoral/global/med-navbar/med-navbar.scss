@@ -120,14 +120,14 @@
 // ////////////////////
 
 :host(.med-neutral) {
-  --background: #{var(--med-neutral)};
+  //--background: #{var(--med-neutral)};
 }
 
 :host(.med-neutral) ::slotted([slot="left"]),
 :host(.med-neutral) ::slotted([slot="right"]),
 :host(.med-neutral) ::slotted([slot="title"]),
 :host(.med-neutral) ::slotted([slot="subtitle"]) {
-  --color: #{var(--med-neutral-contrast)};
+  --color: #{var(--med-neutral)};
 }
 
 // //////////////////////////////

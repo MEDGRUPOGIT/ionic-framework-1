@@ -111,6 +111,8 @@ export const IonCheckbox = /*@__PURE__*/ defineContainer<JSX.IonCheckbox>('ion-c
 
 
 export const IonChip = /*@__PURE__*/ defineContainer<JSX.IonChip>('ion-chip', [
+  'neutral',
+  'dsName',
   'color',
   'outline',
   'disabled'

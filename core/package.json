@@ -69,7 +69,7 @@
     "shx": "^0.3.3",
     "storybook-addon-designs": "^5.4.5",
     "storybook-addon-themes": "^6.1.0",
-    "storybook-design-token": "^1.0.1",
+    "storybook-design-token": "^1.1.1",
     "stylelint": "^13.6.1",
     "stylelint-order": "^4.1.0",
     "swiper": "5.4.1",
@@ -107,10 +107,8 @@
     "test.watch": "jest --watch --no-cache",
     "test.treeshake": "node scripts/treeshaking.js dist/index.js",
     "validate": "npm run lint && npm run test && npm run build && npm run test.treeshake",
-
     "storybook": "start-storybook -s dist/ionic/ -p 6006",
     "build-storybook": "build-storybook -s dist/ionic/",
-
     "custom:theme:clean": "shx rm -rf css/medsoft.css css/medsoft-theme.css.map",
     "custom:theme:watch": "sass --no-source-map med-components/themes:css src/components/*/medgrupo/:css --watch",
     "custom:theme:build": "sass med-components/themes:css",
