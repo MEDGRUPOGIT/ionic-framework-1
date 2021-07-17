@@ -1,40 +1,11 @@
-:root .color-scheme-dark ion-content {
-  --background: #000;
-}
-
-:root .color-scheme-light ion-content {
-  --background: #fff;
-}
-
 html {
   overflow: auto;
 }
 
-html.md {
-  --ion-default-font: "fsemeric";
-  --ion-font: "fsemeric";
-}
-
-body {
+body.sb-show-main.sb-main-padded {
   overflow: auto;
-}
-
-body.sb-show-main.sb-main-padded.dark-mode {
-  background-color: #000;
-  color: #fff;
-}
-
-body.sb-show-main.sb-main-padded.light-mode {
-  background-color: #fff;
-  color: #000;
-}
-
-body.sb-show-main.sb-main-padded.dark-mode ion-content {
-  --background: #000;
-}
-
-body.sb-show-main.sb-main-padded.light-mode ion-content {
-  --background: #fff;
+  background-color: var(--med-color-neutral-1);
+  color:var(--med-color-neutral-10);
 }
 
 .storybook-only {

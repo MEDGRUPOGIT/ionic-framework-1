@@ -3,31 +3,46 @@
 @import "../mixins";
 
 //
-// medsoft
+// LEGADO: medsoft
 //
 
 @include generate-medsoft-color-classes();
 
 //
-// NOVO:medsoft
+// NOVO: medsoft
 //
 
 :root {
-  @include new-generate-neutral-colors();
-  // @include new-generate-medsoft-feedback-color();
-  @include new-generate-medsoft-color();
+  /* color css custom properties */
+  @include new-generate-color();
+
+  /* neutral css custom properties */
+  @include new-generate-neutral-color();
 }
+
+/* color classes */
 
 @each $color-name, $value in $new-medsoft-colors {
   .ion-color-#{$color-name} {
-    @include new-generate-medsoft-color-classes($color-name);
+    @include new-generate-color-classes($color-name);
   }
 }
 
-@include generate-neutrals();
+/* neutral classes */
 
-// /* @each $color-name, $value in $new-medsoft-colors-feedback {
-//   .ion-color-#{$color-name} {
-//     @include new-generate-medsoft-feedback-color-classes($color-name);
-//   }
-// } */
+@include new-generate-neutral-classes();
+
+/* components theme */
+
+:root ion-content {
+  --background: var(--med-color-neutral-1);
+}
+
+html,
+html.md {
+  --ion-default-font: "fsemeric";
+  --ion-font: "fsemeric";
+}
+
+@import "../../src/components/button/medgrupo/button.med.theme";
+@import "../../src/components/icon/medgrupo/icon.med.theme";

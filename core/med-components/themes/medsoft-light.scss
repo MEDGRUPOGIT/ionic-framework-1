@@ -1,7 +1,7 @@
 @import "../functions";
 @import "../mixins";
 
-//hue
+// hue
 $med-brand: 188;
 $med-aulas: 168;
 $med-material: 24;
@@ -9,6 +9,7 @@ $med-questoes: 200;
 $med-revalida: 342;
 $med-provas: 268;
 
+// saturation
 $med-saturation: 40%;
 
 // luminosity
@@ -18,17 +19,8 @@ $med-medium: 40%;
 $med-light: 60%;
 $med-lightest: 80%;
 
-// $new-medsoft-colors-feedback: (
-//   success: (
-//     3: hsl(128, 80, 30),
-//   ),
-//   warning: (
-//     3: hsl(43, 80, 45),
-//   ),
-//   caution: (
-//     3: hsl(4, 80, 40),
-//   )
-// );
+// neutrals saturation
+$med-saturation-neutral: 10%;
 
 $new-medsoft-colors: (
   brand: (
@@ -124,16 +116,16 @@ $new-medsoft-colors: (
 );
 
 $med-neutrals: (
-  '1': #f1f3f4,
-  '2': #d5dcdd,
-  '3': #b9c4c6,
-  '4': #9dacaf,
-  '5': #819598,
-  '6': #677b7e,
-  '7': #506062,
-  '8': #394446,
-  '9': #22292a,
-  '10': #0b0e0e,
+  '1': hsl($med-brand $med-saturation-neutral 95%),
+  '2': hsl($med-brand $med-saturation-neutral 85%),
+  '3': hsl($med-brand $med-saturation-neutral 75%),
+  '4': hsl($med-brand $med-saturation-neutral 65%),
+  '5': hsl($med-brand $med-saturation-neutral 56%),
+  '6': hsl($med-brand $med-saturation-neutral 45%),
+  '7': hsl($med-brand $med-saturation-neutral 35%),
+  '8': hsl($med-brand $med-saturation-neutral 25%),
+  '9': hsl($med-brand $med-saturation-neutral 15%),
+  '10': hsl($med-brand $med-saturation-neutral 5%),
 ) !default;
 
 @include new-generate-custom-scheme('light');
