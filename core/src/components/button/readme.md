@@ -369,9 +369,9 @@ export default defineComponent({
 
 ### Used by
 
- - [med-image-zoom](../medgrupo/global/med-image-zoom)
- - [med-offline](../medgrupo/01-core/med-offline)
- - [med-tooltip](../medgrupo/global/med-tooltip)
+ - [med-image-zoom](../00-autoral/global/med-image-zoom)
+ - [med-offline](../00-autoral/global/med-offline)
+ - [med-tooltip](../00-autoral/global/med-tooltip)
 
 ### Depends on
 

@@ -20,9 +20,9 @@ export const IonBackdrop = /*@__PURE__*/ defineContainer<JSX.IonBackdrop>('ion-b
 
 
 export const IonBadge = /*@__PURE__*/ defineContainer<JSX.IonBadge>('ion-badge', [
-  'dsSize',
-  'fill',
   'neutral',
+  'dsName',
+  'dsSize',
   'color'
 ]);
 
@@ -910,8 +910,7 @@ export const MedImageZoom = /*@__PURE__*/ defineContainer<JSX.MedImageZoom>('med
 export const MedNavbar = /*@__PURE__*/ defineContainer<JSX.MedNavbar>('med-navbar', [
   'color',
   'neutral',
-  'dsName',
-  'medResize'
+  'dsName'
 ]);
 
 

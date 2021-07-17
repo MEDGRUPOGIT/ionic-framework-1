@@ -50,8 +50,8 @@ export class IonBackdrop {
 }
 export declare interface IonBadge extends Components.IonBadge {
 }
-@ProxyCmp({ inputs: ["color", "dsSize", "fill", "mode", "neutral"] })
-@Component({ selector: "ion-badge", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "dsSize", "fill", "mode", "neutral"] })
+@ProxyCmp({ inputs: ["color", "dsName", "dsSize", "mode", "neutral"] })
+@Component({ selector: "ion-badge", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "dsName", "dsSize", "mode", "neutral"] })
 export class IonBadge {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1061,12 +1061,10 @@ export declare interface MedNavbar extends Components.MedNavbar {
 @ProxyCmp({ inputs: ["color", "dsName", "neutral"] })
 @Component({ selector: "med-navbar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "dsName", "neutral"] })
 export class MedNavbar {
-  medResize!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ["medResize"]);
   }
 }
 export declare interface MedOffline extends Components.MedOffline {

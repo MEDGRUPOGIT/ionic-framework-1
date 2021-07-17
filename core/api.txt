@@ -132,16 +132,10 @@ ion-backdrop,event,ionBackdropTap,void,true
 
 ion-badge,shadow
 ion-badge,prop,color,string | undefined,undefined,false,false
-ion-badge,prop,dsSize,"lg" | "md" | "sm" | undefined,undefined,false,false
-ion-badge,prop,fill,"outline" | undefined,undefined,false,false
+ion-badge,prop,dsName,"secondary" | undefined,undefined,false,false
+ion-badge,prop,dsSize,"lg" | "md" | "sm" | "xs" | undefined,undefined,false,false
 ion-badge,prop,mode,"ios" | "md",undefined,false,false
 ion-badge,prop,neutral,string | undefined,undefined,false,false
-ion-badge,css-prop,--background
-ion-badge,css-prop,--color
-ion-badge,css-prop,--padding-bottom
-ion-badge,css-prop,--padding-end
-ion-badge,css-prop,--padding-start
-ion-badge,css-prop,--padding-top
 
 ion-button,shadow
 ion-button,prop,buttonType,string,'button',false,false
@@ -1443,9 +1437,10 @@ med-image-zoom,prop,titulo,string | undefined,undefined,false,true
 
 med-navbar,shadow
 med-navbar,prop,color,string | undefined,undefined,false,false
-med-navbar,prop,dsName,"secondary" | "solid" | "transparent" | undefined,undefined,false,false
+med-navbar,prop,dsName,"secondary" | "transparent" | undefined,undefined,false,false
 med-navbar,prop,neutral,string | undefined,undefined,false,false
-med-navbar,event,medResize,navbarResizeEventDetail,true
+med-navbar,css-prop,--background
+med-navbar,css-prop,--color
 
 med-offline,shadow
 med-offline,event,medClick,void,true

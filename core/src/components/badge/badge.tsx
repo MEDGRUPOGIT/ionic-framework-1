@@ -16,10 +16,21 @@ import { createColorClasses } from '../../utils/theme';
   shadow: true
 })
 export class Badge implements ComponentInterface {
-  // custom
-  @Prop() dsSize?: 'sm' | 'md' | 'lg';
-  @Prop() fill?: 'outline';
+
+  /**
+   * Define a cor neutra do componente.
+   */
   @Prop() neutral?: Neutral;
+
+  /**
+   * Define a variação do componente.
+   */
+  @Prop() dsName?: 'secondary';
+
+  /**
+   * Define a variação de tamanho componente.
+   */
+  @Prop() dsSize?: 'xs' | 'sm' | 'md' | 'lg';
 
   /**
    * The color to use from your application's color palette.
@@ -29,12 +40,17 @@ export class Badge implements ComponentInterface {
   @Prop() color?: Color;
 
   render() {
+    const { color, neutral, dsName, dsSize } = this;
     const mode = getIonMode(this);
+
     return (
       <Host
-        class={createColorClasses(this.color, {
-          [mode]: true
-        }, this.neutral)}
+        class={createColorClasses(color, {
+          [mode]: true,
+          'med-badge': true,
+          [`med-badge--${dsName}`]: dsName !== undefined,
+          [`med-badge--${dsSize}`]: dsSize !== undefined,
+        }, neutral)}
       >
         <slot></slot>
       </Host>

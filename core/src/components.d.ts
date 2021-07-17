@@ -9,14 +9,13 @@ import { ActionSheetButton, AlertButton, AlertInput, AnimationBuilder, Autocompl
 import { IonicSafeString } from "./utils/sanitization";
 import { NavigationHookCallback } from "./components/route/route-interface";
 import { SelectCompareFn } from "./components/select/select-interface";
-import { MedAlternativaInterface } from "./components/medgrupo/team/med-alternativas/med-alternativas-interface";
-import { MedRadialItem } from "./components/medgrupo/01-core/med-chart-label/med-chart-label";
-import { MedRadialItem as MedRadialItem1 } from "./components/medgrupo/01-core/med-chart-radial/med-chart-radial";
+import { MedAlternativaInterface } from "./components/00-autoral/team/med-alternativas/med-alternativas-interface";
+import { MedRadialItem } from "./components/00-autoral/global/med-chart-label/med-chart-label";
+import { MedRadialItem as MedRadialItem1 } from "./components/00-autoral/global/med-chart-radial/med-chart-radial";
 import { MedFontSize } from "./global/med-components/font-size.enum";
-import { headerResizeEventDetail } from "./components/medgrupo/global/med-header/med-header-interface";
-import { MedImageZoomItemInterface } from "./components/medgrupo/global/med-image-zoom/med-image-zoom-interface";
-import { navbarResizeEventDetail } from "./components/medgrupo/global/med-navbar/med-navbar-interface";
-import { RateStatus } from "./components/medgrupo/global/med-rate-like/med-rate-like.enum";
+import { headerResizeEventDetail } from "./components/00-autoral/global/med-header/med-header-interface";
+import { MedImageZoomItemInterface } from "./components/00-autoral/global/med-image-zoom/med-image-zoom-interface";
+import { RateStatus } from "./components/00-autoral/global/med-rate-like/med-rate-like.enum";
 export namespace Components {
     interface IonActionSheet {
         /**
@@ -213,12 +212,21 @@ export namespace Components {
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
         "color"?: Color;
-        "dsSize"?: 'sm' | 'md' | 'lg';
-        "fill"?: 'outline';
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'secondary';
+        /**
+          * Define a variação de tamanho componente.
+         */
+        "dsSize"?: 'xs' | 'sm' | 'md' | 'lg';
         /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        /**
+          * Define a cor neutra do componente.
+         */
         "neutral"?: Neutral;
     }
     interface IonButton {
@@ -2790,8 +2798,17 @@ export namespace Components {
         "titulo"?: string;
     }
     interface MedNavbar {
+        /**
+          * Define a cor do componente.
+         */
         "color"?: Color;
-        "dsName"?: 'solid' | 'secondary' | 'transparent';
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'secondary' | 'transparent';
+        /**
+          * Define a cor neutra do componente.
+         */
         "neutral"?: Neutral;
     }
     interface MedOffline {
@@ -3777,12 +3794,21 @@ declare namespace LocalJSX {
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
         "color"?: Color;
-        "dsSize"?: 'sm' | 'md' | 'lg';
-        "fill"?: 'outline';
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'secondary';
+        /**
+          * Define a variação de tamanho componente.
+         */
+        "dsSize"?: 'xs' | 'sm' | 'md' | 'lg';
         /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        /**
+          * Define a cor neutra do componente.
+         */
         "neutral"?: Neutral;
     }
     interface IonButton {
@@ -6387,10 +6413,18 @@ declare namespace LocalJSX {
         "titulo"?: string;
     }
     interface MedNavbar {
+        /**
+          * Define a cor do componente.
+         */
         "color"?: Color;
-        "dsName"?: 'solid' | 'secondary' | 'transparent';
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'secondary' | 'transparent';
+        /**
+          * Define a cor neutra do componente.
+         */
         "neutral"?: Neutral;
-        "onMedResize"?: (event: CustomEvent<navbarResizeEventDetail>) => void;
     }
     interface MedOffline {
         "onMedClick"?: (event: CustomEvent<void>) => void;
