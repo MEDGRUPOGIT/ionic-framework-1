@@ -317,7 +317,7 @@
     --med-color-#{$key}-4-rgb: #{color-to-rgb-list($light)};
     --med-color-#{$key}-5-rgb: #{color-to-rgb-list($lightest)};
 
-    --med-color-gradient: var(--med-color-#{$key}-gradient, #{$gradient});
+    --med-color-#{$key}-gradient: #{$gradient};
   }
 }
 
@@ -411,7 +411,7 @@
       --med-color-#{$key}-4-rgb: #{color-to-rgb-list($light)};
       --med-color-#{$key}-5-rgb: #{color-to-rgb-list($lightest)};
 
-      --med-color-gradient: var(--med-color-#{$key}-gradient, #{$gradient});
+      --med-color-#{$key}-gradient: #{$gradient};
     }
 
     @each $color-name, $value in $new-medsoft-colors {
@@ -458,7 +458,7 @@
       --med-color-#{$key}-4-rgb: #{color-to-rgb-list($light)};
       --med-color-#{$key}-5-rgb: #{color-to-rgb-list($lightest)};
 
-      --med-color-gradient: var(--med-color-#{$key}-gradient, #{$gradient});
+      --med-color-#{$key}-gradient: #{$gradient};
     }
 
     @each $color-name, $value in $new-medsoft-colors {
@@ -505,7 +505,7 @@
       --med-color-#{$key}-4-rgb: #{color-to-rgb-list($light)};
       --med-color-#{$key}-5-rgb: #{color-to-rgb-list($lightest)};
 
-      --med-color-gradient: var(--med-color-#{$key}-gradient, #{$gradient});
+      --med-color-#{$key}-gradient: #{$gradient};
     }
 
     @each $color-name, $value in $new-medsoft-colors {

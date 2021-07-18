@@ -57,10 +57,6 @@
 // states
 // ////////////////////
 
-// ///////////
-// hover
-// //////////
-
 @media (any-hover: hover) {
   :host(.med-chip:hover) {
     --border-color: var(--med-color-neutral-7);
@@ -73,14 +69,14 @@
 // color
 // ////////////////////
 
-:host(.ion-color)  {
+:host(.med-chip.ion-color)  {
   --border-color: #{md-current-color(3)};
   background: md-current-color(3);
   color: md-current-color(contrast-1);
 }
 
 @media (any-hover: hover) {
-  :host(.ion-color:hover) {
+  :host(.med-chip.ion-color:hover) {
     --border-color: #{md-current-color(3)};
     background: md-current-color(3);
     color: md-current-color(contrast-1);
@@ -91,14 +87,14 @@
 // neutral
 // ////////////////////
 
-:host(.med-neutral) {
+:host(.med-chip.med-neutral) {
   --border-color: var(--med-neutral);
   background: var(--med-neutral);
   color: var(--med-neutral-contrast);
 }
 
 @media (any-hover: hover) {
-  :host(.ion-neutral:hover) {
+  :host(.med-chip.ion-neutral:hover) {
     --border-color: var(--med-neutral);
     background: var(--med-neutral);
     color: var(--med-neutral-contrast);
@@ -118,10 +114,6 @@
 // ////////////////////
 // states
 // ////////////////////
-
-// ///////////
-// hover
-// //////////
 
 @media (any-hover: hover) {
   :host(.med-chip--secondary:hover) {
