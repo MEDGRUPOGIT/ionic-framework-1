@@ -15,6 +15,7 @@ import '../css/typography.css';
 defineCustomElements();
 
 // storybook canvas
+import './themes/templarios.css';
 import '../src/stories/assets/canvas.css';
 
 // med-components

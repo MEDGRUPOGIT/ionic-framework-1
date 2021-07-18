@@ -8,7 +8,7 @@ Documentação auxiliar ion-popover: **https://ionicframework.com/docs/api/popov
 
 **As propriedades marcadas com ⚠️ são extritamente necessárias.**
 
-```ts
+```
   async presentPopover(ev: any) {
     const popover = await popoverController.create({
       component: 'med-font-zoom', ⚠️
@@ -31,7 +31,7 @@ Documentação auxiliar ion-popover: **https://ionicframework.com/docs/api/popov
 
 ## componentProps
 
-```ts
+```
 componentProps: {
   emitter!: { emit: (value: MedFontSize) => void }, // Output com as mudanças de valor.
   value?: MedFontSize = MedFontSize.XS // Valor atual do range
