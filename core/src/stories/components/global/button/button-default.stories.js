@@ -14,25 +14,25 @@ const Template = ({ color, neutral, disabled, expand, dsSize, iconLeft, iconRigh
       <div class="storybook-only__container">
 
         <!-- component -->
-          <ion-button ds-name="secondary" .color="${color}" .neutral=${neutral} ?disabled=${disabled} .expand=${expand} ds-size=${dsSize}>${slot}</ion-button>
+          <ion-button .color="${color}" .neutral=${neutral} ?disabled=${disabled} .expand=${expand} ds-size=${dsSize}>${slot}</ion-button>
 
-          <ion-button ds-name="secondary" .color="${color}" .neutral=${neutral} ?disabled=${disabled} .expand=${expand} ds-size=${dsSize}>
+          <ion-button .color="${color}" .neutral=${neutral} ?disabled=${disabled} .expand=${expand} ds-size=${dsSize}>
             <ion-icon slot="start" name=${iconLeft}></ion-icon>
             ${slot}
           </ion-button>
 
-          <ion-button ds-name="secondary" .color="${color}" .neutral=${neutral} ?disabled=${disabled} .expand=${expand} ds-size=${dsSize}>
+          <ion-button .color="${color}" .neutral=${neutral} ?disabled=${disabled} .expand=${expand} ds-size=${dsSize}>
             ${slot}
             <ion-icon slot="end" name=${iconRight}></ion-icon>
           </ion-button>
 
-          <ion-button ds-name="secondary" .color="${color}" .neutral=${neutral} ?disabled=${disabled} .expand=${expand} ds-size=${dsSize}>
+          <ion-button .color="${color}" .neutral=${neutral} ?disabled=${disabled} .expand=${expand} ds-size=${dsSize}>
             <ion-icon slot="start" name=${iconLeft}></ion-icon>
             ${slot}
             <ion-icon slot="end" name=${iconRight}></ion-icon>
           </ion-button>
 
-          <ion-button ds-name="secondary" .color="${color}" .neutral=${neutral} ?disabled=${disabled} .expand=${expand} ds-size=${dsSize}>
+          <ion-button .color="${color}" .neutral=${neutral} ?disabled=${disabled} .expand=${expand} ds-size=${dsSize}>
             <ion-icon slot="icon-only" name=${iconOnly}></ion-icon>
           </ion-button>
         <!-- component -->
@@ -42,14 +42,14 @@ const Template = ({ color, neutral, disabled, expand, dsSize, iconLeft, iconRigh
   `
 }
 
-export const Secondary = Template.bind({});
-Secondary.parameters = {
+export const Default = Template.bind({});
+Default.parameters = {
   design: {
     type: 'figma',
     url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/Componentes?node-id=729%3A189',
   },
 }
-Secondary.argTypes = {
+Default.argTypes = {
   color: {
     options: medColors,
     control: { type: 'inline-radio'},

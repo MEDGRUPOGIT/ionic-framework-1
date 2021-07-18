@@ -1,0 +1,139 @@
+@import "../../../med-components/abstracts";
+
+:host {
+  /**
+   * OBS: sobreescrita das css custom properties do ionic.
+   * @prop --background: Define a cor de background do componente.
+   * @prop --color: Define a cor de texto do componente.
+   */
+  --background: #{md-color(brand, gradient)};
+  --color: #{md-color(brand, contrast-1)};
+  --border-radius: #{$med-border-radius-pill};
+  --transition: background 300ms ease-out, color 300ms ease-out, border-color 300ms ease-out, opacity 300ms ease-out;
+  --padding: #{$med-spacing-squish-base};
+  --min-height: 48px;
+}
+
+:host(.med-button) {
+  min-height: var(--min-height);
+  min-width: auto;
+  height: auto;
+  font-size: $med-font-size-xxs;
+  font-weight: $med-font-weight-semibold;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+:host(.med-button) .button-native {
+  padding: var(--padding);
+  min-height: 48px;
+  line-height: $med-line-height-compressed;
+  box-shadow: none;
+}
+
+// ////////////////////
+// icon-only
+// ////////////////////
+
+:host(.med-button.button-has-icon-only) {
+  --border-radius: #{$med-border-radius-full};
+  --padding: 0px 12px;
+}
+
+// ////////////////////
+// states
+// ////////////////////
+
+@media (any-hover: hover) {
+  :host(.med-button:hover) .button-native::before {
+    background: md-color(brand, 3);
+    opacity: 1;
+  }
+}
+
+:host(.med-button.ion-focused) .button-native::before {
+  background: md-color(brand, 3);
+  opacity: 1;
+}
+
+:host(.med-button.ion-activated) .button-native::before {
+  background: md-color(brand, 2);
+  opacity: 1;
+}
+
+:host(.med-button.button-disabled) {
+  cursor: initial;
+  pointer-events: none;
+}
+
+:host(.med-button.button-disabled) .button-native::before {
+  background: var(--med-color-neutral-8);
+  opacity: 1;
+}
+
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-button.ion-color)  {
+  --background: #{md-current-color(gradient)};
+  --color: #{md-current-color(contrast-1)};
+}
+
+@media (any-hover: hover) {
+  :host(.med-button.ion-color:hover) .button-native::before {
+    background: md-current-color(3);
+  }
+}
+
+:host(.med-button.ion-color.ion-focused) .button-native::before {
+  background: md-current-color(3);
+}
+
+:host(.med-button.ion-color.ion-activated) .button-native::before {
+  background: md-current-color(3);
+}
+
+:host(.med-button.ion-color.button-disabled) .button-native::before {
+  background: var(--med-color-neutral-8);
+}
+
+// ////////////////////
+// neutral
+// ////////////////////
+
+:host(.med-button.med-neutral)  {
+  --background: var(--med-neutral);
+  --color: var(--med-neutral-contrast);
+}
+
+@media (any-hover: hover) {
+  :host(.med-button.med-neutral:hover) .button-native::before {
+    background: var(--med-color-neutral-2);
+  }
+}
+
+:host(.med-button.med-neutral.ion-focused) .button-native::before {
+  background: var(--med-color-neutral-2);
+}
+
+:host(.med-button.med-neutral.ion-activated) .button-native::before {
+  background: var(--med-color-neutral-2);
+}
+
+:host(.med-button.med-neutral.button-disabled) .button-native::before {
+  background: var(--med-color-neutral-8);
+}
+
+// //////////////////////////////
+// after removal and before replace
+// //////////////////////////////
+
+:host .button-native::after {
+  display: none;
+}
+
+:host .button-native::before {
+  @include button-state();
+  transition: var(--transition);
+}

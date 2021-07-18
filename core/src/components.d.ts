@@ -246,8 +246,14 @@ export namespace Components {
           * This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want).
          */
         "download": string | undefined;
-        "dsName"?: 'primary' | 'secondary' | 'tertiary' | 'icon-only' | 'icon-label';
-        "dsSize"?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'secondary' | 'tertiary';
+        /**
+          * Define a variação de tamanho componente.
+         */
+        "dsSize"?: 'xs' | 'sm' | 'md' | 'lg';
         /**
           * Set to `"block"` for a full-width button or to `"full"` for a full-width button without left and right borders.
          */
@@ -264,6 +270,10 @@ export namespace Components {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        /**
+          * Define a cor neutra do componente.
+         */
+        "neutral"?: Neutral;
         /**
           * Specifies the relationship of the target object to the link object. The value is a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types).
          */
@@ -3836,8 +3846,14 @@ declare namespace LocalJSX {
           * This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want).
          */
         "download"?: string | undefined;
-        "dsName"?: 'primary' | 'secondary' | 'tertiary' | 'icon-only' | 'icon-label';
-        "dsSize"?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'secondary' | 'tertiary';
+        /**
+          * Define a variação de tamanho componente.
+         */
+        "dsSize"?: 'xs' | 'sm' | 'md' | 'lg';
         /**
           * Set to `"block"` for a full-width button or to `"full"` for a full-width button without left and right borders.
          */
@@ -3854,6 +3870,10 @@ declare namespace LocalJSX {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        /**
+          * Define a cor neutra do componente.
+         */
+        "neutral"?: Neutral;
         /**
           * Emitted when the button loses focus.
          */

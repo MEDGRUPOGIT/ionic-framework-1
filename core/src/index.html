@@ -30,65 +30,16 @@
         font-family: 'fsemeric';
         font-weight: 400;
       }
-
-      .dark-mode ion-content {
-        --background: #141414;
-      }
-
-      .light-mode ion-content {
-        --background: #fafafa;
-      }
-      .modal {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 500px;
-        height: 500px;
-        background-color: aquamarine;
-      }
-      .teste {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-      }
     </style>
   </head>
   <body class="dark-mode">
     <ion-app>
 
-      <med-chart-label></med-chart-label>
+      <ion-button>ion-button</ion-button>
 
     </ion-app>
 
     <script>
-      const data = [
-        {
-          cor: 'ion-color-success',
-          label: 'Acertos',
-          quantia: 32,
-          ignoreBarra: false,
-        },
-        {
-          cor: 'ion-color-caution',
-          label: 'certos',
-          quantia: 15,
-          ignoreBarra: false,
-        },
-        {
-          cor: 'ion-color-warning ',
-          label: 'acertos',
-          quantia: 10,
-          ignoreBarra: false,
-        },
-        {
-          cor: 'gray',
-          label: 'restantes',
-          quantia: 43,
-          ignoreBarra: true,
-        }
-      ];
-
-      document.querySelector('med-chart-label').valores = data;
     </script>
   </body>
 </html>

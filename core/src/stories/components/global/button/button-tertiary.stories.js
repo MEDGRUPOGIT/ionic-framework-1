@@ -1,19 +1,40 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
-import { medsoftColors } from '../../../med-colors';
+import { medColors, medNeutrals } from '../../../med-colors';
+import { medIcons } from '../../../med-icons';
 
 export default {
   title: 'Components/Core/Button',
   decorators: [withDesign],
 };
 
-const TemplateTertiary = ({ color, disabled, expand, size, slot }) => {
+const Template = ({ color, neutral, disabled, expand, dsSize, iconLeft, iconRight, iconOnly, slot }) => {
   return html`
     <ion-app class="storybook-only">
       <div class="storybook-only__container">
 
         <!-- component -->
-        <ion-button ds-name="tertiary" .color=${color} ?disabled=${disabled} .expand=${expand} ds-size=${size}>${slot}</ion-button>
+          <ion-button ds-name="tertiary" .color="${color}" .neutral=${neutral} ?disabled=${disabled} .expand=${expand} ds-size=${dsSize}>${slot}</ion-button>
+
+          <ion-button ds-name="tertiary" .color="${color}" .neutral=${neutral} ?disabled=${disabled} .expand=${expand} ds-size=${dsSize}>
+            <ion-icon slot="start" name=${iconLeft}></ion-icon>
+            ${slot}
+          </ion-button>
+
+          <ion-button ds-name="tertiary" .color="${color}" .neutral=${neutral} ?disabled=${disabled} .expand=${expand} ds-size=${dsSize}>
+            ${slot}
+            <ion-icon slot="end" name=${iconRight}></ion-icon>
+          </ion-button>
+
+          <ion-button ds-name="tertiary" .color="${color}" .neutral=${neutral} ?disabled=${disabled} .expand=${expand} ds-size=${dsSize}>
+            <ion-icon slot="start" name=${iconLeft}></ion-icon>
+            ${slot}
+            <ion-icon slot="end" name=${iconRight}></ion-icon>
+          </ion-button>
+
+          <ion-button ds-name="tertiary" .color="${color}" .neutral=${neutral} ?disabled=${disabled} .expand=${expand} ds-size=${dsSize}>
+            <ion-icon slot="icon-only" name=${iconOnly}></ion-icon>
+          </ion-button>
         <!-- component -->
 
       </div>
@@ -21,29 +42,47 @@ const TemplateTertiary = ({ color, disabled, expand, size, slot }) => {
   `
 }
 
-export const ButtonTertiary = TemplateTertiary.bind({});
-ButtonTertiary.parameters = {
+export const Tertiary = Template.bind({});
+Tertiary.parameters = {
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/Componentes?node-id=764%3A19',
+    url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/Componentes?node-id=729%3A189',
   },
 }
-ButtonTertiary.argTypes = {
+Tertiary.argTypes = {
   color: {
-    options: medsoftColors,
-    control: { type: 'select'},
-    description: "Define a cor do botão.",
+    options: medColors,
+    control: { type: 'inline-radio'},
+    description: "Define a cor do componente.",
     table: {
       type:  { summary: 'Color' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  neutral: {
+    options: medNeutrals,
+    control: { type: 'inline-radio'},
+    description: "Define a cor neutra do componente.",
+    table: {
+      type:  { summary: 'Neutrals' },
       defaultValue: { summary: 'undefined' },
     },
   },
   disabled: {
     disabled: false,
     control: { type: 'boolean' },
-    description: 'Define o comportamento disabled do botão.',
+    description: 'Define o comportamento disabled do componente.',
     table: {
       type:  { summary: 'boolean' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  dsSize: {
+    options: [undefined, 'xxs', 'xs', 'sm'],
+    control: { type: 'radio'},
+    description: "Define a variação de tamanho componente.",
+    table: {
+      type:  { summary: 'xs | sm | md | lg' },
       defaultValue: { summary: 'undefined' },
     },
   },
@@ -51,28 +90,44 @@ ButtonTertiary.argTypes = {
     defaultValue: 'none',
     options: [undefined, 'full', 'block'],
     control: { type: 'radio'},
-    description: "Define o comportamento 'full' ou 'block' do botão.",
+    description: "Define a variação de estilo do componente.",
     table: {
       type:  { summary: ['full | block'] },
       defaultValue: { summary: 'undefined' },
     },
   },
-  size: {
-    options: [undefined, 'xxs', 'xs', 'sm'],
-    control: { type: 'radio'},
-    description: "Define o tamanho do botão.",
+  iconLeft: {
+    options: medIcons,
+    control: { type: 'select'},
+    defaultValue: 'med-arrow-left-circle',
+    description: '**Atributo utilizado apenas no storybook. Não é um atributo do componente!.**',
     table: {
-      type:  { summary: 'xxs | xs | sm' },
-      defaultValue: { summary: 'undefined' },
+      type:  { summary: ['string'] },
+      defaultValue: { summary: 'med-arrow-left-circle' },
+    },
+  },
+  iconRight: {
+    options: medIcons,
+    control: { type: 'select'},
+    defaultValue: 'med-arrow-right-circle',
+    description: '**Atributo utilizado apenas no storybook. Não é um atributo do componente!.**',
+    table: {
+      type:  { summary: ['string'] },
+      defaultValue: { summary: 'med-arrow-left-circle' },
+    },
+  },
+  iconOnly: {
+    options: medIcons,
+    control: { type: 'select'},
+    defaultValue: 'med-arrow-right-circle',
+    description: '**Atributo utilizado apenas no storybook. Não é um atributo do componente!.**',
+    table: {
+      type:  { summary: ['string'] },
+      defaultValue: { summary: 'med-arrow-left-circle' },
     },
   },
   slot: {
     control: { type: 'text' },
     defaultValue: 'button',
-    description: '**Atributo utilizado apenas no storybook para visualização.**',
-    table: {
-      type:  { summary: ['string'] },
-      defaultValue: { summary: 'button' },
-    },
   },
 };

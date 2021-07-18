@@ -1,0 +1,196 @@
+@import "../../../med-components/abstracts";
+
+// //////////////////////////////
+// secondary
+// //////////////////////////////
+
+:host(.med-button--secondary) {
+  --background: transparent;
+  --color: #{md-color(brand, 4)};
+  --border-color: #{md-color(brand, 4)};
+  --ripple-color: transparent;
+
+  --border-width: #{$med-border-width-thin};
+  --border-style: solid;
+
+}
+
+// ////////////////////
+// icon-only
+// ////////////////////
+
+:host(.med-button--secondary.button-has-icon-only) {
+  --padding: 0px 10px;
+}
+
+// ////////////////////
+// states
+// ////////////////////
+
+@media (any-hover: hover) {
+  :host(.med-button--secondary:hover) {
+    --color: #{md-color(brand, 3)};
+    --background: transparent;
+    --border-color: #{md-color(brand, 3)};
+  }
+}
+
+:host(.med-button--secondary.ion-focused) {
+  --color: #{md-color(brand, 3)};
+  --background: transparent;
+  --border-color: #{md-color(brand, 3)};
+}
+
+:host(.med-button--secondary.ion-activated) {
+  --color: #{md-color(brand, 2)};
+  --background: transparent;
+  --border-color: #{md-color(brand, 2)};
+}
+
+:host(.med-button--secondary.button-disabled) {
+  --color: var(--med-color-neutral-8);
+  --background: transparent;
+  --border-color: var(--med-color-neutral-8);
+}
+
+// //////////
+// before disable
+// //////////
+
+@media (any-hover: hover) {
+  :host(.med-button--secondary:hover) .button-native::before {
+    opacity: 0;
+  }
+}
+
+:host(.med-button--secondary.ion-focused) .button-native::before {
+  opacity: 0;
+}
+
+:host(.med-button--secondary.ion-activated) .button-native::before {
+  opacity: 0;
+}
+
+:host(.med-button--secondary.button-disabled) .button-native::before {
+  opacity: 0;
+}
+
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-button--secondary.ion-color)  {
+  --background: transparent;
+  --color: #{md-current-color(4)};
+  --border-color: #{md-current-color(4)};
+}
+
+@media (any-hover: hover) {
+  :host(.med-button--secondary.ion-color:hover) {
+    --color: #{md-current-color(3)};
+    --border-color: #{md-current-color(3)};
+  }
+}
+
+:host(.med-button--secondary.ion-color.ion-focused) {
+  --color: #{md-current-color(3)};
+  --border-color: #{md-current-color(3)};
+}
+
+:host(.med-button--secondary.ion-color.ion-activated) {
+  --color: #{md-current-color(2)};
+  --border-color: #{md-current-color(2)};
+}
+
+:host(.med-button--secondary.ion-color.button-disabled) {
+  --color: var(--med-color-neutral-8);
+  --border-color: var(--med-color-neutral-8);
+}
+
+// //////////
+// before disable
+// //////////
+
+:host(.med-button--secondary.ion-color) .button-native::before {
+  opacity: 0;
+}
+
+@media (any-hover: hover) {
+  :host(.med-button--secondary.ion-color:hover) .button-native::before {
+    opacity: 0;
+  }
+}
+
+:host(.med-button--secondary.ion-color.ion-focused) .button-native::before {
+  opacity: 0;
+}
+
+:host(.med-button--secondary.ion-color.ion-activated) .button-native::before {
+  opacity: 0;
+}
+
+:host(.med-button--secondary.ion-color.button-disabled) .button-native::before {
+  cursor: initial;
+  pointer-events: none;
+  opacity: 0;
+}
+
+// ////////////////////
+// neutral
+// ////////////////////
+
+:host(.med-button--secondary.med-neutral)  {
+  --background: transparent;
+  --color: var(--med-neutral);
+  --border-color: var(--med-neutral);
+}
+
+@media (any-hover: hover) {
+  :host(.med-button--secondary.med-neutral:hover) {
+    --color: var(--med-neutral);
+    --border-color: var(--med-neutral);
+  }
+}
+
+:host(.med-button--secondary.med-neutral.ion-focused) {
+  --color: var(--med-neutral);
+  --border-color: var(--med-neutral);
+}
+
+:host(.med-button--secondary.med-neutral.ion-activated) {
+  --color: var(--med-neutral);
+  --border-color: var(--med-neutral);
+}
+
+:host(.med-button--secondary.med-neutral.button-disabled) {
+  --color: var(--med-color-neutral-8);
+  --border-color: var(--med-color-neutral-8);
+}
+
+// //////////
+// before disable
+// //////////
+
+:host(.med-button--secondary.med-neutral) .button-native::before {
+  opacity: 0;
+}
+
+@media (any-hover: hover) {
+  :host(.med-button--secondary.med-neutral:hover) .button-native::before {
+    opacity: 0;
+  }
+}
+
+:host(.med-button--secondary.med-neutral.ion-focused) .button-native::before {
+  opacity: 0;
+}
+
+:host(.med-button--secondary.med-neutral.ion-activated) .button-native::before {
+  opacity: 0;
+}
+
+:host(.med-button--secondary.med-neutral.button-disabled) .button-native::before {
+  cursor: initial;
+  pointer-events: none;
+  opacity: 0;
+}
