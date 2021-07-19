@@ -15,7 +15,7 @@ export class MedOffline {
 
   render() {
     return (
-      <Host>
+      <Host from-stencil>
         <div class="wrapper">
           <med-header>
             <med-navbar ds-name="transparent" slot="navbar">
