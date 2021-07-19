@@ -1,5 +1,5 @@
 import { create } from '@storybook/theming';
-import templarios from './templarios.jpg';
+import templarios from './templarios-horiz.svg';
 
 export default create({
   base: 'dark',
