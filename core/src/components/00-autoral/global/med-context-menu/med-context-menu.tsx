@@ -9,7 +9,7 @@ export class MedContextMenu {
 
   render() {
     return (
-      <Host>
+      <Host from-stencil>
         <slot></slot>
       </Host>
     );

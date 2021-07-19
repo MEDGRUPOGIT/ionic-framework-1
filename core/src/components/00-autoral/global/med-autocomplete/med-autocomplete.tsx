@@ -10,7 +10,7 @@ export class MedAutocomplete {
 
   render() {
     return (
-      <Host>
+      <Host from-stencil>
         <ul class="list">
           <li class="item">
             <ion-icon name="med-medical-bag">ion-button</ion-icon>
