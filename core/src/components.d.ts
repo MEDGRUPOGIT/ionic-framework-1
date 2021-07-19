@@ -2782,6 +2782,8 @@ export namespace Components {
     interface MedChartRadial {
         "valores": MedRadialItem[];
     }
+    interface MedContextMenu {
+    }
     interface MedDivider {
         "color"?: Color;
         "neutral"?: Neutral;
@@ -3416,6 +3418,12 @@ declare global {
         prototype: HTMLMedChartRadialElement;
         new (): HTMLMedChartRadialElement;
     };
+    interface HTMLMedContextMenuElement extends Components.MedContextMenu, HTMLStencilElement {
+    }
+    var HTMLMedContextMenuElement: {
+        prototype: HTMLMedContextMenuElement;
+        new (): HTMLMedContextMenuElement;
+    };
     interface HTMLMedDividerElement extends Components.MedDivider, HTMLStencilElement {
     }
     var HTMLMedDividerElement: {
@@ -3591,6 +3599,7 @@ declare global {
         "med-cartao-resposta-lista": HTMLMedCartaoRespostaListaElement;
         "med-chart-label": HTMLMedChartLabelElement;
         "med-chart-radial": HTMLMedChartRadialElement;
+        "med-context-menu": HTMLMedContextMenuElement;
         "med-divider": HTMLMedDividerElement;
         "med-enunciado": HTMLMedEnunciadoElement;
         "med-enunciado-discursiva": HTMLMedEnunciadoDiscursivaElement;
@@ -6402,6 +6411,8 @@ declare namespace LocalJSX {
     interface MedChartRadial {
         "valores"?: MedRadialItem[];
     }
+    interface MedContextMenu {
+    }
     interface MedDivider {
         "color"?: Color;
         "neutral"?: Neutral;
@@ -6560,6 +6571,7 @@ declare namespace LocalJSX {
         "med-cartao-resposta-lista": MedCartaoRespostaLista;
         "med-chart-label": MedChartLabel;
         "med-chart-radial": MedChartRadial;
+        "med-context-menu": MedContextMenu;
         "med-divider": MedDivider;
         "med-enunciado": MedEnunciado;
         "med-enunciado-discursiva": MedEnunciadoDiscursiva;
@@ -6675,6 +6687,7 @@ declare module "@stencil/core" {
             "med-cartao-resposta-lista": LocalJSX.MedCartaoRespostaLista & JSXBase.HTMLAttributes<HTMLMedCartaoRespostaListaElement>;
             "med-chart-label": LocalJSX.MedChartLabel & JSXBase.HTMLAttributes<HTMLMedChartLabelElement>;
             "med-chart-radial": LocalJSX.MedChartRadial & JSXBase.HTMLAttributes<HTMLMedChartRadialElement>;
+            "med-context-menu": LocalJSX.MedContextMenu & JSXBase.HTMLAttributes<HTMLMedContextMenuElement>;
             "med-divider": LocalJSX.MedDivider & JSXBase.HTMLAttributes<HTMLMedDividerElement>;
             "med-enunciado": LocalJSX.MedEnunciado & JSXBase.HTMLAttributes<HTMLMedEnunciadoElement>;
             "med-enunciado-discursiva": LocalJSX.MedEnunciadoDiscursiva & JSXBase.HTMLAttributes<HTMLMedEnunciadoDiscursivaElement>;

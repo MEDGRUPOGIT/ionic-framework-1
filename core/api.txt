@@ -1419,6 +1419,8 @@ med-chart-label,prop,valores,MedRadialItem[],[],false,false
 med-chart-radial,scoped
 med-chart-radial,prop,valores,MedRadialItem[],[],false,false
 
+med-context-menu,shadow
+
 med-divider,shadow
 med-divider,prop,color,string | undefined,undefined,false,false
 med-divider,prop,neutral,string | undefined,undefined,false,false

@@ -31,16 +31,16 @@ $new-medsoft-colors: (
 );
 
 $med-neutrals: (
-  '1': hsl($med-brand $med-saturation-neutral 95%),
-  '2': hsl($med-brand $med-saturation-neutral 85%),
-  '3': hsl($med-brand $med-saturation-neutral 75%),
-  '4': hsl($med-brand $med-saturation-neutral 65%),
-  '5': hsl($med-brand $med-saturation-neutral 56%),
-  '6': hsl($med-brand $med-saturation-neutral 45%),
-  '7': hsl($med-brand $med-saturation-neutral 35%),
-  '8': hsl($med-brand $med-saturation-neutral 25%),
-  '9': hsl($med-brand $med-saturation-neutral 15%),
-  '10': hsl($med-brand $med-saturation-neutral 5%),
+  '1': hsl($med-brand, $med-saturation-neutral, 95%),
+  '2': hsl($med-brand, $med-saturation-neutral, 85%),
+  '3': hsl($med-brand, $med-saturation-neutral, 75%),
+  '4': hsl($med-brand, $med-saturation-neutral, 65%),
+  '5': hsl($med-brand, $med-saturation-neutral, 56%),
+  '6': hsl($med-brand, $med-saturation-neutral, 45%),
+  '7': hsl($med-brand, $med-saturation-neutral, 35%),
+  '8': hsl($med-brand, $med-saturation-neutral, 25%),
+  '9': hsl($med-brand, $med-saturation-neutral, 15%),
+  '10': hsl($med-brand, $med-saturation-neutral, 5%),
 ) !default;
 
 @include new-generate-custom-theme-scheme('recursos', 'light');
