@@ -1414,6 +1414,8 @@ med-cartao-resposta-item,prop,color,string | undefined,undefined,false,false
 med-cartao-resposta-lista,shadow
 
 med-chart-label,scoped
+med-chart-label,prop,color,string | undefined,undefined,false,false
+med-chart-label,prop,neutral,string | undefined,undefined,false,false
 med-chart-label,prop,valores,MedRadialItem[],[],false,false
 
 med-chart-radial,scoped

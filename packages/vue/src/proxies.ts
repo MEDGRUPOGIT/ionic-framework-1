@@ -862,7 +862,9 @@ export const MedCartaoRespostaLista = /*@__PURE__*/ defineContainer<JSX.MedCarta
 
 
 export const MedChartLabel = /*@__PURE__*/ defineContainer<JSX.MedChartLabel>('med-chart-label', [
-  'valores'
+  'valores',
+  'color',
+  'neutral'
 ]);
 
 
