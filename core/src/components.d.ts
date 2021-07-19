@@ -2791,6 +2791,14 @@ export namespace Components {
         "valores": MedRadialItem[];
     }
     interface MedContextMenu {
+        /**
+          * Define a cor do componente.
+         */
+        "color"?: Color;
+        /**
+          * Define a cor neutra do componente.
+         */
+        "neutral"?: Neutral;
     }
     interface MedDivider {
         "color"?: Color;
@@ -6428,6 +6436,14 @@ declare namespace LocalJSX {
         "valores"?: MedRadialItem[];
     }
     interface MedContextMenu {
+        /**
+          * Define a cor do componente.
+         */
+        "color"?: Color;
+        /**
+          * Define a cor neutra do componente.
+         */
+        "neutral"?: Neutral;
     }
     interface MedDivider {
         "color"?: Color;

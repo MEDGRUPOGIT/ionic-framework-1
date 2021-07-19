@@ -126,9 +126,7 @@ const TemplateDefault = ({valores}) => {
                 <div class="med-accordion-header" slot="header">
                   <h4 class="med-accordion-header__heading">Nome da Prova</h4>
 
-                  <ion-button class="monta-provas-accordion__button" ds-name="icon-only">
-                    <ion-icon name="med-context-menu"></ion-icon>
-                  </ion-button>
+                  <med-context-menu class="monta-provas-accordion__button"></med-context-menu>
                 </div>
 
                 <div class="monta-provas-chart" slot="content">
