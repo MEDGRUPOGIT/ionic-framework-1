@@ -1,3 +1,34 @@
+@import "../../../../../med-components/abstracts";
+
 :host {
+  --z-index: 1;
+  --background: #{var(--med-color-neutral-6)};
+  --color: #{var(--med-color-neutral-3)};
+}
+
+:host(.med-context-menu) {
   display: block;
+  position: relative;
+
+  .med-context-menu__button {
+    color: #fff;
+  }
+
+  .content {
+    z-index: var(--z-index);
+    position: absolute;
+    background: #fff;
+    right: -8px;
+    top: -8px;
+    min-width: 250px;
+    width: 100%;
+    opacity: .5;
+
+    .content__button {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      color: #000;
+    }
+  }
 }

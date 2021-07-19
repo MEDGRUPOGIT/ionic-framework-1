@@ -985,6 +985,16 @@ export class MedChartRadial {
     this.el = r.nativeElement;
   }
 }
+export declare interface MedContextMenu extends Components.MedContextMenu {
+}
+@Component({ selector: "med-context-menu", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class MedContextMenu {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedDivider extends Components.MedDivider {
 }
 @ProxyCmp({ inputs: ["color", "neutral", "text"] })
