@@ -1424,6 +1424,8 @@ med-chart-radial,prop,valores,MedRadialItem[],[],false,false
 med-context-menu,shadow
 med-context-menu,prop,color,string | undefined,undefined,false,false
 med-context-menu,prop,neutral,string | undefined,undefined,false,false
+med-context-menu,prop,show,boolean,false,false,false
+med-context-menu,method,toggle,toggle() => Promise<void>
 
 med-divider,shadow
 med-divider,prop,color,string | undefined,undefined,false,false

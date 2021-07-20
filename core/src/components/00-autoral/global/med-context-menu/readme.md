@@ -11,6 +11,20 @@
 | --------- | --------- | ---------------------------------- | --------------------- | ----------- |
 | `color`   | `color`   | Define a cor do componente.        | `string \| undefined` | `undefined` |
 | `neutral` | `neutral` | Define a cor neutra do componente. | `string \| undefined` | `undefined` |
+| `show`    | `show`    |                                    | `boolean`             | `false`     |
+
+
+## Methods
+
+### `toggle() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
 
 
 ## Dependencies

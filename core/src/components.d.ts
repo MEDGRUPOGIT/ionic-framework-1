@@ -2799,6 +2799,8 @@ export namespace Components {
           * Define a cor neutra do componente.
          */
         "neutral"?: Neutral;
+        "show": boolean;
+        "toggle": () => Promise<void>;
     }
     interface MedDivider {
         "color"?: Color;
@@ -6444,6 +6446,7 @@ declare namespace LocalJSX {
           * Define a cor neutra do componente.
          */
         "neutral"?: Neutral;
+        "show"?: boolean;
     }
     interface MedDivider {
         "color"?: Color;
