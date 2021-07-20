@@ -87,9 +87,9 @@ const TemplateDefault = ({valores}) => {
       }
 
       .med-context-menu__icon {
-        padding-right: $med-spacing-inline-xxxs;
-        width: 24px;
-        height: 24px;
+        padding-right: var(--med-spacing-inline-xxxs);
+        font-size: 24px;
+        stroke: var(--med-color-neutral-3);
       }
 
       .med-context-menu__info {
