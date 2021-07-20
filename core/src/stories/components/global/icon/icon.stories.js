@@ -173,7 +173,7 @@ const TemplateIcon = ({ color }) => {
 export const Icon = TemplateIcon.bind({});
 Icon.argTypes = {
   color: {
-    options: medsoftColors,
+    options: medColors,
     control: { type: 'select'},
     description: "Define a cor do badge baseado nos tokens.",
     table: {
