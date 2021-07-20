@@ -10,19 +10,24 @@
   display: block;
   position: relative;
 
-  .med-context-menu
-
   .med-context-menu {
-    z-index: var(--z-index);
-    position: absolute;
-    background: #fff;
-    right: -8px;
-    top: -8px;
-    min-width: 250px;
-    width: 100%;
-    box-shadow: $med-shadow-level-4;
-    border-radius: $med-border-radius-nano;
-    padding: $med-spacing-inset-sm;
+
+    &__content {
+      z-index: var(--z-index);
+      position: absolute;
+      background: #fff;
+      right: -8px;
+      top: -8px;
+      min-width: 250px;
+      width: 100%;
+      box-shadow: $med-shadow-level-4;
+      border-radius: $med-border-radius-nano;
+      padding: $med-spacing-inset-sm;
+    }
+
+    &__button {
+      color: #fff;
+    }
 
     &__inner-button {
       position: absolute;

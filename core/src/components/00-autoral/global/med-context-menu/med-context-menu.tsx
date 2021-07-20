@@ -31,12 +31,12 @@ export class MedContextMenu {
         }, neutral)}
       >
         <ion-button class="med-context-menu__button" ds-name="icon-only">
-          <ion-icon name="med-context-menu"></ion-icon>
+          <ion-icon class="med-icon" name="med-context-menu"></ion-icon>
         </ion-button>
 
         <div class="med-context-menu__content">
           <ion-button class="med-context-menu__inner-button" ds-name="icon-only">
-            <ion-icon name="med-context-menu"></ion-icon>
+            <ion-icon class="med-icon" name="med-context-menu"></ion-icon>
           </ion-button>
 
           <ul class="med-context-menu__list">
