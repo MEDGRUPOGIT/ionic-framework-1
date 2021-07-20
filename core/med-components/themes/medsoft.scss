@@ -44,5 +44,48 @@ html.md {
   --ion-font: "fsemeric";
 }
 
+.med-icon {
+  font-size: 24px;
+  --ionicon-stroke-width: 2;
+
+  &.ion-color {
+    color: var(--med-color-3) !important;
+  }
+
+  &.med-neutral {
+    color: var(--med-neutral) !important;
+  }
+
+  &--xxs {
+    width: 12px;
+    height: 12px;
+    --ionicon-stroke-width: 1;
+  }
+
+  &--xs {
+    width: 16px;
+    height: 16px;
+    --ionicon-stroke-width: 1;
+  }
+
+  &--sm {
+    width: 24px;
+    height: 24px;
+    --ionicon-stroke-width: 2;
+  }
+
+  &--md {
+    width: 32px;
+    height: 32px;
+    --ionicon-stroke-width: 3;
+  }
+
+  &--lg {
+    width: 48px;
+    height: 48px;
+    --ionicon-stroke-width: 4;
+  }
+}
+
 // @import "../../src/components/button/medgrupo/button.med.theme";
 // @import "../../src/components/icon/medgrupo/icon.med.theme";

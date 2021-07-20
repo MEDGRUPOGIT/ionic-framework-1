@@ -2777,6 +2777,14 @@ export namespace Components {
     interface MedCartaoRespostaLista {
     }
     interface MedChartLabel {
+        /**
+          * Define a cor do componente.
+         */
+        "color"?: Color;
+        /**
+          * Define a cor neutra do componente.
+         */
+        "neutral"?: Neutral;
         "valores": MedRadialItem[];
     }
     interface MedChartRadial {
@@ -6414,6 +6422,14 @@ declare namespace LocalJSX {
     interface MedCartaoRespostaLista {
     }
     interface MedChartLabel {
+        /**
+          * Define a cor do componente.
+         */
+        "color"?: Color;
+        /**
+          * Define a cor neutra do componente.
+         */
+        "neutral"?: Neutral;
         "valores"?: MedRadialItem[];
     }
     interface MedChartRadial {
