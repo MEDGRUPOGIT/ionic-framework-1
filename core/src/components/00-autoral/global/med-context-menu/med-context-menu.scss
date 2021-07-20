@@ -11,6 +11,10 @@
   position: relative;
 
   .med-context-menu {
+    &--show .med-context-menu__content {
+      display: block;
+    }
+
     &__content {
       z-index: var(--z-index);
       position: absolute;
@@ -23,10 +27,6 @@
       border-radius: $med-border-radius-nano;
       padding: $med-spacing-inset-sm;
       display: none;
-
-      &--show {
-        display: block;
-      }
     }
 
     &__button {
