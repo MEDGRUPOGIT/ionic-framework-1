@@ -86,6 +86,10 @@ const TemplateDefault = ({valores}) => {
         align-items: center;
       }
 
+      .med-context-menu__item:hover {
+
+      }
+
       .med-context-menu__icon {
         padding-right: var(--med-spacing-inline-xxxs);
         font-size: 24px;
@@ -98,7 +102,7 @@ const TemplateDefault = ({valores}) => {
         font-size: var(--med-font-size-xs);
         line-height: var(--med-line-height-compressed);
         color: var(--med-color-neutral-5);
-        padding: var(--med-spacing-inset-xs) 0;
+        padding: var(--med-spacing-inset-xs);
         text-align: center;
       }
     </style>
