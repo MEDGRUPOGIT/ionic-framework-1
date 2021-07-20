@@ -27,10 +27,6 @@
   color: #fff !important;
 }
 
-.sbdocs .sb-nopreview_main {
-  color: #fff !important;
-}
-
 /* heading */
 
 .sbdocs h1,
@@ -103,10 +99,18 @@
   background-color: var(--custom-color-deep-01) !important;
 }
 
+.sbdocs .sb-nopreview_main {
+  color: #fff !important;
+}
+
 .sbdocs .css-1vg6q84 {
   color: #fff !important;
 }
 
+
+.sbdocs .span.rejt-collapsed-text {
+  color: #fff !important;
+}
 /* docs tables */
 
 .sbdocs .css-6hhrgj tbody td {

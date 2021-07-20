@@ -873,7 +873,10 @@ export const MedChartRadial = /*@__PURE__*/ defineContainer<JSX.MedChartRadial>(
 ]);
 
 
-export const MedContextMenu = /*@__PURE__*/ defineContainer<JSX.MedContextMenu>('med-context-menu');
+export const MedContextMenu = /*@__PURE__*/ defineContainer<JSX.MedContextMenu>('med-context-menu', [
+  'neutral',
+  'color'
+]);
 
 
 export const MedDivider = /*@__PURE__*/ defineContainer<JSX.MedDivider>('med-divider', [

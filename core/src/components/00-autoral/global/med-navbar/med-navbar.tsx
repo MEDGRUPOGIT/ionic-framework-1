@@ -94,9 +94,10 @@ export class MedNavbar {
     const { color, neutral, dsName } = this;
 
     return (
-      <Host from-stencil class={createColorClasses(color, {
-        'med-navbar': true,
-        [`med-navbar--${dsName}`]: dsName !== undefined,
+      <Host from-stencil
+        class={createColorClasses(color, {
+          'med-navbar': true,
+          [`med-navbar--${dsName}`]: dsName !== undefined,
         }, neutral)}>
         <header class="med-navbar__header">
           <slot name="top"></slot>

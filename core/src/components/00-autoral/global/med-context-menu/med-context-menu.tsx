@@ -25,15 +25,17 @@ export class MedContextMenu {
 
     return (
       <Host
+        from-stencil
         class={createColorClasses(color, {
-        'med-context-menu': true,
+          'med-context-menu': true,
         }, neutral)}
       >
         <ion-button class="med-context-menu__button" ds-name="icon-only">
           <ion-icon name="med-context-menu"></ion-icon>
         </ion-button>
-        <div class="content">
-          <ion-button class="content__button" ds-name="icon-only">
+
+        <div class="med-context-menu__content">
+          <ion-button class="med-context-menu__inner-button" ds-name="icon-only">
             <ion-icon name="med-context-menu"></ion-icon>
           </ion-button>
           <ul>
@@ -48,6 +50,7 @@ export class MedContextMenu {
             <li>teste 9</li>
           </ul>
         </div>
+
       </Host>
     );
   }
