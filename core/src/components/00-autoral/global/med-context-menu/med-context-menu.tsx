@@ -38,21 +38,22 @@ export class MedContextMenu {
           <ion-button class="med-context-menu__inner-button" ds-name="icon-only">
             <ion-icon name="med-context-menu"></ion-icon>
           </ion-button>
-          <ul class="content__list">
-            <li class="content__item">
-              <ion-icon class="content__img" name="med-filtro"></ion-icon>
+
+          <ul class="med-context-menu__list">
+            <li class="med-context-menu__item">
+              <ion-icon class="med-context-menu__icon" name="med-filtro"></ion-icon>
               <span>Ver filtro selecionado</span>
             </li>
-            <li class="content__item">
-              <ion-icon class="content__img" name="med-context-menu"></ion-icon>
+            <li class="med-context-menu__item">
+              <ion-icon class="med-context-menu__icon" name="med-context-menu"></ion-icon>
               <span>Renomear Prova</span>
             </li>
-            <li class="content__item">
-              <ion-icon class="content__img" name="med-context-menu"></ion-icon>
+            <li class="med-context-menu__item">
+              <ion-icon class="med-context-menu__icon" name="med-context-menu"></ion-icon>
               <span>Excluir Prova</span>
             </li>
           </ul>
-          <p class="content__info">Criada em 30/12/2020</p>
+          <p class="med-context-menu__info">Criada em 30/12/2020</p>
         </div>
 
       </Host>

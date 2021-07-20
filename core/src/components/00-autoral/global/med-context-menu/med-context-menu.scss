@@ -14,7 +14,7 @@
     color: #fff;
   }
 
-  .content {
+  .med-context-menu {
     z-index: var(--z-index);
     position: absolute;
     background: #fff;
@@ -26,7 +26,7 @@
     border-radius: $med-border-radius-nano;
     padding: $med-spacing-inset-sm;
 
-    .content__button {
+    &__inner-button {
       position: absolute;
       right: 8px;
       top: 9px;
@@ -39,20 +39,20 @@
       padding: 0;
     }
 
-    &__img {
-      padding-right: $med-spacing-inline-xxxs;
-      width: 24px;
-      height: 24px;
-    }
-
     &__item {
       padding-right: $med-spacing-inline-xs;
       margin-bottom: $med-spacing-stack-base;
       font-size: $med-font-size-xs;
       line-height: $med-line-height-compressed;
-      color: #{var(--med-color-neutral-3)};
+      color: var(--med-color-neutral-3);
       display: flex;
       align-items: center;
+    }
+
+    &__icon {
+      padding-right: $med-spacing-inline-xxxs;
+      width: 24px;
+      height: 24px;
     }
 
     &__info {
@@ -60,17 +60,10 @@
       margin: 0;
       font-size: $med-font-size-xs;
       line-height: $med-line-height-compressed;
-      color: #{var(--med-color-neutral-5)};
+      color: var(--med-color-neutral-5);
       padding: $med-spacing-inset-xs 0;
       text-align: center;
     }
   }
 }
 
-path {
-  stroke: white;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
-}
