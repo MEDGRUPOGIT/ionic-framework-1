@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop } from '@stencil/core';
+import { Component, Host, h, Prop, Method, Watch, State } from '@stencil/core';
 import { Color, Neutral } from '../../../../interface';
 import { createColorClasses } from '../../../../utils/theme';
 
@@ -19,23 +19,50 @@ export class MedContextMenu {
    */
  @Prop() color?: Color;
 
+
+ @Prop() show = false
+
+ @State() toggleState = false
+
+ @Method()
+ async toggle() {
+   if(this.show){
+    this.show = !this.show;
+   }
+   else{
+    this.show = !this.show;
+   }
+ }
+
+ @Watch('show')
+ toggleChanged() {
+   this.onStateChange();
+ }
+
+ private onStateChange = (event?:Event) => {
+  event?.preventDefault();
+  console.log('onStateChange')
+  this.toggleState = !this.toggleState;
+  console.log('AQUIIII',this.toggleState)
+ }
   render() {
 
-    const { color, neutral } = this;
+    const { color, neutral, toggleState } = this;
 
     return (
       <Host
         from-stencil
         class={createColorClasses(color, {
           'med-context-menu': true,
+          'med-context-menu--show': toggleState
         }, neutral)}
       >
-        <ion-button class="med-context-menu__button" ds-name="icon-only">
+        <ion-button onClick={ (event) => {this.onStateChange(event)} } class="med-context-menu__button" ds-name="icon-only">
           <ion-icon class="med-icon" name="med-context-menu"></ion-icon>
         </ion-button>
 
-        <div class="med-context-menu__content">
-          <ion-button class="med-context-menu__inner-button" ds-name="icon-only">
+        <div class="med-context-menu__content--show">
+          <ion-button  onClick={ (event) => {this.onStateChange(event)} } class="med-context-menu__inner-button" ds-name="icon-only">
             <ion-icon class="med-icon" name="med-context-menu"></ion-icon>
           </ion-button>
 
