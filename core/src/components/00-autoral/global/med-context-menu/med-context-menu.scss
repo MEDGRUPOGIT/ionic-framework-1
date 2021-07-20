@@ -2,7 +2,7 @@
 
 :host {
   --z-index: 1;
-  --background: #{var(--med-color-neutral-6)};
+  --background: #{var(--med-color-neutral-9)};
   --color: #{var(--med-color-neutral-3)};
 }
 
@@ -11,6 +11,10 @@
   position: relative;
 
   .med-context-menu {
+    &--show .med-context-menu__content {
+      display: block;
+    }
+
     &__content {
       z-index: var(--z-index);
       position: absolute;
@@ -22,6 +26,7 @@
       box-shadow: $med-shadow-level-4;
       border-radius: $med-border-radius-nano;
       padding: $med-spacing-inset-sm;
+      display: none;
     }
 
     &__button {
@@ -33,6 +38,16 @@
       right: 8px;
       top: 9px;
       color: var(--med-color-neutral-3);
+    }
+
+    &__icon {
+      font-size: 24px;
+      stroke: var(--med-color-neutral-3);
+    }
+
+    &__inner-icon {
+      font-size: 24px;
+      stroke: var(--med-color-neutral-3);
     }
   }
 }
