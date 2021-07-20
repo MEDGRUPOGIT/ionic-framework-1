@@ -84,10 +84,11 @@ const TemplateDefault = ({valores}) => {
         color: var(--med-color-neutral-3);
         display: flex;
         align-items: center;
+        transition: color 300ms ease-out;
       }
 
       .med-context-menu__item:hover {
-
+        color: var(--med-color-neutral-1);
       }
 
       .med-context-menu__icon {

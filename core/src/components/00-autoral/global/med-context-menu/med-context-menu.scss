@@ -11,10 +11,6 @@
   position: relative;
 
   .med-context-menu {
-    &--show .med-context-menu__content {
-      display: block;
-    }
-
     &__content {
       z-index: var(--z-index);
       position: absolute;
@@ -52,3 +48,6 @@
   }
 }
 
+:host(.med-context-menu--show) .med-context-menu__content {
+  display: block;
+}

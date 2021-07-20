@@ -46,7 +46,6 @@ export class MedContextMenu {
   console.log('AQUIIII',this.toggleState)
  }
   render() {
-
     const { color, neutral, toggleState } = this;
 
     return (
@@ -61,7 +60,7 @@ export class MedContextMenu {
           <ion-icon class="med-icon" name="med-context-menu"></ion-icon>
         </ion-button>
 
-        <div class="med-context-menu__content--show">
+        <div class="med-context-menu__content">
           <ion-button  onClick={ (event) => {this.onStateChange(event)} } class="med-context-menu__inner-button" ds-name="icon-only">
             <ion-icon class="med-icon" name="med-context-menu"></ion-icon>
           </ion-button>
