@@ -11,11 +11,10 @@
   position: relative;
 
   .med-context-menu {
-
     &__content {
       z-index: var(--z-index);
       position: absolute;
-      background: #fff;
+      background: var(--background);
       right: -8px;
       top: -8px;
       min-width: 250px;
@@ -26,46 +25,14 @@
     }
 
     &__button {
-      color: #fff;
+      color: var(--med-color-neutral-6);
     }
 
     &__inner-button {
       position: absolute;
       right: 8px;
       top: 9px;
-      color: #{var(--med-color-neutral-3)};
-    }
-
-    &__list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    &__item {
-      padding-right: $med-spacing-inline-xs;
-      margin-bottom: $med-spacing-stack-base;
-      font-size: $med-font-size-xs;
-      line-height: $med-line-height-compressed;
       color: var(--med-color-neutral-3);
-      display: flex;
-      align-items: center;
-    }
-
-    &__icon {
-      padding-right: $med-spacing-inline-xxxs;
-      width: 24px;
-      height: 24px;
-    }
-
-    &__info {
-      padding: 0;
-      margin: 0;
-      font-size: $med-font-size-xs;
-      line-height: $med-line-height-compressed;
-      color: var(--med-color-neutral-5);
-      padding: $med-spacing-inset-xs 0;
-      text-align: center;
     }
   }
 }

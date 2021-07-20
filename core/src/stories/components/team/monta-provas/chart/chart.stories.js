@@ -69,6 +69,38 @@ const TemplateDefault = ({valores}) => {
         font-size: var(--med-font-size-md);
         color: var(--med-color-neutral-10);
       }
+
+      .med-context-menu__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .med-context-menu__item {
+        padding-right: var(--med-spacing-inline-xs);
+        margin-bottom: var(--med-spacing-stack-base);
+        font-size: var(--med-font-size-xs);
+        line-height: var(--med-line-height-compressed);
+        color: var(--med-color-neutral-3);
+        display: flex;
+        align-items: center;
+      }
+
+      .med-context-menu__icon {
+        padding-right: $med-spacing-inline-xxxs;
+        width: 24px;
+        height: 24px;
+      }
+
+      .med-context-menu__info {
+        padding: 0;
+        margin: 0;
+        font-size: var(--med-font-size-xs);
+        line-height: var(--med-line-height-compressed);
+        color: var(--med-color-neutral-5);
+        padding: var(--med-spacing-inset-xs) 0;
+        text-align: center;
+      }
     </style>
 
     <ion-app class="storybook-only">
@@ -79,9 +111,23 @@ const TemplateDefault = ({valores}) => {
           <div class="med-accordion-header" slot="header">
             <h4 class="med-accordion-header__heading">Nome da Prova</h4>
 
-            <ion-button class="monta-provas-accordion__button" ds-name="icon-only">
-              <ion-icon name="med-context-menu"></ion-icon>
-            </ion-button>
+            <med-context-menu class="med-context-menu">
+              <ul class="med-context-menu__list">
+                <li class="med-context-menu__item">
+                  <ion-icon class="med-icon med-context-menu__icon" name="med-filtro"></ion-icon>
+                  <span>Ver filtro selecionado</span>
+                </li>
+                <li class="med-context-menu__item">
+                  <ion-icon class="med-icon med-context-menu__icon" name="med-context-menu"></ion-icon>
+                  <span>Renomear Prova</span>
+                </li>
+                <li class="med-context-menu__item">
+                  <ion-icon class="med-icon med-context-menu__icon" name="med-context-menu"></ion-icon>
+                  <span>Excluir Prova</span>
+                </li>
+              </ul>
+              <p class="med-context-menu__info">Criada em 30/12/2020</p>
+            </med-context-menu>
           </div>
 
           <div class="monta-provas-chart" slot="content">
