@@ -312,6 +312,15 @@ export default defineComponent({
 | `outline`  | `outline`  | Display an outline style button.                                                                                                                                                                                                                                       | `boolean`                  | `false`     |
 
 
+## CSS Custom Properties
+
+| Name             | Description                          |
+| ---------------- | ------------------------------------ |
+| `--background`   | Background of the chip               |
+| `--border-color` | Define a cor da borda do componente. |
+| `--color`        | Color of the chip                    |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

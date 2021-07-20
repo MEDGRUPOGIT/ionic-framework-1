@@ -96,24 +96,53 @@ svg {
   --ion-color-base: var(--ion-color-dark, #222428);
 }
 
-/* medgrupo */
+/* Medgrupo
+ * -----------------------------------------------------------
+ */
 
-:host(.med-neutrals) {
-  color: var(--med-neutral) !important;
+ :host(.med-icon) {
+  font-size: 24px;
+  --ionicon-stroke-width: 2;
 }
 
-:host(.ion-color) {
-  color: var(--ion-color-base) !important;
-}
-
-:host(.ion-color) {
-  color: var(--ion-color-base) !important;
-}
-
-path {
-  stroke: white;
-  stroke-width: 2;
+:host(.med-icon) .ionicon-stroke-width {
   stroke-linecap: round;
   stroke-linejoin: round;
+  stroke: inherit;
   fill: none;
+}
+
+:host(.med-icon.ion-color) {
+  color: var(--med-color-3) !important;
+  stroke: var(--med-color-3) !important;
+}
+
+:host(.med-icon.med-neutral) {
+  color: var(--med-neutral) !important;
+  stroke: var(--med-color-3) !important;
+}
+
+:host(.med-icon.med-icon--xxs) {
+  font-size: 12px;
+  --ionicon-stroke-width: 1;
+}
+
+:host(.med-icon.med-icon--xs) {
+  font-size: 16px;
+  --ionicon-stroke-width: 1;
+}
+
+:host(.med-icon.med-icon--sm) {
+  font-size: 24px;
+  --ionicon-stroke-width: 2;
+}
+
+:host(.med-icon.med-icon--md) {
+  font-size: 32px;
+  --ionicon-stroke-width: 3;
+}
+
+:host(.med-icon.med-icon--lg) {
+  font-size: 48px;
+  --ionicon-stroke-width: 4;
 }

@@ -136,6 +136,13 @@ ion-badge,prop,dsName,"secondary" | undefined,undefined,false,false
 ion-badge,prop,dsSize,"lg" | "md" | "sm" | "xs" | undefined,undefined,false,false
 ion-badge,prop,mode,"ios" | "md",undefined,false,false
 ion-badge,prop,neutral,string | undefined,undefined,false,false
+ion-badge,css-prop,--background
+ion-badge,css-prop,--border-color
+ion-badge,css-prop,--color
+ion-badge,css-prop,--padding-bottom
+ion-badge,css-prop,--padding-end
+ion-badge,css-prop,--padding-start
+ion-badge,css-prop,--padding-top
 
 ion-button,shadow
 ion-button,prop,buttonType,string,'button',false,false
@@ -252,6 +259,9 @@ ion-chip,prop,dsName,"secondary" | undefined,undefined,false,false
 ion-chip,prop,mode,"ios" | "md",undefined,false,false
 ion-chip,prop,neutral,string | undefined,undefined,false,false
 ion-chip,prop,outline,boolean,false,false,false
+ion-chip,css-prop,--background
+ion-chip,css-prop,--border-color
+ion-chip,css-prop,--color
 
 ion-col,shadow
 ion-col,prop,offset,string | undefined,undefined,false,false
