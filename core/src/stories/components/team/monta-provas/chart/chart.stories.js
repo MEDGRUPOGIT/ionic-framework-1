@@ -32,13 +32,6 @@ const TemplateDefault = ({valores}) => {
         text-align: center;
       }
 
-      .monta-provas-accordion__button {
-        --font-size: 24px;
-        --padding: 0;
-        --width: 24px;
-        --height: 24px;
-      }
-
       .monta-provas-chart {
         background: var(--med-color-neutral-2);
         padding: 0 var(--med-spacing-stretch-md);
@@ -93,7 +86,6 @@ const TemplateDefault = ({valores}) => {
 
       .med-context-menu__icon {
         padding-right: var(--med-spacing-inline-xxxs);
-        font-size: 24px;
         stroke: var(--med-color-neutral-3);
       }
 

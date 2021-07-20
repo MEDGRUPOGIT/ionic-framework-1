@@ -22,11 +22,14 @@
       box-shadow: $med-shadow-level-4;
       border-radius: $med-border-radius-nano;
       padding: $med-spacing-inset-sm;
-      display: none;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 300ms ease-out;
     }
 
     &__button {
       color: var(--med-color-neutral-6);
+      --font-size: 24px;
     }
 
     &__inner-button {
@@ -34,6 +37,7 @@
       right: 8px;
       top: 9px;
       color: var(--med-color-neutral-3);
+      --font-size: 24px;
     }
 
     &__icon {
@@ -49,5 +53,6 @@
 }
 
 :host(.med-context-menu--show) .med-context-menu__content {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }

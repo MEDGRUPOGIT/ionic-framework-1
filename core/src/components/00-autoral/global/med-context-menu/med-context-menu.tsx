@@ -41,9 +41,7 @@ export class MedContextMenu {
 
  private onStateChange = (event?:Event) => {
   event?.preventDefault();
-  console.log('onStateChange')
   this.toggleState = !this.toggleState;
-  console.log('AQUIIII',this.toggleState)
  }
   render() {
     const { color, neutral, toggleState } = this;
