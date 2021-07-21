@@ -2,7 +2,7 @@ import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
 
 export default {
-  title: 'Components/Team/Monta Provas/Components/Chart',
+  title: 'Components/Team/Monta Provas/Chart',
   decorators: [withDesign],
 };
 

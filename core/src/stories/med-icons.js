@@ -15,6 +15,7 @@ export const medIcons = [
   'med-check',
   'med-checkcirculo',
   'med-cima',
+  'med-context-menu',
   'med-contribuicao',
   'med-covid',
   'med-direita',
