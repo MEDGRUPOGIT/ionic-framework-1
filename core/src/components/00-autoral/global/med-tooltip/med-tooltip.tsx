@@ -21,7 +21,7 @@ export class MedTooltip {
     if (buttonLeft && buttonLeft.icon) {
       buttonLeftEl = (
         <ion-button ds-name="icon-only">
-          <ion-icon slot="icon-only" name={buttonLeft.icon}></ion-icon>
+          <ion-icon class="med-icon" slot="icon-only" name={buttonLeft.icon}></ion-icon>
         </ion-button>
       );
     } else if (buttonLeft && buttonLeft.label) {
@@ -37,7 +37,7 @@ export class MedTooltip {
 
       buttonRightEl = (
         <ion-button ds-name="icon-only">
-          <ion-icon slot="icon-only" name={buttonRight.icon}></ion-icon>
+          <ion-icon class="med-icon" slot="icon-only" name={buttonRight.icon}></ion-icon>
         </ion-button>
       );
     } else if (buttonRight && buttonRight.label) {

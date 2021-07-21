@@ -41,7 +41,7 @@ const TemplateButtonIcon = () => {
       <div class="storybook-only__container">
 
         <!-- component -->
-        <ion-icon name="med-information" @click="${createButtonIconPopover}" style="cursor: pointer;"></ion-icon>
+        <ion-icon class="med-icon" name="med-information" @click="${createButtonIconPopover}" style="cursor: pointer;"></ion-icon>
         <!-- component -->
 
       </ion-content>

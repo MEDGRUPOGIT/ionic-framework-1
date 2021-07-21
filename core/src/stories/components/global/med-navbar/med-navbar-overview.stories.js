@@ -22,7 +22,7 @@ const Template = ({ color, neutral, dsName, platform }) => {
       <!-- component -->
       <med-navbar .color=${color} .neutral=${neutral} ds-name=${dsName}>
         <ion-button ds-name="icon-label" slot="left">
-          <ion-icon name="med-chevron-left"></ion-icon>
+          <ion-icon class="med-icon" name="med-chevron-left"></ion-icon>
           voltar
         </ion-button>
 
@@ -30,7 +30,7 @@ const Template = ({ color, neutral, dsName, platform }) => {
         <h2 slot="subtitle">subheader</h2>
 
         <ion-button ds-name="icon-only" slot="right">
-          <ion-icon slot="icon-only" name="med-star-filled"></ion-icon>
+          <ion-icon class="med-icon" slot="icon-only" name="med-star-filled"></ion-icon>
         </ion-button>
       </med-navbar>
       <!-- component -->

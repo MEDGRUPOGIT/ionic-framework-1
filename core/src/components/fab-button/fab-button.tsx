@@ -170,7 +170,7 @@ export class FabButton implements ComponentInterface, AnchorInterface, ButtonInt
           onBlur={this.onBlur}
           onClick={(ev: Event) => openURL(href, ev, this.routerDirection, this.routerAnimation)}
         >
-          <ion-icon icon={this.closeIcon} part="close-icon" class="close-icon" lazy={false}></ion-icon>
+          <ion-icon icon={this.closeIcon} part="close-icon" class="med-icon close-icon" lazy={false}></ion-icon>
           <span class="button-inner">
             <slot></slot>
             <slot name="label"></slot>

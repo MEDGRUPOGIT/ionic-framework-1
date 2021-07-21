@@ -18,10 +18,10 @@ const TemplateHover = ({ color, size, slot, iconName }) => {
           <ion-button class="med-hovered" ds-name="secondary" .color=${color} ds-size=${size}>${slot}</ion-button>
           <ion-button class="med-hovered" ds-name="tertiary" .color=${color} ds-size=${size}>${slot}</ion-button>
           <ion-button class="med-hovered" ds-name="icon-only" .color=${color} ds-size=${size}>
-            <ion-icon slot="icon-only" name=${iconName}></ion-icon>
+            <ion-icon class="med-icon" slot="icon-only" name=${iconName}></ion-icon>
           </ion-button>
           <ion-button class="med-hovered" ds-name="icon-label" .color=${color} ds-size=${size}>
-            <ion-icon name=${iconName} slot="start"></ion-icon>
+            <ion-icon class="med-icon" name=${iconName} slot="start"></ion-icon>
             ${slot}
           </ion-button>
         <!-- component -->

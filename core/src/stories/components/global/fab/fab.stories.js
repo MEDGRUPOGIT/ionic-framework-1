@@ -15,13 +15,13 @@ const TemplateDefault = ({color, neutral}) => {
         <!-- component -->
         <ion-fab vertical="center" horizontal="center" slot="fixed">
           <ion-fab-button .color=${color} .neutral=${neutral}>
-            <ion-icon name="add"></ion-icon>
+            <ion-icon class="med-icon" name="add"></ion-icon>
           </ion-fab-button>
           <ion-fab-list side="top">
-            <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
-            <ion-fab-button><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
-            <ion-fab-button><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
-            <ion-fab-button><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+            <ion-fab-button><ion-icon class="med-icon" name="logo-vimeo"></ion-icon></ion-fab-button>
+            <ion-fab-button><ion-icon class="med-icon" name="logo-twitter"></ion-icon></ion-fab-button>
+            <ion-fab-button><ion-icon class="med-icon" name="logo-facebook"></ion-icon></ion-fab-button>
+            <ion-fab-button><ion-icon class="med-icon" name="logo-instagram"></ion-icon></ion-fab-button>
           </ion-fab-list>
         </ion-fab>
         <!-- component -->

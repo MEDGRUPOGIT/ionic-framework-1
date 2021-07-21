@@ -116,7 +116,7 @@ const TemplateDefault = ({valores}) => {
             <med-context-menu class="med-context-menu">
               <ul class="med-context-menu__list">
                 <li class="med-context-menu__item">
-                  <ion-icon class="med-icon med-context-menu__icon" name="med-filtro"></ion-icon>
+                  <ion-icon class="med-icon" class="med-icon med-context-menu__icon" name="med-filtro"></ion-icon>
                   <span>Ver filtro selecionado</span>
                 </li>
                 <li class="med-context-menu__item">

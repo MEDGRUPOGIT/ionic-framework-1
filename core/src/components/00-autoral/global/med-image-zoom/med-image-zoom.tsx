@@ -42,7 +42,7 @@ export class MedImageZoom {
             <span slot="title" innerHTML={this.titulo}></span>
 
             <ion-button ds-name="icon-only" slot="right" onClick={() => this.dismiss()}>
-              <ion-icon slot="icon-only" name="med-close"></ion-icon>
+              <ion-icon class="med-icon" slot="icon-only" name="med-fechar"></ion-icon>
             </ion-button>
           </med-navbar>
         </med-header>
@@ -67,13 +67,13 @@ export class MedImageZoom {
         </ion-content>
         <div class="zoom-button-container">
           <button class="zoom-button" onClick={() => this.zoom(true)}>
-            <ion-icon name="med-plus"></ion-icon>
+            <ion-icon class="med-icon" name="med-menos"></ion-icon>
           </button>
           <button class="zoom-button" onClick={() => this.zoom(false)}>
-            <ion-icon name="med-minus"></ion-icon>
+            <ion-icon class="med-icon" name="med-mais"></ion-icon>
           </button>
           <button class="zoom-button zoom-button--close" onClick={() => this.dismiss()}>
-            <ion-icon name="med-close"></ion-icon>
+            <ion-icon class="med-icon" name="med-fechar"></ion-icon>
           </button>
         </div>
       </Host>

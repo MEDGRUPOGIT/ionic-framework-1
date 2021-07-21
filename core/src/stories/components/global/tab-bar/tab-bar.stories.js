@@ -20,27 +20,27 @@ const TemplateDefault = () => {
         <!-- component -->
           <ion-tab-bar slot="bottom">
             <ion-tab-button tab="questao">
-              <ion-icon name="med-questao"></ion-icon>
+              <ion-icon class="med-icon" name="med-questao"></ion-icon>
               <ion-label>Questão</ion-label>
             </ion-tab-button>
 
             <ion-tab-button tab="gabarito-comentado">
-              <ion-icon name="med-comentario-questao"></ion-icon>
+              <ion-icon class="med-icon" name="med-comentario-questao"></ion-icon>
               <ion-label>Gabarito Comentado</ion-label>
             </ion-tab-button>
 
             <ion-tab-button tab="med-cartao-resposta">
-              <ion-icon name="med-cartao-resposta"></ion-icon>
+              <ion-icon class="med-icon" name="med-cartao-resposta"></ion-icon>
               <ion-label>Cartão Resposta</ion-label>
             </ion-tab-button>
 
             <ion-tab-button tab="questao-sec">
-              <ion-icon name="med-questao"></ion-icon>
+              <ion-icon class="med-icon" name="med-questao"></ion-icon>
               <ion-label>Questão</ion-label>
             </ion-tab-button>
 
             <ion-tab-button tab="gabarito-comentado" disabled>
-              <ion-icon name="med-comentario-questao"></ion-icon>
+              <ion-icon class="med-icon" name="med-comentario-questao"></ion-icon>
               <ion-label>Gabarito Comentado</ion-label>
             </ion-tab-button>
           </ion-tab-bar>

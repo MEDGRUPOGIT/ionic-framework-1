@@ -19,14 +19,14 @@ const Template = ({ color, neutral, dsName, iconLeft, iconRight, slot }) => {
         </ion-chip>
 
         <ion-chip .color=${color} .neutral=${neutral} ds-name=${dsName}>
-          <ion-icon name=${iconLeft}></ion-icon>
+          <ion-icon class="med-icon" name=${iconLeft}></ion-icon>
           <ion-label>${slot}</ion-label>
         </ion-chip>
 
         <ion-chip .color=${color} .neutral=${neutral} ds-name=${dsName}>
-          <ion-icon name=${iconLeft}></ion-icon>
+          <ion-icon class="med-icon" name=${iconLeft}></ion-icon>
           <ion-label>${slot}</ion-label>
-          <ion-icon name=${iconRight}></ion-icon>
+          <ion-icon class="med-icon" name=${iconRight}></ion-icon>
         </ion-chip>
         <!-- component -->
 

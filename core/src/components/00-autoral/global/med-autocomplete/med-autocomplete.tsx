@@ -13,19 +13,19 @@ export class MedAutocomplete {
       <Host from-stencil>
         <ul class="list">
           <li class="item">
-            <ion-icon name="med-medical-bag">ion-button</ion-icon>
+            <ion-icon class="med-icon" name="med-alerta">ion-button</ion-icon>
             Nefrologia
           </li>
           <li class="item">
-            <ion-icon name="med-medical-bag">ion-button</ion-icon>
+            <ion-icon class="med-icon" name="med-alerta">ion-button</ion-icon>
             Neurocirurgia
           </li>
           <li class="item">
-            <ion-icon name="med-medical-bag">ion-button</ion-icon>
+            <ion-icon class="med-icon" name="med-alerta">ion-button</ion-icon>
             Neurologia
           </li>
           <li class="item">
-            <ion-icon name="med-medical-bag">ion-button</ion-icon>
+            <ion-icon class="med-icon" name="med-alerta">ion-button</ion-icon>
             Nutrologia
           </li>
         </ul>

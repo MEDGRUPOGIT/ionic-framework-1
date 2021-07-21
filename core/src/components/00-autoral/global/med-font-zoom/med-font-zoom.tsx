@@ -66,11 +66,12 @@ export class MedFontZoom {
           value={this.fontSizeToValue(this.value)}
         >
           <ion-icon
+            class="med-icon"
             slot="start"
             size="small"
-            name="med-font-decrease"
+            name="med-fontmenor"
           ></ion-icon>
-          <ion-icon slot="end" name="med-font-increase"></ion-icon>
+          <ion-icon class="med-icon" slot="end" name="med-fontmaior"></ion-icon>
         </ion-range>
       </Host>
     );

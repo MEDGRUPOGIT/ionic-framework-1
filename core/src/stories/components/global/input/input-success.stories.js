@@ -13,7 +13,7 @@ const TemplateSuccess = ({ placeholder }) => {
 
         <!-- component -->
         <ion-input placeholder="${placeholder}" success>
-          <ion-icon name="med-check-circle"></ion-icon>
+          <ion-icon class="med-icon" name="med-check-circle"></ion-icon>
         </ion-input>
         <!-- component -->
 

@@ -23,7 +23,7 @@ const TemplateIconOnly = ({ color, disabled, size, platform, iconName }) => {
 
         <!-- component -->
         <ion-button ds-name="icon-only" .color=${color} ?disabled=${disabled} ds-size=${size}>
-          <ion-icon slot="icon-only" name=${iconName}></ion-icon>
+          <ion-icon class="med-icon" slot="icon-only" name=${iconName}></ion-icon>
         </ion-button>
         <!-- component -->
 

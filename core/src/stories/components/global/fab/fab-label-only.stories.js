@@ -18,12 +18,12 @@ const TemplateLabel = ({color, neutral}) => {
             <ion-label slot="label">Label</ion-label>
           </ion-fab-button>
           <ion-fab-list side="start">
-            <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
-            <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+            <ion-fab-button><ion-icon class="med-icon" name="logo-vimeo"></ion-icon></ion-fab-button>
+            <ion-fab-button><ion-icon class="med-icon" name="logo-vimeo"></ion-icon></ion-fab-button>
           </ion-fab-list>
           <ion-fab-list side="end">
-            <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
-            <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+            <ion-fab-button><ion-icon class="med-icon" name="logo-vimeo"></ion-icon></ion-fab-button>
+            <ion-fab-button><ion-icon class="med-icon" name="logo-vimeo"></ion-icon></ion-fab-button>
           </ion-fab-list>
         </ion-fab>
         <!-- component -->
