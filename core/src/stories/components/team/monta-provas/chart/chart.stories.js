@@ -55,12 +55,16 @@ const TemplateDefault = ({valores}) => {
         font-size: var(--med-font-size-nano);
         color: var(--med-color-neutral-dark-10);
         font-weight: var(--med-font-weight-bold);
+        display: flex;
+        justify-content: center;
+        line-height: var(--med-line-height-compressed);
       }
 
       .monta-provas-chart__number {
         font-weight: var(--med-font-weight-bold);
         font-size: var(--med-font-size-md);
         color: var(--med-color-neutral-10);
+        line-height: var(--med-line-height-compressed);
       }
 
       .med-context-menu__list {

@@ -31,7 +31,8 @@ export class MedChartLabel {
     const { color, neutral, } = this;
 
     return (
-      <Host from-stencil class={createColorClasses(color, {
+      <Host from-stencil
+        class={createColorClasses(color, {
           'med-chart-label': true,
         }, neutral)}
       >

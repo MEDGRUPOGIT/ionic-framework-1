@@ -139,11 +139,11 @@ export const parameters = {
       order: [
         'General', ['Welcome', 'Biblioteca', 'Arquitetura', 'Styleguide'],
         'Conhecimento', ['Metodologia BEM'],
-        'Sass', ['Variables', 'Functions', 'Mixins'],
-        'Tokens', ['Tokens', 'Cores', 'Tipografia', 'Espacamento', 'Complementares', 'Exemplo'],
+        'Components',
         'Enums',
+        'Tokens', ['Tokens', 'Cores', 'Tipografia', 'Espacamento', 'Complementares', 'Exemplo'],
+        'Sass', ['Variables', 'Functions', 'Mixins'],
         'Ionic 1',
-        'Components'
       ],
     },
   },
