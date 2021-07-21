@@ -21,7 +21,7 @@ const TemplateIcon = ({ color, neutral }) => {
   for (const item of medIcons) {
     itemTemplates.push(html`
       <li class="list__item">
-        <ion-icon class=${colorClass} name=${item}></ion-icon>
+        <ion-icon class="med-icon" class=${colorClass} name=${item}></ion-icon>
         <span class="list__span">${item}</span>
       </li>
     `);
