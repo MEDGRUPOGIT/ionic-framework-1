@@ -78,11 +78,11 @@ export class BackButton implements ComponentInterface, ButtonInterface {
 
     if (getIonMode(this) === 'ios') {
       // default ios back button icon
-      return config.get('backButtonIcon', 'chevron-back');
+      return config.get('backButtonIcon', 'med-esquerda');
     }
 
     // default md back button icon
-    return config.get('backButtonIcon', 'arrow-back-sharp');
+    return config.get('backButtonIcon', 'med-esquerda');
   }
 
   get backButtonText() {
