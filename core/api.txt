@@ -19,6 +19,29 @@ ion-action-sheet,event,ionActionSheetDidDismiss,OverlayEventDetail<any>,true
 ion-action-sheet,event,ionActionSheetDidPresent,void,true
 ion-action-sheet,event,ionActionSheetWillDismiss,OverlayEventDetail<any>,true
 ion-action-sheet,event,ionActionSheetWillPresent,void,true
+ion-action-sheet,css-prop,--backdrop-opacity
+ion-action-sheet,css-prop,--background
+ion-action-sheet,css-prop,--button-background
+ion-action-sheet,css-prop,--button-background-activated
+ion-action-sheet,css-prop,--button-background-activated-opacity
+ion-action-sheet,css-prop,--button-background-focused
+ion-action-sheet,css-prop,--button-background-focused-opacity
+ion-action-sheet,css-prop,--button-background-hover
+ion-action-sheet,css-prop,--button-background-hover-opacity
+ion-action-sheet,css-prop,--button-background-selected
+ion-action-sheet,css-prop,--button-background-selected-opacity
+ion-action-sheet,css-prop,--button-color
+ion-action-sheet,css-prop,--button-color-activated
+ion-action-sheet,css-prop,--button-color-focused
+ion-action-sheet,css-prop,--button-color-hover
+ion-action-sheet,css-prop,--button-color-selected
+ion-action-sheet,css-prop,--color
+ion-action-sheet,css-prop,--height
+ion-action-sheet,css-prop,--max-height
+ion-action-sheet,css-prop,--max-width
+ion-action-sheet,css-prop,--min-height
+ion-action-sheet,css-prop,--min-width
+ion-action-sheet,css-prop,--width
 
 ion-alert,scoped
 ion-alert,prop,animated,boolean,true,false,false
@@ -65,6 +88,38 @@ ion-back-button,prop,mode,"ios" | "md",undefined,false,false
 ion-back-button,prop,routerAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
 ion-back-button,prop,text,null | string | undefined,undefined,false,false
 ion-back-button,prop,type,"button" | "reset" | "submit",'button',false,false
+ion-back-button,css-prop,--background
+ion-back-button,css-prop,--background-focused
+ion-back-button,css-prop,--background-focused-opacity
+ion-back-button,css-prop,--background-hover
+ion-back-button,css-prop,--background-hover-opacity
+ion-back-button,css-prop,--border-radius
+ion-back-button,css-prop,--color
+ion-back-button,css-prop,--color-focused
+ion-back-button,css-prop,--color-hover
+ion-back-button,css-prop,--icon-font-size
+ion-back-button,css-prop,--icon-font-weight
+ion-back-button,css-prop,--icon-margin-bottom
+ion-back-button,css-prop,--icon-margin-end
+ion-back-button,css-prop,--icon-margin-start
+ion-back-button,css-prop,--icon-margin-top
+ion-back-button,css-prop,--icon-padding-bottom
+ion-back-button,css-prop,--icon-padding-end
+ion-back-button,css-prop,--icon-padding-start
+ion-back-button,css-prop,--icon-padding-top
+ion-back-button,css-prop,--margin-bottom
+ion-back-button,css-prop,--margin-end
+ion-back-button,css-prop,--margin-start
+ion-back-button,css-prop,--margin-top
+ion-back-button,css-prop,--min-height
+ion-back-button,css-prop,--min-width
+ion-back-button,css-prop,--opacity
+ion-back-button,css-prop,--padding-bottom
+ion-back-button,css-prop,--padding-end
+ion-back-button,css-prop,--padding-start
+ion-back-button,css-prop,--padding-top
+ion-back-button,css-prop,--ripple-color
+ion-back-button,css-prop,--transition
 ion-back-button,part,icon
 ion-back-button,part,native
 ion-back-button,part,text
@@ -333,6 +388,29 @@ ion-fab-button,prop,translucent,boolean,false,false,false
 ion-fab-button,prop,type,"button" | "reset" | "submit",'button',false,false
 ion-fab-button,event,ionBlur,void,true
 ion-fab-button,event,ionFocus,void,true
+ion-fab-button,css-prop,--background
+ion-fab-button,css-prop,--background-activated
+ion-fab-button,css-prop,--background-activated-opacity
+ion-fab-button,css-prop,--background-focused
+ion-fab-button,css-prop,--background-focused-opacity
+ion-fab-button,css-prop,--background-hover
+ion-fab-button,css-prop,--background-hover-opacity
+ion-fab-button,css-prop,--border-color
+ion-fab-button,css-prop,--border-radius
+ion-fab-button,css-prop,--border-style
+ion-fab-button,css-prop,--border-width
+ion-fab-button,css-prop,--box-shadow
+ion-fab-button,css-prop,--close-icon-font-size
+ion-fab-button,css-prop,--color
+ion-fab-button,css-prop,--color-activated
+ion-fab-button,css-prop,--color-focused
+ion-fab-button,css-prop,--color-hover
+ion-fab-button,css-prop,--padding-bottom
+ion-fab-button,css-prop,--padding-end
+ion-fab-button,css-prop,--padding-start
+ion-fab-button,css-prop,--padding-top
+ion-fab-button,css-prop,--ripple-color
+ion-fab-button,css-prop,--transition
 ion-fab-button,part,close-icon
 ion-fab-button,part,native
 
@@ -445,6 +523,41 @@ ion-item,prop,routerAnimation,((baseEl: any, opts?: any) => Animation) | undefin
 ion-item,prop,routerDirection,"back" | "forward" | "root",'forward',false,false
 ion-item,prop,target,string | undefined,undefined,false,false
 ion-item,prop,type,"button" | "reset" | "submit",'button',false,false
+ion-item,css-prop,--background
+ion-item,css-prop,--background-activated
+ion-item,css-prop,--background-activated-opacity
+ion-item,css-prop,--background-focused
+ion-item,css-prop,--background-focused-opacity
+ion-item,css-prop,--background-hover
+ion-item,css-prop,--background-hover-opacity
+ion-item,css-prop,--border-color
+ion-item,css-prop,--border-radius
+ion-item,css-prop,--border-style
+ion-item,css-prop,--border-width
+ion-item,css-prop,--color
+ion-item,css-prop,--color-activated
+ion-item,css-prop,--color-focused
+ion-item,css-prop,--color-hover
+ion-item,css-prop,--detail-icon-color
+ion-item,css-prop,--detail-icon-font-size
+ion-item,css-prop,--detail-icon-opacity
+ion-item,css-prop,--highlight-color-focused
+ion-item,css-prop,--highlight-color-invalid
+ion-item,css-prop,--highlight-color-valid
+ion-item,css-prop,--highlight-height
+ion-item,css-prop,--inner-border-width
+ion-item,css-prop,--inner-box-shadow
+ion-item,css-prop,--inner-padding-bottom
+ion-item,css-prop,--inner-padding-end
+ion-item,css-prop,--inner-padding-start
+ion-item,css-prop,--inner-padding-top
+ion-item,css-prop,--min-height
+ion-item,css-prop,--padding-bottom
+ion-item,css-prop,--padding-end
+ion-item,css-prop,--padding-start
+ion-item,css-prop,--padding-top
+ion-item,css-prop,--ripple-color
+ion-item,css-prop,--transition
 ion-item,part,detail-icon
 ion-item,part,native
 
@@ -582,6 +695,19 @@ ion-menu-button,prop,disabled,boolean,false,false,false
 ion-menu-button,prop,menu,string | undefined,undefined,false,false
 ion-menu-button,prop,mode,"ios" | "md",undefined,false,false
 ion-menu-button,prop,type,"button" | "reset" | "submit",'button',false,false
+ion-menu-button,css-prop,--background
+ion-menu-button,css-prop,--background-focused
+ion-menu-button,css-prop,--background-focused-opacity
+ion-menu-button,css-prop,--background-hover
+ion-menu-button,css-prop,--background-hover-opacity
+ion-menu-button,css-prop,--border-radius
+ion-menu-button,css-prop,--color
+ion-menu-button,css-prop,--color-focused
+ion-menu-button,css-prop,--color-hover
+ion-menu-button,css-prop,--padding-bottom
+ion-menu-button,css-prop,--padding-end
+ion-menu-button,css-prop,--padding-start
+ion-menu-button,css-prop,--padding-top
 ion-menu-button,part,icon
 ion-menu-button,part,native
 
@@ -889,6 +1015,17 @@ ion-searchbar,event,ionChange,SearchbarChangeEventDetail,true
 ion-searchbar,event,ionClear,void,true
 ion-searchbar,event,ionFocus,void,true
 ion-searchbar,event,ionInput,KeyboardEvent,true
+ion-searchbar,css-prop,--background
+ion-searchbar,css-prop,--border-radius
+ion-searchbar,css-prop,--box-shadow
+ion-searchbar,css-prop,--cancel-button-color
+ion-searchbar,css-prop,--clear-button-color
+ion-searchbar,css-prop,--color
+ion-searchbar,css-prop,--icon-color
+ion-searchbar,css-prop,--placeholder-color
+ion-searchbar,css-prop,--placeholder-font-style
+ion-searchbar,css-prop,--placeholder-font-weight
+ion-searchbar,css-prop,--placeholder-opacity
 
 ion-segment,shadow
 ion-segment,prop,color,string | undefined,undefined,false,false
@@ -1159,6 +1296,23 @@ ion-toast,event,ionToastDidDismiss,OverlayEventDetail<any>,true
 ion-toast,event,ionToastDidPresent,void,true
 ion-toast,event,ionToastWillDismiss,OverlayEventDetail<any>,true
 ion-toast,event,ionToastWillPresent,void,true
+ion-toast,css-prop,--background
+ion-toast,css-prop,--border-color
+ion-toast,css-prop,--border-radius
+ion-toast,css-prop,--border-style
+ion-toast,css-prop,--border-width
+ion-toast,css-prop,--box-shadow
+ion-toast,css-prop,--button-color
+ion-toast,css-prop,--color
+ion-toast,css-prop,--end
+ion-toast,css-prop,--height
+ion-toast,css-prop,--max-height
+ion-toast,css-prop,--max-width
+ion-toast,css-prop,--min-height
+ion-toast,css-prop,--min-width
+ion-toast,css-prop,--start
+ion-toast,css-prop,--white-space
+ion-toast,css-prop,--width
 ion-toast,part,button
 ion-toast,part,container
 ion-toast,part,header
