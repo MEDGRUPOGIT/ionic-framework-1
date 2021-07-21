@@ -104,7 +104,7 @@ const TemplateDefault = ({valores}) => {
       <med-header>
         <med-navbar slot="navbar">
           <ion-button slot="left" ds-name="icon-only">
-            <ion-icon slot="icon-only" name="med-chevron-left"></ion-icon>
+            <ion-icon class="med-icon" slot="icon-only" name="med-chevron-left"></ion-icon>
           </ion-button>
 
           <span slot="title">Monta Provas</span>
@@ -147,7 +147,7 @@ const TemplateDefault = ({valores}) => {
                   <h4 class="med-accordion-header__heading">Nome da Prova</h4>
 
                   <ion-button class="monta-provas-accordion__button" ds-name="icon-only">
-                    <ion-icon name="med-context-menu"></ion-icon>
+                    <ion-icon class="med-icon" name="med-context-menu"></ion-icon>
                   </ion-button>
                 </div>
 
@@ -169,7 +169,7 @@ const TemplateDefault = ({valores}) => {
                   <h4 class="med-accordion-header__heading">Nome da Prova</h4>
 
                   <ion-button class="monta-provas-accordion__button" ds-name="icon-only">
-                    <ion-icon name="med-context-menu"></ion-icon>
+                    <ion-icon class="med-icon" name="med-context-menu"></ion-icon>
                   </ion-button>
                 </div>
 

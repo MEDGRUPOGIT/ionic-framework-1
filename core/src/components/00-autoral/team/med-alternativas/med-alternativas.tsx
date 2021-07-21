@@ -84,7 +84,7 @@ export class MedAlternativas implements MedAlternativasInterface {
                     <div class='overlay'>
                       <div class="overlay__content">
                         <p class="overlay__label">clique para ampliar</p>
-                        <ion-icon name="med-expand"></ion-icon>
+                        <ion-icon class="med-icon" name="med-expand"></ion-icon>
                       </div>
                     </div>
                   </div>

@@ -18,10 +18,10 @@ const TemplateDisabled = ({ color, size, slot, iconName }) => {
           <ion-button ds-name="secondary" .color=${color} disabled ds-size=${size}>${slot}</ion-button>
           <ion-button ds-name="tertiary" .color=${color} disabled ds-size=${size}>${slot}</ion-button>
           <ion-button ds-name="icon-only" .color=${color} disabled ds-size=${size}>
-            <ion-icon slot="icon-only" name=${iconName}></ion-icon>
+            <ion-icon class="med-icon" slot="icon-only" name=${iconName}></ion-icon>
           </ion-button>
           <ion-button ds-name="icon-label" .color=${color} disabled ds-size=${size}>
-            <ion-icon name=${iconName} slot="start"></ion-icon>
+            <ion-icon class="med-icon" name=${iconName} slot="start"></ion-icon>
             ${slot}
           </ion-button>
         <!-- component -->

@@ -21,7 +21,7 @@ const TemplateToolbar = ({ platform }) => {
 
       <med-navbar slot="navbar">
         <ion-button ds-name="icon-label" slot="left">
-          <ion-icon name="med-chevron-left"></ion-icon>
+          <ion-icon class="med-icon" name="med-chevron-left"></ion-icon>
           voltar
         </ion-button>
 
@@ -29,32 +29,32 @@ const TemplateToolbar = ({ platform }) => {
         <span slot="subtitle">subheader</span>
 
         <ion-button ds-name="icon-only" slot="right">
-          <ion-icon slot="icon-only" name="med-star-filled"></ion-icon>
+          <ion-icon class="med-icon" slot="icon-only" name="med-star-filled"></ion-icon>
         </ion-button>
       </med-navbar>
 
       <med-toolbar slot="toolbar">
         <ion-button ds-name="icon-only" slot="start">
-          <ion-icon slot="icon-only" name="med-arrow-left-circle"></ion-icon>
+          <ion-icon class="med-icon" slot="icon-only" name="med-arrow-left-circle"></ion-icon>
         </ion-button>
         <ul>
           <li>
             <ion-button ds-name="icon-only">
-              <ion-icon slot="icon-only" name="med-star-outline"></ion-icon>
+              <ion-icon class="med-icon" slot="icon-only" name="med-star-outline"></ion-icon>
             </ion-button>
             <ion-button ds-name="icon-only">
-              <ion-icon slot="icon-only" name="med-eye-show-line"></ion-icon>
+              <ion-icon class="med-icon" slot="icon-only" name="med-eye-show-line"></ion-icon>
             </ion-button>
             <ion-button ds-name="icon-only">
-              <ion-icon slot="icon-only" name="med-notes"></ion-icon>
+              <ion-icon class="med-icon" slot="icon-only" name="med-notes"></ion-icon>
             </ion-button>
             <ion-button ds-name="icon-only">
-              <ion-icon slot="icon-only" name="med-font-size"></ion-icon>
+              <ion-icon class="med-icon" slot="icon-only" name="med-font-size"></ion-icon>
             </ion-button>
           </li>
         </ul>
         <ion-button ds-name="icon-only" slot="end">
-          <ion-icon slot="icon-only" name="med-arrow-right-circle"></ion-icon>
+          <ion-icon class="med-icon" slot="icon-only" name="med-arrow-right-circle"></ion-icon>
         </ion-button>
       </med-toolbar>
 

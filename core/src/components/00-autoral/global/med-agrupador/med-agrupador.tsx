@@ -24,7 +24,7 @@ export class MedAgrupador {
       <Host from-stencil class={createColorClasses(color, {'toggle': this.toggle})} onClick={this.onClick}>
         <div class="toggle__expandir">Expandir a lista</div>
         <div class="toggle__ocultar">Ocultar a lista</div>
-        <ion-icon class="toggle__img" name="med-arrow-down"></ion-icon>
+        <ion-icon class="med-icon toggle__img" name="med-baixo"></ion-icon>
       </Host>
     );
   }

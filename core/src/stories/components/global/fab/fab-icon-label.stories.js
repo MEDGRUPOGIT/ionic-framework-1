@@ -19,7 +19,7 @@ const TemplateIconLabel = ({color, neutral}) => {
         <!-- component -->
         <ion-fab vertical="center" horizontal="center" slot="fixed">
           <ion-fab-button .color=${color} .neutral=${neutral} ds-size="lg" ds-name="icon-label">
-            <ion-icon name="add"></ion-icon>
+            <ion-icon class="med-icon" name="add"></ion-icon>
             <ion-label slot="label">Label</ion-label>
           </ion-fab-button>
         </ion-fab>

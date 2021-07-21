@@ -21,7 +21,7 @@ const TemplateNavbar = ({ platform }) => {
 
         <med-navbar slot="navbar">
           <ion-button ds-name="icon-label" slot="left">
-            <ion-icon name="med-chevron-left"></ion-icon>
+            <ion-icon class="med-icon" name="med-chevron-left"></ion-icon>
             voltar
           </ion-button>
 
@@ -29,7 +29,7 @@ const TemplateNavbar = ({ platform }) => {
           <span slot="subtitle">subheader</span>
 
           <ion-button ds-name="icon-only" slot="right">
-            <ion-icon slot="icon-only" name="med-star-filled"></ion-icon>
+            <ion-icon class="med-icon" slot="icon-only" name="med-star-filled"></ion-icon>
           </ion-button>
         </med-navbar>
 

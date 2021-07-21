@@ -20,7 +20,7 @@ export class MedOffline {
           <med-header>
             <med-navbar ds-name="transparent" slot="navbar">
               <ion-button slot="left" ds-name="icon-only" onClick={() => this.onClick()}>
-                <ion-icon slot="icon-only" name="med-chevron-left"></ion-icon>
+                <ion-icon class="med-icon" slot="icon-only" name="med-esquerda"></ion-icon>
               </ion-button>
             </med-navbar>
           </med-header>

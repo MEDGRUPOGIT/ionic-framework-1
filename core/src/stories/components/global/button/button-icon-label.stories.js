@@ -17,7 +17,7 @@ const TemplateIconlabel = ({ disabled, iconName, slot }) => {
         <h2>Slot start</h2>
         <ion-button ds-name="icon-label" ?disabled=${disabled}>
           ${slot}
-          <ion-icon name=${iconName} slot="start"></ion-icon>
+          <ion-icon class="med-icon" name=${iconName} slot="start"></ion-icon>
         </ion-button>
         <!-- component -->
 
@@ -26,7 +26,7 @@ const TemplateIconlabel = ({ disabled, iconName, slot }) => {
         <!-- component -->
         <h2>Slot end</h2>
         <ion-button ds-name="icon-label" ?disabled=${disabled}>
-          <ion-icon name=${iconName} slot="end"></ion-icon>
+          <ion-icon class="med-icon" name=${iconName} slot="end"></ion-icon>
           ${slot}
         </ion-button>
         <!-- component -->

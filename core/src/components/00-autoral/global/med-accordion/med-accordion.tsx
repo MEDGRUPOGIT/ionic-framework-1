@@ -76,13 +76,13 @@ export class MedAccordion {
         })}>
         <div class="med-accordion__header" onClick={this.onClick}>
           {icon === 'left' && <div class="med-accordion__icon-container med-accordion__icon-container--left">
-             <ion-icon class="med-accordion__icon" name="med-arrow-down"></ion-icon>
+             <ion-icon class="med-icon med-accordion__icon" name="med-baixo"></ion-icon>
           </div>}
 
           <slot name="header"></slot>
 
           {(!icon || icon === 'right') && <div class="med-accordion__icon-container med-accordion__icon-container--right">
-            <ion-icon class="med-accordion__icon" name="med-arrow-down"></ion-icon>
+            <ion-icon class="med-icon med-accordion__icon" name="med-baixo"></ion-icon>
           </div>}
         </div>
 

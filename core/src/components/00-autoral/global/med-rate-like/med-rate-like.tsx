@@ -26,13 +26,13 @@ export class MedRateLike {
           ${this.status === RateStatus.LIKE ? 'button--like' : ''}
           ${this.status ? 'button--disabled' : ''}`}
           onClick={() => this.onClick(RateStatus.LIKE)}>
-          <ion-icon name="med-like" class="rate"></ion-icon>
+          <ion-icon name="med-positivo" class="med-icon rate"></ion-icon>
         </button>
         <button class={`button
           ${this.status === RateStatus.DISLIKE ? 'button--dislike' : ''}
           ${this.status ? 'button--disabled' : ''}`}
           onClick={() => this.onClick(RateStatus.DISLIKE)}>
-          <ion-icon name="med-dislike" class="rate"></ion-icon>
+          <ion-icon name="med-negativo" class="med-icon rate" ></ion-icon>
         </button>
       </Host>
     );
