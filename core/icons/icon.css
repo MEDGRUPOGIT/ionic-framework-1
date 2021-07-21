@@ -4,15 +4,16 @@
   --ionicon-stroke-width: 2;
 
   font-size: 24px;
-  color: #fff;
+  fill: initial;
   stroke: #fff;
 }
 
-:host(.med-icon) .ionicon-stroke-width {
+:host(.med-icon) path {
+  stroke-width: var(--ionicon-stroke-width, 32px);
+  fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke: inherit;
-  fill: none;
 }
 
 :host(.med-icon.ion-color) {

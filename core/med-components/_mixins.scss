@@ -360,7 +360,7 @@
     $l: 95;
     $i: 1;
     @for $index from 1 through 10 {
-      $color: hsl($med-brand, 10, $l);
+      $color: hsl($med-brand, 10%, $l * 1%);
       --med-color-neutral-#{$i}: #{$color};
       --med-color-neutral-#{$i}-rgb: #{color-to-rgb-list($color)};
       $i: $index + 1;
@@ -369,7 +369,7 @@
   } @else {
     $l: 5;
     @for $index from 1 through 10 {
-      $color: hsl($med-brand, 10, $l);
+      $color: hsl($med-brand, 10%, $l * 1%);
       --med-color-neutral-#{$index}: #{$color};
       --med-color-neutral-#{$index}-rgb: #{color-to-rgb-list($color)};
       $l: $l + 10;
