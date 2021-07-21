@@ -40,7 +40,7 @@ export class MedChartRadial {
             this.valores.reverse().map((item: MedRadialItem, index: number) => {
               const subtotalIndex = this.valores.length - index - 1;
 
-              if (!item.ignoreBarra) {
+              if (!item.ignoreBarra && item.quantia !== 0) {
                 return <circle cx="18" cy="18" r="16"
                   class={{'size': true, [item.cor]: true}}
                   style={{
