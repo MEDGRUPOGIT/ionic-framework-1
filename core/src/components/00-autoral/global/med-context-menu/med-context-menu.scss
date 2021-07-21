@@ -24,11 +24,10 @@
       padding: $med-spacing-inset-sm;
       visibility: hidden;
       opacity: 0;
-      transition: opacity 300ms ease-out;
+      transition: opacity 300ms ease-in-out;
     }
 
     &__button {
-      color: var(--med-color-neutral-6);
       --font-size: 24px;
     }
 
@@ -36,23 +35,24 @@
       position: absolute;
       right: 8px;
       top: 9px;
-      color: var(--med-color-neutral-3);
       --font-size: 24px;
     }
 
     &__icon {
-      font-size: 24px;
-      stroke: var(--med-color-neutral-3);
+      stroke: var(--med-color-neutral-10);
     }
 
     &__inner-icon {
-      font-size: 24px;
       stroke: var(--med-color-neutral-3);
     }
   }
 }
 
-:host(.med-context-menu--show) .med-context-menu__content {
-  visibility: visible;
-  opacity: 1;
+:host(.med-context-menu--show) {
+  transition: opacity 300ms ease-in-out;
+
+  .med-context-menu__content {
+    visibility: visible;
+    opacity: 1;
+  }
 }

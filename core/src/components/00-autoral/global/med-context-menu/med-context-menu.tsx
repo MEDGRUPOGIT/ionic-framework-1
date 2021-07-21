@@ -19,17 +19,15 @@ export class MedContextMenu {
    */
  @Prop() color?: Color;
 
+ @Prop() show = false;
 
- @Prop() show = false
-
- @State() toggleState = false
+ @State() toggleState = false;
 
  @Method()
  async toggle() {
-   if(this.show){
+   if (this.show){
     this.show = !this.show;
-   }
-   else{
+   } else{
     this.show = !this.show;
    }
  }
@@ -40,7 +38,7 @@ export class MedContextMenu {
  }
 
  private onStateChange = (event?:Event) => {
-  event?.preventDefault();
+  event?.stopPropagation();
   this.toggleState = !this.toggleState;
  }
   render() {
@@ -54,13 +52,13 @@ export class MedContextMenu {
           'med-context-menu--show': toggleState
         }, neutral)}
       >
-        <ion-button onClick={ (event) => {this.onStateChange(event)} } class="med-context-menu__button" ds-name="icon-only">
-          <ion-icon class="med-icon" name="med-context-menu"></ion-icon>
+        <ion-button onClick={(event) => {this.onStateChange(event)}} class="med-context-menu__button" ds-name="icon-only">
+          <ion-icon class="med-icon med-context-menu__icon" name="med-context-menu"></ion-icon>
         </ion-button>
 
         <div class="med-context-menu__content">
-          <ion-button  onClick={ (event) => {this.onStateChange(event)} } class="med-context-menu__inner-button" ds-name="icon-only">
-            <ion-icon class="med-icon" name="med-context-menu"></ion-icon>
+          <ion-button  onClick={(event) => {this.onStateChange(event)}} class="med-context-menu__inner-button" ds-name="icon-only">
+            <ion-icon class="med-icon med-context-menu__inner-icon" name="med-context-menu"></ion-icon>
           </ion-button>
 
           <slot></slot>

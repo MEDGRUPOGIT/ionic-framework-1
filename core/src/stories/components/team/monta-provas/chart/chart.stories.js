@@ -78,6 +78,7 @@ const TemplateDefault = ({valores}) => {
         display: flex;
         align-items: center;
         transition: color 300ms ease-out;
+        cursor: pointer;
       }
 
       .med-context-menu__item:hover {
