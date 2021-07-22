@@ -2,7 +2,7 @@ import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
 
 export default {
-  title: 'Components/Team/Alternativas',
+  title: 'Components/Team/Questões/Alternativas',
   decorators: [withDesign],
 };
 
@@ -45,7 +45,7 @@ Alternativas.parameters = {
     url: 'https://www.figma.com/file/zdbyAa3XpX3loOjJEaXc6E/Quest%C3%B5es?node-id=313%3A107',
   },
   actions: {
-    handles: ['medChange'],
+    handles: ['medChange','medClick'],
   },
 }
 Alternativas.argTypes = {

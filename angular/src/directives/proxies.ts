@@ -50,8 +50,8 @@ export class IonBackdrop {
 }
 export declare interface IonBadge extends Components.IonBadge {
 }
-@ProxyCmp({ inputs: ["color", "dsSize", "fill", "invert", "mode"] })
-@Component({ selector: "ion-badge", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "dsSize", "fill", "invert", "mode"] })
+@ProxyCmp({ inputs: ["color", "dsSize", "fill", "invert", "mode", "neutral"] })
+@Component({ selector: "ion-badge", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "dsSize", "fill", "invert", "mode", "neutral"] })
 export class IonBadge {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -883,8 +883,8 @@ export class IonToolbar {
 }
 export declare interface MedAccordion extends Components.MedAccordion {
 }
-@ProxyCmp({ inputs: ["collapsed", "color", "size"], "methods": ["toggle"] })
-@Component({ selector: "med-accordion", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "color", "size"] })
+@ProxyCmp({ inputs: ["collapsed", "color", "icon", "size"], "methods": ["toggle"] })
+@Component({ selector: "med-accordion", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "color", "icon", "size"] })
 export class MedAccordion {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -909,12 +909,13 @@ export declare interface MedAlternativas extends Components.MedAlternativas {
 @Component({ selector: "med-alternativas", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alternativaSelecionada", "alternativas", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "mostraResposta", "respostaCorreta"] })
 export class MedAlternativas {
   medChange!: EventEmitter<CustomEvent>;
+  medClick!: EventEmitter<CustomEvent>;
   medGalleryRequest!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ["medChange", "medGalleryRequest"]);
+    proxyOutputs(this, this.el, ["medChange", "medClick", "medGalleryRequest"]);
   }
 }
 export declare interface MedAutocomplete extends Components.MedAutocomplete {
@@ -957,6 +958,39 @@ export declare interface MedCartaoRespostaLista extends Components.MedCartaoResp
 }
 @Component({ selector: "med-cartao-resposta-lista", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
 export class MedCartaoRespostaLista {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface MedChartDonut extends Components.MedChartDonut {
+}
+@ProxyCmp({ inputs: ["valores"] })
+@Component({ selector: "med-chart-donut", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["valores"] })
+export class MedChartDonut {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface MedChartLabel extends Components.MedChartLabel {
+}
+@ProxyCmp({ inputs: ["valores"] })
+@Component({ selector: "med-chart-label", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["valores"] })
+export class MedChartLabel {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface MedDivider extends Components.MedDivider {
+}
+@ProxyCmp({ inputs: ["text"] })
+@Component({ selector: "med-divider", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["text"] })
+export class MedDivider {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();

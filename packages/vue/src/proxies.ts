@@ -23,6 +23,7 @@ export const IonBadge = /*@__PURE__*/ defineContainer<JSX.IonBadge>('ion-badge',
   'dsSize',
   'fill',
   'invert',
+  'neutral',
   'color'
 ]);
 
@@ -811,6 +812,7 @@ export const IonVirtualScroll = /*@__PURE__*/ defineContainer<JSX.IonVirtualScro
 export const MedAccordion = /*@__PURE__*/ defineContainer<JSX.MedAccordion>('med-accordion', [
   'color',
   'size',
+  'icon',
   'collapsed'
 ]);
 
@@ -830,6 +832,7 @@ export const MedAlternativas = /*@__PURE__*/ defineContainer<JSX.MedAlternativas
   'mostraResposta',
   'alternativaSelecionada',
   'medChange',
+  'medClick',
   'medGalleryRequest'
 ]);
 
@@ -854,6 +857,21 @@ export const MedCartaoRespostaItem = /*@__PURE__*/ defineContainer<JSX.MedCartao
 
 
 export const MedCartaoRespostaLista = /*@__PURE__*/ defineContainer<JSX.MedCartaoRespostaLista>('med-cartao-resposta-lista');
+
+
+export const MedChartDonut = /*@__PURE__*/ defineContainer<JSX.MedChartDonut>('med-chart-donut', [
+  'valores'
+]);
+
+
+export const MedChartLabel = /*@__PURE__*/ defineContainer<JSX.MedChartLabel>('med-chart-label', [
+  'valores'
+]);
+
+
+export const MedDivider = /*@__PURE__*/ defineContainer<JSX.MedDivider>('med-divider', [
+  'text'
+]);
 
 
 export const MedEnunciado = /*@__PURE__*/ defineContainer<JSX.MedEnunciado>('med-enunciado', [

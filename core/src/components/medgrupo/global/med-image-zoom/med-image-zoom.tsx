@@ -5,7 +5,7 @@ import { modalController } from '../../../../utils/overlays';
 @Component({
   tag: 'med-image-zoom',
   styleUrl: 'med-image-zoom.scss',
-  shadow: true,
+  scoped: true
 })
 export class MedImageZoom {
   @Prop({ mutable: true, reflect: true }) imagens: MedImageZoomItemInterface[] | any = []
@@ -37,9 +37,9 @@ export class MedImageZoom {
   render() {
     return (
       <Host from-stencil>
-        <med-header class="header">
+        <med-header class="zoom-header">
           <med-navbar slot="navbar" ds-name="transparent" ds-theme="light">
-            <span slot="title">{this.titulo}</span>
+            <span slot="title" innerHTML={this.titulo}></span>
 
             <ion-button ds-name="icon-only" slot="right" onClick={() => this.dismiss()}>
               <ion-icon slot="icon-only" name="med-close"></ion-icon>
@@ -47,30 +47,32 @@ export class MedImageZoom {
           </med-navbar>
         </med-header>
 
-        <ion-content class="content">
+        <ion-content class="zoom-content">
           <ion-slides
             ref={(el) => { this.slider = el as any; (el as any).options = this.sliderOpts; }}
             pager={this.imagens && this.imagens.length > 1}>
             {this.imagens.map((img: any) =>
               <ion-slide>
-                <span class="marcaAguaSuperior">{this.marcaAguaSuperior}</span>
+                <span class="marca-agua-superior">{this.marcaAguaSuperior}</span>
                 <div class="swiper-zoom-container">
-                  <img src={img?.src} />
-                  <p class="legenda">{img?.legenda}</p>
+                  <img class="zoom-imagem" src={img?.src} />
+                  <div class="zoom-legenda-container">
+                    <div class="zoom-legenda" innerHTML={img?.legenda}></div>
+                  </div>
                 </div>
               </ion-slide>
             )}
           </ion-slides>
-          <span class="marcaAguaInferior">{this.marcaAguaInferior}</span>
+          <span class="marca-agua-inferior">{this.marcaAguaInferior}</span>
         </ion-content>
-        <div class="button-container">
-          <button class="button button--in" onClick={() => this.zoom(true)}>
+        <div class="zoom-button-container">
+          <button class="zoom-button" onClick={() => this.zoom(true)}>
             <ion-icon name="med-plus"></ion-icon>
           </button>
-          <button class="button button--out" onClick={() => this.zoom(false)}>
+          <button class="zoom-button" onClick={() => this.zoom(false)}>
             <ion-icon name="med-minus"></ion-icon>
           </button>
-          <button class="button button--close" onClick={() => this.dismiss()}>
+          <button class="zoom-button zoom-button--close" onClick={() => this.dismiss()}>
             <ion-icon name="med-close"></ion-icon>
           </button>
         </div>
