@@ -7,74 +7,58 @@ import { Meta } from "@storybook/addon-docs/blocks";
 ## Markup
 
 ```
-<med-accordion class="monta-provas-accordion" icon="left">
-  <h4 class="monta-provas-accordion__header" slot="header">Nome da Prova</h4>
-
-  <div class="monta-provas-chart" slot="content">
-
-    <med-chart-radial>
-      <div class="monta-provas-chart__total">
-        <span class="monta-provas-chart__label">Total de</span>
-        <span class="monta-provas-chart__number">100</span>
-        <span class="monta-provas-chart__label">Questões</span>
-      </div>
-    </med-chart-radial>
-
-    <med-chart-label></med-chart-label>
-
+<ion-footer class="monta-provas-footer">
+  <div class="monta-provas-footer__container">
+    <div class="monta-provas-footer__col monta-provas-footer__col--left">
+      <p class="monta-provas-footer__auxiliar">seu filtro tem</p>
+      <p class="monta-provas-footer__number">224.123</p>
+      <p class="monta-provas-footer__auxiliar">questões</p>
+    </div>
+    <div class="monta-provas-footer__col monta-provas-footer__col--right">
+      <ion-button ds-name="primary" ds-size="sm">filtrar</ion-button>
+    </div>
   </div>
-</med-accordion>
+</ion-footer>
 ```
 
 ## SCSS
 
 ```
-.monta-provas-accordion {
-  &__header {
+.monta-provas-footer {
+  background: var(--med-color-neutral-2);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    padding: var(--med-spacing-inset-sm);
+    max-width: 1220px;
+    margin: 0 auto;
+  }
+
+  &__col {
+    &--left {
+      flex: 1;
+      padding-right: var(--med-spacing-inline-base);
+    }
+  }
+
+  &__auxiliar {
+    font-size: var(--med-font-size-nano);
+    font-weight: var(--med-font-weight-regular);
+    line-height; var(--med-line-height-compressed);
+    color: var(--med-color-neutral-10);
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  &__number {
     font-size: var(--med-font-size-xs);
     font-weight: var(--med-font-weight-semibold);
-    line-height: var(--med-line-height-default);
-    color: var(--med-color-neutral-10);
+    line-height; var(--med-line-height-compressed);
+    color: var(--med-color-brand-4);
+    text-transform: uppercase;
     margin: 0;
-    padding; 0;
-    width: 100%;
-  }
-}
-
-.monta-provas-chart {
-  background: var(--med-color-neutral-2);
-  padding: var(--med-spacing-stretch-md);
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  max-width: 400px;
-  margin: 0 auto;
-
-  &__total {
-    position: absolute;
-    display: grid;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    line-height: var(--med-line-height-compressed);
-  }
-
-  &__label {
-    font-size: var(--med-font-size-nano);
-    color: var(--med-color-neutral-dark-10);
-    font-weight: var(--med-font-weight-bold);
-  }
-
-  &__number {
-    font-weight: var(--med-font-weight-bold);
-    font-size: var(--med-font-size-md);
-    color: var(--med-color-neutral-light-prime);
-  }
-
-  &__number {
-    font-weight: var(--med-font-weight-bold);
-    font-size: var(--med-font-size-md);
-    color: var(--med-color-neutral-light-prime);
+    padding: var(--med-spacing-stack-nano) 0;
   }
 }
 ```

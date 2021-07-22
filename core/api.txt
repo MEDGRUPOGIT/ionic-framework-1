@@ -136,13 +136,6 @@ ion-badge,prop,dsName,"secondary" | undefined,undefined,false,false
 ion-badge,prop,dsSize,"lg" | "md" | "sm" | "xs" | undefined,undefined,false,false
 ion-badge,prop,mode,"ios" | "md",undefined,false,false
 ion-badge,prop,neutral,string | undefined,undefined,false,false
-ion-badge,css-prop,--background
-ion-badge,css-prop,--border-color
-ion-badge,css-prop,--color
-ion-badge,css-prop,--padding-bottom
-ion-badge,css-prop,--padding-end
-ion-badge,css-prop,--padding-start
-ion-badge,css-prop,--padding-top
 
 ion-button,shadow
 ion-button,prop,buttonType,string,'button',false,false
@@ -1481,7 +1474,3 @@ med-tooltip,prop,buttonLeft,{ label: string; icon: string; },undefined,true,fals
 med-tooltip,prop,buttonRight,{ label: string; icon: string; },undefined,true,false
 med-tooltip,prop,content,string,undefined,true,true
 med-tooltip,prop,header,string,undefined,true,true
-
-monta-provas-plusminus,shadow
-monta-provas-plusminus,prop,dsSize,"xl" | undefined,undefined,false,false
-monta-provas-plusminus,event,medChange,PlusMinusStatus.MINUS | PlusMinusStatus.PLUS,true
