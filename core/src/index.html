@@ -131,145 +131,29 @@
   <body class="dark-mode">
     <ion-app>
 
-      <med-header>
-        <med-navbar slot="navbar">
-          <ion-button slot="left" ds-name="icon-only">
-            <ion-icon slot="icon-only" name="med-chevron-left"></ion-icon>
-          </ion-button>
-
-          <span slot="title">Monta Provas</span>
-        </med-navbar>
-        <med-toolbar class="med-toolbar" neutral="1" slot="toolbar">
-          <ion-searchbar class="ion-searchbar" show-clear-button="never" show-cancel-button="focus" cancel-button-text="Cancelar" mode="ios" search-icon="med-search"></ion-searchbar>
-        </med-toolbar>
-      </med-header>
-
-      <ion-content>
-
-        <ion-grid class="monta-provas-container">
-          <ion-row>
-            <ion-col>
-
-              <med-divider class="heading" text="Minhas Provas"></med-divider>
-
-              <med-accordion class="monta-provas-accordion" icon="left">
-                <div class="med-accordion-header" slot="header">
-                  <h4 class="med-accordion-header__heading">Nome da Prova</h4>
-
-                  <med-context-menu class="med-context-menu">
-                    <ul class="med-context-menu__list">
-                      <li class="med-context-menu__item">
-                        <ion-icon class="med-icon med-context-menu__icon" name="med-filtro"></ion-icon>
-                        <span>Ver filtro selecionado</span>
-                      </li>
-                      <li class="med-context-menu__item">
-                        <ion-icon class="med-icon med-context-menu__icon" name="med-context-menu"></ion-icon>
-                        <span>Renomear Prova</span>
-                      </li>
-                      <li class="med-context-menu__item">
-                        <ion-icon class="med-icon med-context-menu__icon" name="med-context-menu"></ion-icon>
-                        <span>Excluir Prova</span>
-                      </li>
-                    </ul>
-                    <p class="med-context-menu__info">Criada em 30/12/2020</p>
-                  </med-context-menu>
-                </div>
-
-                <div class="monta-provas-chart" slot="content">
-                  <med-chart-radial class="monta-provas-chart__radial">
-                    <div class="monta-provas-chart__total">
-                      <span class="monta-provas-chart__label">Total de</span>
-                      <span class="monta-provas-chart__number">100</span>
-                      <span class="monta-provas-chart__label">Questões</span>
-                    </div>
-                  </med-chart-radial>
-
-                  <med-chart-label class="monta-provas-chart__label"></med-chart-label>
-                </div>
-              </med-accordion>
-
-              <med-accordion class="monta-provas-accordion" icon="left">
-                <div class="med-accordion-header" slot="header">
-                  <h4 class="med-accordion-header__heading">Nome da Prova</h4>
-
-                  <ion-button class="monta-provas-accordion__button" ds-name="icon-only">
-                    <ion-icon name="med-context-menu"></ion-icon>
-                  </ion-button>
-                </div>
-
-                <div class="monta-provas-chart" slot="content">
-                  <med-chart-radial class="monta-provas-chart__radial">
-                    <div class="monta-provas-chart__total">
-                      <span class="monta-provas-chart__label">Total de</span>
-                      <span class="monta-provas-chart__number">100</span>
-                      <span class="monta-provas-chart__label">Questões</span>
-                    </div>
-                  </med-chart-radial>
-
-                  <med-chart-label class="monta-provas-chart__label"></med-chart-label>
-                </div>
-              </med-accordion>
-
-              <med-accordion class="monta-provas-accordion" icon="left">
-                <div class="med-accordion-header" slot="header">
-                  <h4 class="med-accordion-header__heading">Nome da Prova</h4>
-
-                  <ion-button class="monta-provas-accordion__button" ds-name="icon-only">
-                    <ion-icon name="med-context-menu"></ion-icon>
-                  </ion-button>
-                </div>
-
-                <div class="monta-provas-chart" slot="content">
-                  <med-chart-radial class="monta-provas-chart__radial">
-                    <div class="monta-provas-chart__total">
-                      <span class="monta-provas-chart__label">Total de</span>
-                      <span class="monta-provas-chart__number">100</span>
-                      <span class="monta-provas-chart__label">Questões</span>
-                    </div>
-                  </med-chart-radial>
-
-                  <med-chart-label class="monta-provas-chart__label"></med-chart-label>
-                </div>
-              </med-accordion>
-
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-
-        <ion-button class="monta-provas__button" dsName="primary">montar prova</ion-button>
-      </ion-content>
+      <med-context-menu class="med-context-menu">
+        <ul class="med-context-menu__list">
+          <li class="med-context-menu__item">
+            <ion-icon class="med-icon med-context-menu__icon" name="med-filtro"></ion-icon>
+            <span>Ver filtro selecionado</span>
+          </li>
+          <li class="med-context-menu__item">
+            <ion-icon class="med-icon med-context-menu__icon" name="med-editar"></ion-icon>
+            <span>Renomear Prova</span>
+          </li>
+          <li class="med-context-menu__item">
+            <ion-icon class="med-icon med-context-menu__icon" name="med-lixeira"></ion-icon>
+            <span>Excluir Prova</span>
+          </li>
+        </ul>
+        <p class="med-context-menu__info">Criada em 30/12/2020</p>
+      </med-context-menu>
+    </div>
 
     </ion-app>
 
     <script>
-      const data = [
-        {
-          cor: 'ion-color-success',
-          label: 'Acertos',
-          quantia: 32,
-          ignoreBarra: false,
-        },
-        {
-          cor: 'ion-color-caution',
-          label: 'certos',
-          quantia: 15,
-          ignoreBarra: false,
-        },
-        {
-          cor: 'ion-color-warning ',
-          label: 'acertos',
-          quantia: 10,
-          ignoreBarra: false,
-        },
-        {
-          cor: 'gray',
-          label: 'restantes',
-          quantia: 43,
-          ignoreBarra: true,
-        }
-      ];
 
-      document.querySelector('med-chart-label').valores = data;
     </script>
   </body>
 </html>

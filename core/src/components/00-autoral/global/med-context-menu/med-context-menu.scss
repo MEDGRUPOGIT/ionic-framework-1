@@ -22,8 +22,8 @@
       box-shadow: $med-shadow-level-4;
       border-radius: $med-border-radius-nano;
       padding: $med-spacing-inset-sm;
-      visibility: hidden;
-      opacity: 0;
+      visibility: visible;
+      opacity: 1;
       transition: opacity 300ms ease-in-out;
     }
 
@@ -48,11 +48,10 @@
   }
 }
 
-:host(.med-context-menu--show) {
-  transition: opacity 300ms ease-in-out;
-
+:host(.med-context-menu--collapsed) {
   .med-context-menu__content {
-    visibility: visible;
-    opacity: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
   }
 }

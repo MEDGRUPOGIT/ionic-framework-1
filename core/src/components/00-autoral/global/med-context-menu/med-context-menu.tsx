@@ -12,58 +12,62 @@ export class MedContextMenu {
   /**
    * Define a cor neutra do componente.
    */
- @Prop() neutral?: Neutral;
+  @Prop() neutral?: Neutral;
 
- /**
-   * Define a cor do componente.
-   */
- @Prop() color?: Color;
+  /**
+     * Define a cor do componente.
+     */
+  @Prop() color?: Color;
 
- @Prop() show = false;
+  @Prop({ reflect: true, mutable: true }) collapsed = false;
 
- @State() toggleState = false;
+  @State() collapsedState = true;
 
- @Method()
- async toggle() {
-   if (this.show){
-    this.show = !this.show;
-   } else{
-    this.show = !this.show;
-   }
- }
+  @Method()
+  async toggle() {
+    this.expandContent();
+  }
 
- @Watch('show')
- toggleChanged() {
-   this.onStateChange();
- }
+  @Watch('collapsed')
+  collapsedChanged() {
+    this.expandContent();
+  }
 
- private onStateChange = (event?:Event) => {
-  event?.stopPropagation();
-  this.toggleState = !this.toggleState;
- }
+  private expandContent() {
+    if (this.collapsedState) {
+      this.collapsedState = !this.collapsedState;
+    } else {
+      this.collapsedState = !this.collapsedState;
+    }
+  }
+
+  private onClick = (event: Event) => {
+    event?.stopPropagation();
+    this.expandContent();
+  }
+
   render() {
-    const { color, neutral, toggleState } = this;
+    const { color, neutral, collapsedState: collapsed } = this;
 
     return (
       <Host
         from-stencil
         class={createColorClasses(color, {
           'med-context-menu': true,
-          'med-context-menu--show': toggleState
+          'med-context-menu--collapsed': collapsed
         }, neutral)}
       >
-        <ion-button onClick={(event) => {this.onStateChange(event)}} class="med-context-menu__button" ds-name="icon-only">
+        <ion-button onClick={(event) => {this.onClick(event)}} class="med-context-menu__button" ds-name="icon-only">
           <ion-icon class="med-icon med-context-menu__icon" name="med-context-menu"></ion-icon>
         </ion-button>
 
         <div class="med-context-menu__content">
-          <ion-button  onClick={(event) => {this.onStateChange(event)}} class="med-context-menu__inner-button" ds-name="icon-only">
+          <ion-button  onClick={(event) => {this.onClick(event)}} class="med-context-menu__inner-button" ds-name="icon-only">
             <ion-icon class="med-icon med-context-menu__inner-icon" name="med-context-menu"></ion-icon>
           </ion-button>
 
           <slot></slot>
         </div>
-
       </Host>
     );
   }
