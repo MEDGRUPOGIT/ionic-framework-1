@@ -1146,3 +1146,14 @@ export class MedTooltip {
     this.el = r.nativeElement;
   }
 }
+export declare interface MontaProvasPlusminus extends Components.MontaProvasPlusminus {
+}
+@ProxyCmp({ inputs: ["dsSize"] })
+@Component({ selector: "monta-provas-plusminus", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsSize"] })
+export class MontaProvasPlusminus {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}

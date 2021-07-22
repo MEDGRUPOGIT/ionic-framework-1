@@ -45,7 +45,7 @@ export class Badge implements ComponentInterface {
 
     return (
       <Host
-        fron-stencil
+        from-stencil
         class={createColorClasses(color, {
           [mode]: true,
           'med-badge': true,

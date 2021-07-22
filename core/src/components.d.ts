@@ -2858,6 +2858,9 @@ export namespace Components {
         "content": string;
         "header": string;
     }
+    interface MontaProvasPlusminus {
+        "dsSize"?: 'xl';
+    }
 }
 declare global {
     interface HTMLIonActionSheetElement extends Components.IonActionSheet, HTMLStencilElement {
@@ -3520,6 +3523,12 @@ declare global {
         prototype: HTMLMedTooltipElement;
         new (): HTMLMedTooltipElement;
     };
+    interface HTMLMontaProvasPlusminusElement extends Components.MontaProvasPlusminus, HTMLStencilElement {
+    }
+    var HTMLMontaProvasPlusminusElement: {
+        prototype: HTMLMontaProvasPlusminusElement;
+        new (): HTMLMontaProvasPlusminusElement;
+    };
     interface HTMLElementTagNameMap {
         "ion-action-sheet": HTMLIonActionSheetElement;
         "ion-alert": HTMLIonAlertElement;
@@ -3631,6 +3640,7 @@ declare global {
         "med-rate-like": HTMLMedRateLikeElement;
         "med-toolbar": HTMLMedToolbarElement;
         "med-tooltip": HTMLMedTooltipElement;
+        "monta-provas-plusminus": HTMLMontaProvasPlusminusElement;
     }
 }
 declare namespace LocalJSX {
@@ -6510,6 +6520,9 @@ declare namespace LocalJSX {
         "content": string;
         "header": string;
     }
+    interface MontaProvasPlusminus {
+        "dsSize"?: 'xl';
+    }
     interface IntrinsicElements {
         "ion-action-sheet": IonActionSheet;
         "ion-alert": IonAlert;
@@ -6621,6 +6634,7 @@ declare namespace LocalJSX {
         "med-rate-like": MedRateLike;
         "med-toolbar": MedToolbar;
         "med-tooltip": MedTooltip;
+        "monta-provas-plusminus": MontaProvasPlusminus;
     }
 }
 export { LocalJSX as JSX };
@@ -6737,6 +6751,7 @@ declare module "@stencil/core" {
             "med-rate-like": LocalJSX.MedRateLike & JSXBase.HTMLAttributes<HTMLMedRateLikeElement>;
             "med-toolbar": LocalJSX.MedToolbar & JSXBase.HTMLAttributes<HTMLMedToolbarElement>;
             "med-tooltip": LocalJSX.MedTooltip & JSXBase.HTMLAttributes<HTMLMedTooltipElement>;
+            "monta-provas-plusminus": LocalJSX.MontaProvasPlusminus & JSXBase.HTMLAttributes<HTMLMontaProvasPlusminusElement>;
         }
     }
 }
