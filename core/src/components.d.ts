@@ -16,6 +16,7 @@ import { MedFontSize } from "./global/med-components/font-size.enum";
 import { headerResizeEventDetail } from "./components/00-autoral/global/med-header/med-header-interface";
 import { MedImageZoomItemInterface } from "./components/00-autoral/global/med-image-zoom/med-image-zoom-interface";
 import { RateStatus } from "./components/00-autoral/global/med-rate-like/med-rate-like.enum";
+import { PlusMinusStatus } from "./components/00-autoral/team/monta-provas/monta-provas-plusminus/monta-provas-plusminus.enum";
 export namespace Components {
     interface IonActionSheet {
         /**
@@ -2858,6 +2859,9 @@ export namespace Components {
         "content": string;
         "header": string;
     }
+    interface MontaProvasPlusminus {
+        "dsSize"?: 'xl';
+    }
 }
 declare global {
     interface HTMLIonActionSheetElement extends Components.IonActionSheet, HTMLStencilElement {
@@ -3520,6 +3524,12 @@ declare global {
         prototype: HTMLMedTooltipElement;
         new (): HTMLMedTooltipElement;
     };
+    interface HTMLMontaProvasPlusminusElement extends Components.MontaProvasPlusminus, HTMLStencilElement {
+    }
+    var HTMLMontaProvasPlusminusElement: {
+        prototype: HTMLMontaProvasPlusminusElement;
+        new (): HTMLMontaProvasPlusminusElement;
+    };
     interface HTMLElementTagNameMap {
         "ion-action-sheet": HTMLIonActionSheetElement;
         "ion-alert": HTMLIonAlertElement;
@@ -3631,6 +3641,7 @@ declare global {
         "med-rate-like": HTMLMedRateLikeElement;
         "med-toolbar": HTMLMedToolbarElement;
         "med-tooltip": HTMLMedTooltipElement;
+        "monta-provas-plusminus": HTMLMontaProvasPlusminusElement;
     }
 }
 declare namespace LocalJSX {
@@ -6510,6 +6521,10 @@ declare namespace LocalJSX {
         "content": string;
         "header": string;
     }
+    interface MontaProvasPlusminus {
+        "dsSize"?: 'xl';
+        "onMedChange"?: (event: CustomEvent<PlusMinusStatus>) => void;
+    }
     interface IntrinsicElements {
         "ion-action-sheet": IonActionSheet;
         "ion-alert": IonAlert;
@@ -6621,6 +6636,7 @@ declare namespace LocalJSX {
         "med-rate-like": MedRateLike;
         "med-toolbar": MedToolbar;
         "med-tooltip": MedTooltip;
+        "monta-provas-plusminus": MontaProvasPlusminus;
     }
 }
 export { LocalJSX as JSX };
@@ -6737,6 +6753,7 @@ declare module "@stencil/core" {
             "med-rate-like": LocalJSX.MedRateLike & JSXBase.HTMLAttributes<HTMLMedRateLikeElement>;
             "med-toolbar": LocalJSX.MedToolbar & JSXBase.HTMLAttributes<HTMLMedToolbarElement>;
             "med-tooltip": LocalJSX.MedTooltip & JSXBase.HTMLAttributes<HTMLMedTooltipElement>;
+            "monta-provas-plusminus": LocalJSX.MontaProvasPlusminus & JSXBase.HTMLAttributes<HTMLMontaProvasPlusminusElement>;
         }
     }
 }

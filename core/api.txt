@@ -1481,3 +1481,7 @@ med-tooltip,prop,buttonLeft,{ label: string; icon: string; },undefined,true,fals
 med-tooltip,prop,buttonRight,{ label: string; icon: string; },undefined,true,false
 med-tooltip,prop,content,string,undefined,true,true
 med-tooltip,prop,header,string,undefined,true,true
+
+monta-provas-plusminus,shadow
+monta-provas-plusminus,prop,dsSize,"xl" | undefined,undefined,false,false
+monta-provas-plusminus,event,medChange,PlusMinusStatus.MINUS | PlusMinusStatus.PLUS,true

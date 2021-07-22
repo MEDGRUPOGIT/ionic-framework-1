@@ -1,0 +1,31 @@
+@import "../../../../../../med-components/abstracts";
+
+:host {
+  --color: var(--med-color-neutral-10);
+}
+
+:host(.monta-provas-plusminus) {
+  font-size: $med-font-size-xxl;
+  font-weight: $med-font-weight-bold;
+  line-height: $med-line-height-compressed;
+  color: var(--color);
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .icon-minus {
+    margin-right: $med-spacing-inline-base;
+    cursor: pointer;
+  }
+
+  .icon-plus {
+    margin-left: $med-spacing-inline-base;
+    cursor: pointer;
+  }
+}
+
+:host(.monta-provas-plusminus--xl) {
+  font-size: $med-font-size-xxxl;
+}
