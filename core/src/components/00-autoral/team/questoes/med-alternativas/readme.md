@@ -32,11 +32,11 @@
 
 ### Depends on
 
-- [ion-radio-group](../../../radio-group)
+- [ion-radio-group](../../../../radio-group)
 - [med-option](../med-option)
-- [ion-radio](../../../radio)
+- [ion-radio](../../../../radio)
 - ion-icon
-- [ion-progress-bar](../../../progress-bar)
+- [ion-progress-bar](../../../../progress-bar)
 
 ### Graph
 ```mermaid

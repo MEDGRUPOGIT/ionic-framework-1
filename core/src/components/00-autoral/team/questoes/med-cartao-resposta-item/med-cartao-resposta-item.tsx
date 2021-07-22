@@ -1,6 +1,6 @@
 import { Component, Host, h, Prop } from '@stencil/core';
-import { Color } from '../../../../interface';
-import { createColorClasses } from '../../../../utils/theme';
+import { Color } from '../../../../../interface';
+import { createColorClasses } from '../../../../../utils/theme';
 
 @Component({
   tag: 'med-cartao-resposta-item',

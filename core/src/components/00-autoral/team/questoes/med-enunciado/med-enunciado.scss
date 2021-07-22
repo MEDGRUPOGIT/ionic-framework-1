@@ -1,5 +1,5 @@
-@import "../../../../../med-components/abstracts";
-@import "../../../../themes/ionic.mixins.scss";
+@import "../../../../../../med-components/abstracts";
+@import "../../../../../themes/ionic.mixins.scss";
 
 :host {
   --font-size: #{$med-font-size-xs};
@@ -68,11 +68,6 @@
       height: auto;
       display: block;
     }
-  }
-
-  .number {
-    font-weight: $med-font-weight-bold;
-    color: $med-color-questoes-medium;
   }
 }
 

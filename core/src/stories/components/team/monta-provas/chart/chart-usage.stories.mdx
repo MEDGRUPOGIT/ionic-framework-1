@@ -8,11 +8,30 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 ```
 <med-accordion class="monta-provas-accordion" icon="left">
-  <h4 class="monta-provas-accordion__header" slot="header">Nome da Prova</h4>
+  <div class="med-accordion-header" slot="header">
+    <h4 class="med-accordion-header__heading">Nome da Prova</h4>
+
+    <med-context-menu class="med-context-menu">
+      <ul class="med-context-menu__list">
+        <li class="med-context-menu__item">
+          <ion-icon class="med-icon med-context-menu__icon" name="med-filtro"></ion-icon>
+          <span>Ver filtro selecionado</span>
+        </li>
+        <li class="med-context-menu__item">
+          <ion-icon class="med-icon med-context-menu__icon" name="med-editar"></ion-icon>
+          <span>Renomear Prova</span>
+        </li>
+        <li class="med-context-menu__item">
+          <ion-icon class="med-icon med-context-menu__icon" name="med-lixeira"></ion-icon>
+          <span>Excluir Prova</span>
+        </li>
+      </ul>
+      <p class="med-context-menu__info">Criada em 30/12/2020</p>
+    </med-context-menu>
+  </div>
 
   <div class="monta-provas-chart" slot="content">
-
-    <med-chart-radial>
+    <med-chart-radial class="monta-provas-chart__radial">
       <div class="monta-provas-chart__total">
         <span class="monta-provas-chart__label">Total de</span>
         <span class="monta-provas-chart__number">100</span>
@@ -20,8 +39,7 @@ import { Meta } from "@storybook/addon-docs/blocks";
       </div>
     </med-chart-radial>
 
-    <med-chart-label></med-chart-label>
-
+    <med-chart-label class="monta-provas-chart__label"></med-chart-label>
   </div>
 </med-accordion>
 ```
@@ -29,21 +47,26 @@ import { Meta } from "@storybook/addon-docs/blocks";
 ## SCSS
 
 ```
-.monta-provas-accordion {
-  &__header {
+.med-accordion-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  &__heading {
     font-size: var(--med-font-size-xs);
     font-weight: var(--med-font-weight-semibold);
     line-height: var(--med-line-height-default);
     color: var(--med-color-neutral-10);
     margin: 0;
-    padding; 0;
+    padding: 0;
     width: 100%;
+    text-align: center;
   }
 }
 
 .monta-provas-chart {
   background: var(--med-color-neutral-2);
-  padding: var(--med-spacing-stretch-md);
+  padding: 0 var(--med-spacing-stretch-md);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -52,29 +75,66 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
   &__total {
     position: absolute;
-    display: grid;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     line-height: var(--med-line-height-compressed);
+    text-align: center;
   }
 
   &__label {
     font-size: var(--med-font-size-nano);
     color: var(--med-color-neutral-dark-10);
     font-weight: var(--med-font-weight-bold);
+    display: flex;
+    justify-content: center;
+    line-height: var(--med-line-height-compressed);
   }
 
   &__number {
     font-weight: var(--med-font-weight-bold);
     font-size: var(--med-font-size-md);
-    color: var(--med-color-neutral-light-prime);
+    color: var(--med-color-neutral-10);
+    line-height: var(--med-line-height-compressed);
+  }
+}
+
+.med-context-menu {
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
-  &__number {
-    font-weight: var(--med-font-weight-bold);
-    font-size: var(--med-font-size-md);
-    color: var(--med-color-neutral-light-prime);
+  &__item {
+    padding-right: var(--med-spacing-inline-xs);
+    margin-bottom: var(--med-spacing-stack-base);
+    font-size: var(--med-font-size-xs);
+    line-height: var(--med-line-height-compressed);
+    color: var(--med-color-neutral-3);
+    display: flex;
+    align-items: center;
+    transition: color 300ms ease-out;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--med-color-neutral-1);
+    }
+  }
+
+  &__icon {
+    padding-right: var(--med-spacing-inline-xxxs);
+    stroke: var(--med-color-neutral-3);
+  }
+
+  &__info {
+    padding: 0;
+    margin: 0;
+    font-size: var(--med-font-size-xs);
+    line-height: var(--med-line-height-compressed);
+    color: var(--med-color-neutral-5);
+    padding: var(--med-spacing-inset-xs);
+    text-align: center;
   }
 }
 ```
