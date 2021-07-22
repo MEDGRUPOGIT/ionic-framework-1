@@ -876,7 +876,7 @@ export const MedChartRadial = /*@__PURE__*/ defineContainer<JSX.MedChartRadial>(
 export const MedContextMenu = /*@__PURE__*/ defineContainer<JSX.MedContextMenu>('med-context-menu', [
   'neutral',
   'color',
-  'show'
+  'collapsed'
 ]);
 
 

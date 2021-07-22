@@ -34,7 +34,7 @@ export class MedAccordion {
     this.expandContent();
   }
 
-  onClick = () => {
+  private onClick = () => {
     this.expandContent();
   }
 

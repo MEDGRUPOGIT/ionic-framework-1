@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property  | Attribute | Description                        | Type                  | Default     |
-| --------- | --------- | ---------------------------------- | --------------------- | ----------- |
-| `color`   | `color`   | Define a cor do componente.        | `string \| undefined` | `undefined` |
-| `neutral` | `neutral` | Define a cor neutra do componente. | `string \| undefined` | `undefined` |
-| `show`    | `show`    |                                    | `boolean`             | `false`     |
+| Property    | Attribute   | Description                        | Type                  | Default     |
+| ----------- | ----------- | ---------------------------------- | --------------------- | ----------- |
+| `collapsed` | `collapsed` |                                    | `boolean`             | `false`     |
+| `color`     | `color`     | Define a cor do componente.        | `string \| undefined` | `undefined` |
+| `neutral`   | `neutral`   | Define a cor neutra do componente. | `string \| undefined` | `undefined` |
 
 
 ## Methods

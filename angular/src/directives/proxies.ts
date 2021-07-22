@@ -987,8 +987,8 @@ export class MedChartRadial {
 }
 export declare interface MedContextMenu extends Components.MedContextMenu {
 }
-@ProxyCmp({ inputs: ["color", "neutral", "show"], "methods": ["toggle"] })
-@Component({ selector: "med-context-menu", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "neutral", "show"] })
+@ProxyCmp({ inputs: ["collapsed", "color", "neutral"], "methods": ["toggle"] })
+@Component({ selector: "med-context-menu", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "color", "neutral"] })
 export class MedContextMenu {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
