@@ -34,7 +34,10 @@ export class MedAccordion {
     this.expandContent();
   }
 
-  private onClick = () => {
+  private onClick = (event: Event) => {
+    console.log('med-accordion', new Date().getTime());
+    console.log('med-accordion', event);
+
     this.expandContent();
   }
 
@@ -74,7 +77,7 @@ export class MedAccordion {
         'med-accordion--full': size !== undefined,
         'med-accordion--collapsed': collapsed,
         })}>
-        <div class="med-accordion__header" onClick={this.onClick}>
+        <div class="med-accordion__header" onClick={(event) => this.onClick(event)}>
           {icon === 'left' && <div class="med-accordion__icon-container med-accordion__icon-container--left">
              <ion-icon class="med-icon med-accordion__icon" name="med-baixo"></ion-icon>
           </div>}

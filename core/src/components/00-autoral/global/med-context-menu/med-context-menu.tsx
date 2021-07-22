@@ -42,6 +42,9 @@ export class MedContextMenu {
   }
 
   private onClick = (event: Event) => {
+    console.log('med-context-menu', new Date().getTime());
+    console.log('med-context-menu', event);
+
     event?.stopPropagation();
     this.expandContent();
   }
