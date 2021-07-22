@@ -1,5 +1,5 @@
 
-@import "../../../../../med-components/abstracts";
+@import "../../../../../../med-components/abstracts";
 
 :host {
   --spacing: #{$med-spacing-inline-base};
@@ -13,7 +13,7 @@
   --label-line-height: #{$med-line-height-compressed};
   --label-color: #{$med-color-neutral-light-prime};
   --label-spacing: #{$med-spacing-inline-nano};
-  
+
   height: var(--height);
 
   .option {
