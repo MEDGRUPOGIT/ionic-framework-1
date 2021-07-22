@@ -15,17 +15,21 @@ import '../css/typography.css';
 defineCustomElements();
 
 // storybook canvas
+import './themes/templarios.css';
 import '../src/stories/assets/canvas.css';
 
 // med-components
 import '../src/stories/assets/fsemeric.css';
-import '../css/medsoft-theme.css';
 
 // novo
 import '../css/medsoft.css';
-import '../css/medsoft-scheme-light.css';
-import '../css/medsoft-theme-gold.css';
-import '../css/medsoft-theme-gold-light.css';
+import '../css/medsoft-light.css';
+import '../css/medgrupo.css';
+import '../css/medgrupo-light.css';
+import '../css/recursos.css';
+import '../css/recursos-light.css';
+import '../css/gold.css';
+import '../css/gold-light.css';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -33,19 +37,39 @@ export const parameters = {
   backgrounds: { disable: true },
   themes: [
     {
-      name: 'Dark Mode',
-      class: ['dark-mode'],
-      color: '#000',
+      name: 'Medgrupo - Dark Mode',
+      class: ['color-scheme-dark', 'color-theme-medgrupo'],
+      color: '#fc9d5a'
+    },
+    {
+      name: 'Medgrupo - Light Mode',
+      class: ['color-scheme-light', 'color-theme-medgrupo'],
+      color: '#fc9d5a'
+    },
+    {
+      name: 'Medsoft - Dark Mode',
+      class: ['color-scheme-dark'],
+      color: '#3aa8b9',
       default: true
     },
     {
-      name: 'Light Mode',
+      name: 'Medsoft - Light Mode',
       class: ['color-scheme-light'],
-      color: '#fff',
+      color: '#3aa8b9',
+    },
+    {
+      name: 'Recursos - Dark Mode',
+      class: ['color-scheme-dark', 'color-theme-recursos'],
+      color: '#68a6ba'
+    },
+    {
+      name: 'Recursos - Light Mode',
+      class: ['color-scheme-light', 'color-theme-recursos'],
+      color: '#68a6ba'
     },
     {
       name: 'Gold - Dark Mode',
-      class: ['color-theme-gold'],
+      class: ['color-scheme-dark', 'color-theme-gold'],
       color: '#b89d58'
     },
     {
@@ -53,16 +77,16 @@ export const parameters = {
       class: ['color-scheme-light', 'color-theme-gold'],
       color: '#b89d58'
     },
-    {
+    /* {
       name: 'Image Mode - Dark Mode',
-      class: ['image-mode'],
+      class: ['color-scheme-dark', 'image-mode'],
       color: '#000'
     },
     {
       name: 'Image Mode - Light Mode',
       class: ['color-scheme-light', 'image-mode'],
       color: '#fff'
-    },
+    }, */
   ],
   viewport: {
     viewports: {
@@ -115,11 +139,11 @@ export const parameters = {
       order: [
         'General', ['Welcome', 'Biblioteca', 'Arquitetura', 'Styleguide'],
         'Conhecimento', ['Metodologia BEM'],
-        'Sass', ['Variables', 'Functions', 'Mixins'],
-        'Tokens', ['Tokens', 'Cores', 'Tipografia', 'Espacamento', 'Complementares', 'Exemplo'],
+        'Components',
         'Enums',
+        'Tokens', ['Tokens', 'Cores', 'Tipografia', 'Espacamento', 'Complementares', 'Exemplo'],
+        'Sass', ['Variables', 'Functions', 'Mixins'],
         'Ionic 1',
-        'Components'
       ],
     },
   },
