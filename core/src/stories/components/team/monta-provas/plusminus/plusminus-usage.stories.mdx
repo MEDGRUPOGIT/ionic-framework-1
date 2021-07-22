@@ -4,14 +4,31 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 # Plus Minus
 
-## Markup
+## Propriedades
+
+| Propriedade  | Atributo    | Descrição                                   | Tipo                                                                                                                 | Default       |
+| ------------ | ----------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------- |
+| **dsSize**   | **ds-size** | Define a variação de tamanho do componente. | **"xs"** \| **"sm"** \| **"md"** \| **"lg"** \| **undefined**                                                        | **undefined** |
+
+## CSS Custom Properties
+
+| Name               | Description                                   |
+| ------------------ | --------------------------------------------- |
+| **--color**        | Define a cor de texto do componente.          |
+
+## Default
 
 ```
-
+<monta-provas-plusminus>
+  500
+</monta-provas-plusminus>
 ```
 
-## SCSS
+### Size
 
 ```
-
+<monta-provas-plusminus ds-size="xl">
+  500
+</monta-provas-plusminus>
 ```
+

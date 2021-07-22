@@ -12,6 +12,13 @@
 | `dsSize` | `ds-size` |             | `"xl" \| undefined` | `undefined` |
 
 
+## Events
+
+| Event       | Description | Type                                                         |
+| ----------- | ----------- | ------------------------------------------------------------ |
+| `medChange` |             | `CustomEvent<PlusMinusStatus.MINUS \| PlusMinusStatus.PLUS>` |
+
+
 ## Dependencies
 
 ### Depends on

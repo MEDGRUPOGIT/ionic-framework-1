@@ -21,6 +21,8 @@ const TemplateDefault = () => {
         </monta-provas-plusminus>
         <!-- component -->
 
+        <ion-toggle mode="ios" color="medium"></ion-toggle>
+
       </div>
     </ion-app>
   `
@@ -31,6 +33,9 @@ PlusMinus.parameters = {
   design: {
     type: 'figma',
     url: 'https://www.figma.com/file/zdbyAa3XpX3loOjJEaXc6E/Quest%C3%B5es?node-id=826%3A1008',
+  },
+  actions: {
+    handles: ['medChange'],
   },
 }
 PlusMinus.argTypes = {

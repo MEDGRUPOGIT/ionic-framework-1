@@ -958,6 +958,7 @@ export const MedTooltip = /*@__PURE__*/ defineContainer<JSX.MedTooltip>('med-too
 
 
 export const MontaProvasPlusminus = /*@__PURE__*/ defineContainer<JSX.MontaProvasPlusminus>('monta-provas-plusminus', [
-  'dsSize'
+  'dsSize',
+  'medChange'
 ]);
 

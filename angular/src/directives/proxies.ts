@@ -1151,9 +1151,11 @@ export declare interface MontaProvasPlusminus extends Components.MontaProvasPlus
 @ProxyCmp({ inputs: ["dsSize"] })
 @Component({ selector: "monta-provas-plusminus", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsSize"] })
 export class MontaProvasPlusminus {
+  medChange!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ["medChange"]);
   }
 }

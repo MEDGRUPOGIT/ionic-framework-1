@@ -1,10 +1,14 @@
 @import "../../../../../../med-components/abstracts";
 
 :host {
+  --color: var(--med-color-neutral-10);
+}
+
+:host(.monta-provas-plusminus) {
   font-size: $med-font-size-xxl;
   font-weight: $med-font-weight-bold;
   line-height: $med-line-height-compressed;
-  color: var(--med-color-neutral-10);
+  color: var(--color);
   height: 400px;
   width: 100%;
   display: flex;
@@ -13,10 +17,12 @@
 
   .icon-minus {
     margin-right: $med-spacing-inline-base;
+    cursor: pointer;
   }
 
   .icon-plus {
     margin-left: $med-spacing-inline-base;
+    cursor: pointer;
   }
 }
 
