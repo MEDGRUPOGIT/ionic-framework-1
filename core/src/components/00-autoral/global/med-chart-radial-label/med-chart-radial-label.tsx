@@ -1,21 +1,15 @@
 import { Component, Host, h, Prop } from '@stencil/core';
 import { Color, Neutral } from '../../../../interface';
 import { createColorClasses } from '../../../../utils/theme';
-
-export interface MedRadialItem {
-  cor: string;
-  label: string;
-  quantia: number;
-  ignoreBarra: boolean;
-};
+import { MedChartRadiaItem } from '../med-chart-radial/med-chart-radial-interface';
 
 @Component({
-  tag: 'med-chart-label',
-  styleUrl: 'med-chart-label.scss',
+  tag: 'med-chart-radial-label',
+  styleUrl: 'med-chart-radial-label.scss',
   scoped: true
 })
-export class MedChartLabel {
-  @Prop({reflect: true}) valores: MedRadialItem[] = [];
+export class MedChartRadialLabel {
+  @Prop({reflect: true}) valores: MedChartRadiaItem[] = [];
 
   /**
    * Define a cor do componente.
@@ -33,13 +27,13 @@ export class MedChartLabel {
     return (
       <Host from-stencil
         class={createColorClasses(color, {
-          'med-chart-label': true,
+          'med-chart-radial-label': true,
         }, neutral)}
       >
-        <ul class="med-chart-label__list">
+        <ul class="med-chart-radial-label__list">
           {
-            this.valores.reverse().map((item: MedRadialItem) => {
-              return <li class="med-chart-label__item"><span class={{'med-chart-label__quantia': true, [item.cor]: true}}>{item.quantia}</span> {item.label}</li>
+            this.valores.reverse().map((item: MedChartRadiaItem) => {
+              return <li class="med-chart-radial-label__item"><span class={{'med-chart-radial-label__quantia': true, [item.cor]: true}}>{item.quantia}</span> {item.label}</li>
             })
           }
         </ul>

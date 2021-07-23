@@ -10,12 +10,12 @@ import { IonicSafeString } from "./utils/sanitization";
 import { NavigationHookCallback } from "./components/route/route-interface";
 import { SelectCompareFn } from "./components/select/select-interface";
 import { MedAlternativaInterface } from "./components/00-autoral/team/questoes/med-alternativas/med-alternativas-interface";
-import { MedRadialItem } from "./components/00-autoral/global/med-chart-label/med-chart-label";
-import { MedRadialItem as MedRadialItem1 } from "./components/00-autoral/global/med-chart-radial/med-chart-radial";
+import { MedChartRadiaItem } from "./components/00-autoral/global/med-chart-radial/med-chart-radial-interface";
 import { MedFontSize } from "./global/med-components/font-size.enum";
 import { headerResizeEventDetail } from "./components/00-autoral/global/med-header/med-header-interface";
 import { MedImageZoomItemInterface } from "./components/00-autoral/global/med-image-zoom/med-image-zoom-interface";
 import { RateStatus } from "./components/00-autoral/global/med-rate-like/med-rate-like.enum";
+import { PlusMinusStatus } from "./components/00-autoral/team/monta-provas/monta-provas-plusminus/monta-provas-plusminus.enum";
 export namespace Components {
     interface IonActionSheet {
         /**
@@ -2776,7 +2776,12 @@ export namespace Components {
     }
     interface MedCartaoRespostaLista {
     }
-    interface MedChartLabel {
+    interface MedChartRadial {
+        "valores": MedChartRadiaItem[];
+    }
+    interface MedChartRadialContent {
+    }
+    interface MedChartRadialLabel {
         /**
           * Define a cor do componente.
          */
@@ -2785,10 +2790,7 @@ export namespace Components {
           * Define a cor neutra do componente.
          */
         "neutral"?: Neutral;
-        "valores": MedRadialItem[];
-    }
-    interface MedChartRadial {
-        "valores": MedRadialItem[];
+        "valores": MedChartRadiaItem[];
     }
     interface MedContextMenu {
         "collapsed": boolean;
@@ -2800,7 +2802,7 @@ export namespace Components {
           * Define a cor neutra do componente.
          */
         "neutral"?: Neutral;
-        "toggle": () => Promise<void>;
+        "toggle": (event?: Event | undefined) => Promise<void>;
     }
     interface MedDivider {
         "color"?: Color;
@@ -2857,6 +2859,9 @@ export namespace Components {
         "buttonRight": { label: string, icon: string };
         "content": string;
         "header": string;
+    }
+    interface MontaProvasPlusminus {
+        "dsSize"?: 'xl';
     }
 }
 declare global {
@@ -3424,17 +3429,23 @@ declare global {
         prototype: HTMLMedCartaoRespostaListaElement;
         new (): HTMLMedCartaoRespostaListaElement;
     };
-    interface HTMLMedChartLabelElement extends Components.MedChartLabel, HTMLStencilElement {
-    }
-    var HTMLMedChartLabelElement: {
-        prototype: HTMLMedChartLabelElement;
-        new (): HTMLMedChartLabelElement;
-    };
     interface HTMLMedChartRadialElement extends Components.MedChartRadial, HTMLStencilElement {
     }
     var HTMLMedChartRadialElement: {
         prototype: HTMLMedChartRadialElement;
         new (): HTMLMedChartRadialElement;
+    };
+    interface HTMLMedChartRadialContentElement extends Components.MedChartRadialContent, HTMLStencilElement {
+    }
+    var HTMLMedChartRadialContentElement: {
+        prototype: HTMLMedChartRadialContentElement;
+        new (): HTMLMedChartRadialContentElement;
+    };
+    interface HTMLMedChartRadialLabelElement extends Components.MedChartRadialLabel, HTMLStencilElement {
+    }
+    var HTMLMedChartRadialLabelElement: {
+        prototype: HTMLMedChartRadialLabelElement;
+        new (): HTMLMedChartRadialLabelElement;
     };
     interface HTMLMedContextMenuElement extends Components.MedContextMenu, HTMLStencilElement {
     }
@@ -3519,6 +3530,12 @@ declare global {
     var HTMLMedTooltipElement: {
         prototype: HTMLMedTooltipElement;
         new (): HTMLMedTooltipElement;
+    };
+    interface HTMLMontaProvasPlusminusElement extends Components.MontaProvasPlusminus, HTMLStencilElement {
+    }
+    var HTMLMontaProvasPlusminusElement: {
+        prototype: HTMLMontaProvasPlusminusElement;
+        new (): HTMLMontaProvasPlusminusElement;
     };
     interface HTMLElementTagNameMap {
         "ion-action-sheet": HTMLIonActionSheetElement;
@@ -3615,8 +3632,9 @@ declare global {
         "med-banner": HTMLMedBannerElement;
         "med-cartao-resposta-item": HTMLMedCartaoRespostaItemElement;
         "med-cartao-resposta-lista": HTMLMedCartaoRespostaListaElement;
-        "med-chart-label": HTMLMedChartLabelElement;
         "med-chart-radial": HTMLMedChartRadialElement;
+        "med-chart-radial-content": HTMLMedChartRadialContentElement;
+        "med-chart-radial-label": HTMLMedChartRadialLabelElement;
         "med-context-menu": HTMLMedContextMenuElement;
         "med-divider": HTMLMedDividerElement;
         "med-enunciado": HTMLMedEnunciadoElement;
@@ -3631,6 +3649,7 @@ declare global {
         "med-rate-like": HTMLMedRateLikeElement;
         "med-toolbar": HTMLMedToolbarElement;
         "med-tooltip": HTMLMedTooltipElement;
+        "monta-provas-plusminus": HTMLMontaProvasPlusminusElement;
     }
 }
 declare namespace LocalJSX {
@@ -6424,7 +6443,12 @@ declare namespace LocalJSX {
     }
     interface MedCartaoRespostaLista {
     }
-    interface MedChartLabel {
+    interface MedChartRadial {
+        "valores"?: MedChartRadiaItem[];
+    }
+    interface MedChartRadialContent {
+    }
+    interface MedChartRadialLabel {
         /**
           * Define a cor do componente.
          */
@@ -6433,10 +6457,7 @@ declare namespace LocalJSX {
           * Define a cor neutra do componente.
          */
         "neutral"?: Neutral;
-        "valores"?: MedRadialItem[];
-    }
-    interface MedChartRadial {
-        "valores"?: MedRadialItem[];
+        "valores"?: MedChartRadiaItem[];
     }
     interface MedContextMenu {
         "collapsed"?: boolean;
@@ -6509,6 +6530,10 @@ declare namespace LocalJSX {
         "buttonRight": { label: string, icon: string };
         "content": string;
         "header": string;
+    }
+    interface MontaProvasPlusminus {
+        "dsSize"?: 'xl';
+        "onMedChange"?: (event: CustomEvent<PlusMinusStatus>) => void;
     }
     interface IntrinsicElements {
         "ion-action-sheet": IonActionSheet;
@@ -6605,8 +6630,9 @@ declare namespace LocalJSX {
         "med-banner": MedBanner;
         "med-cartao-resposta-item": MedCartaoRespostaItem;
         "med-cartao-resposta-lista": MedCartaoRespostaLista;
-        "med-chart-label": MedChartLabel;
         "med-chart-radial": MedChartRadial;
+        "med-chart-radial-content": MedChartRadialContent;
+        "med-chart-radial-label": MedChartRadialLabel;
         "med-context-menu": MedContextMenu;
         "med-divider": MedDivider;
         "med-enunciado": MedEnunciado;
@@ -6621,6 +6647,7 @@ declare namespace LocalJSX {
         "med-rate-like": MedRateLike;
         "med-toolbar": MedToolbar;
         "med-tooltip": MedTooltip;
+        "monta-provas-plusminus": MontaProvasPlusminus;
     }
 }
 export { LocalJSX as JSX };
@@ -6721,8 +6748,9 @@ declare module "@stencil/core" {
             "med-banner": LocalJSX.MedBanner & JSXBase.HTMLAttributes<HTMLMedBannerElement>;
             "med-cartao-resposta-item": LocalJSX.MedCartaoRespostaItem & JSXBase.HTMLAttributes<HTMLMedCartaoRespostaItemElement>;
             "med-cartao-resposta-lista": LocalJSX.MedCartaoRespostaLista & JSXBase.HTMLAttributes<HTMLMedCartaoRespostaListaElement>;
-            "med-chart-label": LocalJSX.MedChartLabel & JSXBase.HTMLAttributes<HTMLMedChartLabelElement>;
             "med-chart-radial": LocalJSX.MedChartRadial & JSXBase.HTMLAttributes<HTMLMedChartRadialElement>;
+            "med-chart-radial-content": LocalJSX.MedChartRadialContent & JSXBase.HTMLAttributes<HTMLMedChartRadialContentElement>;
+            "med-chart-radial-label": LocalJSX.MedChartRadialLabel & JSXBase.HTMLAttributes<HTMLMedChartRadialLabelElement>;
             "med-context-menu": LocalJSX.MedContextMenu & JSXBase.HTMLAttributes<HTMLMedContextMenuElement>;
             "med-divider": LocalJSX.MedDivider & JSXBase.HTMLAttributes<HTMLMedDividerElement>;
             "med-enunciado": LocalJSX.MedEnunciado & JSXBase.HTMLAttributes<HTMLMedEnunciadoElement>;
@@ -6737,6 +6765,7 @@ declare module "@stencil/core" {
             "med-rate-like": LocalJSX.MedRateLike & JSXBase.HTMLAttributes<HTMLMedRateLikeElement>;
             "med-toolbar": LocalJSX.MedToolbar & JSXBase.HTMLAttributes<HTMLMedToolbarElement>;
             "med-tooltip": LocalJSX.MedTooltip & JSXBase.HTMLAttributes<HTMLMedTooltipElement>;
+            "monta-provas-plusminus": LocalJSX.MontaProvasPlusminus & JSXBase.HTMLAttributes<HTMLMontaProvasPlusminusElement>;
         }
     }
 }

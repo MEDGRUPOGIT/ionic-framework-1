@@ -10,7 +10,7 @@ const TemplateDefault = ({valores}) => {
 
   setTimeout(() => {
     document.querySelector('med-chart-radial').valores = valores.valores;
-    document.querySelector('med-chart-label').valores = valores.valores;
+    document.querySelector('med-chart-radial-label').valores = valores.valores;
   }, 1000);
 
   return html`
@@ -112,25 +112,25 @@ const TemplateDefault = ({valores}) => {
         <med-accordion class="monta-provas-accordion" icon="left">
           <div class="med-accordion-header" slot="header">
             <h4 class="med-accordion-header__heading">Nome da Prova</h4>
-
-            <med-context-menu class="med-context-menu">
-              <ul class="med-context-menu__list">
-                <li class="med-context-menu__item">
-                  <ion-icon class="med-icon med-context-menu__icon" name="med-filtro"></ion-icon>
-                  <span>Ver filtro selecionado</span>
-                </li>
-                <li class="med-context-menu__item">
-                  <ion-icon class="med-icon med-context-menu__icon" name="med-editar"></ion-icon>
-                  <span>Renomear Prova</span>
-                </li>
-                <li class="med-context-menu__item">
-                  <ion-icon class="med-icon med-context-menu__icon" name="med-lixeira"></ion-icon>
-                  <span>Excluir Prova</span>
-                </li>
-              </ul>
-              <p class="med-context-menu__info">Criada em 30/12/2020</p>
-            </med-context-menu>
           </div>
+
+          <med-context-menu class="med-context-menu" slot="button">
+            <ul class="med-context-menu__list">
+              <li class="med-context-menu__item">
+                <ion-icon class="med-icon med-context-menu__icon" name="med-filtro"></ion-icon>
+                <span>Ver filtro selecionado</span>
+              </li>
+              <li class="med-context-menu__item">
+                <ion-icon class="med-icon med-context-menu__icon" name="med-editar"></ion-icon>
+                <span>Renomear Prova</span>
+              </li>
+              <li class="med-context-menu__item">
+                <ion-icon class="med-icon med-context-menu__icon" name="med-lixeira"></ion-icon>
+                <span>Excluir Prova</span>
+              </li>
+            </ul>
+            <p class="med-context-menu__info">Criada em 30/12/2020</p>
+          </med-context-menu>
 
           <div class="monta-provas-chart" slot="content">
             <med-chart-radial class="monta-provas-chart__radial">
@@ -141,7 +141,7 @@ const TemplateDefault = ({valores}) => {
               </div>
             </med-chart-radial>
 
-            <med-chart-label class="monta-provas-chart__label"></med-chart-label>
+            <med-chart-radial-label class="monta-provas-chart__label"></med-chart-radial-label>
           </div>
         </med-accordion>
         <!-- component -->
