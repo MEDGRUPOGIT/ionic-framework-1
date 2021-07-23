@@ -1418,6 +1418,7 @@ med-chart-radial,scoped
 med-chart-radial,prop,valores,MedChartRadiaItem[],[],false,false
 
 med-chart-radial-content,shadow
+med-chart-radial-content,prop,total,number,0,false,true
 
 med-chart-radial-label,scoped
 med-chart-radial-label,prop,color,string | undefined,undefined,false,false

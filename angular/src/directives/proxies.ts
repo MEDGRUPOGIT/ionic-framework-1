@@ -977,7 +977,8 @@ export class MedChartRadial {
 }
 export declare interface MedChartRadialContent extends Components.MedChartRadialContent {
 }
-@Component({ selector: "med-chart-radial-content", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+@ProxyCmp({ inputs: ["total"] })
+@Component({ selector: "med-chart-radial-content", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["total"] })
 export class MedChartRadialContent {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

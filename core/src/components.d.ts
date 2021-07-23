@@ -2780,6 +2780,7 @@ export namespace Components {
         "valores": MedChartRadiaItem[];
     }
     interface MedChartRadialContent {
+        "total": number;
     }
     interface MedChartRadialLabel {
         /**
@@ -6447,6 +6448,7 @@ declare namespace LocalJSX {
         "valores"?: MedChartRadiaItem[];
     }
     interface MedChartRadialContent {
+        "total"?: number;
     }
     interface MedChartRadialLabel {
         /**

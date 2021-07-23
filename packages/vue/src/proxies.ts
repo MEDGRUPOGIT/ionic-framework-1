@@ -867,7 +867,9 @@ export const MedChartRadial = /*@__PURE__*/ defineContainer<JSX.MedChartRadial>(
 ]);
 
 
-export const MedChartRadialContent = /*@__PURE__*/ defineContainer<JSX.MedChartRadialContent>('med-chart-radial-content');
+export const MedChartRadialContent = /*@__PURE__*/ defineContainer<JSX.MedChartRadialContent>('med-chart-radial-content', [
+  'total'
+]);
 
 
 export const MedChartRadialLabel = /*@__PURE__*/ defineContainer<JSX.MedChartRadialLabel>('med-chart-radial-label', [
