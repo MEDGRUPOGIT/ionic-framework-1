@@ -29,11 +29,9 @@ export class MedChartRadialContent {
 
     return (
       <Host>
-        <div class="monta-provas-chart__total">
-          <span class="monta-provas-chart__label">Total de</span>
-          <span class={`monta-provas-chart__number ${this.fontResize()}`}>{total}</span>
-          <span class="monta-provas-chart__label">Questões</span>
-        </div>
+        <span class="monta-provas-chart__label">Total de</span>
+        <span class={`monta-provas-chart__number ${this.fontResize()}`}>{total}</span>
+        <span class="monta-provas-chart__label">Questões</span>
       </Host>
     );
   }
