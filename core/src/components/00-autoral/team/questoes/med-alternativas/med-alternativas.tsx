@@ -36,11 +36,21 @@ export class MedAlternativas implements MedAlternativasInterface {
     return classe;
   }
 
+
+  private onMedChange(alternativa: string){
+    let objAlternativa = this.respostaAlterada(alternativa)
+    this.medChange.emit(objAlternativa);
+  }
+
+  private onMedClick(alternativa: string){
+    let objAlternativa = this.respostaAlterada(alternativa)
+    this.medClick.emit(objAlternativa);
+  }
+
   private respostaAlterada(alternativa: string) {
     this.alternativaSelecionada = alternativa;
     let objAlternativa = this.alternativas.find((item:any)=>item[this.keyAlternativa]===alternativa);
-    this.medClick.emit(objAlternativa);
-    this.medChange.emit(objAlternativa);
+    return objAlternativa
   }
 
   private imageRequest(alternativa: any,ev:Event) {
@@ -59,10 +69,10 @@ export class MedAlternativas implements MedAlternativasInterface {
 
     return (
       <Host from-stencil>
-        <ion-radio-group onIonChange={ev => this.respostaAlterada(ev.detail.value)}  value={this.alternativaSelecionada}>
+        <ion-radio-group onIonChange={ev => this.onMedChange(ev.detail.value)}  value={this.alternativaSelecionada}>
           <ul class={`alternativas ${hasImage ? 'alternativas--imagem' : ''}`}>
             {this.alternativas.map((alternativa: any) => (
-              <li onClick={() => this.respostaAlterada(alternativa[this.keyAlternativa])} class={this.cssClassAlternativa(alternativa[this.keyAlternativa])}>
+              <li onClick={() => this.onMedClick(alternativa[this.keyAlternativa])} class={this.cssClassAlternativa(alternativa[this.keyAlternativa])}>
                 <med-option class='alternativa__option'>
                   <ion-radio
                     value={alternativa[this.keyAlternativa]}
