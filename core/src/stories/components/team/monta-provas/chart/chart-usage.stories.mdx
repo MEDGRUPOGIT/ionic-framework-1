@@ -39,7 +39,7 @@ import { Meta } from "@storybook/addon-docs/blocks";
       </div>
     </med-chart-radial>
 
-    <med-chart-radial-label class="monta-provas-chart__label"></med-chart-radial-label>
+    <med-chart-radial-content class="monta-provas-chart-content"></med-chart-radial-content>
   </div>
 </med-accordion>
 ```
@@ -64,39 +64,13 @@ import { Meta } from "@storybook/addon-docs/blocks";
   }
 }
 
-.monta-provas-chart {
-  background: var(--med-color-neutral-2);
-  padding: 0 var(--med-spacing-stretch-md);
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  max-width: 400px;
-  margin: 0 auto;
-
-  &__total {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    line-height: var(--med-line-height-compressed);
-    text-align: center;
-  }
-
-  &__label {
-    font-size: var(--med-font-size-nano);
-    color: var(--med-color-neutral-dark-10);
-    font-weight: var(--med-font-weight-bold);
-    display: flex;
-    justify-content: center;
-    line-height: var(--med-line-height-compressed);
-  }
-
-  &__number {
-    font-weight: var(--med-font-weight-bold);
-    font-size: var(--med-font-size-md);
-    color: var(--med-color-neutral-10);
-    line-height: var(--med-line-height-compressed);
-  }
+.monta-provas-chart-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  line-height: var(--med-line-height-compressed);
+  text-align: center;
 }
 
 .med-context-menu {
