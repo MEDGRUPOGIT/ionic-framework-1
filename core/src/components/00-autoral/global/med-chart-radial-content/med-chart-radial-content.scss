@@ -14,6 +14,10 @@
     font-size: var(--med-font-size-md);
     color: var(--med-color-neutral-10);
     line-height: var(--med-line-height-compressed);
+
+    &--small {
+      font-size: var(--med-font-size-xs);
+    }
   }
 
 }
