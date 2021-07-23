@@ -813,7 +813,6 @@ export const IonVirtualScroll = /*@__PURE__*/ defineContainer<JSX.IonVirtualScro
 
 
 export const MedAccordion = /*@__PURE__*/ defineContainer<JSX.MedAccordion>('med-accordion', [
-  'color',
   'size',
   'icon',
   'collapsed'
@@ -821,7 +820,9 @@ export const MedAccordion = /*@__PURE__*/ defineContainer<JSX.MedAccordion>('med
 
 
 export const MedAgrupador = /*@__PURE__*/ defineContainer<JSX.MedAgrupador>('med-agrupador', [
-  'color'
+  'color',
+  'neutral',
+  'collapsed'
 ]);
 
 
@@ -880,16 +881,14 @@ export const MedChartRadialLabel = /*@__PURE__*/ defineContainer<JSX.MedChartRad
 
 
 export const MedContextMenu = /*@__PURE__*/ defineContainer<JSX.MedContextMenu>('med-context-menu', [
-  'neutral',
-  'color',
   'collapsed'
 ]);
 
 
 export const MedDivider = /*@__PURE__*/ defineContainer<JSX.MedDivider>('med-divider', [
-  'text',
   'color',
-  'neutral'
+  'neutral',
+  'text'
 ]);
 
 

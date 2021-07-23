@@ -883,8 +883,8 @@ export class IonToolbar {
 }
 export declare interface MedAccordion extends Components.MedAccordion {
 }
-@ProxyCmp({ inputs: ["collapsed", "color", "icon", "size"], "methods": ["toggle"] })
-@Component({ selector: "med-accordion", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "color", "icon", "size"] })
+@ProxyCmp({ inputs: ["collapsed", "icon", "size"], "methods": ["toggle"] })
+@Component({ selector: "med-accordion", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "icon", "size"] })
 export class MedAccordion {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -894,8 +894,8 @@ export class MedAccordion {
 }
 export declare interface MedAgrupador extends Components.MedAgrupador {
 }
-@ProxyCmp({ inputs: ["color"] })
-@Component({ selector: "med-agrupador", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color"] })
+@ProxyCmp({ inputs: ["collapsed", "color", "neutral"], "methods": ["toggle"] })
+@Component({ selector: "med-agrupador", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "color", "neutral"] })
 export class MedAgrupador {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -999,8 +999,8 @@ export class MedChartRadialLabel {
 }
 export declare interface MedContextMenu extends Components.MedContextMenu {
 }
-@ProxyCmp({ inputs: ["collapsed", "color", "neutral"], "methods": ["toggle"] })
-@Component({ selector: "med-context-menu", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "color", "neutral"] })
+@ProxyCmp({ inputs: ["collapsed"], "methods": ["toggle"] })
+@Component({ selector: "med-context-menu", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed"] })
 export class MedContextMenu {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

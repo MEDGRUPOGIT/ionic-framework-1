@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property            | Attribute | Description | Type                  | Default     |
-| ------------------- | --------- | ----------- | --------------------- | ----------- |
-| `color`             | `color`   |             | `string \| undefined` | `undefined` |
-| `neutral`           | `neutral` |             | `string \| undefined` | `undefined` |
-| `text` _(required)_ | `text`    |             | `string`              | `undefined` |
+| Property            | Attribute | Description                        | Type                  | Default     |
+| ------------------- | --------- | ---------------------------------- | --------------------- | ----------- |
+| `color`             | `color`   | Define a cor do componente.        | `string \| undefined` | `undefined` |
+| `neutral`           | `neutral` | Define a cor neutra do componente. | `string \| undefined` | `undefined` |
+| `text` _(required)_ | `text`    | Define o texto do componente.      | `string`              | `undefined` |
 
 
 ----------------------------------------------

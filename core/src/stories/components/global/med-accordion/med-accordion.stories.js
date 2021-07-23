@@ -62,7 +62,7 @@ Accordion.argTypes = {
   size: {
     options: [undefined, 'full'],
     control: { type: 'radio'},
-    description: "Aplica tamanho fullscreen.",
+    description: "Define a variação de estilo do componente.",
     table: {
       type:  { summary: 'full' },
       defaultValue: { summary: 'undefined' },

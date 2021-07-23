@@ -2,14 +2,14 @@ import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
 
 export default {
-  title: 'Components/Core/Chart Label',
+  title: 'Components/Core/Chart Radial Label',
   decorators: [withDesign],
 };
 
-const Default = ({valores}) => {
+const Default = ({ valores }) => {
 
   setTimeout(() => {
-    document.querySelector('med-chart-label').valores = valores.valores;
+    document.querySelector('med-chart-radial-label').valores = valores.valores;
   }, 1000);
 
   return html`
@@ -17,7 +17,7 @@ const Default = ({valores}) => {
       <div class="storybook-only__container">
 
         <!-- component -->
-        <med-chart-label></med-chart-label>
+        <med-chart-radial-label></med-chart-radial-label>
         <!-- component -->
 
       </div>

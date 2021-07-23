@@ -1,7 +1,13 @@
 @import "../../../../../med-components/abstracts";
 
 :host {
+  /**
+   * @prop --color: Define a cor do componente.
+   */
   --color: #{md-color(brand, 3)};
+}
+
+:host(.med-agrupador) {
   font-size: $med-font-size-xxs;
   font-weight: $med-font-weight-medium;
   line-height: $med-line-height-compressed;
@@ -11,37 +17,61 @@
   align-items: center;
   color: var(--color);
   cursor: pointer;
-
-  ion-icon {
-    font-size: 24px;
-  }
 }
 
-.toggle__expandir {
+:host(.med-agrupador) .med-agrupador__icon {
+  font-size: 24px;
+  stroke: var(--color);
+}
+
+:host(.med-agrupador) .med-agrupador__expandir {
   display: block;
 }
 
-.toggle__ocultar {
+:host(.med-agrupador) .med-agrupador__ocultar {
   display: none;
 }
 
-:host(.toggle) {
-  flex-direction: column-reverse;
-
-  .toggle__expandir {
-    display: none;
-  }
-
-  .toggle__ocultar {
-    display: block;
-  }
-
-  .toggle__img {
-    transform: rotate(180deg);
-  }
-}
+// ////////////////////
+// color
+// ////////////////////
 
 :host(.ion-color) {
   --color: #{md-current-color(3)};
 }
 
+:host(.ion-color) .med-agrupador__icon {
+  --color: #{md-current-color(3)};
+}
+
+// ////////////////////
+// neutral
+// ////////////////////
+
+:host(.med-neutral) {
+  --color: var(--med-neutral);
+}
+
+:host(.med-neutral) .med-agrupador__icon {
+  --color: var(--med-neutral);
+}
+
+// ////////////////////
+// state
+// ////////////////////
+
+:host(.med-agrupador--collapsed) {
+  flex-direction: column-reverse;
+}
+
+:host(.med-agrupador--collapsed) .med-agrupador__expandir {
+  display: none;
+}
+
+:host(.med-agrupador--collapsed) .med-agrupador__ocultar {
+  display: block;
+}
+
+:host(.med-agrupador--collapsed) .med-agrupador__icon {
+  transform: rotate(180deg);
+}

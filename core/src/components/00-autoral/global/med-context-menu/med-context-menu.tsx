@@ -1,5 +1,4 @@
 import { Component, Host, h, Prop, Method } from '@stencil/core';
-import { Color, Neutral } from '../../../../interface';
 import { createColorClasses } from '../../../../utils/theme';
 
 @Component({
@@ -8,17 +7,9 @@ import { createColorClasses } from '../../../../utils/theme';
   shadow: true,
 })
 export class MedContextMenu {
-
   /**
-   * Define a cor neutra do componente.
+   * Define o estado do componente.
    */
-  @Prop() neutral?: Neutral;
-
-  /**
-   * Define a cor do componente.
-   */
-  @Prop() color?: Color;
-
   @Prop({ reflect: true, mutable: true }) collapsed = true;
 
   @Method()
@@ -28,15 +19,15 @@ export class MedContextMenu {
   }
 
   render() {
-    const { color, neutral, collapsed } = this;
+    const { collapsed } = this;
 
     return (
       <Host
         from-stencil
-        class={createColorClasses(color, {
+        class={createColorClasses(null, {
           'med-context-menu': true,
           'med-context-menu--collapsed': collapsed
-        }, neutral)}
+        }, null)}
       >
         <ion-button onClick={(event) => {this.toggle(event)}} class="med-context-menu__button" ds-name="icon-only">
           <ion-icon class="med-icon med-context-menu__icon" name="med-context-menu"></ion-icon>

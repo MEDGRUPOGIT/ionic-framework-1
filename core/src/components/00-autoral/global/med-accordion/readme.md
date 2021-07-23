@@ -7,12 +7,11 @@
 
 ## Properties
 
-| Property    | Attribute   | Description | Type                             | Default     |
-| ----------- | ----------- | ----------- | -------------------------------- | ----------- |
-| `collapsed` | `collapsed` |             | `boolean`                        | `true`      |
-| `color`     | `color`     |             | `string \| undefined`            | `undefined` |
-| `icon`      | `icon`      |             | `"left" \| "right" \| undefined` | `undefined` |
-| `size`      | `size`      |             | `"full" \| undefined`            | `undefined` |
+| Property    | Attribute   | Description                                     | Type                             | Default     |
+| ----------- | ----------- | ----------------------------------------------- | -------------------------------- | ----------- |
+| `collapsed` | `collapsed` | Define o estado do componente.                  | `boolean`                        | `true`      |
+| `icon`      | `icon`      | Define o posicionamento do icone do componente. | `"left" \| "right" \| undefined` | `undefined` |
+| `size`      | `size`      | Define a variação de estilo do componente.      | `"full" \| undefined`            | `undefined` |
 
 
 ## Methods
@@ -26,6 +25,16 @@
 Type: `Promise<void>`
 
 
+
+
+## Slots
+
+| Slot             | Description                                         |
+| ---------------- | --------------------------------------------------- |
+| `"button"`       | Se houver algum botão deve ser colocado nesse slot. |
+| `"content"`      | Conteúdo do componente.                             |
+| `"content-fake"` | Conteúdo que vai aparecer com reticiências.         |
+| `"header"`       | Define o conteudo do header.                        |
 
 
 ## Dependencies

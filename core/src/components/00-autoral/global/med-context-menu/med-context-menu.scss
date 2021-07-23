@@ -1,9 +1,14 @@
 @import "../../../../../med-components/abstracts";
 
 :host {
-  --z-index: 1;
+  /**
+   * @prop --background: Define a cor da borda do componente.
+   * @prop --color: Define a cor do componente.
+   * @prop --z-index: Define o z-index do componente.
+   */
   --background: #{var(--med-color-neutral-9)};
   --color: #{var(--med-color-neutral-3)};
+  --z-index: 1;
 }
 
 :host(.med-context-menu) {
@@ -18,6 +23,7 @@
       right: -8px;
       top: -8px;
       min-width: 250px;
+      max-width: 250px;
       width: 100%;
       box-shadow: $med-shadow-level-4;
       border-radius: $med-border-radius-nano;

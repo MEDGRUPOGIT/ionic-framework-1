@@ -7,11 +7,9 @@
 
 ## Properties
 
-| Property    | Attribute   | Description                        | Type                  | Default     |
-| ----------- | ----------- | ---------------------------------- | --------------------- | ----------- |
-| `collapsed` | `collapsed` |                                    | `boolean`             | `true`      |
-| `color`     | `color`     | Define a cor do componente.        | `string \| undefined` | `undefined` |
-| `neutral`   | `neutral`   | Define a cor neutra do componente. | `string \| undefined` | `undefined` |
+| Property    | Attribute   | Description                    | Type      | Default |
+| ----------- | ----------- | ------------------------------ | --------- | ------- |
+| `collapsed` | `collapsed` | Define o estado do componente. | `boolean` | `true`  |
 
 
 ## Methods
@@ -25,6 +23,15 @@
 Type: `Promise<void>`
 
 
+
+
+## CSS Custom Properties
+
+| Name           | Description                          |
+| -------------- | ------------------------------------ |
+| `--background` | Define a cor da borda do componente. |
+| `--color`      | Define a cor do componente.          |
+| `--z-index`    | Define o z-index do componente.      |
 
 
 ## Dependencies

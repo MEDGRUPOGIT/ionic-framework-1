@@ -1,14 +1,17 @@
 @import "../../../../../med-components/abstracts";
 
 :host {
+  /**
+   * @prop --color: Define a cor do componente.
+   */
   --color: var(--med-color-neutral-5);
 }
 
-:host {
+:host(.med-divider) {
   display: block;
   text-align: left;
 
-  .heading {
+  .med-divider__heading {
     padding: 0;
     margin: 0;
     padding-top: $med-spacing-stack-base;

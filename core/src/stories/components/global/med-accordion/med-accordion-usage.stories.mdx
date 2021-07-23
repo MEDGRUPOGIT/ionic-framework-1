@@ -6,21 +6,41 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 ## Propriedades
 
-| Propriedade   | Atributo       | Descrição                      | Tipo                      | Default       |
-| ------------- | -------------- | ------------------------------ | ------------------------- | ------------- |
-| **size**      | **size**       | Aplica tamanho fullscreen.     | **full**                  | **undefined** |
-| **icon**      | **icon**       | Define a posição do ícone.     | **"left"** \| **"right"** | **undefined** |
-| **collapsed** | **collapsed**  | Define o estado do componente. | **boolean**               | **true**      |
+| Propriedade   | Atributo       | Descrição                                  | Tipo                      | Default       |
+| ------------- | -------------- | ------------------------------------------ | ------------------------- | ------------- |
+| **size**      | **size**       | Define a variação de estilo do componente. | **full**                  | **undefined** |
+| **icon**      | **icon**       | Define a posição do ícone do componente.   | **"left"** \| **"right"** | **undefined** |
+| **collapsed** | **collapsed**  | Define o estado do componente.             | **boolean**               | **true**      |
+
+## slots
+
+
 
 ## Métodos
 
 ### `toggle() => Promise<void>`
 
-## Usage
+## Default
 
 ```
-<med-accordion></med-accordion>
+<med-accordion class="med-accordion" .size=${size} .icon=${icon} .collapsed=${collapsed}>
 
+  <div slot="header">
+    <h4>Header</h4>
+  </div>
+
+  <div slot="content-fake" class="med-accordion__content">
+    <p>Conteúdo em 1 linha que pode ser expandi…</p>
+  </div>
+
+  <div slot="content" class="med-accordion__content">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, nisi quos saepe similique eius illum voluptatibus unde cupiditate sit fuga ea, neque in odit, iste non delectus! Mollitia, ipsam natus delectus maiores veniam quaerat iusto dignissimos beatae cum corporis eaque quod nostrum inventore possimus voluptates dolore velit, praesentium minus adipisci ad enim nihil impedit in rerum. Aut, distinctio velit ab quis iusto dolorum voluptatum reiciendis neque repellendus culpa quo exercitationem corrupti molestiae maxime ut ratione optio. Commodi, vitae obcaecati ullam quis minus consequuntur tempora eum corporis doloribus mollitia voluptatem. Necessitatibus dolor vitae id quia facilis tempore explicabo aliquam quisquam dolores.</p>
+  </div>
+
+</med-accordion>
+```
+
+```
 <!-- size -->
 <med-accordion size="full"></med-accordion>
 

@@ -217,7 +217,7 @@ export namespace Components {
          */
         "dsName"?: 'secondary';
         /**
-          * Define a variação de tamanho componente.
+          * Define a variação de tamanho do componente.
          */
         "dsSize"?: 'xs' | 'sm' | 'md' | 'lg';
         /**
@@ -2744,14 +2744,34 @@ export namespace Components {
         "renderItem"?: (item: any, index: number) => any;
     }
     interface MedAccordion {
+        /**
+          * Define o estado do componente.
+         */
         "collapsed": boolean;
-        "color"?: Color;
+        /**
+          * Define o posicionamento do icone do componente.
+         */
         "icon"?: 'left' | 'right';
+        /**
+          * Define a variação de estilo do componente.
+         */
         "size"?: 'full';
         "toggle": () => Promise<void>;
     }
     interface MedAgrupador {
+        /**
+          * Define o estado do componente.
+         */
+        "collapsed": boolean;
+        /**
+          * Define a cor do componente.
+         */
         "color"?: Color;
+        /**
+          * Define a cor neutra do componente.
+         */
+        "neutral"?: Neutral;
+        "toggle": (event?: Event | undefined) => Promise<void>;
     }
     interface MedAlternativas {
         "alternativaSelecionada": string;
@@ -2794,7 +2814,13 @@ export namespace Components {
         "valores": MedChartRadiaItem[];
     }
     interface MedContextMenu {
+        /**
+          * Define o estado do componente.
+         */
         "collapsed": boolean;
+        "toggle": (event?: Event | undefined) => Promise<void>;
+    }
+    interface MedDivider {
         /**
           * Define a cor do componente.
          */
@@ -2803,11 +2829,9 @@ export namespace Components {
           * Define a cor neutra do componente.
          */
         "neutral"?: Neutral;
-        "toggle": (event?: Event | undefined) => Promise<void>;
-    }
-    interface MedDivider {
-        "color"?: Color;
-        "neutral"?: Neutral;
+        /**
+          * Define o texto do componente.
+         */
         "text": string;
     }
     interface MedEnunciado {
@@ -3854,7 +3878,7 @@ declare namespace LocalJSX {
          */
         "dsName"?: 'secondary';
         /**
-          * Define a variação de tamanho componente.
+          * Define a variação de tamanho do componente.
          */
         "dsSize"?: 'xs' | 'sm' | 'md' | 'lg';
         /**
@@ -6408,13 +6432,32 @@ declare namespace LocalJSX {
         "renderItem"?: (item: any, index: number) => any;
     }
     interface MedAccordion {
+        /**
+          * Define o estado do componente.
+         */
         "collapsed"?: boolean;
-        "color"?: Color;
+        /**
+          * Define o posicionamento do icone do componente.
+         */
         "icon"?: 'left' | 'right';
+        /**
+          * Define a variação de estilo do componente.
+         */
         "size"?: 'full';
     }
     interface MedAgrupador {
+        /**
+          * Define o estado do componente.
+         */
+        "collapsed"?: boolean;
+        /**
+          * Define a cor do componente.
+         */
         "color"?: Color;
+        /**
+          * Define a cor neutra do componente.
+         */
+        "neutral"?: Neutral;
     }
     interface MedAlternativas {
         "alternativaSelecionada": string;
@@ -6462,7 +6505,12 @@ declare namespace LocalJSX {
         "valores"?: MedChartRadiaItem[];
     }
     interface MedContextMenu {
+        /**
+          * Define o estado do componente.
+         */
         "collapsed"?: boolean;
+    }
+    interface MedDivider {
         /**
           * Define a cor do componente.
          */
@@ -6471,10 +6519,9 @@ declare namespace LocalJSX {
           * Define a cor neutra do componente.
          */
         "neutral"?: Neutral;
-    }
-    interface MedDivider {
-        "color"?: Color;
-        "neutral"?: Neutral;
+        /**
+          * Define o texto do componente.
+         */
         "text": string;
     }
     interface MedEnunciado {

@@ -22,7 +22,7 @@ export class MedChartRadialLabel {
   @Prop() neutral?: Neutral;
 
   render() {
-    const { color, neutral, } = this;
+    const { color, neutral } = this;
 
     return (
       <Host from-stencil

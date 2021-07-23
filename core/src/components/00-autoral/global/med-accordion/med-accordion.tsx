@@ -1,7 +1,12 @@
 import { Component, Host, h, Prop, Method, Element, State, Watch } from '@stencil/core';
-import { Color } from '../../../../interface';
 import { createColorClasses } from '../../../../utils/theme';
 
+/**
+ * @slot header - Define o conteudo do header.
+ * @slot button - Se houver algum botão deve ser colocado nesse slot.
+ * @slot content-fake - Conteúdo que vai aparecer com reticiências.
+ * @slot content - Conteúdo do componente.
+ */
 @Component({
   tag: 'med-accordion',
   styleUrl: 'med-accordion.scss',
@@ -9,10 +14,22 @@ import { createColorClasses } from '../../../../utils/theme';
 })
 export class MedAccordion {
   @Element() el!: HTMLElement;
-  @Prop() color?: Color;
+
+  /**
+   * Define a variação de estilo do componente.
+   */
   @Prop() size?: 'full';
+
+  /**
+   * Define o posicionamento do icone do componente.
+   */
   @Prop({ reflect: true }) icon?: 'left' | 'right';
+
+  /**
+   * Define o estado do componente.
+   */
   @Prop({ reflect: true, mutable: true }) collapsed = true;
+
   @State() collapsedState = true;
 
   private contentEl!: HTMLDivElement;
@@ -68,12 +85,13 @@ export class MedAccordion {
   }
 
   render() {
-    const {color, size, collapsedState, icon} = this;
+    const {size, icon, collapsed} = this;
+
     return (
-      <Host from-stencil class={createColorClasses(color, {
-        'med-accordion--full': size !== undefined,
-        'med-accordion--collapsed': collapsedState,
-        })}>
+      <Host from-stencil class={createColorClasses(null, {
+          [`med-accordion--${size}`]: size !== undefined,
+          'med-accordion--collapsed': collapsed,
+        }, null)}>
         <div class="med-accordion__header">
           {icon === 'left' && <div class="med-accordion__icon-container med-accordion__icon-container--left" onClick={() => this.onClick()}>
              <ion-icon class="med-icon med-accordion__icon" name="med-baixo"></ion-icon>
@@ -97,7 +115,6 @@ export class MedAccordion {
         <div class="med-accordion__content" ref={(el) => this.contentEl = el as HTMLDivElement}>
           <slot name="content"></slot>
         </div>
-
       </Host>
     );
   }

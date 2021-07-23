@@ -28,7 +28,7 @@ export class Badge implements ComponentInterface {
   @Prop() dsName?: 'secondary';
 
   /**
-   * Define a variação de tamanho componente.
+   * Define a variação de tamanho do componente.
    */
   @Prop() dsSize?: 'xs' | 'sm' | 'md' | 'lg';
 

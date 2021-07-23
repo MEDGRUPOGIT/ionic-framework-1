@@ -8,16 +8,29 @@ import { createColorClasses } from '../../../../utils/theme';
   shadow: true,
 })
 export class MedDivider {
-  @Prop() text!: string;
+  /**
+   * Define a cor do componente.
+   */
   @Prop() color?: Color;
+
+  /**
+   * Define a cor neutra do componente.
+   */
   @Prop() neutral?: Neutral;
 
+  /**
+   * Define o texto do componente.
+   */
+  @Prop() text!: string;
+
   render() {
+    const { color, neutral, text } = this;
+
     return (
-      <Host from-stencil class={createColorClasses(this.color, {
+      <Host from-stencil class={createColorClasses(color, {
         'med-divider': true
-        }, this.neutral)}>
-        <h3 class="heading">{this.text}</h3>
+        }, neutral)}>
+        <h3 class="med-divider__heading">{text}</h3>
       </Host>
     );
   }

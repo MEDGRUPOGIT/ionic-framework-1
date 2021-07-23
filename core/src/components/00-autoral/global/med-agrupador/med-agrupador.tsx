@@ -1,5 +1,5 @@
-import { Component, Host, h, Prop, State } from '@stencil/core';
-import { Color } from '../../../../interface';
+import { Component, Host, h, Prop, Method } from '@stencil/core';
+import { Color, Neutral } from '../../../../interface';
 import { createColorClasses } from '../../../../utils/theme';
 
 @Component({
@@ -9,22 +9,40 @@ import { createColorClasses } from '../../../../utils/theme';
 })
 export class MedAgrupador {
 
+  /**
+   * Define a cor do componente.
+   */
   @Prop() color?: Color;
 
-  @State() toggle = false;
+  /**
+   * Define a cor neutra do componente.
+   */
+  @Prop() neutral?: Neutral;
 
-  onClick = () => {
-    this.toggle = this.toggle ? !this.toggle : !this.toggle;
-  }
+  /**
+   * Define o estado do componente.
+   */
+   @Prop({ reflect: true, mutable: true }) collapsed = true;
+
+   @Method()
+   async toggle(event?: Event) {
+     event?.stopPropagation();
+     this.collapsed = !this.collapsed;
+   }
 
   render() {
-    const {color} = this;
+    const { color, neutral, collapsed } = this;
 
     return (
-      <Host from-stencil class={createColorClasses(color, {'toggle': this.toggle})} onClick={this.onClick}>
-        <div class="toggle__expandir">Expandir a lista</div>
-        <div class="toggle__ocultar">Ocultar a lista</div>
-        <ion-icon class="med-icon toggle__img" name="med-baixo"></ion-icon>
+      <Host from-stencil
+        class={createColorClasses(color, {
+          'med-agrupador': true,
+          'med-agrupador--collapsed': collapsed
+        }, neutral)}
+        onClick={(event: any) => {this.toggle(event)}}>
+        <div class="med-agrupador__expandir">Expandir a lista</div>
+        <div class="med-agrupador__ocultar">Ocultar a lista</div>
+        <ion-icon class="med-icon med-agrupador__icon" name="med-baixo"></ion-icon>
       </Host>
     );
   }
