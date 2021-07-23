@@ -9,7 +9,7 @@
   font-weight: $med-font-weight-bold;
   line-height: $med-line-height-compressed;
   color: var(--color);
-  height: 400px;
+  max-height: 400px;
   width: 100%;
   display: flex;
   justify-content: center;
