@@ -9,14 +9,14 @@
 
 | Property    | Attribute   | Description                        | Type                  | Default     |
 | ----------- | ----------- | ---------------------------------- | --------------------- | ----------- |
-| `collapsed` | `collapsed` |                                    | `boolean`             | `false`     |
+| `collapsed` | `collapsed` |                                    | `boolean`             | `true`      |
 | `color`     | `color`     | Define a cor do componente.        | `string \| undefined` | `undefined` |
 | `neutral`   | `neutral`   | Define a cor neutra do componente. | `string \| undefined` | `undefined` |
 
 
 ## Methods
 
-### `toggle() => Promise<void>`
+### `toggle(event?: Event | undefined) => Promise<void>`
 
 
 

@@ -964,22 +964,32 @@ export class MedCartaoRespostaLista {
     this.el = r.nativeElement;
   }
 }
-export declare interface MedChartLabel extends Components.MedChartLabel {
+export declare interface MedChartRadial extends Components.MedChartRadial {
 }
-@ProxyCmp({ inputs: ["color", "neutral", "valores"] })
-@Component({ selector: "med-chart-label", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "neutral", "valores"] })
-export class MedChartLabel {
+@ProxyCmp({ inputs: ["valores"] })
+@Component({ selector: "med-chart-radial", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["valores"] })
+export class MedChartRadial {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
   }
 }
-export declare interface MedChartRadial extends Components.MedChartRadial {
+export declare interface MedChartRadialContent extends Components.MedChartRadialContent {
 }
-@ProxyCmp({ inputs: ["valores"] })
-@Component({ selector: "med-chart-radial", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["valores"] })
-export class MedChartRadial {
+@Component({ selector: "med-chart-radial-content", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class MedChartRadialContent {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface MedChartRadialLabel extends Components.MedChartRadialLabel {
+}
+@ProxyCmp({ inputs: ["color", "neutral", "valores"] })
+@Component({ selector: "med-chart-radial-label", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "neutral", "valores"] })
+export class MedChartRadialLabel {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();

@@ -34,10 +34,7 @@ export class MedAccordion {
     this.expandContent();
   }
 
-  private onClick = (event: Event) => {
-    console.log('med-accordion', new Date().getTime());
-    console.log('med-accordion', event);
-
+  private onClick = () => {
     this.expandContent();
   }
 
@@ -71,20 +68,24 @@ export class MedAccordion {
   }
 
   render() {
-    const {color, size, collapsedState: collapsed, icon} = this;
+    const {color, size, collapsedState, icon} = this;
     return (
       <Host from-stencil class={createColorClasses(color, {
         'med-accordion--full': size !== undefined,
-        'med-accordion--collapsed': collapsed,
+        'med-accordion--collapsed': collapsedState,
         })}>
-        <div class="med-accordion__header" onClick={(event) => this.onClick(event)}>
-          {icon === 'left' && <div class="med-accordion__icon-container med-accordion__icon-container--left">
+        <div class="med-accordion__header">
+          {icon === 'left' && <div class="med-accordion__icon-container med-accordion__icon-container--left" onClick={() => this.onClick()}>
              <ion-icon class="med-icon med-accordion__icon" name="med-baixo"></ion-icon>
           </div>}
 
-          <slot name="header"></slot>
+          <div class="med-accordion__heading" onClick={() => this.onClick()}>
+            <slot name="header"></slot>
+          </div>
 
-          {(!icon || icon === 'right') && <div class="med-accordion__icon-container med-accordion__icon-container--right">
+          <slot name="button"></slot>
+
+          {(!icon || icon === 'right') && <div class="med-accordion__icon-container med-accordion__icon-container--right" onClick={() => this.onClick()}>
             <ion-icon class="med-icon med-accordion__icon" name="med-baixo"></ion-icon>
           </div>}
         </div>

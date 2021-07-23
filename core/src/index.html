@@ -153,6 +153,13 @@
     </ion-app>
 
     <script>
+      const comp = document.querySelector('med-context-menu');
+
+      const compItem = document.querySelector('.med-context-menu__item');
+
+      compItem.addEventListener('click', () => {
+        comp.collapsed = true;
+      })
 
     </script>
   </body>

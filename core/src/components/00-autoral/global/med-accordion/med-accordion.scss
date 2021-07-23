@@ -18,6 +18,11 @@
     padding: $med-spacing-inset-sm;
     box-sizing: border-box;
     line-height: line-height();
+    align-items: center;
+  }
+
+  .med-accordion__heading {
+    width: 100%;
   }
 
   .med-accordion__icon-container {

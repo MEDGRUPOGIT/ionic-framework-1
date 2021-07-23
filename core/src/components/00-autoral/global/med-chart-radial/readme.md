@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type              | Default |
-| --------- | --------- | ----------- | ----------------- | ------- |
-| `valores` | --        |             | `MedRadialItem[]` | `[]`    |
+| Property  | Attribute | Description | Type                  | Default |
+| --------- | --------- | ----------- | --------------------- | ------- |
+| `valores` | --        |             | `MedChartRadiaItem[]` | `[]`    |
 
 
 ----------------------------------------------
