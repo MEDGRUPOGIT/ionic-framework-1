@@ -2,7 +2,7 @@ import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
 
 export default {
-  title: 'Components/Core/Chart Label',
+  title: 'Components/Core/Chart Radial Content',
   decorators: [withDesign],
 };
 
@@ -13,7 +13,7 @@ const Default = ({ total }) => {
       <div class="storybook-only__container">
 
         <!-- component -->
-        <med-chart-label-content total=${total}></med-chart-label-content>
+        <med-chart-radial-content total=${total}></med-chart-radial-content>
         <!-- component -->
 
       </div>
@@ -22,7 +22,7 @@ const Default = ({ total }) => {
 }
 
 export const ChartRadialContent = Default.bind({});
-ChartLabel.parameters = {
+ChartRadialContent.parameters = {
   design: {
     type: 'figma',
     url: 'https://www.figma.com/file/zdbyAa3XpX3loOjJEaXc6E/Quest%C3%B5es?node-id=826%3A1008',

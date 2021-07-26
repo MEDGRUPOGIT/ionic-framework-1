@@ -1,6 +1,5 @@
-:host(.monta-provas-chart-content) {
-
-  .monta-provas-chart__label {
+:host(.med-chart-radial-content) {
+  .med-chart-radial-content__label {
     font-size: var(--med-font-size-nano);
     color: var(--med-color-neutral-dark-10);
     font-weight: var(--med-font-weight-bold);
@@ -9,7 +8,7 @@
     line-height: var(--med-line-height-compressed);
   }
 
-  .monta-provas-chart__number {
+  .med-chart-radial-content__number {
     font-weight: var(--med-font-weight-bold);
     font-size: var(--med-font-size-md);
     color: var(--med-color-neutral-10);
@@ -19,5 +18,4 @@
       font-size: var(--med-font-size-xs);
     }
   }
-
 }
