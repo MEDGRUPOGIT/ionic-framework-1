@@ -37,6 +37,14 @@ Type: `Promise<void>`
 | `"header"`       | Define o conteudo do header.                        |
 
 
+## CSS Custom Properties
+
+| Name           | Description                               |
+| -------------- | ----------------------------------------- |
+| `--background` | Define a cor de background do componente. |
+| `--icon-color` | Define a cor de do icone do componente.   |
+
+
 ## Dependencies
 
 ### Depends on

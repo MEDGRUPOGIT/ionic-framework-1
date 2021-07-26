@@ -14,6 +14,13 @@
 | `text` _(required)_ | `text`    | Define o texto do componente.      | `string`              | `undefined` |
 
 
+## CSS Custom Properties
+
+| Name      | Description                 |
+| --------- | --------------------------- |
+| `--color` | Define a cor do componente. |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

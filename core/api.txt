@@ -136,6 +136,13 @@ ion-badge,prop,dsName,"secondary" | undefined,undefined,false,false
 ion-badge,prop,dsSize,"lg" | "md" | "sm" | "xs" | undefined,undefined,false,false
 ion-badge,prop,mode,"ios" | "md",undefined,false,false
 ion-badge,prop,neutral,string | undefined,undefined,false,false
+ion-badge,css-prop,--background
+ion-badge,css-prop,--border-color
+ion-badge,css-prop,--color
+ion-badge,css-prop,--padding-bottom
+ion-badge,css-prop,--padding-end
+ion-badge,css-prop,--padding-start
+ion-badge,css-prop,--padding-top
 
 ion-button,shadow
 ion-button,prop,buttonType,string,'button',false,false
@@ -1374,12 +1381,15 @@ med-accordion,prop,collapsed,boolean,true,false,true
 med-accordion,prop,icon,"left" | "right" | undefined,undefined,false,true
 med-accordion,prop,size,"full" | undefined,undefined,false,false
 med-accordion,method,toggle,toggle() => Promise<void>
+med-accordion,css-prop,--background
+med-accordion,css-prop,--icon-color
 
 med-agrupador,shadow
 med-agrupador,prop,collapsed,boolean,true,false,true
 med-agrupador,prop,color,string | undefined,undefined,false,false
 med-agrupador,prop,neutral,string | undefined,undefined,false,false
 med-agrupador,method,toggle,toggle(event?: Event | undefined) => Promise<void>
+med-agrupador,css-prop,--color
 
 med-alternativas,shadow
 med-alternativas,prop,alternativaSelecionada,string,undefined,true,true
@@ -1431,6 +1441,7 @@ med-divider,shadow
 med-divider,prop,color,string | undefined,undefined,false,false
 med-divider,prop,neutral,string | undefined,undefined,false,false
 med-divider,prop,text,string,undefined,true,false
+med-divider,css-prop,--color
 
 med-enunciado,shadow
 med-enunciado,prop,imagens,string | string[],undefined,true,true
