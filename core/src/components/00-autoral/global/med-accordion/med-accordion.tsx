@@ -85,12 +85,13 @@ export class MedAccordion {
   }
 
   render() {
-    const {size, icon, collapsed} = this;
+    const {size, icon, collapsedState} = this;
 
     return (
       <Host from-stencil class={createColorClasses(null, {
-          [`med-accordion--${size}`]: size !== undefined,
-          'med-accordion--collapsed': collapsed,
+        'med-accordion': true,
+        [`med-accordion--${size}`]: size !== undefined,
+        'med-accordion--collapsed': collapsedState,
         }, null)}>
         <div class="med-accordion__header">
           {icon === 'left' && <div class="med-accordion__icon-container med-accordion__icon-container--left" onClick={() => this.onClick()}>

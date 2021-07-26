@@ -93,7 +93,7 @@ const TemplateDefault = ({valores}) => {
       <div class="storybook-only__container">
 
         <!-- component -->
-        <med-accordion class="med-accordion" icon="left">
+        <med-accordion icon="left">
 
           <div class="med-accordion-header" slot="header">
             <h4 class="med-accordion-header__heading">Nome da Prova</h4>
