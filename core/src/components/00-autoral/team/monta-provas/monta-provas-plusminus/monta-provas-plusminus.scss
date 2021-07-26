@@ -15,14 +15,16 @@
   justify-content: center;
   align-items: center;
 
-  .icon-minus {
+  .monta-provas-plusminus__icon-minus {
     margin-right: $med-spacing-inline-base;
     cursor: pointer;
+    stroke: var(--med-color-neutral-10);
   }
 
-  .icon-plus {
+  .monta-provas-plusminus__icon-plus {
     margin-left: $med-spacing-inline-base;
     cursor: pointer;
+    stroke: var(--med-color-neutral-10);
   }
 }
 

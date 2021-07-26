@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, Method } from '@stencil/core';
+import { Component, Host, h, Prop, Method, Listen } from '@stencil/core';
 import { createColorClasses } from '../../../../utils/theme';
 
 @Component({
@@ -16,6 +16,13 @@ export class MedContextMenu {
   async toggle(event?: Event) {
     event?.stopPropagation();
     this.collapsed = !this.collapsed;
+  }
+
+  @Listen('click', { target: 'window' })
+  handleClick(event?: Event) {
+    if (!this.collapsed) {
+      this.toggle(event);
+    }
   }
 
   render() {

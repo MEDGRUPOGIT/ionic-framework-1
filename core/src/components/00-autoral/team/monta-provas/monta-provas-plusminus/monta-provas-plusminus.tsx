@@ -28,13 +28,13 @@ export class MontaProvasPlusminus {
         }, null)}
       >
         <ion-icon
-          class="med-icon med-icon--lg icon-minus"
+          class="med-icon med-icon--lg monta-provas-plusminus__icon-minus"
           name="med-menos-circulo"
           onClick={() => this.onClick(PlusMinusStatus.MINUS)}
         ></ion-icon>
         <slot></slot>
         <ion-icon
-          class="med-icon med-icon--lg icon-plus"
+          class="med-icon med-icon--lg monta-provas-plusminus__icon-plus"
           name="med-mais-circulo"
           onClick={() => this.onClick(PlusMinusStatus.PLUS)}
         ></ion-icon>
