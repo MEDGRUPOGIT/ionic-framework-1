@@ -90,6 +90,8 @@ export const DIRECTIVES = [
   d.MedFontZoom,
   d.MedHeader,
   d.MedImageZoom,
+  d.MedList,
+  d.MedListItem,
   d.MedNavbar,
   d.MedOffline,
   d.MedOption,
