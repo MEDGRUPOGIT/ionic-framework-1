@@ -14,15 +14,17 @@ export class MedTiles {
   @Prop() badge?: string;
   @Prop() neutral?: Neutral;
   @Prop() color?: Color;
-  @Prop({reflect:true}) selected = false;
+  @Prop() solid = false;
+  @Prop({ reflect:true }) selected = false;
 
   render() {
-    const {color, neutral, titulo, label, badge, selected} = this;
+    const { color, neutral, titulo, label, badge, selected, solid } = this;
     return (
       <Host
       from-stencil
       class={createColorClasses(color, {
         'med-tiles': true,
+        'med-solid': solid,
         'med-tiles--selected': selected
       }, neutral)}
       >

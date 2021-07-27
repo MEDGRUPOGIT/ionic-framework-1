@@ -7,13 +7,13 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ color, neutral, titulo, label, badge, selected}) => {
+const Template = ({ color, neutral, titulo, label, badge, selected, solid }) => {
   return html`
     <ion-app class="storybook-only">
       <div class="storybook-only__container">
 
         <!-- component -->
-        <med-tiles .color=${color} .neutral=${neutral} .titulo=${titulo} .label=${label} .badge=${badge} .selected=${selected}></med-tiles>
+        <med-tiles .color=${color} .neutral=${neutral} .titulo=${titulo} .label=${label} .badge=${badge} .selected=${selected} .solid=${solid}></med-tiles>
         <!-- component -->
 
       </div>
@@ -62,10 +62,19 @@ Tiles.argTypes = {
   selected: {
     control: { type: 'boolean' },
     description: 'Define o estado do componente.',
-    defaultValue: true,
+    defaultValue: false,
     table: {
       type:  { summary: 'boolean' },
-      defaultValue: { summary: 'true' },
+      defaultValue: { summary: 'false' },
     },
   },
+  /* solid: {
+    control: { type: 'boolean' },
+    description: 'Define o estado do componente.',
+    defaultValue: false,
+    table: {
+      type:  { summary: 'boolean' },
+      defaultValue: { summary: 'false' },
+    },
+  }, */
 };

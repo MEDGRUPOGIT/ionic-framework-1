@@ -2881,6 +2881,7 @@ export namespace Components {
         "label"?: string;
         "neutral"?: Neutral;
         "selected": boolean;
+        "solid": boolean;
         "titulo"?: string;
     }
     interface MedToolbar {
@@ -6591,6 +6592,7 @@ declare namespace LocalJSX {
         "label"?: string;
         "neutral"?: Neutral;
         "selected"?: boolean;
+        "solid"?: boolean;
         "titulo"?: string;
     }
     interface MedToolbar {

@@ -953,6 +953,7 @@ export const MedTiles = /*@__PURE__*/ defineContainer<JSX.MedTiles>('med-tiles',
   'badge',
   'neutral',
   'color',
+  'solid',
   'selected'
 ]);
 

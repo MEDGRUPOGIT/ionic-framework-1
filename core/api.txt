@@ -1488,6 +1488,7 @@ med-tiles,prop,color,string | undefined,undefined,false,false
 med-tiles,prop,label,string | undefined,undefined,false,false
 med-tiles,prop,neutral,string | undefined,undefined,false,false
 med-tiles,prop,selected,boolean,false,false,true
+med-tiles,prop,solid,boolean,false,false,false
 med-tiles,prop,titulo,string | undefined,undefined,false,false
 
 med-toolbar,shadow

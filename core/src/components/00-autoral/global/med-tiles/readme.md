@@ -14,6 +14,7 @@
 | `label`    | `label`    |             | `string \| undefined` | `undefined` |
 | `neutral`  | `neutral`  |             | `string \| undefined` | `undefined` |
 | `selected` | `selected` |             | `boolean`             | `false`     |
+| `solid`    | `solid`    |             | `boolean`             | `false`     |
 | `titulo`   | `titulo`   |             | `string \| undefined` | `undefined` |
 
 
