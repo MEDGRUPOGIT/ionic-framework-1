@@ -1482,6 +1482,14 @@ med-rate-like,shadow
 med-rate-like,prop,status,RateStatus.DISLIKE | RateStatus.LIKE | undefined,undefined,false,true
 med-rate-like,event,medChange,RateStatus.DISLIKE | RateStatus.LIKE,true
 
+med-tiles,shadow
+med-tiles,prop,badge,string | undefined,undefined,false,false
+med-tiles,prop,color,string | undefined,undefined,false,false
+med-tiles,prop,label,string | undefined,undefined,false,false
+med-tiles,prop,neutral,string | undefined,undefined,false,false
+med-tiles,prop,selected,boolean,false,false,true
+med-tiles,prop,titulo,string | undefined,undefined,false,false
+
 med-toolbar,shadow
 med-toolbar,prop,color,string | undefined,undefined,false,false
 med-toolbar,prop,neutral,string | undefined,undefined,false,false

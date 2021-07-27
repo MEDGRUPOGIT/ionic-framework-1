@@ -947,6 +947,16 @@ export const MedRateLike = /*@__PURE__*/ defineContainer<JSX.MedRateLike>('med-r
 ]);
 
 
+export const MedTiles = /*@__PURE__*/ defineContainer<JSX.MedTiles>('med-tiles', [
+  'titulo',
+  'label',
+  'badge',
+  'neutral',
+  'color',
+  'selected'
+]);
+
+
 export const MedToolbar = /*@__PURE__*/ defineContainer<JSX.MedToolbar>('med-toolbar', [
   'color',
   'neutral'

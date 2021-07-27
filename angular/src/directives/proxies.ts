@@ -1135,6 +1135,17 @@ export class MedRateLike {
     proxyOutputs(this, this.el, ["medChange"]);
   }
 }
+export declare interface MedTiles extends Components.MedTiles {
+}
+@ProxyCmp({ inputs: ["badge", "color", "label", "neutral", "selected", "titulo"] })
+@Component({ selector: "med-tiles", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["badge", "color", "label", "neutral", "selected", "titulo"] })
+export class MedTiles {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedToolbar extends Components.MedToolbar {
 }
 @ProxyCmp({ inputs: ["color", "neutral"] })

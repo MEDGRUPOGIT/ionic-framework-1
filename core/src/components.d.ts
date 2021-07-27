@@ -2875,6 +2875,14 @@ export namespace Components {
     interface MedRateLike {
         "status"?: RateStatus;
     }
+    interface MedTiles {
+        "badge"?: string;
+        "color"?: Color;
+        "label"?: string;
+        "neutral"?: Neutral;
+        "selected": boolean;
+        "titulo"?: string;
+    }
     interface MedToolbar {
         "color"?: Color;
         "neutral"?: Neutral;
@@ -3544,6 +3552,12 @@ declare global {
         prototype: HTMLMedRateLikeElement;
         new (): HTMLMedRateLikeElement;
     };
+    interface HTMLMedTilesElement extends Components.MedTiles, HTMLStencilElement {
+    }
+    var HTMLMedTilesElement: {
+        prototype: HTMLMedTilesElement;
+        new (): HTMLMedTilesElement;
+    };
     interface HTMLMedToolbarElement extends Components.MedToolbar, HTMLStencilElement {
     }
     var HTMLMedToolbarElement: {
@@ -3672,6 +3686,7 @@ declare global {
         "med-option": HTMLMedOptionElement;
         "med-rate-bar": HTMLMedRateBarElement;
         "med-rate-like": HTMLMedRateLikeElement;
+        "med-tiles": HTMLMedTilesElement;
         "med-toolbar": HTMLMedToolbarElement;
         "med-tooltip": HTMLMedTooltipElement;
         "monta-provas-plusminus": HTMLMontaProvasPlusminusElement;
@@ -6570,6 +6585,14 @@ declare namespace LocalJSX {
         "onMedChange"?: (event: CustomEvent<RateStatus>) => void;
         "status"?: RateStatus;
     }
+    interface MedTiles {
+        "badge"?: string;
+        "color"?: Color;
+        "label"?: string;
+        "neutral"?: Neutral;
+        "selected"?: boolean;
+        "titulo"?: string;
+    }
     interface MedToolbar {
         "color"?: Color;
         "neutral"?: Neutral;
@@ -6694,6 +6717,7 @@ declare namespace LocalJSX {
         "med-option": MedOption;
         "med-rate-bar": MedRateBar;
         "med-rate-like": MedRateLike;
+        "med-tiles": MedTiles;
         "med-toolbar": MedToolbar;
         "med-tooltip": MedTooltip;
         "monta-provas-plusminus": MontaProvasPlusminus;
@@ -6812,6 +6836,7 @@ declare module "@stencil/core" {
             "med-option": LocalJSX.MedOption & JSXBase.HTMLAttributes<HTMLMedOptionElement>;
             "med-rate-bar": LocalJSX.MedRateBar & JSXBase.HTMLAttributes<HTMLMedRateBarElement>;
             "med-rate-like": LocalJSX.MedRateLike & JSXBase.HTMLAttributes<HTMLMedRateLikeElement>;
+            "med-tiles": LocalJSX.MedTiles & JSXBase.HTMLAttributes<HTMLMedTilesElement>;
             "med-toolbar": LocalJSX.MedToolbar & JSXBase.HTMLAttributes<HTMLMedToolbarElement>;
             "med-tooltip": LocalJSX.MedTooltip & JSXBase.HTMLAttributes<HTMLMedTooltipElement>;
             "monta-provas-plusminus": LocalJSX.MontaProvasPlusminus & JSXBase.HTMLAttributes<HTMLMontaProvasPlusminusElement>;

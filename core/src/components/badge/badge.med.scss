@@ -7,7 +7,7 @@
    * @prop --color: Define a cor de texto do componente.
    */
   --background: #{md-color(brand, 3)};
-  --color: md-color(brand, contrast-1);
+  --color: #{md-color(brand, contrast-1)};
   --padding-bottom: 0;
   --padding-end: #{$med-spacing-inline-base};
   --padding-start: #{$med-spacing-inline-base};

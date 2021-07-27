@@ -167,6 +167,19 @@ export default defineComponent({
 | `--padding-top`    | Top padding of the badge                                                                                 |
 
 
+## Dependencies
+
+### Used by
+
+ - [med-tiles](../00-autoral/global/med-tiles)
+
+### Graph
+```mermaid
+graph TD;
+  med-tiles --> ion-badge
+  style ion-badge fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

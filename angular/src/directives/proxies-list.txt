@@ -95,6 +95,7 @@ export const DIRECTIVES = [
   d.MedOption,
   d.MedRateBar,
   d.MedRateLike,
+  d.MedTiles,
   d.MedToolbar,
   d.MedTooltip,
   d.MontaProvasPlusminus
