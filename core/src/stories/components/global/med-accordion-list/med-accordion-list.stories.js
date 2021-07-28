@@ -14,9 +14,10 @@ const TemplateDefault = ({noBorder, icon}) => {
         margin: 0;
       }
 
-      p {
+      p, li {
         text-align: left;
         margin: 0;
+        color: #fff;
       }
 
       .med-accordion__content {
@@ -26,7 +27,7 @@ const TemplateDefault = ({noBorder, icon}) => {
     </style>
 
     <ion-app>
-      <div class="storybook-only__container">
+      <ion-content class="storybook-only__container">
 
         <!-- component -->
         <med-accordion-list>
@@ -52,10 +53,192 @@ const TemplateDefault = ({noBorder, icon}) => {
               <li>Hot Pie</li>
             </ul>
           </med-accordion-item>
+          <med-accordion-item .no-border=${noBorder} .icon=${icon}>
+            <div slot="header">
+              <h4>Header</h4>
+            </div>
+            <ul slot="content">
+              <li>Mace Tyrell</li>
+              <li>Tyrion Lannister</li>
+              <li>Sansa Stark</li>
+              <li>Catelyn Stark</li>
+              <li>Roose Bolton</li>
+              <li>Jon Snow</li>
+              <li>Hot Pie</li>
+            </ul>
+          </med-accordion-item>
+          <med-accordion-item .no-border=${noBorder} .icon=${icon}>
+            <div slot="header">
+              <h4>Header</h4>
+            </div>
+            <ul slot="content">
+              <li>Mace Tyrell</li>
+              <li>Tyrion Lannister</li>
+              <li>Sansa Stark</li>
+              <li>Catelyn Stark</li>
+              <li>Roose Bolton</li>
+              <li>Jon Snow</li>
+              <li>Hot Pie</li>
+            </ul>
+          </med-accordion-item>
+          <med-accordion-item .no-border=${noBorder} .icon=${icon}>
+            <div slot="header">
+              <h4>Header</h4>
+            </div>
+            <ul slot="content">
+              <li>Mace Tyrell</li>
+              <li>Tyrion Lannister</li>
+              <li>Sansa Stark</li>
+              <li>Catelyn Stark</li>
+              <li>Roose Bolton</li>
+              <li>Jon Snow</li>
+              <li>Hot Pie</li>
+            </ul>
+          </med-accordion-item>
+          <med-accordion-item .no-border=${noBorder} .icon=${icon}>
+            <div slot="header">
+              <h4>Header</h4>
+            </div>
+            <ul slot="content">
+              <li>Mace Tyrell</li>
+              <li>Tyrion Lannister</li>
+              <li>Sansa Stark</li>
+              <li>Catelyn Stark</li>
+              <li>Roose Bolton</li>
+              <li>Jon Snow</li>
+              <li>Hot Pie</li>
+            </ul>
+          </med-accordion-item>
+          <med-accordion-item .no-border=${noBorder} .icon=${icon}>
+            <div slot="header">
+              <h4>Header</h4>
+            </div>
+            <ul slot="content">
+              <li>Mace Tyrell</li>
+              <li>Tyrion Lannister</li>
+              <li>Sansa Stark</li>
+              <li>Catelyn Stark</li>
+              <li>Roose Bolton</li>
+              <li>Jon Snow</li>
+              <li>Hot Pie</li>
+            </ul>
+          </med-accordion-item>
+          <med-accordion-item .no-border=${noBorder} .icon=${icon}>
+            <div slot="header">
+              <h4>Header</h4>
+            </div>
+            <ul slot="content">
+              <li>Mace Tyrell</li>
+              <li>Tyrion Lannister</li>
+              <li>Sansa Stark</li>
+              <li>Catelyn Stark</li>
+              <li>Roose Bolton</li>
+              <li>Jon Snow</li>
+              <li>Hot Pie</li>
+            </ul>
+          </med-accordion-item>
+          <med-accordion-item .no-border=${noBorder} .icon=${icon}>
+            <div slot="header">
+              <h4>Header</h4>
+            </div>
+            <ul slot="content">
+              <li>Mace Tyrell</li>
+              <li>Tyrion Lannister</li>
+              <li>Sansa Stark</li>
+              <li>Catelyn Stark</li>
+              <li>Roose Bolton</li>
+              <li>Jon Snow</li>
+              <li>Hot Pie</li>
+            </ul>
+          </med-accordion-item>
+          <med-accordion-item .no-border=${noBorder} .icon=${icon}>
+            <div slot="header">
+              <h4>Header</h4>
+            </div>
+            <ul slot="content">
+              <li>Mace Tyrell</li>
+              <li>Tyrion Lannister</li>
+              <li>Sansa Stark</li>
+              <li>Catelyn Stark</li>
+              <li>Roose Bolton</li>
+              <li>Jon Snow</li>
+              <li>Hot Pie</li>
+            </ul>
+          </med-accordion-item>
+          <med-accordion-item .no-border=${noBorder} .icon=${icon}>
+            <div slot="header">
+              <h4>Header</h4>
+            </div>
+            <ul slot="content">
+              <li>Mace Tyrell</li>
+              <li>Tyrion Lannister</li>
+              <li>Sansa Stark</li>
+              <li>Catelyn Stark</li>
+              <li>Roose Bolton</li>
+              <li>Jon Snow</li>
+              <li>Hot Pie</li>
+            </ul>
+          </med-accordion-item>
+          <med-accordion-item .no-border=${noBorder} .icon=${icon}>
+            <div slot="header">
+              <h4>Header</h4>
+            </div>
+            <ul slot="content">
+              <li>Mace Tyrell</li>
+              <li>Tyrion Lannister</li>
+              <li>Sansa Stark</li>
+              <li>Catelyn Stark</li>
+              <li>Roose Bolton</li>
+              <li>Jon Snow</li>
+              <li>Hot Pie</li>
+            </ul>
+          </med-accordion-item>
+          <med-accordion-item .no-border=${noBorder} .icon=${icon}>
+            <div slot="header">
+              <h4>Header</h4>
+            </div>
+            <ul slot="content">
+              <li>Mace Tyrell</li>
+              <li>Tyrion Lannister</li>
+              <li>Sansa Stark</li>
+              <li>Catelyn Stark</li>
+              <li>Roose Bolton</li>
+              <li>Jon Snow</li>
+              <li>Hot Pie</li>
+            </ul>
+          </med-accordion-item>
+          <med-accordion-item .no-border=${noBorder} .icon=${icon}>
+            <div slot="header">
+              <h4>Header</h4>
+            </div>
+            <ul slot="content">
+              <li>Mace Tyrell</li>
+              <li>Tyrion Lannister</li>
+              <li>Sansa Stark</li>
+              <li>Catelyn Stark</li>
+              <li>Roose Bolton</li>
+              <li>Jon Snow</li>
+              <li>Hot Pie</li>
+            </ul>
+          </med-accordion-item>
+          <med-accordion-item .no-border=${noBorder} .icon=${icon}>
+            <div slot="header">
+              <h4>Header</h4>
+            </div>
+            <ul slot="content">
+              <li>Mace Tyrell</li>
+              <li>Tyrion Lannister</li>
+              <li>Sansa Stark</li>
+              <li>Catelyn Stark</li>
+              <li>Roose Bolton</li>
+              <li>Jon Snow</li>
+              <li>Hot Pie</li>
+            </ul>
+          </med-accordion-item>
         </med-accordion-list>
         <!-- component -->
 
-      </div>
+      </ion-content>
     </ion-app>
   `
 }

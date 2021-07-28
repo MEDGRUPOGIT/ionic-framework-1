@@ -1388,8 +1388,12 @@ med-accordion-item,shadow
 med-accordion-item,prop,icon,"left" | "right" | undefined,undefined,false,true
 med-accordion-item,prop,noBorder,boolean,false,false,true
 med-accordion-item,event,toggle,any,true
+med-accordion-item,css-prop,--background
+med-accordion-item,css-prop,--icon-color
 
 med-accordion-list,shadow
+med-accordion-list,prop,margin,"lg" | "md" | "sm" | "xs" | undefined,undefined,false,false
+med-accordion-list,prop,noBorder,boolean,false,false,true
 
 med-agrupador,shadow
 med-agrupador,prop,collapsed,boolean,true,false,true

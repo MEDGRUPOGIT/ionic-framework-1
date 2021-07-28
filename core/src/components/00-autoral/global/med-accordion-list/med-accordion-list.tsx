@@ -1,7 +1,8 @@
 
 import { Animation } from '../../../../utils/animation/animation-interface';
 import { createAnimation } from '../../../../utils/animation/animation';
-import { Component, ComponentInterface, Element, h, Listen, Host } from '@stencil/core';
+import { Component, ComponentInterface, Element, h, Listen, Host, Prop } from '@stencil/core';
+import { createColorClasses } from '../../../../utils/theme';
 
 @Component({
   tag: 'med-accordion-list',
@@ -11,16 +12,16 @@ import { Component, ComponentInterface, Element, h, Listen, Host } from '@stenci
 export class Accordion implements ComponentInterface {
   @Element() hostElement!: any;
 
+  @Prop({ reflect:true }) noBorder = false;
+
+  @Prop() margin?: 'xs' | 'sm' | 'md' | 'lg';
+
   public elementsToShift!: Array<any>;
   public blocker!: HTMLElement;
   public currentlyOpen: CustomEvent | any = null;
-
   public shiftDownAnimation!: Animation;
   public blockerDownAnimation!: Animation;
-
-  componentDidLoad() {
-    this.blocker = this.hostElement.shadowRoot.querySelector('.blocker');
-  }
+  public teste!: Animation;
 
   @Listen('toggle')
   async handleToggle(ev: any) {
@@ -130,21 +131,42 @@ export class Accordion implements ComponentInterface {
       .duration(closeAnimationTime)
       .easing('cubic-bezier(0.32,0.72,0,1)');
 
-    await Promise.all([shiftUpAnimation.play(), blockerUpAnimation.play()]);
+    const teste: Animation = createAnimation()
+      .addElement(ev.detail.content)
+      .afterStyles({
+        ['transform']: 'translateY(0)',
+      })
+      .to('transform', `translateY(-${amountToShift}px)`)
+      .afterAddWrite(() => {
+        this.shiftDownAnimation.destroy();
+        this.blockerDownAnimation.destroy();
+      })
+      .duration(closeAnimationTime)
+      .easing('cubic-bezier(0.32,0.72,0,1)');
+
+    await Promise.all([shiftUpAnimation.play(), blockerUpAnimation.play(), teste.play()]);
 
     ev.detail.content.style.display = 'none';
 
     shiftUpAnimation.destroy();
     blockerUpAnimation.destroy();
+    teste.destroy();
 
     return true;
   }
 
   render() {
+    const { noBorder, margin } = this;
+
     return (
-      <Host>
+      <Host from-stencil
+        class={createColorClasses(null, {
+          'med-accordion-list': true,
+          'med-accordion-list--no-border': noBorder,
+          [`med-accordion-list--${margin}`]: margin !== undefined
+        }, null)}>
         <slot></slot>
-        <div class="blocker"></div>
+        <div class="med-accordion-list__blocker" ref={(el) => this.blocker = el as HTMLDivElement}></div>
       </Host>
     );
   }

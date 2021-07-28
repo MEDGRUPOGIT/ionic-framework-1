@@ -3,14 +3,56 @@
    * @prop --background: Define a cor de background do componente.
    */
   --background: var(--med-color-neutral-1);
+  --border: #{$med-spacing-stack-xxxs} solid var(--med-color-neutral-1);
 }
 
 :host(.med-accordion-list) {
   display: block;
+
+  .med-accordion-list__blocker {
+    height: 50px;
+    background-color: var( --background);
+    will-change: transform;
+    border-radius: $med-border-radius-sm;
+  }
 }
 
-:host(.med-accordion-list) .blocker {
-  height: 50px;
-  background-color: var( --background);
-  will-change: transform;
+// ////////////////////
+// slotted
+// ////////////////////
+
+:host(.med-accordion-list) ::slotted(med-accordion-item) {
+  border-bottom: var(--border);
+}
+
+:host(.med-accordion-list) ::slotted(med-accordion-item:last-child) {
+  border-bottom: none !important;
+}
+
+// ////////////////////
+// margins
+// ////////////////////
+
+:host(.med-accordion-list--xs) ::slotted(med-accordion-item) {
+  --border: #{$med-spacing-stack-nano} solid var(--med-color-neutral-1);
+}
+
+:host(.med-accordion-list--sm) ::slotted(med-accordion-item) {
+  --border: #{$med-spacing-stack-xxxs} solid var(--med-color-neutral-1);
+}
+
+:host(.med-accordion-list--md) ::slotted(med-accordion-item) {
+  --border: #{$med-spacing-stack-base} solid var(--med-color-neutral-1);
+}
+
+:host(.med-accordion-list--lg) ::slotted(med-accordion-item) {
+  --border: #{$med-spacing-stack-xxs} solid var(--med-color-neutral-1);
+}
+
+// ////////////////////
+// border
+// ////////////////////
+
+:host(.mmed-accordion-item--no-border) .med-accordion-list__blocker {
+  border-radius: 0;
 }

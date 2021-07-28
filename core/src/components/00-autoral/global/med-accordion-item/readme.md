@@ -20,6 +20,14 @@
 | `toggle` |             | `CustomEvent<any>` |
 
 
+## CSS Custom Properties
+
+| Name           | Description                               |
+| -------------- | ----------------------------------------- |
+| `--background` | Define a cor de background do componente. |
+| `--icon-color` | Define a cor de do icone do componente.   |
+
+
 ## Dependencies
 
 ### Depends on

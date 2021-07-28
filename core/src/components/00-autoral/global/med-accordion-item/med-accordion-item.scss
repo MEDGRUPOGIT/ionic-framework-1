@@ -7,15 +7,16 @@
    */
   --background: var(--med-color-neutral-2);
   --icon-color: var(--med-color-neutral-10);
+  --border-radius: #{$med-border-radius-sm};
 }
 
 :host(.med-accordion-item) {
   display: block;
   height: 100%;
   overflow: auto;
-  background-color: var(--background);
   will-change: transform;
-  border-radius: $med-border-radius-sm;
+  border-radius: var(--border-radius);
+  overflow: hidden;
 
   .med-accordion-item__header {
     display: flex;
@@ -25,6 +26,10 @@
     box-sizing: border-box;
     line-height: line-height();
     align-items: center;
+    background-color: var(--background);
+    position: relative;
+    z-index: 9;
+    border-radius: var(--border-radius);
   }
 
   .med-accordion-item__heading {
@@ -54,6 +59,9 @@
     display: none;
     padding: 0 20px;
     overflow: auto;
+    background-color: var(--background);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
   }
 }
 

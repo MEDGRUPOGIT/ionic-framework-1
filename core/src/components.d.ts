@@ -2763,6 +2763,8 @@ export namespace Components {
         "noBorder": boolean;
     }
     interface MedAccordionList {
+        "margin"?: 'xs' | 'sm' | 'md' | 'lg';
+        "noBorder": boolean;
     }
     interface MedAgrupador {
         /**
@@ -6515,6 +6517,8 @@ declare namespace LocalJSX {
         "onToggle"?: (event: CustomEvent<any>) => void;
     }
     interface MedAccordionList {
+        "margin"?: 'xs' | 'sm' | 'md' | 'lg';
+        "noBorder"?: boolean;
     }
     interface MedAgrupador {
         /**

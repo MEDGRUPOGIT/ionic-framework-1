@@ -4,6 +4,10 @@
   --margin: 0;
 }
 
+// ////////////////////
+// slotted
+// ////////////////////
+
 :host(.med-list) ::slotted(med-list-item) {
   margin: var(--margin);
 }
@@ -13,12 +17,11 @@
 }
 
 // ////////////////////
-// sizes
+// margins
 // ////////////////////
 
 :host(.med-list--xs) ::slotted(med-list-item) {
   --margin: 0 0 #{$med-spacing-stack-nano} 0;
-
 }
 
 :host(.med-list--sm) ::slotted(med-list-item) {
