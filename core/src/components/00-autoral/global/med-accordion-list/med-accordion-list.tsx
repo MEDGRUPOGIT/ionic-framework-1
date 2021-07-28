@@ -2,14 +2,13 @@
 import { Animation } from '../../../../utils/animation/animation-interface';
 import { createAnimation } from '../../../../utils/animation/animation';
 import { Component, ComponentInterface, Element, h, Listen, Host } from '@stencil/core';
-import { createColorClasses } from '../../../../utils/theme';
 
 @Component({
   tag: 'med-accordion-list',
   styleUrl: 'med-accordion-list.scss',
   shadow: true,
 })
-export class MedAccordionList implements ComponentInterface {
+export class Accordion implements ComponentInterface {
   @Element() hostElement!: any;
 
   public elementsToShift!: Array<any>;
@@ -143,9 +142,7 @@ export class MedAccordionList implements ComponentInterface {
 
   render() {
     return (
-      <Host from-stencil class={createColorClasses(null, {
-        'med-accordion-list': true,
-        }, null)}>
+      <Host>
         <slot></slot>
         <div class="blocker"></div>
       </Host>

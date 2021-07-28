@@ -2,8 +2,6 @@
 import type * as d from './proxies';
 
 export const DIRECTIVES = [
-  d.HvAccordion,
-  d.HvAccordionItem,
   d.IonApp,
   d.IonAvatar,
   d.IonBackButton,
@@ -76,6 +74,8 @@ export const DIRECTIVES = [
   d.IonToggle,
   d.IonToolbar,
   d.MedAccordion,
+  d.MedAccordionItem,
+  d.MedAccordionList,
   d.MedAgrupador,
   d.MedAlternativas,
   d.MedAutocomplete,

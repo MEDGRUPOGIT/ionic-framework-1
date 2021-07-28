@@ -8,14 +8,6 @@ import type { JSX } from '@ionic/core';
 
 
 
-export const HvAccordion = /*@__PURE__*/ defineContainer<JSX.HvAccordion>('hv-accordion');
-
-
-export const HvAccordionItem = /*@__PURE__*/ defineContainer<JSX.HvAccordionItem>('hv-accordion-item', [
-  'toggle'
-]);
-
-
 export const IonAvatar = /*@__PURE__*/ defineContainer<JSX.IonAvatar>('ion-avatar');
 
 
@@ -825,6 +817,16 @@ export const MedAccordion = /*@__PURE__*/ defineContainer<JSX.MedAccordion>('med
   'icon',
   'collapsed'
 ]);
+
+
+export const MedAccordionItem = /*@__PURE__*/ defineContainer<JSX.MedAccordionItem>('med-accordion-item', [
+  'noBorder',
+  'icon',
+  'toggle'
+]);
+
+
+export const MedAccordionList = /*@__PURE__*/ defineContainer<JSX.MedAccordionList>('med-accordion-list');
 
 
 export const MedAgrupador = /*@__PURE__*/ defineContainer<JSX.MedAgrupador>('med-agrupador', [

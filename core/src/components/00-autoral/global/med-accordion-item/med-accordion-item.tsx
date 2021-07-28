@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, Element, Event, EventEmitter, h, Host, Listen, State, Prop } from '@stencil/core';
+import { Component, ComponentInterface, Element, Event, EventEmitter, h, Host, State, Prop } from '@stencil/core';
 import { createColorClasses } from '../../../../utils/theme';
 
 @Component({
@@ -9,11 +9,7 @@ import { createColorClasses } from '../../../../utils/theme';
 export class MedAccordionItem implements ComponentInterface {
   @Element() hostElement!: any;
 
-  public content!: HTMLDivElement;
-
-  private isTransitioning: boolean = false;
-
-  @Prop() border?: 'full';
+  @Prop({ reflect:true }) noBorder = false;
 
   @Prop({ reflect: true }) icon?: 'left' | 'right';
 
@@ -21,12 +17,14 @@ export class MedAccordionItem implements ComponentInterface {
 
   @Event() toggle!: EventEmitter;
 
-  componentDidLoad() {
-    this.content = this.hostElement.shadowRoot.querySelector('.content');
+  public content!: HTMLDivElement;
+  private isTransitioning = false;
+
+  private onClick = () => {
+    this.toggleOpen();
   }
 
-  @Listen('click')
-  toggleOpen() {
+  private toggleOpen() {
     if (this.isTransitioning) {
       return;
     }
@@ -51,26 +49,27 @@ export class MedAccordionItem implements ComponentInterface {
   }
 
   render() {
-    const {size, icon} = this;
+    const { noBorder, icon } = this;
 
     return (
       <Host from-stencil class={createColorClasses(null, {
         'med-accordion-item': true,
+        'med-accordion-item--no-border': noBorder,
         }, null)}>
-        <div class="header">
-          {icon === 'left' && <div class="med-accordion__icon-container med-accordion__icon-container--left" onClick={() => this.onClick()}>
-             <ion-icon class="med-icon med-accordion__icon" name="med-baixo"></ion-icon>
+        <div class="med-accordion-item__header">
+          {icon === 'left' && <div class="med-accordion-item__icon-container med-accordion-item__icon-container--left" onClick={() => this.onClick()}>
+             <ion-icon class="med-icon med-accordion-item__icon" name="med-baixo"></ion-icon>
           </div>}
 
-          <div class="med-accordion__heading" onClick={() => this.onClick()}>
+          <div class="med-accordion-item__heading" onClick={() => this.onClick()}>
             <slot name="header"></slot>
           </div>
 
-          {(!icon || icon === 'right') && <div class="med-accordion__icon-container med-accordion__icon-container--right" onClick={() => this.onClick()}>
-            <ion-icon class="med-icon med-accordion__icon" name="med-baixo"></ion-icon>
+          {(!icon || icon === 'right') && <div class="med-accordion-item__icon-container med-accordion-item__icon-container--right" onClick={() => this.onClick()}>
+            <ion-icon class="med-icon med-accordion-item__icon" name="med-baixo"></ion-icon>
           </div>}
         </div>
-        <div class="content">
+        <div class="med-accordion-item__content" ref={(el) => this.content = el as HTMLDivElement}>
           <slot name="content"></slot>
         </div>
       </Host>

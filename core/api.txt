@@ -1,9 +1,4 @@
 
-hv-accordion,shadow
-
-hv-accordion-item,shadow
-hv-accordion-item,event,toggle,any,true
-
 ion-action-sheet,scoped
 ion-action-sheet,prop,animated,boolean,true,false,false
 ion-action-sheet,prop,backdropDismiss,boolean,true,false,false
@@ -1388,6 +1383,13 @@ med-accordion,prop,size,"full" | undefined,undefined,false,false
 med-accordion,method,toggle,toggle() => Promise<void>
 med-accordion,css-prop,--background
 med-accordion,css-prop,--icon-color
+
+med-accordion-item,shadow
+med-accordion-item,prop,icon,"left" | "right" | undefined,undefined,false,true
+med-accordion-item,prop,noBorder,boolean,false,false,true
+med-accordion-item,event,toggle,any,true
+
+med-accordion-list,shadow
 
 med-agrupador,shadow
 med-agrupador,prop,collapsed,boolean,true,false,true
