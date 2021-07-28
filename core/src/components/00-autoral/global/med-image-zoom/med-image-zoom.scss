@@ -44,7 +44,7 @@
 
   .zoom-imagem {
     width: auto;
-    max-width: calc(100% - 100px);
+    max-width: calc(100% - 50px);
     height: auto;
     max-height: calc(100% - 100px);
     -webkit-user-drag: none;
@@ -55,6 +55,10 @@
 
 
   }
+
+.swiper-slide-zoomed .zoom-legenda-container {
+  display: none !important;
+}
 
   .zoom-legenda-container {
     padding: 16px 52px;
