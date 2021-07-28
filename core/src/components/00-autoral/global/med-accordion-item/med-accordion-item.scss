@@ -1,0 +1,41 @@
+@import "../../../../../med-components/abstracts";
+
+:host {
+  /**
+   * @prop --background: Define a cor de background do componente.
+   * @prop  --icon-color: Define a cor de do icone do componente.
+   */
+  --background: var(--med-color-neutral-2);
+  --icon-color: var(--med-color-neutral-10);
+}
+
+:host(.med-accordion-item) {
+  display: block;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--background);
+  will-change: transform;
+  border-radius: $med-border-radius-sm;
+}
+
+:host(.med-accordion-item) .header {
+  display: flex;
+  cursor: pointer;
+  width: 100%;
+  padding: $med-spacing-inset-sm;
+  box-sizing: border-box;
+  line-height: line-height();
+  align-items: center;
+}
+
+:host(.med-accordion-item) .icon {
+  stroke: var(--icon-color);
+  font-size: 32px;
+  transform: rotate(180deg);
+}
+
+:host(.med-accordion-item) .content {
+  display: none;
+  padding: 0 20px;
+  overflow: auto;
+}

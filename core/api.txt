@@ -1,4 +1,9 @@
 
+hv-accordion,shadow
+
+hv-accordion-item,shadow
+hv-accordion-item,event,toggle,any,true
+
 ion-action-sheet,scoped
 ion-action-sheet,prop,animated,boolean,true,false,false
 ion-action-sheet,prop,backdropDismiss,boolean,true,false,false

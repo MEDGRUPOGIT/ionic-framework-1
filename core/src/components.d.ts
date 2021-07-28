@@ -2758,6 +2758,10 @@ export namespace Components {
         "size"?: 'full';
         "toggle": () => Promise<void>;
     }
+    interface MedAccordionItem {
+    }
+    interface MedAccordionList {
+    }
     interface MedAgrupador {
         /**
           * Define o estado do componente.
@@ -3427,6 +3431,18 @@ declare global {
         prototype: HTMLMedAccordionElement;
         new (): HTMLMedAccordionElement;
     };
+    interface HTMLMedAccordionItemElement extends Components.MedAccordionItem, HTMLStencilElement {
+    }
+    var HTMLMedAccordionItemElement: {
+        prototype: HTMLMedAccordionItemElement;
+        new (): HTMLMedAccordionItemElement;
+    };
+    interface HTMLMedAccordionListElement extends Components.MedAccordionList, HTMLStencilElement {
+    }
+    var HTMLMedAccordionListElement: {
+        prototype: HTMLMedAccordionListElement;
+        new (): HTMLMedAccordionListElement;
+    };
     interface HTMLMedAgrupadorElement extends Components.MedAgrupador, HTMLStencilElement {
     }
     var HTMLMedAgrupadorElement: {
@@ -3666,6 +3682,8 @@ declare global {
         "ion-toolbar": HTMLIonToolbarElement;
         "ion-virtual-scroll": HTMLIonVirtualScrollElement;
         "med-accordion": HTMLMedAccordionElement;
+        "med-accordion-item": HTMLMedAccordionItemElement;
+        "med-accordion-list": HTMLMedAccordionListElement;
         "med-agrupador": HTMLMedAgrupadorElement;
         "med-alternativas": HTMLMedAlternativasElement;
         "med-autocomplete": HTMLMedAutocompleteElement;
@@ -6461,6 +6479,11 @@ declare namespace LocalJSX {
          */
         "size"?: 'full';
     }
+    interface MedAccordionItem {
+        "onToggle"?: (event: CustomEvent<any>) => void;
+    }
+    interface MedAccordionList {
+    }
     interface MedAgrupador {
         /**
           * Define o estado do componente.
@@ -6698,6 +6721,8 @@ declare namespace LocalJSX {
         "ion-toolbar": IonToolbar;
         "ion-virtual-scroll": IonVirtualScroll;
         "med-accordion": MedAccordion;
+        "med-accordion-item": MedAccordionItem;
+        "med-accordion-list": MedAccordionList;
         "med-agrupador": MedAgrupador;
         "med-alternativas": MedAlternativas;
         "med-autocomplete": MedAutocomplete;
@@ -6817,6 +6842,8 @@ declare module "@stencil/core" {
             "ion-toolbar": LocalJSX.IonToolbar & JSXBase.HTMLAttributes<HTMLIonToolbarElement>;
             "ion-virtual-scroll": LocalJSX.IonVirtualScroll & JSXBase.HTMLAttributes<HTMLIonVirtualScrollElement>;
             "med-accordion": LocalJSX.MedAccordion & JSXBase.HTMLAttributes<HTMLMedAccordionElement>;
+            "med-accordion-item": LocalJSX.MedAccordionItem & JSXBase.HTMLAttributes<HTMLMedAccordionItemElement>;
+            "med-accordion-list": LocalJSX.MedAccordionList & JSXBase.HTMLAttributes<HTMLMedAccordionListElement>;
             "med-agrupador": LocalJSX.MedAgrupador & JSXBase.HTMLAttributes<HTMLMedAgrupadorElement>;
             "med-alternativas": LocalJSX.MedAlternativas & JSXBase.HTMLAttributes<HTMLMedAlternativasElement>;
             "med-autocomplete": LocalJSX.MedAutocomplete & JSXBase.HTMLAttributes<HTMLMedAutocompleteElement>;

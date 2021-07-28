@@ -39,127 +39,55 @@
         --background: #fafafa;
       }
 
-
-      .med-accordion-header {
-        display: flex;
-        align-items: center;
-        width: 100%;
-      }
-
-      .med-accordion-header__heading {
-        font-size: var(--med-font-size-xs);
-        font-weight: var(--med-font-weight-semibold);
-        line-height: var(--med-line-height-default);
-        color: var(--med-color-neutral-10);
+      h4 {
+        text-align: left;
         margin: 0;
-        padding: 0;
-        width: 100%;
-        text-align: center;
       }
 
-      .monta-provas-accordion__button {
-        --font-size: 24px;
-        --padding: 0;
-        --width: 24px;
-        --height: 24px;
-      }
-
-      .monta-provas-chart {
-        background: var(--med-color-neutral-2);
-        padding: 0 var(--med-spacing-stretch-md);
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        max-width: 400px;
-        margin: 0 auto;
-      }
-
-      .monta-provas-chart__total {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        line-height: var(--med-line-height-compressed);
-        text-align: center;
-      }
-
-      .monta-provas-chart__label {
-        font-size: var(--med-font-size-nano);
-        color: var(--med-color-neutral-dark-10);
-        font-weight: var(--med-font-weight-bold);
-      }
-
-      .monta-provas-chart__number {
-        font-weight: var(--med-font-weight-bold);
-        font-size: var(--med-font-size-md);
-        color: var(--med-color-neutral-10);
-      }
-
-      .med-context-menu__list {
-        list-style: none;
+      p {
+        text-align: left;
         margin: 0;
-        padding: 0;
       }
 
-      .med-context-menu__item {
-        padding-right: var(--med-spacing-inline-xs);
-        margin-bottom: var(--med-spacing-stack-base);
-        font-size: var(--med-font-size-xs);
-        line-height: var(--med-line-height-compressed);
-        color: var(--med-color-neutral-3);
-        display: flex;
-        align-items: center;
-      }
-
-      .med-context-menu__icon {
-        padding-right: var(--med-spacing-inline-xxxs);
-        width: 24px;
-        height: 24px;
-      }
-
-      .med-context-menu__info {
-        padding: 0;
-        margin: 0;
-        font-size: var(--med-font-size-xs);
-        line-height: var(--med-line-height-compressed);
-        color: var(--med-color-neutral-5);
-        padding: var(--med-spacing-inset-xs) 0;
-        text-align: center;
+      .med-accordion__content {
+        padding: var(--med-spacing-inset-sm);
+        padding-top: 0;
       }
     </style>
   </head>
   <body class="dark-mode">
     <ion-app>
+      <ion-content>
+        <med-accordion-list>
+          <med-accordion-item>
+            <div slot="header">
+              <h4>Header</h4>
+            </div>
+            <div slot="content" class="med-accordion__content">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, nisi quos saepe similique eius illum voluptatibus unde cupiditate sit fuga ea, neque in odit, iste non delectus! Mollitia, ipsam natus delectus maiores veniam quaerat iusto dignissimos beatae cum corporis eaque quod nostrum inventore possimus voluptates dolore velit, praesentium minus adipisci ad enim nihil impedit in rerum. Aut, distinctio velit ab quis iusto dolorum voluptatum reiciendis neque repellendus culpa quo exercitationem corrupti molestiae maxime ut ratione optio. Commodi, vitae obcaecati ullam quis minus consequuntur tempora eum corporis doloribus mollitia voluptatem. Necessitatibus dolor vitae id quia facilis tempore explicabo aliquam quisquam dolores.</p>
+            </div>
+          </med-accordion-item>
+          <med-accordion-item>
+            <h3 slot="header">Characters</h3>
+            <ul slot="content">
+              <li>Mace Tyrell</li>
+              <li>Tyrion Lannister</li>
+              <li>Sansa Stark</li>
+              <li>Catelyn Stark</li>
+              <li>Roose Bolton</li>
+              <li>Jon Snow</li>
+              <li>Hot Pie</li>
+            </ul>
+          </med-accordion-item>
+        </med-accordion-list>
 
-      <med-context-menu class="med-context-menu">
-        <ul class="med-context-menu__list">
-          <li class="med-context-menu__item">
-            <ion-icon class="med-icon med-context-menu__icon" name="med-filtro"></ion-icon>
-            <span>Ver filtro selecionado</span>
-          </li>
-          <li class="med-context-menu__item">
-            <ion-icon class="med-icon med-context-menu__icon" name="med-editar"></ion-icon>
-            <span>Renomear Prova</span>
-          </li>
-          <li class="med-context-menu__item">
-            <ion-icon class="med-icon med-context-menu__icon" name="med-lixeira"></ion-icon>
-            <span>Excluir Prova</span>
-          </li>
-        </ul>
-        <p class="med-context-menu__info">Criada em 30/12/2020</p>
-      </med-context-menu>
-    </div>
+      </ion-content>
+
 
     </ion-app>
 
     <script>
-      const comp = document.querySelector('med-context-menu');
 
-      const compItem = document.querySelector('.med-context-menu__item');
-
-      compItem.addEventListener('click', () => {
-        comp.collapsed = true;
-      })
 
     </script>
   </body>

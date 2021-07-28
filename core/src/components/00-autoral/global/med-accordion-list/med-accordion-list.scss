@@ -1,0 +1,16 @@
+:host {
+  /**
+   * @prop --background: Define a cor de background do componente.
+   */
+  --background: var(--med-color-neutral-1);
+}
+
+:host(.med-accordion-list) {
+  display: block;
+}
+
+:host(.med-accordion-list) .blocker {
+  height: 50px;
+  background-color: var( --background);
+  will-change: transform;
+}
