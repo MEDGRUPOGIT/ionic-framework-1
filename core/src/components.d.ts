@@ -2759,6 +2759,8 @@ export namespace Components {
         "toggle": () => Promise<void>;
     }
     interface MedAccordionItem {
+        "border"?: 'full';
+        "icon"?: 'left' | 'right';
     }
     interface MedAccordionList {
     }
@@ -6480,6 +6482,8 @@ declare namespace LocalJSX {
         "size"?: 'full';
     }
     interface MedAccordionItem {
+        "border"?: 'full';
+        "icon"?: 'left' | 'right';
         "onToggle"?: (event: CustomEvent<any>) => void;
     }
     interface MedAccordionList {
