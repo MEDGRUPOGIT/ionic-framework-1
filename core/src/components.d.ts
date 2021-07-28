@@ -2858,6 +2858,20 @@ export namespace Components {
         "marcaAguaSuperior"?: string;
         "titulo"?: string;
     }
+    interface MedList {
+        "color"?: Color;
+        "margin"?: 'xs' | 'sm' | 'md' | 'lg';
+        "neutral"?: Neutral;
+    }
+    interface MedListItem {
+        "border": boolean;
+        "color"?: Color;
+        "dsSize"?: 'xs' | 'sm' | 'md';
+        "label"?: string;
+        "neutral"?: Neutral;
+        "selected": boolean;
+        "titulo"?: string;
+    }
     interface MedNavbar {
         /**
           * Define a cor do componente.
@@ -3541,6 +3555,18 @@ declare global {
         prototype: HTMLMedImageZoomElement;
         new (): HTMLMedImageZoomElement;
     };
+    interface HTMLMedListElement extends Components.MedList, HTMLStencilElement {
+    }
+    var HTMLMedListElement: {
+        prototype: HTMLMedListElement;
+        new (): HTMLMedListElement;
+    };
+    interface HTMLMedListItemElement extends Components.MedListItem, HTMLStencilElement {
+    }
+    var HTMLMedListItemElement: {
+        prototype: HTMLMedListItemElement;
+        new (): HTMLMedListItemElement;
+    };
     interface HTMLMedNavbarElement extends Components.MedNavbar, HTMLStencilElement {
     }
     var HTMLMedNavbarElement: {
@@ -3702,6 +3728,8 @@ declare global {
         "med-font-zoom": HTMLMedFontZoomElement;
         "med-header": HTMLMedHeaderElement;
         "med-image-zoom": HTMLMedImageZoomElement;
+        "med-list": HTMLMedListElement;
+        "med-list-item": HTMLMedListItemElement;
         "med-navbar": HTMLMedNavbarElement;
         "med-offline": HTMLMedOfflineElement;
         "med-option": HTMLMedOptionElement;
@@ -6588,6 +6616,20 @@ declare namespace LocalJSX {
         "marcaAguaSuperior"?: string;
         "titulo"?: string;
     }
+    interface MedList {
+        "color"?: Color;
+        "margin"?: 'xs' | 'sm' | 'md' | 'lg';
+        "neutral"?: Neutral;
+    }
+    interface MedListItem {
+        "border"?: boolean;
+        "color"?: Color;
+        "dsSize"?: 'xs' | 'sm' | 'md';
+        "label"?: string;
+        "neutral"?: Neutral;
+        "selected"?: boolean;
+        "titulo"?: string;
+    }
     interface MedNavbar {
         /**
           * Define a cor do componente.
@@ -6743,6 +6785,8 @@ declare namespace LocalJSX {
         "med-font-zoom": MedFontZoom;
         "med-header": MedHeader;
         "med-image-zoom": MedImageZoom;
+        "med-list": MedList;
+        "med-list-item": MedListItem;
         "med-navbar": MedNavbar;
         "med-offline": MedOffline;
         "med-option": MedOption;
@@ -6864,6 +6908,8 @@ declare module "@stencil/core" {
             "med-font-zoom": LocalJSX.MedFontZoom & JSXBase.HTMLAttributes<HTMLMedFontZoomElement>;
             "med-header": LocalJSX.MedHeader & JSXBase.HTMLAttributes<HTMLMedHeaderElement>;
             "med-image-zoom": LocalJSX.MedImageZoom & JSXBase.HTMLAttributes<HTMLMedImageZoomElement>;
+            "med-list": LocalJSX.MedList & JSXBase.HTMLAttributes<HTMLMedListElement>;
+            "med-list-item": LocalJSX.MedListItem & JSXBase.HTMLAttributes<HTMLMedListItemElement>;
             "med-navbar": LocalJSX.MedNavbar & JSXBase.HTMLAttributes<HTMLMedNavbarElement>;
             "med-offline": LocalJSX.MedOffline & JSXBase.HTMLAttributes<HTMLMedOfflineElement>;
             "med-option": LocalJSX.MedOption & JSXBase.HTMLAttributes<HTMLMedOptionElement>;

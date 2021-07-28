@@ -1101,6 +1101,28 @@ export class MedImageZoom {
     this.el = r.nativeElement;
   }
 }
+export declare interface MedList extends Components.MedList {
+}
+@ProxyCmp({ inputs: ["color", "margin", "neutral"] })
+@Component({ selector: "med-list", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "margin", "neutral"] })
+export class MedList {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface MedListItem extends Components.MedListItem {
+}
+@ProxyCmp({ inputs: ["border", "color", "dsSize", "label", "neutral", "selected", "titulo"] })
+@Component({ selector: "med-list-item", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["border", "color", "dsSize", "label", "neutral", "selected", "titulo"] })
+export class MedListItem {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedNavbar extends Components.MedNavbar {
 }
 @ProxyCmp({ inputs: ["color", "dsName", "neutral"] })
