@@ -141,8 +141,8 @@ export class IonCardTitle {
 }
 export declare interface IonCheckbox extends Components.IonCheckbox {
 }
-@ProxyCmp({ inputs: ["checked", "color", "disabled", "indeterminate", "mode", "name", "value"] })
-@Component({ selector: "ion-checkbox", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["checked", "color", "disabled", "indeterminate", "mode", "name", "value"] })
+@ProxyCmp({ inputs: ["checked", "color", "disabled", "indeterminate", "mode", "name", "neutral", "value"] })
+@Component({ selector: "ion-checkbox", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["checked", "color", "disabled", "indeterminate", "mode", "name", "neutral", "value"] })
 export class IonCheckbox {
   ionChange!: EventEmitter<CustomEvent>;
   ionFocus!: EventEmitter<CustomEvent>;

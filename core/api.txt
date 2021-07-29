@@ -234,6 +234,7 @@ ion-checkbox,prop,disabled,boolean,false,false,false
 ion-checkbox,prop,indeterminate,boolean,false,false,false
 ion-checkbox,prop,mode,"ios" | "md",undefined,false,false
 ion-checkbox,prop,name,string,this.inputId,false,false
+ion-checkbox,prop,neutral,string | undefined,undefined,false,false
 ion-checkbox,prop,value,string,'on',false,false
 ion-checkbox,event,ionBlur,void,true
 ion-checkbox,event,ionChange,CheckboxChangeEventDetail,true
