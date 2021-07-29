@@ -63,6 +63,7 @@ export class Accordion implements ComponentInterface {
 
     // Set item content to be visible
     ev.detail.content.style.display = 'block';
+    ev.detail.content.header.borde = 'block';
 
     // Calculate the amount other items need to be shifted
     const amountToShift = ev.detail.content.clientHeight;

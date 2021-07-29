@@ -18,6 +18,8 @@ export class MedAccordionItem implements ComponentInterface {
   @Event() toggle!: EventEmitter;
 
   public content!: HTMLDivElement;
+  public header!: HTMLDivElement;
+
   private isTransitioning = false;
 
   private onClick = () => {
@@ -35,6 +37,7 @@ export class MedAccordionItem implements ComponentInterface {
     this.toggle.emit({
       element: this.hostElement,
       content: this.content,
+      header: this.header,
       shouldOpen: this.isOpen,
       startTransition: () => {
         this.isTransitioning = true;
@@ -56,7 +59,7 @@ export class MedAccordionItem implements ComponentInterface {
         'med-accordion-item': true,
         'med-accordion-item--no-border': noBorder,
         }, null)}>
-        <div class="med-accordion-item__header">
+        <div class="med-accordion-item__header" ref={(el) => this.header = el as HTMLDivElement}>
           {icon === 'left' && <div class="med-accordion-item__icon-container med-accordion-item__icon-container--left" onClick={() => this.onClick()}>
              <ion-icon class="med-icon med-accordion-item__icon" name="med-baixo"></ion-icon>
           </div>}
