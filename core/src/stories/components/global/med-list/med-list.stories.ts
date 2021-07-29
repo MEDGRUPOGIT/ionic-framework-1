@@ -3,7 +3,7 @@ import { withDesign } from 'storybook-addon-designs';
 import { medColors, medNeutrals } from '../../../med-colors';
 
 export default {
-  title: 'Components/Core/List Item',
+  title: 'Components/Core/List',
   decorators: [withDesign],
 };
 
