@@ -304,19 +304,6 @@ export default defineComponent({
 | `--transition`           | Transition of the checkbox icon                |
 
 
-## Dependencies
-
-### Used by
-
- - [med-list-item-accordion](../00-autoral/global/med-list-item-accordion)
-
-### Graph
-```mermaid
-graph TD;
-  med-list-item-accordion --> ion-checkbox
-  style ion-checkbox fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

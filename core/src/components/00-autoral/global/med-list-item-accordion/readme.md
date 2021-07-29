@@ -39,16 +39,12 @@ Type: `Promise<void>`
 
 - [ion-button](../../../button)
 - ion-icon
-- [med-list-item](../med-list-item)
-- [ion-checkbox](../../../checkbox)
 
 ### Graph
 ```mermaid
 graph TD;
   med-list-item-accordion --> ion-button
   med-list-item-accordion --> ion-icon
-  med-list-item-accordion --> med-list-item
-  med-list-item-accordion --> ion-checkbox
   ion-button --> ion-ripple-effect
   style med-list-item-accordion fill:#f9f,stroke:#333,stroke-width:4px
 ```

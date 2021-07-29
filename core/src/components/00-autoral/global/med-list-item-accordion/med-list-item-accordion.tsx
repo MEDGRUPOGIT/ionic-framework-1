@@ -52,21 +52,7 @@ export class MedListItemAccordion {
         </div>
 
         <div class="med-list-item-accordion__sub-item">
-          <med-list-item titulo="Titulo" label="label" >
-            <ion-checkbox slot="start"></ion-checkbox>
-          </med-list-item>
-
-          <med-list-item titulo="Titulo" label="label">
-            <ion-checkbox slot="start"></ion-checkbox>
-          </med-list-item>
-
-          <med-list-item titulo="Titulo" label="label">
-            <ion-checkbox slot="start"></ion-checkbox>
-          </med-list-item>
-
-          <med-list-item titulo="Titulo" label="label">
-            <ion-checkbox slot="start"></ion-checkbox>
-          </med-list-item>
+          <slot name="end"></slot>
         </div>
       </Host>
     );

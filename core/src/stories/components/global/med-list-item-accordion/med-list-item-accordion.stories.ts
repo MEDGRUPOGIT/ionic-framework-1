@@ -19,8 +19,20 @@ const Template = ({ color, neutral, titulo, label, selected }) => {
             <ion-checkbox slot="start"></ion-checkbox>
           </med-list-item>
 
-          <med-list-item-accordion .color=${color} .neutral=${neutral} .titulo=${titulo} .label=${label} .selected=${selected}>
+          <med-list-item-accordion margin="lg" .color=${color} .neutral=${neutral} .titulo=${titulo} .label=${label} .selected=${selected}>
+
             <ion-checkbox slot="start"></ion-checkbox>
+
+            <med-list-item slot="end" titulo="Titulo" label="label">
+              <ion-checkbox slot="start"></ion-checkbox>
+            </med-list-item>
+            <med-list-item slot="end" titulo="Titulo" label="label">
+              <ion-checkbox slot="start"></ion-checkbox>
+            </med-list-item>
+            <med-list-item slot="end" titulo="Titulo" label="label">
+              <ion-checkbox slot="start"></ion-checkbox>
+            </med-list-item>
+
           </med-list-item-accordion>
 
           <med-list-item titulo="Titulo" label="label">
