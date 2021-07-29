@@ -955,6 +955,19 @@ export const MedListItem = /*@__PURE__*/ defineContainer<JSX.MedListItem>('med-l
 ]);
 
 
+export const MedListItemAccordion = /*@__PURE__*/ defineContainer<JSX.MedListItemAccordion>('med-list-item-accordion', [
+  'titulo',
+  'label',
+  'neutral',
+  'color',
+  'selected',
+  'dsSize',
+  'margin',
+  'border',
+  'collapsed'
+]);
+
+
 export const MedNavbar = /*@__PURE__*/ defineContainer<JSX.MedNavbar>('med-navbar', [
   'color',
   'neutral',

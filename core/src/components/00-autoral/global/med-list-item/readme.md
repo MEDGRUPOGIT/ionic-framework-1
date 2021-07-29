@@ -18,6 +18,19 @@
 | `titulo`   | `titulo`   |             | `string \| undefined`               | `undefined` |
 
 
+## Dependencies
+
+### Used by
+
+ - [med-list-item-accordion](../med-list-item-accordion)
+
+### Graph
+```mermaid
+graph TD;
+  med-list-item-accordion --> med-list-item
+  style med-list-item fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

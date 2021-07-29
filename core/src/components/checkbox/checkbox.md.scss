@@ -76,11 +76,12 @@
 @import "../../../med-components/abstracts";
 
 :host {
-  --background: var(--med-color-neutral-1);
+  --background: transparent;
   --border-radius: #{$med-border-radius-sm};
   --border-color: #{md-color(brand, 4)};
   --border-width: #{$med-border-width-thin};
   --size: 24px;
+  min-width: var(--size);
 }
 
 :host .checkbox-icon {

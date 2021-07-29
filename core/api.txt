@@ -1491,6 +1491,18 @@ med-list-item,prop,neutral,string | undefined,undefined,false,false
 med-list-item,prop,selected,boolean,false,false,true
 med-list-item,prop,titulo,string | undefined,undefined,false,false
 
+med-list-item-accordion,shadow
+med-list-item-accordion,prop,border,boolean,false,false,true
+med-list-item-accordion,prop,collapsed,boolean,true,false,true
+med-list-item-accordion,prop,color,string | undefined,undefined,false,false
+med-list-item-accordion,prop,dsSize,"md" | "sm" | "xs" | undefined,undefined,false,false
+med-list-item-accordion,prop,label,string | undefined,undefined,false,false
+med-list-item-accordion,prop,margin,"lg" | "md" | "sm" | "xs" | undefined,undefined,false,false
+med-list-item-accordion,prop,neutral,string | undefined,undefined,false,false
+med-list-item-accordion,prop,selected,boolean,false,false,true
+med-list-item-accordion,prop,titulo,string | undefined,undefined,false,false
+med-list-item-accordion,method,toggle,toggle(event?: Event | undefined) => Promise<void>
+
 med-navbar,shadow
 med-navbar,prop,color,string | undefined,undefined,false,false
 med-navbar,prop,dsName,"secondary" | "transparent" | undefined,undefined,false,false

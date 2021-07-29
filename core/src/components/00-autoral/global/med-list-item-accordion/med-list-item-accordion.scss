@@ -10,7 +10,7 @@
   --color-label: #{md-color(brand, 4)};
 }
 
-:host(.med-list-item) {
+:host(.med-list-item-accordion) {
   background-image: linear-gradient(to right, rgba(var(--med-color-neutral-2-rgb),1),
   rgba(var(--med-color-neutral-2-rgb),0.1),
   rgba(var(--med-color-neutral-2-rgb),0));
@@ -20,15 +20,30 @@
   display: flex;
   padding: var(--padding);
   align-items: center;
+  flex-direction: column;
 
-  .med-list-item__content {
+  .med-list-item-accordion__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .med-list-item-accordion__sub-item {
+    width: 100%;
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+    transition: 500ms opacity ease;
+  }
+
+  .med-list-item-accordion__content {
     display: flex;
     flex-direction: column;
     text-align: left;
     width: 100%;
   }
 
-  .med-list-item__title {
+  .med-list-item-accordion__title {
     margin: 0;
     padding: 0;
     font-size: var(--font-size-title);
@@ -37,7 +52,7 @@
     color: var(--color-title);
   }
 
-  .med-list-item__label {
+  .med-list-item-accordion__label {
     margin: 0;
     padding: 0;
     font-size: var(--font-size-label);
@@ -46,12 +61,18 @@
     color: var(--color-label);
   }
 
-  .med-list-item__border-radius {
+  .med-list-item-accordion__border-radius {
     border-radius: var(--border-radius);
   }
 }
 
-:host(.med-list-item--selected) {
+:host(.med-list-item-accordion--collapsed) .med-list-item-accordion__sub-item {
+  overflow: auto;
+  height: auto;
+  opacity: 1;
+}
+
+:host(.med-list-item-accordion--selected) {
   background-position: 0 0;
 }
 
@@ -71,15 +92,15 @@
 // sizes
 // ////////////////////
 
-:host(.med-list-item--xs) {
+:host(.med-list-item-accordion--xs) {
   --padding: #{$med-spacing-squish-xs};
 }
 
-:host(.med-list-item--sm) {
+:host(.med-list-item-accordion--sm) {
   --padding: #{$med-spacing-inset-sm};
 }
 
-:host(.med-list-item--md) {
+:host(.med-list-item-accordion--md) {
   --padding: #{$med-spacing-stretch-md};
 }
 
@@ -87,7 +108,7 @@
 // color
 // ////////////////////
 
-:host(.med-list-item.ion-color) {
+:host(.med-list-item-accordion.ion-color) {
   --border-background-selected: #{md-current-color(3)};
   --color-label: #{md-current-color(3)};
 }
@@ -96,7 +117,7 @@
 // neutral
 // ////////////////////
 
-:host(.med-list-item.med-neutral) {
+:host(.med-list-item-accordion.med-neutral) {
   --border-background-selected: var(--med-neutral);
   --color-label: var(--med-neutral);
 }
