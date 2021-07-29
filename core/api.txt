@@ -1523,10 +1523,20 @@ med-toolbar,prop,color,string | undefined,undefined,false,false
 med-toolbar,prop,neutral,string | undefined,undefined,false,false
 
 med-tooltip,shadow
-med-tooltip,prop,buttonLeft,{ label: string; icon: string; },undefined,true,false
-med-tooltip,prop,buttonRight,{ label: string; icon: string; },undefined,true,false
-med-tooltip,prop,content,string,undefined,true,true
-med-tooltip,prop,header,string,undefined,true,true
+med-tooltip,prop,collapsed,boolean,true,false,true
+med-tooltip,prop,content,string | undefined,undefined,false,false
+med-tooltip,prop,dsName,"definition" | undefined,undefined,false,false
+med-tooltip,prop,placement,"bottom" | "left" | "right" | "top" | undefined,undefined,false,true
+med-tooltip,prop,position,"center" | "end" | "start" | undefined,undefined,false,true
+med-tooltip,method,toggle,toggle(event?: Event | undefined) => Promise<void>
+med-tooltip,css-prop,--background
+med-tooltip,css-prop,--z-index
+
+med-tooltip2,shadow
+med-tooltip2,prop,buttonLeft,{ label: string; icon: string; },undefined,true,false
+med-tooltip2,prop,buttonRight,{ label: string; icon: string; },undefined,true,false
+med-tooltip2,prop,content,string,undefined,true,true
+med-tooltip2,prop,header,string,undefined,true,true
 
 monta-provas-plusminus,shadow
 monta-provas-plusminus,prop,dsSize,"xl" | undefined,undefined,false,false

@@ -3,14 +3,14 @@ import { withDesign } from 'storybook-addon-designs';
 import { popoverController } from '../../../../../dist/ionic/index.esm.js';
 
 export default {
-  title: 'Components/Core/Tooltip',
+  title: 'Components/Core/Tooltip2',
   decorators: [withDesign],
 };
 
 let call = false
 let currentPopover = null;
 
-const createButtonIconPopover = async (ev) => {
+const createButtonTextPopover = async (ev) => {
   popoverController.create({
     component: 'med-tooltip',
     cssClass: 'med-tooltip',
@@ -23,7 +23,6 @@ const createButtonIconPopover = async (ev) => {
       },
       buttonRight: {
         label: 'Confirmar e encerrar',
-        icon: 'med-arrow-right-circle'
       }
     },
     mode: 'ios',
@@ -35,22 +34,22 @@ const createButtonIconPopover = async (ev) => {
   });
 }
 
-const TemplateButtonIcon = () => {
+const TemplateButtonText = () => {
   return html`
     <ion-app class="storybook-only">
       <div class="storybook-only__container">
 
         <!-- component -->
-        <ion-icon class="med-icon" name="med-information" @click="${createButtonIconPopover}" style="cursor: pointer;"></ion-icon>
+        <ion-icon class="med-icon" name="med-information" @click="${createButtonTextPopover}" style="cursor: pointer;"></ion-icon>
         <!-- component -->
 
-      </ion-content>
+      </div>
     </ion-app>
   `
 }
 
-export const TooltipButtonIcon = TemplateButtonIcon.bind({});
-TooltipButtonIcon.parameters = {
+export const TooltipButtonText = TemplateButtonText.bind({});
+TooltipButtonText.parameters = {
   design: {
     type: 'figma',
     url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/Componentes?node-id=2103%3A170',

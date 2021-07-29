@@ -373,6 +373,7 @@ export default defineComponent({
  - [med-image-zoom](../00-autoral/global/med-image-zoom)
  - [med-offline](../00-autoral/global/med-offline)
  - [med-tooltip](../00-autoral/global/med-tooltip)
+ - [med-tooltip2](../00-autoral/global/med-tooltip-2)
 
 ### Depends on
 
@@ -386,6 +387,7 @@ graph TD;
   med-image-zoom --> ion-button
   med-offline --> ion-button
   med-tooltip --> ion-button
+  med-tooltip2 --> ion-button
   style ion-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
