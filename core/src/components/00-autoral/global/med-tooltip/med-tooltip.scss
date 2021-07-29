@@ -171,3 +171,30 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+// ////////////////////
+// position
+// ////////////////////
+
+// //////////
+// center
+// //////////
+
+:host(.med-tooltip--center:not(.med-tooltip--right):not(.med-tooltip--left)) .med-tooltip__content {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// //////////
+// end
+// //////////
+
+:host(.med-tooltip--end:not(.med-tooltip--right):not(.med-tooltip--left)) .med-tooltip__content {
+  transform: rotate(-180deg);
+  left: 100%;
+  transform-origin: left center;
+}
+
+:host(.med-tooltip--end:not(.med-tooltip--right):not(.med-tooltip--left)) .med-tooltip__content *{
+  transform: rotate(180deg);
+}
