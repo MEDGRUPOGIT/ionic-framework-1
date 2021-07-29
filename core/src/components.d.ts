@@ -2875,6 +2875,18 @@ export namespace Components {
         "selected": boolean;
         "titulo"?: string;
     }
+    interface MedListItemAccordion {
+        "border": boolean;
+        "collapsed": boolean;
+        "color"?: Color;
+        "dsSize"?: 'xs' | 'sm' | 'md';
+        "label"?: string;
+        "margin"?: 'xs' | 'sm' | 'md' | 'lg';
+        "neutral"?: Neutral;
+        "selected": boolean;
+        "titulo"?: string;
+        "toggle": (event?: Event | undefined) => Promise<void>;
+    }
     interface MedNavbar {
         /**
           * Define a cor do componente.
@@ -3584,6 +3596,12 @@ declare global {
         prototype: HTMLMedListItemElement;
         new (): HTMLMedListItemElement;
     };
+    interface HTMLMedListItemAccordionElement extends Components.MedListItemAccordion, HTMLStencilElement {
+    }
+    var HTMLMedListItemAccordionElement: {
+        prototype: HTMLMedListItemAccordionElement;
+        new (): HTMLMedListItemAccordionElement;
+    };
     interface HTMLMedNavbarElement extends Components.MedNavbar, HTMLStencilElement {
     }
     var HTMLMedNavbarElement: {
@@ -3753,6 +3771,7 @@ declare global {
         "med-image-zoom": HTMLMedImageZoomElement;
         "med-list": HTMLMedListElement;
         "med-list-item": HTMLMedListItemElement;
+        "med-list-item-accordion": HTMLMedListItemAccordionElement;
         "med-navbar": HTMLMedNavbarElement;
         "med-offline": HTMLMedOfflineElement;
         "med-option": HTMLMedOptionElement;
@@ -6657,6 +6676,17 @@ declare namespace LocalJSX {
         "selected"?: boolean;
         "titulo"?: string;
     }
+    interface MedListItemAccordion {
+        "border"?: boolean;
+        "collapsed"?: boolean;
+        "color"?: Color;
+        "dsSize"?: 'xs' | 'sm' | 'md';
+        "label"?: string;
+        "margin"?: 'xs' | 'sm' | 'md' | 'lg';
+        "neutral"?: Neutral;
+        "selected"?: boolean;
+        "titulo"?: string;
+    }
     interface MedNavbar {
         /**
           * Define a cor do componente.
@@ -6827,6 +6857,7 @@ declare namespace LocalJSX {
         "med-image-zoom": MedImageZoom;
         "med-list": MedList;
         "med-list-item": MedListItem;
+        "med-list-item-accordion": MedListItemAccordion;
         "med-navbar": MedNavbar;
         "med-offline": MedOffline;
         "med-option": MedOption;
@@ -6951,6 +6982,7 @@ declare module "@stencil/core" {
             "med-image-zoom": LocalJSX.MedImageZoom & JSXBase.HTMLAttributes<HTMLMedImageZoomElement>;
             "med-list": LocalJSX.MedList & JSXBase.HTMLAttributes<HTMLMedListElement>;
             "med-list-item": LocalJSX.MedListItem & JSXBase.HTMLAttributes<HTMLMedListItemElement>;
+            "med-list-item-accordion": LocalJSX.MedListItemAccordion & JSXBase.HTMLAttributes<HTMLMedListItemAccordionElement>;
             "med-navbar": LocalJSX.MedNavbar & JSXBase.HTMLAttributes<HTMLMedNavbarElement>;
             "med-offline": LocalJSX.MedOffline & JSXBase.HTMLAttributes<HTMLMedOfflineElement>;
             "med-option": LocalJSX.MedOption & JSXBase.HTMLAttributes<HTMLMedOptionElement>;

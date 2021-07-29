@@ -68,13 +68,4 @@ Tiles.argTypes = {
       defaultValue: { summary: 'false' },
     },
   },
-  /* solid: {
-    control: { type: 'boolean' },
-    description: 'Define o estado do componente.',
-    defaultValue: false,
-    table: {
-      type:  { summary: 'boolean' },
-      defaultValue: { summary: 'false' },
-    },
-  }, */
 };

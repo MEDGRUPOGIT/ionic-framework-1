@@ -11,8 +11,13 @@
 }
 
 :host(.med-list-item) {
+  background-image: linear-gradient(to right, rgba(var(--med-color-neutral-2-rgb),1),
+  rgba(var(--med-color-neutral-2-rgb),0.1),
+  rgba(var(--med-color-neutral-2-rgb),0));
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: .5s;
   display: flex;
-  background: var(--background);
   padding: var(--padding);
   align-items: center;
 
@@ -44,6 +49,10 @@
   .med-list-item__border-radius {
     border-radius: var(--border-radius);
   }
+}
+
+:host(.med-list-item--selected) {
+  background-position: 0 0;
 }
 
 // ////////////////////
