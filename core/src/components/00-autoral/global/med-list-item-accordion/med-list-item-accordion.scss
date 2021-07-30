@@ -1,7 +1,7 @@
 @import "../../../../../med-components/abstracts";
 
 :host {
-  --padding: #{$med-spacing-squish-xs};
+  --padding: 6px 16px;
   --background: transparent;
   --border-radius: #{$med-border-radius-sm};
   --font-size-title: #{$med-font-size-xs};
