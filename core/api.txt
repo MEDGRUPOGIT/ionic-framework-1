@@ -1542,6 +1542,8 @@ med-tooltip,prop,placement,"bottom" | "left" | "right" | "top" | undefined,undef
 med-tooltip,prop,position,"center" | "end" | "start" | undefined,undefined,false,true
 med-tooltip,prop,titulo,string,undefined,true,true
 med-tooltip,method,toggle,toggle(event?: Event | undefined) => Promise<void>
+med-tooltip,css-prop,--background
+med-tooltip,css-prop,--z-index
 
 med-tooltip2,shadow
 med-tooltip2,prop,buttonLeft,{ label: string; icon: string; },undefined,true,false
