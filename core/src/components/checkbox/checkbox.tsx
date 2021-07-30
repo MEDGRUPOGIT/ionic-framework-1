@@ -155,6 +155,7 @@ export class Checkbox implements ComponentInterface {
 
     return (
       <Host
+        from-stencil
         onClick={this.onClick}
         aria-labelledby={label ? labelId : null}
         aria-checked={`${checked}`}

@@ -1011,9 +1011,10 @@ export const MedToolbar = /*@__PURE__*/ defineContainer<JSX.MedToolbar>('med-too
 
 export const MedTooltip = /*@__PURE__*/ defineContainer<JSX.MedTooltip>('med-tooltip', [
   'dsName',
-  'content',
   'placement',
   'position',
+  'titulo',
+  'content',
   'collapsed'
 ]);
 

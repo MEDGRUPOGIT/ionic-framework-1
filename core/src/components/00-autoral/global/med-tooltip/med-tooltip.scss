@@ -21,9 +21,6 @@
       z-index: var(--z-index);
       position: absolute;
       background: var(--background);
-     /*  min-width: 250px;
-      max-width: 250px;
-      width: 100%; */
       //box-shadow: var(--box-shadow);
       border-radius: var(--border-radius);
       padding: var(--padding);
@@ -71,16 +68,44 @@
       stroke: var(--med-color-neutral-3);
     }
 
+    &__titulo {
+      font-size: $med-font-size-xxxs;
+      font-weight: $med-font-weight-bold;
+      line-height: line-height($med-font-size-xxxs);
+      color: var(--med-neutral-10);
+      margin: 0;
+      padding-top: $med-spacing-stack-xxxs;
+      padding-bottom: $med-spacing-stack-xxxs;
+    }
+
     &__text {
       font-size: $med-font-size-xxxs;
       font-weight: $med-font-weight-regular;
       line-height: line-height($med-font-size-xxxs);
-      color: $med-color-neutral-light-prime;
+      color: var(--med-neutral-10);
       margin: 0;
       white-space: nowrap;
     }
   }
 }
+
+:host(.med-tooltip--definition) {
+  --padding: #{$med-spacing-inset-sm};
+
+  .med-tooltip__content {
+    min-width: 285px;
+    max-width: 285px;
+    width: 100%;
+  }
+
+  .med-tooltip__text {
+    white-space: initial;
+  }
+}
+
+// ////////////////////
+// state
+// ////////////////////
 
 :host(.med-tooltip--collapsed) {
   .med-tooltip__content {

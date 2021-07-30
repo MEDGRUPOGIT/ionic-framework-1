@@ -12,12 +12,12 @@ export class MedTooltip {
    */
   @Prop() dsName?: 'definition';
 
-  @Prop() content?: string;
-
-
   @Prop({ reflect: true }) placement?: 'top' | 'bottom' | 'left' | 'right';
 
   @Prop({ reflect: true }) position?: 'start' | 'center' | 'end';
+
+  @Prop({ reflect: true }) titulo!: string;
+  @Prop({ reflect: true }) content!: string;
 
   /**
    * Define o estado do componente.
@@ -38,7 +38,7 @@ export class MedTooltip {
   }
 
   render() {
-    const { dsName, placement, position, collapsed, content } = this;
+    const { dsName, placement, position, collapsed, titulo, content } = this;
 
     return (
       <Host
@@ -58,7 +58,9 @@ export class MedTooltip {
         </div>
 
         <div class="med-tooltip__content">
+          <h3 class="med-tooltip__titulo">{titulo}</h3>
           <p class="med-tooltip__text">{content}</p>
+          <slot></slot>
         </div>
       </Host>
     );

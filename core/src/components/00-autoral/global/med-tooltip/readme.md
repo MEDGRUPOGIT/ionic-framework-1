@@ -7,13 +7,14 @@
 
 ## Properties
 
-| Property    | Attribute   | Description                      | Type                                                  | Default     |
-| ----------- | ----------- | -------------------------------- | ----------------------------------------------------- | ----------- |
-| `collapsed` | `collapsed` | Define o estado do componente.   | `boolean`                                             | `true`      |
-| `content`   | `content`   |                                  | `string \| undefined`                                 | `undefined` |
-| `dsName`    | `ds-name`   | Define a variação do componente. | `"definition" \| undefined`                           | `undefined` |
-| `placement` | `placement` |                                  | `"bottom" \| "left" \| "right" \| "top" \| undefined` | `undefined` |
-| `position`  | `position`  |                                  | `"center" \| "end" \| "start" \| undefined`           | `undefined` |
+| Property               | Attribute   | Description                      | Type                                                  | Default     |
+| ---------------------- | ----------- | -------------------------------- | ----------------------------------------------------- | ----------- |
+| `collapsed`            | `collapsed` | Define o estado do componente.   | `boolean`                                             | `true`      |
+| `content` _(required)_ | `content`   |                                  | `string`                                              | `undefined` |
+| `dsName`               | `ds-name`   | Define a variação do componente. | `"definition" \| undefined`                           | `undefined` |
+| `placement`            | `placement` |                                  | `"bottom" \| "left" \| "right" \| "top" \| undefined` | `undefined` |
+| `position`             | `position`  |                                  | `"center" \| "end" \| "start" \| undefined`           | `undefined` |
+| `titulo` _(required)_  | `titulo`    |                                  | `string`                                              | `undefined` |
 
 
 ## Methods
@@ -27,14 +28,6 @@
 Type: `Promise<void>`
 
 
-
-
-## CSS Custom Properties
-
-| Name           | Description                          |
-| -------------- | ------------------------------------ |
-| `--background` | Define a cor da borda do componente. |
-| `--z-index`    | Define o z-index do componente.      |
 
 
 ## Dependencies

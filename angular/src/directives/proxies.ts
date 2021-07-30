@@ -1216,8 +1216,8 @@ export class MedToolbar {
 }
 export declare interface MedTooltip extends Components.MedTooltip {
 }
-@ProxyCmp({ inputs: ["collapsed", "content", "dsName", "placement", "position"], "methods": ["toggle"] })
-@Component({ selector: "med-tooltip", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "content", "dsName", "placement", "position"] })
+@ProxyCmp({ inputs: ["collapsed", "content", "dsName", "placement", "position", "titulo"], "methods": ["toggle"] })
+@Component({ selector: "med-tooltip", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "content", "dsName", "placement", "position", "titulo"] })
 export class MedTooltip {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
