@@ -1395,7 +1395,7 @@ med-accordion-item,css-prop,--icon-color
 med-accordion-list,shadow
 med-accordion-list,prop,margin,"lg" | "md" | "sm" | "xs" | undefined,undefined,false,false
 med-accordion-list,prop,noBorder,boolean,false,false,true
-med-accordion-list,css-prop,--background
+med-accordion-list,prop,singleOpen,boolean,true,false,true
 
 med-agrupador,shadow
 med-agrupador,prop,collapsed,boolean,true,false,true

@@ -106,7 +106,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(100%);
+  transform: translate(-50%, -50%) scale(1);
   width: 15px;
   height: 15px;
   border-radius: #{$med-border-radius-nano};
@@ -118,7 +118,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(100%);
+  transform: translate(-50%, -50%) scale(1);
   width: 12px;
   height: 2px;
   border-radius: #{$med-border-radius-nano};

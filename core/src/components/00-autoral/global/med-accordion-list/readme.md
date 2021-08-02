@@ -7,17 +7,11 @@
 
 ## Properties
 
-| Property   | Attribute   | Description | Type                                        | Default     |
-| ---------- | ----------- | ----------- | ------------------------------------------- | ----------- |
-| `margin`   | `margin`    |             | `"lg" \| "md" \| "sm" \| "xs" \| undefined` | `undefined` |
-| `noBorder` | `no-border` |             | `boolean`                                   | `false`     |
-
-
-## CSS Custom Properties
-
-| Name           | Description                               |
-| -------------- | ----------------------------------------- |
-| `--background` | Define a cor de background do componente. |
+| Property     | Attribute     | Description | Type                                        | Default     |
+| ------------ | ------------- | ----------- | ------------------------------------------- | ----------- |
+| `margin`     | `margin`      |             | `"lg" \| "md" \| "sm" \| "xs" \| undefined` | `undefined` |
+| `noBorder`   | `no-border`   |             | `boolean`                                   | `false`     |
+| `singleOpen` | `single-open` |             | `boolean`                                   | `true`      |
 
 
 ----------------------------------------------

@@ -829,6 +829,7 @@ export const MedAccordionItem = /*@__PURE__*/ defineContainer<JSX.MedAccordionIt
 
 export const MedAccordionList = /*@__PURE__*/ defineContainer<JSX.MedAccordionList>('med-accordion-list', [
   'noBorder',
+  'singleOpen',
   'margin'
 ]);
 

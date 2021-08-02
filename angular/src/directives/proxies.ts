@@ -907,8 +907,8 @@ export class MedAccordionItem {
 }
 export declare interface MedAccordionList extends Components.MedAccordionList {
 }
-@ProxyCmp({ inputs: ["margin", "noBorder"] })
-@Component({ selector: "med-accordion-list", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["margin", "noBorder"] })
+@ProxyCmp({ inputs: ["margin", "noBorder", "singleOpen"] })
+@Component({ selector: "med-accordion-list", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["margin", "noBorder", "singleOpen"] })
 export class MedAccordionList {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

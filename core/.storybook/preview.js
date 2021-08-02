@@ -18,7 +18,7 @@ defineCustomElements();
 import './themes/templarios.css';
 import '../src/stories/assets/canvas.css';
 
-// med-components
+// med-components fonts
 import '../src/stories/assets/fsemeric.css';
 
 // novo
@@ -77,16 +77,6 @@ export const parameters = {
       class: ['color-scheme-light', 'color-theme-gold'],
       color: '#b89d58'
     },
-    /* {
-      name: 'Image Mode - Dark Mode',
-      class: ['color-scheme-dark', 'image-mode'],
-      color: '#000'
-    },
-    {
-      name: 'Image Mode - Light Mode',
-      class: ['color-scheme-light', 'image-mode'],
-      color: '#fff'
-    }, */
   ],
   viewport: {
     viewports: {

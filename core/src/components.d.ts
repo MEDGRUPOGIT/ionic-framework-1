@@ -2766,6 +2766,7 @@ export namespace Components {
     interface MedAccordionList {
         "margin"?: 'xs' | 'sm' | 'md' | 'lg';
         "noBorder": boolean;
+        "singleOpen": boolean;
     }
     interface MedAgrupador {
         /**
@@ -6562,6 +6563,7 @@ declare namespace LocalJSX {
     interface MedAccordionList {
         "margin"?: 'xs' | 'sm' | 'md' | 'lg';
         "noBorder"?: boolean;
+        "singleOpen"?: boolean;
     }
     interface MedAgrupador {
         /**

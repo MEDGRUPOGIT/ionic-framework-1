@@ -10,8 +10,8 @@
   display: block;
 
   .med-accordion-list__blocker {
-    height: 50px;
-    background-color: var( --background);
+    //height: 50px;
+    background-color: var(--med-color-neutral-1);
     will-change: transform;
     border-radius: $med-border-radius-sm;
   }
