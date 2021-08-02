@@ -21,7 +21,6 @@ export class MedTiles {
     const { color, neutral, titulo, label, badge, selected, solid } = this;
     return (
       <Host
-      from-stencil
       class={createColorClasses(color, {
         'med-tiles': true,
         'med-solid': solid,
