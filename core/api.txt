@@ -1396,6 +1396,7 @@ med-accordion-list,shadow
 med-accordion-list,prop,margin,"lg" | "md" | "sm" | "xs" | undefined,undefined,false,false
 med-accordion-list,prop,noBorder,boolean,false,false,true
 med-accordion-list,prop,singleOpen,boolean,true,false,true
+med-accordion-list,css-prop,--background
 
 med-agrupador,shadow
 med-agrupador,prop,collapsed,boolean,true,false,true
@@ -1446,6 +1447,9 @@ med-chart-radial-label,prop,valores,MedChartRadiaItem[],[],false,false
 med-context-menu,shadow
 med-context-menu,prop,collapsed,boolean,true,false,true
 med-context-menu,method,toggle,toggle(event?: Event | undefined) => Promise<void>
+med-context-menu,css-prop,--background
+med-context-menu,css-prop,--color
+med-context-menu,css-prop,--z-index
 
 med-divider,shadow
 med-divider,prop,color,string | undefined,undefined,false,false
