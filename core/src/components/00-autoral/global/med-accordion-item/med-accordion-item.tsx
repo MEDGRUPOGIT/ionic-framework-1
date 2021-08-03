@@ -52,12 +52,13 @@ export class MedAccordionItem implements ComponentInterface {
   }
 
   render() {
-    const { noBorder, icon } = this;
+    const { noBorder, icon, isOpen } = this;
 
     return (
       <Host from-stencil class={createColorClasses(null, {
         'med-accordion-item': true,
         'med-accordion-item--no-border': noBorder,
+        'med-accordion-item--open': isOpen,
         }, null)}>
         <div class="med-accordion-item__header" ref={(el) => this.header = el as HTMLDivElement}>
           {icon === 'left' && <div class="med-accordion-item__icon-container med-accordion-item__icon-container--left" onClick={() => this.onClick()}>
@@ -67,6 +68,8 @@ export class MedAccordionItem implements ComponentInterface {
           <div class="med-accordion-item__heading" onClick={() => this.onClick()}>
             <slot name="header"></slot>
           </div>
+
+          <slot name="button"></slot>
 
           {(!icon || icon === 'right') && <div class="med-accordion-item__icon-container med-accordion-item__icon-container--right" onClick={() => this.onClick()}>
             <ion-icon class="med-icon med-accordion-item__icon" name="med-baixo"></ion-icon>

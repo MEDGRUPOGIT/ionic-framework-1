@@ -56,7 +56,7 @@ export class Accordion implements ComponentInterface {
       'z-index': '1',
     };
 
-    const afterStyles: any = { transform: `translateY(0)` };
+    const afterStyles: any = { transform: `none`, 'z-index': null };
 
     if(isBlocker) {
       beforeStyles['height'] = `${amountToShift}px`;
@@ -100,6 +100,7 @@ export class Accordion implements ComponentInterface {
     shiftDownAnimation.destroy();
     blockerDownAnimation.destroy();
   }
+
   createCloseAnimation(elements: Element | Node | Element[] | Node[] | NodeList, amountToShift: number) {
     const closeAnimationTime = 300;
 
@@ -114,6 +115,8 @@ export class Accordion implements ComponentInterface {
   async animateClose(ev: any) {
     ev.detail.header.style = '';
     const elementsToShift = this.getElementsToShift(ev.detail.element);
+    ev.detail.element.style.overflow = 'hidden';
+    ev.detail.header.style.zIndex = '1';
 
     this.currentlyOpen = null;
     const amountToShift = ev.detail.content.clientHeight;
@@ -127,6 +130,8 @@ export class Accordion implements ComponentInterface {
 
     await Promise.all([shiftUpAnimation.play(), blockerUpAnimation.play(), contentUpAnimation.play()]);
 
+    ev.detail.element.style.overflow = 'initial';
+    ev.detail.header.style.zIndex = 'initial';
     ev.detail.content.style.display = 'none';
 
     shiftUpAnimation.destroy();

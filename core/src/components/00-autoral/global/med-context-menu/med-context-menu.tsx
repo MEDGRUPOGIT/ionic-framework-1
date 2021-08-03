@@ -26,22 +26,21 @@ export class MedContextMenu {
   }
 
   render() {
-    const { collapsed } = this;
 
     return (
       <Host
         from-stencil
         class={createColorClasses(null, {
           'med-context-menu': true,
-          'med-context-menu--collapsed': collapsed
+          'med-context-menu--collapsed': this.collapsed
         }, null)}
       >
-        <ion-button onClick={(event) => {this.toggle(event)}} class="med-context-menu__button" ds-name="icon-only">
+        <ion-button onIonBlur={(event) => { console.log('blur'); this.toggle(event); }} onClick={(event) => {this.toggle(event)}} class="med-context-menu__button" ds-name="icon-only">
           <ion-icon class="med-icon med-context-menu__icon" name="med-context-menu"></ion-icon>
         </ion-button>
 
         <div class="med-context-menu__content">
-          <ion-button  onClick={(event) => {this.toggle(event)}} class="med-context-menu__inner-button" ds-name="icon-only">
+          <ion-button onClick={(event) => {this.toggle(event)}} class="med-context-menu__inner-button" ds-name="icon-only">
             <ion-icon class="med-icon med-context-menu__inner-icon" name="med-context-menu"></ion-icon>
           </ion-button>
 

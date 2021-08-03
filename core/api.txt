@@ -1446,9 +1446,6 @@ med-chart-radial-label,prop,valores,MedChartRadiaItem[],[],false,false
 med-context-menu,shadow
 med-context-menu,prop,collapsed,boolean,true,false,true
 med-context-menu,method,toggle,toggle(event?: Event | undefined) => Promise<void>
-med-context-menu,css-prop,--background
-med-context-menu,css-prop,--color
-med-context-menu,css-prop,--z-index
 
 med-divider,shadow
 med-divider,prop,color,string | undefined,undefined,false,false
