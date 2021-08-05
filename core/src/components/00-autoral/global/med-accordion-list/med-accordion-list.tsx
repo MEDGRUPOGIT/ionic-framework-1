@@ -106,7 +106,7 @@ export class Accordion implements ComponentInterface {
 
     return createAnimation()
     .addElement(elements)
-    .afterStyles({ transform: 'translateY(0)' })
+    .afterStyles({ transform: 'none' })
     .to('transform', `translateY(-${amountToShift}px)`)
     .duration(closeAnimationTime)
     .easing('cubic-bezier(0.32,0.72,0,1)');;
