@@ -15,7 +15,7 @@ export class MedAccordionItem implements ComponentInterface {
 
   @State() isOpen = false;
 
-  @Event() toggle!: EventEmitter;
+  @Event() toggle!: EventEmitter; /* internal */
 
   public content!: HTMLDivElement;
   public header!: HTMLDivElement;

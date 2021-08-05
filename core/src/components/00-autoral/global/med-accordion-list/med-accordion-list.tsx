@@ -10,7 +10,6 @@ import { createColorClasses } from '../../../../utils/theme';
 export class Accordion implements ComponentInterface {
   @Element() hostElement!: HTMLElement;
 
-  @Prop({ reflect:true }) noBorder = false;
   @Prop({ reflect:true }) singleOpen = true;
   @Prop() margin?: 'xs' | 'sm' | 'md' | 'lg';
 
@@ -140,12 +139,11 @@ export class Accordion implements ComponentInterface {
   }
 
   render() {
-    const { noBorder, margin } = this;
+    const { margin } = this;
     return (
       <Host from-stencil
         class={createColorClasses(null, {
           'med-accordion-list': true,
-          'med-accordion-list--no-border': noBorder,
           [`med-accordion-list--${margin}`]: margin !== undefined
         }, null)}>
         <slot></slot>

@@ -48,11 +48,3 @@
 :host(.med-accordion-list--lg) ::slotted(med-accordion-item) {
   --border: #{$med-spacing-stack-xxs} solid var(--med-color-neutral-1);
 }
-
-// ////////////////////
-// border
-// ////////////////////
-
-:host(.mmed-accordion-item--no-border) .med-accordion-list__blocker {
-  border-radius: 0;
-}
