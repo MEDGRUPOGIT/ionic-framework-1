@@ -2906,6 +2906,21 @@ export namespace Components {
     }
     interface MedOption {
     }
+    interface MedQuestion {
+        /**
+          * Define o estado do componente.
+         */
+        "collapsed": boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "color"?: Color;
+        /**
+          * Define a cor neutra do componente.
+         */
+        "neutral"?: Neutral;
+        "toggle": (event?: Event | undefined) => Promise<void>;
+    }
     interface MedRateBar {
     }
     interface MedRateLike {
@@ -3622,6 +3637,12 @@ declare global {
         prototype: HTMLMedOptionElement;
         new (): HTMLMedOptionElement;
     };
+    interface HTMLMedQuestionElement extends Components.MedQuestion, HTMLStencilElement {
+    }
+    var HTMLMedQuestionElement: {
+        prototype: HTMLMedQuestionElement;
+        new (): HTMLMedQuestionElement;
+    };
     interface HTMLMedRateBarElement extends Components.MedRateBar, HTMLStencilElement {
     }
     var HTMLMedRateBarElement: {
@@ -3777,6 +3798,7 @@ declare global {
         "med-navbar": HTMLMedNavbarElement;
         "med-offline": HTMLMedOfflineElement;
         "med-option": HTMLMedOptionElement;
+        "med-question": HTMLMedQuestionElement;
         "med-rate-bar": HTMLMedRateBarElement;
         "med-rate-like": HTMLMedRateLikeElement;
         "med-tiles": HTMLMedTilesElement;
@@ -6709,6 +6731,20 @@ declare namespace LocalJSX {
     }
     interface MedOption {
     }
+    interface MedQuestion {
+        /**
+          * Define o estado do componente.
+         */
+        "collapsed"?: boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "color"?: Color;
+        /**
+          * Define a cor neutra do componente.
+         */
+        "neutral"?: Neutral;
+    }
     interface MedRateBar {
     }
     interface MedRateLike {
@@ -6865,6 +6901,7 @@ declare namespace LocalJSX {
         "med-navbar": MedNavbar;
         "med-offline": MedOffline;
         "med-option": MedOption;
+        "med-question": MedQuestion;
         "med-rate-bar": MedRateBar;
         "med-rate-like": MedRateLike;
         "med-tiles": MedTiles;
@@ -6990,6 +7027,7 @@ declare module "@stencil/core" {
             "med-navbar": LocalJSX.MedNavbar & JSXBase.HTMLAttributes<HTMLMedNavbarElement>;
             "med-offline": LocalJSX.MedOffline & JSXBase.HTMLAttributes<HTMLMedOfflineElement>;
             "med-option": LocalJSX.MedOption & JSXBase.HTMLAttributes<HTMLMedOptionElement>;
+            "med-question": LocalJSX.MedQuestion & JSXBase.HTMLAttributes<HTMLMedQuestionElement>;
             "med-rate-bar": LocalJSX.MedRateBar & JSXBase.HTMLAttributes<HTMLMedRateBarElement>;
             "med-rate-like": LocalJSX.MedRateLike & JSXBase.HTMLAttributes<HTMLMedRateLikeElement>;
             "med-tiles": LocalJSX.MedTiles & JSXBase.HTMLAttributes<HTMLMedTilesElement>;

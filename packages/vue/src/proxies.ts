@@ -984,6 +984,13 @@ export const MedOffline = /*@__PURE__*/ defineContainer<JSX.MedOffline>('med-off
 export const MedOption = /*@__PURE__*/ defineContainer<JSX.MedOption>('med-option');
 
 
+export const MedQuestion = /*@__PURE__*/ defineContainer<JSX.MedQuestion>('med-question', [
+  'color',
+  'neutral',
+  'collapsed'
+]);
+
+
 export const MedRateBar = /*@__PURE__*/ defineContainer<JSX.MedRateBar>('med-rate-bar');
 
 

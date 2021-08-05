@@ -1516,6 +1516,13 @@ med-offline,event,medClick,void,true
 
 med-option,shadow
 
+med-question,shadow
+med-question,prop,collapsed,boolean,false,false,true
+med-question,prop,color,string | undefined,undefined,false,false
+med-question,prop,neutral,string | undefined,undefined,false,false
+med-question,method,toggle,toggle(event?: Event | undefined) => Promise<void>
+med-question,css-prop,--color
+
 med-rate-bar,shadow
 
 med-rate-like,shadow
