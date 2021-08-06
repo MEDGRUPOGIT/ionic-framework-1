@@ -1158,6 +1158,17 @@ export class MedOption {
     this.el = r.nativeElement;
   }
 }
+export declare interface MedQuestion extends Components.MedQuestion {
+}
+@ProxyCmp({ inputs: ["collapsed", "color", "neutral"], "methods": ["toggle"] })
+@Component({ selector: "med-question", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "color", "neutral"] })
+export class MedQuestion {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedRateBar extends Components.MedRateBar {
 }
 @Component({ selector: "med-rate-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
