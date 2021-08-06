@@ -1377,24 +1377,21 @@ ion-virtual-scroll,method,checkEnd,checkEnd() => Promise<void>
 ion-virtual-scroll,method,checkRange,checkRange(offset: number, len?: number) => Promise<void>
 ion-virtual-scroll,method,positionForItem,positionForItem(index: number) => Promise<number>
 
-med-accordion,shadow
-med-accordion,prop,collapsed,boolean,true,false,true
-med-accordion,prop,icon,"left" | "right" | undefined,undefined,false,true
-med-accordion,prop,size,"full" | undefined,undefined,false,false
-med-accordion,method,toggle,toggle() => Promise<void>
-med-accordion,css-prop,--background
-med-accordion,css-prop,--icon-color
-
 med-accordion-item,shadow
 med-accordion-item,prop,icon,"left" | "right" | undefined,undefined,false,true
 med-accordion-item,prop,noBorder,boolean,false,false,true
 med-accordion-item,event,toggle,any,true
 med-accordion-item,css-prop,--background
+med-accordion-item,css-prop,--border-radius
 med-accordion-item,css-prop,--icon-color
 
 med-accordion-list,shadow
 med-accordion-list,prop,margin,"lg" | "md" | "sm" | "xs" | undefined,undefined,false,false
+med-accordion-list,prop,noBorder,boolean,false,false,true
 med-accordion-list,prop,singleOpen,boolean,true,false,true
+med-accordion-list,css-prop,--background
+med-accordion-list,css-prop,--border
+med-accordion-list,css-prop,--border-radius
 
 med-agrupador,shadow
 med-agrupador,prop,collapsed,boolean,true,false,true

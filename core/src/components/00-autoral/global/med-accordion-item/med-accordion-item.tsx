@@ -1,6 +1,11 @@
-import { Component, ComponentInterface, Element, Event, EventEmitter, h, Host, State, Prop } from '@stencil/core';
+import { Component, ComponentInterface, Element, Event, EventEmitter, h, Host, Prop, State } from '@stencil/core';
 import { createColorClasses } from '../../../../utils/theme';
 
+/**
+  * @slot header - Define o conteúdo do header do componente.
+  * @slot button - Se houver botões no componente eles devem ser inseridos nesse slot.
+  * @slot content - Define o conteúdo do componente.
+  */
 @Component({
   tag: 'med-accordion-item',
   styleUrl: 'med-accordion-item.scss',
@@ -9,16 +14,23 @@ import { createColorClasses } from '../../../../utils/theme';
 export class MedAccordionItem implements ComponentInterface {
   @Element() hostElement!: any;
 
-  @Prop({ reflect:true }) noBorder = false;
-
+  /**
+    * Define a posição do ícone de abertura do componente.
+    */
   @Prop({ reflect: true }) icon?: 'left' | 'right';
+
+  /**
+    * Define a variação da borda do componente.
+    */
+  @Prop({ reflect: true }) noBorder = false;
 
   @State() isOpen = false;
 
-  @Event() toggle!: EventEmitter; /* internal */
+  @Event() toggle!: EventEmitter;
 
-  public content!: HTMLDivElement;
-  public header!: HTMLDivElement;
+  private content!: HTMLDivElement;
+
+  private header!: HTMLDivElement;
 
   private isTransitioning = false;
 
@@ -59,10 +71,10 @@ export class MedAccordionItem implements ComponentInterface {
         'med-accordion-item': true,
         'med-accordion-item--no-border': noBorder,
         'med-accordion-item--open': isOpen,
-        }, null)}>
+      }, null)}>
         <div class="med-accordion-item__header" ref={(el) => this.header = el as HTMLDivElement}>
           {icon === 'left' && <div class="med-accordion-item__icon-container med-accordion-item__icon-container--left" onClick={() => this.onClick()}>
-             <ion-icon class="med-icon med-accordion-item__icon" name="med-baixo"></ion-icon>
+            <ion-icon class="med-icon med-accordion-item__icon" name="med-baixo"></ion-icon>
           </div>}
 
           <div class="med-accordion-item__heading" onClick={() => this.onClick()}>

@@ -12,6 +12,7 @@ export class MedCartaoRespostaItem {
 
   render() {
     const { color } = this;
+
     return (
       <Host from-stencil class={createColorClasses(color, { })}>
         <div class="container">

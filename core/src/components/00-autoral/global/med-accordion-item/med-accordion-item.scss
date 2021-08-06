@@ -2,9 +2,10 @@
 
 :host {
   /**
-   * @prop --background: Define a cor de background do componente.
-   * @prop  --icon-color: Define a cor de do icone do componente.
-   */
+    * @prop --background: Define a cor de background do componente.
+    * @prop --icon-color: Define a cor de do icone do componente.
+    * @prop --border-radius: Define o border-radius do componente.
+    */
   --background: var(--med-color-neutral-2);
   --icon-color: var(--med-color-neutral-10);
   --border-radius: #{$med-border-radius-sm};
@@ -12,11 +13,7 @@
 
 :host(.med-accordion-item) {
   display: block;
-  //height: 100%;
-  //overflow: auto;
-  //will-change: transform; // stacking context: https://developer.mozilla.org/en-US/docs/Web/CSS/will-change
   border-radius: var(--border-radius);
-  //overflow: hidden;
 
   .med-accordion-item__header {
     display: flex;

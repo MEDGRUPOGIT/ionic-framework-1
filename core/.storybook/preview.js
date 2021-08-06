@@ -126,6 +126,7 @@ export const parameters = {
   },
   options: {
     storySort: {
+      method: 'alphabetical',
       order: [
         'General', ['Welcome', 'Biblioteca', 'Arquitetura', 'Styleguide'],
         'Conhecimento', ['Metodologia BEM'],

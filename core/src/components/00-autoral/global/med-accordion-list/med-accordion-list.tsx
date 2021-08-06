@@ -1,7 +1,11 @@
-import { Animation } from '../../../../utils/animation/animation-interface';
+import { Component, ComponentInterface, Element, h, Host, Listen, Prop } from '@stencil/core';
 import { createAnimation } from '../../../../utils/animation/animation';
-import { Component, ComponentInterface, Element, h, Listen, Host, Prop } from '@stencil/core';
+import { Animation } from '../../../../utils/animation/animation-interface';
 import { createColorClasses } from '../../../../utils/theme';
+
+/**
+  * @slot -
+  */
 @Component({
   tag: 'med-accordion-list',
   styleUrl: 'med-accordion-list.scss',
@@ -10,10 +14,23 @@ import { createColorClasses } from '../../../../utils/theme';
 export class Accordion implements ComponentInterface {
   @Element() hostElement!: HTMLElement;
 
-  @Prop({ reflect:true }) singleOpen = true;
+  /**
+    * Define a margin entre os itens do accordion.
+    */
   @Prop() margin?: 'xs' | 'sm' | 'md' | 'lg';
 
+  /**
+    * Define a variação da borda do componente.
+    */
+  @Prop({ reflect: true }) singleOpen = true;
+
+  /**
+    * Define a variação da borda do componente.
+    */
+  @Prop({ reflect: true }) noBorder = false;
+
   private blocker!: HTMLElement;
+
   private currentlyOpen: CustomEvent | any = null;
 
   @Listen('toggle')
@@ -57,7 +74,7 @@ export class Accordion implements ComponentInterface {
 
     const afterStyles: any = { transform: `none`, 'z-index': null };
 
-    if(isBlocker) {
+    if (isBlocker) {
       beforeStyles['height'] = `${amountToShift}px`;
       afterStyles['height'] = '0px';
     }
@@ -104,16 +121,17 @@ export class Accordion implements ComponentInterface {
     const closeAnimationTime = 300;
 
     return createAnimation()
-    .addElement(elements)
-    .afterStyles({ transform: 'none' })
-    .to('transform', `translateY(-${amountToShift}px)`)
-    .duration(closeAnimationTime)
-    .easing('cubic-bezier(0.32,0.72,0,1)');;
+      .addElement(elements)
+      .afterStyles({ transform: 'none' })
+      .to('transform', `translateY(-${amountToShift}px)`)
+      .duration(closeAnimationTime)
+      .easing('cubic-bezier(0.32,0.72,0,1)');;
   }
 
   async animateClose(ev: any) {
-    ev.detail.header.style = '';
     const elementsToShift = this.getElementsToShift(ev.detail.element);
+
+    ev.detail.header.style = '';
     ev.detail.element.style.overflow = 'hidden';
     ev.detail.header.style.zIndex = '1';
 
@@ -139,11 +157,12 @@ export class Accordion implements ComponentInterface {
   }
 
   render() {
-    const { margin } = this;
+    const { noBorder, margin } = this;
     return (
       <Host from-stencil
         class={createColorClasses(null, {
           'med-accordion-list': true,
+          'med-accordion-list--no-border': noBorder,
           [`med-accordion-list--${margin}`]: margin !== undefined
         }, null)}>
         <slot></slot>

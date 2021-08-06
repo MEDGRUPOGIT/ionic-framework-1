@@ -881,17 +881,6 @@ export class IonToolbar {
     this.el = r.nativeElement;
   }
 }
-export declare interface MedAccordion extends Components.MedAccordion {
-}
-@ProxyCmp({ inputs: ["collapsed", "icon", "size"], "methods": ["toggle"] })
-@Component({ selector: "med-accordion", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "icon", "size"] })
-export class MedAccordion {
-  protected el: HTMLElement;
-  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
-    c.detach();
-    this.el = r.nativeElement;
-  }
-}
 export declare interface MedAccordionItem extends Components.MedAccordionItem {
 }
 @ProxyCmp({ inputs: ["icon", "noBorder"] })
@@ -907,8 +896,8 @@ export class MedAccordionItem {
 }
 export declare interface MedAccordionList extends Components.MedAccordionList {
 }
-@ProxyCmp({ inputs: ["margin", "singleOpen"] })
-@Component({ selector: "med-accordion-list", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["margin", "singleOpen"] })
+@ProxyCmp({ inputs: ["margin", "noBorder", "singleOpen"] })
+@Component({ selector: "med-accordion-list", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["margin", "noBorder", "singleOpen"] })
 export class MedAccordionList {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
