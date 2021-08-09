@@ -1,6 +1,6 @@
 ## fluxos git
 
-### Branch semanal
+### Branch Semanal
 
 - mergear branch da sprint anterior(ds-week-30) com squash com a `release`.
 - criar branch da sprint atual(ds-week-31) apartir da `release`.
