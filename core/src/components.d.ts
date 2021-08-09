@@ -219,7 +219,7 @@ export namespace Components {
         /**
           * Define a variação de tamanho do componente.
          */
-        "dsSize"?: 'xs' | 'sm' | 'md' | 'lg';
+        "dsSize"?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
         /**
           * The mode determines which platform styles to use.
          */
@@ -4004,7 +4004,7 @@ declare namespace LocalJSX {
         /**
           * Define a variação de tamanho do componente.
          */
-        "dsSize"?: 'xs' | 'sm' | 'md' | 'lg';
+        "dsSize"?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
         /**
           * The mode determines which platform styles to use.
          */

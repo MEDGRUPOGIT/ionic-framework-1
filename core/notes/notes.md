@@ -1,4 +1,4 @@
-## fluxos git
+## Fluxos GIT
 
 ### Branch Semanal
 
@@ -24,3 +24,8 @@ npm run custom:build
 ```bash
 npm run custom:build:storybook
 ```
+
+## Importante
+
+- para estilização de um componente ionic utilizar como referência o componente `ion-badge`.
+- para que o live reload funcione com o ionic é necessário que o scss seja construido nos arquivos md ou ios.
