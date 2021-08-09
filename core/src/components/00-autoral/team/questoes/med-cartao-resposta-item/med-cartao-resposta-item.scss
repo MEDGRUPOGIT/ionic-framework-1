@@ -2,7 +2,6 @@
 @import "../../../../../themes/ionic.globals.scss";
 
 :host {
-
   --border-width: #{$med-border-width-hairline};
   --border-style: solid;
   --border-color: rgba(#{$med-color-neutral-light-prime-rgb}, #{$med-opacity-level-light});
