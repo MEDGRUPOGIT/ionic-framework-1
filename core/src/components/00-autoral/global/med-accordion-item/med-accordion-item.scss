@@ -48,7 +48,7 @@
   .med-accordion-item__icon {
     stroke: var(--icon-color);
     font-size: 32px;
-    transform: rotate(180deg);
+    transform: rotate(0);
   }
 
   .med-accordion-item__content {
@@ -62,7 +62,7 @@
 }
 
 :host(.med-accordion-item--open) .med-accordion-item__icon {
-  transform: rotate(0);
+  transform: rotate(180deg);
 }
 
 // ////////////////////
