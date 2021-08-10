@@ -1160,8 +1160,8 @@ export class MedOption {
 }
 export declare interface MedQuestion extends Components.MedQuestion {
 }
-@ProxyCmp({ inputs: ["collapsed", "color", "neutral"], "methods": ["toggle"] })
-@Component({ selector: "med-question", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "color", "neutral"] })
+@ProxyCmp({ inputs: ["collapsed", "color", "neutral", "texto"], "methods": ["toggle"] })
+@Component({ selector: "med-question", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "color", "neutral", "texto"] })
 export class MedQuestion {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

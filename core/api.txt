@@ -1515,8 +1515,11 @@ med-question,shadow
 med-question,prop,collapsed,boolean,false,false,true
 med-question,prop,color,string | undefined,undefined,false,false
 med-question,prop,neutral,string | undefined,undefined,false,false
+med-question,prop,texto,string | undefined,undefined,false,false
 med-question,method,toggle,toggle(event?: Event | undefined) => Promise<void>
+med-question,css-prop,--background
 med-question,css-prop,--color
+med-question,css-prop,--lines
 
 med-rate-bar,shadow
 

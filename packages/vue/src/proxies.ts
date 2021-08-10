@@ -980,7 +980,8 @@ export const MedOption = /*@__PURE__*/ defineContainer<JSX.MedOption>('med-optio
 export const MedQuestion = /*@__PURE__*/ defineContainer<JSX.MedQuestion>('med-question', [
   'color',
   'neutral',
-  'collapsed'
+  'collapsed',
+  'texto'
 ]);
 
 
