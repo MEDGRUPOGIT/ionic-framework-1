@@ -1236,6 +1236,17 @@ export class MedTooltip2 {
     this.el = r.nativeElement;
   }
 }
+export declare interface MedVote extends Components.MedVote {
+}
+@ProxyCmp({ inputs: ["cabe", "naoCabe", "titulo"] })
+@Component({ selector: "med-vote", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["cabe", "naoCabe", "titulo"] })
+export class MedVote {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MontaProvasPlusminus extends Components.MontaProvasPlusminus {
 }
 @ProxyCmp({ inputs: ["dsSize"] })

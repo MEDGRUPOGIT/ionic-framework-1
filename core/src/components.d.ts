@@ -2964,6 +2964,20 @@ export namespace Components {
         "content": string;
         "header": string;
     }
+    interface MedVote {
+        /**
+          * Define o conteúdo de texto do componente.
+         */
+        "cabe"?: number;
+        /**
+          * Define o conteúdo de texto do componente.
+         */
+        "naoCabe"?: number;
+        /**
+          * Define o conteúdo de texto do componente.
+         */
+        "titulo"?: string;
+    }
     interface MontaProvasPlusminus {
         "dsSize"?: 'xl';
     }
@@ -3677,6 +3691,12 @@ declare global {
         prototype: HTMLMedTooltip2Element;
         new (): HTMLMedTooltip2Element;
     };
+    interface HTMLMedVoteElement extends Components.MedVote, HTMLStencilElement {
+    }
+    var HTMLMedVoteElement: {
+        prototype: HTMLMedVoteElement;
+        new (): HTMLMedVoteElement;
+    };
     interface HTMLMontaProvasPlusminusElement extends Components.MontaProvasPlusminus, HTMLStencilElement {
     }
     var HTMLMontaProvasPlusminusElement: {
@@ -3802,6 +3822,7 @@ declare global {
         "med-toolbar": HTMLMedToolbarElement;
         "med-tooltip": HTMLMedTooltipElement;
         "med-tooltip2": HTMLMedTooltip2Element;
+        "med-vote": HTMLMedVoteElement;
         "monta-provas-plusminus": HTMLMontaProvasPlusminusElement;
     }
 }
@@ -6786,6 +6807,20 @@ declare namespace LocalJSX {
         "content": string;
         "header": string;
     }
+    interface MedVote {
+        /**
+          * Define o conteúdo de texto do componente.
+         */
+        "cabe"?: number;
+        /**
+          * Define o conteúdo de texto do componente.
+         */
+        "naoCabe"?: number;
+        /**
+          * Define o conteúdo de texto do componente.
+         */
+        "titulo"?: string;
+    }
     interface MontaProvasPlusminus {
         "dsSize"?: 'xl';
         "onMedChange"?: (event: CustomEvent<PlusMinusStatus>) => void;
@@ -6909,6 +6944,7 @@ declare namespace LocalJSX {
         "med-toolbar": MedToolbar;
         "med-tooltip": MedTooltip;
         "med-tooltip2": MedTooltip2;
+        "med-vote": MedVote;
         "monta-provas-plusminus": MontaProvasPlusminus;
     }
 }
@@ -7034,6 +7070,7 @@ declare module "@stencil/core" {
             "med-toolbar": LocalJSX.MedToolbar & JSXBase.HTMLAttributes<HTMLMedToolbarElement>;
             "med-tooltip": LocalJSX.MedTooltip & JSXBase.HTMLAttributes<HTMLMedTooltipElement>;
             "med-tooltip2": LocalJSX.MedTooltip2 & JSXBase.HTMLAttributes<HTMLMedTooltip2Element>;
+            "med-vote": LocalJSX.MedVote & JSXBase.HTMLAttributes<HTMLMedVoteElement>;
             "monta-provas-plusminus": LocalJSX.MontaProvasPlusminus & JSXBase.HTMLAttributes<HTMLMontaProvasPlusminusElement>;
         }
     }

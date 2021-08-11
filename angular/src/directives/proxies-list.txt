@@ -104,5 +104,6 @@ export const DIRECTIVES = [
   d.MedToolbar,
   d.MedTooltip,
   d.MedTooltip2,
+  d.MedVote,
   d.MontaProvasPlusminus
 ];

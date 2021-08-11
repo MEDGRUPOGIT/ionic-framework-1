@@ -1029,6 +1029,13 @@ export const MedTooltip2 = /*@__PURE__*/ defineContainer<JSX.MedTooltip2>('med-t
 ]);
 
 
+export const MedVote = /*@__PURE__*/ defineContainer<JSX.MedVote>('med-vote', [
+  'titulo',
+  'cabe',
+  'naoCabe'
+]);
+
+
 export const MontaProvasPlusminus = /*@__PURE__*/ defineContainer<JSX.MontaProvasPlusminus>('monta-provas-plusminus', [
   'dsSize',
   'medChange'

@@ -1557,6 +1557,11 @@ med-tooltip2,prop,buttonRight,{ label: string; icon: string; },undefined,true,fa
 med-tooltip2,prop,content,string,undefined,true,true
 med-tooltip2,prop,header,string,undefined,true,true
 
+med-vote,shadow
+med-vote,prop,cabe,number | undefined,undefined,false,false
+med-vote,prop,naoCabe,number | undefined,undefined,false,false
+med-vote,prop,titulo,string | undefined,undefined,false,false
+
 monta-provas-plusminus,shadow
 monta-provas-plusminus,prop,dsSize,"xl" | undefined,undefined,false,false
 monta-provas-plusminus,event,medChange,PlusMinusStatus.MINUS | PlusMinusStatus.PLUS,true
