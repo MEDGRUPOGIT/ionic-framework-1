@@ -18,7 +18,7 @@ export class MedTiles {
   @Prop({ reflect:true }) selected = false;
 
   render() {
-    const { color, neutral, titulo, label, badge, selected, solid } = this;
+    const { color, neutral, titulo, label, selected, solid } = this;
     return (
       <Host
       class={createColorClasses(color, {
@@ -31,7 +31,7 @@ export class MedTiles {
         <div class="med-tiles__content">
           <h3 class="med-tiles__title" innerHTML={titulo}></h3>
           <h4 class="med-tiles__label"  innerHTML={label}></h4>
-          <ion-badge class="med-tiles__badge" ds-size="xs" neutral={neutral} color={color}>{badge}</ion-badge>
+          <slot></slot>
         </div>
       </Host>
     );
