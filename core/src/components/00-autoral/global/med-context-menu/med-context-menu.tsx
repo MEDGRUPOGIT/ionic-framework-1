@@ -29,7 +29,6 @@ export class MedContextMenu {
 
     return (
       <Host
-        from-stencil
         class={createColorClasses(null, {
           'med-context-menu': true,
           'med-context-menu--collapsed': this.collapsed
