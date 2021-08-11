@@ -65,13 +65,11 @@
     height: 2px;
 
     &--cabe {
-      width: 50%;
       background-color: md-color(fb-success, 3);
       margin-right: $med-spacing-inline-nano;
     }
 
     &--nao-cabe {
-      width: 50%;
       background-color: md-color(fb-warning, 3);
       margin-left: $med-spacing-inline-nano;
     }
