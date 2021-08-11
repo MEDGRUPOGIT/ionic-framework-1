@@ -1,19 +1,18 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
-import { medColors, medNeutrals } from '../../../med-colors';
 
 export default {
   title: 'Components/Core/Rating',
   decorators: [withDesign],
 };
 
-const TemplateDefault = ({ color, neutral, texto }) => {
+const TemplateDefault = ({ nome, data, concurso, texto, dsName, cabe }) => {
   return html`
     <ion-app class="storybook-only">
       <div class="storybook-only__container">
 
         <!-- component -->
-          <med-rating .color=${color} .neutral=${neutral} .texto=${texto}></med-rating>
+          <med-rating .nome=${nome} .data=${data} .concurso=${concurso} .texto=${texto} ds-name=${dsName} ?cabe=${cabe}></med-rating>
         <!-- component -->
 
       </div>
@@ -29,27 +28,58 @@ Rating.parameters = {
   },
 }
 Rating.argTypes = {
-  color: {
-    options: medColors,
-    control: { type: 'inline-radio'},
-    description: "Define a cor do componente.",
+  nome: {
+    control: { type: 'text' },
+    description: "Define o nome do aluno.",
+    defaultValue: 'Alex',
     table: {
-      type:  { summary: 'Color' },
+      type:  { summary: 'string' },
       defaultValue: { summary: 'undefined' },
     },
   },
-  neutral: {
-    options: medNeutrals,
-    control: { type: 'inline-radio'},
-    description: "Define a cor neutra do componente.",
+  data: {
+    control: { type: 'text' },
+    description: "Define a data da postagem.",
+    defaultValue: '11/8',
     table: {
-      type:  { summary: 'Neutrals' },
+      type:  { summary: 'string' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  concurso: {
+    control: { type: 'text' },
+    description: "Define o nome do concurso.",
+    defaultValue: 'UFRJ',
+    table: {
+      type:  { summary: 'string' },
       defaultValue: { summary: 'undefined' },
     },
   },
   texto: {
     control: { type: 'text' },
-    description: "Define o conteúdo de texto do componente.",
-    defaultValue: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, esse. Porro excepturi provident et, laborum quas libero odio sunt ab in odit. Error officiis, omnis in excepturi assumenda cupiditate voluptate dolorum! Dolor dolore veritatis officia tempora architecto eius quidem pariatur facilis vitae, ab eos nemo deserunt numquam illo nam natus! Quae quo voluptate sequi rerum blanditiis odit neque libero tempora excepturi soluta ullam iure, iste minima, ex optio voluptatibus repudiandae magnam velit id sapiente autem distinctio. Voluptatibus accusamus rem deserunt sapiente quasi tenetur sed suscipit ratione, hic soluta ullam, impedit consequuntur provident? Ea, pariatur autem! Veniam doloribus facere vel! Ad saepe odit nam quisquam, voluptatem fugiat dignissimos. Quod cupiditate quibusdam quam modi, sint tempora. Voluptatum omnis tempore accusantium libero odio exercitationem dolorum sequi eligendi perspiciatis voluptas mollitia minus culpa, atque maiores dolores repellendus recusandae ad facere? Doloribus maxime cupiditate neque earum voluptates, inventore quod eveniet quae quisquam natus enim veritatis.',
+    description: "Define o conteúdo de texto.",
+    defaultValue: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    table: {
+      type:  { summary: 'string' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  dsName: {
+    options: [undefined, 'medgrupo', 'banca'],
+    control: { type: 'inline-radio'},
+    description: "Define a variação do componente.",
+    table: {
+      type:  { summary: 'medgrupo | banca' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  cabe: {
+    disabled: false,
+    control: { type: 'boolean' },
+    description: 'Define o estado cabe ou não cabe recurso',
+    table: {
+      type:  { summary: 'boolean' },
+      defaultValue: { summary: 'true' },
+    },
   },
 };

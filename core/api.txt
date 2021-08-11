@@ -150,7 +150,7 @@ ion-button,prop,color,string | undefined,undefined,false,false
 ion-button,prop,disabled,boolean,false,false,true
 ion-button,prop,download,string | undefined,undefined,false,false
 ion-button,prop,dsName,"icon-label" | "icon-only" | "primary" | "secondary" | "tertiary" | undefined,undefined,false,false
-ion-button,prop,dsSize,"lg" | "md" | "sm" | "xs" | "xxs" | undefined,undefined,false,false
+ion-button,prop,dsSize,"lg" | "md" | "sm" | "xs" | "xxs" | "xxxs" | undefined,undefined,false,false
 ion-button,prop,expand,"block" | "full" | undefined,undefined,false,true
 ion-button,prop,fill,"clear" | "default" | "outline" | "solid" | undefined,undefined,false,true
 ion-button,prop,href,string | undefined,undefined,false,false
@@ -1526,6 +1526,19 @@ med-rate-bar,shadow
 med-rate-like,shadow
 med-rate-like,prop,status,RateStatus.DISLIKE | RateStatus.LIKE | undefined,undefined,false,true
 med-rate-like,event,medChange,RateStatus.DISLIKE | RateStatus.LIKE,true
+
+med-rating,shadow
+med-rating,prop,cabe,boolean,false,false,false
+med-rating,prop,concurso,string | undefined,undefined,false,false
+med-rating,prop,data,string | undefined,undefined,false,false
+med-rating,prop,dsName,"banca" | "medgrupo" | undefined,undefined,false,false
+med-rating,prop,nome,string | undefined,undefined,false,false
+med-rating,prop,texto,string | undefined,undefined,false,false
+med-rating,css-prop,--background
+med-rating,css-prop,--background-right
+med-rating,css-prop,--color
+med-rating,css-prop,--color-date
+med-rating,css-prop,--color-icon
 
 med-tiles,shadow
 med-tiles,prop,badge,string | undefined,undefined,false,false

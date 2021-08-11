@@ -2,14 +2,15 @@
 
 :host {
   /**
-    * @prop --color: Define a cor do componente.
-    * @prop --background: Define a cor de background do componente.
+    * @prop --color: Define a cor do texto.
+    * @prop --color-date: Define a cor do texto da data.
+    * @prop --color-icon: Define a cor do icone.
+    * @prop --background: Define a cor de background do componente quando cabe ou não cabe.
+    * @prop --background-right: Define a cor do background do lado direito do componente.
     */
-  //--color: var(--med-color-neutral-10);
-  //--background: #{md-color(brand, 1)};
 
+  --color: var(--med-color-neutral-10);
   --color-date: var(--med-color-neutral-5);
-  --color-text: var(--med-color-neutral-10);
   --color-icon: var(--med-color-neutral-2);
 
   --background: #{md-color(fb-success, 3)};
@@ -21,6 +22,7 @@
   display: flex;
   width: 100%;
   max-width: 1200px;
+  position: relative;
 }
 
 :host(.med-rating) .med-rating__icon {
@@ -28,6 +30,12 @@
   font-size: 24px;
   stroke: var(--color-icon);
   transition: 200ms transform ease;
+}
+
+:host(.med-rating) .med-rating__icon-medgrupo {
+  position: absolute;
+  top: $med-spacing-inline-base;
+  right: $med-spacing-inline-base;
 }
 
 :host(.med-rating) .med-rating__left {
@@ -49,6 +57,7 @@
 :host(.med-rating) .med-rating__name {
   font-size: $med-font-size-xxs;
   line-height: $med-line-height-compressed;
+  color: var(--color);
 }
 
 :host(.med-rating) .med-rating__date {
@@ -60,6 +69,7 @@
 :host(.med-rating) .med-rating__concurso {
   margin: 0;
   padding: 0;
+  color: var(--color);
   font-size: $med-font-size-xxs;
   line-height: $med-line-height-compressed;
   font-weight: $med-font-weight-semibold;
@@ -77,9 +87,49 @@
 // ////////////////////
 
 :host(.med-rating--cabe) {
-  --background:#{md-color(fb-success, 3)};
+  --background: #{md-color(fb-success, 3)};
+
+  .med-rating__name,
+  .med-rating__concurso {
+    --color: #{md-color(fb-success, 3)};
+  }
 }
 
 :host(.med-rating--nao-cabe) {
-  --background:#{md-color(fb-warning, 3)};
+  --background: #{md-color(fb-warning, 3)};
+
+  .med-rating__name,
+  .med-rating__concurso {
+    --color: #{md-color(fb-warning, 3)};
+  }
+}
+
+:host(.med-rating--medgrupo) {
+  .med-rating__name,
+  .med-rating__concurso {
+    --color: var(--med-color-neutral-10);
+  }
+
+  .med-rating__date {
+    display: none;
+  }
+}
+
+:host(.med-rating--banca) {
+  .med-rating__name,
+  .med-rating__date,
+  .med-rating__text {
+    display: none;
+  }
+
+  .med-rating__right {
+    display: flex;
+    align-items: center;
+  }
+
+  .med-rating__concurso {
+    font-size: $med-font-size-xs;
+    line-height: $med-line-height-compressed;
+    font-weight: $med-font-weight-semibold;
+  }
 }

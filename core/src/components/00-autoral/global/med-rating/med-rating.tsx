@@ -8,28 +8,38 @@ import { createColorClasses } from '../../../../utils/theme';
 })
 export class MedRating {
 
-   /**
+  /**
    * Define a variação do componente.
    */
   @Prop() dsName?: 'medgrupo' | 'banca';
 
   /**
-    * Define o conteúdo de texto do componente.
+    * Define o nome do aluno.
     */
-  @Prop() name?: string;
-  @Prop() date?: string;
+  @Prop() nome?: string;
+
+  /**
+    * Define a data da postagem.
+    */
+  @Prop() data?: string;
+
+  /**
+    * Define o nome do concurso.
+    */
   @Prop() concurso?: string;
+
+  /**
+    * Define o conteúdo de texto.
+    */
   @Prop() texto?: string;
 
   /**
-  * Define o conteúdo de texto do componente.
+  * Define o estado cabe ou não cabe recurso.
   */
-  @Prop() cabe = true;
-
+  @Prop() cabe = false;
 
     render() {
-      //const { dsName, name, date, concurso, texto, cabe } = this;
-      const { cabe } = this;
+      const { dsName, nome, data, concurso, texto, cabe } = this;
 
       return (
         <Host from-stencil
@@ -37,17 +47,18 @@ export class MedRating {
             'med-rating': true,
             'med-rating--cabe': cabe,
             'med-rating--nao-cabe': !cabe,
-            //[`med-rating--${cabe}`]: dsName !== undefined,
+            [`med-rating--${dsName}`]: dsName !== undefined,
           }, null)}>
 
             <div class="med-rating__left">
-              <ion-icon name="med-negativo" class="med-icon med-rating__icon"></ion-icon>
+              <ion-icon name={cabe ? "med-positivo" : "med-negativo"} class="med-icon med-rating__icon"></ion-icon>
             </div>
 
             <div class="med-rating__right">
-              <span class="med-rating__name">Name</span> <span class="med-rating__date">Date</span>
-              <p class="med-rating__concurso">UF-AREA</p>
-              <span class="med-rating__text">Rating text</span>
+              <span class="med-rating__name">{nome}</span> <span class="med-rating__date">{data}</span>
+              <p class="med-rating__concurso">{concurso}</p>
+              <span class="med-rating__text">{texto}</span>
+              {(dsName === 'medgrupo') && <ion-icon name="med-logo" class="med-icon med-rating__icon-medgrupo"></ion-icon>}
             </div>
 
         </Host>
