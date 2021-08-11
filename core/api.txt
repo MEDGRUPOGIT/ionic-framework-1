@@ -1527,6 +1527,19 @@ med-rate-like,shadow
 med-rate-like,prop,status,RateStatus.DISLIKE | RateStatus.LIKE | undefined,undefined,false,true
 med-rate-like,event,medChange,RateStatus.DISLIKE | RateStatus.LIKE,true
 
+med-rating,shadow
+med-rating,prop,cabe,boolean,false,false,false
+med-rating,prop,concurso,string | undefined,undefined,false,false
+med-rating,prop,data,string | undefined,undefined,false,false
+med-rating,prop,dsName,"banca" | "medgrupo" | undefined,undefined,false,false
+med-rating,prop,nome,string | undefined,undefined,false,false
+med-rating,prop,texto,string | undefined,undefined,false,false
+med-rating,css-prop,--background
+med-rating,css-prop,--background-right
+med-rating,css-prop,--color
+med-rating,css-prop,--color-date
+med-rating,css-prop,--color-icon
+
 med-tiles,shadow
 med-tiles,prop,badge,string | undefined,undefined,false,false
 med-tiles,prop,color,string | undefined,undefined,false,false

@@ -994,6 +994,16 @@ export const MedRateLike = /*@__PURE__*/ defineContainer<JSX.MedRateLike>('med-r
 ]);
 
 
+export const MedRating = /*@__PURE__*/ defineContainer<JSX.MedRating>('med-rating', [
+  'dsName',
+  'nome',
+  'data',
+  'concurso',
+  'texto',
+  'cabe'
+]);
+
+
 export const MedTiles = /*@__PURE__*/ defineContainer<JSX.MedTiles>('med-tiles', [
   'titulo',
   'label',
