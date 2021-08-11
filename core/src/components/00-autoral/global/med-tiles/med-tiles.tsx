@@ -29,8 +29,8 @@ export class MedTiles {
       >
         <div class="med-tiles__border"></div>
         <div class="med-tiles__content">
-          <h3 class="med-tiles__title">{titulo}</h3>
-          <h4 class="med-tiles__label">{label}</h4>
+          <h3 class="med-tiles__title" innerHTML={titulo}></h3>
+          <h4 class="med-tiles__label"  innerHTML={label}></h4>
           <ion-badge class="med-tiles__badge" ds-size="xs" neutral={neutral} color={color}>{badge}</ion-badge>
         </div>
       </Host>
