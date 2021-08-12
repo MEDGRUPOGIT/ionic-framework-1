@@ -962,6 +962,16 @@ export const MedListItemAccordion = /*@__PURE__*/ defineContainer<JSX.MedListIte
 ]);
 
 
+export const MedMessage = /*@__PURE__*/ defineContainer<JSX.MedMessage>('med-message', [
+  'dsName',
+  'nome',
+  'concurso',
+  'texto',
+  'messageId',
+  'image'
+]);
+
+
 export const MedNavbar = /*@__PURE__*/ defineContainer<JSX.MedNavbar>('med-navbar', [
   'color',
   'neutral',

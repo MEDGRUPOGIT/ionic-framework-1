@@ -60,7 +60,7 @@ export class MedTooltip {
         <div class="med-tooltip__content">
           {titulo && <h3 class="med-tooltip__titulo">{titulo}</h3>}
           {content && <p class="med-tooltip__text">{content}</p>}
-          <slot></slot>
+          <slot name="content"></slot>
         </div>
       </Host>
     );

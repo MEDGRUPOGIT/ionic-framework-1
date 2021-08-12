@@ -94,6 +94,7 @@ export const DIRECTIVES = [
   d.MedList,
   d.MedListItem,
   d.MedListItemAccordion,
+  d.MedMessage,
   d.MedNavbar,
   d.MedOffline,
   d.MedOption,

@@ -2888,6 +2888,29 @@ export namespace Components {
         "titulo"?: string;
         "toggle": (event?: Event | undefined) => Promise<void>;
     }
+    interface MedMessage {
+        /**
+          * Define o nome do concurso.
+         */
+        "concurso"?: string;
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'medgrupo' | 'response' | 'comment' | 'user-message';
+        "image": string;
+        /**
+          * Define o id da mensagem.
+         */
+        "messageId"?: string;
+        /**
+          * Define o nome do aluno.
+         */
+        "nome"?: string;
+        /**
+          * Define o conteúdo de texto.
+         */
+        "texto"?: string;
+    }
     interface MedNavbar {
         /**
           * Define a cor do componente.
@@ -3657,6 +3680,12 @@ declare global {
         prototype: HTMLMedListItemAccordionElement;
         new (): HTMLMedListItemAccordionElement;
     };
+    interface HTMLMedMessageElement extends Components.MedMessage, HTMLStencilElement {
+    }
+    var HTMLMedMessageElement: {
+        prototype: HTMLMedMessageElement;
+        new (): HTMLMedMessageElement;
+    };
     interface HTMLMedNavbarElement extends Components.MedNavbar, HTMLStencilElement {
     }
     var HTMLMedNavbarElement: {
@@ -3844,6 +3873,7 @@ declare global {
         "med-list": HTMLMedListElement;
         "med-list-item": HTMLMedListItemElement;
         "med-list-item-accordion": HTMLMedListItemAccordionElement;
+        "med-message": HTMLMedMessageElement;
         "med-navbar": HTMLMedNavbarElement;
         "med-offline": HTMLMedOfflineElement;
         "med-option": HTMLMedOptionElement;
@@ -6764,6 +6794,29 @@ declare namespace LocalJSX {
         "selected"?: boolean;
         "titulo"?: string;
     }
+    interface MedMessage {
+        /**
+          * Define o nome do concurso.
+         */
+        "concurso"?: string;
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'medgrupo' | 'response' | 'comment' | 'user-message';
+        "image"?: string;
+        /**
+          * Define o id da mensagem.
+         */
+        "messageId"?: string;
+        /**
+          * Define o nome do aluno.
+         */
+        "nome"?: string;
+        /**
+          * Define o conteúdo de texto.
+         */
+        "texto"?: string;
+    }
     interface MedNavbar {
         /**
           * Define a cor do componente.
@@ -6993,6 +7046,7 @@ declare namespace LocalJSX {
         "med-list": MedList;
         "med-list-item": MedListItem;
         "med-list-item-accordion": MedListItemAccordion;
+        "med-message": MedMessage;
         "med-navbar": MedNavbar;
         "med-offline": MedOffline;
         "med-option": MedOption;
@@ -7120,6 +7174,7 @@ declare module "@stencil/core" {
             "med-list": LocalJSX.MedList & JSXBase.HTMLAttributes<HTMLMedListElement>;
             "med-list-item": LocalJSX.MedListItem & JSXBase.HTMLAttributes<HTMLMedListItemElement>;
             "med-list-item-accordion": LocalJSX.MedListItemAccordion & JSXBase.HTMLAttributes<HTMLMedListItemAccordionElement>;
+            "med-message": LocalJSX.MedMessage & JSXBase.HTMLAttributes<HTMLMedMessageElement>;
             "med-navbar": LocalJSX.MedNavbar & JSXBase.HTMLAttributes<HTMLMedNavbarElement>;
             "med-offline": LocalJSX.MedOffline & JSXBase.HTMLAttributes<HTMLMedOfflineElement>;
             "med-option": LocalJSX.MedOption & JSXBase.HTMLAttributes<HTMLMedOptionElement>;

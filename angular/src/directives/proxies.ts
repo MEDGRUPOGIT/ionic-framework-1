@@ -1125,6 +1125,17 @@ export class MedListItemAccordion {
     this.el = r.nativeElement;
   }
 }
+export declare interface MedMessage extends Components.MedMessage {
+}
+@ProxyCmp({ inputs: ["concurso", "dsName", "image", "messageId", "nome", "texto"] })
+@Component({ selector: "med-message", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["concurso", "dsName", "image", "messageId", "nome", "texto"] })
+export class MedMessage {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedNavbar extends Components.MedNavbar {
 }
 @ProxyCmp({ inputs: ["color", "dsName", "neutral"] })
