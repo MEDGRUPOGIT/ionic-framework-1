@@ -16,8 +16,8 @@ export class MedTooltip {
 
   @Prop({ reflect: true }) position?: 'start' | 'center' | 'end';
 
-  @Prop({ reflect: true }) titulo!: string;
-  @Prop({ reflect: true }) content!: string;
+  @Prop({ reflect: true }) titulo?: string;
+  @Prop({ reflect: true }) content?: string;
 
   /**
    * Define o estado do componente.
