@@ -28,6 +28,37 @@ const TemplateDefault = ({ nome, messageId, concurso, texto, dsName }) => {
     .med-message__list-item:last-child {
       margin-left: auto;
     }
+
+    .med-context-menu__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .med-context-menu__item {
+      padding-right: var(--med-spacing-inline-xs);
+      margin-bottom: var(--med-spacing-stack-base);
+      font-size: var(--med-font-size-xs);
+      line-height: var(--med-line-height-compressed);
+      color: var(--med-color-neutral-3);
+      display: flex;
+      align-items: center;
+      transition: color 300ms ease-out;
+      cursor: pointer;
+    }
+
+    .med-context-menu__item:last-child {
+      margin-bottom: 0;
+    }
+
+    .med-context-menu__item:hover {
+      color: var(--med-color-neutral-1);
+    }
+
+    .med-context-menu__icon {
+      padding-right: var(--med-spacing-inline-xxxs);
+      stroke: var(--med-color-neutral-3);
+    }
   </style>
 
     <ion-app class="storybook-only">
@@ -39,19 +70,14 @@ const TemplateDefault = ({ nome, messageId, concurso, texto, dsName }) => {
             <med-context-menu slot="menu" class="med-context-menu">
               <ul class="med-context-menu__list">
                 <li class="med-context-menu__item">
-                  <ion-icon class="med-icon med-context-menu__icon" name="med-filtro"></ion-icon>
-                  <span>Ver filtro selecionado</span>
-                </li>
-                <li class="med-context-menu__item">
                   <ion-icon class="med-icon med-context-menu__icon" name="med-editar"></ion-icon>
-                  <span>Renomear Prova</span>
+                  <span>Editar</span>
                 </li>
                 <li class="med-context-menu__item">
                   <ion-icon class="med-icon med-context-menu__icon" name="med-lixeira"></ion-icon>
-                  <span>Excluir Prova</span>
+                  <span>Deletar</span>
                 </li>
               </ul>
-              <p class="med-context-menu__info">Criada em 30/12/2020</p>
             </med-context-menu>
 
             <ion-badge ds-size="xxs" ds-name="secondary">EM QUESTÃO X - 2021 INSTITUIÇÃO</ion-badge>

@@ -55,14 +55,18 @@
 
 :host(.med-message) .med-message__avatar {
   font-size: 30px;
+
+  margin-right: $med-spacing-inline-xxxs;
+}
+
+:host(.med-message) .med-message__letter {
+  background: red;
   min-width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: red;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: $med-spacing-inline-xxxs;
 }
 
 :host(.med-message) .med-message__header {
@@ -105,6 +109,9 @@
 
 :host(.med-message) .med-message__icon {
   stroke: #{md-color(brand, 4)};
+}
+
+:host(.med-message) .med-message__tooltip {
   margin-right: $med-spacing-inline-xxxs;
 }
 
@@ -137,5 +144,5 @@
 }
 
 :host(.med-message--user-message) {
-  --background: linear-gradient(to right, #{md-color(brand, 1)} 0%,var(--med-color-neutral-2) 100%);
+  --background: linear-gradient(to right, #{md-color(brand, 1)} 0%, var(--med-color-neutral-2) 100%);
 }

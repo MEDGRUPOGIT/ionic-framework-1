@@ -1,10 +1,11 @@
-import { Component, Host, h, Prop } from '@stencil/core';
+import { Component, Host, h, Prop, getAssetPath } from '@stencil/core';
 import { createColorClasses } from '../../../../utils/theme';
 
 @Component({
   tag: 'med-message',
   styleUrl: 'med-message.scss',
   shadow: true,
+  assetsDirs: ['assets']
 })
 export class MedMessage {
 
@@ -33,8 +34,10 @@ export class MedMessage {
     */
   @Prop() messageId?: string;
 
+  @Prop() image = "avatar_medgrupo.png"
+
     render() {
-      const { dsName, nome, concurso, texto, messageId } = this;
+      const { dsName, nome, concurso, texto, messageId, image } = this;
 
       return (
         <Host from-stencil
@@ -46,15 +49,15 @@ export class MedMessage {
           <div class="med-message__content">
             <div class="med-message__header">
               <div class="med-message__avatar">
-                A
-                {/* {(dsName === 'medgrupo') && <ion-icon name="med-logo" class="med-icon med-rating__icon-medgrupo"></ion-icon>} */}
+                {(dsName !== 'medgrupo') && <span class="med-message__letter">A</span> }
+                {(dsName === 'medgrupo') && <img src={getAssetPath(`./assets/${image}`)}></img>}
               </div>
               <div class="med-message__id">
                 <p class="med-message__nome">{nome} - {concurso}</p>
                 <p class="med-message__number">{messageId}</p>
               </div>
               <div class="med-message__controls">
-                <med-tooltip content="Possui resposta da Equipe Acadêmica" placement="top" position="end">
+                <med-tooltip class="med-message__tooltip" content="Possui resposta da Equipe Acadêmica" placement="top" position="end">
                   <ion-icon slot="icon" class="med-icon med-message__icon" name="med-equipe-homologada"></ion-icon>
                  </med-tooltip>
                 <slot name="menu"></slot>
