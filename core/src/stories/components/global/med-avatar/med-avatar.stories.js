@@ -7,7 +7,7 @@ export default {
   decorators: [withDesign],
 };
 
-const TemplateDefault = (  color, neutral, dsSize ) => {
+const TemplateDefault = ({color, neutral, dsSize}) => {
   return html`
 
     <ion-app class="storybook-only">
