@@ -1442,9 +1442,6 @@ med-chart-radial-label,prop,valores,MedChartRadiaItem[],[],false,false
 med-context-menu,shadow
 med-context-menu,prop,collapsed,boolean,true,false,true
 med-context-menu,method,toggle,toggle(event?: Event | undefined) => Promise<void>
-med-context-menu,css-prop,--background
-med-context-menu,css-prop,--color
-med-context-menu,css-prop,--z-index
 
 med-divider,shadow
 med-divider,prop,color,string | undefined,undefined,false,false
@@ -1510,6 +1507,10 @@ med-message,css-prop,--background-footer
 med-message,css-prop,--color
 
 med-message-list,shadow
+med-message-list,css-prop,--margin-left-comment
+med-message-list,css-prop,--margin-left-response
+med-message-list,css-prop,--margin-top-message
+med-message-list,css-prop,--margin-top-response
 
 med-navbar,shadow
 med-navbar,prop,color,string | undefined,undefined,false,false

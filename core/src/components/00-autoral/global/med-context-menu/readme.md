@@ -25,15 +25,6 @@ Type: `Promise<void>`
 
 
 
-## CSS Custom Properties
-
-| Name           | Description                          |
-| -------------- | ------------------------------------ |
-| `--background` | Define a cor da borda do componente. |
-| `--color`      | Define a cor do componente.          |
-| `--z-index`    | Define o z-index do componente.      |
-
-
 ## Dependencies
 
 ### Depends on

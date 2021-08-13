@@ -6,7 +6,7 @@ export default {
   decorators: [withDesign],
 };
 
-const TemplateDefault = ({ nome, messageId, concurso, texto, dsName }) => {
+const TemplateDefault = () => {
   return html`
 
   <style>
@@ -62,56 +62,300 @@ const TemplateDefault = ({ nome, messageId, concurso, texto, dsName }) => {
   </style>
 
     <ion-app class="storybook-only">
-      <div class="storybook-only__container" style="text-align:left;">
+      <ion-content class="storybook-only__container" style="text-align:left;">
 
         <!-- component -->
-          <med-message .nome=${nome} message-id=${messageId} .concurso=${concurso} .texto=${texto} ds-name=${dsName}>
 
-            <med-context-menu slot="menu" class="med-context-menu">
-              <ul class="med-context-menu__list">
-                <li class="med-context-menu__item">
-                  <ion-icon class="med-icon med-context-menu__icon" name="med-editar"></ion-icon>
-                  <span>Editar</span>
-                </li>
-                <li class="med-context-menu__item">
-                  <ion-icon class="med-icon med-context-menu__icon" name="med-lixeira"></ion-icon>
-                  <span>Deletar</span>
-                </li>
-              </ul>
-            </med-context-menu>
+        <med-question texto="Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit"></med-question>
 
-            <ion-badge ds-size="xxs" ds-name="secondary">EM QUESTÃO X - 2021 INSTITUIÇÃO</ion-badge>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
 
-            <ul class="med-message__footer" slot="footer">
-              <li class="med-message__list-item">
-                <ion-button ds-name="icon-only">
-                  <ion-icon class="med-icon" slot="icon-only" name="med-estrela"></ion-icon>
-                </ion-button>
-              </li>
+            <med-message-list>
 
-              <li class="med-message__list-item">
-                <ion-button ds-name="icon-label">
-                  <ion-icon class="med-icon" name="med-positivo" slot="start"></ion-icon>
-                  4221
-                </ion-button>
-              </li>
+              <!-- MESSAGE -->
 
-              <li class="med-message__list-item">
-                <ion-button ds-name="icon-label">
-                  <ion-icon class="med-icon" name="med-gabarito" slot="start"></ion-icon>
-                  123
-                </ion-button>
-              </li>
+              <med-message nome="Alex" message-id="#31323132" concurso="UFRJ" texto="Lorem ispsum" ds-name="">
 
-              <li class="med-message__list-item">
-                <ion-button ds-name="tertiary">RESPONDER</ion-button>
-              </li>
-            </ul>
+                <med-context-menu slot="menu" class="med-context-menu">
+                  <ul class="med-context-menu__list">
+                    <li class="med-context-menu__item">
+                      <ion-icon class="med-icon med-context-menu__icon" name="med-editar"></ion-icon>
+                      <span>Editar</span>
+                    </li>
+                    <li class="med-context-menu__item">
+                      <ion-icon class="med-icon med-context-menu__icon" name="med-lixeira"></ion-icon>
+                      <span>Deletar</span>
+                    </li>
+                  </ul>
+                </med-context-menu>
 
-          </med-message>
+                <ion-badge ds-size="xxs" ds-name="secondary">EM QUESTÃO X - 2021 INSTITUIÇÃO</ion-badge>
+
+                <ul class="med-message__footer" slot="footer">
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-only">
+                      <ion-icon class="med-icon" slot="icon-only" name="med-estrela"></ion-icon>
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-label">
+                      <ion-icon class="med-icon" name="med-positivo" slot="start"></ion-icon>
+                      4221
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-label">
+                      <ion-icon class="med-icon" name="med-gabarito" slot="start"></ion-icon>
+                      123
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="tertiary">RESPONDER</ion-button>
+                  </li>
+                </ul>
+
+              </med-message>
+
+              <!-- MEDGRUPO -->
+
+              <med-message nome="Alex" message-id="#413131" concurso="UFRJ" texto="Lorem ipsum" ds-name="medgrupo">
+
+                <ul class="med-message__footer" slot="footer">
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-label">
+                      <ion-icon class="med-icon" name="med-positivo" slot="start"></ion-icon>
+                      4221
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="tertiary">RESPONDER</ion-button>
+                  </li>
+                </ul>
+
+              </med-message>
+
+              <!-- RESPONSE -->
+
+              <med-message nome="Alex" message-id="#413131" concurso="UFRJ" texto="Lorem ipsum" ds-name="response">
+
+                <ul class="med-message__footer" slot="footer">
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-only">
+                      <ion-icon class="med-icon" slot="icon-only" name="med-estrela"></ion-icon>
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-label">
+                      <ion-icon class="med-icon" name="med-positivo" slot="start"></ion-icon>
+                      4221
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-label">
+                      <ion-icon class="med-icon" name="med-gabarito" slot="start"></ion-icon>
+                      123
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="tertiary">RESPONDER</ion-button>
+                  </li>
+                </ul>
+
+              </med-message>
+
+              <!-- COMMENT -->
+
+              <med-message nome="Alex" message-id="#413131" concurso="UFRJ" texto="Lorem ipsum" ds-name="comment">
+
+                <ul class="med-message__footer" slot="footer">
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-only">
+                      <ion-icon class="med-icon" slot="icon-only" name="med-estrela"></ion-icon>
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-label">
+                      <ion-icon class="med-icon" name="med-positivo" slot="start"></ion-icon>
+                      4221
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-label">
+                      <ion-icon class="med-icon" name="med-gabarito" slot="start"></ion-icon>
+                      123
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="tertiary">RESPONDER</ion-button>
+                  </li>
+                </ul>
+
+              </med-message>
+
+              <!-- USER MESSAGE -->
+
+              <med-message nome="Alex" message-id="#413131" concurso="UFRJ" texto="Lorem ipsum" ds-name="user-message">
+
+                <ul class="med-message__footer" slot="footer">
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-only">
+                      <ion-icon class="med-icon" slot="icon-only" name="med-estrela"></ion-icon>
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-label">
+                      <ion-icon class="med-icon" name="med-positivo" slot="start"></ion-icon>
+                      4221
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-label">
+                      <ion-icon class="med-icon" name="med-gabarito" slot="start"></ion-icon>
+                      123
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="tertiary">RESPONDER</ion-button>
+                  </li>
+                </ul>
+
+              </med-message>
+
+              <!-- COMMENT -->
+
+              <med-message nome="Alex" message-id="#413131" concurso="UFRJ" texto="Lorem ipsum" ds-name="comment">
+
+                <ul class="med-message__footer" slot="footer">
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-only">
+                      <ion-icon class="med-icon" slot="icon-only" name="med-estrela"></ion-icon>
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-label">
+                      <ion-icon class="med-icon" name="med-positivo" slot="start"></ion-icon>
+                      4221
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-label">
+                      <ion-icon class="med-icon" name="med-gabarito" slot="start"></ion-icon>
+                      123
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="tertiary">RESPONDER</ion-button>
+                  </li>
+                </ul>
+
+              </med-message>
+
+              <!-- RESPONSE -->
+
+              <med-message nome="Alex" message-id="#413131" concurso="UFRJ" texto="Lorem ipsum" ds-name="response">
+
+                <ul class="med-message__footer" slot="footer">
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-only">
+                      <ion-icon class="med-icon" slot="icon-only" name="med-estrela"></ion-icon>
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-label">
+                      <ion-icon class="med-icon" name="med-positivo" slot="start"></ion-icon>
+                      4221
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-label">
+                      <ion-icon class="med-icon" name="med-gabarito" slot="start"></ion-icon>
+                      123
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="tertiary">RESPONDER</ion-button>
+                  </li>
+                </ul>
+
+              </med-message>
+
+              <!-- MESSAGE -->
+
+              <med-message nome="Alex" message-id="#31323132" concurso="UFRJ" texto="Lorem ispsum" ds-name="">
+
+                <med-context-menu slot="menu" class="med-context-menu">
+                  <ul class="med-context-menu__list">
+                    <li class="med-context-menu__item">
+                      <ion-icon class="med-icon med-context-menu__icon" name="med-editar"></ion-icon>
+                      <span>Editar</span>
+                    </li>
+                    <li class="med-context-menu__item">
+                      <ion-icon class="med-icon med-context-menu__icon" name="med-lixeira"></ion-icon>
+                      <span>Deletar</span>
+                    </li>
+                  </ul>
+                </med-context-menu>
+
+                <ion-badge ds-size="xxs" ds-name="secondary">EM QUESTÃO X - 2021 INSTITUIÇÃO</ion-badge>
+
+                <ul class="med-message__footer" slot="footer">
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-only">
+                      <ion-icon class="med-icon" slot="icon-only" name="med-estrela"></ion-icon>
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-label">
+                      <ion-icon class="med-icon" name="med-positivo" slot="start"></ion-icon>
+                      4221
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="icon-label">
+                      <ion-icon class="med-icon" name="med-gabarito" slot="start"></ion-icon>
+                      123
+                    </ion-button>
+                  </li>
+
+                  <li class="med-message__list-item">
+                    <ion-button ds-name="tertiary">RESPONDER</ion-button>
+                  </li>
+                </ul>
+
+              </med-message>
+
+            </med-message-list>
+
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
         <!-- component -->
 
-      </div>
+      </ion-content>
     </ion-app>
   `
 }
@@ -124,49 +368,4 @@ messageList.parameters = {
   },
 }
 messageList.argTypes = {
-  nome: {
-    control: { type: 'text' },
-    description: "Define o nome do aluno.",
-    defaultValue: 'Alex',
-    table: {
-      type:  { summary: 'string' },
-      defaultValue: { summary: 'undefined' },
-    },
-  },
-  messageId: {
-    control: { type: 'text' },
-    description: "Define a id da postagem.",
-    defaultValue: '#413131',
-    table: {
-      type:  { summary: 'string' },
-      defaultValue: { summary: 'undefined' },
-    },
-  },
-  concurso: {
-    control: { type: 'text' },
-    description: "Define o nome do concurso.",
-    defaultValue: 'UFRJ',
-    table: {
-      type:  { summary: 'string' },
-      defaultValue: { summary: 'undefined' },
-    },
-  },
-  texto: {
-    control: { type: 'text' },
-    description: "Define o conteúdo de texto.",
-    defaultValue: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi urna neque, elementum sed porta sit amet, auctor tincidunt ligula. Sed id congue odio.',
-    table: {
-      type:  { summary: 'string' },
-      defaultValue: { summary: 'undefined' },
-    },
-  },
-  dsName: {
-    options: [undefined, 'medgrupo', 'response', 'comment', 'user-message'],
-    control: { type: 'inline-radio'},
-    description: "Define a variação do componente.",
-    table: {
-      type:  { summary: 'medgrupo | response | comment | user-message'},
-      defaultValue: { summary: 'undefined' },
-    },
-  },
 };

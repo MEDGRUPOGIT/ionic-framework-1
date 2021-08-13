@@ -122,6 +122,11 @@
   --background-footer: #{md-color(brand, 2)};
 }
 
+:host(.med-message--medgrupo) .med-message__balao {
+  display: block;
+  background: #{md-color(brand, 1)};
+}
+
 :host(.med-message--response) .med-message__balao,
 :host(.med-message--comment) .med-message__balao,
 :host(.med-message--user-message) .med-message__balao {
