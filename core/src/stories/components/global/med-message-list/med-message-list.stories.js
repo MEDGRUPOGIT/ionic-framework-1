@@ -2,7 +2,7 @@ import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
 
 export default {
-  title: 'Components/Core/Message',
+  title: 'Components/Core/Message List',
   decorators: [withDesign],
 };
 
@@ -116,27 +116,27 @@ const TemplateDefault = ({ nome, messageId, concurso, texto, dsName }) => {
   `
 }
 
-export const message = TemplateDefault.bind({});
-message.parameters = {
+export const messageList = TemplateDefault.bind({});
+messageList.parameters = {
   design: {
     type: 'figma',
     url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/Componentes?node-id=5308%3A42728',
   },
 }
-message.argTypes = {
-  dsName: {
-    options: [undefined, 'medgrupo', 'response', 'comment', 'user-message'],
-    control: { type: 'inline-radio'},
-    description: "Define a variação do componente.",
-    table: {
-      type:  { summary: 'medgrupo | response | comment | user-message'},
-      defaultValue: { summary: 'undefined' },
-    },
-  },
+messageList.argTypes = {
   nome: {
     control: { type: 'text' },
     description: "Define o nome do aluno.",
     defaultValue: 'Alex',
+    table: {
+      type:  { summary: 'string' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  messageId: {
+    control: { type: 'text' },
+    description: "Define a id da postagem.",
+    defaultValue: '#413131',
     table: {
       type:  { summary: 'string' },
       defaultValue: { summary: 'undefined' },
@@ -160,12 +160,12 @@ message.argTypes = {
       defaultValue: { summary: 'undefined' },
     },
   },
-  messageId: {
-    control: { type: 'text' },
-    description: "Define a id da mensagem.",
-    defaultValue: '#413131',
+  dsName: {
+    options: [undefined, 'medgrupo', 'response', 'comment', 'user-message'],
+    control: { type: 'inline-radio'},
+    description: "Define a variação do componente.",
     table: {
-      type:  { summary: 'string' },
+      type:  { summary: 'medgrupo | response | comment | user-message'},
       defaultValue: { summary: 'undefined' },
     },
   },

@@ -2897,7 +2897,6 @@ export namespace Components {
           * Define a variação do componente.
          */
         "dsName"?: 'medgrupo' | 'response' | 'comment' | 'user-message';
-        "image": string;
         /**
           * Define o id da mensagem.
          */
@@ -2910,6 +2909,8 @@ export namespace Components {
           * Define o conteúdo de texto.
          */
         "texto"?: string;
+    }
+    interface MedMessageList {
     }
     interface MedNavbar {
         /**
@@ -3686,6 +3687,12 @@ declare global {
         prototype: HTMLMedMessageElement;
         new (): HTMLMedMessageElement;
     };
+    interface HTMLMedMessageListElement extends Components.MedMessageList, HTMLStencilElement {
+    }
+    var HTMLMedMessageListElement: {
+        prototype: HTMLMedMessageListElement;
+        new (): HTMLMedMessageListElement;
+    };
     interface HTMLMedNavbarElement extends Components.MedNavbar, HTMLStencilElement {
     }
     var HTMLMedNavbarElement: {
@@ -3874,6 +3881,7 @@ declare global {
         "med-list-item": HTMLMedListItemElement;
         "med-list-item-accordion": HTMLMedListItemAccordionElement;
         "med-message": HTMLMedMessageElement;
+        "med-message-list": HTMLMedMessageListElement;
         "med-navbar": HTMLMedNavbarElement;
         "med-offline": HTMLMedOfflineElement;
         "med-option": HTMLMedOptionElement;
@@ -6803,7 +6811,6 @@ declare namespace LocalJSX {
           * Define a variação do componente.
          */
         "dsName"?: 'medgrupo' | 'response' | 'comment' | 'user-message';
-        "image"?: string;
         /**
           * Define o id da mensagem.
          */
@@ -6816,6 +6823,8 @@ declare namespace LocalJSX {
           * Define o conteúdo de texto.
          */
         "texto"?: string;
+    }
+    interface MedMessageList {
     }
     interface MedNavbar {
         /**
@@ -7047,6 +7056,7 @@ declare namespace LocalJSX {
         "med-list-item": MedListItem;
         "med-list-item-accordion": MedListItemAccordion;
         "med-message": MedMessage;
+        "med-message-list": MedMessageList;
         "med-navbar": MedNavbar;
         "med-offline": MedOffline;
         "med-option": MedOption;
@@ -7175,6 +7185,7 @@ declare module "@stencil/core" {
             "med-list-item": LocalJSX.MedListItem & JSXBase.HTMLAttributes<HTMLMedListItemElement>;
             "med-list-item-accordion": LocalJSX.MedListItemAccordion & JSXBase.HTMLAttributes<HTMLMedListItemAccordionElement>;
             "med-message": LocalJSX.MedMessage & JSXBase.HTMLAttributes<HTMLMedMessageElement>;
+            "med-message-list": LocalJSX.MedMessageList & JSXBase.HTMLAttributes<HTMLMedMessageListElement>;
             "med-navbar": LocalJSX.MedNavbar & JSXBase.HTMLAttributes<HTMLMedNavbarElement>;
             "med-offline": LocalJSX.MedOffline & JSXBase.HTMLAttributes<HTMLMedOfflineElement>;
             "med-option": LocalJSX.MedOption & JSXBase.HTMLAttributes<HTMLMedOptionElement>;

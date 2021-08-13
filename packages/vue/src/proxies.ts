@@ -967,9 +967,11 @@ export const MedMessage = /*@__PURE__*/ defineContainer<JSX.MedMessage>('med-mes
   'nome',
   'concurso',
   'texto',
-  'messageId',
-  'image'
+  'messageId'
 ]);
+
+
+export const MedMessageList = /*@__PURE__*/ defineContainer<JSX.MedMessageList>('med-message-list');
 
 
 export const MedNavbar = /*@__PURE__*/ defineContainer<JSX.MedNavbar>('med-navbar', [

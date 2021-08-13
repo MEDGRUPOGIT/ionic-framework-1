@@ -1502,10 +1502,14 @@ med-list-item-accordion,method,toggle,toggle(event?: Event | undefined) => Promi
 med-message,shadow
 med-message,prop,concurso,string | undefined,undefined,false,false
 med-message,prop,dsName,"comment" | "medgrupo" | "response" | "user-message" | undefined,undefined,false,false
-med-message,prop,image,string,"avatar_medgrupo.png",false,false
 med-message,prop,messageId,string | undefined,undefined,false,false
 med-message,prop,nome,string | undefined,undefined,false,false
 med-message,prop,texto,string | undefined,undefined,false,false
+med-message,css-prop,--background
+med-message,css-prop,--background-footer
+med-message,css-prop,--color
+
+med-message-list,shadow
 
 med-navbar,shadow
 med-navbar,prop,color,string | undefined,undefined,false,false

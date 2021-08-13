@@ -3,27 +3,12 @@
 :host {
   /**
     * @prop --color: Define a cor do texto.
-    * @prop --color-date: Define a cor do texto da data.
-    * @prop --color-icon: Define a cor do icone.
-    * @prop --background: Define a cor de background do componente quando cabe ou não cabe.
-    * @prop --background-right: Define a cor do background do lado direito do componente.
+    * @prop --background: Define a cor de background do componente.
+    * @prop --background-footer: Define a cor do background do footer do componente.
     */
-  //--background: #{md-color(fb-success, 3)};
+  --color: var(--med-color-neutral-10);
   --background: var(--med-color-neutral-2);
   --background-footer: var(--med-color-neutral-3);;
-
-  --color: var(--med-color-neutral-10);
-
-  // &::after {
-  //   background: var(--med-color-neutral-2);
-  //   width: 16px;
-  //   height: 8px;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   display: block;
-  //   content: "";
-  // }
 }
 
 :host(.med-message) {
@@ -120,6 +105,12 @@
   background: var(--background-footer);
   border-bottom-left-radius: $med-border-radius-sm;
   border-bottom-right-radius: $med-border-radius-sm;
+}
+
+:host(.med-message) .med-message__img {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
 }
 
 // ////////////////////

@@ -34,10 +34,8 @@ export class MedMessage {
     */
   @Prop() messageId?: string;
 
-  @Prop() image = "avatar_medgrupo.png"
-
     render() {
-      const { dsName, nome, concurso, texto, messageId, image } = this;
+      const { dsName, nome, concurso, texto, messageId } = this;
 
       return (
         <Host from-stencil
@@ -50,7 +48,7 @@ export class MedMessage {
             <div class="med-message__header">
               <div class="med-message__avatar">
                 {(dsName !== 'medgrupo') && <span class="med-message__letter">A</span> }
-                {(dsName === 'medgrupo') && <img src={getAssetPath(`./assets/${image}`)}></img>}
+                {(dsName === 'medgrupo') && <img class="med-message__img" src={getAssetPath(`./assets/avatar_medgrupo.png`)}/>}
               </div>
               <div class="med-message__id">
                 <p class="med-message__nome">{nome} - {concurso}</p>
