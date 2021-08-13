@@ -2796,6 +2796,20 @@ export namespace Components {
     interface MedAutocomplete {
         "list": boolean;
     }
+    interface MedAvatar {
+        /**
+          * Define a variação de tamanho do componente.
+         */
+        "dsSize"?: 'xxs' | 'xs' | 'sm' | 'base' | 'md' | 'lg' | 'xl' | 'xxl';
+        /**
+          * Define a imagem do componente.
+         */
+        "image"?: string;
+        /**
+          * Define a imagem do componente.
+         */
+        "letter"?: string;
+    }
     interface MedBanner {
         "btnLeft": string;
         "btnRight": string;
@@ -3585,6 +3599,12 @@ declare global {
         prototype: HTMLMedAutocompleteElement;
         new (): HTMLMedAutocompleteElement;
     };
+    interface HTMLMedAvatarElement extends Components.MedAvatar, HTMLStencilElement {
+    }
+    var HTMLMedAvatarElement: {
+        prototype: HTMLMedAvatarElement;
+        new (): HTMLMedAvatarElement;
+    };
     interface HTMLMedBannerElement extends Components.MedBanner, HTMLStencilElement {
     }
     var HTMLMedBannerElement: {
@@ -3864,6 +3884,7 @@ declare global {
         "med-agrupador": HTMLMedAgrupadorElement;
         "med-alternativas": HTMLMedAlternativasElement;
         "med-autocomplete": HTMLMedAutocompleteElement;
+        "med-avatar": HTMLMedAvatarElement;
         "med-banner": HTMLMedBannerElement;
         "med-cartao-resposta-item": HTMLMedCartaoRespostaItemElement;
         "med-cartao-resposta-lista": HTMLMedCartaoRespostaListaElement;
@@ -6707,6 +6728,20 @@ declare namespace LocalJSX {
     interface MedAutocomplete {
         "list"?: boolean;
     }
+    interface MedAvatar {
+        /**
+          * Define a variação de tamanho do componente.
+         */
+        "dsSize"?: 'xxs' | 'xs' | 'sm' | 'base' | 'md' | 'lg' | 'xl' | 'xxl';
+        /**
+          * Define a imagem do componente.
+         */
+        "image"?: string;
+        /**
+          * Define a imagem do componente.
+         */
+        "letter"?: string;
+    }
     interface MedBanner {
         "btnLeft": string;
         "btnRight": string;
@@ -7039,6 +7074,7 @@ declare namespace LocalJSX {
         "med-agrupador": MedAgrupador;
         "med-alternativas": MedAlternativas;
         "med-autocomplete": MedAutocomplete;
+        "med-avatar": MedAvatar;
         "med-banner": MedBanner;
         "med-cartao-resposta-item": MedCartaoRespostaItem;
         "med-cartao-resposta-lista": MedCartaoRespostaLista;
@@ -7168,6 +7204,7 @@ declare module "@stencil/core" {
             "med-agrupador": LocalJSX.MedAgrupador & JSXBase.HTMLAttributes<HTMLMedAgrupadorElement>;
             "med-alternativas": LocalJSX.MedAlternativas & JSXBase.HTMLAttributes<HTMLMedAlternativasElement>;
             "med-autocomplete": LocalJSX.MedAutocomplete & JSXBase.HTMLAttributes<HTMLMedAutocompleteElement>;
+            "med-avatar": LocalJSX.MedAvatar & JSXBase.HTMLAttributes<HTMLMedAvatarElement>;
             "med-banner": LocalJSX.MedBanner & JSXBase.HTMLAttributes<HTMLMedBannerElement>;
             "med-cartao-resposta-item": LocalJSX.MedCartaoRespostaItem & JSXBase.HTMLAttributes<HTMLMedCartaoRespostaItemElement>;
             "med-cartao-resposta-lista": LocalJSX.MedCartaoRespostaLista & JSXBase.HTMLAttributes<HTMLMedCartaoRespostaListaElement>;

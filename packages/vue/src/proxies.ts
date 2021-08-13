@@ -854,6 +854,13 @@ export const MedAutocomplete = /*@__PURE__*/ defineContainer<JSX.MedAutocomplete
 ]);
 
 
+export const MedAvatar = /*@__PURE__*/ defineContainer<JSX.MedAvatar>('med-avatar', [
+  'dsSize',
+  'image',
+  'letter'
+]);
+
+
 export const MedBanner = /*@__PURE__*/ defineContainer<JSX.MedBanner>('med-banner', [
   'header',
   'btnLeft',

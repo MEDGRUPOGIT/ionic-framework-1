@@ -942,6 +942,17 @@ export class MedAutocomplete {
     this.el = r.nativeElement;
   }
 }
+export declare interface MedAvatar extends Components.MedAvatar {
+}
+@ProxyCmp({ inputs: ["dsSize", "image", "letter"] })
+@Component({ selector: "med-avatar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsSize", "image", "letter"] })
+export class MedAvatar {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedBanner extends Components.MedBanner {
 }
 @ProxyCmp({ inputs: ["btnLeft", "btnRight", "header"] })

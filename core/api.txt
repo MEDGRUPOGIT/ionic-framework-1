@@ -1416,6 +1416,11 @@ med-alternativas,event,medGalleryRequest,MedAlternativaInterface,true
 med-autocomplete,shadow
 med-autocomplete,prop,list,boolean,false,false,false
 
+med-avatar,shadow
+med-avatar,prop,dsSize,"base" | "lg" | "md" | "sm" | "xl" | "xs" | "xxl" | "xxs" | undefined,undefined,false,false
+med-avatar,prop,image,string | undefined,undefined,false,false
+med-avatar,prop,letter,string | undefined,undefined,false,false
+
 med-banner,shadow
 med-banner,prop,btnLeft,string,undefined,true,false
 med-banner,prop,btnRight,string,undefined,true,false
@@ -1442,6 +1447,9 @@ med-chart-radial-label,prop,valores,MedChartRadiaItem[],[],false,false
 med-context-menu,shadow
 med-context-menu,prop,collapsed,boolean,true,false,true
 med-context-menu,method,toggle,toggle(event?: Event | undefined) => Promise<void>
+med-context-menu,css-prop,--background
+med-context-menu,css-prop,--color
+med-context-menu,css-prop,--z-index
 
 med-divider,shadow
 med-divider,prop,color,string | undefined,undefined,false,false
