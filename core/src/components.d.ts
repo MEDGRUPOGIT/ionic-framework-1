@@ -2798,6 +2798,10 @@ export namespace Components {
     }
     interface MedAvatar {
         /**
+          * Define a cor neutra do componente.
+         */
+        "color"?: Color;
+        /**
           * Define a variação de tamanho do componente.
          */
         "dsSize"?: 'xxs' | 'xs' | 'sm' | 'base' | 'md' | 'lg' | 'xl' | 'xxl';
@@ -2809,6 +2813,10 @@ export namespace Components {
           * Define a imagem do componente.
          */
         "letter"?: string;
+        /**
+          * Define a cor neutra do componente.
+         */
+        "neutral"?: Neutral;
     }
     interface MedBanner {
         "btnLeft": string;
@@ -6730,6 +6738,10 @@ declare namespace LocalJSX {
     }
     interface MedAvatar {
         /**
+          * Define a cor neutra do componente.
+         */
+        "color"?: Color;
+        /**
           * Define a variação de tamanho do componente.
          */
         "dsSize"?: 'xxs' | 'xs' | 'sm' | 'base' | 'md' | 'lg' | 'xl' | 'xxl';
@@ -6741,6 +6753,10 @@ declare namespace LocalJSX {
           * Define a imagem do componente.
          */
         "letter"?: string;
+        /**
+          * Define a cor neutra do componente.
+         */
+        "neutral"?: Neutral;
     }
     interface MedBanner {
         "btnLeft": string;

@@ -1417,9 +1417,13 @@ med-autocomplete,shadow
 med-autocomplete,prop,list,boolean,false,false,false
 
 med-avatar,shadow
+med-avatar,prop,color,string | undefined,undefined,false,false
 med-avatar,prop,dsSize,"base" | "lg" | "md" | "sm" | "xl" | "xs" | "xxl" | "xxs" | undefined,undefined,false,false
 med-avatar,prop,image,string | undefined,undefined,false,false
 med-avatar,prop,letter,string | undefined,undefined,false,false
+med-avatar,prop,neutral,string | undefined,undefined,false,false
+med-avatar,css-prop,--background
+med-avatar,css-prop,--color
 
 med-banner,shadow
 med-banner,prop,btnLeft,string,undefined,true,false

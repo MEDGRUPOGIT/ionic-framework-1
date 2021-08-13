@@ -855,6 +855,8 @@ export const MedAutocomplete = /*@__PURE__*/ defineContainer<JSX.MedAutocomplete
 
 
 export const MedAvatar = /*@__PURE__*/ defineContainer<JSX.MedAvatar>('med-avatar', [
+  'color',
+  'neutral',
   'dsSize',
   'image',
   'letter'

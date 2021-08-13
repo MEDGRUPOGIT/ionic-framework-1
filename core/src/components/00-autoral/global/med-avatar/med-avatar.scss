@@ -1,8 +1,11 @@
 @import "../../../../../med-components/abstracts";
 
 :host {
-
-  --color: var(--med-color-neutral-10);
+  /**
+    * @prop --color: Define a cor do texto.
+    * @prop --background: Define a cor de background do componente.
+    */
+  --color: #{md-color(brand, contrast-1)};
   --background: #{md-color(brand, 3)};
 
   --size-xxs: 24px;
@@ -37,6 +40,24 @@
   background: var(--background);
   font-weight: $med-font-weight-semibold;
   line-height: $med-line-height-compressed;
+}
+
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-avatar.ion-color) {
+  --background: #{md-current-color(3)};
+  --color: #{md-current-color(contrast-1)};
+}
+
+// ////////////////////
+// neutral
+// ////////////////////
+
+:host(.med-avatar.med-neutral) {
+  --background: var(--med-neutral);
+  --color: var(--med-neutral-contrast);
 }
 
 // ////////////////////

@@ -944,8 +944,8 @@ export class MedAutocomplete {
 }
 export declare interface MedAvatar extends Components.MedAvatar {
 }
-@ProxyCmp({ inputs: ["dsSize", "image", "letter"] })
-@Component({ selector: "med-avatar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsSize", "image", "letter"] })
+@ProxyCmp({ inputs: ["color", "dsSize", "image", "letter", "neutral"] })
+@Component({ selector: "med-avatar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "dsSize", "image", "letter", "neutral"] })
 export class MedAvatar {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

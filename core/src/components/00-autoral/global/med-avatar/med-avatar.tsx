@@ -1,5 +1,6 @@
 import { Component, Host, h, Prop } from '@stencil/core';
 import { createColorClasses } from '../../../../utils/theme';
+import { Color, Neutral } from '../../../../interface';
 
 @Component({
   tag: 'med-avatar',
@@ -7,6 +8,16 @@ import { createColorClasses } from '../../../../utils/theme';
   shadow: true,
 })
 export class MedAvatar {
+
+  /**
+   * Define a cor neutra do componente.
+   */
+   @Prop() color?: Color;
+
+   /**
+   * Define a cor neutra do componente.
+   */
+    @Prop() neutral?: Neutral;
 
   /**
    * Define a variação de tamanho do componente.
@@ -25,14 +36,14 @@ export class MedAvatar {
 
   render() {
 
-    const { dsSize, image, letter} = this;
+    const { color, neutral, dsSize, image, letter} = this;
 
     return (
       <Host from-stencil
-      class={createColorClasses(null, {
+      class={createColorClasses(color, {
         'med-avatar': true,
         [`med-avatar--${dsSize}`]: dsSize !== undefined,
-      }, null)}
+      }, neutral)}
       >
         {(letter) && <span class="med-avatar__letter">{letter}</span>}
         {(image) && <img class="med-avatar__img" src={image}/>}

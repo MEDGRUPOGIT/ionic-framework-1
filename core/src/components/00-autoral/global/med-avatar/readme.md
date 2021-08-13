@@ -7,11 +7,21 @@
 
 ## Properties
 
-| Property | Attribute | Description                                 | Type                                                                            | Default     |
-| -------- | --------- | ------------------------------------------- | ------------------------------------------------------------------------------- | ----------- |
-| `dsSize` | `ds-size` | Define a variação de tamanho do componente. | `"base" \| "lg" \| "md" \| "sm" \| "xl" \| "xs" \| "xxl" \| "xxs" \| undefined` | `undefined` |
-| `image`  | `image`   | Define a imagem do componente.              | `string \| undefined`                                                           | `undefined` |
-| `letter` | `letter`  | Define a imagem do componente.              | `string \| undefined`                                                           | `undefined` |
+| Property  | Attribute | Description                                 | Type                                                                            | Default     |
+| --------- | --------- | ------------------------------------------- | ------------------------------------------------------------------------------- | ----------- |
+| `color`   | `color`   | Define a cor neutra do componente.          | `string \| undefined`                                                           | `undefined` |
+| `dsSize`  | `ds-size` | Define a variação de tamanho do componente. | `"base" \| "lg" \| "md" \| "sm" \| "xl" \| "xs" \| "xxl" \| "xxs" \| undefined` | `undefined` |
+| `image`   | `image`   | Define a imagem do componente.              | `string \| undefined`                                                           | `undefined` |
+| `letter`  | `letter`  | Define a imagem do componente.              | `string \| undefined`                                                           | `undefined` |
+| `neutral` | `neutral` | Define a cor neutra do componente.          | `string \| undefined`                                                           | `undefined` |
+
+
+## CSS Custom Properties
+
+| Name           | Description                               |
+| -------------- | ----------------------------------------- |
+| `--background` | Define a cor de background do componente. |
+| `--color`      | Define a cor do texto.                    |
 
 
 ----------------------------------------------
