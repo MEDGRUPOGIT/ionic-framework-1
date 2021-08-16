@@ -10,7 +10,7 @@
 | Property | Attribute | Description                               | Type                  | Default     |
 | -------- | --------- | ----------------------------------------- | --------------------- | ----------- |
 | `like`   | `like`    | Define o conteúdo de texto do componente. | `number`              | `0`         |
-| `title`  | `title`   | Define o conteúdo de texto do componente. | `string \| undefined` | `undefined` |
+| `titulo` | `titulo`  | Define o conteúdo de texto do componente. | `string \| undefined` | `undefined` |
 | `unlike` | `unlike`  | Define o conteúdo de texto do componente. | `number`              | `0`         |
 
 

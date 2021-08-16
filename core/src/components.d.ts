@@ -2750,9 +2750,21 @@ export namespace Components {
          */
         "background": boolean;
         /**
+          * Define a cor do componente.
+         */
+        "color"?: Color;
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'secondary';
+        /**
           * Define a posição do ícone de abertura do componente.
          */
         "icon"?: 'left' | 'right';
+        /**
+          * Define a cor neutra do componente.
+         */
+        "neutral"?: Neutral;
         /**
           * Define a variação da borda do componente.
          */
@@ -3048,7 +3060,7 @@ export namespace Components {
         /**
           * Define o conteúdo de texto do componente.
          */
-        "title"?: string;
+        "titulo"?: string;
         /**
           * Define o conteúdo de texto do componente.
          */
@@ -6691,9 +6703,21 @@ declare namespace LocalJSX {
          */
         "background"?: boolean;
         /**
+          * Define a cor do componente.
+         */
+        "color"?: Color;
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'secondary';
+        /**
           * Define a posição do ícone de abertura do componente.
          */
         "icon"?: 'left' | 'right';
+        /**
+          * Define a cor neutra do componente.
+         */
+        "neutral"?: Neutral;
         /**
           * Define a variação da borda do componente.
          */
@@ -6995,7 +7019,7 @@ declare namespace LocalJSX {
         /**
           * Define o conteúdo de texto do componente.
          */
-        "title"?: string;
+        "titulo"?: string;
         /**
           * Define o conteúdo de texto do componente.
          */

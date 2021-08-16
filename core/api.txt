@@ -1379,7 +1379,10 @@ ion-virtual-scroll,method,positionForItem,positionForItem(index: number) => Prom
 
 med-accordion-item,shadow
 med-accordion-item,prop,background,boolean,false,false,true
+med-accordion-item,prop,color,string | undefined,undefined,false,false
+med-accordion-item,prop,dsName,"secondary" | undefined,undefined,false,false
 med-accordion-item,prop,icon,"left" | "right" | undefined,undefined,false,true
+med-accordion-item,prop,neutral,string | undefined,undefined,false,false
 med-accordion-item,prop,noBorder,boolean,false,false,true
 med-accordion-item,event,toggle,any,true
 med-accordion-item,css-prop,--background
@@ -1598,7 +1601,7 @@ med-tooltip2,prop,header,string,undefined,true,true
 
 med-vote,shadow
 med-vote,prop,like,number,0,false,false
-med-vote,prop,title,string | undefined,undefined,false,false
+med-vote,prop,titulo,string | undefined,undefined,false,false
 med-vote,prop,unlike,number,0,false,false
 
 monta-provas-plusminus,shadow

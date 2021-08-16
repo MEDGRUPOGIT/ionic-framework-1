@@ -883,8 +883,8 @@ export class IonToolbar {
 }
 export declare interface MedAccordionItem extends Components.MedAccordionItem {
 }
-@ProxyCmp({ inputs: ["background", "icon", "noBorder"] })
-@Component({ selector: "med-accordion-item", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["background", "icon", "noBorder"] })
+@ProxyCmp({ inputs: ["background", "color", "dsName", "icon", "neutral", "noBorder"] })
+@Component({ selector: "med-accordion-item", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["background", "color", "dsName", "icon", "neutral", "noBorder"] })
 export class MedAccordionItem {
   toggle!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
@@ -1281,8 +1281,8 @@ export class MedTooltip2 {
 }
 export declare interface MedVote extends Components.MedVote {
 }
-@ProxyCmp({ inputs: ["like", "title", "unlike"] })
-@Component({ selector: "med-vote", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["like", "title", "unlike"] })
+@ProxyCmp({ inputs: ["like", "titulo", "unlike"] })
+@Component({ selector: "med-vote", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["like", "titulo", "unlike"] })
 export class MedVote {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

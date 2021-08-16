@@ -7,9 +7,7 @@
     * @prop --border-radius: Define o border-radius do componente.
     */
   --background: var(--med-color-neutral-2);
-  --background-active: linear-gradient(to right, rgba(var(--med-color-neutral-2-rgb),1),
-  rgba(var(--med-color-neutral-2-rgb),0.1),
-  rgba(var(--med-color-neutral-2-rgb),0));
+  --background-active: linear-gradient(to right, rgba(var(--med-color-neutral-2-rgb), 1), rgba(var(--med-color-neutral-2-rgb), 0.1), rgba(var(--med-color-neutral-2-rgb), 0));
 
   --icon-color: var(--med-color-neutral-10);
   --border-radius: #{$med-border-radius-sm};
@@ -89,7 +87,7 @@
 }
 
 // ////////////////////
-// State
+// state
 // ////////////////////
 
 :host(.med-accordion-item--open) .med-accordion-item__header {
@@ -100,4 +98,20 @@
   --background: var(--background-active);
   background-size: 200% 100%;
   background-position: 0 0;
+}
+
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.ion-color.med-accordion-item--background) {
+  --background-active: linear-gradient(to right, rgba(var(--med-color-2-rgb), 1), rgba(var(--med-color-2-rgb), 0.1), rgba(var(--med-color-2-rgb), 0));
+}
+
+// ////////////////////
+// neutral
+// ////////////////////
+
+:host(.med-neutral.med-accordion-item--background) {
+  --background-active: linear-gradient(to right, rgba(var(--med-neutral-rgb), 1), rgba(var(--med-neutral-rgb), 0.1), rgba(var(--med-neutral-rgb), 0));
 }

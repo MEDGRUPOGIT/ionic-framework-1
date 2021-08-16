@@ -1,12 +1,13 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
+import { medColors, medNeutrals } from '../../../med-colors';
 
 export default {
   title: 'Components/Core/Accordion Item',
   decorators: [withDesign],
 };
 
-const Template = ({icon, noBorder, background }) => {
+const Template = ({color, neutral, icon, noBorder, background}) => {
   return html`
     <style>
       h4, p {
@@ -30,7 +31,7 @@ const Template = ({icon, noBorder, background }) => {
 
               <!-- component -->
               <med-accordion-list single-open="false">
-                <med-accordion-item .background=${background} .icon=${icon} ?no-border=${noBorder}>
+                <med-accordion-item .color=${color} .neutral=${neutral} .background=${background} .icon=${icon} ?no-border=${noBorder}>
                   <div slot="header">
                     <h4>Header</h4>
                   </div>
@@ -59,6 +60,24 @@ Default.parameters = {
   },
 }
 Default.argTypes = {
+  color: {
+    options: medColors,
+    control: { type: 'inline-radio'},
+    description: "Define a cor do componente.",
+    table: {
+      type:  { summary: 'Color' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  neutral: {
+    options: medNeutrals,
+    control: { type: 'inline-radio'},
+    description: "Define a cor neutra do componente.",
+    table: {
+      type:  { summary: 'Neutrals' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
   icon: {
     options: [undefined, 'left', 'right'],
     control: { type: 'radio'},
