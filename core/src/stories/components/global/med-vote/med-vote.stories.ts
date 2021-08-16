@@ -7,13 +7,13 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ title: title, like: like, unlike: unlike }) => {
+const Template = ({ titulo: titulo, like: like, unlike: unlike }) => {
   return html`
     <ion-app class="storybook-only">
       <div class="storybook-only__container">
 
         <!-- component -->
-        <med-vote .title=${title} .like=${like} .unlike=${unlike}></med-vote>
+        <med-vote .titulo=${titulo} .like=${like} .unlike=${unlike}></med-vote>
         <!-- component -->
 
       </div>
@@ -47,7 +47,7 @@ Vote.argTypes = {
       defaultValue: { summary: 'undefined' },
     },
   },
-  title: {
+  titulo: {
     control: { type: 'text' },
     description: "Define o titulo do componente.",
     defaultValue: 'Cabe recurso?',

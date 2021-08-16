@@ -11,7 +11,7 @@ export class MedVote {
   /**
     * Define o conteúdo de texto do componente.
     */
-  @Prop() title?: string;
+  @Prop() titulo?: string;
 
   /**
     * Define o conteúdo de texto do componente.
@@ -41,7 +41,7 @@ export class MedVote {
             <ion-icon class="med-icon med-vote__icon med-vote__icon--cabe" name="med-positivo"></ion-icon>
             <div class="med-vote__badge med-vote__badge--cabe">{like}</div>
           </div>
-          <h3 class="med-vote__heading" innerHTML={title}></h3>
+          <h3 class="med-vote__heading" innerHTML={titulo}></h3>
           <div class="med-vote__icon-container">
             <div class="med-vote__badge med-vote__badge--nao-cabe">{unlike}</div>
             <ion-icon class="med-icon med-vote__icon med-vote__icon--nao-cabe" name="med-negativo"></ion-icon>
