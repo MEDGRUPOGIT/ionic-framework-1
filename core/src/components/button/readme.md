@@ -296,7 +296,7 @@ export default defineComponent({
 | `disabled`        | `disabled`         | If `true`, the user cannot interact with the button.                                                                                                                                                                                                                                      | `boolean`                                                                            | `false`     |
 | `download`        | `download`         | This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want). | `string \| undefined`                                                                | `undefined` |
 | `dsName`          | `ds-name`          |                                                                                                                                                                                                                                                                                           | `"icon-label" \| "icon-only" \| "primary" \| "secondary" \| "tertiary" \| undefined` | `undefined` |
-| `dsSize`          | `ds-size`          |                                                                                                                                                                                                                                                                                           | `"lg" \| "md" \| "sm" \| "xs" \| "xxs" \| undefined`                                 | `undefined` |
+| `dsSize`          | `ds-size`          |                                                                                                                                                                                                                                                                                           | `"lg" \| "md" \| "sm" \| "xs" \| "xxs" \| "xxxs" \| undefined`                       | `undefined` |
 | `expand`          | `expand`           | Set to `"block"` for a full-width button or to `"full"` for a full-width button without left and right borders.                                                                                                                                                                           | `"block" \| "full" \| undefined`                                                     | `undefined` |
 | `fill`            | `fill`             | Set to `"clear"` for a transparent button, to `"outline"` for a transparent button with a border, or to `"solid"`. The default style is `"solid"` except inside of a toolbar, where the default is `"clear"`.                                                                             | `"clear" \| "default" \| "outline" \| "solid" \| undefined`                          | `undefined` |
 | `href`            | `href`             | Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered.                                                                                                                                                                   | `string \| undefined`                                                                | `undefined` |
@@ -369,8 +369,12 @@ export default defineComponent({
 
 ### Used by
 
- - [med-image-zoom](../medgrupo/global/med-image-zoom)
- - [med-tooltip](../medgrupo/global/med-tooltip)
+ - [med-context-menu](../00-autoral/global/med-context-menu)
+ - [med-image-zoom](../00-autoral/global/med-image-zoom)
+ - [med-list-item-accordion](../00-autoral/global/med-list-item-accordion)
+ - [med-offline](../00-autoral/global/med-offline)
+ - [med-tooltip](../00-autoral/global/med-tooltip)
+ - [med-tooltip2](../00-autoral/global/med-tooltip-2)
 
 ### Depends on
 
@@ -380,8 +384,12 @@ export default defineComponent({
 ```mermaid
 graph TD;
   ion-button --> ion-ripple-effect
+  med-context-menu --> ion-button
   med-image-zoom --> ion-button
+  med-list-item-accordion --> ion-button
+  med-offline --> ion-button
   med-tooltip --> ion-button
+  med-tooltip2 --> ion-button
   style ion-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
