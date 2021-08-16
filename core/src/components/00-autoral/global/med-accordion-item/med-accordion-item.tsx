@@ -24,6 +24,11 @@ export class MedAccordionItem implements ComponentInterface {
     */
   @Prop({ reflect: true }) noBorder = false;
 
+  /**
+    * Define se o componente irá ter background quando aberto.
+    */
+  @Prop({ reflect: true }) background = false;
+
   @State() isOpen = false;
 
   @Event() toggle!: EventEmitter;
@@ -64,13 +69,14 @@ export class MedAccordionItem implements ComponentInterface {
   }
 
   render() {
-    const { noBorder, icon, isOpen } = this;
+    const { noBorder, icon, isOpen, background } = this;
 
     return (
       <Host from-stencil class={createColorClasses(null, {
         'med-accordion-item': true,
         'med-accordion-item--no-border': noBorder,
         'med-accordion-item--open': isOpen,
+        'med-accordion-item--background': background,
       }, null)}>
         <div class="med-accordion-item__header" ref={(el) => this.header = el as HTMLDivElement}>
           {icon === 'left' && <div class="med-accordion-item__icon-container med-accordion-item__icon-container--left" onClick={() => this.onClick()}>
@@ -79,6 +85,7 @@ export class MedAccordionItem implements ComponentInterface {
 
           <div class="med-accordion-item__heading" onClick={() => this.onClick()}>
             <slot name="header"></slot>
+            <slot name="auxiliar"></slot>
           </div>
 
           <slot name="button"></slot>

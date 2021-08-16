@@ -816,6 +816,7 @@ export const IonVirtualScroll = /*@__PURE__*/ defineContainer<JSX.IonVirtualScro
 export const MedAccordionItem = /*@__PURE__*/ defineContainer<JSX.MedAccordionItem>('med-accordion-item', [
   'icon',
   'noBorder',
+  'background',
   'toggle'
 ]);
 
@@ -1061,9 +1062,9 @@ export const MedTooltip2 = /*@__PURE__*/ defineContainer<JSX.MedTooltip2>('med-t
 
 
 export const MedVote = /*@__PURE__*/ defineContainer<JSX.MedVote>('med-vote', [
-  'titulo',
-  'cabe',
-  'naoCabe'
+  'title',
+  'like',
+  'unlike'
 ]);
 
 

@@ -2746,6 +2746,10 @@ export namespace Components {
     }
     interface MedAccordionItem {
         /**
+          * Define se o componente irá ter background quando aberto.
+         */
+        "background": boolean;
+        /**
           * Define a posição do ícone de abertura do componente.
          */
         "icon"?: 'left' | 'right';
@@ -3040,15 +3044,15 @@ export namespace Components {
         /**
           * Define o conteúdo de texto do componente.
          */
-        "cabe"?: number;
+        "like": number;
         /**
           * Define o conteúdo de texto do componente.
          */
-        "naoCabe"?: number;
+        "title"?: string;
         /**
           * Define o conteúdo de texto do componente.
          */
-        "titulo"?: string;
+        "unlike": number;
     }
     interface MontaProvasPlusminus {
         "dsSize"?: 'xl';
@@ -6683,6 +6687,10 @@ declare namespace LocalJSX {
     }
     interface MedAccordionItem {
         /**
+          * Define se o componente irá ter background quando aberto.
+         */
+        "background"?: boolean;
+        /**
           * Define a posição do ícone de abertura do componente.
          */
         "icon"?: 'left' | 'right';
@@ -6983,15 +6991,15 @@ declare namespace LocalJSX {
         /**
           * Define o conteúdo de texto do componente.
          */
-        "cabe"?: number;
+        "like"?: number;
         /**
           * Define o conteúdo de texto do componente.
          */
-        "naoCabe"?: number;
+        "title"?: string;
         /**
           * Define o conteúdo de texto do componente.
          */
-        "titulo"?: string;
+        "unlike"?: number;
     }
     interface MontaProvasPlusminus {
         "dsSize"?: 'xl';

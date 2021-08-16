@@ -7,10 +7,11 @@
 
 ## Properties
 
-| Property   | Attribute   | Description                                          | Type                             | Default     |
-| ---------- | ----------- | ---------------------------------------------------- | -------------------------------- | ----------- |
-| `icon`     | `icon`      | Define a posição do ícone de abertura do componente. | `"left" \| "right" \| undefined` | `undefined` |
-| `noBorder` | `no-border` | Define a variação da borda do componente.            | `boolean`                        | `false`     |
+| Property     | Attribute    | Description                                              | Type                             | Default     |
+| ------------ | ------------ | -------------------------------------------------------- | -------------------------------- | ----------- |
+| `background` | `background` | Define se o componente irá ter background quando aberto. | `boolean`                        | `false`     |
+| `icon`       | `icon`       | Define a posição do ícone de abertura do componente.     | `"left" \| "right" \| undefined` | `undefined` |
+| `noBorder`   | `no-border`  | Define a variação da borda do componente.                | `boolean`                        | `false`     |
 
 
 ## Events
