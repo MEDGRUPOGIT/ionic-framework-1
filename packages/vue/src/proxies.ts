@@ -816,6 +816,7 @@ export const IonVirtualScroll = /*@__PURE__*/ defineContainer<JSX.IonVirtualScro
 export const MedAccordionItem = /*@__PURE__*/ defineContainer<JSX.MedAccordionItem>('med-accordion-item', [
   'icon',
   'noBorder',
+  'background',
   'toggle'
 ]);
 

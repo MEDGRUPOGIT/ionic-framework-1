@@ -7,6 +7,10 @@
     * @prop --border-radius: Define o border-radius do componente.
     */
   --background: var(--med-color-neutral-2);
+  --background--active: linear-gradient(to right, rgba(var(--med-color-neutral-2-rgb),1),
+  rgba(var(--med-color-neutral-2-rgb),0.1),
+  rgba(var(--med-color-neutral-2-rgb),0));
+
   --icon-color: var(--med-color-neutral-10);
   --border-radius: #{$med-border-radius-sm};
 }
@@ -23,9 +27,10 @@
     box-sizing: border-box;
     line-height: line-height();
     align-items: center;
-    background-color: var(--background);
+    background: var(--background);
     position: relative;
     border-radius: var(--border-radius);
+    overflow: hidden;
   }
 
   .med-accordion-item__heading {
@@ -55,7 +60,7 @@
     display: none;
     padding: 0 20px;
     overflow: auto;
-    background-color: var(--background);
+    background: var(--background);
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
   }
@@ -71,4 +76,28 @@
 
 :host(.med-accordion-item--no-border) {
   --border-radius: 0;
+}
+
+// ////////////////////
+// Slotted
+// ////////////////////
+
+::slotted(ion-progress-bar) {
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+
+// ////////////////////
+// State
+// ////////////////////
+
+:host(.med-accordion-item--open) .med-accordion-item__header {
+  overflow: auto;
+}
+
+:host(.med-accordion-item--background) {
+  --background: var(--background-active);
+  background-size: 200% 100%;
+  background-position: 0 0;
 }

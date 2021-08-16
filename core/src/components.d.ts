@@ -2746,6 +2746,10 @@ export namespace Components {
     }
     interface MedAccordionItem {
         /**
+          * Define se o componente irá ter background quando aberto.
+         */
+        "background": boolean;
+        /**
           * Define a posição do ícone de abertura do componente.
          */
         "icon"?: 'left' | 'right';
@@ -6682,6 +6686,10 @@ declare namespace LocalJSX {
         "renderItem"?: (item: any, index: number) => any;
     }
     interface MedAccordionItem {
+        /**
+          * Define se o componente irá ter background quando aberto.
+         */
+        "background"?: boolean;
         /**
           * Define a posição do ícone de abertura do componente.
          */

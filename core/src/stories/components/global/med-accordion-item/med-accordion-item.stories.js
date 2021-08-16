@@ -6,7 +6,7 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({icon, noBorder }) => {
+const Template = ({icon, noBorder, background }) => {
   return html`
     <style>
       h4, p {
@@ -30,10 +30,11 @@ const Template = ({icon, noBorder }) => {
 
               <!-- component -->
               <med-accordion-list single-open="false">
-                <med-accordion-item .icon=${icon} ?no-border=${noBorder}>
+                <med-accordion-item .background=${background} .icon=${icon} ?no-border=${noBorder}>
                   <div slot="header">
                     <h4>Header</h4>
                   </div>
+                  <ion-progress-bar slot="auxiliar" value="0.3"></ion-progress-bar>
                   <div slot="content" class="med-accordion__content">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, nisi quos saepe similique eius illum voluptatibus unde cupiditate sit fuga ea, neque in odit, iste non delectus! Mollitia, ipsam natus delectus maiores veniam quaerat iusto dignissimos beatae cum corporis eaque quod nostrum inventore possimus voluptates dolore velit, praesentium minus adipisci ad enim nihil impedit in rerum. Aut, distinctio velit ab quis iusto dolorum voluptatum reiciendis neque repellendus culpa quo exercitationem corrupti molestiae maxime ut ratione optio. Commodi, vitae obcaecati ullam quis minus consequuntur tempora eum corporis doloribus mollitia voluptatem. Necessitatibus dolor vitae id quia facilis tempore explicabo aliquam quisquam dolores.</p>
                   </div>
@@ -72,6 +73,15 @@ Default.argTypes = {
     control: { type: 'boolean' },
     description: 'Define a variação da borda do componente.',
     defaultValue: false,
+    table: {
+      type:  { summary: 'boolean' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  background: {
+    control: { type: 'boolean' },
+    description: 'Define se o componente irá ter background quando aberto.',
+    defaultValue: true,
     table: {
       type:  { summary: 'boolean' },
       defaultValue: { summary: 'undefined' },

@@ -1378,6 +1378,7 @@ ion-virtual-scroll,method,checkRange,checkRange(offset: number, len?: number) =>
 ion-virtual-scroll,method,positionForItem,positionForItem(index: number) => Promise<number>
 
 med-accordion-item,shadow
+med-accordion-item,prop,background,boolean,false,false,true
 med-accordion-item,prop,icon,"left" | "right" | undefined,undefined,false,true
 med-accordion-item,prop,noBorder,boolean,false,false,true
 med-accordion-item,event,toggle,any,true
