@@ -24,7 +24,7 @@ export class MedVote {
   @Prop() unlike: number = 0;
 
   render() {
-    const title =  this.title
+    const titulo =  this.titulo
     const like = isNaN(this.like) ? 0 : +this.like;
     const unlike = isNaN(this.unlike) ? 0 : +this.unlike;
     const total = like + unlike
