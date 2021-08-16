@@ -3044,15 +3044,15 @@ export namespace Components {
         /**
           * Define o conteúdo de texto do componente.
          */
-        "cabe"?: number;
+        "like": number;
         /**
           * Define o conteúdo de texto do componente.
          */
-        "naoCabe"?: number;
+        "title"?: string;
         /**
           * Define o conteúdo de texto do componente.
          */
-        "titulo"?: string;
+        "unlike": number;
     }
     interface MontaProvasPlusminus {
         "dsSize"?: 'xl';
@@ -6991,15 +6991,15 @@ declare namespace LocalJSX {
         /**
           * Define o conteúdo de texto do componente.
          */
-        "cabe"?: number;
+        "like"?: number;
         /**
           * Define o conteúdo de texto do componente.
          */
-        "naoCabe"?: number;
+        "title"?: string;
         /**
           * Define o conteúdo de texto do componente.
          */
-        "titulo"?: string;
+        "unlike"?: number;
     }
     interface MontaProvasPlusminus {
         "dsSize"?: 'xl';

@@ -1281,8 +1281,8 @@ export class MedTooltip2 {
 }
 export declare interface MedVote extends Components.MedVote {
 }
-@ProxyCmp({ inputs: ["cabe", "naoCabe", "titulo"] })
-@Component({ selector: "med-vote", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["cabe", "naoCabe", "titulo"] })
+@ProxyCmp({ inputs: ["like", "title", "unlike"] })
+@Component({ selector: "med-vote", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["like", "title", "unlike"] })
 export class MedVote {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

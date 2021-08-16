@@ -1062,9 +1062,9 @@ export const MedTooltip2 = /*@__PURE__*/ defineContainer<JSX.MedTooltip2>('med-t
 
 
 export const MedVote = /*@__PURE__*/ defineContainer<JSX.MedVote>('med-vote', [
-  'titulo',
-  'cabe',
-  'naoCabe'
+  'title',
+  'like',
+  'unlike'
 ]);
 
 

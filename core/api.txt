@@ -1597,9 +1597,9 @@ med-tooltip2,prop,content,string,undefined,true,true
 med-tooltip2,prop,header,string,undefined,true,true
 
 med-vote,shadow
-med-vote,prop,cabe,number | undefined,undefined,false,false
-med-vote,prop,naoCabe,number | undefined,undefined,false,false
-med-vote,prop,titulo,string | undefined,undefined,false,false
+med-vote,prop,like,number,0,false,false
+med-vote,prop,title,string | undefined,undefined,false,false
+med-vote,prop,unlike,number,0,false,false
 
 monta-provas-plusminus,shadow
 monta-provas-plusminus,prop,dsSize,"xl" | undefined,undefined,false,false
