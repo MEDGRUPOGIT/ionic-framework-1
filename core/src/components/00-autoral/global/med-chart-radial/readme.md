@@ -7,9 +7,11 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type                  | Default |
-| --------- | --------- | ----------- | --------------------- | ------- |
-| `valores` | --        |             | `MedChartRadiaItem[]` | `[]`    |
+| Property  | Attribute | Description                      | Type                  | Default     |
+| --------- | --------- | -------------------------------- | --------------------- | ----------- |
+| `color`   | `color`   |                                  | `string \| undefined` | `undefined` |
+| `dsName`  | `ds-name` | Define a variação do componente. | `string \| undefined` | `undefined` |
+| `valores` | --        |                                  | `MedChartRadiaItem[]` | `[]`        |
 
 
 ----------------------------------------------

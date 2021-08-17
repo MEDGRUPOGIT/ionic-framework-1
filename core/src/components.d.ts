@@ -2849,6 +2849,11 @@ export namespace Components {
     interface MedCartaoRespostaLista {
     }
     interface MedChartRadial {
+        "color"?: Color;
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: string;
         "valores": MedChartRadiaItem[];
     }
     interface MedChartRadialContent {
@@ -2905,10 +2910,6 @@ export namespace Components {
         "titulo"?: string;
     }
     interface MedItemAulas {
-        /**
-          * Define a variação do componente.
-         */
-        "dsName"?: 'secondary';
     }
     interface MedList {
         "color"?: Color;
@@ -3053,6 +3054,16 @@ export namespace Components {
         "neutral"?: Neutral;
         "selected": boolean;
         "solid": boolean;
+        "titulo"?: string;
+    }
+    interface MedTituloMateria {
+        /**
+          * Define o descricao do item.
+         */
+        "descricao"?: string;
+        /**
+          * Define o titulo do item.
+         */
         "titulo"?: string;
     }
     interface MedToolbar {
@@ -3825,6 +3836,12 @@ declare global {
         prototype: HTMLMedTilesElement;
         new (): HTMLMedTilesElement;
     };
+    interface HTMLMedTituloMateriaElement extends Components.MedTituloMateria, HTMLStencilElement {
+    }
+    var HTMLMedTituloMateriaElement: {
+        prototype: HTMLMedTituloMateriaElement;
+        new (): HTMLMedTituloMateriaElement;
+    };
     interface HTMLMedToolbarElement extends Components.MedToolbar, HTMLStencilElement {
     }
     var HTMLMedToolbarElement: {
@@ -3977,6 +3994,7 @@ declare global {
         "med-rate-result": HTMLMedRateResultElement;
         "med-rating": HTMLMedRatingElement;
         "med-tiles": HTMLMedTilesElement;
+        "med-titulo-materia": HTMLMedTituloMateriaElement;
         "med-toolbar": HTMLMedToolbarElement;
         "med-tooltip": HTMLMedTooltipElement;
         "med-tooltip2": HTMLMedTooltip2Element;
@@ -6849,6 +6867,11 @@ declare namespace LocalJSX {
     interface MedCartaoRespostaLista {
     }
     interface MedChartRadial {
+        "color"?: Color;
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: string;
         "valores"?: MedChartRadiaItem[];
     }
     interface MedChartRadialContent {
@@ -6907,10 +6930,6 @@ declare namespace LocalJSX {
         "titulo"?: string;
     }
     interface MedItemAulas {
-        /**
-          * Define a variação do componente.
-         */
-        "dsName"?: 'secondary';
     }
     interface MedList {
         "color"?: Color;
@@ -7055,6 +7074,16 @@ declare namespace LocalJSX {
         "neutral"?: Neutral;
         "selected"?: boolean;
         "solid"?: boolean;
+        "titulo"?: string;
+    }
+    interface MedTituloMateria {
+        /**
+          * Define o descricao do item.
+         */
+        "descricao"?: string;
+        /**
+          * Define o titulo do item.
+         */
         "titulo"?: string;
     }
     interface MedToolbar {
@@ -7221,6 +7250,7 @@ declare namespace LocalJSX {
         "med-rate-result": MedRateResult;
         "med-rating": MedRating;
         "med-tiles": MedTiles;
+        "med-titulo-materia": MedTituloMateria;
         "med-toolbar": MedToolbar;
         "med-tooltip": MedTooltip;
         "med-tooltip2": MedTooltip2;
@@ -7353,6 +7383,7 @@ declare module "@stencil/core" {
             "med-rate-result": LocalJSX.MedRateResult & JSXBase.HTMLAttributes<HTMLMedRateResultElement>;
             "med-rating": LocalJSX.MedRating & JSXBase.HTMLAttributes<HTMLMedRatingElement>;
             "med-tiles": LocalJSX.MedTiles & JSXBase.HTMLAttributes<HTMLMedTilesElement>;
+            "med-titulo-materia": LocalJSX.MedTituloMateria & JSXBase.HTMLAttributes<HTMLMedTituloMateriaElement>;
             "med-toolbar": LocalJSX.MedToolbar & JSXBase.HTMLAttributes<HTMLMedToolbarElement>;
             "med-tooltip": LocalJSX.MedTooltip & JSXBase.HTMLAttributes<HTMLMedTooltipElement>;
             "med-tooltip2": LocalJSX.MedTooltip2 & JSXBase.HTMLAttributes<HTMLMedTooltip2Element>;

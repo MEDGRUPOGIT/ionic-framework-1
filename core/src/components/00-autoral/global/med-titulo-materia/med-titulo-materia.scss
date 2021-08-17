@@ -1,0 +1,52 @@
+@import "../../../../../med-components/abstracts";
+
+:host {
+  /**
+    * @prop --background: Define a cor do background do componente.
+  */
+  --background: #{md-color(brand, 1)};
+  --color: var(--med-color-neutral-10);
+}
+
+:host(.med-titulo-materia) {
+  background: var(--background);
+  padding: $med-spacing-inline-base;
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+}
+
+:host(.med-titulo-materia) .med-titulo-materia__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  //margin: 0 $med-spacing-inline-base;
+}
+
+:host(.med-titulo-materia) .med-titulo-materia__titulo {
+  margin: 0;
+  font-size: $med-font-size-xs;
+  font-weight: $med-font-weight-bold;
+  line-height: $med-line-height-compressed;
+  color: var(--color);
+}
+
+:host(.med-titulo-materia) .med-titulo-materia__descricao {
+  margin: 0;
+  font-size: $med-font-size-xxxs;
+  font-weight: $med-font-weight-regular;
+  line-height: $med-line-height-default;
+  color: var(--color);
+}
+
+// ////////////////////
+// slots
+// ////////////////////
+
+::slotted([slot="start"]) {
+  margin-right: $med-spacing-inline-base;
+}
+
+::slotted([slot="end"]) {
+  margin-left: $med-spacing-inline-base;
+}

@@ -5,11 +5,14 @@
 <!-- Auto Generated Below -->
 
 
-## Properties
+## CSS Custom Properties
 
-| Property | Attribute | Description                      | Type                       | Default     |
-| -------- | --------- | -------------------------------- | -------------------------- | ----------- |
-| `dsName` | `ds-name` | Define a variação do componente. | `"secondary" \| undefined` | `undefined` |
+| Name               | Description                         |
+| ------------------ | ----------------------------------- |
+| `--color-bom`      | Define a cor do icone de bom.       |
+| `--color-excelent` | Define a cor do icone de excelente. |
+| `--color-regular`  | Define a cor do icone de regular.   |
+| `--color-ruim`     | Define a cor do icone de ruim.      |
 
 
 ## Dependencies

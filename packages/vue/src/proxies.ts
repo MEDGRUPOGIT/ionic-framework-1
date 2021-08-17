@@ -886,6 +886,8 @@ export const MedCartaoRespostaLista = /*@__PURE__*/ defineContainer<JSX.MedCarta
 
 
 export const MedChartRadial = /*@__PURE__*/ defineContainer<JSX.MedChartRadial>('med-chart-radial', [
+  'color',
+  'dsName',
   'valores'
 ]);
 
@@ -945,9 +947,7 @@ export const MedImageZoom = /*@__PURE__*/ defineContainer<JSX.MedImageZoom>('med
 ]);
 
 
-export const MedItemAulas = /*@__PURE__*/ defineContainer<JSX.MedItemAulas>('med-item-aulas', [
-  'dsName'
-]);
+export const MedItemAulas = /*@__PURE__*/ defineContainer<JSX.MedItemAulas>('med-item-aulas');
 
 
 export const MedList = /*@__PURE__*/ defineContainer<JSX.MedList>('med-list', [
@@ -1051,6 +1051,12 @@ export const MedTiles = /*@__PURE__*/ defineContainer<JSX.MedTiles>('med-tiles',
   'color',
   'solid',
   'selected'
+]);
+
+
+export const MedTituloMateria = /*@__PURE__*/ defineContainer<JSX.MedTituloMateria>('med-titulo-materia', [
+  'titulo',
+  'descricao'
 ]);
 
 

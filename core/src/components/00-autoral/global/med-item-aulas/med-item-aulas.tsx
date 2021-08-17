@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop } from '@stencil/core';
+import { Component, Host, h } from '@stencil/core';
 import { createColorClasses } from '../../../../utils/theme';
 
 @Component({
@@ -7,11 +7,6 @@ import { createColorClasses } from '../../../../utils/theme';
   shadow: true,
 })
 export class MedItemAulas {
-
-  /**
-   * Define a variação do componente.
-   */
-  @Prop() dsName?: 'secondary';
 
   render() {
 
