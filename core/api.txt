@@ -1489,6 +1489,13 @@ med-image-zoom,prop,marcaAguaInferior,string | undefined,undefined,false,true
 med-image-zoom,prop,marcaAguaSuperior,string | undefined,undefined,false,true
 med-image-zoom,prop,titulo,string | undefined,undefined,false,true
 
+med-item-aulas,shadow
+med-item-aulas,prop,excelente,string | undefined,undefined,false,false
+med-item-aulas,css-prop,--color-bom
+med-item-aulas,css-prop,--color-excelent
+med-item-aulas,css-prop,--color-regular
+med-item-aulas,css-prop,--color-ruim
+
 med-list,shadow
 med-list,prop,color,string | undefined,undefined,false,false
 med-list,prop,margin,"lg" | "md" | "sm" | "xs" | undefined,undefined,false,false
@@ -1564,6 +1571,10 @@ med-rate-result,prop,bom,string | undefined,undefined,false,false
 med-rate-result,prop,excelente,string | undefined,undefined,false,false
 med-rate-result,prop,regular,string | undefined,undefined,false,false
 med-rate-result,prop,ruim,string | undefined,undefined,false,false
+med-rate-result,css-prop,--color-bom
+med-rate-result,css-prop,--color-excelent
+med-rate-result,css-prop,--color-regular
+med-rate-result,css-prop,--color-ruim
 
 med-rating,shadow
 med-rating,prop,cabe,boolean,false,false,false

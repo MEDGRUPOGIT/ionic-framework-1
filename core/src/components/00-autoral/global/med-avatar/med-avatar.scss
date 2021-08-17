@@ -34,7 +34,7 @@
 
 :host(.med-avatar) {
   font-size: var(--font-size-base);
-  width: var(--size-base);
+  min-width: var(--size-base);
   height: var(--size-base);
   color: var(--color);
   background: var(--background);
@@ -66,42 +66,42 @@
 
 :host(.med-avatar--xxs) {
   font-size: var(--font-size-xxs);
-  width: var(--size-xxs);
+  min-width: var(--size-xxs);
   height: var(--size-xxs);
 }
 
 :host(.med-avatar--xs) {
   font-size: var(--font-size-xs);
-  width: var(--size-xs);
+  min-width: var(--size-xs);
   height: var(--size-xs);
 }
 
 :host(.med-avatar--sm) {
   font-size: var(--font-size-sm);
-  width: var(--size-sm);
+  min-width: var(--size-sm);
   height: var(--size-sm);
 }
 
 :host(.med-avatar--md) {
   font-size: var(--font-size-md);
-  width: var(--size-md);
+  min-width: var(--size-md);
   height: var(--size-md);
 }
 
 :host(.med-avatar--lg) {
   font-size: var(--font-size-lg);
-  width: var(--size-lg);
+  min-width: var(--size-lg);
   height: var(--size-lg);
 }
 
 :host(.med-avatar--xl) {
   font-size: var(--font-size-xl);
-  width: var(--size-xl);
+  min-width: var(--size-xl);
   height: var(--size-xl);
 }
 
 :host(.med-avatar--xxl) {
   font-size: var(--font-size-xxl);
-  width: var(--size-xxl);
+  min-width: var(--size-xxl);
   height: var(--size-xxl);
 }

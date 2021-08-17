@@ -2904,6 +2904,12 @@ export namespace Components {
         "marcaAguaSuperior"?: string;
         "titulo"?: string;
     }
+    interface MedItemAulas {
+        /**
+          * Define o valor do item excelente.
+         */
+        "excelente"?: string;
+    }
     interface MedList {
         "color"?: Color;
         "margin"?: 'xs' | 'sm' | 'md' | 'lg';
@@ -3729,6 +3735,12 @@ declare global {
         prototype: HTMLMedImageZoomElement;
         new (): HTMLMedImageZoomElement;
     };
+    interface HTMLMedItemAulasElement extends Components.MedItemAulas, HTMLStencilElement {
+    }
+    var HTMLMedItemAulasElement: {
+        prototype: HTMLMedItemAulasElement;
+        new (): HTMLMedItemAulasElement;
+    };
     interface HTMLMedListElement extends Components.MedList, HTMLStencilElement {
     }
     var HTMLMedListElement: {
@@ -3950,6 +3962,7 @@ declare global {
         "med-font-zoom": HTMLMedFontZoomElement;
         "med-header": HTMLMedHeaderElement;
         "med-image-zoom": HTMLMedImageZoomElement;
+        "med-item-aulas": HTMLMedItemAulasElement;
         "med-list": HTMLMedListElement;
         "med-list-item": HTMLMedListItemElement;
         "med-list-item-accordion": HTMLMedListItemAccordionElement;
@@ -6893,6 +6906,12 @@ declare namespace LocalJSX {
         "marcaAguaSuperior"?: string;
         "titulo"?: string;
     }
+    interface MedItemAulas {
+        /**
+          * Define o valor do item excelente.
+         */
+        "excelente"?: string;
+    }
     interface MedList {
         "color"?: Color;
         "margin"?: 'xs' | 'sm' | 'md' | 'lg';
@@ -7187,6 +7206,7 @@ declare namespace LocalJSX {
         "med-font-zoom": MedFontZoom;
         "med-header": MedHeader;
         "med-image-zoom": MedImageZoom;
+        "med-item-aulas": MedItemAulas;
         "med-list": MedList;
         "med-list-item": MedListItem;
         "med-list-item-accordion": MedListItemAccordion;
@@ -7318,6 +7338,7 @@ declare module "@stencil/core" {
             "med-font-zoom": LocalJSX.MedFontZoom & JSXBase.HTMLAttributes<HTMLMedFontZoomElement>;
             "med-header": LocalJSX.MedHeader & JSXBase.HTMLAttributes<HTMLMedHeaderElement>;
             "med-image-zoom": LocalJSX.MedImageZoom & JSXBase.HTMLAttributes<HTMLMedImageZoomElement>;
+            "med-item-aulas": LocalJSX.MedItemAulas & JSXBase.HTMLAttributes<HTMLMedItemAulasElement>;
             "med-list": LocalJSX.MedList & JSXBase.HTMLAttributes<HTMLMedListElement>;
             "med-list-item": LocalJSX.MedListItem & JSXBase.HTMLAttributes<HTMLMedListItemElement>;
             "med-list-item-accordion": LocalJSX.MedListItemAccordion & JSXBase.HTMLAttributes<HTMLMedListItemAccordionElement>;

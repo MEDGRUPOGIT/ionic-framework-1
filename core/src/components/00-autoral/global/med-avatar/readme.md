@@ -24,6 +24,19 @@
 | `--color`      | Define a cor do texto.                    |
 
 
+## Dependencies
+
+### Used by
+
+ - [med-item-aulas](../med-item-aulas)
+
+### Graph
+```mermaid
+graph TD;
+  med-item-aulas --> med-avatar
+  style med-avatar fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

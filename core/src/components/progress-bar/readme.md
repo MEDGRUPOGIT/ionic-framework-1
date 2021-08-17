@@ -167,11 +167,13 @@ export default defineComponent({
 ### Used by
 
  - [med-alternativas](../00-autoral/team/questoes/med-alternativas)
+ - [med-item-aulas](../00-autoral/global/med-item-aulas)
 
 ### Graph
 ```mermaid
 graph TD;
   med-alternativas --> ion-progress-bar
+  med-item-aulas --> ion-progress-bar
   style ion-progress-bar fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
