@@ -1710,6 +1710,10 @@ export namespace Components {
          */
         "color"?: Color;
         /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'minimalist';
+        /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
@@ -2992,6 +2996,24 @@ export namespace Components {
     interface MedRateLike {
         "status"?: RateStatus;
     }
+    interface MedRateResult {
+        /**
+          * Define o valor do item bom.
+         */
+        "bom"?: string;
+        /**
+          * Define o valor do item excelente.
+         */
+        "excelente"?: string;
+        /**
+          * Define o valor do item regular.
+         */
+        "regular"?: string;
+        /**
+          * Define o valor do item ruim.
+         */
+        "ruim"?: string;
+    }
     interface MedRating {
         /**
           * Define o estado cabe ou não cabe recurso.
@@ -3773,6 +3795,12 @@ declare global {
         prototype: HTMLMedRateLikeElement;
         new (): HTMLMedRateLikeElement;
     };
+    interface HTMLMedRateResultElement extends Components.MedRateResult, HTMLStencilElement {
+    }
+    var HTMLMedRateResultElement: {
+        prototype: HTMLMedRateResultElement;
+        new (): HTMLMedRateResultElement;
+    };
     interface HTMLMedRatingElement extends Components.MedRating, HTMLStencilElement {
     }
     var HTMLMedRatingElement: {
@@ -3933,6 +3961,7 @@ declare global {
         "med-question": HTMLMedQuestionElement;
         "med-rate-bar": HTMLMedRateBarElement;
         "med-rate-like": HTMLMedRateLikeElement;
+        "med-rate-result": HTMLMedRateResultElement;
         "med-rating": HTMLMedRatingElement;
         "med-tiles": HTMLMedTilesElement;
         "med-toolbar": HTMLMedToolbarElement;
@@ -5585,6 +5614,10 @@ declare namespace LocalJSX {
          */
         "color"?: Color;
         /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'minimalist';
+        /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
@@ -6952,6 +6985,24 @@ declare namespace LocalJSX {
         "onMedChange"?: (event: CustomEvent<RateStatus>) => void;
         "status"?: RateStatus;
     }
+    interface MedRateResult {
+        /**
+          * Define o valor do item bom.
+         */
+        "bom"?: string;
+        /**
+          * Define o valor do item excelente.
+         */
+        "excelente"?: string;
+        /**
+          * Define o valor do item regular.
+         */
+        "regular"?: string;
+        /**
+          * Define o valor do item ruim.
+         */
+        "ruim"?: string;
+    }
     interface MedRating {
         /**
           * Define o estado cabe ou não cabe recurso.
@@ -7147,6 +7198,7 @@ declare namespace LocalJSX {
         "med-question": MedQuestion;
         "med-rate-bar": MedRateBar;
         "med-rate-like": MedRateLike;
+        "med-rate-result": MedRateResult;
         "med-rating": MedRating;
         "med-tiles": MedTiles;
         "med-toolbar": MedToolbar;
@@ -7277,6 +7329,7 @@ declare module "@stencil/core" {
             "med-question": LocalJSX.MedQuestion & JSXBase.HTMLAttributes<HTMLMedQuestionElement>;
             "med-rate-bar": LocalJSX.MedRateBar & JSXBase.HTMLAttributes<HTMLMedRateBarElement>;
             "med-rate-like": LocalJSX.MedRateLike & JSXBase.HTMLAttributes<HTMLMedRateLikeElement>;
+            "med-rate-result": LocalJSX.MedRateResult & JSXBase.HTMLAttributes<HTMLMedRateResultElement>;
             "med-rating": LocalJSX.MedRating & JSXBase.HTMLAttributes<HTMLMedRatingElement>;
             "med-tiles": LocalJSX.MedTiles & JSXBase.HTMLAttributes<HTMLMedTilesElement>;
             "med-toolbar": LocalJSX.MedToolbar & JSXBase.HTMLAttributes<HTMLMedToolbarElement>;

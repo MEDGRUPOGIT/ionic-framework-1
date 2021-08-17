@@ -26,20 +26,23 @@
 
 ## Slots
 
-| Slot        | Description                                                         |
-| ----------- | ------------------------------------------------------------------- |
-| `"button"`  | Se houver botões no componente eles devem ser inseridos nesse slot. |
-| `"content"` | Define o conteúdo do componente.                                    |
-| `"header"`  | Define o conteúdo do header do componente.                          |
+| Slot         | Description                                                         |
+| ------------ | ------------------------------------------------------------------- |
+| `"auxiliar"` | Define o conteúdo auxiliar do componente.                           |
+| `"button"`   | Se houver botões no componente eles devem ser inseridos nesse slot. |
+| `"content"`  | Define o conteúdo do componente.                                    |
+| `"header"`   | Define o conteúdo do header do componente.                          |
 
 
 ## CSS Custom Properties
 
-| Name              | Description                               |
-| ----------------- | ----------------------------------------- |
-| `--background`    | Define a cor de background do componente. |
-| `--border-radius` | Define o border-radius do componente.     |
-| `--icon-color`    | Define a cor de do icone do componente.   |
+| Name                   | Description                                                           |
+| ---------------------- | --------------------------------------------------------------------- |
+| `--background-active`  | Define a cor de background do header quando a propriedade esta ativa. |
+| `--background-content` | Define a cor de background do conteudo componente.                    |
+| `--background-header`  | Define a cor de background do header do componente.                   |
+| `--border-radius`      | Define o border-radius do componente.                                 |
+| `--icon-color`         | Define a cor de do icone do componente.                               |
 
 
 ## Dependencies

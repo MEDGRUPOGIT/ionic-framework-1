@@ -456,7 +456,8 @@ export const IonProgressBar = /*@__PURE__*/ defineContainer<JSX.IonProgressBar>(
   'reversed',
   'value',
   'buffer',
-  'color'
+  'color',
+  'dsName'
 ]);
 
 
@@ -1016,6 +1017,14 @@ export const MedRateBar = /*@__PURE__*/ defineContainer<JSX.MedRateBar>('med-rat
 export const MedRateLike = /*@__PURE__*/ defineContainer<JSX.MedRateLike>('med-rate-like', [
   'status',
   'medChange'
+]);
+
+
+export const MedRateResult = /*@__PURE__*/ defineContainer<JSX.MedRateResult>('med-rate-result', [
+  'excelente',
+  'bom',
+  'regular',
+  'ruim'
 ]);
 
 

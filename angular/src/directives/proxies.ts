@@ -520,8 +520,8 @@ export class IonNote {
 }
 export declare interface IonProgressBar extends Components.IonProgressBar {
 }
-@ProxyCmp({ inputs: ["buffer", "color", "mode", "percentage", "reversed", "type", "value"] })
-@Component({ selector: "ion-progress-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["buffer", "color", "mode", "percentage", "reversed", "type", "value"] })
+@ProxyCmp({ inputs: ["buffer", "color", "dsName", "mode", "percentage", "reversed", "type", "value"] })
+@Component({ selector: "ion-progress-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["buffer", "color", "dsName", "mode", "percentage", "reversed", "type", "value"] })
 export class IonProgressBar {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1222,6 +1222,17 @@ export class MedRateLike {
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs(this, this.el, ["medChange"]);
+  }
+}
+export declare interface MedRateResult extends Components.MedRateResult {
+}
+@ProxyCmp({ inputs: ["bom", "excelente", "regular", "ruim"] })
+@Component({ selector: "med-rate-result", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["bom", "excelente", "regular", "ruim"] })
+export class MedRateResult {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
   }
 }
 export declare interface MedRating extends Components.MedRating {

@@ -853,6 +853,7 @@ ion-popover,css-prop,--width
 ion-progress-bar,shadow
 ion-progress-bar,prop,buffer,number,1,false,false
 ion-progress-bar,prop,color,string | undefined,undefined,false,false
+ion-progress-bar,prop,dsName,"minimalist" | undefined,undefined,false,false
 ion-progress-bar,prop,mode,"ios" | "md",undefined,false,false
 ion-progress-bar,prop,percentage,boolean,false,false,false
 ion-progress-bar,prop,reversed,boolean,false,false,false
@@ -1385,7 +1386,9 @@ med-accordion-item,prop,icon,"left" | "right" | undefined,undefined,false,true
 med-accordion-item,prop,neutral,string | undefined,undefined,false,false
 med-accordion-item,prop,noBorder,boolean,false,false,true
 med-accordion-item,event,toggle,any,true
-med-accordion-item,css-prop,--background
+med-accordion-item,css-prop,--background-active
+med-accordion-item,css-prop,--background-content
+med-accordion-item,css-prop,--background-header
 med-accordion-item,css-prop,--border-radius
 med-accordion-item,css-prop,--icon-color
 
@@ -1555,6 +1558,12 @@ med-rate-bar,shadow
 med-rate-like,shadow
 med-rate-like,prop,status,RateStatus.DISLIKE | RateStatus.LIKE | undefined,undefined,false,true
 med-rate-like,event,medChange,RateStatus.DISLIKE | RateStatus.LIKE,true
+
+med-rate-result,shadow
+med-rate-result,prop,bom,string | undefined,undefined,false,false
+med-rate-result,prop,excelente,string | undefined,undefined,false,false
+med-rate-result,prop,regular,string | undefined,undefined,false,false
+med-rate-result,prop,ruim,string | undefined,undefined,false,false
 
 med-rating,shadow
 med-rating,prop,cabe,boolean,false,false,false

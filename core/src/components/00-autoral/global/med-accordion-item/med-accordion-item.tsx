@@ -6,6 +6,7 @@ import { createColorClasses } from '../../../../utils/theme';
   * @slot header - Define o conteúdo do header do componente.
   * @slot button - Se houver botões no componente eles devem ser inseridos nesse slot.
   * @slot content - Define o conteúdo do componente.
+  * @slot auxiliar - Define o conteúdo auxiliar do componente.
   */
 @Component({
   tag: 'med-accordion-item',

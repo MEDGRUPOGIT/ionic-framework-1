@@ -2,10 +2,12 @@
 
 :host {
   /**
-    * @prop --background: Define a cor de background do componente.
+    * @prop --background-header: Define a cor de background do header do componente.
+    * @prop --background-content: Define a cor de background do conteudo componente.
+    * @prop --background-active: Define a cor de background do header quando a propriedade esta ativa.
     * @prop --icon-color: Define a cor de do icone do componente.
     * @prop --border-radius: Define o border-radius do componente.
-    */
+  */
   --background-header: var(--med-color-neutral-2);
   --background-content: var(--med-color-neutral-2);
   --background-active: linear-gradient(to right, rgba(var(--med-color-aulas-3-rgb), 1), rgba(var(--med-color-aulas-3-rgb), 0.1), rgba(var(--med-color-aulas-3-rgb), 0));
