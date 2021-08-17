@@ -113,6 +113,7 @@
     display: block;
     background: var(--background-active);
     z-index: 0;
+    border-top-left-radius: var(--border-radius);
   }
 }
 
