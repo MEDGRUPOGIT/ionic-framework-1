@@ -2906,9 +2906,9 @@ export namespace Components {
     }
     interface MedItemAulas {
         /**
-          * Define o valor do item excelente.
+          * Define a variação do componente.
          */
-        "excelente"?: string;
+        "dsName"?: 'secondary';
     }
     interface MedList {
         "color"?: Color;
@@ -6908,9 +6908,9 @@ declare namespace LocalJSX {
     }
     interface MedItemAulas {
         /**
-          * Define o valor do item excelente.
+          * Define a variação do componente.
          */
-        "excelente"?: string;
+        "dsName"?: 'secondary';
     }
     interface MedList {
         "color"?: Color;

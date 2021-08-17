@@ -14,10 +14,7 @@ const TemplateDefault = ({}) => {
       <ion-content class="storybook-only__container" style="text-align:left;">
 
         <!-- component -->
-
-        <med-item-aulas></med-item-aulas>
-        <med-item-aulas></med-item-aulas>
-
+          <med-item-aulas></med-item-aulas>
         <!-- component -->
 
       </ion-content>

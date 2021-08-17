@@ -1490,11 +1490,7 @@ med-image-zoom,prop,marcaAguaSuperior,string | undefined,undefined,false,true
 med-image-zoom,prop,titulo,string | undefined,undefined,false,true
 
 med-item-aulas,shadow
-med-item-aulas,prop,excelente,string | undefined,undefined,false,false
-med-item-aulas,css-prop,--color-bom
-med-item-aulas,css-prop,--color-excelent
-med-item-aulas,css-prop,--color-regular
-med-item-aulas,css-prop,--color-ruim
+med-item-aulas,prop,dsName,"secondary" | undefined,undefined,false,false
 
 med-list,shadow
 med-list,prop,color,string | undefined,undefined,false,false
