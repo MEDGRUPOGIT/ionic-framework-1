@@ -1,21 +1,19 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
+import { medColors, medNeutrals } from '../../../med-colors';
 
 export default {
   title: 'Components/Core/Titulo Materia',
   decorators: [withDesign],
 };
 
-const TemplateDefault = ({ titulo, descricao }) => {
+const TemplateDefault = ({ color, neutral, titulo, descricao }) => {
   return html`
     <ion-app class="storybook-only">
       <div class="storybook-only__container" style="text-align: left;">
 
         <!-- component -->
-          <med-titulo-materia .titulo=${titulo} .descricao=${descricao} >
-
-            <ion-icon slot="end" class="med-icon" name="med-arrow-left-circle">ion-button</ion-icon>
-          </med-titulo-materia>
+          <med-titulo-materia .color=${color} .neutral=${neutral} .titulo=${titulo} .descricao=${descricao}></med-titulo-materia>
         <!-- component -->
 
       </div>
@@ -31,9 +29,27 @@ TituloMateria.parameters = {
   },
 }
 TituloMateria.argTypes = {
+  color: {
+    options: medColors,
+    control: { type: 'inline-radio'},
+    description: "Define a cor do componente.",
+    table: {
+      type:  { summary: 'Color' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  neutral: {
+    options: medNeutrals,
+    control: { type: 'inline-radio'},
+    description: "Define a cor neutra do componente.",
+    table: {
+      type:  { summary: 'Neutrals' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
   titulo: {
     control: { type: 'text' },
-    description: "Define numero de votos regulares",
+    description: "Define o título da matéria.",
     defaultValue: 'CAR 1',
     table: {
       type:  { summary: 'string' },
@@ -42,7 +58,7 @@ TituloMateria.argTypes = {
   },
   descricao: {
     control: { type: 'text' },
-    description: "Define numero de votos regulares",
+    description: "Define a descrição da matéria.",
     defaultValue: 'Arritimias Cardíacas, Morte Súbita',
     table: {
       type:  { summary: 'string' },

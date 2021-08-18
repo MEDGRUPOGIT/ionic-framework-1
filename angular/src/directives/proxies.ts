@@ -883,8 +883,8 @@ export class IonToolbar {
 }
 export declare interface MedAccordionItem extends Components.MedAccordionItem {
 }
-@ProxyCmp({ inputs: ["background", "color", "dsName", "icon", "neutral", "noBorder"] })
-@Component({ selector: "med-accordion-item", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["background", "color", "dsName", "icon", "neutral", "noBorder"] })
+@ProxyCmp({ inputs: ["background", "color", "dsName", "icon", "noBorder"] })
+@Component({ selector: "med-accordion-item", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["background", "color", "dsName", "icon", "noBorder"] })
 export class MedAccordionItem {
   toggle!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
@@ -1105,7 +1105,8 @@ export class MedImageZoom {
 }
 export declare interface MedItemAulas extends Components.MedItemAulas {
 }
-@Component({ selector: "med-item-aulas", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+@ProxyCmp({ inputs: ["dados"] })
+@Component({ selector: "med-item-aulas", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dados"] })
 export class MedItemAulas {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1148,8 +1149,8 @@ export class MedListItemAccordion {
 }
 export declare interface MedMessage extends Components.MedMessage {
 }
-@ProxyCmp({ inputs: ["concurso", "dsName", "messageId", "nome", "texto"] })
-@Component({ selector: "med-message", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["concurso", "dsName", "messageId", "nome", "texto"] })
+@ProxyCmp({ inputs: ["avatarImage", "avatarLetter", "concurso", "dsName", "messageId", "nome", "texto"] })
+@Component({ selector: "med-message", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["avatarImage", "avatarLetter", "concurso", "dsName", "messageId", "nome", "texto"] })
 export class MedMessage {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1269,8 +1270,8 @@ export class MedTiles {
 }
 export declare interface MedTituloMateria extends Components.MedTituloMateria {
 }
-@ProxyCmp({ inputs: ["descricao", "titulo"] })
-@Component({ selector: "med-titulo-materia", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["descricao", "titulo"] })
+@ProxyCmp({ inputs: ["color", "descricao", "neutral", "titulo"] })
+@Component({ selector: "med-titulo-materia", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "descricao", "neutral", "titulo"] })
 export class MedTituloMateria {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

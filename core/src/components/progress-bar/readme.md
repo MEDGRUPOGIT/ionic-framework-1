@@ -166,8 +166,8 @@ export default defineComponent({
 
 ### Used by
 
- - [med-alternativas](../00-autoral/team/questoes/med-alternativas)
- - [med-item-aulas](../00-autoral/global/med-item-aulas)
+ - [med-alternativas](../@medgrupo/team/questoes/med-alternativas)
+ - [med-item-aulas](../@medgrupo/global/med-item-aulas)
 
 ### Graph
 ```mermaid

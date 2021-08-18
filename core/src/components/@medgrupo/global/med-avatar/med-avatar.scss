@@ -25,11 +25,6 @@
   --font-size-lg: #{$med-font-size-lg};
   --font-size-xl: #{$med-font-size-xl};
   --font-size-xxl: #{$med-font-size-xl};
-
-  border-radius: $med-border-radius-full;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 :host(.med-avatar) {
@@ -40,6 +35,10 @@
   background: var(--background);
   font-weight: $med-font-weight-semibold;
   line-height: $med-line-height-compressed;
+  border-radius: $med-border-radius-full;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 // ////////////////////

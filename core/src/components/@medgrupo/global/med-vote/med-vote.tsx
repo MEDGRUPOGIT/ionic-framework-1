@@ -11,7 +11,7 @@ export class MedVote {
   /**
     * Define o conteúdo de texto do componente.
     */
-  @Prop() titulo?: string;
+  @Prop() titulo? = 'Cabe recurso?';
 
   /**
     * Define o conteúdo de texto do componente.
@@ -30,6 +30,7 @@ export class MedVote {
     const total = like + unlike
     const likePercent = ((like*100)/total)
     const unlikePercent = ((unlike*100)/total)
+
     return (
       <Host
         from-stencil

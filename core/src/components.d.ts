@@ -9,13 +9,13 @@ import { ActionSheetButton, AlertButton, AlertInput, AnimationBuilder, Autocompl
 import { IonicSafeString } from "./utils/sanitization";
 import { NavigationHookCallback } from "./components/route/route-interface";
 import { SelectCompareFn } from "./components/select/select-interface";
-import { MedAlternativaInterface } from "./components/00-autoral/team/questoes/med-alternativas/med-alternativas-interface";
-import { MedChartRadiaItem } from "./components/00-autoral/global/med-chart-radial/med-chart-radial-interface";
+import { MedAlternativaInterface } from "./components/@medgrupo/team/questoes/med-alternativas/med-alternativas-interface";
+import { MedChartRadiaItem } from "./components/@medgrupo/global/med-chart-radial/med-chart-radial-interface";
 import { MedFontSize } from "./global/med-components/font-size.enum";
-import { headerResizeEventDetail } from "./components/00-autoral/global/med-header/med-header-interface";
-import { MedImageZoomItemInterface } from "./components/00-autoral/global/med-image-zoom/med-image-zoom-interface";
-import { RateStatus } from "./components/00-autoral/global/med-rate-like/med-rate-like.enum";
-import { PlusMinusStatus } from "./components/00-autoral/team/monta-provas/monta-provas-plusminus/monta-provas-plusminus.enum";
+import { headerResizeEventDetail } from "./components/@medgrupo/global/med-header/med-header-interface";
+import { MedImageZoomItemInterface } from "./components/@medgrupo/global/med-image-zoom/med-image-zoom-interface";
+import { RateStatus } from "./components/@medgrupo/global/med-rate-like/med-rate-like.enum";
+import { PlusMinusStatus } from "./components/@medgrupo/team/monta-provas/monta-provas-plusminus/monta-provas-plusminus.enum";
 export namespace Components {
     interface IonActionSheet {
         /**
@@ -2766,10 +2766,6 @@ export namespace Components {
          */
         "icon"?: 'left' | 'right';
         /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
-        /**
           * Define a variação da borda do componente.
          */
         "noBorder": boolean;
@@ -2910,6 +2906,10 @@ export namespace Components {
         "titulo"?: string;
     }
     interface MedItemAulas {
+        /**
+          * Define os dados do componente.
+         */
+        "dados"?: any;
     }
     interface MedList {
         "color"?: Color;
@@ -2938,6 +2938,14 @@ export namespace Components {
         "toggle": (event?: Event | undefined) => Promise<void>;
     }
     interface MedMessage {
+        /**
+          * Define o avatar com imagem.
+         */
+        "avatarImage"?: string;
+        /**
+          * Define o avatar com letra.
+         */
+        "avatarLetter"?: string;
         /**
           * Define o nome do concurso.
          */
@@ -3058,9 +3066,17 @@ export namespace Components {
     }
     interface MedTituloMateria {
         /**
+          * Define a cor do componente.
+         */
+        "color"?: Color;
+        /**
           * Define o descricao do item.
          */
         "descricao"?: string;
+        /**
+          * Define a cor neutra do componente.
+         */
+        "neutral"?: Neutral;
         /**
           * Define o titulo do item.
          */
@@ -3099,7 +3115,7 @@ export namespace Components {
         /**
           * Define o conteúdo de texto do componente.
          */
-        "titulo"?: string;
+        "titulo"?: string | undefined;
         /**
           * Define o conteúdo de texto do componente.
          */
@@ -6779,10 +6795,6 @@ declare namespace LocalJSX {
          */
         "icon"?: 'left' | 'right';
         /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
-        /**
           * Define a variação da borda do componente.
          */
         "noBorder"?: boolean;
@@ -6930,6 +6942,10 @@ declare namespace LocalJSX {
         "titulo"?: string;
     }
     interface MedItemAulas {
+        /**
+          * Define os dados do componente.
+         */
+        "dados"?: any;
     }
     interface MedList {
         "color"?: Color;
@@ -6957,6 +6973,14 @@ declare namespace LocalJSX {
         "titulo"?: string;
     }
     interface MedMessage {
+        /**
+          * Define o avatar com imagem.
+         */
+        "avatarImage"?: string;
+        /**
+          * Define o avatar com letra.
+         */
+        "avatarLetter"?: string;
         /**
           * Define o nome do concurso.
          */
@@ -7078,9 +7102,17 @@ declare namespace LocalJSX {
     }
     interface MedTituloMateria {
         /**
+          * Define a cor do componente.
+         */
+        "color"?: Color;
+        /**
           * Define o descricao do item.
          */
         "descricao"?: string;
+        /**
+          * Define a cor neutra do componente.
+         */
+        "neutral"?: Neutral;
         /**
           * Define o titulo do item.
          */
@@ -7118,7 +7150,7 @@ declare namespace LocalJSX {
         /**
           * Define o conteúdo de texto do componente.
          */
-        "titulo"?: string;
+        "titulo"?: string | undefined;
         /**
           * Define o conteúdo de texto do componente.
          */

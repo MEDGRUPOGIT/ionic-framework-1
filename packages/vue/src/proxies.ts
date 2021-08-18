@@ -815,7 +815,6 @@ export const IonVirtualScroll = /*@__PURE__*/ defineContainer<JSX.IonVirtualScro
 
 
 export const MedAccordionItem = /*@__PURE__*/ defineContainer<JSX.MedAccordionItem>('med-accordion-item', [
-  'neutral',
   'color',
   'dsName',
   'icon',
@@ -947,7 +946,9 @@ export const MedImageZoom = /*@__PURE__*/ defineContainer<JSX.MedImageZoom>('med
 ]);
 
 
-export const MedItemAulas = /*@__PURE__*/ defineContainer<JSX.MedItemAulas>('med-item-aulas');
+export const MedItemAulas = /*@__PURE__*/ defineContainer<JSX.MedItemAulas>('med-item-aulas', [
+  'dados'
+]);
 
 
 export const MedList = /*@__PURE__*/ defineContainer<JSX.MedList>('med-list', [
@@ -984,6 +985,8 @@ export const MedListItemAccordion = /*@__PURE__*/ defineContainer<JSX.MedListIte
 export const MedMessage = /*@__PURE__*/ defineContainer<JSX.MedMessage>('med-message', [
   'dsName',
   'nome',
+  'avatarLetter',
+  'avatarImage',
   'concurso',
   'texto',
   'messageId'
@@ -1055,6 +1058,8 @@ export const MedTiles = /*@__PURE__*/ defineContainer<JSX.MedTiles>('med-tiles',
 
 
 export const MedTituloMateria = /*@__PURE__*/ defineContainer<JSX.MedTituloMateria>('med-titulo-materia', [
+  'color',
+  'neutral',
   'titulo',
   'descricao'
 ]);

@@ -1,13 +1,13 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
-import { medColors } from '../../../med-colors';
+import { medColors, medNeutrals } from '../../../../med-colors';
 
 export default {
-  title: 'Components/Core/Accordion Item',
+  title: 'Components/Team/Aulas/Accordion Item',
   decorators: [withDesign],
 };
 
-const Template = ({color, background, icon, noBorder}) => {
+const Template = ({color, neutral, icon, noBorder, background}) => {
   return html`
     <style>
       h4, p {
@@ -17,7 +17,6 @@ const Template = ({color, background, icon, noBorder}) => {
       }
 
       .med-accordion__content {
-        padding: var(--med-spacing-inset-sm);
         padding-top: 0;
       }
     </style>
@@ -31,12 +30,18 @@ const Template = ({color, background, icon, noBorder}) => {
 
               <!-- component -->
               <med-accordion-list single-open="false">
-                <med-accordion-item .color=${color} .background=${background} .icon=${icon} ?no-border=${noBorder}>
+                <med-accordion-item .color=${color} .neutral=${neutral} .background=${background} .icon=${icon} ?no-border=${noBorder}>
                   <div slot="header">
                     <h4>Header</h4>
                   </div>
+
+                  <ion-progress-bar ds-name="minimalist" slot="auxiliar" value="0.3"></ion-progress-bar>
+
                   <div slot="content" class="med-accordion__content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, nisi quos saepe similique eius illum voluptatibus unde cupiditate sit fuga ea, neque in odit, iste non delectus! Mollitia, ipsam natus delectus maiores veniam quaerat iusto dignissimos beatae cum corporis eaque quod nostrum inventore possimus voluptates dolore velit, praesentium minus adipisci ad enim nihil impedit in rerum. Aut, distinctio velit ab quis iusto dolorum voluptatum reiciendis neque repellendus culpa quo exercitationem corrupti molestiae maxime ut ratione optio. Commodi, vitae obcaecati ullam quis minus consequuntur tempora eum corporis doloribus mollitia voluptatem. Necessitatibus dolor vitae id quia facilis tempore explicabo aliquam quisquam dolores.</p>
+                    <med-item-aulas></med-item-aulas>
+                    <med-item-aulas></med-item-aulas>
+                    <med-item-aulas></med-item-aulas>
+                    <med-item-aulas></med-item-aulas>
                   </div>
                 </med-accordion-item>
               </med-accordion-list>
@@ -68,6 +73,15 @@ Default.argTypes = {
       defaultValue: { summary: 'undefined' },
     },
   },
+  neutral: {
+    options: medNeutrals,
+    control: { type: 'inline-radio'},
+    description: "Define a cor neutra do componente.",
+    table: {
+      type:  { summary: 'Neutrals' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
   icon: {
     options: [undefined, 'left', 'right'],
     control: { type: 'radio'},
@@ -90,7 +104,7 @@ Default.argTypes = {
   background: {
     control: { type: 'boolean' },
     description: 'Define se o componente irá ter background quando aberto.',
-    defaultValue: false,
+    defaultValue: true,
     table: {
       type:  { summary: 'boolean' },
       defaultValue: { summary: 'undefined' },

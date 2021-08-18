@@ -1,5 +1,5 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, h, Host, Prop, State } from '@stencil/core';
-import { Color, Neutral } from '../../../../interface';
+import { Color } from '../../../../interface';
 import { createColorClasses } from '../../../../utils/theme';
 
 /**
@@ -15,11 +15,6 @@ import { createColorClasses } from '../../../../utils/theme';
 })
 export class MedAccordionItem implements ComponentInterface {
   @Element() hostElement!: any;
-
-  /**
-   * Define a cor neutra do componente.
-   */
-  @Prop() neutral?: Neutral;
 
   /**
    * Define a cor do componente.
@@ -86,7 +81,7 @@ export class MedAccordionItem implements ComponentInterface {
   }
 
   render() {
-    const { color, neutral, noBorder, icon, isOpen, background } = this;
+    const { color, noBorder, icon, isOpen, background } = this;
 
     return (
       <Host from-stencil class={createColorClasses(color, {
@@ -94,7 +89,7 @@ export class MedAccordionItem implements ComponentInterface {
         'med-accordion-item--no-border': noBorder,
         'med-accordion-item--open': isOpen,
         'med-accordion-item--background': background,
-      }, neutral)}>
+      }, null)}>
         <div class="med-accordion-item__header" ref={(el) => this.header = el as HTMLDivElement}>
           {icon === 'left' && <div class="med-accordion-item__icon-container med-accordion-item__icon-container--left" onClick={() => this.onClick()}>
             <ion-icon class="med-icon med-accordion-item__icon" name="med-baixo"></ion-icon>

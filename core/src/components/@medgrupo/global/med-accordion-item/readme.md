@@ -13,7 +13,6 @@
 | `color`      | `color`      | Define a cor do componente.                              | `string \| undefined`            | `undefined` |
 | `dsName`     | `ds-name`    | Define a variação do componente.                         | `"secondary" \| undefined`       | `undefined` |
 | `icon`       | `icon`       | Define a posição do ícone de abertura do componente.     | `"left" \| "right" \| undefined` | `undefined` |
-| `neutral`    | `neutral`    | Define a cor neutra do componente.                       | `string \| undefined`            | `undefined` |
 | `noBorder`   | `no-border`  | Define a variação da borda do componente.                | `boolean`                        | `false`     |
 
 
@@ -36,13 +35,12 @@
 
 ## CSS Custom Properties
 
-| Name                   | Description                                                           |
-| ---------------------- | --------------------------------------------------------------------- |
-| `--background-active`  | Define a cor de background do header quando a propriedade esta ativa. |
-| `--background-content` | Define a cor de background do conteudo componente.                    |
-| `--background-header`  | Define a cor de background do header do componente.                   |
-| `--border-radius`      | Define o border-radius do componente.                                 |
-| `--icon-color`         | Define a cor de do icone do componente.                               |
+| Name                   | Description                                         |
+| ---------------------- | --------------------------------------------------- |
+| `--background-content` | Define a cor de background do conteudo componente.  |
+| `--background-header`  | Define a cor de background do header do componente. |
+| `--border-radius`      | Define o border-radius do componente.               |
+| `--icon-color`         | Define a cor de do icone do componente.             |
 
 
 ## Dependencies

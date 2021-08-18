@@ -12,12 +12,12 @@ export class MedAvatar {
   /**
    * Define a cor neutra do componente.
    */
-   @Prop() color?: Color;
+  @Prop() color?: Color;
 
-   /**
+  /**
    * Define a cor neutra do componente.
    */
-    @Prop() neutral?: Neutral;
+  @Prop() neutral?: Neutral;
 
   /**
    * Define a variação de tamanho do componente.
@@ -35,7 +35,6 @@ export class MedAvatar {
   @Prop() letter?: string;
 
   render() {
-
     const { color, neutral, dsSize, image, letter} = this;
 
     return (
