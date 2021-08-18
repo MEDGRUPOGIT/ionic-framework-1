@@ -7,16 +7,19 @@
 
 ## Properties
 
-| Property                              | Attribute                 | Description | Type      | Default         |
-| ------------------------------------- | ------------------------- | ----------- | --------- | --------------- |
-| `alternativaSelecionada` _(required)_ | `alternativa-selecionada` |             | `string`  | `undefined`     |
-| `alternativas`                        | `alternativas`            |             | `any`     | `[]`            |
-| `keyAlternativa`                      | `key-alternativa`         |             | `string`  | `'Alternativa'` |
-| `keyEnunciado`                        | `key-enunciado`           |             | `string`  | `'Enunciado'`   |
-| `keyImagem`                           | `key-imagem`              |             | `string`  | `'Imagem'`      |
-| `keyPorcentagem`                      | `key-porcentagem`         |             | `string`  | `'Porcentagem'` |
-| `mostraResposta` _(required)_         | `mostra-resposta`         |             | `boolean` | `undefined`     |
-| `respostaCorreta` _(required)_        | `resposta-correta`        |             | `string`  | `undefined`     |
+| Property                              | Attribute                 | Description                        | Type                  | Default         |
+| ------------------------------------- | ------------------------- | ---------------------------------- | --------------------- | --------------- |
+| `alternativaSelecionada` _(required)_ | `alternativa-selecionada` |                                    | `string`              | `undefined`     |
+| `alternativas`                        | `alternativas`            |                                    | `any`                 | `[]`            |
+| `color`                               | `color`                   | Define a cor neutra do componente. | `string \| undefined` | `undefined`     |
+| `isDesktop` _(required)_              | `is-desktop`              |                                    | `boolean`             | `undefined`     |
+| `keyAlternativa`                      | `key-alternativa`         |                                    | `string`              | `'Alternativa'` |
+| `keyEnunciado`                        | `key-enunciado`           |                                    | `string`              | `'Enunciado'`   |
+| `keyImagem`                           | `key-imagem`              |                                    | `string`              | `'Imagem'`      |
+| `keyPorcentagem`                      | `key-porcentagem`         |                                    | `string`              | `'Porcentagem'` |
+| `mostraResposta` _(required)_         | `mostra-resposta`         |                                    | `boolean`             | `undefined`     |
+| `podeRiscar` _(required)_             | `pode-riscar`             |                                    | `boolean`             | `undefined`     |
+| `respostaCorreta` _(required)_        | `resposta-correta`        |                                    | `string`              | `undefined`     |
 
 
 ## Events
@@ -24,7 +27,6 @@
 | Event               | Description | Type                                   |
 | ------------------- | ----------- | -------------------------------------- |
 | `medChange`         |             | `CustomEvent<MedAlternativaInterface>` |
-| `medClick`          |             | `CustomEvent<MedAlternativaInterface>` |
 | `medGalleryRequest` |             | `CustomEvent<MedAlternativaInterface>` |
 
 
