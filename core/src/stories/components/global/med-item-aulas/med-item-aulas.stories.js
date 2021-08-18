@@ -9,7 +9,6 @@ export default {
 
 const TemplateDefault = ({}) => {
   return html`
-
     <ion-app class="storybook-only">
       <ion-content class="storybook-only__container" style="text-align:left;">
 

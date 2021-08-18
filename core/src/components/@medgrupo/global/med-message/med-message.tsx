@@ -20,6 +20,16 @@ export class MedMessage {
   @Prop() nome?: string;
 
   /**
+    * Define o avatar com letra.
+    */
+  @Prop({reflect: true}) avatarLetter?: string;
+
+  /**
+    * Define o avatar com imagem.
+    */
+  @Prop() avatarImage?: string;
+
+  /**
     * Define o nome do concurso.
     */
   @Prop() concurso?: string;
@@ -35,7 +45,8 @@ export class MedMessage {
   @Prop() messageId?: string;
 
     render() {
-      const { dsName, nome, concurso, texto, messageId } = this;
+      const { dsName, nome, avatarLetter, avatarImage, concurso, texto, messageId } = this;
+      console.log(avatarLetter);
 
       return (
         <Host from-stencil
@@ -47,8 +58,8 @@ export class MedMessage {
           <div class="med-message__content">
             <div class="med-message__header">
               <div class="med-message__avatar">
-                {(dsName !== 'medgrupo') && <span class="med-message__letter">A</span> }
-                {(dsName === 'medgrupo') && <img class="med-message__img" src={getAssetPath(`./assets/avatar_medgrupo.png`)}/>}
+                {dsName !== 'medgrupo' && <med-avatar ds-size="xs" letter={avatarLetter} image={avatarImage}></med-avatar>}
+                {dsName === 'medgrupo' && <img class="med-message__img" src={getAssetPath(`./assets/avatar_medgrupo.png`)}/>}
               </div>
               <div class="med-message__id">
                 <p class="med-message__nome">{nome} - {concurso}</p>

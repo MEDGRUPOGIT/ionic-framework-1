@@ -1148,8 +1148,8 @@ export class MedListItemAccordion {
 }
 export declare interface MedMessage extends Components.MedMessage {
 }
-@ProxyCmp({ inputs: ["concurso", "dsName", "messageId", "nome", "texto"] })
-@Component({ selector: "med-message", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["concurso", "dsName", "messageId", "nome", "texto"] })
+@ProxyCmp({ inputs: ["avatarImage", "avatarLetter", "concurso", "dsName", "messageId", "nome", "texto"] })
+@Component({ selector: "med-message", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["avatarImage", "avatarLetter", "concurso", "dsName", "messageId", "nome", "texto"] })
 export class MedMessage {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1269,8 +1269,8 @@ export class MedTiles {
 }
 export declare interface MedTituloMateria extends Components.MedTituloMateria {
 }
-@ProxyCmp({ inputs: ["descricao", "titulo"] })
-@Component({ selector: "med-titulo-materia", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["descricao", "titulo"] })
+@ProxyCmp({ inputs: ["color", "descricao", "neutral", "titulo"] })
+@Component({ selector: "med-titulo-materia", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "descricao", "neutral", "titulo"] })
 export class MedTituloMateria {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

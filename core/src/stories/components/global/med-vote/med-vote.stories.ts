@@ -1,6 +1,5 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
-import { medColors, medNeutrals } from '../../../med-colors';
 
 export default {
   title: 'Components/Core/Vote',
@@ -29,24 +28,6 @@ Vote.parameters = {
   },
 }
 Vote.argTypes = {
-  color: {
-    options: medColors,
-    control: { type: 'inline-radio'},
-    description: "Define a cor do componente.",
-    table: {
-      type:  { summary: 'Color' },
-      defaultValue: { summary: 'undefined' },
-    },
-  },
-  neutral: {
-    options: medNeutrals,
-    control: { type: 'inline-radio'},
-    description: "Define a cor neutra do componente.",
-    table: {
-      type:  { summary: 'Neutrals' },
-      defaultValue: { summary: 'undefined' },
-    },
-  },
   titulo: {
     control: { type: 'text' },
     description: "Define o titulo do componente.",
@@ -55,11 +36,11 @@ Vote.argTypes = {
   like: {
     control: { type: 'text' },
     description: "Define a quantidade de recursos que cabem.",
-    defaultValue: '155',
+    defaultValue: '2',
   },
   unlike: {
     control: { type: 'text' },
     description: "Define a quantidade de recursos que cabem.",
-    defaultValue: '155',
+    defaultValue: '4',
   },
 };

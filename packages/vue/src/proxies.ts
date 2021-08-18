@@ -984,6 +984,8 @@ export const MedListItemAccordion = /*@__PURE__*/ defineContainer<JSX.MedListIte
 export const MedMessage = /*@__PURE__*/ defineContainer<JSX.MedMessage>('med-message', [
   'dsName',
   'nome',
+  'avatarLetter',
+  'avatarImage',
   'concurso',
   'texto',
   'messageId'
@@ -1055,6 +1057,8 @@ export const MedTiles = /*@__PURE__*/ defineContainer<JSX.MedTiles>('med-tiles',
 
 
 export const MedTituloMateria = /*@__PURE__*/ defineContainer<JSX.MedTituloMateria>('med-titulo-materia', [
+  'color',
+  'neutral',
   'titulo',
   'descricao'
 ]);
