@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 import { createColorClasses } from '../../../../utils/theme';
 
 @Component({
@@ -7,10 +7,13 @@ import { createColorClasses } from '../../../../utils/theme';
   shadow: true,
 })
 export class MedItemAulas {
+  /**
+    * Define os dados do componente.
+    */
+  @Prop() dados?: any; // iterface
 
   render() {
-
-    const { } = this;
+    const { dados } = this;
 
     return (
       <Host from-stencil
@@ -18,17 +21,17 @@ export class MedItemAulas {
           'med-item-aulas': true,
         }, null)}>
         <div class="med-item-aulas__top">
-          <med-avatar ds-size="lg" letter="A"></med-avatar>
+          <med-avatar ds-size="lg" letter={dados.avatar.letra ? dados.avatar.letra : ''} image={dados.avatar.imagem ? dados.avatar.imagem : ''}></med-avatar>
           <div class="med-item-aulas__info">
             <p class="med-item-aulas__professor">Profressor</p>
-            <p class="med-item-aulas__nome">Nome do professor</p>
-            <p class="med-item-aulas__total">20% concluido - 15 vídeos</p>
-            <med-rate-result excelente="1k" bom="123" regular="22" ruim="1"></med-rate-result>
+            <p class="med-item-aulas__nome">{dados.professor}</p>
+            <p class="med-item-aulas__total">{dados.porcentagem} concluido - {dados.videos} vídeos</p>
+            <med-rate-result excelente={dados.rate.excelente} bom={dados.rate.bom} regular={dados.rate.regular} ruim={dados.rate.ruim}></med-rate-result>
           </div>
           <ion-icon class="med-icon" name="med-direita"></ion-icon>
         </div>
         <div class="med-item-aulas__bottom">
-          <ion-progress-bar ds-name="minimalist"></ion-progress-bar>
+          <ion-progress-bar ds-name="minimalist" value={dados.porcentagem}></ion-progress-bar>
         </div>
 
       </Host>

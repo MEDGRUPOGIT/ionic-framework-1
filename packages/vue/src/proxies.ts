@@ -815,7 +815,6 @@ export const IonVirtualScroll = /*@__PURE__*/ defineContainer<JSX.IonVirtualScro
 
 
 export const MedAccordionItem = /*@__PURE__*/ defineContainer<JSX.MedAccordionItem>('med-accordion-item', [
-  'neutral',
   'color',
   'dsName',
   'icon',
@@ -947,7 +946,9 @@ export const MedImageZoom = /*@__PURE__*/ defineContainer<JSX.MedImageZoom>('med
 ]);
 
 
-export const MedItemAulas = /*@__PURE__*/ defineContainer<JSX.MedItemAulas>('med-item-aulas');
+export const MedItemAulas = /*@__PURE__*/ defineContainer<JSX.MedItemAulas>('med-item-aulas', [
+  'dados'
+]);
 
 
 export const MedList = /*@__PURE__*/ defineContainer<JSX.MedList>('med-list', [

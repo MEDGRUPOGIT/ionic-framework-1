@@ -883,8 +883,8 @@ export class IonToolbar {
 }
 export declare interface MedAccordionItem extends Components.MedAccordionItem {
 }
-@ProxyCmp({ inputs: ["background", "color", "dsName", "icon", "neutral", "noBorder"] })
-@Component({ selector: "med-accordion-item", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["background", "color", "dsName", "icon", "neutral", "noBorder"] })
+@ProxyCmp({ inputs: ["background", "color", "dsName", "icon", "noBorder"] })
+@Component({ selector: "med-accordion-item", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["background", "color", "dsName", "icon", "noBorder"] })
 export class MedAccordionItem {
   toggle!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
@@ -1105,7 +1105,8 @@ export class MedImageZoom {
 }
 export declare interface MedItemAulas extends Components.MedItemAulas {
 }
-@Component({ selector: "med-item-aulas", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+@ProxyCmp({ inputs: ["dados"] })
+@Component({ selector: "med-item-aulas", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dados"] })
 export class MedItemAulas {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

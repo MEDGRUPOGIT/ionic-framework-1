@@ -4,14 +4,11 @@
   /**
     * @prop --background-header: Define a cor de background do header do componente.
     * @prop --background-content: Define a cor de background do conteudo componente.
-    * @prop --background-active: Define a cor de background do header quando a propriedade esta ativa.
     * @prop --icon-color: Define a cor de do icone do componente.
     * @prop --border-radius: Define o border-radius do componente.
   */
-  --background-header: var(--med-color-neutral-2);
+  --background-header: linear-gradient(to right, #{md-color(brand, 1)}, var(--med-color-neutral-2), var(--med-color-neutral-2));
   --background-content: var(--med-color-neutral-2);
-  --background-active: linear-gradient(to right, rgba(var(--med-color-aulas-3-rgb), 1), rgba(var(--med-color-aulas-3-rgb), 0.1), rgba(var(--med-color-aulas-3-rgb), 0));
-
   --icon-color: var(--med-color-neutral-10);
   --border-radius: #{$med-border-radius-sm};
 }
@@ -32,6 +29,10 @@
     position: relative;
     border-radius: var(--border-radius);
     overflow: hidden;
+
+    transition: background 0.5s linear;
+    background-size: 200% 100%;
+    background-position: 100% 0;
   }
 
   .med-accordion-item__heading {
@@ -90,31 +91,16 @@
 ::slotted(ion-progress-bar) {
   position: absolute;
   left: 0;
-  bottom: -4px;
+  bottom: 0;
 }
 
 // ////////////////////
 // state
 // ////////////////////
 
-:host(.med-accordion-item--open) .med-accordion-item__header {
-  overflow: initial;
-}
-
-:host(.med-accordion-item--background) .med-accordion-item__header {
-  &:before {
-    content: "";
-    background-size: 200% 100%;
+:host(.med-accordion-item--open.med-accordion-item--background) {
+  .med-accordion-item__header {
     background-position: 0 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    background: var(--background-active);
-    z-index: 0;
-    border-top-left-radius: var(--border-radius);
   }
 }
 
@@ -123,13 +109,5 @@
 // ////////////////////
 
 :host(.ion-color.med-accordion-item--background) {
-  --background-active: linear-gradient(to right, rgba(var(--med-color-3-rgb), 1), rgba(var(--med-color-3-rgb), 0.1), rgba(var(--med-color-3-rgb), 0)), var(--med-color-neutral-3) ;
-}
-
-// ////////////////////
-// neutral
-// ////////////////////
-
-:host(.med-neutral.med-accordion-item--background) {
-  --background-active: linear-gradient(to right, rgba(var(--med-neutral-rgb), 1), rgba(var(--med-neutral-rgb), 0.1), rgba(var(--med-neutral-rgb), 0)), var(--med-color-neutral-3);
+  --background-header: linear-gradient(to right, #{md-current-color(1)}, var(--med-color-neutral-2), var(--med-color-neutral-2));
 }

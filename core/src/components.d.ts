@@ -2766,10 +2766,6 @@ export namespace Components {
          */
         "icon"?: 'left' | 'right';
         /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
-        /**
           * Define a variação da borda do componente.
          */
         "noBorder": boolean;
@@ -2910,6 +2906,10 @@ export namespace Components {
         "titulo"?: string;
     }
     interface MedItemAulas {
+        /**
+          * Define os dados do componente.
+         */
+        "dados"?: any;
     }
     interface MedList {
         "color"?: Color;
@@ -6795,10 +6795,6 @@ declare namespace LocalJSX {
          */
         "icon"?: 'left' | 'right';
         /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
-        /**
           * Define a variação da borda do componente.
          */
         "noBorder"?: boolean;
@@ -6946,6 +6942,10 @@ declare namespace LocalJSX {
         "titulo"?: string;
     }
     interface MedItemAulas {
+        /**
+          * Define os dados do componente.
+         */
+        "dados"?: any;
     }
     interface MedList {
         "color"?: Color;
