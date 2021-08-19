@@ -42,8 +42,15 @@
     }
   }
 
+  .alternativa-wrapper {
+    padding-bottom: $med-spacing-stack-xs;
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
+
   .alternativa {
-    padding: $med-spacing-stack-base;
     display: flex;
     align-items: start;
 
