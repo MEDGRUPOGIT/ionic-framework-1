@@ -2,10 +2,10 @@
 
 :host {
   --spacing: #{$med-spacing-inline-base};
-  --color: #{$med-color-neutral-dark-10};
-  --color-like: #{$med-color-feedback-success-light};
-  --color-dislike: #{$med-color-feedback-error-light};
-  --color-hover: #{$med-color-neutral-light-40};
+  --color: var(--med-color-neutral-1);
+  --color-like: #{md-color(fb-success, 3)};
+  --color-dislike: #{md-color(fb-warning, 3)};
+  --color-hover: var(--med-color-neutral-7);
 
   display: block;
 
@@ -31,11 +31,11 @@
   }
 
   .button--like .rate {
-    color: var(--color-like);
+    stroke: var(--color-like);
   }
 
   .button--dislike .rate {
-    color: var(--color-dislike);
+    stroke: var(--color-dislike);
   }
 }
 
