@@ -33,10 +33,10 @@ const TemplateToolbar = ({ color, neutral, platform }) => {
               <ion-icon class="med-icon" slot="icon-only" name="med-visivel"></ion-icon>
             </ion-button>
             <ion-button ds-name="icon-only">
-              <ion-icon class="med-icon" slot="icon-only" name="med-editar"></ion-icon>
+              <ion-icon class="med-icon" slot="icon-only" color="brand" name="med-editar"></ion-icon>
             </ion-button>
             <ion-button ds-name="icon-only">
-              <ion-icon class="med-icon" slot="icon-only" name="med-fonte"></ion-icon>
+              <ion-icon class="med-icon med-neutral med-neutral-4" slot="icon-only" name="med-fonte"></ion-icon>
             </ion-button>
           </li>
         </ul>
