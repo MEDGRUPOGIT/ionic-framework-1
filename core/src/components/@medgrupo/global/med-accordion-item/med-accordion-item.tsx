@@ -91,21 +91,28 @@ export class MedAccordionItem implements ComponentInterface {
         'med-accordion-item--background': background,
       }, null)}>
         <div class="med-accordion-item__header" ref={(el) => this.header = el as HTMLDivElement}>
-          {icon === 'left' && <div class="med-accordion-item__icon-container med-accordion-item__icon-container--left" onClick={() => this.onClick()}>
-            <ion-icon class="med-icon med-accordion-item__icon" name="med-baixo"></ion-icon>
-          </div>}
+          <div class="med-accordion-item__header-container">
+            {icon === 'left' && <div class="med-accordion-item__icon-container med-accordion-item__icon-container--left" onClick={() => this.onClick()}>
+              <ion-icon class="med-icon med-accordion-item__icon" name="med-baixo"></ion-icon>
+            </div>}
 
-          <div class="med-accordion-item__heading" onClick={() => this.onClick()}>
-            <slot name="header"></slot>
-            <slot name="auxiliar"></slot>
+            <div class="med-accordion-item__heading" onClick={() => this.onClick()}>
+              <slot name="header"></slot>
+              <slot name="auxiliar"></slot>
+            </div>
+
+            <slot name="button"></slot>
+
+            {(!icon || icon === 'right') && <div class="med-accordion-item__icon-container med-accordion-item__icon-container--right" onClick={() => this.onClick()}>
+              <ion-icon class="med-icon med-accordion-item__icon" name="med-baixo"></ion-icon>
+            </div>}
           </div>
 
-          <slot name="button"></slot>
-
-          {(!icon || icon === 'right') && <div class="med-accordion-item__icon-container med-accordion-item__icon-container--right" onClick={() => this.onClick()}>
-            <ion-icon class="med-icon med-accordion-item__icon" name="med-baixo"></ion-icon>
-          </div>}
+          <div class="med-accordion-item__bar">
+            <slot name="progress"></slot>
+          </div>
         </div>
+
         <div class="med-accordion-item__content" ref={(el) => this.content = el as HTMLDivElement}>
           <slot name="content"></slot>
         </div>

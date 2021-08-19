@@ -17,22 +17,30 @@
   display: block;
   border-radius: var(--border-radius);
 
-  .med-accordion-item__header {
+  .med-accordion-item__header-container {
+    padding: $med-spacing-inset-sm;
+    width: 100%;
     display: flex;
     cursor: pointer;
-    width: 100%;
-    padding: $med-spacing-inset-sm;
-    box-sizing: border-box;
-    line-height: line-height();
     align-items: center;
+    line-height: line-height();
+    box-sizing: border-box;
+  }
+
+  .med-accordion-item__header {
     background: var(--background-header);
-    position: relative;
     border-radius: var(--border-radius);
+    position: relative;
+    width: 100%;
     overflow: hidden;
 
     transition: background 0.5s linear;
     background-size: 200% 100%;
     background-position: 100% 0;
+  }
+
+  .med-accordion-item__bar {
+
   }
 
   .med-accordion-item__heading {
