@@ -125,6 +125,10 @@
   --color-label: #{md-current-color(3)};
 }
 
+:host(.med-list-item-accordion.ion-color) ::slotted(*) {
+  --border-color: #{md-current-color(4)};
+}
+
 // ////////////////////
 // neutral
 // ////////////////////

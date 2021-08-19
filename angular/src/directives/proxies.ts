@@ -918,17 +918,16 @@ export class MedAgrupador {
 }
 export declare interface MedAlternativas extends Components.MedAlternativas {
 }
-@ProxyCmp({ inputs: ["alternativaSelecionada", "alternativas", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "mostraResposta", "respostaCorreta"] })
-@Component({ selector: "med-alternativas", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alternativaSelecionada", "alternativas", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "mostraResposta", "respostaCorreta"] })
+@ProxyCmp({ inputs: ["alternativaSelecionada", "alternativas", "color", "isDesktop", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "mostraResposta", "podeRiscar", "respostaCorreta"] })
+@Component({ selector: "med-alternativas", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alternativaSelecionada", "alternativas", "color", "isDesktop", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "mostraResposta", "podeRiscar", "respostaCorreta"] })
 export class MedAlternativas {
   medChange!: EventEmitter<CustomEvent>;
-  medClick!: EventEmitter<CustomEvent>;
   medGalleryRequest!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ["medChange", "medClick", "medGalleryRequest"]);
+    proxyOutputs(this, this.el, ["medChange", "medGalleryRequest"]);
   }
 }
 export declare interface MedAutocomplete extends Components.MedAutocomplete {
@@ -1105,8 +1104,8 @@ export class MedImageZoom {
 }
 export declare interface MedItemAulas extends Components.MedItemAulas {
 }
-@ProxyCmp({ inputs: ["dados"] })
-@Component({ selector: "med-item-aulas", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dados"] })
+@ProxyCmp({ inputs: ["porcentagem", "professor", "videos"] })
+@Component({ selector: "med-item-aulas", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["porcentagem", "professor", "videos"] })
 export class MedItemAulas {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1149,8 +1148,8 @@ export class MedListItemAccordion {
 }
 export declare interface MedMessage extends Components.MedMessage {
 }
-@ProxyCmp({ inputs: ["avatarImage", "avatarLetter", "concurso", "dsName", "messageId", "nome", "texto"] })
-@Component({ selector: "med-message", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["avatarImage", "avatarLetter", "concurso", "dsName", "messageId", "nome", "texto"] })
+@ProxyCmp({ inputs: ["concurso", "dsName", "messageId", "nome", "texto"] })
+@Component({ selector: "med-message", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["concurso", "dsName", "messageId", "nome", "texto"] })
 export class MedMessage {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

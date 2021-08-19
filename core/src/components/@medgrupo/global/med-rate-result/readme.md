@@ -27,10 +27,6 @@
 
 ## Dependencies
 
-### Used by
-
- - [med-item-aulas](../med-item-aulas)
-
 ### Depends on
 
 - ion-icon
@@ -39,7 +35,6 @@
 ```mermaid
 graph TD;
   med-rate-result --> ion-icon
-  med-item-aulas --> med-rate-result
   style med-rate-result fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

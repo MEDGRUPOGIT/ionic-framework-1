@@ -44,7 +44,7 @@ export class MedAvatar {
         [`med-avatar--${dsSize}`]: dsSize !== undefined,
       }, neutral)}
       >
-        {(letter) && <span class="med-avatar__letter">{letter}</span>}
+        {(letter && !image) && <span class="med-avatar__letter">{letter}</span>}
         {(image) && <img class="med-avatar__img" src={image}/>}
       </Host>
     );

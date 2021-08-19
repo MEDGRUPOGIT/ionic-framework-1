@@ -1,6 +1,10 @@
 import { Component, Host, h, Prop } from '@stencil/core';
 import { createColorClasses } from '../../../../utils/theme';
 
+/**
+ * @slot avatar - Slot destinado ao avatar.
+ * @slot rate - Slot destinado ao componete de rate.
+ */
 @Component({
   tag: 'med-item-aulas',
   styleUrl: 'med-item-aulas.scss',
@@ -8,12 +12,22 @@ import { createColorClasses } from '../../../../utils/theme';
 })
 export class MedItemAulas {
   /**
-    * Define os dados do componente.
+    * Define o nome do professor.
     */
-  @Prop() dados?: any; // iterface
+  @Prop() professor!: string;
+
+  /**
+    * Define a porcentagem de visualização de vídeos.
+    */
+  @Prop() porcentagem!: number;
+
+  /**
+    * Define a quantidade de vídeos.
+    */
+  @Prop() videos!: string;
 
   render() {
-    const { dados } = this;
+    const { professor, porcentagem, videos } = this;
 
     return (
       <Host from-stencil
@@ -21,19 +35,18 @@ export class MedItemAulas {
           'med-item-aulas': true,
         }, null)}>
         <div class="med-item-aulas__top">
-          <med-avatar ds-size="lg" letter={dados.avatar.letra ? dados.avatar.letra : ''} image={dados.avatar.imagem ? dados.avatar.imagem : ''}></med-avatar>
+          <slot name="avatar"></slot>
           <div class="med-item-aulas__info">
-            <p class="med-item-aulas__professor">Profressor</p>
-            <p class="med-item-aulas__nome">{dados.professor}</p>
-            <p class="med-item-aulas__total">{dados.porcentagem} concluido - {dados.videos} vídeos</p>
-            <med-rate-result excelente={dados.rate.excelente} bom={dados.rate.bom} regular={dados.rate.regular} ruim={dados.rate.ruim}></med-rate-result>
+            <p class="med-item-aulas__professor">Professor</p>
+            <p class="med-item-aulas__nome">{professor}</p>
+            <p class="med-item-aulas__total">{Math.round(porcentagem)}% concluido - {videos} vídeos</p>
+            <slot name="rate"></slot>
           </div>
           <ion-icon class="med-icon" name="med-direita"></ion-icon>
         </div>
         <div class="med-item-aulas__bottom">
-          <ion-progress-bar ds-name="minimalist" value={dados.porcentagem}></ion-progress-bar>
+          <ion-progress-bar ds-name="minimalist" value={porcentagem / 100}></ion-progress-bar>
         </div>
-
       </Host>
     );
   }

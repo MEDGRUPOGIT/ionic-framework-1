@@ -7,28 +7,33 @@
 
 ## Properties
 
-| Property | Attribute | Description                    | Type  | Default     |
-| -------- | --------- | ------------------------------ | ----- | ----------- |
-| `dados`  | `dados`   | Define os dados do componente. | `any` | `undefined` |
+| Property                   | Attribute     | Description                                     | Type     | Default     |
+| -------------------------- | ------------- | ----------------------------------------------- | -------- | ----------- |
+| `porcentagem` _(required)_ | `porcentagem` | Define a porcentagem de visualização de vídeos. | `number` | `undefined` |
+| `professor` _(required)_   | `professor`   | Define o nome do professor.                     | `string` | `undefined` |
+| `videos` _(required)_      | `videos`      | Define a quantidade de vídeos.                  | `string` | `undefined` |
+
+
+## Slots
+
+| Slot       | Description                          |
+| ---------- | ------------------------------------ |
+| `"avatar"` | Slot destinado ao avatar.            |
+| `"rate"`   | Slot destinado ao componete de rate. |
 
 
 ## Dependencies
 
 ### Depends on
 
-- [med-avatar](../med-avatar)
-- [med-rate-result](../med-rate-result)
 - ion-icon
 - [ion-progress-bar](../../../progress-bar)
 
 ### Graph
 ```mermaid
 graph TD;
-  med-item-aulas --> med-avatar
-  med-item-aulas --> med-rate-result
   med-item-aulas --> ion-icon
   med-item-aulas --> ion-progress-bar
-  med-rate-result --> ion-icon
   style med-item-aulas fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

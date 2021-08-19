@@ -1408,14 +1408,16 @@ med-agrupador,css-prop,--color
 med-alternativas,shadow
 med-alternativas,prop,alternativaSelecionada,string,undefined,true,true
 med-alternativas,prop,alternativas,any,[],false,false
+med-alternativas,prop,color,string | undefined,undefined,false,false
+med-alternativas,prop,isDesktop,boolean,undefined,true,false
 med-alternativas,prop,keyAlternativa,string,'Alternativa',false,false
 med-alternativas,prop,keyEnunciado,string,'Enunciado',false,false
 med-alternativas,prop,keyImagem,string,'Imagem',false,false
 med-alternativas,prop,keyPorcentagem,string,'Porcentagem',false,false
 med-alternativas,prop,mostraResposta,boolean,undefined,true,true
+med-alternativas,prop,podeRiscar,boolean,undefined,true,false
 med-alternativas,prop,respostaCorreta,string,undefined,true,true
 med-alternativas,event,medChange,MedAlternativaInterface,true
-med-alternativas,event,medClick,MedAlternativaInterface,true
 med-alternativas,event,medGalleryRequest,MedAlternativaInterface,true
 
 med-autocomplete,shadow
@@ -1490,7 +1492,9 @@ med-image-zoom,prop,marcaAguaSuperior,string | undefined,undefined,false,true
 med-image-zoom,prop,titulo,string | undefined,undefined,false,true
 
 med-item-aulas,shadow
-med-item-aulas,prop,dados,any,undefined,false,false
+med-item-aulas,prop,porcentagem,number,undefined,true,false
+med-item-aulas,prop,professor,string,undefined,true,false
+med-item-aulas,prop,videos,string,undefined,true,false
 
 med-list,shadow
 med-list,prop,color,string | undefined,undefined,false,false
@@ -1519,8 +1523,6 @@ med-list-item-accordion,prop,titulo,string | undefined,undefined,false,false
 med-list-item-accordion,method,toggle,toggle(event?: Event | undefined) => Promise<void>
 
 med-message,shadow
-med-message,prop,avatarImage,string | undefined,undefined,false,false
-med-message,prop,avatarLetter,string | undefined,undefined,false,true
 med-message,prop,concurso,string | undefined,undefined,false,false
 med-message,prop,dsName,"comment" | "medgrupo" | "response" | "user-message" | undefined,undefined,false,false
 med-message,prop,messageId,string | undefined,undefined,false,false

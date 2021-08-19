@@ -839,6 +839,8 @@ export const MedAgrupador = /*@__PURE__*/ defineContainer<JSX.MedAgrupador>('med
 
 
 export const MedAlternativas = /*@__PURE__*/ defineContainer<JSX.MedAlternativas>('med-alternativas', [
+  'podeRiscar',
+  'isDesktop',
   'alternativas',
   'keyAlternativa',
   'keyEnunciado',
@@ -847,8 +849,8 @@ export const MedAlternativas = /*@__PURE__*/ defineContainer<JSX.MedAlternativas
   'respostaCorreta',
   'mostraResposta',
   'alternativaSelecionada',
+  'color',
   'medChange',
-  'medClick',
   'medGalleryRequest'
 ]);
 
@@ -947,7 +949,9 @@ export const MedImageZoom = /*@__PURE__*/ defineContainer<JSX.MedImageZoom>('med
 
 
 export const MedItemAulas = /*@__PURE__*/ defineContainer<JSX.MedItemAulas>('med-item-aulas', [
-  'dados'
+  'professor',
+  'porcentagem',
+  'videos'
 ]);
 
 
@@ -985,8 +989,6 @@ export const MedListItemAccordion = /*@__PURE__*/ defineContainer<JSX.MedListIte
 export const MedMessage = /*@__PURE__*/ defineContainer<JSX.MedMessage>('med-message', [
   'dsName',
   'nome',
-  'avatarLetter',
-  'avatarImage',
   'concurso',
   'texto',
   'messageId'

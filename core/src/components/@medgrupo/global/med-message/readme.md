@@ -7,15 +7,23 @@
 
 ## Properties
 
-| Property       | Attribute       | Description                      | Type                                                                   | Default     |
-| -------------- | --------------- | -------------------------------- | ---------------------------------------------------------------------- | ----------- |
-| `avatarImage`  | `avatar-image`  | Define o avatar com imagem.      | `string \| undefined`                                                  | `undefined` |
-| `avatarLetter` | `avatar-letter` | Define o avatar com letra.       | `string \| undefined`                                                  | `undefined` |
-| `concurso`     | `concurso`      | Define o nome do concurso.       | `string \| undefined`                                                  | `undefined` |
-| `dsName`       | `ds-name`       | Define a variação do componente. | `"comment" \| "medgrupo" \| "response" \| "user-message" \| undefined` | `undefined` |
-| `messageId`    | `message-id`    | Define o id da mensagem.         | `string \| undefined`                                                  | `undefined` |
-| `nome`         | `nome`          | Define o nome do aluno.          | `string \| undefined`                                                  | `undefined` |
-| `texto`        | `texto`         | Define o conteúdo de texto.      | `string \| undefined`                                                  | `undefined` |
+| Property    | Attribute    | Description                      | Type                                                                   | Default     |
+| ----------- | ------------ | -------------------------------- | ---------------------------------------------------------------------- | ----------- |
+| `concurso`  | `concurso`   | Define o nome do concurso.       | `string \| undefined`                                                  | `undefined` |
+| `dsName`    | `ds-name`    | Define a variação do componente. | `"comment" \| "medgrupo" \| "response" \| "user-message" \| undefined` | `undefined` |
+| `messageId` | `message-id` | Define o id da mensagem.         | `string \| undefined`                                                  | `undefined` |
+| `nome`      | `nome`       | Define o nome do aluno.          | `string \| undefined`                                                  | `undefined` |
+| `texto`     | `texto`      | Define o conteúdo de texto.      | `string \| undefined`                                                  | `undefined` |
+
+
+## Slots
+
+| Slot       | Description                                   |
+| ---------- | --------------------------------------------- |
+|            | Slot destinado a listagem de badges           |
+| `"avatar"` | Slot destinado ao avatar.                     |
+| `"footer"` | Slot destinado a listagem de botões.          |
+| `"menu"`   | Slot destinado ao componete med-context-menu. |
 
 
 ## CSS Custom Properties
@@ -31,14 +39,12 @@
 
 ### Depends on
 
-- [med-avatar](../med-avatar)
 - [med-tooltip](../med-tooltip)
 - ion-icon
 
 ### Graph
 ```mermaid
 graph TD;
-  med-message --> med-avatar
   med-message --> med-tooltip
   med-message --> ion-icon
   med-tooltip --> ion-button
