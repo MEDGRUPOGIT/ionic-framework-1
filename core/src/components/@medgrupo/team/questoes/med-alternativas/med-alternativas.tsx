@@ -175,7 +175,7 @@ export class MedAlternativas implements MedAlternativasInterface {
           <ul class={`alternativas ${hasImage ? 'alternativas--imagem' : ''}`}>
 
             {this.alternativas.map((alternativa: any) => (
-              <div onPointerDown={() => this.onTouchStart(alternativa)} onPointerUp={() => this.onTouchEnd()}>
+              <div class="alternativa-wrapper" onPointerDown={() => this.onTouchStart(alternativa)} onPointerUp={() => this.onTouchEnd()}>
                 <li class={this.cssClassAlternativa(alternativa[this.keyAlternativa]) + (alternativa.Pressionada ? ' alternativa--pode-riscar-mobile' : '')}>
                   <med-option class={this.cssClassOption(alternativa)}>
                     <ion-radio
