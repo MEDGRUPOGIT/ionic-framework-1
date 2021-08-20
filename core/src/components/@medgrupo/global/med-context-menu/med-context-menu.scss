@@ -54,10 +54,15 @@
   }
 }
 
+// ////////////////////
+// state
+// ////////////////////
+
 :host(.med-context-menu--collapsed) {
   .med-context-menu__content {
     visibility: hidden;
     opacity: 0;
     transition: opacity 300ms ease-in-out;
+    --z-index: 0;
   }
 }
