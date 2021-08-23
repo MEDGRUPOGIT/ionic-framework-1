@@ -1,6 +1,7 @@
 @import "../../../../../../med-components/abstracts";
 
 :host {
+  --font-size: 16px;
   --riscar-flex-direction: column;
   --riscar-icon-margin: 0 0 #{$med-spacing-stack-quark} 0;
 
@@ -104,7 +105,7 @@
 
     &__text {
       color: $med-color-neutral-dark-10;
-      font-size: $med-font-size-xs;
+      font-size: var(--font-size);
       font-weight: $med-font-weight-regular;
       line-height: line-height();
       text-align: justify;
