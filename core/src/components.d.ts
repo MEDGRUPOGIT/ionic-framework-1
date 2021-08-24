@@ -2756,7 +2756,7 @@ export namespace Components {
         /**
           * Define a cor do componente.
          */
-        "color"?: Color;
+        "dsColor"?: Color;
         /**
           * Define a variação do componente.
          */
@@ -6829,7 +6829,7 @@ declare namespace LocalJSX {
         /**
           * Define a cor do componente.
          */
-        "color"?: Color;
+        "dsColor"?: Color;
         /**
           * Define a variação do componente.
          */
