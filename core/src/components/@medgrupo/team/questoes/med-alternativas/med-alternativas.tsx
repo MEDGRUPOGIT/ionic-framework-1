@@ -161,7 +161,6 @@ export class MedAlternativas implements MedAlternativasInterface {
         break;
       }
     }
-    this.isDesktop = true;
 
     const { color } = this;
 
