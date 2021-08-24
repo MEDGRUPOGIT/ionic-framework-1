@@ -44,8 +44,6 @@
   }
 
   .alternativa-wrapper {
-    padding-bottom: $med-spacing-stack-xs;
-
     &:last-of-type {
       padding-bottom: 0;
     }
@@ -54,6 +52,9 @@
   .alternativa {
     display: flex;
     align-items: start;
+    padding: $med-spacing-stack-base;
+    cursor: pointer;
+    min-height: 50px;
 
     .image-container {
       position: relative;
@@ -144,7 +145,7 @@
     }
 
     &--pode-riscar:hover, &--pode-riscar-mobile {
-      background-color: var(--med-color-neutral-2);
+      background-color: $med-color-neutral-light-40;
       .riscar {
         cursor: pointer;
         flex-direction: var(--riscar-flex-direction);
