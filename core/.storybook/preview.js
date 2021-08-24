@@ -21,10 +21,6 @@ import '../src/stories/assets/canvas.css';
 // med-components fonts
 import '../src/stories/assets/fsemeric.css';
 
-// novo
-import '../css/medsoft-v2.css';
-import '../css/medsoft-light.css';
-
 // templarios
 import '../css/themes/default.css';
 import '../css/tokens/complementares.css';
@@ -42,30 +38,35 @@ import '../css/themes/recursos.css';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: { expanded: true },
   backgrounds: { disable: true },
-  themes: [
-    {
-      name: 'Theme Medsoft',
-      class: ['theme-medsoft'],
-      color: '#3aa8b9'
+  themes: {
+    target: 'root',
+    onChange: (themeName) => {
+      document.querySelector('iframe').contentWindow.document.querySelector('.snipet__value--class').textContent = `${themeName.class.join(' ')}`;
     },
-    {
-      name: 'Theme Gold',
-      class: ['theme-gold'],
-      color: '#b89d58'
-    },
-    {
-      name: 'Theme Medsoft Gold',
-      class: ['theme-medsoft', 'theme-gold'],
-      color: '#b89d58'
-    },
-    {
-      name: 'Theme Recursos',
-      class: ['theme-recursos'],
-      color: '#68a6ba'
-    },
-  ],
+    list: [
+      {
+        name: 'Theme Medsoft',
+        class: ['theme-medsoft'],
+        color: '#3aa8b9'
+      },
+      {
+        name: 'Theme Gold',
+        class: ['theme-gold'],
+        color: '#b89d58'
+      },
+      {
+        name: 'Theme Medsoft Gold',
+        class: ['theme-medsoft', 'theme-gold'],
+        color: '#b89d58'
+      },
+      {
+        name: 'Theme Recursos',
+        class: ['theme-recursos'],
+        color: '#68a6ba'
+      },
+    ],
+  },
   viewport: {
     viewports: {
       xxs: {
