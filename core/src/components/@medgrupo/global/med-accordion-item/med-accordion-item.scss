@@ -7,9 +7,9 @@
     * @prop --icon-color: Define a cor de do icone do componente.
     * @prop --border-radius: Define o border-radius do componente.
   */
-  --background-header: linear-gradient(to right, #{md-color(brand, 1)}, var(--med-color-neutral-2), var(--med-color-neutral-2));
-  --background-content: var(--med-color-neutral-2);
-  --icon-color: var(--med-color-neutral-10);
+  --background-header: linear-gradient(to right, #{color('brand', '1')}, #{color('neutral', '2')}, #{color('neutral', '2')});
+  --background-content: #{color('neutral', '2')};
+  --icon-color: #{color('neutral', '10')};
   --border-radius: #{$med-border-radius-sm};
 }
 
@@ -121,5 +121,5 @@
 // ////////////////////
 
 :host(.ion-color.med-accordion-item--background) {
-  --background-header: linear-gradient(to right, #{md-current-color(1)}, var(--med-color-neutral-2), var(--med-color-neutral-2));
+  --background-header: linear-gradient(to right, #{curr-color('color','1')}, #{curr-color('neutral','2')}, #{curr-color('neutral','2')});
 }

@@ -1,19 +1,19 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
-import { medColors } from '../../../med-colors';
+import { Color } from '../../../constants';
 
 export default {
   title: 'Components/Core/Accordion Item',
   decorators: [withDesign],
 };
 
-const Template = ({color, background, icon, noBorder}) => {
+const Template = ({dsColor, background, icon, noBorder}) => {
   return html`
     <style>
       h4, p {
         text-align: left;
         margin: 0;
-        color: var(--med-color-neutral-10);
+        color: hsl(var(--med-color-neutral-10));
       }
 
       .med-accordion__content {
@@ -31,7 +31,7 @@ const Template = ({color, background, icon, noBorder}) => {
 
               <!-- component -->
               <med-accordion-list single-open="false">
-                <med-accordion-item .color=${color} .background=${background} .icon=${icon} ?no-border=${noBorder}>
+                <med-accordion-item .dsColor=${dsColor} .background=${background} .icon=${icon} ?no-border=${noBorder}>
                   <div slot="header">
                     <h4>Header</h4>
                   </div>
@@ -60,8 +60,8 @@ Default.parameters = {
   },
 }
 Default.argTypes = {
-  color: {
-    options: medColors,
+  dsColor: {
+    options: Color,
     control: { type: 'inline-radio'},
     description: "Define a cor do componente.",
     table: {

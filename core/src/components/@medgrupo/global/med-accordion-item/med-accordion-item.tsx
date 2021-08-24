@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, h, Host, Prop, State } from '@stencil/core';
 import { Color } from '../../../../interface';
-import { createColorClasses } from '../../../../utils/theme';
+import { generateMedColor } from '../../../../utils/med-theme';
 
 /**
   * @slot header - Define o conteúdo do header do componente.
@@ -19,7 +19,7 @@ export class MedAccordionItem implements ComponentInterface {
   /**
    * Define a cor do componente.
    */
-  @Prop() color?: Color;
+   @Prop({ reflect: true }) dsColor?: Color;
 
    /**
     * Define a variação do componente.
@@ -81,15 +81,15 @@ export class MedAccordionItem implements ComponentInterface {
   }
 
   render() {
-    const { color, noBorder, icon, isOpen, background } = this;
+    const { dsColor, noBorder, icon, isOpen, background } = this;
 
     return (
-      <Host from-stencil class={createColorClasses(color, {
+      <Host from-stencil class={generateMedColor(dsColor, {
         'med-accordion-item': true,
         'med-accordion-item--no-border': noBorder,
         'med-accordion-item--open': isOpen,
         'med-accordion-item--background': background,
-      }, null)}>
+        })}>
         <div class="med-accordion-item__header" ref={(el) => this.header = el as HTMLDivElement}>
           <div class="med-accordion-item__header-container">
             {icon === 'left' && <div class="med-accordion-item__icon-container med-accordion-item__icon-container--left" onClick={() => this.onClick()}>
