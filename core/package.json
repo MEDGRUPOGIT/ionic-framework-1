@@ -109,7 +109,7 @@
     "storybook": "start-storybook -s dist/ionic/ -p 6006",
     "build-storybook": "build-storybook -s dist/ionic/",
     "custom:theme:clean": "shx rm -rf css/medsoft-theme.css css/medsoft-theme.css.map",
-    "custom:theme:watch": "sass --no-source-map med-components/themes:css src/components/*/medgrupo/:css --watch",
+    "custom:theme:watch": "sass --no-source-map med-components/themes:css med-components/styles:css src/components/*/medgrupo/:css --watch",
     "custom:theme:build": "sass med-components/themes:css",
     "custom:build:watch": "stencil build --watch",
     "custom:start": "npm-run-all --parallel start custom:theme:clean custom:theme:watch",

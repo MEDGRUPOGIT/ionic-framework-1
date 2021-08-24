@@ -1020,6 +1020,17 @@ export class MedChartRadialLabel {
     this.el = r.nativeElement;
   }
 }
+export declare interface MedChild extends Components.MedChild {
+}
+@ProxyCmp({ inputs: ["dsColor", "fill"] })
+@Component({ selector: "med-child", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "fill"] })
+export class MedChild {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedContextMenu extends Components.MedContextMenu {
 }
 @ProxyCmp({ inputs: ["collapsed"], "methods": ["toggle"] })
@@ -1194,6 +1205,17 @@ export declare interface MedOption extends Components.MedOption {
 }
 @Component({ selector: "med-option", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
 export class MedOption {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface MedParent extends Components.MedParent {
+}
+@ProxyCmp({ inputs: ["child", "dsColor", "fill"] })
+@Component({ selector: "med-parent", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["child", "dsColor", "fill"] })
+export class MedParent {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();

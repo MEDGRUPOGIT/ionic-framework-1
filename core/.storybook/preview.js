@@ -22,14 +22,23 @@ import '../src/stories/assets/canvas.css';
 import '../src/stories/assets/fsemeric.css';
 
 // novo
-import '../css/medsoft.css';
+import '../css/medsoft-v2.css';
 import '../css/medsoft-light.css';
-import '../css/medgrupo.css';
-import '../css/medgrupo-light.css';
-import '../css/recursos.css';
-import '../css/recursos-light.css';
-import '../css/gold.css';
-import '../css/gold-light.css';
+
+// templarios
+import '../css/themes/default.css';
+import '../css/tokens/complementares.css';
+import '../css/tokens/espacamento.css';
+import '../css/tokens/tipografia.css';
+
+// schemes
+import '../css/schemes/dark.css';
+import '../css/schemes/light.css';
+
+// themes
+import '../css/themes/medsoft.css';
+import '../css/themes/gold.css';
+import '../css/themes/recursos.css';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -37,45 +46,24 @@ export const parameters = {
   backgrounds: { disable: true },
   themes: [
     {
-      name: 'Medgrupo - Dark Mode',
-      class: ['color-scheme-dark', 'color-theme-medgrupo'],
-      color: '#fc9d5a'
+      name: 'Theme Medsoft',
+      class: ['theme-medsoft'],
+      color: '#3aa8b9'
     },
     {
-      name: 'Medgrupo - Light Mode',
-      class: ['color-scheme-light', 'color-theme-medgrupo'],
-      color: '#fc9d5a'
-    },
-    {
-      name: 'Medsoft - Dark Mode',
-      class: ['color-scheme-dark'],
-      color: '#3aa8b9',
-      default: true
-    },
-    {
-      name: 'Medsoft - Light Mode',
-      class: ['color-scheme-light'],
-      color: '#3aa8b9',
-    },
-    {
-      name: 'Recursos - Dark Mode',
-      class: ['color-scheme-dark', 'color-theme-recursos'],
-      color: '#68a6ba'
-    },
-    {
-      name: 'Recursos - Light Mode',
-      class: ['color-scheme-light', 'color-theme-recursos'],
-      color: '#68a6ba'
-    },
-    {
-      name: 'Gold - Dark Mode',
-      class: ['color-scheme-dark', 'color-theme-gold'],
+      name: 'Theme Gold',
+      class: ['theme-gold'],
       color: '#b89d58'
     },
     {
-      name: 'Gold - Light Mode',
-      class: ['color-scheme-light', 'color-theme-gold'],
+      name: 'Theme Medsoft Gold',
+      class: ['theme-medsoft', 'theme-gold'],
       color: '#b89d58'
+    },
+    {
+      name: 'Theme Recursos',
+      class: ['theme-recursos'],
+      color: '#68a6ba'
     },
   ],
   viewport: {

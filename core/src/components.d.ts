@@ -2872,6 +2872,16 @@ export namespace Components {
         "neutral"?: Neutral;
         "valores": MedChartRadiaItem[];
     }
+    interface MedChild {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: Color;
+        /**
+          * Define o fill do componente.
+         */
+        "fill"?: 'outline';
+    }
     interface MedContextMenu {
         /**
           * Define o estado do componente.
@@ -2992,6 +3002,20 @@ export namespace Components {
     interface MedOffline {
     }
     interface MedOption {
+    }
+    interface MedParent {
+        /**
+          * Teste.
+         */
+        "child": boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: Color;
+        /**
+          * Define o fill do componente.
+         */
+        "fill"?: 'outline';
     }
     interface MedQuestion {
         /**
@@ -3726,6 +3750,12 @@ declare global {
         prototype: HTMLMedChartRadialLabelElement;
         new (): HTMLMedChartRadialLabelElement;
     };
+    interface HTMLMedChildElement extends Components.MedChild, HTMLStencilElement {
+    }
+    var HTMLMedChildElement: {
+        prototype: HTMLMedChildElement;
+        new (): HTMLMedChildElement;
+    };
     interface HTMLMedContextMenuElement extends Components.MedContextMenu, HTMLStencilElement {
     }
     var HTMLMedContextMenuElement: {
@@ -3821,6 +3851,12 @@ declare global {
     var HTMLMedOptionElement: {
         prototype: HTMLMedOptionElement;
         new (): HTMLMedOptionElement;
+    };
+    interface HTMLMedParentElement extends Components.MedParent, HTMLStencilElement {
+    }
+    var HTMLMedParentElement: {
+        prototype: HTMLMedParentElement;
+        new (): HTMLMedParentElement;
     };
     interface HTMLMedQuestionElement extends Components.MedQuestion, HTMLStencilElement {
     }
@@ -3994,6 +4030,7 @@ declare global {
         "med-chart-radial": HTMLMedChartRadialElement;
         "med-chart-radial-content": HTMLMedChartRadialContentElement;
         "med-chart-radial-label": HTMLMedChartRadialLabelElement;
+        "med-child": HTMLMedChildElement;
         "med-context-menu": HTMLMedContextMenuElement;
         "med-divider": HTMLMedDividerElement;
         "med-enunciado": HTMLMedEnunciadoElement;
@@ -4010,6 +4047,7 @@ declare global {
         "med-navbar": HTMLMedNavbarElement;
         "med-offline": HTMLMedOfflineElement;
         "med-option": HTMLMedOptionElement;
+        "med-parent": HTMLMedParentElement;
         "med-question": HTMLMedQuestionElement;
         "med-rate-bar": HTMLMedRateBarElement;
         "med-rate-like": HTMLMedRateLikeElement;
@@ -6911,6 +6949,16 @@ declare namespace LocalJSX {
         "neutral"?: Neutral;
         "valores"?: MedChartRadiaItem[];
     }
+    interface MedChild {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: Color;
+        /**
+          * Define o fill do componente.
+         */
+        "fill"?: 'outline';
+    }
     interface MedContextMenu {
         /**
           * Define o estado do componente.
@@ -7033,6 +7081,20 @@ declare namespace LocalJSX {
         "onMedClick"?: (event: CustomEvent<void>) => void;
     }
     interface MedOption {
+    }
+    interface MedParent {
+        /**
+          * Teste.
+         */
+        "child"?: boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: Color;
+        /**
+          * Define o fill do componente.
+         */
+        "fill"?: 'outline';
     }
     interface MedQuestion {
         /**
@@ -7271,6 +7333,7 @@ declare namespace LocalJSX {
         "med-chart-radial": MedChartRadial;
         "med-chart-radial-content": MedChartRadialContent;
         "med-chart-radial-label": MedChartRadialLabel;
+        "med-child": MedChild;
         "med-context-menu": MedContextMenu;
         "med-divider": MedDivider;
         "med-enunciado": MedEnunciado;
@@ -7287,6 +7350,7 @@ declare namespace LocalJSX {
         "med-navbar": MedNavbar;
         "med-offline": MedOffline;
         "med-option": MedOption;
+        "med-parent": MedParent;
         "med-question": MedQuestion;
         "med-rate-bar": MedRateBar;
         "med-rate-like": MedRateLike;
@@ -7404,6 +7468,7 @@ declare module "@stencil/core" {
             "med-chart-radial": LocalJSX.MedChartRadial & JSXBase.HTMLAttributes<HTMLMedChartRadialElement>;
             "med-chart-radial-content": LocalJSX.MedChartRadialContent & JSXBase.HTMLAttributes<HTMLMedChartRadialContentElement>;
             "med-chart-radial-label": LocalJSX.MedChartRadialLabel & JSXBase.HTMLAttributes<HTMLMedChartRadialLabelElement>;
+            "med-child": LocalJSX.MedChild & JSXBase.HTMLAttributes<HTMLMedChildElement>;
             "med-context-menu": LocalJSX.MedContextMenu & JSXBase.HTMLAttributes<HTMLMedContextMenuElement>;
             "med-divider": LocalJSX.MedDivider & JSXBase.HTMLAttributes<HTMLMedDividerElement>;
             "med-enunciado": LocalJSX.MedEnunciado & JSXBase.HTMLAttributes<HTMLMedEnunciadoElement>;
@@ -7420,6 +7485,7 @@ declare module "@stencil/core" {
             "med-navbar": LocalJSX.MedNavbar & JSXBase.HTMLAttributes<HTMLMedNavbarElement>;
             "med-offline": LocalJSX.MedOffline & JSXBase.HTMLAttributes<HTMLMedOfflineElement>;
             "med-option": LocalJSX.MedOption & JSXBase.HTMLAttributes<HTMLMedOptionElement>;
+            "med-parent": LocalJSX.MedParent & JSXBase.HTMLAttributes<HTMLMedParentElement>;
             "med-question": LocalJSX.MedQuestion & JSXBase.HTMLAttributes<HTMLMedQuestionElement>;
             "med-rate-bar": LocalJSX.MedRateBar & JSXBase.HTMLAttributes<HTMLMedRateBarElement>;
             "med-rate-like": LocalJSX.MedRateLike & JSXBase.HTMLAttributes<HTMLMedRateLikeElement>;

@@ -905,6 +905,12 @@ export const MedChartRadialLabel = /*@__PURE__*/ defineContainer<JSX.MedChartRad
 ]);
 
 
+export const MedChild = /*@__PURE__*/ defineContainer<JSX.MedChild>('med-child', [
+  'dsColor',
+  'fill'
+]);
+
+
 export const MedContextMenu = /*@__PURE__*/ defineContainer<JSX.MedContextMenu>('med-context-menu', [
   'collapsed'
 ]);
@@ -1011,6 +1017,13 @@ export const MedOffline = /*@__PURE__*/ defineContainer<JSX.MedOffline>('med-off
 
 
 export const MedOption = /*@__PURE__*/ defineContainer<JSX.MedOption>('med-option');
+
+
+export const MedParent = /*@__PURE__*/ defineContainer<JSX.MedParent>('med-parent', [
+  'dsColor',
+  'fill',
+  'child'
+]);
 
 
 export const MedQuestion = /*@__PURE__*/ defineContainer<JSX.MedQuestion>('med-question', [

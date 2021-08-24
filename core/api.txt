@@ -1457,6 +1457,10 @@ med-chart-radial-label,prop,color,string | undefined,undefined,false,false
 med-chart-radial-label,prop,neutral,string | undefined,undefined,false,false
 med-chart-radial-label,prop,valores,MedChartRadiaItem[],[],false,false
 
+med-child,shadow
+med-child,prop,dsColor,string | undefined,undefined,false,false
+med-child,prop,fill,"outline" | undefined,undefined,false,true
+
 med-context-menu,shadow
 med-context-menu,prop,collapsed,boolean,true,false,true
 med-context-menu,method,toggle,toggle(event?: Event | undefined) => Promise<void>
@@ -1549,6 +1553,11 @@ med-offline,shadow
 med-offline,event,medClick,void,true
 
 med-option,shadow
+
+med-parent,shadow
+med-parent,prop,child,boolean,false,false,true
+med-parent,prop,dsColor,string | undefined,undefined,false,true
+med-parent,prop,fill,"outline" | undefined,undefined,false,true
 
 med-question,shadow
 med-question,prop,collapsed,boolean,false,false,true
