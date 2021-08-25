@@ -39,8 +39,8 @@
   font-size: 20px;
 }
 
-:host(.med-color) ::slotted(ion-icon) {
-  stroke: red;
+:host(.med-chip) ::slotted(ion-icon) {
+  stroke: color('neutral', '7', 'contrast');
 }
 
 ::slotted(ion-icon:last-child) {
@@ -55,6 +55,18 @@
 
 ::slotted(ion-label) {
   margin: var(--med-spacing-inline-nano);
+}
+
+:host(.med-color) ::slotted(ion-icon) {
+  stroke: curr-color('color', '3', 'contrast');
+}
+
+:host(.med-color-neutral) ::slotted(ion-icon) {
+  stroke: curr-color('neutral', null, 'contrast');
+}
+
+:host(.med-color-feedback) ::slotted(ion-icon) {
+  stroke: curr-color('feedback', null, 'contrast');
 }
 
 // ////////////////////
