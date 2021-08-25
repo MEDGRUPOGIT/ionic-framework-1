@@ -212,6 +212,7 @@ export const IonFabButton = /*@__PURE__*/ defineContainer<JSX.IonFabButton>('ion
   'dsSize',
   'dsName',
   'neutral',
+  'dsColor',
   'color',
   'activated',
   'disabled',
