@@ -32,7 +32,7 @@ export const FontSize = [
   "24px"
 ];
 
-export const Icons = [
+export const MedIcons = [
   'med-acerto',
   'med-acertou',
   'med-ajuda',

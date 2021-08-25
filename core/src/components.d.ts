@@ -2992,15 +2992,11 @@ export namespace Components {
         /**
           * Define a cor do componente.
          */
-        "color"?: Color;
+        "dsColor"?: MedColor;
         /**
           * Define a variação do componente.
          */
         "dsName"?: 'secondary' | 'transparent';
-        /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
     }
     interface MedOffline {
     }
@@ -7073,15 +7069,11 @@ declare namespace LocalJSX {
         /**
           * Define a cor do componente.
          */
-        "color"?: Color;
+        "dsColor"?: MedColor;
         /**
           * Define a variação do componente.
          */
         "dsName"?: 'secondary' | 'transparent';
-        /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
     }
     interface MedOffline {
         "onMedClick"?: (event: CustomEvent<void>) => void;

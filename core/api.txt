@@ -1543,11 +1543,8 @@ med-message-list,css-prop,--margin-top-message
 med-message-list,css-prop,--margin-top-response
 
 med-navbar,shadow
-med-navbar,prop,color,string | undefined,undefined,false,false
+med-navbar,prop,dsColor,string | undefined,undefined,false,true
 med-navbar,prop,dsName,"secondary" | "transparent" | undefined,undefined,false,false
-med-navbar,prop,neutral,string | undefined,undefined,false,false
-med-navbar,css-prop,--background
-med-navbar,css-prop,--color
 
 med-offline,shadow
 med-offline,event,medClick,void,true

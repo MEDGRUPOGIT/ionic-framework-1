@@ -1,7 +1,6 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
-import { MedColor } from '../../../constants';
-import { medIcons } from '../../../med-icons';
+import { MedColor, MedIcons } from '../../../constants';
 
 export default {
   title: 'Components/Core/Chip',
@@ -10,27 +9,29 @@ export default {
 
 const Template = ({ dsColor, dsName, iconLeft, iconRight, slot }) => {
   return html`
-    <ion-app class="storybook-only">
-      <div class="storybook-only__container">
+    <ion-app>
+      <ion-content>
+        <div class="flex-center">
 
-        <!-- component -->
-        <ion-chip .dsColor=${dsColor} ds-name=${dsName}>
-          <ion-label>${slot}</ion-label>
-        </ion-chip>
+          <!-- component -->
+          <ion-chip .dsColor=${dsColor} ds-name=${dsName}>
+            <ion-label>${slot}</ion-label>
+          </ion-chip>
 
-        <ion-chip .dsColor=${dsColor} ds-name=${dsName}>
-          <ion-icon class="med-icon" name=${iconLeft}></ion-icon>
-          <ion-label>${slot}</ion-label>
-        </ion-chip>
+          <ion-chip .dsColor=${dsColor} ds-name=${dsName}>
+            <ion-icon class="med-icon" name=${iconLeft}></ion-icon>
+            <ion-label>${slot}</ion-label>
+          </ion-chip>
 
-        <ion-chip .dsColor=${dsColor} ds-name=${dsName}>
-          <ion-icon class="med-icon" name=${iconLeft}></ion-icon>
-          <ion-label>${slot}</ion-label>
-          <ion-icon class="med-icon" name=${iconRight}></ion-icon>
-        </ion-chip>
-        <!-- component -->
+          <ion-chip .dsColor=${dsColor} ds-name=${dsName}>
+            <ion-icon class="med-icon" name=${iconLeft}></ion-icon>
+            <ion-label>${slot}</ion-label>
+            <ion-icon class="med-icon" name=${iconRight}></ion-icon>
+          </ion-chip>
+          <!-- component -->
 
-      </div>
+        </div>
+      </ion-content>
     </ion-app>
   `
 }
@@ -48,7 +49,7 @@ Default.argTypes = {
     control: { type: 'inline-radio'},
     description: "Define a cor do componente.",
     table: {
-      type:  { summary: 'Color' },
+      type:  { summary: 'MedColor' },
       defaultValue: { summary: 'undefined' },
     },
   },
@@ -62,7 +63,7 @@ Default.argTypes = {
     },
   },
   iconLeft: {
-    options: medIcons,
+    options: MedIcons,
     control: { type: 'select'},
     defaultValue: 'med-arrow-left-circle',
     description: '**Atributo utilizado apenas no storybook. Não é um atributo do componente!.**',
@@ -72,7 +73,7 @@ Default.argTypes = {
     },
   },
   iconRight: {
-    options: medIcons,
+    options: MedIcons,
     control: { type: 'select'},
     defaultValue: 'med-arrow-right-circle',
     description: '**Atributo utilizado apenas no storybook. Não é um atributo do componente!.**',

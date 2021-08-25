@@ -5,8 +5,8 @@
    * @prop --background: Define a cor de background do componente.
    * @prop --color: Define a cor de texto do componente.
    */
-  --background: var(--med-color-neutral-1);
-  --color: var(--med-color-neutral-10);
+  --background: #{color('neutral', '1')};
+  --color: #{color('neutral', '1', 'contrast')};
 }
 
 :host(.med-navbar) {
@@ -65,9 +65,9 @@
 // slotted
 // ////////////////////
 
-// OBS: !important é necessário para garantir que os elementos passados via slot mantenham a estilização definida no design system.
-
 :host(.med-navbar) ::slotted(*) {
+  // OBS: !important é necessário para garantir que os elementos passados via slot mantenham a estilização definida no design system.
+
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -108,10 +108,10 @@
 // color
 // ////////////////////
 
-:host(.ion-color) ::slotted([slot="left"]),
-:host(.ion-color) ::slotted([slot="right"]),
-:host(.ion-color) ::slotted([slot="title"]),
-:host(.ion-color) ::slotted([slot="subtitle"]) {
+:host(.med-color) ::slotted([slot="left"]),
+:host(.med-color) ::slotted([slot="right"]),
+:host(.med-color) ::slotted([slot="title"]),
+:host(.med-color) ::slotted([slot="subtitle"]) {
   --color: #{curr-color('color', '3')};
 }
 
@@ -119,15 +119,15 @@
 // neutral
 // ////////////////////
 
-:host(.med-neutral) {
-  //--background: #{var(--med-neutral)};
+:host(.med-color-neutral) {
+  --background: #{curr-color('neutral')};
 }
 
-:host(.med-neutral) ::slotted([slot="left"]),
-:host(.med-neutral) ::slotted([slot="right"]),
-:host(.med-neutral) ::slotted([slot="title"]),
-:host(.med-neutral) ::slotted([slot="subtitle"]) {
-  --color: #{var(--med-neutral)};
+:host(.med-color-neutral) ::slotted([slot="left"]),
+:host(.med-color-neutral) ::slotted([slot="right"]),
+:host(.med-color-neutral) ::slotted([slot="title"]),
+:host(.med-color-neutral) ::slotted([slot="subtitle"]) {
+  --color: #{curr-color('neutral')};
 }
 
 // //////////////////////////////
@@ -135,28 +135,28 @@
 // //////////////////////////////
 
 :host(.med-navbar--secondary) {
-  --background: var(--med-color-neutral-10);
+  --background: #{color('neutral', '10')};
 }
 
 :host(.med-navbar--secondary) ::slotted([slot="left"]),
 :host(.med-navbar--secondary) ::slotted([slot="right"]),
 :host(.med-navbar--secondary) ::slotted([slot="title"]),
 :host(.med-navbar--secondary) ::slotted([slot="subtitle"]) {
-  --color: var(--med-color-neutral-1);
+  --color: #{color('neutral', '10', 'contrast')};
 }
 
 // ////////////////////
 // color
 // ////////////////////
 
-:host(.med-navbar--secondary.ion-color) {
-  --background:#{curr-color('color', '3')};
+:host(.med-navbar--secondary.med-color) {
+  --background: #{curr-color('color', '3')};
 }
 
-:host(.med-navbar--secondary.ion-color) ::slotted([slot="left"]),
-:host(.med-navbar--secondary.ion-color) ::slotted([slot="right"]),
-:host(.med-navbar--secondary.ion-color) ::slotted([slot="title"]),
-:host(.med-navbar--secondary.ion-color) ::slotted([slot="subtitle"]) {
+:host(.med-navbar--secondary.med-color) ::slotted([slot="left"]),
+:host(.med-navbar--secondary.med-color) ::slotted([slot="right"]),
+:host(.med-navbar--secondary.med-color) ::slotted([slot="title"]),
+:host(.med-navbar--secondary.med-color) ::slotted([slot="subtitle"]) {
   --color: #{curr-color('color', '3', 'contrast')};
 }
 
@@ -164,15 +164,15 @@
 // neutral
 // ////////////////////
 
-:host(.med-navbar--secondary.med-neutral) {
-  --background: #{var(--med-neutral)};
+:host(.med-navbar--secondary.med-color-neutral) {
+  --background: #{curr-color('neutral')};
 }
 
 :host(.med-navbar--secondary.med-neutral) ::slotted([slot="left"]),
 :host(.med-navbar--secondary.med-neutral) ::slotted([slot="right"]),
 :host(.med-navbar--secondary.med-neutral) ::slotted([slot="title"]),
 :host(.med-navbar--secondary.med-neutral) ::slotted([slot="subtitle"]) {
-  --color: #{var(--med-neutral-contrast)};
+  --color: #{curr-color('neutral', null, 'contrast')};
 }
 
 // //////////////////////////////
@@ -187,21 +187,21 @@
 :host(.med-navbar--transparent) ::slotted([slot="right"]),
 :host(.med-navbar--transparent) ::slotted([slot="title"]),
 :host(.med-navbar--transparent) ::slotted([slot="subtitle"]) {
-  --color: var(--med-color-neutral-10);
+  --color: #{color('neutral', '10', 'contrast')};
 }
 
 // ////////////////////
 // color
 // ////////////////////
 
-:host(.med-navbar--transparent.ion-color) {
+:host(.med-navbar--transparent.med-color) {
   --background: transparent;
 }
 
-:host(.med-navbar--transparent.ion-color) ::slotted([slot="left"]),
-:host(.med-navbar--transparent.ion-color) ::slotted([slot="right"]),
-:host(.med-navbar--transparent.ion-color) ::slotted([slot="title"]),
-:host(.med-navbar--transparent.ion-color) ::slotted([slot="subtitle"]) {
+:host(.med-navbar--transparent.med-color) ::slotted([slot="left"]),
+:host(.med-navbar--transparent.med-color) ::slotted([slot="right"]),
+:host(.med-navbar--transparent.med-color) ::slotted([slot="title"]),
+:host(.med-navbar--transparent.med-color) ::slotted([slot="subtitle"]) {
   --color: #{curr-color('color', '3')};
 }
 
@@ -217,5 +217,5 @@
 :host(.med-navbar--transparent.med-neutral) ::slotted([slot="right"]),
 :host(.med-navbar--transparent.med-neutral) ::slotted([slot="title"]),
 :host(.med-navbar--transparent.med-neutral) ::slotted([slot="subtitle"]) {
-  --color: #{var(--med-neutral)};
+  --color: #{curr-color('neutral')};
 }

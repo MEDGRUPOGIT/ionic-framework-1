@@ -51,8 +51,7 @@ export class Badge implements ComponentInterface {
           'med-badge': true,
           [`med-badge--${dsName}`]: dsName !== undefined,
           [`med-badge--${dsSize}`]: dsSize !== undefined,
-          })}
-      >
+        })}>
         <slot></slot>
       </Host>
     );

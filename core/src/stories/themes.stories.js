@@ -1,5 +1,5 @@
 import { html, render } from 'lit-html';
-import { Color } from './constants';
+import { MedColor } from './constants';
 
 export default {
   title: 'templarios',
@@ -283,7 +283,7 @@ const Template = ({dsColor, fill}) => {
 export const Templarios = Template.bind({});
 Templarios.argTypes = {
   dsColor: {
-    options: Color,
+    options: MedColor,
     control: { type: 'inline-radio'},
     description: "Define a cor do componente.",
     table: {

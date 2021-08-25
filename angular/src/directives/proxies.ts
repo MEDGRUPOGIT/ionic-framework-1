@@ -1180,8 +1180,8 @@ export class MedMessageList {
 }
 export declare interface MedNavbar extends Components.MedNavbar {
 }
-@ProxyCmp({ inputs: ["color", "dsName", "neutral"] })
-@Component({ selector: "med-navbar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "dsName", "neutral"] })
+@ProxyCmp({ inputs: ["dsColor", "dsName"] })
+@Component({ selector: "med-navbar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "dsName"] })
 export class MedNavbar {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

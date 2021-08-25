@@ -1005,8 +1005,7 @@ export const MedMessageList = /*@__PURE__*/ defineContainer<JSX.MedMessageList>(
 
 
 export const MedNavbar = /*@__PURE__*/ defineContainer<JSX.MedNavbar>('med-navbar', [
-  'color',
-  'neutral',
+  'dsColor',
   'dsName'
 ]);
 

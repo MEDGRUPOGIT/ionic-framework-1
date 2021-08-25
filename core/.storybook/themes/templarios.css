@@ -16,6 +16,13 @@
   --code-background: #484d5b;
 }
 
+.flex-center {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* canvas */
 
 .sb-show-main {

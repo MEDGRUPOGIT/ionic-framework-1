@@ -9,14 +9,16 @@ export default {
 
 const Template = ({ dsColor, dsSize, dsName, slot }) => {
   return html`
-    <ion-app class="storybook-only">
-      <div class="storybook-only__container">
+    <ion-app>
+      <ion-content>
+        <div class="flex-center">
 
-        <!-- component -->
-        <ion-badge .dsColor=${dsColor} ds-size=${dsSize} ds-name=${dsName}>${slot}</ion-badge>
-        <!-- component -->
+          <!-- component -->
+          <ion-badge .dsColor=${dsColor} ds-size=${dsSize} ds-name=${dsName}>${slot}</ion-badge>
+          <!-- component -->
 
-      </div>
+        </div>
+      </ion-content>
     </ion-app>
   `
 }
@@ -34,7 +36,7 @@ Overview.argTypes = {
     control: { type: 'inline-radio'},
     description: "Define a cor do componente.",
     table: {
-      type:  { summary: 'Color' },
+      type:  { summary: 'MedColor' },
       defaultValue: { summary: 'undefined' },
     },
   },

@@ -9,14 +9,16 @@ export default {
 
 const Template = ({ dsColor, indeterminate}) => {
   return html`
-    <ion-app class="storybook-only">
-      <div class="storybook-only__container">
+    <ion-app>
+      <ion-content>
+        <div class="flex-center">
 
-        <!-- component -->
-        <ion-checkbox .dsColor=${dsColor} .indeterminate=${indeterminate}></ion-checkbox>
-        <!-- component -->
+          <!-- component -->
+          <ion-checkbox .dsColor=${dsColor} .indeterminate=${indeterminate}></ion-checkbox>
+          <!-- component -->
 
-      </div>
+        </div>
+      </ion-content>
     </ion-app>
   `
 }
@@ -34,7 +36,7 @@ Default.argTypes = {
     control: { type: 'inline-radio'},
     description: "Define a cor do componente.",
     table: {
-      type:  { summary: 'Color' },
+      type:  { summary: 'MedColor' },
       defaultValue: { summary: 'undefined' },
     },
   },

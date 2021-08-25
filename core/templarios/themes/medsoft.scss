@@ -55,10 +55,6 @@ $med-colors: (
 
   /* color tokens */
   @include generate-color-tokens();
-
-  ion-content {
-    --background: #{color('neutral', '1')};
-  }
 }
 
 @include generate-color-classes();

@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
-import { Color } from '../../../constants';
+import { MedColor } from '../../../constants';
 
 export default {
   title: 'Components/Core/Accordion Item',
@@ -25,27 +25,18 @@ const Template = ({dsColor, background, icon, noBorder}) => {
     <ion-app>
       <ion-content>
 
-        <ion-grid class="sb-container">
-          <ion-row>
-            <ion-col>
-
-              <!-- component -->
-              <med-accordion-list single-open="false">
-                <med-accordion-item .dsColor=${dsColor} .background=${background} .icon=${icon} ?no-border=${noBorder}>
-                  <div slot="header">
-                    <h4>Header</h4>
-                  </div>
-                  <ion-progress-bar slot="progress" ds-name="minimalist"></ion-progress-bar>
-                  <div slot="content" class="med-accordion__content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, nisi quos saepe similique eius illum voluptatibus unde cupiditate sit fuga ea, neque in odit, iste non delectus! Mollitia, ipsam natus delectus maiores veniam quaerat iusto dignissimos beatae cum corporis eaque quod nostrum inventore possimus voluptates dolore velit, praesentium minus adipisci ad enim nihil impedit in rerum. Aut, distinctio velit ab quis iusto dolorum voluptatum reiciendis neque repellendus culpa quo exercitationem corrupti molestiae maxime ut ratione optio. Commodi, vitae obcaecati ullam quis minus consequuntur tempora eum corporis doloribus mollitia voluptatem. Necessitatibus dolor vitae id quia facilis tempore explicabo aliquam quisquam dolores.</p>
-                  </div>
-                </med-accordion-item>
-              </med-accordion-list>
-              <!-- component -->
-
-            </ion-col>
-          </ion-row>
-        </ion-grid>
+        <!-- component -->
+        <med-accordion-list single-open="false">
+          <med-accordion-item .dsColor=${dsColor} .background=${background} .icon=${icon} ?no-border=${noBorder}>
+            <div slot="header">
+              <h4>Header</h4>
+            </div>
+            <div slot="content" class="med-accordion__content">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, nisi quos saepe similique eius illum voluptatibus unde cupiditate sit fuga ea, neque in odit, iste non delectus! Mollitia, ipsam natus delectus maiores veniam quaerat iusto dignissimos beatae cum corporis eaque quod nostrum inventore possimus voluptates dolore velit, praesentium minus adipisci ad enim nihil impedit in rerum. Aut, distinctio velit ab quis iusto dolorum voluptatum reiciendis neque repellendus culpa quo exercitationem corrupti molestiae maxime ut ratione optio. Commodi, vitae obcaecati ullam quis minus consequuntur tempora eum corporis doloribus mollitia voluptatem. Necessitatibus dolor vitae id quia facilis tempore explicabo aliquam quisquam dolores.</p>
+            </div>
+          </med-accordion-item>
+        </med-accordion-list>
+        <!-- component -->
 
       </ion-content>
     </ion-app>
@@ -61,11 +52,11 @@ Default.parameters = {
 }
 Default.argTypes = {
   dsColor: {
-    options: Color,
+    options: MedColor,
     control: { type: 'inline-radio'},
     description: "Define a cor do componente.",
     table: {
-      type:  { summary: 'Color' },
+      type:  { summary: 'MedColor' },
       defaultValue: { summary: 'undefined' },
     },
   },
