@@ -1,4 +1,4 @@
-@import "../../../med-components/abstracts";
+@import "../../../templarios/abstracts";
 
 :host {
   /**
@@ -19,15 +19,15 @@
 
 :host(.med-chip) {
   height: 32px;
-  padding: $med-spacing-squish-nano;
+  padding: var(--med-spacing-squish-nano);
   background: var(--background);
-  border-radius: $med-border-radius-pill;
+  border-radius: var(--med-border-radius-pill);
   border-color: var(--border-color);
-  border-width: $med-border-width-hairline;
+  border-width: var(--med-border-width-hairline);
   border-style: solid;
-  font-size: $med-font-size-xxs;
-  font-weight: $med-font-weight-regular;
-  line-height: $med-line-height-compressed;
+  font-size: var(--med-font-size-xxs);
+  font-weight: var(--med-font-weight-regular);
+  line-height: var(--med-line-height-compressed);
   color: var(--color);
 }
 
@@ -40,17 +40,17 @@
 }
 
 ::slotted(ion-icon:last-child) {
-  margin-inline: $med-spacing-inline-nano;
+  margin-inline: var(--med-spacing-inline-nano);
   margin-right: 0;
 }
 
 ::slotted(ion-icon:first-child) {
-  margin-inline: $med-spacing-inline-nano;
+  margin-inline: var(--med-spacing-inline-nano);
   margin-left: 0;
 }
 
 ::slotted(ion-label) {
-  margin: $med-spacing-inline-nano;
+  margin: var(--med-spacing-inline-nano);
 }
 
 // ////////////////////
@@ -70,16 +70,16 @@
 // ////////////////////
 
 :host(.med-chip.ion-color)  {
-  --border-color: #{md-current-color(3)};
-  background: md-current-color(3);
-  color: md-current-color(contrast-1);
+  --border-color: #{current-color(3)};
+  background: current-color(3);
+  color: current-color(contrast-1);
 }
 
 @media (any-hover: hover) {
   :host(.med-chip.ion-color:hover) {
-    --border-color: #{md-current-color(3)};
-    background: md-current-color(3);
-    color: md-current-color(contrast-1);
+    --border-color: #{current-color(3)};
+    background: current-color(3);
+    color: current-color(contrast-1);
   }
 }
 
@@ -128,16 +128,16 @@
 // ////////////////////
 
 :host(.med-chip--secondary.ion-color)  {
-  --border-color: #{md-current-color(3)};
+  --border-color: #{current-color(3)};
   background: transparent;
-  color: md-current-color(3);
+  color: current-color(3);
 }
 
 @media (any-hover: hover) {
   :host(.med-chip--secondary.ion-color:hover) {
-    --border-color: #{md-current-color(3)};
+    --border-color: #{current-color(3)};
     background: transparent;
-    color: md-current-color(3);
+    color: current-color(3);
   }
 }
 

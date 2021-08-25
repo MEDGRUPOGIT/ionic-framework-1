@@ -1,9 +1,8 @@
-@import "../../../../../../med-components/abstracts";
+@import "../../../../../../templarios/abstracts";
 
 :host {
   --font-size: 16px;
   --riscar-flex-direction: column;
-  --riscar-icon-margin: 0 0 #{$med-spacing-stack-quark} 0;
 
   .alternativas {
     list-style: none;
@@ -24,7 +23,7 @@
           padding-right: 0;
 
           @include breakpoint-up('md') {
-           padding-right: $med-spacing-inline-base;
+           padding-right: var(--med-spacing-inline-base);
           }
         }
 
@@ -52,7 +51,7 @@
   .alternativa {
     display: flex;
     align-items: start;
-    padding: $med-spacing-stack-base;
+    padding: var(--med-spacing-stack-base);
     cursor: pointer;
     min-height: 50px;
 
@@ -99,15 +98,15 @@
     }
 
     &__right {
-      margin-left: $med-spacing-inline-base;
+      margin-left: var(--med-spacing-inline-base);
       flex: 1;
       overflow: hidden;
     }
 
     &__text {
-      color: $med-color-neutral-dark-10;
+      color: var(--color-neutral-dark-10);
       font-size: var(--font-size);
-      font-weight: $med-font-weight-regular;
+      font-weight: var(--med-font-weight-regular);
       line-height: line-height();
       text-align: justify;
       margin: 0;
@@ -128,13 +127,13 @@
 
     &--correta {
       med-option {
-        --background: #{$med-color-feedback-success-medium};
+        --background: var(--color-feedback-success-medium);
       }
     }
 
     &--incorreto {
       med-option {
-        --background: #{$med-color-feedback-error-medium};
+        --background: var(--color-feedback-error-medium);
       }
     }
 
@@ -145,42 +144,42 @@
     }
 
     &--pode-riscar:hover, &--pode-riscar-mobile {
-      background-color: $med-color-neutral-light-40;
+      background-color: var(--med-color-neutral-light-40);
       .riscar {
         cursor: pointer;
         flex-direction: var(--riscar-flex-direction);
-        margin-left: $med-spacing-inline-md;
+        margin-left: var(--spacing-inline-md);
         display: flex;
         align-items: center;
 
         ion-icon {
           margin: var(--riscar-icon-margin);
-          color: $med-color-neutral-dark-10;
+          color: var(--color-neutral-dark-10);
           font-size: 32px;
         }
 
         &__label {
-          font-size: $med-font-size-xxs;
-          font-weight: $med-font-weight-regular;
-          color: $med-color-neutral-dark-10;
-          line-height: $med-line-height-compressed;
+          font-size: var(--med-font-size-xxs);
+          font-weight: var(--med-font-weight-regular);
+          color: var(--med-color-neutral-dark-10);
+          line-height: var(--med-line-height-compressed);
         }
       }
     }
 
     &--riscada {
       .alternativa__option {
-        opacity: $med-opacity-level-half;
+        opacity: var(--med-opacity-level-half);
       }
 
       .alternativa__text {
         text-decoration: line-through;
-        opacity: $med-opacity-level-half;
+        opacity: var(--med-opacity-level-half);
       }
     }
 
     &--pressed {
-      background-color: $med-color-neutral-light-40;
+      background-color: var(--med-color-neutral-light-40);
     }
   }
 
@@ -195,7 +194,7 @@
     }
 
     &--100 {
-      --progress-background: $med-color-feedback-success-light;
+      --progress-background: var(--med-color-feedback-success-light);
     }
   }
 }
@@ -206,5 +205,5 @@
 
 :host(.alternativa--pode-riscar:hover),
 :host(.alternativa--pode-riscar-m9bile) {
-  background: #{md-current-color(2)};
+  background: #{curr-color('color', '2')};
 }

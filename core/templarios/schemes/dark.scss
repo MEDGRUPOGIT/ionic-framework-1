@@ -13,7 +13,7 @@
 /* theme-dark (fallback for prefers-color-scheme media query) */
 /* https://caniuse.com/prefers-color-scheme */
 
-[color-scheme="dark"] {
+.scheme-dark {
   /* @include generate-dark-scheme();
   @include generate-neutrals(); */
 }

@@ -2,11 +2,11 @@
 // themes
 //
 
-@import "../../../../../../med-components/abstracts";
+@import "../../../../../../templarios/abstracts";
 
 @include platform('desktop') {
   med-alternativas {
     --riscar-flex-direction: row;
-    --riscar-icon-margin: 0 #{$med-spacing-inline-quark} 0 0;
+    --riscar-icon-margin: 0 var(--med-spacing-inline-quark) 0 0;
   }
 }

@@ -1,4 +1,4 @@
-@import "../../../../../med-components/abstracts";
+@import "../../../../../templarios/abstracts";
 
 :host {
   /**
@@ -7,9 +7,9 @@
    */
   --background: #{var(--med-color-neutral-3)};
   --z-index: 1;
-  --box-shadow: #{$med-shadow-level-1};
-  --border-radius: #{$med-border-radius-quark};
-  --padding: #{$med-spacing-squish-nano};
+  --box-shadow: var(--med-shadow-level-1);
+  --border-radius: var(--med-border-radius-quark);
+  --padding:var(--med-spacing-squish-nano);
 }
 
 :host(.med-tooltip) {
@@ -68,18 +68,18 @@
     }
 
     &__titulo {
-      font-size: $med-font-size-xxxs;
-      font-weight: $med-font-weight-bold;
+      font-size: var(--font-size-xxxs);
+      font-weight: var(--font-weight-bold);
       line-height: line-height($med-font-size-xxxs);
       color: var(--med-neutral-10);
       margin: 0;
-      padding-top: $med-spacing-stack-xxxs;
-      padding-bottom: $med-spacing-stack-xxxs;
+      padding-top: var(--spacing-stack-xxxs);
+      padding-bottom: var(--spacing-stack-xxxs);
     }
 
     &__text {
-      font-size: $med-font-size-xxxs;
-      font-weight: $med-font-weight-regular;
+      font-size: var(--font-size-xxxs);
+      font-weight: var(--font-weight-regular);
       line-height: line-height($med-font-size-xxxs);
       color: var(--med-neutral-10);
       margin: 0;
@@ -89,7 +89,7 @@
 }
 
 :host(.med-tooltip--definition) {
-  --padding: #{$med-spacing-inset-sm};
+  --padding: var(--med-spacing-inset-sm);
 
   .med-tooltip__content {
     min-width: 285px;

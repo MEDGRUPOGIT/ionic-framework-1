@@ -1,15 +1,15 @@
-@import "../../../../../med-components/abstracts";
+@import "../../../../../templarios/abstracts";
 
 :host {
   --background: var(--med-color-neutral-2);
   --center-width: auto;
-  --center-margin: 0 #{$med-spacing-inline-base};
+  --center-margin: 0 var(--spacing-inline-base);
 
-  padding: $med-spacing-squish-xs;
+  padding: var(--med-spacing-squish-xs);
   background: var(--background);
   min-height: 48px;
   height: auto;
-  box-shadow: $med-shadow-level-1;
+  box-shadow: var(--med-shadow-level-1);
   display: block;
   display: flex;
   align-items: center;
@@ -30,7 +30,7 @@
 }
 
 :host(.ion-color) {
-  --background: #{md-current-color(1)};
+  --background: #{cur-color('color', '1')};
 }
 
 :host(.med-neutral) {

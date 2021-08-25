@@ -1,10 +1,10 @@
-@import "../../../../../med-components/abstracts";
+@import "../../../../../templarios/abstracts";
 
 :host {
-  --spacing: #{$med-spacing-inline-base};
+  --spacing: var(--med-spacing-inline-base);
   --color: var(--med-color-neutral-1);
-  --color-like: #{md-color(fb-success, 3)};
-  --color-dislike: #{md-color(fb-warning, 3)};
+  --color-like: #{color('feedback', 'success')};
+  --color-dislike: #{color('feedback', 'warning')};
   --color-hover: var(--med-color-neutral-7);
 
   display: block;

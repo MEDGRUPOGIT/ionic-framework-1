@@ -1,5 +1,4 @@
-@import '../../../../med-components/styles/functions';
-@import '../../../../med-components/styles/variables';
+@import '../../../../templarios/abstracts';
 
 :host {
   --background: #{color('brand', '3')};

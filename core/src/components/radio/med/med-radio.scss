@@ -1,4 +1,4 @@
-@import "../../../../med-components/abstracts";
+@import "../../../../templarios/abstracts";
 @import "../../../themes/ionic.globals";
 @import "../radio.md.vars";
 
@@ -53,7 +53,7 @@ input {
 
 :host {
   --color: #fff;
-  --color-checked: #{$med-color-questoes-light};
+  --color-checked: var(--med-color-questoes-light);
   --border-color: transparent;
   --border-width: 0;
   --border-style: none;

@@ -1,10 +1,10 @@
-@import "../../../../../med-components/abstracts";
+@import "../../../../../templarios/abstracts";
 
 :host {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: $med-color-neutral-dark-prime;
+  background-color: var(--med-color-neutral-dark-prime);
 
   .zoom-header {
     position: fixed;
@@ -13,22 +13,22 @@
     top: 0;
 
     &__title {
-      color: $med-color-neutral-light-prime;
-      font-size: $med-font-size-xs;
-      line-height: $med-line-height-compressed;
-      font-weight: $med-font-weight-semibold;
+      color: var(--med-color-neutral-light-prime);
+      font-size: var(--med-font-size-xs);
+      line-height: var(--med-line-height-compressed);
+      font-weight: var(--med-font-weight-semibold);
     }
   }
 
   .zoom-content {
-    --background: #{$med-color-neutral-dark-prime};
+    --background: var(--med-color-neutral-dark-prime);
 
     height: 100%;
     overflow-y: hidden;
   }
 
   ion-slides {
-    --bullet-background-active: #{$med-color-brand-primary-medium};
+    --bullet-background-active: var(--med-color-brand-primary-medium);
 
     display: flex;
     justify-content: center;
@@ -108,7 +108,7 @@
 
   .zoom-button-container {
     position: fixed;
-    bottom: $med-spacing-stack-md;
+    bottom: var(--med-spacing-stack-md);
     right: 15px;
     height: 175px;
     width: 48px;
@@ -124,22 +124,22 @@
     align-items: center;
     justify-content: center;
     outline: none;
-    background-color: $med-color-neutral-light-40;
+    background-color: var(--med-color-neutral-light-40);
 
     ion-icon {
       font-size: 24px;
-      color: $med-color-neutral-dark-40;
+      color: var(--med-color-neutral-dark-40);
     }
 
     &:not(:last-child) {
-      margin-bottom: $med-spacing-stack-base;
+      margin-bottom: var(--med-spacing-stack-base);
     }
 
     &--close {
-      background-color: $med-color-neutral-dark-40;
+      background-color: var(--med-color-neutral-dark-40);
 
       ion-icon {
-        color: $med-color-neutral-light-prime;
+        color: var(--med-color-neutral-light-prime);
       }
     }
   }

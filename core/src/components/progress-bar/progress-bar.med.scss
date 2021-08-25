@@ -1,4 +1,4 @@
-@import "../../../med-components/abstracts";
+@import "../../../templarios/abstracts";
 @import "../../themes/ionic.globals.scss";
 
 // Progress bar
@@ -64,11 +64,11 @@
   background: var(--progress-background);
 
   &__percentage {
-    font-size: $med-font-size-nano;
-    font-weight: $med-font-weight-regular;
-    line-height: $med-line-height-compressed;
+    font-size: var(--med-font-size-nano);
+    font-weight: var(--med-font-weight-regular);
+    line-height: var(--med-line-height-compressed);
     color: var(--percentage-color);
-    margin-left: $med-spacing-inline-xxxs;
+    margin-left: var(--med-spacing-inline-xxxs);
     display: none;
   }
 
@@ -84,7 +84,7 @@
 }
 
 :host(.ion-color) {
-  --progress-background: #{medsoft-current-color(light)};
+  --progress-background: #{curr-color('color', '4')};
 }
 
 // //////////////////////////////
@@ -92,7 +92,7 @@
 // //////////////////////////////
 
 :host(.med-progress-bar--minimalist) {
-  --background: #{md-color(brand, 1)};
+  --background: #{color('brand', '1')};
   --height: 4px;
   .progress {
     border-radius: 0;
@@ -107,6 +107,6 @@
 // ////////////////////
 
 :host(.med-progress-bar--minimalist.ion-color) {
-  --background: #{md-current-color(1)};
-  --progress-background: #{md-current-color(3)};
+  --background: #{curr-color('color', '1')};
+  --progress-background: #{curr-color('color', '3')};
 }

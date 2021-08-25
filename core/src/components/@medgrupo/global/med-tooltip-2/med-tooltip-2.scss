@@ -1,33 +1,33 @@
 @import "../../../../themes/ionic.globals";
-@import "../../../../../med-components/abstracts";
+@import "../../../../../templarios/abstracts";
 
 :host {
-  --button-left-color: #{$med-color-neutral-light-prime};
-  --button-right-color: #{$med-color-brand-primary-medium};
+  --button-left-color: var(--color-neutral-light-prime);
+  --button-right-color: var(--color-brand-primary-medium);
 
   display: block;
-  padding: $med-spacing-inset-sm;
+  padding: var(--spacing-inset-sm);
 
   .header {
-    padding-top: $med-spacing-stack-xxxs;
-    padding-bottom: $med-spacing-stack-xxxs;
-    font-size: $med-font-size-xxs;
-    font-weight: $med-font-weight-bold;
+    padding-top: var(--spacing-stack-xxxs);
+    padding-bottom: var(--spacing-stack-xxxs);
+    font-size: var(--font-size-xxs);
+    font-weight: var(--font-weight-bold);
     line-height: line-height($med-font-size-xxxs);
-    color: $med-color-neutral-light-prime;
+    color: var(--color-neutral-light-prime);
     margin: 0;
   }
 
   .content {
-    font-size: $med-font-size-xxxs;
-    font-weight: $med-font-weight-regular;
+    font-size: var(--font-size-xxxs);
+    font-weight: var(--font-weight-regular);
     line-height: line-height($med-font-size-xxxs);
-    color: $med-color-neutral-light-prime;
+    color: var(--color-neutral-light-prime);
     margin: 0;
   }
 
   .button-container {
-    padding-top: $med-spacing-stack-base;
+    padding-top: var(--spacing-stack-base);
     display: flex;
     justify-content: space-between;
   }
@@ -41,16 +41,16 @@
   }
 
   .button--left {
-    font-size: $med-font-size-xxxs;
-    font-weight: $med-font-weight-regular;
+    font-size: var(--font-size-xxxs);
+    font-weight: var(--font-weight-regular);
     line-height: line-height($med-font-size-xxxs);
     color: var(--button-left-color);
     margin: 0;
   }
 
   .button--right {
-    font-size: $med-font-size-xxxs;
-    font-weight: $med-font-weight-regular;
+    font-size: var(--font-size-xxxs);
+    font-weight: var(--font-weight-regular);
     line-height: line-height($med-font-size-xxxs);
     color: var(--button-right-color);
     margin: 0;
@@ -58,15 +58,5 @@
 }
 
 :host(.simple) {
-  padding: $med-spacing-squish-nano;
-}
-
-:host-context(.light-mode):host {
-  .header {
-    color: $med-color-neutral-light-10;
-  }
-
-  .content {
-    color: $med-color-neutral-light-10;
-  }
+  padding: var(--med-spacing-squish-nano);
 }

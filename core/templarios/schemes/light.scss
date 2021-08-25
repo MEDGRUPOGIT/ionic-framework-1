@@ -2,7 +2,7 @@
 @import '../mixins';
 @import '../variables/color';
 
-[color-scheme="light"] {
+.scheme-light {
   /* neutral */
   --neutral-luminosity: 98%;
 

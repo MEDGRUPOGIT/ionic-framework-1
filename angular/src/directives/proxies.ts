@@ -50,8 +50,8 @@ export class IonBackdrop {
 }
 export declare interface IonBadge extends Components.IonBadge {
 }
-@ProxyCmp({ inputs: ["color", "dsName", "dsSize", "mode", "neutral"] })
-@Component({ selector: "ion-badge", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "dsName", "dsSize", "mode", "neutral"] })
+@ProxyCmp({ inputs: ["color", "dsColor", "dsName", "dsSize", "mode"] })
+@Component({ selector: "ion-badge", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "dsColor", "dsName", "dsSize", "mode"] })
 export class IonBadge {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -141,8 +141,8 @@ export class IonCardTitle {
 }
 export declare interface IonCheckbox extends Components.IonCheckbox {
 }
-@ProxyCmp({ inputs: ["checked", "color", "disabled", "indeterminate", "mode", "name", "neutral", "value"] })
-@Component({ selector: "ion-checkbox", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["checked", "color", "disabled", "indeterminate", "mode", "name", "neutral", "value"] })
+@ProxyCmp({ inputs: ["checked", "color", "disabled", "dsColor", "indeterminate", "mode", "name", "value"] })
+@Component({ selector: "ion-checkbox", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["checked", "color", "disabled", "dsColor", "indeterminate", "mode", "name", "value"] })
 export class IonCheckbox {
   ionChange!: EventEmitter<CustomEvent>;
   ionFocus!: EventEmitter<CustomEvent>;

@@ -1,14 +1,14 @@
-@import "../../../../../med-components/abstracts";
+@import "../../../../../templarios/abstracts";
 
 :host {
   display: block;
-  background: $med-color-neutral-light-prime;
-  box-shadow: $med-shadow-level-3;
-  border-radius: $med-border-radius-sm;
-  font-size: $med-font-size-xs;
-  font-weight: $med-font-weight-regular;
-  line-height: $med-line-height-compressed;
-  color: $med-color-neutral-dark-30;
+  background: var(--med-color-neutral-light-prime);
+  box-shadow: var(--med-shadow-level-3);
+  border-radius: var(--med-border-radius-sm);
+  font-size: var(--med-font-size-xs);
+  font-weight: var(--med-font-weight-regular);
+  line-height: var(--med-line-height-compressed);
+  color: var(--med-color-neutral-dark-30);
   height: auto;
   min-height: 192px;
   text-align: left;
@@ -23,7 +23,7 @@
   }
 
   .item {
-    padding: $med-spacing-squish-xs;
+    padding: var(--med-spacing-squish-xs);
     height: 64px;
     display: flex;
     align-items: center;
@@ -32,27 +32,27 @@
 
   .msg {
     position: relative;
-    left: $med-spacing-inset-xs;
-    top: $med-spacing-inset-sm;
+    left: var(--med-spacing-inset-xs);
+    top: var(--med-spacing-inset-sm);
   }
 }
 
 ion-icon {
-  margin-right: $med-spacing-inline-xxxs;
-  color: $med-color-neutral-dark-30;
+  margin-right: var(--med-spacing-inline-xxxs);
+  color: var(--med-color-neutral-dark-30);
   font-size: 24px;
   padding: 8px;
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: $med-color-neutral-light-30;
+  background: var(--med-color-neutral-light-30);
 }
 
 // hover
 @media (any-hover: hover) {
   :host {
     .item:hover {
-      background: $med-color-neutral-light-40;
+      background: var(--med-color-neutral-light-40);
     }
   }
 }

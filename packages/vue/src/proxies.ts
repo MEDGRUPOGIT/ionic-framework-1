@@ -20,7 +20,7 @@ export const IonBackdrop = /*@__PURE__*/ defineContainer<JSX.IonBackdrop>('ion-b
 
 
 export const IonBadge = /*@__PURE__*/ defineContainer<JSX.IonBadge>('ion-badge', [
-  'neutral',
+  'dsColor',
   'dsName',
   'dsSize',
   'color'
@@ -89,7 +89,7 @@ export const IonCardTitle = /*@__PURE__*/ defineContainer<JSX.IonCardTitle>('ion
 
 
 export const IonCheckbox = /*@__PURE__*/ defineContainer<JSX.IonCheckbox>('ion-checkbox', [
-  'neutral',
+  'dsColor',
   'color',
   'name',
   'checked',

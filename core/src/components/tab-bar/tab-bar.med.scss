@@ -2,11 +2,11 @@
 // custom
 //
 
-@import "../../../med-components/abstracts";
+@import "../../../templarios/abstracts";
 
 :host {
-  --background: #{$med-color-neutral-dark-prime};
-  --box-shadow: #{$med-shadow-level-4};
+  --background: var(--med-color-neutral-dark-prime);
+  --box-shadow: var(--med-shadow-level-4);
 
   height: auto;
   contain: initial;

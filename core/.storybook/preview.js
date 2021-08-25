@@ -22,19 +22,19 @@ import '../src/stories/assets/canvas.css';
 import '../src/stories/assets/fsemeric.css';
 
 // templarios
-import '../css/themes/default.css';
-import '../css/tokens/complementares.css';
-import '../css/tokens/espacamento.css';
-import '../css/tokens/tipografia.css';
+import '../css/default.css';
+import '../css/complementares.css';
+import '../css/espacamento.css';
+import '../css/tipografia.css';
 
-// schemes
-import '../css/schemes/dark.css';
-import '../css/schemes/light.css';
+// templarios schemes
+import '../css/dark.css';
+import '../css/light.css';
 
-// themes
-import '../css/themes/medsoft.css';
-import '../css/themes/gold.css';
-import '../css/themes/recursos.css';
+// templarios themes
+import '../css/medsoft.css';
+import '../css/gold.css';
+import '../css/recursos.css';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -42,27 +42,55 @@ export const parameters = {
   themes: {
     target: 'root',
     onChange: (themeName) => {
-      document.querySelector('iframe').contentWindow.document.querySelector('.snipet__value--class').textContent = `${themeName.class.join(' ')}`;
+      const snipet = document.querySelector('iframe').contentWindow.document.querySelector('.snipet__value--class');
+      if(snipet) {
+        document.querySelector('iframe').contentWindow.document.querySelector('.snipet__value--class').textContent = `${themeName.class.join(' ')}`;
+      }
+
     },
     list: [
       {
         name: 'Theme Medsoft',
-        class: ['theme-medsoft'],
+        class: ['theme-medsoft', 'scheme-dark'],
+        color: '#3aa8b9',
+        default: true
+      },
+      {
+        name: 'Theme Medsoft / Scheme Light',
+        class: ['theme-medsoft', 'scheme-light'],
         color: '#3aa8b9'
       },
+
       {
         name: 'Theme Gold',
-        class: ['theme-gold'],
+        class: ['theme-gold', 'scheme-dark'],
         color: '#b89d58'
       },
+      {
+        name: 'Theme Gold / Scheme Light',
+        class: ['theme-Gold', 'scheme-light'],
+        color: '#b89d58'
+      },
+
       {
         name: 'Theme Medsoft Gold',
-        class: ['theme-medsoft', 'theme-gold'],
+        class: ['theme-medsoft', 'theme-gold', 'scheme-dark'],
         color: '#b89d58'
       },
       {
+        name: 'Theme Medsoft Gold / Scheme Light',
+        class: ['theme-medsoft', 'theme-gold', 'scheme-light'],
+        color: '#b89d58'
+      },
+
+      {
         name: 'Theme Recursos',
-        class: ['theme-recursos'],
+        class: ['theme-recursos', 'scheme-dark'],
+        color: '#68a6ba'
+      },
+      {
+        name: 'Theme Recursos / Scheme Light',
+        class: ['theme-recursos', 'scheme-light'],
         color: '#68a6ba'
       },
     ],
