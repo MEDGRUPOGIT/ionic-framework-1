@@ -138,50 +138,50 @@
       }
     }
 
-    &--pode-riscar:not(:hover) {
-      .riscar {
-        display: none;
-      }
-    }
+    // &--pode-riscar:not(:hover) {
+    //   .riscar {
+    //     display: none;
+    //   }
+    // }
 
-    &--pode-riscar:hover, &--pode-riscar-mobile {
-      background-color: $med-color-neutral-light-40;
-      .riscar {
-        cursor: pointer;
-        flex-direction: var(--riscar-flex-direction);
-        margin-left: $med-spacing-inline-md;
-        display: flex;
-        align-items: center;
+    // &--pode-riscar:hover, &--pode-riscar-mobile {
+    //   background-color: $med-color-neutral-light-40;
+    //   .riscar {
+    //     cursor: pointer;
+    //     flex-direction: var(--riscar-flex-direction);
+    //     margin-left: $med-spacing-inline-md;
+    //     display: flex;
+    //     align-items: center;
 
-        ion-icon {
-          margin: var(--riscar-icon-margin);
-          color: $med-color-neutral-dark-10;
-          font-size: 32px;
-        }
+    //     ion-icon {
+    //       margin: var(--riscar-icon-margin);
+    //       color: $med-color-neutral-dark-10;
+    //       font-size: 32px;
+    //     }
 
-        &__label {
-          font-size: $med-font-size-xxs;
-          font-weight: $med-font-weight-regular;
-          color: $med-color-neutral-dark-10;
-          line-height: $med-line-height-compressed;
-        }
-      }
-    }
+    //     &__label {
+    //       font-size: $med-font-size-xxs;
+    //       font-weight: $med-font-weight-regular;
+    //       color: $med-color-neutral-dark-10;
+    //       line-height: $med-line-height-compressed;
+    //     }
+    //   }
+    // }
 
-    &--riscada {
-      .alternativa__option {
-        opacity: $med-opacity-level-half;
-      }
+    // &--riscada {
+    //   .alternativa__option {
+    //     opacity: $med-opacity-level-half;
+    //   }
 
-      .alternativa__text {
-        text-decoration: line-through;
-        opacity: $med-opacity-level-half;
-      }
-    }
+    //   .alternativa__text {
+    //     text-decoration: line-through;
+    //     opacity: $med-opacity-level-half;
+    //   }
+    // }
 
-    &--pressed {
-      background-color: $med-color-neutral-light-40;
-    }
+    // &--pressed {
+    //   background-color: $med-color-neutral-light-40;
+    // }
   }
 
   .ion-progress-bar {

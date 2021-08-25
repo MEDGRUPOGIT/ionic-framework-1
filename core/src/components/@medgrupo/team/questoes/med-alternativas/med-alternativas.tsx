@@ -208,8 +208,8 @@ export class MedAlternativas implements MedAlternativasInterface {
 
                   {this.podeRiscar && (alternativa.Pressionada || this.isDesktop) &&
                     <div class="riscar" onClick={() => this.riscar(alternativa)}>
-                      <ion-icon name="med-riscar"></ion-icon>
-                      <span class="riscar__label">{(alternativa.Riscada ? 'Retomar' : 'Riscar') + (this.isDesktop ? ' alternativa' : '')}</span>
+                      {/* <ion-icon name="med-riscar"></ion-icon>
+                      <span class="riscar__label">{(alternativa.Riscada ? 'Retomar' : 'Riscar') + (this.isDesktop ? ' alternativa' : '')}</span> */}
                     </div>
                   }
                 </li>
