@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
-import { medColors, medNeutrals } from '../../../med-colors';
+import { MedColor } from '../../../constants';
 import { medIcons } from '../../../med-icons';
 
 export default {
@@ -8,22 +8,22 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ color, neutral, dsName, iconLeft, iconRight, slot }) => {
+const Template = ({ dsColor, dsName, iconLeft, iconRight, slot }) => {
   return html`
     <ion-app class="storybook-only">
       <div class="storybook-only__container">
 
         <!-- component -->
-        <ion-chip .color=${color} .neutral=${neutral} ds-name=${dsName}>
+        <ion-chip .dsColor=${dsColor} ds-name=${dsName}>
           <ion-label>${slot}</ion-label>
         </ion-chip>
 
-        <ion-chip .color=${color} .neutral=${neutral} ds-name=${dsName}>
+        <ion-chip .dsColor=${dsColor} ds-name=${dsName}>
           <ion-icon class="med-icon" name=${iconLeft}></ion-icon>
           <ion-label>${slot}</ion-label>
         </ion-chip>
 
-        <ion-chip .color=${color} .neutral=${neutral} ds-name=${dsName}>
+        <ion-chip .dsColor=${dsColor} ds-name=${dsName}>
           <ion-icon class="med-icon" name=${iconLeft}></ion-icon>
           <ion-label>${slot}</ion-label>
           <ion-icon class="med-icon" name=${iconRight}></ion-icon>
@@ -43,21 +43,12 @@ Default.parameters = {
   },
 }
 Default.argTypes = {
-  color: {
-    options: medColors,
+  dsColor: {
+    options: MedColor,
     control: { type: 'inline-radio'},
     description: "Define a cor do componente.",
     table: {
       type:  { summary: 'Color' },
-      defaultValue: { summary: 'undefined' },
-    },
-  },
-  neutral: {
-    options: medNeutrals,
-    control: { type: 'inline-radio'},
-    description: "Define a cor neutra do componente.",
-    table: {
-      type:  { summary: 'Neutrals' },
       defaultValue: { summary: 'undefined' },
     },
   },

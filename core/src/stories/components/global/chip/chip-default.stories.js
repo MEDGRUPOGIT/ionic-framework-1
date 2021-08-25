@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
-import { medColors, medNeutrals } from '../../../med-colors';
+import { MedColor } from '../../../constants';
 import { medIcons } from '../../../med-icons';
 
 export default {
@@ -8,22 +8,22 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ color, neutral, iconLeft, iconRight, slot }) => {
+const Template = ({ dsColor, iconLeft, iconRight, slot }) => {
   return html`
     <ion-app class="storybook-only">
       <div class="storybook-only__container">
 
         <!-- component -->
-        <ion-chip .color=${color} .neutral=${neutral}>
+        <ion-chip .dsColor=${dsColor}>
           <ion-label>${slot}</ion-label>
         </ion-chip>
 
-        <ion-chip .color=${color} .neutral=${neutral}>
+        <ion-chip .dsColor=${dsColor}>
           <ion-icon class="med-icon" name=${iconLeft}></ion-icon>
           <ion-label>${slot}</ion-label>
         </ion-chip>
 
-        <ion-chip .color=${color} .neutral=${neutral}>
+        <ion-chip .dsColor=${dsColor}>
           <ion-icon class="med-icon" name=${iconLeft}></ion-icon>
           <ion-label>${slot}</ion-label>
           <ion-icon class="med-icon" name=${iconRight}></ion-icon>
@@ -43,8 +43,8 @@ Default.parameters = {
   },
 }
 Default.argTypes = {
-  color: {
-    options: medColors,
+  dsColor: {
+    options: MedColor,
     control: { type: 'inline-radio'},
     description: "Define a cor do componente.",
     table: {
@@ -52,33 +52,24 @@ Default.argTypes = {
       defaultValue: { summary: 'undefined' },
     },
   },
-  neutral: {
-    options: medNeutrals,
-    control: { type: 'inline-radio'},
-    description: "Define a cor neutra do componente.",
-    table: {
-      type:  { summary: 'Neutrals' },
-      defaultValue: { summary: 'undefined' },
-    },
-  },
   iconLeft: {
     options: medIcons,
     control: { type: 'select'},
-    defaultValue: 'med-arrow-left-circle',
+    defaultValue: 'med-setaesquerda',
     description: '**Atributo utilizado apenas no storybook. Não é um atributo do componente!.**',
     table: {
       type:  { summary: ['string'] },
-      defaultValue: { summary: 'med-arrow-left-circle' },
+      defaultValue: { summary: 'med-setaesquerda' },
     },
   },
   iconRight: {
     options: medIcons,
     control: { type: 'select'},
-    defaultValue: 'med-arrow-right-circle',
+    defaultValue: 'med-setadireita',
     description: '**Atributo utilizado apenas no storybook. Não é um atributo do componente!.**',
     table: {
       type:  { summary: ['string'] },
-      defaultValue: { summary: 'med-arrow-left-circle' },
+      defaultValue: { summary: 'med-setadireita' },
     },
   },
   slot: {

@@ -433,6 +433,10 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * Define a variação do componente.
          */
         "dsName"?: 'secondary';
@@ -440,10 +444,6 @@ export namespace Components {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
-        /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
         /**
           * Display an outline style button.
          */
@@ -4506,6 +4506,10 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * Define a variação do componente.
          */
         "dsName"?: 'secondary';
@@ -4513,10 +4517,6 @@ declare namespace LocalJSX {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
-        /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
         /**
           * Display an outline style button.
          */
