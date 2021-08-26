@@ -1441,7 +1441,10 @@ med-banner,event,btnLeftClick,void,true
 med-banner,event,btnRightClick,void,true
 
 med-cartao-resposta-item,shadow
-med-cartao-resposta-item,prop,color,string | undefined,undefined,false,false
+med-cartao-resposta-item,prop,anulada,boolean,false,false,true
+med-cartao-resposta-item,prop,ativa,boolean,false,false,true
+med-cartao-resposta-item,prop,dsColor,string | undefined,undefined,false,true
+med-cartao-resposta-item,prop,impressa,boolean,false,false,true
 
 med-cartao-resposta-lista,shadow
 
@@ -1553,6 +1556,7 @@ med-offline,shadow
 med-offline,event,medClick,void,true
 
 med-option,shadow
+med-option,prop,dsColor,string | undefined,undefined,false,true
 
 med-parent,shadow
 med-parent,prop,child,boolean,false,false,true

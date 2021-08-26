@@ -968,8 +968,8 @@ export class MedBanner {
 }
 export declare interface MedCartaoRespostaItem extends Components.MedCartaoRespostaItem {
 }
-@ProxyCmp({ inputs: ["color"] })
-@Component({ selector: "med-cartao-resposta-item", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color"] })
+@ProxyCmp({ inputs: ["anulada", "ativa", "dsColor", "impressa"] })
+@Component({ selector: "med-cartao-resposta-item", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["anulada", "ativa", "dsColor", "impressa"] })
 export class MedCartaoRespostaItem {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1203,7 +1203,8 @@ export class MedOffline {
 }
 export declare interface MedOption extends Components.MedOption {
 }
-@Component({ selector: "med-option", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+@ProxyCmp({ inputs: ["dsColor"] })
+@Component({ selector: "med-option", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor"] })
 export class MedOption {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

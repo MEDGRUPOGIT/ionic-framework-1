@@ -2856,7 +2856,22 @@ export namespace Components {
         "header": string;
     }
     interface MedCartaoRespostaItem {
-        "color"?: Color;
+        /**
+          * Define o estado do componente para anulado.
+         */
+        "anulada": boolean;
+        /**
+          * Define o estado do componente para ativo.
+         */
+        "ativa": boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define o estado do componente para impresso.
+         */
+        "impressa": boolean;
     }
     interface MedCartaoRespostaLista {
     }
@@ -3008,6 +3023,10 @@ export namespace Components {
     interface MedOffline {
     }
     interface MedOption {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
     }
     interface MedParent {
         /**
@@ -6943,7 +6962,22 @@ declare namespace LocalJSX {
         "onBtnRightClick"?: (event: CustomEvent<void>) => void;
     }
     interface MedCartaoRespostaItem {
-        "color"?: Color;
+        /**
+          * Define o estado do componente para anulado.
+         */
+        "anulada"?: boolean;
+        /**
+          * Define o estado do componente para ativo.
+         */
+        "ativa"?: boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define o estado do componente para impresso.
+         */
+        "impressa"?: boolean;
     }
     interface MedCartaoRespostaLista {
     }
@@ -7097,6 +7131,10 @@ declare namespace LocalJSX {
         "onMedClick"?: (event: CustomEvent<void>) => void;
     }
     interface MedOption {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
     }
     interface MedParent {
         /**

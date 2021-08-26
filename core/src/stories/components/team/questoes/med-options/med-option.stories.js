@@ -1,29 +1,32 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
+import { MedColor } from '../../../../constants';
 
 export default {
   title: 'Components/Team/Questões/Option',
   decorators: [withDesign],
 };
 
-const TemplateDefault = () => {
+const TemplateDefault = ({dsColor}) => {
   return html`
-    <ion-app>
-      <ion-content>
+      <ion-app>
+        <ion-content>
+          <div class="flex-center">
 
-        <ion-radio-group value="value">
+            <ion-radio-group value="value">
 
-          <!-- component -->
-          <med-option>
-            <ion-radio></ion-radio>
-            <label slot="label" value="A">A</label>
-          </med-option>
-          <!-- component -->
+              <!-- component -->
+              <med-option .dsColor=${dsColor}>
+                <ion-radio></ion-radio>
+                <label slot="label" value="A">A</label>
+              </med-option>
+              <!-- component -->
 
-        </ion-radio-group>
+            </ion-radio-group>
 
-      <ion-content>
-    </ion-app>
+          </div>
+        </ion-content>
+      </ion-app>
     `
 }
 
@@ -34,3 +37,15 @@ Option.parameters = {
     url: '',
   },
 }
+Option.argTypes = {
+  dsColor: {
+    options: MedColor,
+    control: { type: 'select'},
+    description: "Define a cor do componente.",
+    table: {
+      type:  { summary: 'MedColor' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+};
+
