@@ -1,5 +1,5 @@
 import { Component, h, Host, Prop } from "@stencil/core";
-import { MedFontSize } from "../../../../global/med-components/font-size.enum";
+import { MedFontSize } from "../../../../global/templarios/font-size.enum";
 import { RangeValue } from "../../../range/range-interface";
 
 @Component({

@@ -1,5 +1,4 @@
 @import "../../../templarios/abstracts";
-@import "../../themes/ionic.globals.scss";
 
 // Progress bar
 // ------------------------------------------------------------------------
@@ -13,12 +12,12 @@
    */
   // ionic css custom properties
   --background: transparent;
-  --progress-background: #{medsoft-color(questoes, light)};
+  --progress-background: #{color('brand', '4')};
   --buffer-background: transparent;
 
   // design system css custom properties
-  --progress-correct-background: #{medsoft-color(feedback-success, light)};
-  --percentage-color: #{medsoft-color(neutral-light, 10)};
+  --progress-correct-background: #{color('feedback', 'success')};
+  --percentage-color: #{color('neutral', '10')};
 
   --height: 8px;
 
@@ -37,7 +36,7 @@
 
 :host(.in-med-header) {
   .progress-container {
-    background: medsoft-color(neutral-light, 40);
+    background: color('neutral', '8');
   }
 
   .progress {
@@ -49,7 +48,7 @@
     }
 
     &--correct {
-      background: medsoft-color(questoes, light);
+      background: color('brand', '4');
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
@@ -83,8 +82,28 @@
   }
 }
 
-:host(.ion-color) {
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-color) {
   --progress-background: #{curr-color('color', '4')};
+}
+
+// ////////////////////
+// neutral
+// ////////////////////
+
+:host(.med-color-neutral) {
+  --progress-background: #{curr-color('neutral')};
+}
+
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-color-feedback) {
+  --progress-background: #{curr-color('feedback')};
 }
 
 // //////////////////////////////
@@ -93,10 +112,13 @@
 
 :host(.med-progress-bar--minimalist) {
   --background: #{color('brand', '1')};
+  --progress-correct-background: #{color('brand', '4')};
   --height: 4px;
+
   .progress {
     border-radius: 0;
   }
+
   .progress__percentage {
     display: none;
   }
@@ -106,7 +128,25 @@
 // color
 // ////////////////////
 
-:host(.med-progress-bar--minimalist.ion-color) {
+:host(.med-color.med-progress-bar--minimalist) {
   --background: #{curr-color('color', '1')};
-  --progress-background: #{curr-color('color', '3')};
+  --progress-correct-background: #{curr-color('color', '4')};
+}
+
+// ////////////////////
+// neutral
+// ////////////////////
+
+:host(.med-color-neutral.med-progress-bar--minimalist) {
+  --background: transparent;
+  --progress-correct-background: #{curr-color('neutral')};
+}
+
+// ////////////////////
+// feedback
+// ////////////////////
+
+:host(.med-color-feedback.med-progress-bar--minimalist) {
+  --background: transparent;
+  --progress-correct-background: #{curr-color('feedback')};
 }

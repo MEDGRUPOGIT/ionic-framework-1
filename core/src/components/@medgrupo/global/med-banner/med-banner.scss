@@ -1,8 +1,8 @@
 @import "../../../../../templarios/abstracts";
 
 :host {
-  --background: var(--surface-color, var(--med-color-neutral-dark-40));
-  --color: var(--text-color, var(--med-color-neutral-light-prime));
+  --background: #{color('neutral', '2')};
+  --color: #{color('neutral', '2', 'contrast')};
 }
 
 :host {

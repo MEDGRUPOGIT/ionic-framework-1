@@ -1,16 +1,3 @@
-export enum MedColorsV1 {
-  BRAND_PRIMARY = 'brand-primary',
-  AULA = 'aula',
-  MATERIAL = 'material',
-  QUESTOES = 'questoes',
-  REVALIDA = 'revalida',
-  PROVASCHECKLIST = 'provaschecklist',
-  FEEDBACK_WARNING = 'feedback-warning',
-  FEEDBACK_ERROR = 'feedback-error',
-  FEEDBACK_SUCCESS = 'feedback-success',
-  NEUTRAL_DARK = 'neutral-dark',
-  NEUTRAL_LIGHT = 'neutral-light'
-}
 export enum MedColors {
   NEUTRAL_1 = 'neutral-1',
   NEUTRAL_2 = 'neutral-2',

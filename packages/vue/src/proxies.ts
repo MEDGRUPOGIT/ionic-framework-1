@@ -451,13 +451,14 @@ export const IonNote = /*@__PURE__*/ defineContainer<JSX.IonNote>('ion-note', [
 
 
 export const IonProgressBar = /*@__PURE__*/ defineContainer<JSX.IonProgressBar>('ion-progress-bar', [
+  'dsColor',
+  'dsName',
   'percentage',
   'type',
   'reversed',
   'value',
   'buffer',
-  'color',
-  'dsName'
+  'color'
 ]);
 
 
@@ -816,7 +817,6 @@ export const IonVirtualScroll = /*@__PURE__*/ defineContainer<JSX.IonVirtualScro
 
 export const MedAccordionItem = /*@__PURE__*/ defineContainer<JSX.MedAccordionItem>('med-accordion-item', [
   'dsColor',
-  'dsName',
   'icon',
   'noBorder',
   'background',
@@ -832,8 +832,7 @@ export const MedAccordionList = /*@__PURE__*/ defineContainer<JSX.MedAccordionLi
 
 
 export const MedAgrupador = /*@__PURE__*/ defineContainer<JSX.MedAgrupador>('med-agrupador', [
-  'color',
-  'neutral',
+  'dsColor',
   'collapsed'
 ]);
 
@@ -861,8 +860,7 @@ export const MedAutocomplete = /*@__PURE__*/ defineContainer<JSX.MedAutocomplete
 
 
 export const MedAvatar = /*@__PURE__*/ defineContainer<JSX.MedAvatar>('med-avatar', [
-  'color',
-  'neutral',
+  'dsColor',
   'dsSize',
   'image',
   'letter'

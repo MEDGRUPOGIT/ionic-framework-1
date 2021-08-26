@@ -11,7 +11,7 @@ import { NavigationHookCallback } from "./components/route/route-interface";
 import { SelectCompareFn } from "./components/select/select-interface";
 import { MedAlternativaInterface } from "./components/@medgrupo/team/questoes/med-alternativas/med-alternativas-interface";
 import { MedChartRadiaItem } from "./components/@medgrupo/global/med-chart-radial/med-chart-radial-interface";
-import { MedFontSize } from "./global/med-components/font-size.enum";
+import { MedFontSize } from "./global/templarios/font-size.enum";
 import { headerResizeEventDetail } from "./components/@medgrupo/global/med-header/med-header-interface";
 import { MedImageZoomItemInterface } from "./components/@medgrupo/global/med-image-zoom/med-image-zoom-interface";
 import { RateStatus } from "./components/@medgrupo/global/med-rate-like/med-rate-like.enum";
@@ -1713,6 +1713,10 @@ export namespace Components {
          */
         "color"?: Color;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * Define a variação do componente.
          */
         "dsName"?: 'minimalist';
@@ -1720,6 +1724,9 @@ export namespace Components {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        /**
+          * Esconde ou mostra a porcentagem.
+         */
         "percentage": boolean;
         /**
           * If true, reverse the progress bar direction.
@@ -2761,10 +2768,6 @@ export namespace Components {
          */
         "dsColor"?: Color;
         /**
-          * Define a variação do componente.
-         */
-        "dsName"?: 'secondary';
-        /**
           * Define a posição do ícone de abertura do componente.
          */
         "icon"?: 'left' | 'right';
@@ -2795,11 +2798,7 @@ export namespace Components {
         /**
           * Define a cor do componente.
          */
-        "color"?: Color;
-        /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
+        "dsColor"?: MedColor;
         "toggle": (event?: Event | undefined) => Promise<void>;
     }
     interface MedAlternativas {
@@ -2823,9 +2822,9 @@ export namespace Components {
     }
     interface MedAvatar {
         /**
-          * Define a cor neutra do componente.
+          * Define a cor do componente.
          */
-        "color"?: Color;
+        "dsColor"?: MedColor;
         /**
           * Define a variação de tamanho do componente.
          */
@@ -2838,10 +2837,6 @@ export namespace Components {
           * Define a imagem do componente.
          */
         "letter"?: string;
-        /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
     }
     interface MedBanner {
         "btnLeft": string;
@@ -5707,6 +5702,10 @@ declare namespace LocalJSX {
          */
         "color"?: Color;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * Define a variação do componente.
          */
         "dsName"?: 'minimalist';
@@ -5714,6 +5713,9 @@ declare namespace LocalJSX {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        /**
+          * Esconde ou mostra a porcentagem.
+         */
         "percentage"?: boolean;
         /**
           * If true, reverse the progress bar direction.
@@ -6833,10 +6835,6 @@ declare namespace LocalJSX {
          */
         "dsColor"?: Color;
         /**
-          * Define a variação do componente.
-         */
-        "dsName"?: 'secondary';
-        /**
           * Define a posição do ícone de abertura do componente.
          */
         "icon"?: 'left' | 'right';
@@ -6868,11 +6866,7 @@ declare namespace LocalJSX {
         /**
           * Define a cor do componente.
          */
-        "color"?: Color;
-        /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
+        "dsColor"?: MedColor;
     }
     interface MedAlternativas {
         "alternativaSelecionada": string;
@@ -6897,9 +6891,9 @@ declare namespace LocalJSX {
     }
     interface MedAvatar {
         /**
-          * Define a cor neutra do componente.
+          * Define a cor do componente.
          */
-        "color"?: Color;
+        "dsColor"?: MedColor;
         /**
           * Define a variação de tamanho do componente.
          */
@@ -6912,10 +6906,6 @@ declare namespace LocalJSX {
           * Define a imagem do componente.
          */
         "letter"?: string;
-        /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
     }
     interface MedBanner {
         "btnLeft": string;

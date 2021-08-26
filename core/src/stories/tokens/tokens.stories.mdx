@@ -16,7 +16,7 @@ Os tokens estão presentes em:
 - **[Tokens de Espaçamento](http://desenv.ordomederi.com/med-components/?path=/story/tokens-espacamento--espacamento)**
 - **[Tokens Complementares](http://desenv.ordomederi.com/med-components/?path=/story/tokens-complementares--complementares)**
 
-Para utilizá-los basta referência-los como **CSS Properties** no código.
+Para utilizá-los basta referência-los como **CSS Custom Properties** no código.
 
 ## ⚠️ IMPORTANTE!!!
 
@@ -44,14 +44,14 @@ Nesse exemplo vamos utilizar os tokens presentes na seguinte **[seção](http://
   justify-content: space-between;
 
   padding: var(--med-spacing-squish-xs);
-  background: var(--med-color-neutral-dark-prime);
+  background: hsl(var(--med-color-neutral-1));
 
   &__heading {
     text-transform: uppercase;
 
     font-size: var(--med-font-size-xs);
     padding-top: var(--med-spacing-squish-xs);
-    color: var(--med-color-neutral-light-prime);
+    color: hsl(var(--med-color-neutral-10));
     letter-spacing: var(--med-line-height-compressed);
   }
 }

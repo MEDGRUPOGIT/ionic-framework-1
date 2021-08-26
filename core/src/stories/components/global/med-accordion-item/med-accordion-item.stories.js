@@ -11,19 +11,18 @@ const Template = ({dsColor, background, icon, noBorder}) => {
   return html`
     <style>
       h4, p {
-        text-align: left;
         margin: 0;
         color: hsl(var(--med-color-neutral-10));
       }
 
       .med-accordion__content {
         padding: var(--med-spacing-inset-sm);
-        padding-top: 0;
       }
     </style>
 
     <ion-app>
       <ion-content>
+        <div class="flex-center">
 
         <!-- component -->
         <med-accordion-list single-open="false">
@@ -38,6 +37,7 @@ const Template = ({dsColor, background, icon, noBorder}) => {
         </med-accordion-list>
         <!-- component -->
 
+        </div>
       </ion-content>
     </ion-app>
   `
@@ -53,7 +53,7 @@ Default.parameters = {
 Default.argTypes = {
   dsColor: {
     options: MedColor,
-    control: { type: 'inline-radio'},
+    control: { type: 'select'},
     description: "Define a cor do componente.",
     table: {
       type:  { summary: 'MedColor' },

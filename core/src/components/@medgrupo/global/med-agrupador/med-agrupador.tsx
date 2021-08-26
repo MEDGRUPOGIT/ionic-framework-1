@@ -1,6 +1,6 @@
 import { Component, Host, h, Prop, Method } from '@stencil/core';
-import { Color, Neutral } from '../../../../interface';
-import { createColorClasses } from '../../../../utils/theme';
+import { MedColor } from '../../../../interface';
+import { generateMedColor } from '../../../../utils/med-theme';
 
 @Component({
   tag: 'med-agrupador',
@@ -10,14 +10,9 @@ import { createColorClasses } from '../../../../utils/theme';
 export class MedAgrupador {
 
   /**
-   * Define a cor do componente.
-   */
-  @Prop() color?: Color;
-
-  /**
-   * Define a cor neutra do componente.
-   */
-  @Prop() neutral?: Neutral;
+    * Define a cor do componente.
+    */
+  @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
    * Define o estado do componente.
@@ -31,14 +26,15 @@ export class MedAgrupador {
    }
 
   render() {
-    const { color, neutral, collapsed } = this;
+    const { dsColor, collapsed } = this;
 
     return (
-      <Host from-stencil
-        class={createColorClasses(color, {
+      <Host
+        from-stencil
+        class={generateMedColor(dsColor, {
           'med-agrupador': true,
           'med-agrupador--collapsed': collapsed
-        }, neutral)}
+        })}
         onClick={(event: any) => {this.toggle(event)}}>
         <div class="med-agrupador__expandir">Expandir a lista</div>
         <div class="med-agrupador__ocultar">Ocultar a lista</div>
@@ -48,3 +44,4 @@ export class MedAgrupador {
   }
 
 }
+

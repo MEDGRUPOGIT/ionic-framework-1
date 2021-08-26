@@ -36,11 +36,11 @@
 // color
 // ////////////////////
 
-:host(.ion-color) {
+:host(.med-color) {
   --color: #{curr-color('color', '3')};
 }
 
-:host(.ion-color) .med-agrupador__icon {
+:host(.med-color) .med-agrupador__icon {
   --color: #{curr-color('color', '3')};
 }
 
@@ -48,13 +48,26 @@
 // neutral
 // ////////////////////
 
-:host(.med-neutral) {
-  --color: var(--med-neutral);
+:host(.med-color-neutral) {
+  --color: #{curr-color('neutral')};
 }
 
-:host(.med-neutral) .med-agrupador__icon {
-  --color: var(--med-neutral);
+:host(.med-color-neutral) .med-agrupador__icon {
+  --color: #{curr-color('neutral')};
 }
+
+// ////////////////////
+// feedback
+// ////////////////////
+
+:host(.med-color-feedback) {
+  --color: #{curr-color('feedback')};
+}
+
+:host(.med-color-feedback) .med-agrupador__icon {
+  --color: #{curr-color('feedback')};
+}
+
 
 // ////////////////////
 // state

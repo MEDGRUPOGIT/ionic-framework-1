@@ -81,7 +81,7 @@ export const Icon = TemplateIcon.bind({});
 Icon.argTypes = {
   dsColor: {
     options: MedColor,
-    control: { type: 'inline-radio'},
+    control: { type: 'select'},
     description: "Define a cor do componente.",
     table: {
       type:  { summary: 'MedColor' },

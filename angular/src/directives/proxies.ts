@@ -520,8 +520,8 @@ export class IonNote {
 }
 export declare interface IonProgressBar extends Components.IonProgressBar {
 }
-@ProxyCmp({ inputs: ["buffer", "color", "dsName", "mode", "percentage", "reversed", "type", "value"] })
-@Component({ selector: "ion-progress-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["buffer", "color", "dsName", "mode", "percentage", "reversed", "type", "value"] })
+@ProxyCmp({ inputs: ["buffer", "color", "dsColor", "dsName", "mode", "percentage", "reversed", "type", "value"] })
+@Component({ selector: "ion-progress-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["buffer", "color", "dsColor", "dsName", "mode", "percentage", "reversed", "type", "value"] })
 export class IonProgressBar {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -883,8 +883,8 @@ export class IonToolbar {
 }
 export declare interface MedAccordionItem extends Components.MedAccordionItem {
 }
-@ProxyCmp({ inputs: ["background", "dsColor", "dsName", "icon", "noBorder"] })
-@Component({ selector: "med-accordion-item", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["background", "dsColor", "dsName", "icon", "noBorder"] })
+@ProxyCmp({ inputs: ["background", "dsColor", "icon", "noBorder"] })
+@Component({ selector: "med-accordion-item", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["background", "dsColor", "icon", "noBorder"] })
 export class MedAccordionItem {
   toggle!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
@@ -907,8 +907,8 @@ export class MedAccordionList {
 }
 export declare interface MedAgrupador extends Components.MedAgrupador {
 }
-@ProxyCmp({ inputs: ["collapsed", "color", "neutral"], "methods": ["toggle"] })
-@Component({ selector: "med-agrupador", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "color", "neutral"] })
+@ProxyCmp({ inputs: ["collapsed", "dsColor"], "methods": ["toggle"] })
+@Component({ selector: "med-agrupador", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "dsColor"] })
 export class MedAgrupador {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -943,8 +943,8 @@ export class MedAutocomplete {
 }
 export declare interface MedAvatar extends Components.MedAvatar {
 }
-@ProxyCmp({ inputs: ["color", "dsSize", "image", "letter", "neutral"] })
-@Component({ selector: "med-avatar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "dsSize", "image", "letter", "neutral"] })
+@ProxyCmp({ inputs: ["dsColor", "dsSize", "image", "letter"] })
+@Component({ selector: "med-avatar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "dsSize", "image", "letter"] })
 export class MedAvatar {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
