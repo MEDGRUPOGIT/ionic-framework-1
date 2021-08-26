@@ -119,16 +119,24 @@
 // neutral
 // ////////////////////
 
-:host(.med-color-neutral) {
-  --background: #{curr-color('neutral')};
-}
-
 :host(.med-color-neutral) ::slotted([slot="left"]),
 :host(.med-color-neutral) ::slotted([slot="right"]),
 :host(.med-color-neutral) ::slotted([slot="title"]),
 :host(.med-color-neutral) ::slotted([slot="subtitle"]) {
   --color: #{curr-color('neutral')};
 }
+
+// ////////////////////
+// feedback
+// ////////////////////
+
+:host(.med-color-feedback) ::slotted([slot="left"]),
+:host(.med-color-feedback) ::slotted([slot="right"]),
+:host(.med-color-feedback) ::slotted([slot="title"]),
+:host(.med-color-feedback) ::slotted([slot="subtitle"]) {
+  --color: #{curr-color('feedback')};
+}
+
 
 // //////////////////////////////
 // secondary
@@ -149,14 +157,15 @@
 // color
 // ////////////////////
 
-:host(.med-navbar--secondary.med-color) {
+:host(.med-color.med-navbar--secondary) {
   --background: #{curr-color('color', '3')};
+  --color: #{curr-color('color', '3', 'contrast')};
 }
 
-:host(.med-navbar--secondary.med-color) ::slotted([slot="left"]),
-:host(.med-navbar--secondary.med-color) ::slotted([slot="right"]),
-:host(.med-navbar--secondary.med-color) ::slotted([slot="title"]),
-:host(.med-navbar--secondary.med-color) ::slotted([slot="subtitle"]) {
+:host(.med-color.med-navbar--secondary) ::slotted([slot="left"]),
+:host(.med-color.med-navbar--secondary) ::slotted([slot="right"]),
+:host(.med-color.med-navbar--secondary) ::slotted([slot="title"]),
+:host(.med-color.med-navbar--secondary) ::slotted([slot="subtitle"]) {
   --color: #{curr-color('color', '3', 'contrast')};
 }
 
@@ -164,15 +173,32 @@
 // neutral
 // ////////////////////
 
-:host(.med-navbar--secondary.med-color-neutral) {
+:host(.med-color-neutral.med-navbar--secondary) {
   --background: #{curr-color('neutral')};
+  --color: #{curr-color('neutral', null, 'contrast')};
 }
 
-:host(.med-navbar--secondary.med-neutral) ::slotted([slot="left"]),
-:host(.med-navbar--secondary.med-neutral) ::slotted([slot="right"]),
-:host(.med-navbar--secondary.med-neutral) ::slotted([slot="title"]),
-:host(.med-navbar--secondary.med-neutral) ::slotted([slot="subtitle"]) {
+:host(.med-color-neutral.med-navbar--secondary) ::slotted([slot="left"]),
+:host(.med-color-neutral.med-navbar--secondary) ::slotted([slot="right"]),
+:host(.med-color-neutral.med-navbar--secondary) ::slotted([slot="title"]),
+:host(.med-color-neutral.med-navbar--secondary) ::slotted([slot="subtitle"]) {
   --color: #{curr-color('neutral', null, 'contrast')};
+}
+
+// ////////////////////
+// feedback
+// ////////////////////
+
+:host(.med-color-feedback.med-navbar--secondary) {
+  --background: #{curr-color('feedback')};
+  --color: #{curr-color('feedback', null, 'contrast')};
+}
+
+:host(.med-color-feedback.med-navbar--secondary) ::slotted([slot="left"]),
+:host(.med-color-feedback.med-navbar--secondary) ::slotted([slot="right"]),
+:host(.med-color-feedback.med-navbar--secondary) ::slotted([slot="title"]),
+:host(.med-color-feedback.med-navbar--secondary) ::slotted([slot="subtitle"]) {
+  --color: #{curr-color('feedback', null, 'contrast')};
 }
 
 // //////////////////////////////
@@ -209,13 +235,28 @@
 // neutral
 // ////////////////////
 
-:host(.med-navbar--transparent.med-neutral) {
+:host(.med-navbar--transparent.med-color-neutral) {
   --background: transparent;
 }
 
-:host(.med-navbar--transparent.med-neutral) ::slotted([slot="left"]),
-:host(.med-navbar--transparent.med-neutral) ::slotted([slot="right"]),
-:host(.med-navbar--transparent.med-neutral) ::slotted([slot="title"]),
-:host(.med-navbar--transparent.med-neutral) ::slotted([slot="subtitle"]) {
+:host(.med-navbar--transparent.med-color-neutral) ::slotted([slot="left"]),
+:host(.med-navbar--transparent.med-color-neutral) ::slotted([slot="right"]),
+:host(.med-navbar--transparent.med-color-neutral) ::slotted([slot="title"]),
+:host(.med-navbar--transparent.med-color-neutral) ::slotted([slot="subtitle"]) {
   --color: #{curr-color('neutral')};
+}
+
+// ////////////////////
+// feedback
+// ////////////////////
+
+:host(.med-navbar--transparent.med-color-feedback) {
+  --background: transparent;
+}
+
+:host(.med-navbar--transparent.med-color-feedback) ::slotted([slot="left"]),
+:host(.med-navbar--transparent.med-color-feedback) ::slotted([slot="right"]),
+:host(.med-navbar--transparent.med-color-feedback) ::slotted([slot="title"]),
+:host(.med-navbar--transparent.med-color-feedback) ::slotted([slot="subtitle"]) {
+  --color: #{curr-color('feedback')};
 }

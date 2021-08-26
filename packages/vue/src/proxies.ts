@@ -886,7 +886,7 @@ export const MedCartaoRespostaLista = /*@__PURE__*/ defineContainer<JSX.MedCarta
 
 
 export const MedChartRadial = /*@__PURE__*/ defineContainer<JSX.MedChartRadial>('med-chart-radial', [
-  'color',
+  'dsColor',
   'dsName',
   'valores'
 ]);
@@ -1079,8 +1079,7 @@ export const MedTituloMateria = /*@__PURE__*/ defineContainer<JSX.MedTituloMater
 
 
 export const MedToolbar = /*@__PURE__*/ defineContainer<JSX.MedToolbar>('med-toolbar', [
-  'color',
-  'neutral'
+  'dsColor'
 ]);
 
 

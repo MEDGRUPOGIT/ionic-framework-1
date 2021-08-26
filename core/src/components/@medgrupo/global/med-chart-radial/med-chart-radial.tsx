@@ -1,7 +1,7 @@
 import { Component, Host, h, Prop } from '@stencil/core';
 import { MedChartRadiaItem } from './med-chart-radial-interface';
-import { createColorClasses } from '../../../../utils/theme';
-import { Color } from '../../../../interface';
+import { MedColor } from '../../../../interface';
+import { generateMedColor } from '../../../../utils/med-theme';
 
 @Component({
   tag: 'med-chart-radial',
@@ -11,15 +11,18 @@ import { Color } from '../../../../interface';
 export class MedChartRadial {
 
   /**
-
-   */
-   @Prop() color?: Color;
+    * Define a cor do componente.
+    */
+  @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
    * Define a variação do componente.
    */
   @Prop() dsName?: string;
 
+  /**
+   * Define os valores do gráfico
+   */
   @Prop({reflect: true}) valores: MedChartRadiaItem[] = [];
 
   private getTotal() {
@@ -38,14 +41,15 @@ export class MedChartRadial {
 
   render() {
     const totais = this.getTotal();
-    const { dsName, color } = this;
+    const { dsName, dsColor } = this;
 
     return (
-      <Host from-stencil
-        class={createColorClasses(color, {
+      <Host
+        from-stencil
+        class={generateMedColor(dsColor, {
           'med-chart-radial': true,
           [`med-chart-radial--${dsName}`]: dsName !== undefined,
-        }, null)}>
+        })}>
         <svg viewBox="0 0 36 36">
           <circle cx="18" cy="18" r="16" />
           {
@@ -63,7 +67,7 @@ export class MedChartRadial {
             })
           }
         </svg>
-        {dsName === "simple" && <div class="med-chart-radial__percent">10%</div>}
+        {dsName === "secondary" && <div class="med-chart-radial__percent">10%</div>}
       </Host>
     );
   }

@@ -78,6 +78,7 @@ ion-content {
   --color: #{color('neutral', '1', 'contrast')};
 }
 
+//classes
 @include generate-neutral-classes();
 @include generate-feedback-classes();
 @include generate-color-classes();
