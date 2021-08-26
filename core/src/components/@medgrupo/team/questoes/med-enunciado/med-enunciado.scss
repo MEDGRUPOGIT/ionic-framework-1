@@ -5,7 +5,7 @@
   --font-size: var(--med-font-size-xs);
   --font-weight: var(--med-font-weight-regular);
   --line-height: var(--med-line-height-double);
-  --color: var(--med-theme-color, var(--med-color-neutral-dark-20));
+  --color: #{color('neutral', '1', 'contrast')};
   --text-align: justify;
 
   --image-list-padding-top: var(--med-spacing-stack-base);
@@ -70,4 +70,3 @@
     }
   }
 }
-

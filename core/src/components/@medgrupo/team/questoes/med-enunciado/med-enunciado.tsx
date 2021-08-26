@@ -1,4 +1,5 @@
 import { Component, Host, h, Prop, Event, EventEmitter } from '@stencil/core';
+import { generateMedColor } from '../../../../../utils/med-theme';
 
 @Component({
   tag: 'med-enunciado',
@@ -32,7 +33,11 @@ export class MedEnunciado {
     }
 
     return (
-      <Host from-stencil>
+      <Host
+        from-stencil
+        class={generateMedColor(null, {
+          'med-enunciado': true,
+        })}>
         <slot></slot>
         { imagens }
       </Host>
