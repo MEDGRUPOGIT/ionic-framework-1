@@ -127,13 +127,13 @@
 
     &--correta {
       med-option {
-        --background: var(--color-feedback-success-medium);
+        --background: #{color('feedback', 'success')};
       }
     }
 
     &--incorreto {
       med-option {
-        --background: var(--color-feedback-error-medium);
+        --background:#{color('feedback', 'caution')};
       }
     }
 
@@ -143,8 +143,10 @@
       }
     }
 
-    &--pode-riscar:hover, &--pode-riscar-mobile {
-      background-color: var(--med-color-neutral-light-40);
+    &--pode-riscar:hover,
+    &--pode-riscar-mobile {
+      background-color: #{color('neutral', '9')};
+
       .riscar {
         cursor: pointer;
         flex-direction: var(--riscar-flex-direction);
@@ -154,14 +156,14 @@
 
         ion-icon {
           margin: var(--riscar-icon-margin);
-          color: var(--color-neutral-dark-10);
+          color: #{color('neutral', '2')};
           font-size: 32px;
         }
 
         &__label {
           font-size: var(--med-font-size-xxs);
           font-weight: var(--med-font-weight-regular);
-          color: var(--med-color-neutral-dark-10);
+          color: #{color('neutral', '1')};
           line-height: var(--med-line-height-compressed);
         }
       }
@@ -179,7 +181,7 @@
     }
 
     &--pressed {
-      background-color: var(--med-color-neutral-light-40);
+      background-color: #{color('neutral', '2')};;
     }
   }
 
@@ -194,7 +196,7 @@
     }
 
     &--100 {
-      --progress-background: var(--med-color-feedback-success-light);
+      --progress-background: #{color('feedback', 'success')};;
     }
   }
 }
@@ -204,6 +206,6 @@
 // ////////////////////
 
 :host(.alternativa--pode-riscar:hover),
-:host(.alternativa--pode-riscar-m9bile) {
+:host(.alternativa--pode-riscar-mobile) {
   background: #{curr-color('color', '2')};
 }

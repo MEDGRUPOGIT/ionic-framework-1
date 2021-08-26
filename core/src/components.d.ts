@@ -2876,11 +2876,17 @@ export namespace Components {
     interface MedCartaoRespostaLista {
     }
     interface MedChartRadial {
-        "color"?: Color;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
         /**
           * Define a variação do componente.
          */
         "dsName"?: string;
+        /**
+          * Define os valores do gráfico
+         */
         "valores": MedChartRadiaItem[];
     }
     interface MedChartRadialContent {
@@ -3142,8 +3148,10 @@ export namespace Components {
         "titulo"?: string;
     }
     interface MedToolbar {
-        "color"?: Color;
-        "neutral"?: Neutral;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
     }
     interface MedTooltip {
         /**
@@ -6982,11 +6990,17 @@ declare namespace LocalJSX {
     interface MedCartaoRespostaLista {
     }
     interface MedChartRadial {
-        "color"?: Color;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
         /**
           * Define a variação do componente.
          */
         "dsName"?: string;
+        /**
+          * Define os valores do gráfico
+         */
         "valores"?: MedChartRadiaItem[];
     }
     interface MedChartRadialContent {
@@ -7250,8 +7264,10 @@ declare namespace LocalJSX {
         "titulo"?: string;
     }
     interface MedToolbar {
-        "color"?: Color;
-        "neutral"?: Neutral;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
     }
     interface MedTooltip {
         /**

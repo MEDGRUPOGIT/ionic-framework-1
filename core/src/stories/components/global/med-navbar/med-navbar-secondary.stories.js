@@ -1,13 +1,13 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
-import { medColors, medNeutrals } from '../../../med-colors';
+import { MedColor } from '../../../constants';
 
 export default {
   title: 'Components/Core/Navbar',
   decorators: [withDesign],
 };
 
-const Template = ({ color, neutral, platform }) => {
+const Template = ({ dsColor, platform }) => {
   if (platform === 'Mobile') {
     document.querySelector('html').classList.remove('plt-desktop');
     document.querySelector('html').classList.remove('plt-electron');
@@ -20,9 +20,9 @@ const Template = ({ color, neutral, platform }) => {
     <ion-app>
 
       <!-- component -->
-      <med-navbar ds-name="secondary" .color=${color} .neutral=${neutral}>
+      <med-navbar ds-name="secondary" .dsColor=${dsColor}>
         <ion-button ds-name="icon-label" slot="left">
-          <ion-icon class="med-icon" name="med-chevron-left"></ion-icon>
+        <ion-icon class="med-icon" name="med-esquerda"></ion-icon>
           voltar
         </ion-button>
 
@@ -30,7 +30,7 @@ const Template = ({ color, neutral, platform }) => {
         <h2 slot="subtitle">subheader</h2>
 
         <ion-button ds-name="icon-only" slot="right">
-          <ion-icon class="med-icon" slot="icon-only" name="med-star-filled"></ion-icon>
+          <ion-icon class="med-icon" slot="icon-only" name="med-estrela"></ion-icon>
         </ion-button>
       </med-navbar>
       <!-- component -->
@@ -47,21 +47,12 @@ Secondary.parameters = {
   },
 }
 Secondary.argTypes = {
-  color: {
-    options: medColors,
-    control: { type: 'inline-radio'},
+  dsColor: {
+    options: MedColor,
+    control: { type: 'select'},
     description: "Define a cor do componente.",
     table: {
-      type:  { summary: 'Color' },
-      defaultValue: { summary: 'undefined' },
-    },
-  },
-  neutral: {
-    options: medNeutrals,
-    control: { type: 'inline-radio'},
-    description: "Define a cor neutra do componente.",
-    table: {
-      type:  { summary: 'Neutrals' },
+      type:  { summary: 'MedColor' },
       defaultValue: { summary: 'undefined' },
     },
   },

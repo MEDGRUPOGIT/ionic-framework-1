@@ -989,8 +989,8 @@ export class MedCartaoRespostaLista {
 }
 export declare interface MedChartRadial extends Components.MedChartRadial {
 }
-@ProxyCmp({ inputs: ["color", "dsName", "valores"] })
-@Component({ selector: "med-chart-radial", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "dsName", "valores"] })
+@ProxyCmp({ inputs: ["dsColor", "dsName", "valores"] })
+@Component({ selector: "med-chart-radial", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "dsName", "valores"] })
 export class MedChartRadial {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1304,8 +1304,8 @@ export class MedTituloMateria {
 }
 export declare interface MedToolbar extends Components.MedToolbar {
 }
-@ProxyCmp({ inputs: ["color", "neutral"] })
-@Component({ selector: "med-toolbar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "neutral"] })
+@ProxyCmp({ inputs: ["dsColor"] })
+@Component({ selector: "med-toolbar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor"] })
 export class MedToolbar {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
