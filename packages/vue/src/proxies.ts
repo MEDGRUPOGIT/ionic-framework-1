@@ -1032,7 +1032,9 @@ export const MedQuestion = /*@__PURE__*/ defineContainer<JSX.MedQuestion>('med-q
 ]);
 
 
-export const MedRateBar = /*@__PURE__*/ defineContainer<JSX.MedRateBar>('med-rate-bar');
+export const MedRateBar = /*@__PURE__*/ defineContainer<JSX.MedRateBar>('med-rate-bar', [
+  'dsColor'
+]);
 
 
 export const MedRateLike = /*@__PURE__*/ defineContainer<JSX.MedRateLike>('med-rate-like', [

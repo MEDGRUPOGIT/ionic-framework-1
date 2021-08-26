@@ -1,8 +1,8 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, State, Watch, h } from '@stencil/core';
 
 import { getIonMode } from '../../global/ionic-global';
-import { Color, TabBarChangedEventDetail, TabBarResizeEventDetail } from '../../interface';
-import { createColorClasses } from '../../utils/theme';
+import { Color, MedColor, TabBarChangedEventDetail, TabBarResizeEventDetail } from '../../interface';
+import { generateMedColor } from '../../utils/med-theme';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
@@ -26,6 +26,11 @@ export class TabBar implements ComponentInterface {
   @Element() el!: HTMLElement;
 
   @State() keyboardVisible = false;
+
+  /**
+    * Define a cor do componente.
+    */
+  @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
    * The color to use from your application's color palette.
@@ -108,15 +113,16 @@ export class TabBar implements ComponentInterface {
 }
 
   render() {
-    const { color, translucent, keyboardVisible } = this;
+    const { dsColor, translucent, keyboardVisible } = this;
     const mode = getIonMode(this);
     this.medResize.emit({height:1})
 
     return (
       <Host
+      from-stencil
         role="tablist"
         aria-hidden={keyboardVisible ? 'true' : null}
-        class={createColorClasses(color, {
+        class={generateMedColor(dsColor, {
           [mode]: true,
           'tab-bar-translucent': translucent,
           'tab-bar-hidden': keyboardVisible,

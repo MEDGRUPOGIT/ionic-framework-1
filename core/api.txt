@@ -1187,6 +1187,7 @@ ion-tab,method,setActive,setActive() => Promise<void>
 
 ion-tab-bar,shadow
 ion-tab-bar,prop,color,string | undefined,undefined,false,false
+ion-tab-bar,prop,dsColor,string | undefined,undefined,false,true
 ion-tab-bar,prop,mode,"ios" | "md",undefined,false,false
 ion-tab-bar,prop,selectedTab,string | undefined,undefined,false,false
 ion-tab-bar,prop,translucent,boolean,false,false,false
@@ -1198,6 +1199,7 @@ ion-tab-bar,css-prop,--color
 ion-tab-button,shadow
 ion-tab-button,prop,disabled,boolean,false,false,false
 ion-tab-button,prop,download,string | undefined,undefined,false,false
+ion-tab-button,prop,dsColor,string | undefined,undefined,false,true
 ion-tab-button,prop,href,string | undefined,undefined,false,false
 ion-tab-button,prop,layout,"icon-bottom" | "icon-end" | "icon-hide" | "icon-start" | "icon-top" | "label-hide" | undefined,undefined,false,false
 ion-tab-button,prop,mode,"ios" | "md",undefined,false,false
@@ -1568,6 +1570,7 @@ med-question,css-prop,--color
 med-question,css-prop,--lines
 
 med-rate-bar,shadow
+med-rate-bar,prop,dsColor,string | undefined,undefined,false,true
 
 med-rate-like,shadow
 med-rate-like,prop,status,RateStatus.DISLIKE | RateStatus.LIKE | undefined,undefined,false,true
