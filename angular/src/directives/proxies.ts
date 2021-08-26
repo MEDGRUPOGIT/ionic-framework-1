@@ -785,8 +785,8 @@ export class IonSplitPane {
 }
 export declare interface IonTabBar extends Components.IonTabBar {
 }
-@ProxyCmp({ inputs: ["color", "mode", "selectedTab", "translucent"] })
-@Component({ selector: "ion-tab-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "mode", "selectedTab", "translucent"] })
+@ProxyCmp({ inputs: ["color", "dsColor", "mode", "selectedTab", "translucent"] })
+@Component({ selector: "ion-tab-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "dsColor", "mode", "selectedTab", "translucent"] })
 export class IonTabBar {
   medResize!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
@@ -798,8 +798,8 @@ export class IonTabBar {
 }
 export declare interface IonTabButton extends Components.IonTabButton {
 }
-@ProxyCmp({ inputs: ["disabled", "download", "href", "layout", "mode", "rel", "selected", "tab", "target"] })
-@Component({ selector: "ion-tab-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled", "download", "href", "layout", "mode", "rel", "selected", "tab", "target"] })
+@ProxyCmp({ inputs: ["disabled", "download", "dsColor", "href", "layout", "mode", "rel", "selected", "tab", "target"] })
+@Component({ selector: "ion-tab-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled", "download", "dsColor", "href", "layout", "mode", "rel", "selected", "tab", "target"] })
 export class IonTabButton {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -968,8 +968,8 @@ export class MedBanner {
 }
 export declare interface MedCartaoRespostaItem extends Components.MedCartaoRespostaItem {
 }
-@ProxyCmp({ inputs: ["color"] })
-@Component({ selector: "med-cartao-resposta-item", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color"] })
+@ProxyCmp({ inputs: ["anulada", "ativa", "dsColor", "impressa"] })
+@Component({ selector: "med-cartao-resposta-item", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["anulada", "ativa", "dsColor", "impressa"] })
 export class MedCartaoRespostaItem {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1203,7 +1203,8 @@ export class MedOffline {
 }
 export declare interface MedOption extends Components.MedOption {
 }
-@Component({ selector: "med-option", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+@ProxyCmp({ inputs: ["dsColor"] })
+@Component({ selector: "med-option", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor"] })
 export class MedOption {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1235,7 +1236,8 @@ export class MedQuestion {
 }
 export declare interface MedRateBar extends Components.MedRateBar {
 }
-@Component({ selector: "med-rate-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+@ProxyCmp({ inputs: ["dsColor"] })
+@Component({ selector: "med-rate-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor"] })
 export class MedRateBar {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

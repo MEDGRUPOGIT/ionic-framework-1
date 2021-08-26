@@ -878,7 +878,10 @@ export const MedBanner = /*@__PURE__*/ defineContainer<JSX.MedBanner>('med-banne
 
 
 export const MedCartaoRespostaItem = /*@__PURE__*/ defineContainer<JSX.MedCartaoRespostaItem>('med-cartao-resposta-item', [
-  'color'
+  'dsColor',
+  'anulada',
+  'impressa',
+  'ativa'
 ]);
 
 
@@ -1014,7 +1017,9 @@ export const MedOffline = /*@__PURE__*/ defineContainer<JSX.MedOffline>('med-off
 ]);
 
 
-export const MedOption = /*@__PURE__*/ defineContainer<JSX.MedOption>('med-option');
+export const MedOption = /*@__PURE__*/ defineContainer<JSX.MedOption>('med-option', [
+  'dsColor'
+]);
 
 
 export const MedParent = /*@__PURE__*/ defineContainer<JSX.MedParent>('med-parent', [
@@ -1032,7 +1037,9 @@ export const MedQuestion = /*@__PURE__*/ defineContainer<JSX.MedQuestion>('med-q
 ]);
 
 
-export const MedRateBar = /*@__PURE__*/ defineContainer<JSX.MedRateBar>('med-rate-bar');
+export const MedRateBar = /*@__PURE__*/ defineContainer<JSX.MedRateBar>('med-rate-bar', [
+  'dsColor'
+]);
 
 
 export const MedRateLike = /*@__PURE__*/ defineContainer<JSX.MedRateLike>('med-rate-like', [

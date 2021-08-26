@@ -2393,6 +2393,10 @@ export namespace Components {
          */
         "color"?: Color;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
@@ -2414,6 +2418,10 @@ export namespace Components {
           * This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want).
          */
         "download": string | undefined;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
         /**
           * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered.
          */
@@ -2848,7 +2856,22 @@ export namespace Components {
         "header": string;
     }
     interface MedCartaoRespostaItem {
-        "color"?: Color;
+        /**
+          * Define o estado do componente para anulado.
+         */
+        "anulada": boolean;
+        /**
+          * Define o estado do componente para ativo.
+         */
+        "ativa": boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define o estado do componente para impresso.
+         */
+        "impressa": boolean;
     }
     interface MedCartaoRespostaLista {
     }
@@ -3006,6 +3029,10 @@ export namespace Components {
     interface MedOffline {
     }
     interface MedOption {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
     }
     interface MedParent {
         /**
@@ -3041,6 +3068,10 @@ export namespace Components {
         "toggle": (event?: Event | undefined) => Promise<void>;
     }
     interface MedRateBar {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
     }
     interface MedRateLike {
         "status"?: RateStatus;
@@ -6456,6 +6487,10 @@ declare namespace LocalJSX {
          */
         "color"?: Color;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
@@ -6479,6 +6514,10 @@ declare namespace LocalJSX {
           * This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want).
          */
         "download"?: string | undefined;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
         /**
           * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered.
          */
@@ -6931,7 +6970,22 @@ declare namespace LocalJSX {
         "onBtnRightClick"?: (event: CustomEvent<void>) => void;
     }
     interface MedCartaoRespostaItem {
-        "color"?: Color;
+        /**
+          * Define o estado do componente para anulado.
+         */
+        "anulada"?: boolean;
+        /**
+          * Define o estado do componente para ativo.
+         */
+        "ativa"?: boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define o estado do componente para impresso.
+         */
+        "impressa"?: boolean;
     }
     interface MedCartaoRespostaLista {
     }
@@ -7091,6 +7145,10 @@ declare namespace LocalJSX {
         "onMedClick"?: (event: CustomEvent<void>) => void;
     }
     interface MedOption {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
     }
     interface MedParent {
         /**
@@ -7125,6 +7183,10 @@ declare namespace LocalJSX {
         "texto"?: string;
     }
     interface MedRateBar {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
     }
     interface MedRateLike {
         "onMedChange"?: (event: CustomEvent<RateStatus>) => void;
