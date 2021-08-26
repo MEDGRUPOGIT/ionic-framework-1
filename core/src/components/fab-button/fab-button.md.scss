@@ -80,15 +80,15 @@
   }
 }
 
-// @import './fab-button.med.scss';
+@import './fab-button.med.scss';
 
 @import "../../../templarios/abstracts";
 
 :host {
   // ionic css custom properties
   --background: #{color('brand', 'gradient')};
-  --background-activated-opacity: var(--med-opacity-level-medium);
-  --background-hover-opacity: var(--med-opacity-level-light);
+  //--background-activated-opacity: var(--med-opacity-level-medium);
+  //--background-hover-opacity: var(--med-opacity-level-light);
 
   --padding-bottom: var(--med-spacing-inset-xs);
   --padding-end: var(--med-spacing-inset-xs);
@@ -102,7 +102,6 @@
   min-width: 40px;
   width: auto;
   max-width: 100%;
-  text-transform: uppercase;
 
   .button-native {
     contain: none;
@@ -114,7 +113,7 @@
 }
 
 :host(.fab-button-disabled) {
-  --background: #{medsoft-color(neutral-light, 20)};
+  --background:#{color('neutral', '8')};
   opacity: var(--med-opacity-level-semiopaque);
 
   ::slotted(ion-icon) {
@@ -123,7 +122,7 @@
 }
 
 ::slotted(ion-label) {
-  color: var(--med-neutral-contrast);
+  color: #{color('neutral')};
   padding-left: var(--med-spacing-inline-xxxs);
   padding-right: var(--med-spacing-inline-xxxs);
   font-size: var(--med-font-size-xxs);
@@ -162,20 +161,26 @@
   transform: scale(.4) rotateZ(-45deg);
 }
 
-//
+// ////////////////////
 // color
-//
+// ////////////////////
 
-:host(.ion-color) .button-native {
-  color: #{current-color(contrast-1)};
-  background: #{current-color(gradient)};
+:host(.med-color) {
+  --background: #{curr-color('color', '3')};
 }
 
-//
+// ////////////////////
 // neutral
-//
+// ////////////////////
 
-:host(.med-neutral) .button-native {
-  color: var(--med-neutral-contrast);
-  background: var(--med-neutral);
+:host(.med-color-neutral) {
+  --background: #{curr-color('neutral')};
+}
+
+// //////////
+// feedback
+// //////////
+
+:host(.med-color-feedback) {
+  --background: #{curr-color('feedback')};
 }
