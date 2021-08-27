@@ -82,3 +82,5 @@ ion-content {
 @include generate-neutral-classes();
 @include generate-feedback-classes();
 @include generate-color-classes();
+
+@import '../../src/components/@medgrupo/team/questoes/med-alternativas/med-alternativas.platform';

@@ -58,5 +58,3 @@ $med-colors: (
 }
 
 @include generate-color-classes();
-
-@import '../../src/components/@medgrupo/team/questoes/med-alternativas/med-alternativas.platform';
