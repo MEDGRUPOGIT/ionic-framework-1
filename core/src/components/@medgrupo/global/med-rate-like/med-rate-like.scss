@@ -2,10 +2,10 @@
 
 :host {
   --spacing: var(--med-spacing-inline-base);
-  --color: #{color('neutral', '1')};
+  --color: #{color('neutral', '1', 'contrast')};
   --color-like: #{color('feedback', 'success')};
   --color-dislike: #{color('feedback', 'warning')};
-  --color-hover: #{color('neutral', '7')};
+  --color-hover: #{color('neutral', '7', 'contrast')};
 
   display: block;
 
@@ -42,7 +42,7 @@
 @media (any-hover: hover) {
   :host {
     .rate:hover {
-      color: var(--color-hover);
+      stroke: var(--color-hover);
     }
   }
 }
