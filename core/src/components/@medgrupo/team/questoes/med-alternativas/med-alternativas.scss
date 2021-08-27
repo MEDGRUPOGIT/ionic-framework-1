@@ -104,7 +104,7 @@
     }
 
     &__text {
-      color: var(--color-neutral-dark-10);
+      color: #{color('neutral', '1', 'contrast')};
       font-size: var(--font-size);
       font-weight: var(--med-font-weight-regular);
       line-height: line-height();
