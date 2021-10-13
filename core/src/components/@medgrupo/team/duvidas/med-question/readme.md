@@ -10,8 +10,7 @@
 | Property    | Attribute   | Description                               | Type                  | Default     |
 | ----------- | ----------- | ----------------------------------------- | --------------------- | ----------- |
 | `collapsed` | `collapsed` | Define o estado do componente.            | `boolean`             | `false`     |
-| `color`     | `color`     | Define a cor do componente.               | `string \| undefined` | `undefined` |
-| `neutral`   | `neutral`   | Define a cor neutra do componente.        | `string \| undefined` | `undefined` |
+| `dsColor`   | `ds-color`  | Define a cor do componente.               | `string \| undefined` | `undefined` |
 | `texto`     | `texto`     | Define o conteúdo de texto do componente. | `string \| undefined` | `undefined` |
 
 
@@ -19,7 +18,7 @@
 
 ### `toggle(event?: Event | undefined) => Promise<void>`
 
-
+TODO
 
 #### Returns
 

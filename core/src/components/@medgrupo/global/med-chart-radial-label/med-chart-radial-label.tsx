@@ -1,6 +1,6 @@
 import { Component, Host, h, Prop } from '@stencil/core';
-import { Color, Neutral } from '../../../../interface';
-import { createColorClasses } from '../../../../utils/theme';
+import { MedColor } from '../../../../interface';
+import { generateMedColor } from '../../../../utils/med-theme';
 import { MedChartRadiaItem } from '../med-chart-radial/med-chart-radial-interface';
 
 @Component({
@@ -9,30 +9,36 @@ import { MedChartRadiaItem } from '../med-chart-radial/med-chart-radial-interfac
   scoped: true
 })
 export class MedChartRadialLabel {
+  /**
+   * TODO
+   */
   @Prop({reflect: true}) valores: MedChartRadiaItem[] = [];
 
   /**
-   * Define a cor do componente.
-   */
-  @Prop() color?: Color;
+    * Define a cor do componente.
+    */
+  @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
-   * Define a cor neutra do componente.
+   * Define a variação de tamanho do componente.
    */
-  @Prop() neutral?: Neutral;
+  @Prop() dsSize?: 'lg';
 
   render() {
-    const { color, neutral } = this;
+    const { dsColor, dsSize } = this;
+
+    //const arrayReverse = this.valores.slice(0).reverse();
 
     return (
       <Host from-stencil
-        class={createColorClasses(color, {
+        class={generateMedColor(dsColor, {
           'med-chart-radial-label': true,
-        }, neutral)}
+          [`med-chart-radial-label--${dsSize}`]: dsSize !== undefined,
+        })}
       >
         <ul class="med-chart-radial-label__list">
           {
-            this.valores.reverse().map((item: MedChartRadiaItem) => {
+            this.valores.map((item: MedChartRadiaItem) => {
               return <li class="med-chart-radial-label__item"><span class={{'med-chart-radial-label__quantia': true, [item.cor]: true}}>{item.quantia}</span> {item.label}</li>
             })
           }

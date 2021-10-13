@@ -6,21 +6,23 @@ export default {
   decorators: [withDesign],
 };
 
-const Default = ({ valores }) => {
+const Default = ({ valores, dsSize }) => {
 
   setTimeout(() => {
     document.querySelector('med-chart-radial-label').valores = valores.valores;
   }, 1000);
 
   return html`
-    <ion-app class="storybook-only">
-      <div class="storybook-only__container">
+    <ion-app>
+      <ion-content>
+        <div class="flex-center">
 
-        <!-- component -->
-        <med-chart-radial-label></med-chart-radial-label>
-        <!-- component -->
+          <!-- component -->
+          <med-chart-radial-label ds-size=${dsSize}></med-chart-radial-label>
+          <!-- component -->
 
-      </div>
+        </div>
+      </ion-content>
     </ion-app>
   `
 }
@@ -33,17 +35,26 @@ ChartRadialLabel.parameters = {
   },
 }
 ChartRadialLabel.argTypes = {
+  dsSize: {
+    options: [undefined, 'lg'],
+    control: { type: 'radio'},
+    description: "Define a variação de tamanho componente.",
+    table: {
+      type:  { summary: 'lg' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
   valores: {
     defaultValue: {
       valores: [
         {
-          cor: 'ion-color-fb-success',
+          cor: 'med-color-fb-success',
           label: 'Acertos',
           quantia: 32,
           ignoreBarra: false,
         },
         {
-          cor: 'ion-color-fb-caution',
+          cor: 'med-color-fb-caution',
           label: 'Erros',
           quantia: 16,
           ignoreBarra: false,

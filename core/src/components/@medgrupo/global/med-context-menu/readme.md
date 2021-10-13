@@ -16,7 +16,7 @@
 
 ### `toggle(event?: Event | undefined) => Promise<void>`
 
-
+TODO
 
 #### Returns
 

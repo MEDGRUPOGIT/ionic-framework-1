@@ -10,8 +10,7 @@
 | Property     | Attribute    | Description                                              | Type                             | Default     |
 | ------------ | ------------ | -------------------------------------------------------- | -------------------------------- | ----------- |
 | `background` | `background` | Define se o componente irá ter background quando aberto. | `boolean`                        | `false`     |
-| `color`      | `color`      | Define a cor do componente.                              | `string \| undefined`            | `undefined` |
-| `dsName`     | `ds-name`    | Define a variação do componente.                         | `"secondary" \| undefined`       | `undefined` |
+| `dsColor`    | `ds-color`   | Define a cor do componente.                              | `string \| undefined`            | `undefined` |
 | `icon`       | `icon`       | Define a posição do ícone de abertura do componente.     | `"left" \| "right" \| undefined` | `undefined` |
 | `noBorder`   | `no-border`  | Define a variação da borda do componente.                | `boolean`                        | `false`     |
 
@@ -20,7 +19,7 @@
 
 | Event    | Description | Type               |
 | -------- | ----------- | ------------------ |
-| `toggle` |             | `CustomEvent<any>` |
+| `toggle` | TODO        | `CustomEvent<any>` |
 
 
 ## Slots
@@ -31,6 +30,7 @@
 | `"button"`   | Se houver botões no componente eles devem ser inseridos nesse slot. |
 | `"content"`  | Define o conteúdo do componente.                                    |
 | `"header"`   | Define o conteúdo do header do componente.                          |
+| `"progress"` | Slot destinado a progress-bar.                                      |
 
 
 ## CSS Custom Properties
