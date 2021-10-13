@@ -1,38 +1,35 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
+import { MedColor } from '../../../../constants';
 
 export default {
   title: 'Components/Team/Questões/Alternativas',
   decorators: [withDesign],
 };
 
-const TemplateDefault = ({ alternativas, platform }) => {
-  if (platform === 'Mobile') {
-    document.querySelector('html').classList.remove('plt-electron');
-    document.querySelector('html').classList.remove('plt-desktop');
-  } else if (platform === 'Desktop') {
-    document.querySelector('html').classList.add('plt-electron');
-    document.querySelector('html').classList.add('plt-desktop');
-  }
-
+const TemplateDefault = ({ alternativas, dsColor}) => {
   const id = Math.random().toString(36).substr(2, 9);
-
+  const dsSkinConfig = alternativas.dsSkinConfig
   setTimeout(() => {
+
     const alternativasEl = document.getElementById(id);
+    //alternativasEl.dsSkinConfig = dsSkinConfig;
 
     for (const key in alternativas) {
       alternativasEl[key] = alternativas[key];
     }
-  }, 3000);
+  }, 5000);
 
   return html`
-    <ion-app class="storybook-only">
+    <ion-app>
       <ion-content>
+        <div class="flex-center">
 
-        <!-- component -->
-        <med-alternativas id=${id}></med-alternativas>
-        <!-- component -->
+          <!-- component -->
+          <med-alternativas id=${id} .dsColor=${dsColor} .dsSkinConfig=${dsSkinConfig}></med-alternativas>
+          <!-- component -->
 
+        <div>
       </ion-content>
     </ion-app>
     `
@@ -54,9 +51,10 @@ Alternativas.argTypes = {
       alternativas: [
         {
           Alternativa: 'A',
-          Enunciado: 'Enunciado A Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/>Dolores quae repellendus quidem nam. Enunciado A Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/>Dolores quae repellendus quidem nam.',
-          Imagem: null,
-          Porcentagem: 1
+          Enunciado: 'Enunciado B Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/>Dolores quae repellendus quidem nam.',
+          Imagem: 'https://via.placeholder.com/500',
+          Porcentagem: 0.55,
+          Riscada: true,
         },
         {
           Alternativa: 'B',
@@ -67,7 +65,7 @@ Alternativas.argTypes = {
         {
           Alternativa: 'C',
           Enunciado: 'Enunciado C Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/>Dolores quae repellendus quidem nam.',
-          Imagem: null,
+          Imagem: 'https://via.placeholder.com/500',
           Porcentagem: 0.3
         },
         {
@@ -78,13 +76,16 @@ Alternativas.argTypes = {
         },
         {
           Alternativa: 'E',
-          Enunciado: 'Enunciado D Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/>Dolores quae repellendus quidem nam.',
-          Imagem: null,
+          Enunciado: 'Enunciado E Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/>Dolores quae repellendus quidem nam.',
+          Imagem: 'https://via.placeholder.com/500',
           Porcentagem: 0
         },
       ],
-      respostaCorreta: 'A',
-      mostraResposta: true
+      alternativaSelecionada: null,
+      respostaCorreta: 'C',
+      mostraResposta: true,
+      permiteRiscar: true,
+      dsSkinConfig: { alternativas: 'A' }
     },
     control: { type: 'array' },
     description: 'Define a listagem de alternativas.',
@@ -93,14 +94,13 @@ Alternativas.argTypes = {
       defaultValue: { summary: 'undefined' },
     },
   },
-  platform: {
-    defaultValue: 'Desktop',
-    options: ['Desktop', 'Mobile'],
-    control: { type: 'radio' },
-    description: '**Atributo utilizado apenas no storybook para visualização.**',
+  dsColor: {
+    options: MedColor,
+    control: { type: 'select'},
+    description: "Define a cor do componente.",
     table: {
-      type:  { summary: ['desktop | mobile'] },
-      defaultValue: { summary: 'desktop' },
+      type:  { summary: 'MedColor' },
+      defaultValue: { summary: 'undefined' },
     },
   },
 };

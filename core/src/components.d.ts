@@ -5,16 +5,18 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { ActionSheetButton, AlertButton, AlertInput, AnimationBuilder, AutocompleteTypes, CheckboxChangeEventDetail, Color, ComponentProps, ComponentRef, DatetimeChangeEventDetail, DatetimeOptions, DomRenderFn, FooterHeightFn, FrameworkDelegate, HeaderFn, HeaderHeightFn, InputChangeEventDetail, ItemHeightFn, ItemRenderFn, ItemReorderEventDetail, MenuChangeEventDetail, NavComponent, NavComponentWithProps, NavOptions, Neutral, OverlayEventDetail, PickerButton, PickerColumn, RadioGroupChangeEventDetail, RangeChangeEventDetail, RangeValue, RefresherEventDetail, RouteID, RouterDirection, RouterEventDetail, RouterOutletOptions, RouteWrite, ScrollBaseDetail, ScrollDetail, SearchbarChangeEventDetail, SegmentButtonLayout, SegmentChangeEventDetail, SelectChangeEventDetail, SelectInterface, SelectPopoverOption, Side, SpinnerTypes, StyleEventDetail, SwipeGestureHandler, TabBarChangedEventDetail, TabBarResizeEventDetail, TabButtonClickEventDetail, TabButtonLayout, TextareaChangeEventDetail, TextFieldTypes, ToastButton, ToggleChangeEventDetail, TransitionDoneFn, TransitionInstruction, ViewController } from "./interface";
+import { ActionSheetButton, AlertButton, AlertInput, AnimationBuilder, AutocompleteTypes, CheckboxChangeEventDetail, Color, ComponentProps, ComponentRef, DatetimeChangeEventDetail, DatetimeOptions, DomRenderFn, FooterHeightFn, FrameworkDelegate, HeaderFn, HeaderHeightFn, InputChangeEventDetail, ItemHeightFn, ItemRenderFn, ItemReorderEventDetail, MedColor, MenuChangeEventDetail, NavComponent, NavComponentWithProps, NavOptions, Neutral, OverlayEventDetail, PickerButton, PickerColumn, RadioGroupChangeEventDetail, RangeChangeEventDetail, RangeValue, RefresherEventDetail, RouteID, RouterDirection, RouterEventDetail, RouterOutletOptions, RouteWrite, ScrollBaseDetail, ScrollDetail, SearchbarChangeEventDetail, SegmentButtonLayout, SegmentChangeEventDetail, SelectChangeEventDetail, SelectInterface, SelectPopoverOption, Side, SpinnerTypes, StyleEventDetail, SwipeGestureHandler, TabBarChangedEventDetail, TabBarResizeEventDetail, TabButtonClickEventDetail, TabButtonLayout, TextareaChangeEventDetail, TextFieldTypes, ToastButton, ToggleChangeEventDetail, TransitionDoneFn, TransitionInstruction, ViewController } from "./interface";
 import { IonicSafeString } from "./utils/sanitization";
 import { NavigationHookCallback } from "./components/route/route-interface";
 import { SelectCompareFn } from "./components/select/select-interface";
 import { MedAlternativaInterface } from "./components/@medgrupo/team/questoes/med-alternativas/med-alternativas-interface";
 import { MedChartRadiaItem } from "./components/@medgrupo/global/med-chart-radial/med-chart-radial-interface";
-import { MedFontSize } from "./global/med-components/font-size.enum";
+import { MedConfigInterface } from "./components/@medgrupo/global/med-config/med-config-interface";
+import { MedFontSize } from "./global/templarios/font-size.enum";
 import { headerResizeEventDetail } from "./components/@medgrupo/global/med-header/med-header-interface";
 import { MedImageZoomItemInterface } from "./components/@medgrupo/global/med-image-zoom/med-image-zoom-interface";
 import { RateStatus } from "./components/@medgrupo/global/med-rate-like/med-rate-like.enum";
+import { MedTema } from "./components/@medgrupo/global/med-themes/med-themes-interface";
 import { PlusMinusStatus } from "./components/@medgrupo/team/monta-provas/monta-provas-plusminus/monta-provas-plusminus.enum";
 export namespace Components {
     interface IonActionSheet {
@@ -173,6 +175,18 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação solida de background do componente.
+         */
+        "dsName"?: 'secondary' | 'tertiary';
+        /**
+          * Define a variação de tamanho componente.
+         */
+        "dsSize"?: 'xxxs' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
+        /**
           * The icon name to use for the back button.
          */
         "icon"?: string | null;
@@ -184,6 +198,10 @@ export namespace Components {
           * When using a router, it specifies the transition animation when navigating to another page.
          */
         "routerAnimation": AnimationBuilder | undefined;
+        /**
+          * Define a cor do componente.
+         */
+        "solid": boolean;
         /**
           * The text to display in the back button.
          */
@@ -213,6 +231,10 @@ export namespace Components {
          */
         "color"?: Color;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * Define a variação do componente.
          */
         "dsName"?: 'secondary';
@@ -224,10 +246,6 @@ export namespace Components {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
-        /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
     }
     interface IonButton {
         /**
@@ -246,7 +264,17 @@ export namespace Components {
           * This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want).
          */
         "download": string | undefined;
-        "dsName"?: 'primary' | 'secondary' | 'tertiary' | 'icon-only' | 'icon-label';
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação solida de background do componente.
+         */
+        "dsName"?: 'secondary' | 'tertiary';
+        /**
+          * Define a variação de tamanho componente.
+         */
         "dsSize"?: 'xxxs' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
         /**
           * Set to `"block"` for a full-width button or to `"full"` for a full-width button without left and right borders.
@@ -403,6 +431,10 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * If `true`, the checkbox will visually appear as indeterminate.
          */
         "indeterminate": boolean;
@@ -414,7 +446,6 @@ export namespace Components {
           * The name of the control, which is submitted with the form data.
          */
         "name": string;
-        "neutral"?: Neutral;
         /**
           * The value of the checkbox does not mean if it's checked or not, use the `checked` property for that.  The value of a checkbox is analogous to the value of an `<input type="checkbox">`, it's only used when the checkbox participates in a native `<form>`.
          */
@@ -430,6 +461,10 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * Define a variação do componente.
          */
         "dsName"?: 'secondary';
@@ -437,10 +472,6 @@ export namespace Components {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
-        /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
         /**
           * Display an outline style button.
          */
@@ -739,7 +770,17 @@ export namespace Components {
           * This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want).
          */
         "download": string | undefined;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * TODO
+         */
         "dsName"?: 'label' | 'icon-label';
+        /**
+          * TODO
+         */
         "dsSize"?: 'md' | 'lg';
         /**
           * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered.
@@ -749,6 +790,9 @@ export namespace Components {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        /**
+          * TODO
+         */
         "neutral"?: Neutral;
         /**
           * Specifies the relationship of the target object to the link object. The value is a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types).
@@ -788,6 +832,9 @@ export namespace Components {
           * If `true`, the fab list will show all fab buttons in the list.
          */
         "activated": boolean;
+        /**
+          * TODO
+         */
         "dsSize"?: 'md' | 'lg';
         /**
           * The side the fab list will show on relative to the main fab button.
@@ -1143,6 +1190,9 @@ export namespace Components {
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
         "color"?: Color;
+        /**
+          * TODO
+         */
         "dsName"?: 'stacked' | 'helper' | undefined;
         /**
           * The mode determines which platform styles to use.
@@ -1657,6 +1707,9 @@ export namespace Components {
           * @param role The role of the element that is dismissing the popover. For example, 'cancel' or 'backdrop'.
          */
         "dismiss": (data?: any, role?: string | undefined) => Promise<boolean>;
+        /**
+          * TODO
+         */
         "dsName": 'tooltip';
         /**
           * Animation to use when the popover is presented.
@@ -1710,13 +1763,20 @@ export namespace Components {
          */
         "color"?: Color;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * Define a variação do componente.
          */
-        "dsName"?: 'minimalist';
+        "dsName"?: 'minimalist' | 'skin';
         /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        /**
+          * Esconde ou mostra a porcentagem.
+         */
         "percentage": boolean;
         /**
           * If true, reverse the progress bar direction.
@@ -1740,6 +1800,14 @@ export namespace Components {
           * If `true`, the user cannot interact with the radio.
          */
         "disabled": boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'secondary';
         /**
           * The mode determines which platform styles to use.
          */
@@ -2044,6 +2112,10 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * A hint to the browser for which enter key to display. Possible values: `"enter"`, `"done"`, `"go"`, `"next"`, `"previous"`, `"search"`, and `"send"`.
          */
         "enterkeyhint"?: 'enter' | 'done' | 'go' | 'next' | 'previous' | 'search' | 'send';
@@ -2059,7 +2131,6 @@ export namespace Components {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
-        "neutral"?: Neutral;
         /**
           * Set the input's placeholder. `placeholder` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Ionic>` would become `&lt;Ionic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
          */
@@ -2103,6 +2174,14 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'default';
+        /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
@@ -2124,6 +2203,14 @@ export namespace Components {
           * If `true`, the user cannot interact with the segment button.
          */
         "disabled": boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'default';
         /**
           * Set the layout of the text and icon in the segment.
          */
@@ -2379,6 +2466,10 @@ export namespace Components {
          */
         "color"?: Color;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
@@ -2400,6 +2491,10 @@ export namespace Components {
           * This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want).
          */
         "download": string | undefined;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
         /**
           * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered.
          */
@@ -2659,6 +2754,10 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
@@ -2756,11 +2855,7 @@ export namespace Components {
         /**
           * Define a cor do componente.
          */
-        "color"?: Color;
-        /**
-          * Define a variação do componente.
-         */
-        "dsName"?: 'secondary';
+        "dsColor"?: Color;
         /**
           * Define a posição do ícone de abertura do componente.
          */
@@ -2792,37 +2887,181 @@ export namespace Components {
         /**
           * Define a cor do componente.
          */
-        "color"?: Color;
+        "dsColor"?: MedColor;
         /**
-          * Define a cor neutra do componente.
+          * TODO
          */
-        "neutral"?: Neutral;
         "toggle": (event?: Event | undefined) => Promise<void>;
     }
     interface MedAlternativas {
+        /**
+          * TODO
+         */
         "alternativaSelecionada": string;
+        /**
+          * TODO
+         */
         "alternativas": MedAlternativaInterface | any;
         /**
-          * Define a cor neutra do componente.
+          * TODO
          */
-        "color"?: Color;
-        "isDesktop": boolean;
+        "dsColor"?: Color;
+        /**
+          * TODO
+         */
+        "dsSkinConfig": any;
+        /**
+          * TODO
+         */
         "keyAlternativa": string;
+        /**
+          * TODO
+         */
         "keyEnunciado": string;
+        /**
+          * TODO
+         */
         "keyImagem": string;
+        /**
+          * TODO
+         */
         "keyPorcentagem": string;
+        /**
+          * TODO
+         */
+        "keyRiscada": string;
+        /**
+          * TODO
+         */
         "mostraResposta": boolean;
-        "podeRiscar": boolean;
+        /**
+          * TODO
+         */
+        "permiteRiscar": boolean;
+        /**
+          * TODO
+         */
+        "respostaCorreta": string;
+    }
+    interface MedAlternativasA {
+        /**
+          * TODO
+         */
+        "alternativaSelecionada": string;
+        /**
+          * TODO
+         */
+        "alternativas": MedAlternativaInterface | any;
+        /**
+          * TODO
+         */
+        "dsColor"?: Color;
+        /**
+          * TODO
+         */
+        "dsSkin"?: any;
+        /**
+          * TODO
+         */
+        "dsSkinConfig"?: any;
+        /**
+          * TODO
+         */
+        "keyAlternativa": string;
+        /**
+          * TODO
+         */
+        "keyEnunciado": string;
+        /**
+          * TODO
+         */
+        "keyImagem": string;
+        /**
+          * TODO
+         */
+        "keyPorcentagem": string;
+        /**
+          * TODO
+         */
+        "keyRiscada": string;
+        /**
+          * TODO
+         */
+        "mostraResposta": boolean;
+        /**
+          * TODO
+         */
+        "permiteRiscar": boolean;
+        /**
+          * TODO
+         */
+        "respostaCorreta": string;
+    }
+    interface MedAlternativasB {
+        /**
+          * TODO
+         */
+        "alternativaSelecionada": string;
+        /**
+          * TODO
+         */
+        "alternativas": MedAlternativaInterface | any;
+        /**
+          * TODO
+         */
+        "dsColor"?: Color;
+        /**
+          * TODO
+         */
+        "dsSkin"?: any;
+        /**
+          * TODO
+         */
+        "dsSkinConfig"?: any;
+        /**
+          * TODO
+         */
+        "keyAlternativa": string;
+        /**
+          * TODO
+         */
+        "keyEnunciado": string;
+        /**
+          * TODO
+         */
+        "keyImagem": string;
+        /**
+          * TODO
+         */
+        "keyPorcentagem": string;
+        /**
+          * TODO
+         */
+        "keyRiscada": string;
+        /**
+          * TODO
+         */
+        "mostraResposta": boolean;
+        /**
+          * TODO
+         */
+        "permiteRiscar": boolean;
+        /**
+          * TODO
+         */
         "respostaCorreta": string;
     }
     interface MedAutocomplete {
+        /**
+          * TODO
+         */
         "list": boolean;
     }
     interface MedAvatar {
         /**
-          * Define a cor neutra do componente.
+          * Define a cor do componente.
          */
-        "color"?: Color;
+        "dsColor"?: MedColor;
         /**
           * Define a variação de tamanho do componente.
          */
@@ -2835,83 +3074,205 @@ export namespace Components {
           * Define a imagem do componente.
          */
         "letter"?: string;
-        /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
     }
     interface MedBanner {
+        /**
+          * TODO
+         */
         "btnLeft": string;
+        /**
+          * TODO
+         */
         "btnRight": string;
+        /**
+          * TODO
+         */
         "header": string;
     }
+    interface MedCaption {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação de tamanho do componente.
+         */
+        "dsSize"?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    }
     interface MedCartaoRespostaItem {
-        "color"?: Color;
+        /**
+          * Define o estado do componente para anulado.
+         */
+        "anulada": boolean;
+        /**
+          * Define o estado do componente para ativo.
+         */
+        "ativa": boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define o estado do componente para impresso.
+         */
+        "impressa": boolean;
     }
     interface MedCartaoRespostaLista {
     }
     interface MedChartRadial {
-        "color"?: Color;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
         /**
           * Define a variação do componente.
          */
         "dsName"?: string;
+        /**
+          * Define a variação de tamanho do componente.
+         */
+        "dsSize"?: 'lg';
+        /**
+          * Define os valores do gráfico
+         */
         "valores": MedChartRadiaItem[];
     }
     interface MedChartRadialContent {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação de tamanho do componente.
+         */
+        "dsSize"?: 'lg';
+        /**
+          * TODO
+         */
         "total": number;
     }
     interface MedChartRadialLabel {
         /**
           * Define a cor do componente.
          */
-        "color"?: Color;
+        "dsColor"?: MedColor;
         /**
-          * Define a cor neutra do componente.
+          * Define a variação de tamanho do componente.
          */
-        "neutral"?: Neutral;
+        "dsSize"?: 'lg';
+        /**
+          * TODO
+         */
         "valores": MedChartRadiaItem[];
+    }
+    interface MedChild {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: Color;
+        /**
+          * Define o fill do componente.
+         */
+        "fill"?: 'outline';
+    }
+    interface MedConfig {
+        /**
+          * TODO
+         */
+        "emitter": {
+    scheme: ( value: string ) => void;
+    theme: ( value: string ) => void;
+  };
+        /**
+          * TODO
+         */
+        "opcoes": MedConfigInterface;
     }
     interface MedContextMenu {
         /**
           * Define o estado do componente.
          */
         "collapsed": boolean;
+        /**
+          * TODO
+         */
         "toggle": (event?: Event | undefined) => Promise<void>;
     }
     interface MedDivider {
         /**
           * Define a cor do componente.
          */
-        "color"?: Color;
-        /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
+        "dsColor"?: MedColor;
         /**
           * Define o texto do componente.
          */
         "text": string;
     }
     interface MedEnunciado {
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'skin';
+        /**
+          * TODO
+         */
         "imagens": string[] | string;
     }
     interface MedEnunciadoDiscursiva {
+        /**
+          * TODO
+         */
         "imagens": string[] | string;
     }
     interface MedFontZoom {
+        /**
+          * TODO
+         */
         "emitter": { emit: (value: MedFontSize) => void };
+        /**
+          * TODO
+         */
         "value": MedFontSize;
     }
     interface MedHeader {
     }
+    interface MedHeading {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'high';
+        /**
+          * Define a variação de tamanho do componente.
+         */
+        "dsSize"?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    }
     interface MedImageZoom {
+        /**
+          * TODO
+         */
         "imagens": MedImageZoomItemInterface[] | any;
+        /**
+          * TODO
+         */
         "marcaAguaInferior"?: string;
+        /**
+          * TODO
+         */
         "marcaAguaSuperior"?: string;
+        /**
+          * TODO
+         */
         "titulo"?: string;
     }
     interface MedItemAulas {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
         /**
           * Define a porcentagem de visualização de vídeos.
          */
@@ -2926,29 +3287,77 @@ export namespace Components {
         "videos": string;
     }
     interface MedList {
-        "color"?: Color;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * TODO
+         */
         "margin"?: 'xs' | 'sm' | 'md' | 'lg';
-        "neutral"?: Neutral;
     }
     interface MedListItem {
+        /**
+          * TODO
+         */
         "border": boolean;
-        "color"?: Color;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * TODO
+         */
         "dsSize"?: 'xs' | 'sm' | 'md';
+        /**
+          * TODO
+         */
         "label"?: string;
-        "neutral"?: Neutral;
+        /**
+          * TODO
+         */
         "selected": boolean;
+        /**
+          * TODO
+         */
         "titulo"?: string;
     }
     interface MedListItemAccordion {
+        /**
+          * TODO
+         */
         "border": boolean;
+        /**
+          * TODO
+         */
         "collapsed": boolean;
-        "color"?: Color;
+        /**
+          * TODO
+         */
+        "dsColor"?: MedColor;
+        /**
+          * TODO
+         */
         "dsSize"?: 'xs' | 'sm' | 'md';
+        /**
+          * TODO
+         */
         "label"?: string;
+        /**
+          * TODO
+         */
         "margin"?: 'xs' | 'sm' | 'md' | 'lg';
-        "neutral"?: Neutral;
+        /**
+          * TODO
+         */
         "selected": boolean;
+        /**
+          * TODO
+         */
         "titulo"?: string;
+        /**
+          * TODO
+         */
         "toggle": (event?: Event | undefined) => Promise<void>;
     }
     interface MedMessage {
@@ -2979,19 +3388,47 @@ export namespace Components {
         /**
           * Define a cor do componente.
          */
-        "color"?: Color;
+        "dsColor"?: MedColor;
         /**
           * Define a variação do componente.
          */
         "dsName"?: 'secondary' | 'transparent';
-        /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
     }
     interface MedOffline {
     }
     interface MedOption {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+    }
+    interface MedParagraph {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'double';
+        /**
+          * Define a variação de tamanho do componente.
+         */
+        "dsSize"?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    }
+    interface MedParent {
+        /**
+          * Teste.
+         */
+        "child": boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: Color;
+        /**
+          * Define o fill do componente.
+         */
+        "fill"?: 'outline';
     }
     interface MedQuestion {
         /**
@@ -3001,20 +3438,26 @@ export namespace Components {
         /**
           * Define a cor do componente.
          */
-        "color"?: Color;
-        /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
+        "dsColor"?: MedColor;
         /**
           * Define o conteúdo de texto do componente.
          */
         "texto"?: string;
+        /**
+          * TODO
+         */
         "toggle": (event?: Event | undefined) => Promise<void>;
     }
     interface MedRateBar {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
     }
     interface MedRateLike {
+        /**
+          * TODO
+         */
         "status"?: RateStatus;
     }
     interface MedRateResult {
@@ -3049,6 +3492,10 @@ export namespace Components {
          */
         "data"?: string;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * Define a variação do componente.
          */
         "dsName"?: 'medgrupo' | 'banca';
@@ -3061,57 +3508,109 @@ export namespace Components {
          */
         "texto"?: string;
     }
-    interface MedTiles {
-        "badge"?: string;
-        "color"?: Color;
-        "label"?: string;
-        "neutral"?: Neutral;
-        "selected": boolean;
-        "solid": boolean;
-        "titulo"?: string;
-    }
-    interface MedTituloMateria {
+    interface MedSubtitle {
         /**
           * Define a cor do componente.
          */
-        "color"?: Color;
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'high';
+        /**
+          * Define a variação de tamanho do componente.
+         */
+        "dsSize"?: 'xxs' | 'xs' | 'sm' | 'base' | 'md' | 'lg' | 'xl';
+    }
+    interface MedThemes {
+        /**
+          * Define a variação do componente.
+         */
+        "ativo"?: 'theme-gold' | 'theme-recursos';
+        /**
+          * Define quais os temas
+         */
+        "temas"?: MedTema[];
+    }
+    interface MedTiles {
+        /**
+          * TODO
+         */
+        "badge"?: string;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * TODO
+         */
+        "label"?: string;
+        /**
+          * TODO
+         */
+        "selected": boolean;
+        /**
+          * TODO
+         */
+        "solid": boolean;
+        /**
+          * TODO
+         */
+        "titulo"?: string;
+    }
+    interface MedTituloMateria {
         /**
           * Define o descricao do item.
          */
         "descricao"?: string;
         /**
-          * Define a cor neutra do componente.
+          * Define a cor do componente.
          */
-        "neutral"?: Neutral;
+        "dsColor"?: MedColor;
         /**
           * Define o titulo do item.
          */
         "titulo"?: string;
     }
     interface MedToolbar {
-        "color"?: Color;
-        "neutral"?: Neutral;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
     }
     interface MedTooltip {
         /**
           * Define o estado do componente.
          */
         "collapsed": boolean;
+        /**
+          * TODO
+         */
         "content"?: string;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
         /**
           * Define a variação do componente.
          */
         "dsName"?: 'definition';
+        /**
+          * TODO
+         */
         "placement"?: 'top' | 'bottom' | 'left' | 'right';
+        /**
+          * TODO
+         */
         "position"?: 'start' | 'center' | 'end';
+        /**
+          * TODO
+         */
         "titulo"?: string;
+        /**
+          * TODO
+         */
         "toggle": (event?: Event | undefined) => Promise<void>;
-    }
-    interface MedTooltip2 {
-        "buttonLeft": { label: string, icon: string };
-        "buttonRight": { label: string, icon: string };
-        "content": string;
-        "header": string;
     }
     interface MedVote {
         /**
@@ -3128,6 +3627,13 @@ export namespace Components {
         "unlike": number;
     }
     interface MontaProvasPlusminus {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * TODO
+         */
         "dsSize"?: 'xl';
     }
 }
@@ -3678,6 +4184,18 @@ declare global {
         prototype: HTMLMedAlternativasElement;
         new (): HTMLMedAlternativasElement;
     };
+    interface HTMLMedAlternativasAElement extends Components.MedAlternativasA, HTMLStencilElement {
+    }
+    var HTMLMedAlternativasAElement: {
+        prototype: HTMLMedAlternativasAElement;
+        new (): HTMLMedAlternativasAElement;
+    };
+    interface HTMLMedAlternativasBElement extends Components.MedAlternativasB, HTMLStencilElement {
+    }
+    var HTMLMedAlternativasBElement: {
+        prototype: HTMLMedAlternativasBElement;
+        new (): HTMLMedAlternativasBElement;
+    };
     interface HTMLMedAutocompleteElement extends Components.MedAutocomplete, HTMLStencilElement {
     }
     var HTMLMedAutocompleteElement: {
@@ -3695,6 +4213,12 @@ declare global {
     var HTMLMedBannerElement: {
         prototype: HTMLMedBannerElement;
         new (): HTMLMedBannerElement;
+    };
+    interface HTMLMedCaptionElement extends Components.MedCaption, HTMLStencilElement {
+    }
+    var HTMLMedCaptionElement: {
+        prototype: HTMLMedCaptionElement;
+        new (): HTMLMedCaptionElement;
     };
     interface HTMLMedCartaoRespostaItemElement extends Components.MedCartaoRespostaItem, HTMLStencilElement {
     }
@@ -3725,6 +4249,18 @@ declare global {
     var HTMLMedChartRadialLabelElement: {
         prototype: HTMLMedChartRadialLabelElement;
         new (): HTMLMedChartRadialLabelElement;
+    };
+    interface HTMLMedChildElement extends Components.MedChild, HTMLStencilElement {
+    }
+    var HTMLMedChildElement: {
+        prototype: HTMLMedChildElement;
+        new (): HTMLMedChildElement;
+    };
+    interface HTMLMedConfigElement extends Components.MedConfig, HTMLStencilElement {
+    }
+    var HTMLMedConfigElement: {
+        prototype: HTMLMedConfigElement;
+        new (): HTMLMedConfigElement;
     };
     interface HTMLMedContextMenuElement extends Components.MedContextMenu, HTMLStencilElement {
     }
@@ -3761,6 +4297,12 @@ declare global {
     var HTMLMedHeaderElement: {
         prototype: HTMLMedHeaderElement;
         new (): HTMLMedHeaderElement;
+    };
+    interface HTMLMedHeadingElement extends Components.MedHeading, HTMLStencilElement {
+    }
+    var HTMLMedHeadingElement: {
+        prototype: HTMLMedHeadingElement;
+        new (): HTMLMedHeadingElement;
     };
     interface HTMLMedImageZoomElement extends Components.MedImageZoom, HTMLStencilElement {
     }
@@ -3822,6 +4364,18 @@ declare global {
         prototype: HTMLMedOptionElement;
         new (): HTMLMedOptionElement;
     };
+    interface HTMLMedParagraphElement extends Components.MedParagraph, HTMLStencilElement {
+    }
+    var HTMLMedParagraphElement: {
+        prototype: HTMLMedParagraphElement;
+        new (): HTMLMedParagraphElement;
+    };
+    interface HTMLMedParentElement extends Components.MedParent, HTMLStencilElement {
+    }
+    var HTMLMedParentElement: {
+        prototype: HTMLMedParentElement;
+        new (): HTMLMedParentElement;
+    };
     interface HTMLMedQuestionElement extends Components.MedQuestion, HTMLStencilElement {
     }
     var HTMLMedQuestionElement: {
@@ -3852,6 +4406,18 @@ declare global {
         prototype: HTMLMedRatingElement;
         new (): HTMLMedRatingElement;
     };
+    interface HTMLMedSubtitleElement extends Components.MedSubtitle, HTMLStencilElement {
+    }
+    var HTMLMedSubtitleElement: {
+        prototype: HTMLMedSubtitleElement;
+        new (): HTMLMedSubtitleElement;
+    };
+    interface HTMLMedThemesElement extends Components.MedThemes, HTMLStencilElement {
+    }
+    var HTMLMedThemesElement: {
+        prototype: HTMLMedThemesElement;
+        new (): HTMLMedThemesElement;
+    };
     interface HTMLMedTilesElement extends Components.MedTiles, HTMLStencilElement {
     }
     var HTMLMedTilesElement: {
@@ -3875,12 +4441,6 @@ declare global {
     var HTMLMedTooltipElement: {
         prototype: HTMLMedTooltipElement;
         new (): HTMLMedTooltipElement;
-    };
-    interface HTMLMedTooltip2Element extends Components.MedTooltip2, HTMLStencilElement {
-    }
-    var HTMLMedTooltip2Element: {
-        prototype: HTMLMedTooltip2Element;
-        new (): HTMLMedTooltip2Element;
     };
     interface HTMLMedVoteElement extends Components.MedVote, HTMLStencilElement {
     }
@@ -3986,20 +4546,26 @@ declare global {
         "med-accordion-list": HTMLMedAccordionListElement;
         "med-agrupador": HTMLMedAgrupadorElement;
         "med-alternativas": HTMLMedAlternativasElement;
+        "med-alternativas-a": HTMLMedAlternativasAElement;
+        "med-alternativas-b": HTMLMedAlternativasBElement;
         "med-autocomplete": HTMLMedAutocompleteElement;
         "med-avatar": HTMLMedAvatarElement;
         "med-banner": HTMLMedBannerElement;
+        "med-caption": HTMLMedCaptionElement;
         "med-cartao-resposta-item": HTMLMedCartaoRespostaItemElement;
         "med-cartao-resposta-lista": HTMLMedCartaoRespostaListaElement;
         "med-chart-radial": HTMLMedChartRadialElement;
         "med-chart-radial-content": HTMLMedChartRadialContentElement;
         "med-chart-radial-label": HTMLMedChartRadialLabelElement;
+        "med-child": HTMLMedChildElement;
+        "med-config": HTMLMedConfigElement;
         "med-context-menu": HTMLMedContextMenuElement;
         "med-divider": HTMLMedDividerElement;
         "med-enunciado": HTMLMedEnunciadoElement;
         "med-enunciado-discursiva": HTMLMedEnunciadoDiscursivaElement;
         "med-font-zoom": HTMLMedFontZoomElement;
         "med-header": HTMLMedHeaderElement;
+        "med-heading": HTMLMedHeadingElement;
         "med-image-zoom": HTMLMedImageZoomElement;
         "med-item-aulas": HTMLMedItemAulasElement;
         "med-list": HTMLMedListElement;
@@ -4010,16 +4576,19 @@ declare global {
         "med-navbar": HTMLMedNavbarElement;
         "med-offline": HTMLMedOfflineElement;
         "med-option": HTMLMedOptionElement;
+        "med-paragraph": HTMLMedParagraphElement;
+        "med-parent": HTMLMedParentElement;
         "med-question": HTMLMedQuestionElement;
         "med-rate-bar": HTMLMedRateBarElement;
         "med-rate-like": HTMLMedRateLikeElement;
         "med-rate-result": HTMLMedRateResultElement;
         "med-rating": HTMLMedRatingElement;
+        "med-subtitle": HTMLMedSubtitleElement;
+        "med-themes": HTMLMedThemesElement;
         "med-tiles": HTMLMedTilesElement;
         "med-titulo-materia": HTMLMedTituloMateriaElement;
         "med-toolbar": HTMLMedToolbarElement;
         "med-tooltip": HTMLMedTooltipElement;
-        "med-tooltip2": HTMLMedTooltip2Element;
         "med-vote": HTMLMedVoteElement;
         "monta-provas-plusminus": HTMLMontaProvasPlusminusElement;
     }
@@ -4177,6 +4746,18 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação solida de background do componente.
+         */
+        "dsName"?: 'secondary' | 'tertiary';
+        /**
+          * Define a variação de tamanho componente.
+         */
+        "dsSize"?: 'xxxs' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
+        /**
           * The icon name to use for the back button.
          */
         "icon"?: string | null;
@@ -4188,6 +4769,10 @@ declare namespace LocalJSX {
           * When using a router, it specifies the transition animation when navigating to another page.
          */
         "routerAnimation"?: AnimationBuilder | undefined;
+        /**
+          * Define a cor do componente.
+         */
+        "solid"?: boolean;
         /**
           * The text to display in the back button.
          */
@@ -4221,6 +4806,10 @@ declare namespace LocalJSX {
          */
         "color"?: Color;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * Define a variação do componente.
          */
         "dsName"?: 'secondary';
@@ -4232,10 +4821,6 @@ declare namespace LocalJSX {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
-        /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
     }
     interface IonButton {
         /**
@@ -4254,7 +4839,17 @@ declare namespace LocalJSX {
           * This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want).
          */
         "download"?: string | undefined;
-        "dsName"?: 'primary' | 'secondary' | 'tertiary' | 'icon-only' | 'icon-label';
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação solida de background do componente.
+         */
+        "dsName"?: 'secondary' | 'tertiary';
+        /**
+          * Define a variação de tamanho componente.
+         */
         "dsSize"?: 'xxxs' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
         /**
           * Set to `"block"` for a full-width button or to `"full"` for a full-width button without left and right borders.
@@ -4419,6 +5014,10 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * If `true`, the checkbox will visually appear as indeterminate.
          */
         "indeterminate"?: boolean;
@@ -4430,7 +5029,6 @@ declare namespace LocalJSX {
           * The name of the control, which is submitted with the form data.
          */
         "name"?: string;
-        "neutral"?: Neutral;
         /**
           * Emitted when the checkbox loses focus.
          */
@@ -4462,6 +5060,10 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * Define a variação do componente.
          */
         "dsName"?: 'secondary';
@@ -4469,10 +5071,6 @@ declare namespace LocalJSX {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
-        /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
         /**
           * Display an outline style button.
          */
@@ -4767,7 +5365,17 @@ declare namespace LocalJSX {
           * This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want).
          */
         "download"?: string | undefined;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * TODO
+         */
         "dsName"?: 'label' | 'icon-label';
+        /**
+          * TODO
+         */
         "dsSize"?: 'md' | 'lg';
         /**
           * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered.
@@ -4777,6 +5385,9 @@ declare namespace LocalJSX {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        /**
+          * TODO
+         */
         "neutral"?: Neutral;
         /**
           * Emitted when the button loses focus.
@@ -4824,6 +5435,9 @@ declare namespace LocalJSX {
           * If `true`, the fab list will show all fab buttons in the list.
          */
         "activated"?: boolean;
+        /**
+          * TODO
+         */
         "dsSize"?: 'md' | 'lg';
         /**
           * The side the fab list will show on relative to the main fab button.
@@ -5185,6 +5799,9 @@ declare namespace LocalJSX {
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
         "color"?: Color;
+        /**
+          * TODO
+         */
         "dsName"?: 'stacked' | 'helper' | undefined;
         /**
           * The mode determines which platform styles to use.
@@ -5610,6 +6227,9 @@ declare namespace LocalJSX {
          */
         "cssClass"?: string | string[];
         "delegate"?: FrameworkDelegate;
+        /**
+          * TODO
+         */
         "dsName": 'tooltip';
         /**
           * Animation to use when the popover is presented.
@@ -5667,13 +6287,20 @@ declare namespace LocalJSX {
          */
         "color"?: Color;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * Define a variação do componente.
          */
-        "dsName"?: 'minimalist';
+        "dsName"?: 'minimalist' | 'skin';
         /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
+        /**
+          * Esconde ou mostra a porcentagem.
+         */
         "percentage"?: boolean;
         /**
           * If true, reverse the progress bar direction.
@@ -5697,6 +6324,14 @@ declare namespace LocalJSX {
           * If `true`, the user cannot interact with the radio.
          */
         "disabled"?: boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'secondary';
         /**
           * The mode determines which platform styles to use.
          */
@@ -6027,6 +6662,10 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * A hint to the browser for which enter key to display. Possible values: `"enter"`, `"done"`, `"go"`, `"next"`, `"previous"`, `"search"`, and `"send"`.
          */
         "enterkeyhint"?: 'enter' | 'done' | 'go' | 'next' | 'previous' | 'search' | 'send';
@@ -6038,7 +6677,6 @@ declare namespace LocalJSX {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
-        "neutral"?: Neutral;
         /**
           * Emitted when the input loses focus.
          */
@@ -6106,6 +6744,14 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'default';
+        /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
@@ -6139,6 +6785,14 @@ declare namespace LocalJSX {
           * If `true`, the user cannot interact with the segment button.
          */
         "disabled"?: boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'default';
         /**
           * Set the layout of the text and icon in the segment.
          */
@@ -6398,10 +7052,17 @@ declare namespace LocalJSX {
          */
         "color"?: Color;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
         "onIonTabBarChanged"?: (event: CustomEvent<TabBarChangedEventDetail>) => void;
+        /**
+          * TODO
+         */
         "onMedResize"?: (event: CustomEvent<TabBarResizeEventDetail>) => void;
         /**
           * The selected tab component
@@ -6421,6 +7082,10 @@ declare namespace LocalJSX {
           * This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want).
          */
         "download"?: string | undefined;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
         /**
           * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered.
          */
@@ -6690,6 +7355,10 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
@@ -6791,11 +7460,7 @@ declare namespace LocalJSX {
         /**
           * Define a cor do componente.
          */
-        "color"?: Color;
-        /**
-          * Define a variação do componente.
-         */
-        "dsName"?: 'secondary';
+        "dsColor"?: Color;
         /**
           * Define a posição do ícone de abertura do componente.
          */
@@ -6804,6 +7469,9 @@ declare namespace LocalJSX {
           * Define a variação da borda do componente.
          */
         "noBorder"?: boolean;
+        /**
+          * TODO
+         */
         "onToggle"?: (event: CustomEvent<any>) => void;
     }
     interface MedAccordionList {
@@ -6828,38 +7496,213 @@ declare namespace LocalJSX {
         /**
           * Define a cor do componente.
          */
-        "color"?: Color;
-        /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
+        "dsColor"?: MedColor;
     }
     interface MedAlternativas {
+        /**
+          * TODO
+         */
         "alternativaSelecionada": string;
+        /**
+          * TODO
+         */
         "alternativas"?: MedAlternativaInterface | any;
         /**
-          * Define a cor neutra do componente.
+          * TODO
          */
-        "color"?: Color;
-        "isDesktop": boolean;
+        "dsColor"?: Color;
+        /**
+          * TODO
+         */
+        "dsSkinConfig": any;
+        /**
+          * TODO
+         */
         "keyAlternativa"?: string;
+        /**
+          * TODO
+         */
         "keyEnunciado"?: string;
+        /**
+          * TODO
+         */
         "keyImagem"?: string;
+        /**
+          * TODO
+         */
         "keyPorcentagem"?: string;
+        /**
+          * TODO
+         */
+        "keyRiscada"?: string;
+        /**
+          * TODO
+         */
         "mostraResposta": boolean;
+        /**
+          * TODO
+         */
         "onMedChange"?: (event: CustomEvent<MedAlternativaInterface>) => void;
+        /**
+          * TODO
+         */
         "onMedGalleryRequest"?: (event: CustomEvent<MedAlternativaInterface>) => void;
-        "podeRiscar": boolean;
+        /**
+          * TODO
+         */
+        "onMedRiscada"?: (event: CustomEvent<MedAlternativaInterface>) => void;
+        /**
+          * TODO
+         */
+        "permiteRiscar"?: boolean;
+        /**
+          * TODO
+         */
+        "respostaCorreta": string;
+    }
+    interface MedAlternativasA {
+        /**
+          * TODO
+         */
+        "alternativaSelecionada": string;
+        /**
+          * TODO
+         */
+        "alternativas"?: MedAlternativaInterface | any;
+        /**
+          * TODO
+         */
+        "dsColor"?: Color;
+        /**
+          * TODO
+         */
+        "dsSkin"?: any;
+        /**
+          * TODO
+         */
+        "dsSkinConfig"?: any;
+        /**
+          * TODO
+         */
+        "keyAlternativa"?: string;
+        /**
+          * TODO
+         */
+        "keyEnunciado"?: string;
+        /**
+          * TODO
+         */
+        "keyImagem"?: string;
+        /**
+          * TODO
+         */
+        "keyPorcentagem"?: string;
+        /**
+          * TODO
+         */
+        "keyRiscada"?: string;
+        /**
+          * TODO
+         */
+        "mostraResposta": boolean;
+        /**
+          * TODO
+         */
+        "onMedChange"?: (event: CustomEvent<MedAlternativaInterface>) => void;
+        /**
+          * TODO
+         */
+        "onMedGalleryRequest"?: (event: CustomEvent<MedAlternativaInterface>) => void;
+        /**
+          * TODO
+         */
+        "onMedRiscada"?: (event: CustomEvent<MedAlternativaInterface>) => void;
+        /**
+          * TODO
+         */
+        "permiteRiscar"?: boolean;
+        /**
+          * TODO
+         */
+        "respostaCorreta": string;
+    }
+    interface MedAlternativasB {
+        /**
+          * TODO
+         */
+        "alternativaSelecionada": string;
+        /**
+          * TODO
+         */
+        "alternativas"?: MedAlternativaInterface | any;
+        /**
+          * TODO
+         */
+        "dsColor"?: Color;
+        /**
+          * TODO
+         */
+        "dsSkin"?: any;
+        /**
+          * TODO
+         */
+        "dsSkinConfig"?: any;
+        /**
+          * TODO
+         */
+        "keyAlternativa"?: string;
+        /**
+          * TODO
+         */
+        "keyEnunciado"?: string;
+        /**
+          * TODO
+         */
+        "keyImagem"?: string;
+        /**
+          * TODO
+         */
+        "keyPorcentagem"?: string;
+        /**
+          * TODO
+         */
+        "keyRiscada"?: string;
+        /**
+          * TODO
+         */
+        "mostraResposta": boolean;
+        /**
+          * TODO
+         */
+        "onMedChange"?: (event: CustomEvent<MedAlternativaInterface>) => void;
+        /**
+          * TODO
+         */
+        "onMedGalleryRequest"?: (event: CustomEvent<MedAlternativaInterface>) => void;
+        /**
+          * TODO
+         */
+        "onMedRiscada"?: (event: CustomEvent<MedAlternativaInterface>) => void;
+        /**
+          * TODO
+         */
+        "permiteRiscar"?: boolean;
+        /**
+          * TODO
+         */
         "respostaCorreta": string;
     }
     interface MedAutocomplete {
+        /**
+          * TODO
+         */
         "list"?: boolean;
     }
     interface MedAvatar {
         /**
-          * Define a cor neutra do componente.
+          * Define a cor do componente.
          */
-        "color"?: Color;
+        "dsColor"?: MedColor;
         /**
           * Define a variação de tamanho do componente.
          */
@@ -6872,44 +7715,127 @@ declare namespace LocalJSX {
           * Define a imagem do componente.
          */
         "letter"?: string;
-        /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
     }
     interface MedBanner {
+        /**
+          * TODO
+         */
         "btnLeft": string;
+        /**
+          * TODO
+         */
         "btnRight": string;
+        /**
+          * TODO
+         */
         "header": string;
+        /**
+          * TODO
+         */
         "onBtnLeftClick"?: (event: CustomEvent<void>) => void;
+        /**
+          * TODO
+         */
         "onBtnRightClick"?: (event: CustomEvent<void>) => void;
     }
+    interface MedCaption {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação de tamanho do componente.
+         */
+        "dsSize"?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    }
     interface MedCartaoRespostaItem {
-        "color"?: Color;
+        /**
+          * Define o estado do componente para anulado.
+         */
+        "anulada"?: boolean;
+        /**
+          * Define o estado do componente para ativo.
+         */
+        "ativa"?: boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define o estado do componente para impresso.
+         */
+        "impressa"?: boolean;
     }
     interface MedCartaoRespostaLista {
     }
     interface MedChartRadial {
-        "color"?: Color;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
         /**
           * Define a variação do componente.
          */
         "dsName"?: string;
+        /**
+          * Define a variação de tamanho do componente.
+         */
+        "dsSize"?: 'lg';
+        /**
+          * Define os valores do gráfico
+         */
         "valores"?: MedChartRadiaItem[];
     }
     interface MedChartRadialContent {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação de tamanho do componente.
+         */
+        "dsSize"?: 'lg';
+        /**
+          * TODO
+         */
         "total"?: number;
     }
     interface MedChartRadialLabel {
         /**
           * Define a cor do componente.
          */
-        "color"?: Color;
+        "dsColor"?: MedColor;
         /**
-          * Define a cor neutra do componente.
+          * Define a variação de tamanho do componente.
          */
-        "neutral"?: Neutral;
+        "dsSize"?: 'lg';
+        /**
+          * TODO
+         */
         "valores"?: MedChartRadiaItem[];
+    }
+    interface MedChild {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: Color;
+        /**
+          * Define o fill do componente.
+         */
+        "fill"?: 'outline';
+    }
+    interface MedConfig {
+        /**
+          * TODO
+         */
+        "emitter": {
+    scheme: ( value: string ) => void;
+    theme: ( value: string ) => void;
+  };
+        /**
+          * TODO
+         */
+        "opcoes": MedConfigInterface;
     }
     interface MedContextMenu {
         /**
@@ -6921,38 +7847,89 @@ declare namespace LocalJSX {
         /**
           * Define a cor do componente.
          */
-        "color"?: Color;
-        /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
+        "dsColor"?: MedColor;
         /**
           * Define o texto do componente.
          */
         "text": string;
     }
     interface MedEnunciado {
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'skin';
+        /**
+          * TODO
+         */
         "imagens": string[] | string;
+        /**
+          * TODO
+         */
         "onMedGalleryRequest"?: (event: CustomEvent<string>) => void;
     }
     interface MedEnunciadoDiscursiva {
+        /**
+          * TODO
+         */
         "imagens": string[] | string;
+        /**
+          * TODO
+         */
         "onMedGalleryRequest"?: (event: CustomEvent<string>) => void;
     }
     interface MedFontZoom {
+        /**
+          * TODO
+         */
         "emitter": { emit: (value: MedFontSize) => void };
+        /**
+          * TODO
+         */
         "value"?: MedFontSize;
     }
     interface MedHeader {
+        /**
+          * TODO
+         */
         "onMedResize"?: (event: CustomEvent<headerResizeEventDetail>) => void;
     }
+    interface MedHeading {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'high';
+        /**
+          * Define a variação de tamanho do componente.
+         */
+        "dsSize"?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    }
     interface MedImageZoom {
+        /**
+          * TODO
+         */
         "imagens"?: MedImageZoomItemInterface[] | any;
+        /**
+          * TODO
+         */
         "marcaAguaInferior"?: string;
+        /**
+          * TODO
+         */
         "marcaAguaSuperior"?: string;
+        /**
+          * TODO
+         */
         "titulo"?: string;
     }
     interface MedItemAulas {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
         /**
           * Define a porcentagem de visualização de vídeos.
          */
@@ -6967,28 +7944,73 @@ declare namespace LocalJSX {
         "videos": string;
     }
     interface MedList {
-        "color"?: Color;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * TODO
+         */
         "margin"?: 'xs' | 'sm' | 'md' | 'lg';
-        "neutral"?: Neutral;
     }
     interface MedListItem {
+        /**
+          * TODO
+         */
         "border"?: boolean;
-        "color"?: Color;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * TODO
+         */
         "dsSize"?: 'xs' | 'sm' | 'md';
+        /**
+          * TODO
+         */
         "label"?: string;
-        "neutral"?: Neutral;
+        /**
+          * TODO
+         */
         "selected"?: boolean;
+        /**
+          * TODO
+         */
         "titulo"?: string;
     }
     interface MedListItemAccordion {
+        /**
+          * TODO
+         */
         "border"?: boolean;
+        /**
+          * TODO
+         */
         "collapsed"?: boolean;
-        "color"?: Color;
+        /**
+          * TODO
+         */
+        "dsColor"?: MedColor;
+        /**
+          * TODO
+         */
         "dsSize"?: 'xs' | 'sm' | 'md';
+        /**
+          * TODO
+         */
         "label"?: string;
+        /**
+          * TODO
+         */
         "margin"?: 'xs' | 'sm' | 'md' | 'lg';
-        "neutral"?: Neutral;
+        /**
+          * TODO
+         */
         "selected"?: boolean;
+        /**
+          * TODO
+         */
         "titulo"?: string;
     }
     interface MedMessage {
@@ -7019,20 +8041,51 @@ declare namespace LocalJSX {
         /**
           * Define a cor do componente.
          */
-        "color"?: Color;
+        "dsColor"?: MedColor;
         /**
           * Define a variação do componente.
          */
         "dsName"?: 'secondary' | 'transparent';
-        /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
     }
     interface MedOffline {
+        /**
+          * TODO
+         */
         "onMedClick"?: (event: CustomEvent<void>) => void;
     }
     interface MedOption {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+    }
+    interface MedParagraph {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'double';
+        /**
+          * Define a variação de tamanho do componente.
+         */
+        "dsSize"?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    }
+    interface MedParent {
+        /**
+          * Teste.
+         */
+        "child"?: boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: Color;
+        /**
+          * Define o fill do componente.
+         */
+        "fill"?: 'outline';
     }
     interface MedQuestion {
         /**
@@ -7042,20 +8095,26 @@ declare namespace LocalJSX {
         /**
           * Define a cor do componente.
          */
-        "color"?: Color;
-        /**
-          * Define a cor neutra do componente.
-         */
-        "neutral"?: Neutral;
+        "dsColor"?: MedColor;
         /**
           * Define o conteúdo de texto do componente.
          */
         "texto"?: string;
     }
     interface MedRateBar {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
     }
     interface MedRateLike {
+        /**
+          * TODO
+         */
         "onMedChange"?: (event: CustomEvent<RateStatus>) => void;
+        /**
+          * TODO
+         */
         "status"?: RateStatus;
     }
     interface MedRateResult {
@@ -7090,6 +8149,10 @@ declare namespace LocalJSX {
          */
         "data"?: string;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * Define a variação do componente.
          */
         "dsName"?: 'medgrupo' | 'banca';
@@ -7102,56 +8165,109 @@ declare namespace LocalJSX {
          */
         "texto"?: string;
     }
-    interface MedTiles {
-        "badge"?: string;
-        "color"?: Color;
-        "label"?: string;
-        "neutral"?: Neutral;
-        "selected"?: boolean;
-        "solid"?: boolean;
-        "titulo"?: string;
-    }
-    interface MedTituloMateria {
+    interface MedSubtitle {
         /**
           * Define a cor do componente.
          */
-        "color"?: Color;
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'high';
+        /**
+          * Define a variação de tamanho do componente.
+         */
+        "dsSize"?: 'xxs' | 'xs' | 'sm' | 'base' | 'md' | 'lg' | 'xl';
+    }
+    interface MedThemes {
+        /**
+          * Define a variação do componente.
+         */
+        "ativo"?: 'theme-gold' | 'theme-recursos';
+        /**
+          * Retornar a cor selecionada
+         */
+        "onMedChange"?: (event: CustomEvent<string>) => void;
+        /**
+          * Define quais os temas
+         */
+        "temas"?: MedTema[];
+    }
+    interface MedTiles {
+        /**
+          * TODO
+         */
+        "badge"?: string;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * TODO
+         */
+        "label"?: string;
+        /**
+          * TODO
+         */
+        "selected"?: boolean;
+        /**
+          * TODO
+         */
+        "solid"?: boolean;
+        /**
+          * TODO
+         */
+        "titulo"?: string;
+    }
+    interface MedTituloMateria {
         /**
           * Define o descricao do item.
          */
         "descricao"?: string;
         /**
-          * Define a cor neutra do componente.
+          * Define a cor do componente.
          */
-        "neutral"?: Neutral;
+        "dsColor"?: MedColor;
         /**
           * Define o titulo do item.
          */
         "titulo"?: string;
     }
     interface MedToolbar {
-        "color"?: Color;
-        "neutral"?: Neutral;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
     }
     interface MedTooltip {
         /**
           * Define o estado do componente.
          */
         "collapsed"?: boolean;
+        /**
+          * TODO
+         */
         "content"?: string;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
         /**
           * Define a variação do componente.
          */
         "dsName"?: 'definition';
+        /**
+          * TODO
+         */
         "placement"?: 'top' | 'bottom' | 'left' | 'right';
+        /**
+          * TODO
+         */
         "position"?: 'start' | 'center' | 'end';
+        /**
+          * TODO
+         */
         "titulo"?: string;
-    }
-    interface MedTooltip2 {
-        "buttonLeft": { label: string, icon: string };
-        "buttonRight": { label: string, icon: string };
-        "content": string;
-        "header": string;
     }
     interface MedVote {
         /**
@@ -7168,7 +8284,17 @@ declare namespace LocalJSX {
         "unlike"?: number;
     }
     interface MontaProvasPlusminus {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * TODO
+         */
         "dsSize"?: 'xl';
+        /**
+          * TODO
+         */
         "onMedChange"?: (event: CustomEvent<PlusMinusStatus>) => void;
     }
     interface IntrinsicElements {
@@ -7263,20 +8389,26 @@ declare namespace LocalJSX {
         "med-accordion-list": MedAccordionList;
         "med-agrupador": MedAgrupador;
         "med-alternativas": MedAlternativas;
+        "med-alternativas-a": MedAlternativasA;
+        "med-alternativas-b": MedAlternativasB;
         "med-autocomplete": MedAutocomplete;
         "med-avatar": MedAvatar;
         "med-banner": MedBanner;
+        "med-caption": MedCaption;
         "med-cartao-resposta-item": MedCartaoRespostaItem;
         "med-cartao-resposta-lista": MedCartaoRespostaLista;
         "med-chart-radial": MedChartRadial;
         "med-chart-radial-content": MedChartRadialContent;
         "med-chart-radial-label": MedChartRadialLabel;
+        "med-child": MedChild;
+        "med-config": MedConfig;
         "med-context-menu": MedContextMenu;
         "med-divider": MedDivider;
         "med-enunciado": MedEnunciado;
         "med-enunciado-discursiva": MedEnunciadoDiscursiva;
         "med-font-zoom": MedFontZoom;
         "med-header": MedHeader;
+        "med-heading": MedHeading;
         "med-image-zoom": MedImageZoom;
         "med-item-aulas": MedItemAulas;
         "med-list": MedList;
@@ -7287,16 +8419,19 @@ declare namespace LocalJSX {
         "med-navbar": MedNavbar;
         "med-offline": MedOffline;
         "med-option": MedOption;
+        "med-paragraph": MedParagraph;
+        "med-parent": MedParent;
         "med-question": MedQuestion;
         "med-rate-bar": MedRateBar;
         "med-rate-like": MedRateLike;
         "med-rate-result": MedRateResult;
         "med-rating": MedRating;
+        "med-subtitle": MedSubtitle;
+        "med-themes": MedThemes;
         "med-tiles": MedTiles;
         "med-titulo-materia": MedTituloMateria;
         "med-toolbar": MedToolbar;
         "med-tooltip": MedTooltip;
-        "med-tooltip2": MedTooltip2;
         "med-vote": MedVote;
         "monta-provas-plusminus": MontaProvasPlusminus;
     }
@@ -7396,20 +8531,26 @@ declare module "@stencil/core" {
             "med-accordion-list": LocalJSX.MedAccordionList & JSXBase.HTMLAttributes<HTMLMedAccordionListElement>;
             "med-agrupador": LocalJSX.MedAgrupador & JSXBase.HTMLAttributes<HTMLMedAgrupadorElement>;
             "med-alternativas": LocalJSX.MedAlternativas & JSXBase.HTMLAttributes<HTMLMedAlternativasElement>;
+            "med-alternativas-a": LocalJSX.MedAlternativasA & JSXBase.HTMLAttributes<HTMLMedAlternativasAElement>;
+            "med-alternativas-b": LocalJSX.MedAlternativasB & JSXBase.HTMLAttributes<HTMLMedAlternativasBElement>;
             "med-autocomplete": LocalJSX.MedAutocomplete & JSXBase.HTMLAttributes<HTMLMedAutocompleteElement>;
             "med-avatar": LocalJSX.MedAvatar & JSXBase.HTMLAttributes<HTMLMedAvatarElement>;
             "med-banner": LocalJSX.MedBanner & JSXBase.HTMLAttributes<HTMLMedBannerElement>;
+            "med-caption": LocalJSX.MedCaption & JSXBase.HTMLAttributes<HTMLMedCaptionElement>;
             "med-cartao-resposta-item": LocalJSX.MedCartaoRespostaItem & JSXBase.HTMLAttributes<HTMLMedCartaoRespostaItemElement>;
             "med-cartao-resposta-lista": LocalJSX.MedCartaoRespostaLista & JSXBase.HTMLAttributes<HTMLMedCartaoRespostaListaElement>;
             "med-chart-radial": LocalJSX.MedChartRadial & JSXBase.HTMLAttributes<HTMLMedChartRadialElement>;
             "med-chart-radial-content": LocalJSX.MedChartRadialContent & JSXBase.HTMLAttributes<HTMLMedChartRadialContentElement>;
             "med-chart-radial-label": LocalJSX.MedChartRadialLabel & JSXBase.HTMLAttributes<HTMLMedChartRadialLabelElement>;
+            "med-child": LocalJSX.MedChild & JSXBase.HTMLAttributes<HTMLMedChildElement>;
+            "med-config": LocalJSX.MedConfig & JSXBase.HTMLAttributes<HTMLMedConfigElement>;
             "med-context-menu": LocalJSX.MedContextMenu & JSXBase.HTMLAttributes<HTMLMedContextMenuElement>;
             "med-divider": LocalJSX.MedDivider & JSXBase.HTMLAttributes<HTMLMedDividerElement>;
             "med-enunciado": LocalJSX.MedEnunciado & JSXBase.HTMLAttributes<HTMLMedEnunciadoElement>;
             "med-enunciado-discursiva": LocalJSX.MedEnunciadoDiscursiva & JSXBase.HTMLAttributes<HTMLMedEnunciadoDiscursivaElement>;
             "med-font-zoom": LocalJSX.MedFontZoom & JSXBase.HTMLAttributes<HTMLMedFontZoomElement>;
             "med-header": LocalJSX.MedHeader & JSXBase.HTMLAttributes<HTMLMedHeaderElement>;
+            "med-heading": LocalJSX.MedHeading & JSXBase.HTMLAttributes<HTMLMedHeadingElement>;
             "med-image-zoom": LocalJSX.MedImageZoom & JSXBase.HTMLAttributes<HTMLMedImageZoomElement>;
             "med-item-aulas": LocalJSX.MedItemAulas & JSXBase.HTMLAttributes<HTMLMedItemAulasElement>;
             "med-list": LocalJSX.MedList & JSXBase.HTMLAttributes<HTMLMedListElement>;
@@ -7420,16 +8561,19 @@ declare module "@stencil/core" {
             "med-navbar": LocalJSX.MedNavbar & JSXBase.HTMLAttributes<HTMLMedNavbarElement>;
             "med-offline": LocalJSX.MedOffline & JSXBase.HTMLAttributes<HTMLMedOfflineElement>;
             "med-option": LocalJSX.MedOption & JSXBase.HTMLAttributes<HTMLMedOptionElement>;
+            "med-paragraph": LocalJSX.MedParagraph & JSXBase.HTMLAttributes<HTMLMedParagraphElement>;
+            "med-parent": LocalJSX.MedParent & JSXBase.HTMLAttributes<HTMLMedParentElement>;
             "med-question": LocalJSX.MedQuestion & JSXBase.HTMLAttributes<HTMLMedQuestionElement>;
             "med-rate-bar": LocalJSX.MedRateBar & JSXBase.HTMLAttributes<HTMLMedRateBarElement>;
             "med-rate-like": LocalJSX.MedRateLike & JSXBase.HTMLAttributes<HTMLMedRateLikeElement>;
             "med-rate-result": LocalJSX.MedRateResult & JSXBase.HTMLAttributes<HTMLMedRateResultElement>;
             "med-rating": LocalJSX.MedRating & JSXBase.HTMLAttributes<HTMLMedRatingElement>;
+            "med-subtitle": LocalJSX.MedSubtitle & JSXBase.HTMLAttributes<HTMLMedSubtitleElement>;
+            "med-themes": LocalJSX.MedThemes & JSXBase.HTMLAttributes<HTMLMedThemesElement>;
             "med-tiles": LocalJSX.MedTiles & JSXBase.HTMLAttributes<HTMLMedTilesElement>;
             "med-titulo-materia": LocalJSX.MedTituloMateria & JSXBase.HTMLAttributes<HTMLMedTituloMateriaElement>;
             "med-toolbar": LocalJSX.MedToolbar & JSXBase.HTMLAttributes<HTMLMedToolbarElement>;
             "med-tooltip": LocalJSX.MedTooltip & JSXBase.HTMLAttributes<HTMLMedTooltipElement>;
-            "med-tooltip2": LocalJSX.MedTooltip2 & JSXBase.HTMLAttributes<HTMLMedTooltip2Element>;
             "med-vote": LocalJSX.MedVote & JSXBase.HTMLAttributes<HTMLMedVoteElement>;
             "monta-provas-plusminus": LocalJSX.MontaProvasPlusminus & JSXBase.HTMLAttributes<HTMLMontaProvasPlusminusElement>;
         }

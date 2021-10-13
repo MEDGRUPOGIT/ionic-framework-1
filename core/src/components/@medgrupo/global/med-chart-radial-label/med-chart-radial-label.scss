@@ -1,4 +1,9 @@
-@import "../../../../../med-components/abstracts";
+@import "../../../../../templarios/abstracts";
+
+:host {
+  --font-size-item: var(--med-font-size-nano);
+  --font-size-quantia: var(--med-font-size-md);
+}
 
 :host(.med-chart-radial-label) {
   display: inline-block;
@@ -9,23 +14,30 @@
   }
 
   .med-chart-radial-label__item {
-    font-size: $med-font-size-nano;
-    line-height: $med-line-height-compressed;
-    color: var(--med-color-neutral-5);
+    font-size: var(--font-size-item);
+    line-height: var(--med-line-height-compressed);
+    color: color('neutral', '5');
     display: flex;
     align-items: center;
-    font-weight: $med-font-weight-bold;
+    font-weight: var(--med-font-weight-bold);
+    min-width: 3ch;
+    text-align: right;
 
     &:not(:last-of-type) {
-      padding-bottom: $med-spacing-stack-xxxs;
+      padding-bottom: var(--med-spacing-stack-xxxs);
     }
   }
 
   .med-chart-radial-label__quantia {
-    font-size: $med-font-size-md;
-    line-height: $med-line-height-compressed;
-    margin-right: $med-spacing-inline-xxxs;
-    color: var(--med-color-3);
-    font-weight: $med-font-weight-bold;
+    font-size: var(--font-size-quantia);
+    line-height: var(--med-line-height-compressed);
+    margin-right: var(--med-spacing-inline-xxxs);
+    color: hsl(var(--med-color-feedback));
+    font-weight: var(--med-font-weight-bold);
   }
+}
+
+:host(.med-chart-radial-label--lg) {
+  --font-size-item: var(--med-font-size-xs);
+  --font-size-quantia: var(--med-font-size-lg);
 }

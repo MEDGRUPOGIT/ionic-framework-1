@@ -1,7 +1,7 @@
 import { Component, Host, h, Prop } from '@stencil/core';
 import { MedChartRadiaItem } from './med-chart-radial-interface';
-import { createColorClasses } from '../../../../utils/theme';
-import { Color } from '../../../../interface';
+import { MedColor } from '../../../../interface';
+import { generateMedColor } from '../../../../utils/med-theme';
 
 @Component({
   tag: 'med-chart-radial',
@@ -11,18 +11,27 @@ import { Color } from '../../../../interface';
 export class MedChartRadial {
 
   /**
-
-   */
-   @Prop() color?: Color;
+    * Define a cor do componente.
+    */
+  @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
    * Define a variação do componente.
    */
   @Prop() dsName?: string;
 
+  /**
+   * Define a variação de tamanho do componente.
+   */
+  @Prop() dsSize?: 'lg';
+
+  /**
+   * Define os valores do gráfico
+   */
   @Prop({reflect: true}) valores: MedChartRadiaItem[] = [];
 
-  private getTotal() {
+  render() {
+    const { dsName, dsColor, dsSize } = this;
     const totais = {
       total: 0,
       subtotais: [] as number[]
@@ -31,27 +40,23 @@ export class MedChartRadial {
     this.valores.forEach((item: MedChartRadiaItem) => {
       totais.total += item.quantia;
       totais.subtotais.push(totais.total);
-    })
+    });
 
-    return totais;
-  }
-
-  render() {
-    const totais = this.getTotal();
-    const { dsName, color } = this;
+    const arrayReverse = this.valores.slice(0).reverse();
 
     return (
-      <Host from-stencil
-        class={createColorClasses(color, {
+      <Host
+        from-stencil
+        class={generateMedColor(dsColor, {
           'med-chart-radial': true,
           [`med-chart-radial--${dsName}`]: dsName !== undefined,
-        }, null)}>
+          [`med-chart-radial--${dsSize}`]: dsSize !== undefined,
+        })}>
         <svg viewBox="0 0 36 36">
           <circle cx="18" cy="18" r="16" />
           {
-            this.valores.reverse().map((item: MedChartRadiaItem, index: number) => {
+            arrayReverse.map((item: MedChartRadiaItem, index: number) => {
               const subtotalIndex = this.valores.length - index - 1;
-
               if (!item.ignoreBarra && item.quantia !== 0) {
                 return <circle cx="18" cy="18" r="16"
                   class={{'size': true, [item.cor]: true}}
@@ -63,7 +68,7 @@ export class MedChartRadial {
             })
           }
         </svg>
-        {dsName === "simple" && <div class="med-chart-radial__percent">10%</div>}
+        {dsName === "secondary" && <div class="med-chart-radial__percent">10%</div>}
       </Host>
     );
   }

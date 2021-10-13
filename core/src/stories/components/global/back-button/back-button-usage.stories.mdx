@@ -1,0 +1,114 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Components/Core/Back Button/Usage" />
+
+# Button
+
+Documentação auxiliar ion-button: **https://ionicframework.com/docs/api/button**
+
+## Default
+
+### Propriedades
+
+| Propriedade  | Atributo     | Descrição                                   | Tipo                                                                                                              | Default       |
+| ------------ | ------------ | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------- |
+| **dsColor**  | **ds-color** | Define a cor do componente.                 | **[MedColor](http://desenv.ordomederi.com/templarios/?path=/story/enums-enums--page#medcolors)** \| **undefined** | **undefined** |
+| **dsName**   | **ds-name**  | Define a variação do componente.            | **"secondary"** \| **"tertiary"** \| **undefined**                                                                | **undefined** |
+| **dsSize**   | **ds-size**  | Define a variação de tamanho do componente. | **"xxxs"** \| **"xxs"** \| **"xs"** \| **"sm"** \| **undefined**                                                  | **undefined** |
+| **expand**   | **expand**   | Define a variação de tamanho do componente. | **"full"** \| **"block"** \| **undefined**                                                                        | **undefined** |
+
+## Secondary
+
+### Propriedades
+
+| Propriedade  | Atributo     | Descrição                                   | Tipo                                                                                                              | Default       |
+| ------------ | ------------ | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------- |
+| **dsColor**  | **ds-color** | Define a cor do componente.                 | **[MedColor](http://desenv.ordomederi.com/templarios/?path=/story/enums-enums--page#medcolors)** \| **undefined** | **undefined** |
+| **dsName**   | **ds-name**  | Define a variação do componente.            | **"secondary"** \| **"tertiary"** \| **undefined**                                                                | **undefined** |
+| **dsSize**   | **ds-size**  | Define a variação de tamanho do componente. | **"xxxs"** \| **"xxs"** \| **"xs"** \| **"sm"** \| **undefined**                                                  | **undefined** |
+| **expand**   | **expand**   | Define a variação de tamanho do componente. | **"full"** \| **"block"** \| **undefined**                                                                        | **undefined** |
+
+## Tertirary
+
+### Propriedades
+
+| Propriedade  | Atributo     | Descrição                                   | Tipo                                                                                                              | Default       |
+| ------------ | ------------ | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------- |
+| **dsColor**  | **ds-color** | Define a cor do componente.                 | **[MedColor](http://desenv.ordomederi.com/templarios/?path=/story/enums-enums--page#medcolors)** \| **undefined** | **undefined** |
+| **dsName**   | **ds-name**  | Define a variação do componente.            | **"secondary"** \| **"tertiary"** \| **undefined**                                                                | **undefined** |
+| **dsSize**   | **ds-size**  | Define a variação de tamanho do componente. | **"xs"** \| **"sm"** \| **"md"**  \| **"lg"** \| **undefined**                                                    | **undefined** |
+
+### Propriedades slot="icon-only"
+
+| Propriedade  | Atributo     | Descrição                                   | Tipo                                                                                                              | Default       |
+| ------------ | ------------ | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------- |
+| **dsSize**   | **ds-size**  | Define a variação de tamanho do componente. | **"xxxs"** \| **"xxs"** \| **"xs"** \| **"sm"** \| **undefined**                                                  | **undefined** |
+
+## Default
+
+```
+<ion-button>button</ion-button>
+<ion-button ds-color="brand">button</ion-button>
+<ion-button ds-size="md">button</ion-button>
+<ion-button expand>button</ion-button>
+
+<ion-button>
+  <ion-icon slot="start" class="med-icon" name="med-setaesquerda"></ion-icon>
+  button
+</ion-button>
+
+<ion-button>
+  <ion-icon slot="end" class="med-icon" name="med-setaesquerda"></ion-icon>
+  button
+</ion-button>
+
+<ion-button>
+  <ion-icon slot="icon-only" class="med-icon" name="med-setaesquerda"></ion-icon>
+</ion-button>
+```
+
+## Secondary
+
+```
+<ion-button ds-name="secondary">button</ion-button>
+<ion-button ds-name="secondary" ds-color="brand">button</ion-button>
+<ion-button ds-name="secondary" ds-size="md">button</ion-button>
+<ion-button ds-name="secondary" expand>button</ion-button>
+
+<ion-button ds-name="secondary">
+  <ion-icon slot="start" class="med-icon" name="med-setaesquerda"></ion-icon>
+  button
+</ion-button>
+
+<ion-button>
+  <ion-icon slot="end" class="med-icon" name="med-setaesquerda"></ion-icon>
+  button
+</ion-button>
+
+<ion-button ds-name="secondary">
+  <ion-icon slot="icon-only" class="med-icon" name="med-setaesquerda"></ion-icon>
+</ion-button>
+```
+
+## Tertiary
+
+```
+<ion-button ds-name="tertiary">button</ion-button>
+<ion-button ds-name="tertiary" ds-color="brand">button</ion-button>
+<ion-button ds-name="tertiary" ds-size="md">button</ion-button>
+<ion-button ds-name="tertiary" expand>button</ion-button>
+
+<ion-button ds-name="tertiary">
+  <ion-icon slot="start" class="med-icon" name="med-setaesquerda"></ion-icon>
+  button
+</ion-button>
+
+<ion-button>
+  <ion-icon slot="end" class="med-icon" name="med-setaesquerda"></ion-icon>
+  button
+</ion-button>
+
+<ion-button ds-name="tertiary">
+  <ion-icon slot="icon-only" class="med-icon" name="med-setaesquerda"></ion-icon>
+</ion-button>
+```

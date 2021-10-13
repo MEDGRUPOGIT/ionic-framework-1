@@ -8,6 +8,10 @@ import { headerResizeEventDetail } from './med-header-interface';
 })
 export class MedHeader {
   @Element() el!: HTMLElement;
+
+  /**
+   * TODO
+   */
   @Event() medResize!: EventEmitter<headerResizeEventDetail>;
 
   private hostHeight = 0;
@@ -42,6 +46,7 @@ export class MedHeader {
         <slot name="navbar"></slot>
         <slot name="toolbar"></slot>
         <slot name="progress"></slot>
+        <slot name="auxiliar"></slot>
       </Host>
     );
   }

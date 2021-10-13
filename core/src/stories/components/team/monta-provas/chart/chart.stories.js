@@ -25,7 +25,7 @@ const TemplateDefault = ({valores}) => {
         font-size: var(--med-font-size-xs);
         font-weight: var(--med-font-weight-semibold);
         line-height: var(--med-line-height-default);
-        color: var(--med-color-neutral-10);
+        color: hsl(var(--med-color-neutral-10));
         margin: 0;
         padding: 0;
         width: 100%;
@@ -33,7 +33,7 @@ const TemplateDefault = ({valores}) => {
       }
 
       .monta-provas-chart {
-        background: var(--med-color-neutral-2);
+        background: hsl(var(--med-color-neutral-2));
         padding: 0 var(--med-spacing-stretch-md);
         display: flex;
         justify-content: space-evenly;
@@ -62,7 +62,7 @@ const TemplateDefault = ({valores}) => {
         margin-bottom: var(--med-spacing-stack-base);
         font-size: var(--med-font-size-xs);
         line-height: var(--med-line-height-compressed);
-        color: var(--med-color-neutral-3);
+        color: hsl(var(--med-color-neutral-3));
         display: flex;
         align-items: center;
         transition: color 300ms ease-out;
@@ -70,12 +70,12 @@ const TemplateDefault = ({valores}) => {
       }
 
       .med-context-menu__item:hover {
-        color: var(--med-color-neutral-1);
+        color: hsl(var(--med-color-neutral-1));
       }
 
       .med-context-menu__icon {
         padding-right: var(--med-spacing-inline-xxxs);
-        stroke: var(--med-color-neutral-3);
+        stroke: hsl(var(--med-color-neutral-3));
       }
 
       .med-context-menu__info {
@@ -83,7 +83,7 @@ const TemplateDefault = ({valores}) => {
         margin: 0;
         font-size: var(--med-font-size-xs);
         line-height: var(--med-line-height-compressed);
-        color: var(--med-color-neutral-5);
+        color: hsl(var(--med-color-neutral-5));
         padding: var(--med-spacing-inset-xs);
         text-align: center;
       }
@@ -118,11 +118,11 @@ const TemplateDefault = ({valores}) => {
             </med-context-menu>
 
             <div class="monta-provas-chart" slot="content">
-              <med-chart-radial>
-                <med-chart-radial-content class="monta-provas-chart-content" total="999999"></med-chart-radial-content>
+              <med-chart-radial >
+                <med-chart-radial-content class="monta-provas-chart-content" total="999999" ></med-chart-radial-content>
               </med-chart-radial>
 
-              <med-chart-radial-label class="monta-provas-chart__label"></med-chart-radial-label>
+              <med-chart-radial-label class="monta-provas-chart__label" ></med-chart-radial-label>
             </div>
           </med-accordion-item>
         </med-accordion-list>
@@ -145,21 +145,21 @@ Chart.argTypes = {
     defaultValue: {
       valores: [
         {
-          cor: 'ion-color-success',
+          cor: 'med-color-fb-success',
           label: 'Acertos',
-          quantia: 32,
+          quantia: 50,
           ignoreBarra: false,
         },
         {
-          cor: 'ion-color-caution',
+          cor: 'med-color-fb-warning',
           label: 'Erros',
-          quantia: 16,
+          quantia: 50,
           ignoreBarra: false,
         },
         {
           cor: '',
           label: 'Restantes',
-          quantia: 52,
+          quantia: 0,
           ignoreBarra: true,
         }
       ],
