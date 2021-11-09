@@ -38,9 +38,11 @@ export class MedAccordionItem implements ComponentInterface {
   @Prop({ reflect: true }) background = false;
 
   /**
-   * TODO
+   * Internal
    */
   @Event() toggle!: EventEmitter;
+
+  @Event() opened!: EventEmitter;
 
   @State() isOpen = false;
 
@@ -60,6 +62,7 @@ export class MedAccordionItem implements ComponentInterface {
     }
 
     this.isOpen = !this.isOpen;
+    this.opened.emit(this.isOpen);
     this.isTransitioning = true;
 
     this.toggle.emit({
@@ -75,16 +78,16 @@ export class MedAccordionItem implements ComponentInterface {
       },
       setClosed: () => {
         this.isOpen = false;
+        this.opened.emit(this.isOpen);
       },
     });
   }
 
   render() {
-    const { dsColor, noBorder, icon, isOpen, background } = this;
+    const { dsColor, noBorder, isOpen, background } = this;
 
     return (
       <Host
-        from-stencil
         class={generateMedColor(dsColor, {
           'med-accordion-item': true,
           'med-accordion-item--no-border': noBorder,
@@ -92,25 +95,15 @@ export class MedAccordionItem implements ComponentInterface {
           'med-accordion-item--background': background,
         })}>
         <div class="med-accordion-item__header" ref={(el) => this.header = el as HTMLDivElement}>
-          <div class="med-accordion-item__header-container">
-            {icon === 'left' && <div class="med-accordion-item__icon-container med-accordion-item__icon-container--left" onClick={() => this.onClick()}>
-              <ion-icon class="med-icon med-accordion-item__icon" name="med-baixo"></ion-icon>
-            </div>}
 
-            <div class="med-accordion-item__heading" onClick={() => this.onClick()}>
-              <slot name="header"></slot>
-              <slot name="auxiliar"></slot>
-            </div>
-
-            <slot name="button"></slot>
-
-            {(!icon || icon === 'right') && <div class="med-accordion-item__icon-container med-accordion-item__icon-container--right" onClick={() => this.onClick()}>
-              <ion-icon class="med-icon med-accordion-item__icon" name="med-baixo"></ion-icon>
-            </div>}
+          <div class="med-accordion-item__header-container" onClick={() => this.onClick()}>
+            <slot name="start"></slot>
+            <slot name="middle"></slot>
+            <slot name="end"></slot>
           </div>
 
-          <div class="med-accordion-item__bar">
-            <slot name="progress"></slot>
+          <div>
+            <slot name="auxiliar"></slot>
           </div>
         </div>
 

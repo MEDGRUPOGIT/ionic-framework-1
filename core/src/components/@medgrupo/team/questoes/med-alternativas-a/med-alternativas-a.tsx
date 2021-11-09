@@ -162,13 +162,16 @@ export class MedAlternativasA implements MedAlternativasInternoInterface {
                       <div class={`image-container ${alternativa[this.keyEnunciado] ? 'image-container--margin' : ''}`} onClick={(event) => this.baseClass.imageRequest(event, alternativa)}>
                         <div class='image-container__wrapper'>
                           <img class='image-container__image' src={alternativa[this.keyImagem]} />
-
-                          <div class='image-container__button'>
-                            <ion-icon name="med-expand image-container__icon"></ion-icon>
-                          </div>
                         </div>
                       </div>
                     }
+
+                    <ion-progress-bar percentage class={`
+                      med-alternativas__progress-bar
+                      ${mostraResposta && alternativaSelecionada ? 'med-alternativas__progress-bar--toggle' : ''}
+                    `}
+                      value={alternativa[this.keyPorcentagem]}>
+                    </ion-progress-bar>
                   </div>
                   <div class={`med-alternativas__riscar ${indice === this.riscarAtivoIndice && permiteRiscar ? 'med-alternativas__riscar--show' : ''}`}
                     onClick={(event) => { this.baseClass.riscar(event, alternativa) }}>
@@ -181,12 +184,7 @@ export class MedAlternativasA implements MedAlternativasInternoInterface {
                 </div>
               </div>
 
-              <ion-progress-bar percentage class={`
-                med-alternativas__progress-bar
-                ${mostraResposta && alternativaSelecionada ? 'med-alternativas__progress-bar--toggle' : ''}
-              `}
-                value={alternativa[this.keyPorcentagem]}>
-              </ion-progress-bar>
+
             </div>
           ))}
 

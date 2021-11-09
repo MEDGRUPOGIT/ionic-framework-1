@@ -8,23 +8,39 @@
   --icon-color: #{color('neutral', '10')};
   --cancel-button-color: #{color('brand', '3')};
   --placeholder-opacity: 1;
+  --padding-left: 30px;
+  --clear-button-color: #{color('neutral', '5')};
+  --icon-size: 24px;
+  --padding-left-icon: 0;
 
   // templarios
   --spacing: var(--med-spacing-inset-xs);
 
   padding: var(--spacing);
-  height: 40px;
+  height: 45px;
 
   .searchbar-input {
-    padding-inline-start: 30px + var(--med-spacing-inline-nano) !important;
+    padding-inline-start: calc(var(--padding-left) + var(--med-spacing-inline-nano)) !important;
     font-size: var(--med-font-size-xs);
     font-weight: var(--med-font-weight-regular);
     line-height: var(--med-line-height-compressed);
   }
 
   .searchbar-search-icon {
-    width: 24px;
-    stroke: var(--color);
+    width: var(--icon-size);
+    stroke: var(--icon-color);
+  }
+
+  .searchbar-input-container.sc-ion-searchbar-ios {
+    height: 45px;
+  }
+
+  .searchbar-search-icon.sc-ion-searchbar-ios {
+    margin-inline-start: var(--padding-left-icon);
+  }
+
+  .searchbar-clear-button.sc-ion-searchbar-ios {
+    width: 45px;
   }
 }
 

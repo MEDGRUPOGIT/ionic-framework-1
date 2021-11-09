@@ -199,10 +199,6 @@ export namespace Components {
          */
         "routerAnimation": AnimationBuilder | undefined;
         /**
-          * Define a cor do componente.
-         */
-        "solid": boolean;
-        /**
           * The text to display in the back button.
          */
         "text"?: string | null;
@@ -269,7 +265,7 @@ export namespace Components {
          */
         "dsColor"?: MedColor;
         /**
-          * Define a variação solida de background do componente.
+          * Define a variação do componente.
          */
         "dsName"?: 'secondary' | 'tertiary';
         /**
@@ -2242,6 +2238,10 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * The interface the select should use: `action-sheet`, `popover` or `alert`.
          */
         "interface": SelectInterface;
@@ -2889,7 +2889,7 @@ export namespace Components {
          */
         "dsColor"?: MedColor;
         /**
-          * TODO
+          * Define o estado do componente programaticamente.
          */
         "toggle": (event?: Event | undefined) => Promise<void>;
     }
@@ -3053,7 +3053,7 @@ export namespace Components {
     }
     interface MedAutocomplete {
         /**
-          * TODO
+          * A lista de items a ser renderizada.
          */
         "list": boolean;
     }
@@ -3077,17 +3077,35 @@ export namespace Components {
     }
     interface MedBanner {
         /**
-          * TODO
+          * Define o texto do botão esquerdo, se existir.
          */
         "btnLeft": string;
         /**
-          * TODO
+          * Define o texto do botão direito.
          */
         "btnRight": string;
         /**
-          * TODO
+          * Define o título do banner.
          */
         "header": string;
+    }
+    interface MedBase {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a borda do componente.
+         */
+        "radius"?: string | undefined;
+        /**
+          * Define a borda do componente.
+         */
+        "spacingH"?: string | undefined;
+        /**
+          * Define a borda do componente.
+         */
+        "spacingV"?: string | undefined;
     }
     interface MedCaption {
         /**
@@ -3207,6 +3225,28 @@ export namespace Components {
           * Define o texto do componente.
          */
         "text": string;
+    }
+    interface MedDownloadButton {
+        /**
+          * Define o estado do componente.
+         */
+        "downloaded": boolean;
+        /**
+          * Define o estado do componente.
+         */
+        "downloading": boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define o estado do componente programaticamente.
+         */
+        "toggle": (event?: Event | undefined) => Promise<void>;
+        /**
+          * Define o valor da progress bar do componente.
+         */
+        "value": number;
     }
     interface MedEnunciado {
         /**
@@ -3448,6 +3488,16 @@ export namespace Components {
          */
         "toggle": (event?: Event | undefined) => Promise<void>;
     }
+    interface MedRateAula {
+        /**
+          * Define o estado do componente.
+         */
+        "collapsed": boolean;
+        /**
+          * Define o estado do componente programaticamente.
+         */
+        "toggle": (event?: Event | undefined) => Promise<void>;
+    }
     interface MedRateBar {
         /**
           * Define a cor do componente.
@@ -3611,6 +3661,20 @@ export namespace Components {
           * TODO
          */
         "toggle": (event?: Event | undefined) => Promise<void>;
+    }
+    interface MedVideoThumbnail {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a url do componente.
+         */
+        "url"?: string;
+        /**
+          * Define o valor da progress bar do componente.
+         */
+        "value": number;
     }
     interface MedVote {
         /**
@@ -4214,6 +4278,12 @@ declare global {
         prototype: HTMLMedBannerElement;
         new (): HTMLMedBannerElement;
     };
+    interface HTMLMedBaseElement extends Components.MedBase, HTMLStencilElement {
+    }
+    var HTMLMedBaseElement: {
+        prototype: HTMLMedBaseElement;
+        new (): HTMLMedBaseElement;
+    };
     interface HTMLMedCaptionElement extends Components.MedCaption, HTMLStencilElement {
     }
     var HTMLMedCaptionElement: {
@@ -4273,6 +4343,12 @@ declare global {
     var HTMLMedDividerElement: {
         prototype: HTMLMedDividerElement;
         new (): HTMLMedDividerElement;
+    };
+    interface HTMLMedDownloadButtonElement extends Components.MedDownloadButton, HTMLStencilElement {
+    }
+    var HTMLMedDownloadButtonElement: {
+        prototype: HTMLMedDownloadButtonElement;
+        new (): HTMLMedDownloadButtonElement;
     };
     interface HTMLMedEnunciadoElement extends Components.MedEnunciado, HTMLStencilElement {
     }
@@ -4382,6 +4458,12 @@ declare global {
         prototype: HTMLMedQuestionElement;
         new (): HTMLMedQuestionElement;
     };
+    interface HTMLMedRateAulaElement extends Components.MedRateAula, HTMLStencilElement {
+    }
+    var HTMLMedRateAulaElement: {
+        prototype: HTMLMedRateAulaElement;
+        new (): HTMLMedRateAulaElement;
+    };
     interface HTMLMedRateBarElement extends Components.MedRateBar, HTMLStencilElement {
     }
     var HTMLMedRateBarElement: {
@@ -4441,6 +4523,12 @@ declare global {
     var HTMLMedTooltipElement: {
         prototype: HTMLMedTooltipElement;
         new (): HTMLMedTooltipElement;
+    };
+    interface HTMLMedVideoThumbnailElement extends Components.MedVideoThumbnail, HTMLStencilElement {
+    }
+    var HTMLMedVideoThumbnailElement: {
+        prototype: HTMLMedVideoThumbnailElement;
+        new (): HTMLMedVideoThumbnailElement;
     };
     interface HTMLMedVoteElement extends Components.MedVote, HTMLStencilElement {
     }
@@ -4551,6 +4639,7 @@ declare global {
         "med-autocomplete": HTMLMedAutocompleteElement;
         "med-avatar": HTMLMedAvatarElement;
         "med-banner": HTMLMedBannerElement;
+        "med-base": HTMLMedBaseElement;
         "med-caption": HTMLMedCaptionElement;
         "med-cartao-resposta-item": HTMLMedCartaoRespostaItemElement;
         "med-cartao-resposta-lista": HTMLMedCartaoRespostaListaElement;
@@ -4561,6 +4650,7 @@ declare global {
         "med-config": HTMLMedConfigElement;
         "med-context-menu": HTMLMedContextMenuElement;
         "med-divider": HTMLMedDividerElement;
+        "med-download-button": HTMLMedDownloadButtonElement;
         "med-enunciado": HTMLMedEnunciadoElement;
         "med-enunciado-discursiva": HTMLMedEnunciadoDiscursivaElement;
         "med-font-zoom": HTMLMedFontZoomElement;
@@ -4579,6 +4669,7 @@ declare global {
         "med-paragraph": HTMLMedParagraphElement;
         "med-parent": HTMLMedParentElement;
         "med-question": HTMLMedQuestionElement;
+        "med-rate-aula": HTMLMedRateAulaElement;
         "med-rate-bar": HTMLMedRateBarElement;
         "med-rate-like": HTMLMedRateLikeElement;
         "med-rate-result": HTMLMedRateResultElement;
@@ -4589,6 +4680,7 @@ declare global {
         "med-titulo-materia": HTMLMedTituloMateriaElement;
         "med-toolbar": HTMLMedToolbarElement;
         "med-tooltip": HTMLMedTooltipElement;
+        "med-video-thumbnail": HTMLMedVideoThumbnailElement;
         "med-vote": HTMLMedVoteElement;
         "monta-provas-plusminus": HTMLMontaProvasPlusminusElement;
     }
@@ -4770,10 +4862,6 @@ declare namespace LocalJSX {
          */
         "routerAnimation"?: AnimationBuilder | undefined;
         /**
-          * Define a cor do componente.
-         */
-        "solid"?: boolean;
-        /**
           * The text to display in the back button.
          */
         "text"?: string | null;
@@ -4844,7 +4932,7 @@ declare namespace LocalJSX {
          */
         "dsColor"?: MedColor;
         /**
-          * Define a variação solida de background do componente.
+          * Define a variação do componente.
          */
         "dsName"?: 'secondary' | 'tertiary';
         /**
@@ -6824,6 +6912,10 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
           * The interface the select should use: `action-sheet`, `popover` or `alert`.
          */
         "interface"?: SelectInterface;
@@ -7469,8 +7561,9 @@ declare namespace LocalJSX {
           * Define a variação da borda do componente.
          */
         "noBorder"?: boolean;
+        "onOpened"?: (event: CustomEvent<any>) => void;
         /**
-          * TODO
+          * Internal
          */
         "onToggle"?: (event: CustomEvent<any>) => void;
     }
@@ -7694,7 +7787,7 @@ declare namespace LocalJSX {
     }
     interface MedAutocomplete {
         /**
-          * TODO
+          * A lista de items a ser renderizada.
          */
         "list"?: boolean;
     }
@@ -7718,25 +7811,43 @@ declare namespace LocalJSX {
     }
     interface MedBanner {
         /**
-          * TODO
+          * Define o texto do botão esquerdo, se existir.
          */
         "btnLeft": string;
         /**
-          * TODO
+          * Define o texto do botão direito.
          */
         "btnRight": string;
         /**
-          * TODO
+          * Define o título do banner.
          */
         "header": string;
         /**
-          * TODO
+          * Define o texto texto do botão direito, se existir.
          */
         "onBtnLeftClick"?: (event: CustomEvent<void>) => void;
         /**
-          * TODO
+          * Emitido quando é feito um click no botão direito.
          */
         "onBtnRightClick"?: (event: CustomEvent<void>) => void;
+    }
+    interface MedBase {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a borda do componente.
+         */
+        "radius"?: string | undefined;
+        /**
+          * Define a borda do componente.
+         */
+        "spacingH"?: string | undefined;
+        /**
+          * Define a borda do componente.
+         */
+        "spacingV"?: string | undefined;
     }
     interface MedCaption {
         /**
@@ -7852,6 +7963,24 @@ declare namespace LocalJSX {
           * Define o texto do componente.
          */
         "text": string;
+    }
+    interface MedDownloadButton {
+        /**
+          * Define o estado do componente.
+         */
+        "downloaded"?: boolean;
+        /**
+          * Define o estado do componente.
+         */
+        "downloading"?: boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define o valor da progress bar do componente.
+         */
+        "value"?: number;
     }
     interface MedEnunciado {
         /**
@@ -8101,6 +8230,12 @@ declare namespace LocalJSX {
          */
         "texto"?: string;
     }
+    interface MedRateAula {
+        /**
+          * Define o estado do componente.
+         */
+        "collapsed"?: boolean;
+    }
     interface MedRateBar {
         /**
           * Define a cor do componente.
@@ -8269,6 +8404,20 @@ declare namespace LocalJSX {
          */
         "titulo"?: string;
     }
+    interface MedVideoThumbnail {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a url do componente.
+         */
+        "url"?: string;
+        /**
+          * Define o valor da progress bar do componente.
+         */
+        "value"?: number;
+    }
     interface MedVote {
         /**
           * Define o conteúdo de texto do componente.
@@ -8394,6 +8543,7 @@ declare namespace LocalJSX {
         "med-autocomplete": MedAutocomplete;
         "med-avatar": MedAvatar;
         "med-banner": MedBanner;
+        "med-base": MedBase;
         "med-caption": MedCaption;
         "med-cartao-resposta-item": MedCartaoRespostaItem;
         "med-cartao-resposta-lista": MedCartaoRespostaLista;
@@ -8404,6 +8554,7 @@ declare namespace LocalJSX {
         "med-config": MedConfig;
         "med-context-menu": MedContextMenu;
         "med-divider": MedDivider;
+        "med-download-button": MedDownloadButton;
         "med-enunciado": MedEnunciado;
         "med-enunciado-discursiva": MedEnunciadoDiscursiva;
         "med-font-zoom": MedFontZoom;
@@ -8422,6 +8573,7 @@ declare namespace LocalJSX {
         "med-paragraph": MedParagraph;
         "med-parent": MedParent;
         "med-question": MedQuestion;
+        "med-rate-aula": MedRateAula;
         "med-rate-bar": MedRateBar;
         "med-rate-like": MedRateLike;
         "med-rate-result": MedRateResult;
@@ -8432,6 +8584,7 @@ declare namespace LocalJSX {
         "med-titulo-materia": MedTituloMateria;
         "med-toolbar": MedToolbar;
         "med-tooltip": MedTooltip;
+        "med-video-thumbnail": MedVideoThumbnail;
         "med-vote": MedVote;
         "monta-provas-plusminus": MontaProvasPlusminus;
     }
@@ -8536,6 +8689,7 @@ declare module "@stencil/core" {
             "med-autocomplete": LocalJSX.MedAutocomplete & JSXBase.HTMLAttributes<HTMLMedAutocompleteElement>;
             "med-avatar": LocalJSX.MedAvatar & JSXBase.HTMLAttributes<HTMLMedAvatarElement>;
             "med-banner": LocalJSX.MedBanner & JSXBase.HTMLAttributes<HTMLMedBannerElement>;
+            "med-base": LocalJSX.MedBase & JSXBase.HTMLAttributes<HTMLMedBaseElement>;
             "med-caption": LocalJSX.MedCaption & JSXBase.HTMLAttributes<HTMLMedCaptionElement>;
             "med-cartao-resposta-item": LocalJSX.MedCartaoRespostaItem & JSXBase.HTMLAttributes<HTMLMedCartaoRespostaItemElement>;
             "med-cartao-resposta-lista": LocalJSX.MedCartaoRespostaLista & JSXBase.HTMLAttributes<HTMLMedCartaoRespostaListaElement>;
@@ -8546,6 +8700,7 @@ declare module "@stencil/core" {
             "med-config": LocalJSX.MedConfig & JSXBase.HTMLAttributes<HTMLMedConfigElement>;
             "med-context-menu": LocalJSX.MedContextMenu & JSXBase.HTMLAttributes<HTMLMedContextMenuElement>;
             "med-divider": LocalJSX.MedDivider & JSXBase.HTMLAttributes<HTMLMedDividerElement>;
+            "med-download-button": LocalJSX.MedDownloadButton & JSXBase.HTMLAttributes<HTMLMedDownloadButtonElement>;
             "med-enunciado": LocalJSX.MedEnunciado & JSXBase.HTMLAttributes<HTMLMedEnunciadoElement>;
             "med-enunciado-discursiva": LocalJSX.MedEnunciadoDiscursiva & JSXBase.HTMLAttributes<HTMLMedEnunciadoDiscursivaElement>;
             "med-font-zoom": LocalJSX.MedFontZoom & JSXBase.HTMLAttributes<HTMLMedFontZoomElement>;
@@ -8564,6 +8719,7 @@ declare module "@stencil/core" {
             "med-paragraph": LocalJSX.MedParagraph & JSXBase.HTMLAttributes<HTMLMedParagraphElement>;
             "med-parent": LocalJSX.MedParent & JSXBase.HTMLAttributes<HTMLMedParentElement>;
             "med-question": LocalJSX.MedQuestion & JSXBase.HTMLAttributes<HTMLMedQuestionElement>;
+            "med-rate-aula": LocalJSX.MedRateAula & JSXBase.HTMLAttributes<HTMLMedRateAulaElement>;
             "med-rate-bar": LocalJSX.MedRateBar & JSXBase.HTMLAttributes<HTMLMedRateBarElement>;
             "med-rate-like": LocalJSX.MedRateLike & JSXBase.HTMLAttributes<HTMLMedRateLikeElement>;
             "med-rate-result": LocalJSX.MedRateResult & JSXBase.HTMLAttributes<HTMLMedRateResultElement>;
@@ -8574,6 +8730,7 @@ declare module "@stencil/core" {
             "med-titulo-materia": LocalJSX.MedTituloMateria & JSXBase.HTMLAttributes<HTMLMedTituloMateriaElement>;
             "med-toolbar": LocalJSX.MedToolbar & JSXBase.HTMLAttributes<HTMLMedToolbarElement>;
             "med-tooltip": LocalJSX.MedTooltip & JSXBase.HTMLAttributes<HTMLMedTooltipElement>;
+            "med-video-thumbnail": LocalJSX.MedVideoThumbnail & JSXBase.HTMLAttributes<HTMLMedVideoThumbnailElement>;
             "med-vote": LocalJSX.MedVote & JSXBase.HTMLAttributes<HTMLMedVoteElement>;
             "monta-provas-plusminus": LocalJSX.MontaProvasPlusminus & JSXBase.HTMLAttributes<HTMLMontaProvasPlusminusElement>;
         }

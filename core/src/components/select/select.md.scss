@@ -19,3 +19,30 @@
 :host-context(.item-label-floating) .select-icon {
   @include transform(translate3d(0, -9px, 0));
 }
+
+@import './select.med.scss';
+
+@import "../../../templarios/abstracts";
+
+:host {
+  --placeholder-color: #{color('brand', '3')};
+  --placeholder-opacity: 1;
+  --padding-top: 8px;
+  --padding-end: 8px;
+  --padding-bottom: 8px;
+  --padding-start: 16px;
+}
+
+:host(.med-select) {
+  background: #{color('neutral', '3')};
+  border-radius: 8px;
+
+  .select-text {
+    color: #{color('brand', '3')};
+    min-width: 70px;
+  }
+
+  .med-select-icon {
+    stroke: #{color('neutral', '10')};
+  }
+}

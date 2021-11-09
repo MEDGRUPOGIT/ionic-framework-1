@@ -3,22 +3,22 @@
 :host {
   --background: #{color('brand', '3')};
   --border-color: #{color('brand', '3')};
-  --color: #{color('brand', 'gradient', 'contrast')};
+  --color: #{color('brand', '3', 'contrast')};
 
   --bg-hover: #{color('brand', '1')};
   --bg-hover-opacity: 1;
   --border-color-hover: transparent;
-  --color-hover: #{color('brand', 'gradient', 'contrast')};
+  --color-hover: #{color('brand', '1', 'contrast')};
 
   --bg-focused: #{color('brand', '1')};
   --bg-focused-opacity: 1;
   --border-color-focused: transparent;
-  --color-focused: #{color('brand', 'gradient', 'contrast')};
+  --color-focused: #{color('brand', '1', 'contrast')};
 
   --bg-activated: transparent;
   --bg-activated-opacity: 0;
   --border-color-activated: transparent;
-  --color-activated: #{color('brand', 'gradient', 'contrast')};
+  --color-activated: #{color('brand', '3', 'contrast')};
 
   --font-size: var(--med-font-size-xxs);
   --font-weight: var(--med-font-weight-semibold);
@@ -78,31 +78,18 @@
 // ion-icon
 // ////////////////////
 
-::slotted(ion-icon) {
+ion-icon {
   min-width: var(--icon-font-size);
   font-size: var(--icon-font-size);
   stroke: var(--color);
   transition: stroke 300ms ease-out;
 }
 
-::slotted(ion-icon[slot="start"]) {
-  margin: 0;
-}
-
-::slotted(ion-icon[slot="end"]) {
-  margin: 0;
-}
-
-::slotted(ion-icon[slot="icon-only"]) {
-  min-width: var(--icon-font-size);
-  font-size: var(--icon-font-size);
-}
-
 // ////////////////////
 // icon-only
 // ////////////////////
 
-:host(.button-has-icon-only) {
+:host(.back-button-has-icon-only) {
   --padding: 0;
   --padding-text: 0;
   --border-radius: var(--med-border-radius-pill);
@@ -121,7 +108,7 @@
   --icon-font-size: 24px;
 }
 
-:host(.med-button--md.button-has-icon-only) {
+:host(.med-button--md.back-button-has-icon-only) {
   --min-height: 48px;
   --min-width: 48px;
   --icon-font-size: 32px;
@@ -133,7 +120,7 @@
   --icon-font-size: 24px;
 }
 
-:host(.med-button--sm.button-has-icon-only) {
+:host(.med-button--sm.back-button-has-icon-only) {
   --min-height: 40px;
   --min-width: 40px;
   --icon-font-size: 24px;
@@ -147,7 +134,7 @@
   --icon-font-size: 16px;
 }
 
-:host(.med-button--xs.button-has-icon-only) {
+:host(.med-button--xs.back-button-has-icon-only) {
   --min-height: 32px;
   --min-width: 32px;
   --icon-font-size: 24px;
@@ -161,7 +148,7 @@
   --icon-font-size: 16px;
 }
 
-:host(.med-button--xxs.button-has-icon-only) {
+:host(.med-button--xxs.back-button-has-icon-only) {
   --min-height: 24px;
   --min-width: 24px;
   --icon-font-size: 16px;
@@ -175,7 +162,7 @@
   --icon-font-size: 8px;
 }
 
-:host(.med-button--xxxs.button-has-icon-only) {
+:host(.med-button--xxxs.back-button-has-icon-only) {
   --min-height: 16px;
   --min-width: 16px;
   --icon-font-size: 8px;

@@ -1,3 +1,5 @@
+@import "../../../templarios/abstracts";
+
 :host(.med-button--secondary) {
   --background: transparent;
   --border-color: #{color('brand', '3')};
@@ -32,7 +34,7 @@
 // icon-only
 // ////////////////////
 
-:host(.button-has-icon-only) {
+:host(.back-button-has-icon-only) {
   --min-height: 48px;
   --min-width: 48px;
   --icon-font-size: 32px;

@@ -82,6 +82,7 @@ export const DIRECTIVES = [
   d.MedAutocomplete,
   d.MedAvatar,
   d.MedBanner,
+  d.MedBase,
   d.MedCaption,
   d.MedCartaoRespostaItem,
   d.MedCartaoRespostaLista,
@@ -92,6 +93,7 @@ export const DIRECTIVES = [
   d.MedConfig,
   d.MedContextMenu,
   d.MedDivider,
+  d.MedDownloadButton,
   d.MedEnunciado,
   d.MedEnunciadoDiscursiva,
   d.MedFontZoom,
@@ -110,6 +112,7 @@ export const DIRECTIVES = [
   d.MedParagraph,
   d.MedParent,
   d.MedQuestion,
+  d.MedRateAula,
   d.MedRateBar,
   d.MedRateLike,
   d.MedRateResult,
@@ -120,6 +123,7 @@ export const DIRECTIVES = [
   d.MedTituloMateria,
   d.MedToolbar,
   d.MedTooltip,
+  d.MedVideoThumbnail,
   d.MedVote,
   d.MontaProvasPlusminus
 ];

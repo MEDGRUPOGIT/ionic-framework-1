@@ -39,7 +39,7 @@ export class Button implements ComponentInterface, AnchorInterface, ButtonInterf
   @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
-    * Define a variação solida de background do componente.
+    * Define a variação do componente.
     */
   @Prop() dsName?: 'secondary' | 'tertiary';
 

@@ -314,11 +314,10 @@ export default defineComponent({
 
 ## CSS Custom Properties
 
-| Name             | Description                          |
-| ---------------- | ------------------------------------ |
-| `--background`   | Background of the chip               |
-| `--border-color` | Define a cor da borda do componente. |
-| `--color`        | Color of the chip                    |
+| Name           | Description            |
+| -------------- | ---------------------- |
+| `--background` | Background of the chip |
+| `--color`      | Color of the chip      |
 
 
 ----------------------------------------------

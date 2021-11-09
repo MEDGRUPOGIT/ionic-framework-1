@@ -5,7 +5,7 @@
 }
 
 :host(.monta-provas-plusminus) {
-  font-size: var(--med-font-size-xxl);
+  font-size: var(--med-font-size-lg);
   font-weight: var(--med-font-weight-bold);
   line-height: var(--med-line-height-compressed);
   color: var(--color);
@@ -34,6 +34,9 @@
 
 :host(.monta-provas-plusminus--xl) {
   font-size: var(--med-font-size-xxxl);
+  .med-icon {
+    font-size: 50px;
+  }
 }
 
 // ////////////////////

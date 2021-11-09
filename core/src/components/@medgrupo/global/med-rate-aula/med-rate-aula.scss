@@ -1,0 +1,187 @@
+@import "../../../../../templarios/abstracts";
+
+
+:host(.med-rate-aula:not(:last-child)) {
+  margin-right: 16px;
+}
+
+:host(.med-rate-aula) {
+  display: flex;
+  position: relative;
+  width: 100%;
+
+  .med-rate-aula__container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    opacity: 0;
+    background: #{color('neutral', '2')};
+    transition: 300ms all ease-in-out;
+  }
+
+  .med-rate-aula__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 16px;
+  }
+
+  .med-rate-aula__button {
+    border: 2px solid ;
+    border-radius: 50%;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+
+    &--otimo {
+      border-color: #{color('feedback', 'success')};
+    }
+
+    &--bom {
+      border-color: #{color('feedback', 'attention')};
+    }
+
+    &--regular {
+      border-color: #{color('feedback', 'caution')};
+    }
+
+    &--ruim {
+      border-color: #{color('feedback', 'warning')};
+    }
+  }
+
+  .med-rate-aula__icon {
+
+    &--otimo {
+      stroke: #{color('feedback', 'success')};
+    }
+
+    &--bom {
+      stroke: #{color('feedback', 'attention')};
+    }
+
+    &--regular {
+      stroke: #{color('feedback', 'caution')};
+    }
+
+    &--ruim {
+      stroke: #{color('feedback', 'warning')};
+    }
+  }
+
+  .med-rate-aula__label {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 4px;
+
+    &--otimo {
+      color: #{color('feedback', 'success')};
+    }
+
+    &--bom {
+      color: #{color('feedback', 'attention')};
+    }
+
+    &--regular {
+      color: #{color('feedback', 'caution')};
+    }
+
+    &--ruim {
+      color: #{color('feedback', 'warning')};
+    }
+  }
+
+  .med-rate-aula__button-fechar {
+    margin-left: auto;
+    margin-right: 16px;
+  }
+
+  .med-rate-aula__end {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .med-rate-aula__icon-abrir {
+    font-size: 38px;
+  }
+}
+
+// ////////////////////
+// state
+// ////////////////////
+
+:host(.med-rate-aula--collapsed) .med-rate-aula__container {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+:host(.med-rate-aula--collapsed) {
+  width: 100%;
+  position: absolute;
+}
+
+:host(.med-rate-aula--collapsed) .med-rate-aula__end {
+  display: none;
+}
+
+  // .med-rate-aula__wrapper-buttons {
+  //   display: flex;
+  //   align-items: center;
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 100%;
+  //   z-index: 1;
+  //   top: 0;
+  //   left: 0;
+  //   transform: translateX(100%);
+  //   opacity: 0;
+  //   background: #{color('neutral', '2')};
+  //   transition: 300ms all ease-in-out;
+  // }
+
+  // .med-rate-aula__wrapper-buttons--collapsed {
+  //   transform: translateX(0);
+  //   opacity: 1;
+  // }
+
+  // .med-rate-aula__button {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   justify-content: center;
+  //   margin-right: 16px;
+  //   &:first-child {
+  //     margin-left: 16px;
+  //   }
+  // }
+
+  // .med-rate-aula__caption {
+  //   margin-top: 4px;
+  // }
+
+  // .med-rate-aula__button-fechar {
+  //   display: flex;
+  //   margin-left: auto;
+  //   margin-right: 16px;
+  // }
+
+  // .med-rate-aula__end {
+  //   margin-left: auto;
+  // }
+
+  // med-base {
+  //   --padding: 16px;
+  //   align-items: center;
+  // }

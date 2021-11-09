@@ -19,7 +19,8 @@
 
 | Event    | Description | Type               |
 | -------- | ----------- | ------------------ |
-| `toggle` | TODO        | `CustomEvent<any>` |
+| `opened` |             | `CustomEvent<any>` |
+| `toggle` | Internal    | `CustomEvent<any>` |
 
 
 ## Slots
@@ -32,29 +33,6 @@
 | `"header"`   | Define o conteúdo do header do componente.                          |
 | `"progress"` | Slot destinado a progress-bar.                                      |
 
-
-## CSS Custom Properties
-
-| Name                   | Description                                         |
-| ---------------------- | --------------------------------------------------- |
-| `--background-content` | Define a cor de background do conteudo componente.  |
-| `--background-header`  | Define a cor de background do header do componente. |
-| `--border-radius`      | Define o border-radius do componente.               |
-| `--icon-color`         | Define a cor de do icone do componente.             |
-
-
-## Dependencies
-
-### Depends on
-
-- ion-icon
-
-### Graph
-```mermaid
-graph TD;
-  med-accordion-item --> ion-icon
-  style med-accordion-item fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

@@ -26,8 +26,8 @@ export class IonAvatar {
 }
 export declare interface IonBackButton extends Components.IonBackButton {
 }
-@ProxyCmp({ inputs: ["color", "defaultHref", "disabled", "dsColor", "dsName", "dsSize", "icon", "mode", "routerAnimation", "solid", "text", "type"] })
-@Component({ selector: "ion-back-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "defaultHref", "disabled", "dsColor", "dsName", "dsSize", "icon", "mode", "routerAnimation", "solid", "text", "type"] })
+@ProxyCmp({ inputs: ["color", "defaultHref", "disabled", "dsColor", "dsName", "dsSize", "icon", "mode", "routerAnimation", "text", "type"] })
+@Component({ selector: "ion-back-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "defaultHref", "disabled", "dsColor", "dsName", "dsSize", "icon", "mode", "routerAnimation", "text", "type"] })
 export class IonBackButton {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -685,8 +685,8 @@ export class IonSegmentButton {
 }
 export declare interface IonSelect extends Components.IonSelect {
 }
-@ProxyCmp({ inputs: ["cancelText", "compareWith", "disabled", "interface", "interfaceOptions", "mode", "multiple", "name", "okText", "placeholder", "selectedText", "value"], "methods": ["open"] })
-@Component({ selector: "ion-select", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["cancelText", "compareWith", "disabled", "interface", "interfaceOptions", "mode", "multiple", "name", "okText", "placeholder", "selectedText", "value"] })
+@ProxyCmp({ inputs: ["cancelText", "compareWith", "disabled", "dsColor", "interface", "interfaceOptions", "mode", "multiple", "name", "okText", "placeholder", "selectedText", "value"], "methods": ["open"] })
+@Component({ selector: "ion-select", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["cancelText", "compareWith", "disabled", "dsColor", "interface", "interfaceOptions", "mode", "multiple", "name", "okText", "placeholder", "selectedText", "value"] })
 export class IonSelect {
   ionChange!: EventEmitter<CustomEvent>;
   ionCancel!: EventEmitter<CustomEvent>;
@@ -887,11 +887,12 @@ export declare interface MedAccordionItem extends Components.MedAccordionItem {
 @Component({ selector: "med-accordion-item", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["background", "dsColor", "icon", "noBorder"] })
 export class MedAccordionItem {
   toggle!: EventEmitter<CustomEvent>;
+  opened!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ["toggle"]);
+    proxyOutputs(this, this.el, ["toggle", "opened"]);
   }
 }
 export declare interface MedAccordionList extends Components.MedAccordionList {
@@ -997,6 +998,17 @@ export class MedBanner {
     proxyOutputs(this, this.el, ["btnLeftClick", "btnRightClick"]);
   }
 }
+export declare interface MedBase extends Components.MedBase {
+}
+@ProxyCmp({ inputs: ["dsColor", "radius", "spacingH", "spacingV"] })
+@Component({ selector: "med-base", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "radius", "spacingH", "spacingV"] })
+export class MedBase {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedCaption extends Components.MedCaption {
 }
 @ProxyCmp({ inputs: ["dsColor", "dsSize"] })
@@ -1100,6 +1112,17 @@ export declare interface MedDivider extends Components.MedDivider {
 @ProxyCmp({ inputs: ["dsColor", "text"] })
 @Component({ selector: "med-divider", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "text"] })
 export class MedDivider {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface MedDownloadButton extends Components.MedDownloadButton {
+}
+@ProxyCmp({ inputs: ["downloaded", "downloading", "dsColor", "value"], "methods": ["toggle"] })
+@Component({ selector: "med-download-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["downloaded", "downloading", "dsColor", "value"] })
+export class MedDownloadButton {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -1309,6 +1332,17 @@ export class MedQuestion {
     this.el = r.nativeElement;
   }
 }
+export declare interface MedRateAula extends Components.MedRateAula {
+}
+@ProxyCmp({ inputs: ["collapsed"], "methods": ["toggle"] })
+@Component({ selector: "med-rate-aula", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed"] })
+export class MedRateAula {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedRateBar extends Components.MedRateBar {
 }
 @ProxyCmp({ inputs: ["dsColor"] })
@@ -1417,6 +1451,17 @@ export declare interface MedTooltip extends Components.MedTooltip {
 @ProxyCmp({ inputs: ["collapsed", "content", "dsColor", "dsName", "placement", "position", "titulo"], "methods": ["toggle"] })
 @Component({ selector: "med-tooltip", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "content", "dsColor", "dsName", "placement", "position", "titulo"] })
 export class MedTooltip {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface MedVideoThumbnail extends Components.MedVideoThumbnail {
+}
+@ProxyCmp({ inputs: ["dsColor", "url", "value"] })
+@Component({ selector: "med-video-thumbnail", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "url", "value"] })
+export class MedVideoThumbnail {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();

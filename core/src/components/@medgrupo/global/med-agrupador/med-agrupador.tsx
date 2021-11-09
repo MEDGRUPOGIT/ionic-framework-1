@@ -15,18 +15,18 @@ export class MedAgrupador {
   @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
-   * Define o estado do componente.
-   */
-   @Prop({ reflect: true, mutable: true }) collapsed = true;
+    * Define o estado do componente.
+    */
+  @Prop({ reflect: true, mutable: true }) collapsed = false;
 
-   /**
-   * TODO
-   */
-   @Method()
-   async toggle(event?: Event) {
-     event?.stopPropagation();
-     this.collapsed = !this.collapsed;
-   }
+  /**
+    * Define o estado do componente programaticamente.
+    */
+  @Method()
+  async toggle(event?: Event) {
+    event?.stopPropagation();
+    this.collapsed = !this.collapsed;
+  }
 
   render() {
     const { dsColor, collapsed } = this;

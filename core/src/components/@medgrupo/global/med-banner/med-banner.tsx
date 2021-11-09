@@ -1,5 +1,9 @@
 import { Component, Host, h, Prop, Event, EventEmitter } from '@stencil/core';
 
+/**
+  * @slot imagem - Posiciona um elemento imagem ou icone a esquerda do banner.
+  * @slot content - Define o conetudo de texto do banner.
+  */
 @Component({
   tag: 'med-banner',
   styleUrl: 'med-banner.scss',
@@ -7,27 +11,27 @@ import { Component, Host, h, Prop, Event, EventEmitter } from '@stencil/core';
 })
 export class MedBanner {
   /**
-   * TODO
+   * Define o título do banner.
    */
   @Prop() header!: string;
 
   /**
-   * TODO
+   * Define o texto do botão esquerdo, se existir.
    */
   @Prop() btnLeft!: string;
 
   /**
-   * TODO
+   * Define o texto do botão direito.
    */
   @Prop() btnRight!: string;
 
   /**
-   * TODO
+   * Define o texto texto do botão direito, se existir.
    */
   @Event() btnLeftClick!: EventEmitter<void>;
 
   /**
-   * TODO
+   * Emitido quando é feito um click no botão direito.
    */
   @Event() btnRightClick!: EventEmitter<void>;
 

@@ -1351,6 +1351,7 @@ export default defineComponent({
 | `cancelText`       | `cancel-text`       | The text to display on the cancel button.                                                                                                                                                                                                                                                                                                                 | `string`                                                                             | `'Cancel'`     |
 | `compareWith`      | `compare-with`      | A property name or function used to compare object values                                                                                                                                                                                                                                                                                                 | `((currentValue: any, compareValue: any) => boolean) \| null \| string \| undefined` | `undefined`    |
 | `disabled`         | `disabled`          | If `true`, the user cannot interact with the select.                                                                                                                                                                                                                                                                                                      | `boolean`                                                                            | `false`        |
+| `dsColor`          | `ds-color`          | Define a cor do componente.                                                                                                                                                                                                                                                                                                                               | `string \| undefined`                                                                | `undefined`    |
 | `interface`        | `interface`         | The interface the select should use: `action-sheet`, `popover` or `alert`.                                                                                                                                                                                                                                                                                | `"action-sheet" \| "alert" \| "popover"`                                             | `'alert'`      |
 | `interfaceOptions` | `interface-options` | Any additional options that the `alert`, `action-sheet` or `popover` interface can take. See the [ion-alert docs](../alert), the [ion-action-sheet docs](../action-sheet) and the [ion-popover docs](../popover) for the create options for each interface.  Note: `interfaceOptions` will not override `inputs` or `buttons` with the `alert` interface. | `any`                                                                                | `{}`           |
 | `mode`             | `mode`              | The mode determines which platform styles to use.                                                                                                                                                                                                                                                                                                         | `"ios" \| "md"`                                                                      | `undefined`    |
@@ -1406,6 +1407,19 @@ Type: `Promise<any>`
 | `--placeholder-color`   | Color of the select placeholder text                                                                      |
 | `--placeholder-opacity` | Opacity of the select placeholder text                                                                    |
 
+
+## Dependencies
+
+### Depends on
+
+- ion-icon
+
+### Graph
+```mermaid
+graph TD;
+  ion-select --> ion-icon
+  style ion-select fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

@@ -4,10 +4,10 @@
 :host {
   --border-width: var(--med-border-width-hairline);
   --border-style: solid;
-  //--border-color: rgba(var(--med-color-neutral-light-prime-rgb), var(--med-opacity-level-light));
-  --border-color: #{color('neutral', '10', null, var(--med-opacity-level-light))};
-  //--color: rgba(var(--med-color-neutral-light-prime-rgb), var(--med-opacity-level-semiopaque));
-  --color: #{color('neutral', '10', null, var(--med-opacity-level-semiopaque))};
+  // --border-color: #{color('neutral', '10', null, var(--med-opacity-level-light))};
+  // --color: #{color('neutral', '10', null, var(--med-opacity-level-semiopaque))};
+  --border-color: #{color('neutral', '8')};
+  --color: #{color('neutral', '8')};
   --spacing: var(--med-spacing-inset-nano);
   --background: transparent;
   --font-size: var(--med-font-size-sm);

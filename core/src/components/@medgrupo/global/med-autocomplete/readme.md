@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type      | Default |
-| -------- | --------- | ----------- | --------- | ------- |
-| `list`   | `list`    | TODO        | `boolean` | `false` |
+| Property | Attribute | Description                         | Type      | Default |
+| -------- | --------- | ----------------------------------- | --------- | ------- |
+| `list`   | `list`    | A lista de items a ser renderizada. | `boolean` | `false` |
 
 
 ## Dependencies

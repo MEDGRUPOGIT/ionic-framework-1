@@ -1,0 +1,182 @@
+@import "../../../../../templarios/abstracts";
+
+:host {
+  display: block;
+  position: relative;
+  padding: 12px;
+  --porcentagem: 0;
+}
+
+:host(.med-download-button) .download-icon {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  //background: #{color('neutral', '1')};
+  fill: transparent;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+
+  &::after, &::before {
+      content: '';
+      position: absolute;
+      transition: .7s;
+  }
+
+  &::after {
+      width: 1px;
+      height: 7px;
+      background: #{color('brand', '4')};
+  }
+
+  &::before {
+      width: 4px;
+      height: 4px;
+      border-bottom: 1px solid #{color('brand', '4')};
+      border-right: 1px solid #{color('brand', '4')};
+      transform: rotate(45deg);
+      z-index: 2;
+  }
+}
+
+:host(.med-download-button) .porcentagem {
+  stroke: #{color('brand', '4')};
+  stroke-dasharray: 100 100;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+// ////////////////////
+// states
+// ////////////////////
+
+:host(.med-download-button.med-download-button--downloading) .download-icon {
+  &::after {
+      background: #{color('neutral', '1')};
+  }
+
+  &::before {
+      width: 5px;
+      height: 5px;
+      left: 6px;
+      top: 5px;
+      border: 0;
+      transform: rotate(0deg);
+      background: #{color('brand', '4')};
+      border-bottom: 1px solid #{color('neutral', '1')};
+      border-right: 1px solid #{color('neutral', '1')};
+  }
+}
+
+:host(.med-download-button.med-download-button--downloading) .porcentagem {
+  stroke-dasharray: var(--porcentagem) 100;
+}
+
+:host(.med-download-button.med-download-button--downloaded) .download-icon {
+  svg {
+    fill: #{color('brand', '4')};
+  }
+
+  &::after {
+    background: #{color('neutral', '1')};
+  }
+
+  &::before {
+    border-bottom: 1px solid #{color('neutral', '1')};
+    border-right: 1px solid #{color('neutral', '1')};
+  }
+}
+
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-color) .download-icon::after {
+  background: curr-color('color', '4');
+}
+
+:host(.med-color) .download-icon::before {
+  border-bottom: 1px solid curr-color('color', '4');
+  border-right: 1px solid curr-color('color', '4');
+}
+
+:host(.med-color) .porcentagem {
+  stroke: curr-color('color', '4');
+}
+
+:host(.med-download-button.med-download-button--downloading.med-color) .download-icon {
+  &::before {
+      background: curr-color('color', '4');
+  }
+}
+
+:host(.med-download-button.med-download-button--downloaded.med-color) .download-icon {
+  svg {
+    fill: curr-color('color', '4');
+  }
+}
+
+
+// ////////////////////
+// neutral
+// ////////////////////
+
+:host(.med-color-neutral) .download-icon::after {
+  background: curr-color('neutral');
+}
+
+:host(.med-color-neutral) .download-icon::before {
+  border-bottom: 1px solid curr-color('neutral');
+  border-right: 1px solid curr-color('neutral');
+}
+
+:host(.med-color-neutral) .porcentagem {
+  stroke: curr-color('neutral');
+}
+
+:host(.med-download-button.med-download-button--downloading.med-color-neutral) .download-icon {
+  &::before {
+      background: curr-color('neutral');
+  }
+}
+
+:host(.med-download-button.med-download-button--downloaded.med-color-neutral) .download-icon {
+  svg {
+    fill: curr-color('neutral');
+  }
+}
+
+// //////////
+// feedback
+// //////////
+
+:host(.med-color-feedback) .download-icon::after {
+  background: curr-color('feedback');
+}
+
+:host(.med-color-feedback) .download-icon::before {
+  border-bottom: 1px solid curr-color('feedback');
+  border-right: 1px solid curr-color('feedback');
+}
+
+:host(.med-color-feedback) .porcentagem {
+  stroke: curr-color('feedback');
+}
+
+:host(.med-download-button.med-download-button--downloading.med-color-feedback) .download-icon {
+  &::before {
+      background: curr-color('feedback');
+  }
+}
+
+:host(.med-download-button.med-download-button--downloaded.med-color-feedback) .download-icon {
+  svg {
+    fill: curr-color('feedback');
+  }
+}
