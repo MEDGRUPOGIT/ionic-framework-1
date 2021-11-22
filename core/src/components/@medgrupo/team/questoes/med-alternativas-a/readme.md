@@ -41,14 +41,14 @@
 
 ### Depends on
 
-- ion-icon
 - [ion-progress-bar](../../../../progress-bar)
+- ion-icon
 
 ### Graph
 ```mermaid
 graph TD;
-  med-alternativas-a --> ion-icon
   med-alternativas-a --> ion-progress-bar
+  med-alternativas-a --> ion-icon
   med-alternativas --> med-alternativas-a
   style med-alternativas-a fill:#f9f,stroke:#333,stroke-width:4px
 ```

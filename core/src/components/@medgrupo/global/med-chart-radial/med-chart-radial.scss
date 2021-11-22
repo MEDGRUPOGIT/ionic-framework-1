@@ -23,7 +23,7 @@
 
     &.size {
       stroke-dasharray: var(--size) 100;
-      stroke: hsl(var(--med-color-3));
+      stroke: hsl(var(--med-color-4));
     }
 
     &[class^="size med-color-neutral"] {
@@ -49,9 +49,11 @@
     width: var(--size-sm);
     height: var(--size-sm);
   }
+
   .size {
-    stroke: #{color('brand', '2')};
+    stroke: #{color('brand', '4')};
   }
+
   circle {
     stroke: #{color('neutral', '2')};
   }
@@ -74,11 +76,11 @@
 
 :host(.med-color.med-chart-radial--secondary) {
   .size {
-    stroke: curr-color('color', '2');
+    stroke: curr-color('color', '4');
   }
 
   .med-chart-radial__percent {
-    --color-label: #{curr-color('color', '2')};
+    --color-label: #{curr-color('color', '4')};
   }
 }
 

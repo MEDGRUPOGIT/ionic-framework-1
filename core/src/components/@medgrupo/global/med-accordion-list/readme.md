@@ -16,9 +16,9 @@
 
 ## Slots
 
-| Slot  | Description |
-| ----- | ----------- |
-| `"-"` |             |
+| Slot | Description                                               |
+| ---- | --------------------------------------------------------- |
+|      | Slot default destinado ao componente `med-accordion-item` |
 
 
 ## CSS Custom Properties

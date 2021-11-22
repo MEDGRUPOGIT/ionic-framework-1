@@ -393,11 +393,14 @@ Type: `Promise<void>`
 ### Depends on
 
 - ion-icon
+- [ion-button](../button)
 
 ### Graph
 ```mermaid
 graph TD;
   ion-searchbar --> ion-icon
+  ion-searchbar --> ion-button
+  ion-button --> ion-ripple-effect
   style ion-searchbar fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

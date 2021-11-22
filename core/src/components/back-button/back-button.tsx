@@ -32,11 +32,6 @@ export class BackButton implements ComponentInterface, ButtonInterface {
   @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
-    * Define a cor do componente.
-    */
-  @Prop({ reflect: true }) solid = false;
-
-  /**
     * Define a variação de tamanho componente.
     */
   @Prop() dsSize?: 'xxxs' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
@@ -136,7 +131,7 @@ export class BackButton implements ComponentInterface, ButtonInterface {
   }
 
   render() {
-    const { dsName, dsColor, dsSize, solid, defaultHref, disabled, type, hasIconOnly, backButtonIcon, backButtonText } = this;
+    const { dsName, dsColor, dsSize, defaultHref, disabled, type, hasIconOnly, backButtonIcon, backButtonText } = this;
     const showBackButton = defaultHref !== undefined;
     const mode = getIonMode(this);
 
@@ -156,7 +151,6 @@ export class BackButton implements ComponentInterface, ButtonInterface {
           'med-button': true,
           [`med-button--${dsName}`]: dsName !== undefined,
           [`med-button--${dsSize}`]: dsSize !== undefined,
-          'med-button--solid': solid,
         })}
       >
         <button

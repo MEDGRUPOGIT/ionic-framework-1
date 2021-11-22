@@ -646,6 +646,7 @@ export const IonSegmentButton = /*@__PURE__*/ defineContainer<JSX.IonSegmentButt
 
 
 export const IonSelect = /*@__PURE__*/ defineContainer<JSX.IonSelect>('ion-select', [
+  'dsColor',
   'disabled',
   'cancelText',
   'okText',
@@ -829,7 +830,11 @@ export const MedAccordionItem = /*@__PURE__*/ defineContainer<JSX.MedAccordionIt
   'icon',
   'noBorder',
   'background',
-  'toggle'
+  'canCollapse',
+  'isOpened',
+  'slotsToggle',
+  'toggle',
+  'opened'
 ]);
 
 
@@ -927,6 +932,14 @@ export const MedBanner = /*@__PURE__*/ defineContainer<JSX.MedBanner>('med-banne
 ]);
 
 
+export const MedBase = /*@__PURE__*/ defineContainer<JSX.MedBase>('med-base', [
+  'dsColor',
+  'radius',
+  'spacingV',
+  'spacingH'
+]);
+
+
 export const MedCaption = /*@__PURE__*/ defineContainer<JSX.MedCaption>('med-caption', [
   'dsColor',
   'dsSize'
@@ -986,6 +999,14 @@ export const MedContextMenu = /*@__PURE__*/ defineContainer<JSX.MedContextMenu>(
 export const MedDivider = /*@__PURE__*/ defineContainer<JSX.MedDivider>('med-divider', [
   'dsColor',
   'text'
+]);
+
+
+export const MedDownloadButton = /*@__PURE__*/ defineContainer<JSX.MedDownloadButton>('med-download-button', [
+  'dsColor',
+  'value',
+  'downloading',
+  'downloaded'
 ]);
 
 
@@ -1113,6 +1134,11 @@ export const MedQuestion = /*@__PURE__*/ defineContainer<JSX.MedQuestion>('med-q
 ]);
 
 
+export const MedRateAula = /*@__PURE__*/ defineContainer<JSX.MedRateAula>('med-rate-aula', [
+  'collapsed'
+]);
+
+
 export const MedRateBar = /*@__PURE__*/ defineContainer<JSX.MedRateBar>('med-rate-bar', [
   'dsColor'
 ]);
@@ -1187,6 +1213,13 @@ export const MedTooltip = /*@__PURE__*/ defineContainer<JSX.MedTooltip>('med-too
   'titulo',
   'content',
   'collapsed'
+]);
+
+
+export const MedVideoThumbnail = /*@__PURE__*/ defineContainer<JSX.MedVideoThumbnail>('med-video-thumbnail', [
+  'dsColor',
+  'url',
+  'value'
 ]);
 
 

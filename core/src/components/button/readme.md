@@ -296,7 +296,7 @@ export default defineComponent({
 | `disabled`        | `disabled`         | If `true`, the user cannot interact with the button.                                                                                                                                                                                                                                      | `boolean`                                                      | `false`     |
 | `download`        | `download`         | This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want). | `string \| undefined`                                          | `undefined` |
 | `dsColor`         | `ds-color`         | Define a cor do componente.                                                                                                                                                                                                                                                               | `string \| undefined`                                          | `undefined` |
-| `dsName`          | `ds-name`          | Define a variação solida de background do componente.                                                                                                                                                                                                                                     | `"secondary" \| "tertiary" \| undefined`                       | `undefined` |
+| `dsName`          | `ds-name`          | Define a variação do componente.                                                                                                                                                                                                                                                          | `"secondary" \| "tertiary" \| undefined`                       | `undefined` |
 | `dsSize`          | `ds-size`          | Define a variação de tamanho componente.                                                                                                                                                                                                                                                  | `"lg" \| "md" \| "sm" \| "xs" \| "xxs" \| "xxxs" \| undefined` | `undefined` |
 | `expand`          | `expand`           | Set to `"block"` for a full-width button or to `"full"` for a full-width button without left and right borders.                                                                                                                                                                           | `"block" \| "full" \| undefined`                               | `undefined` |
 | `fill`            | `fill`             | Set to `"clear"` for a transparent button, to `"outline"` for a transparent button with a border, or to `"solid"`. The default style is `"solid"` except inside of a toolbar, where the default is `"clear"`.                                                                             | `"clear" \| "default" \| "outline" \| "solid" \| undefined`    | `undefined` |
@@ -370,11 +370,13 @@ export default defineComponent({
 
 ### Used by
 
+ - [ion-searchbar](../searchbar)
  - [med-config](../@medgrupo/global/med-config)
  - [med-context-menu](../@medgrupo/global/med-context-menu)
  - [med-image-zoom](../@medgrupo/global/med-image-zoom)
  - [med-list-item-accordion](../@medgrupo/global/med-list-item-accordion)
  - [med-offline](../@medgrupo/global/med-offline)
+ - [med-rate-aula](../@medgrupo/global/med-rate-aula)
  - [med-tooltip](../@medgrupo/global/med-tooltip)
 
 ### Depends on
@@ -385,11 +387,13 @@ export default defineComponent({
 ```mermaid
 graph TD;
   ion-button --> ion-ripple-effect
+  ion-searchbar --> ion-button
   med-config --> ion-button
   med-context-menu --> ion-button
   med-image-zoom --> ion-button
   med-list-item-accordion --> ion-button
   med-offline --> ion-button
+  med-rate-aula --> ion-button
   med-tooltip --> ion-button
   style ion-button fill:#f9f,stroke:#333,stroke-width:4px
 ```

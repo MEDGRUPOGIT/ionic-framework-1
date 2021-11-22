@@ -10,6 +10,8 @@
   --box-shadow: var(--med-shadow-level-1);
   --border-radius: var(--med-border-radius-quark);
   --padding:var(--med-spacing-squish-nano);
+  --min-width: 285px;
+  --max-width: 285px;
 }
 
 :host(.med-tooltip) {
@@ -92,8 +94,8 @@
   --padding: var(--med-spacing-inset-sm);
 
   .med-tooltip__content {
-    min-width: 285px;
-    max-width: 285px;
+    min-width: var(--min-width);
+    max-width: var(--max-width);
     width: 100%;
   }
 

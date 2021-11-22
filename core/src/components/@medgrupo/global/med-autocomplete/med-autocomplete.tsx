@@ -7,7 +7,7 @@ import { Component, Host, h, Prop } from '@stencil/core';
 })
 export class MedAutocomplete {
   /**
-   * TODO
+   * A lista de items a ser renderizada.
    */
   @Prop() list = false;
 

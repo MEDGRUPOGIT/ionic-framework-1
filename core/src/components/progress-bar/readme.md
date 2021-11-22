@@ -170,6 +170,7 @@ export default defineComponent({
  - [med-alternativas-a](../@medgrupo/team/questoes/med-alternativas-a)
  - [med-alternativas-b](../@medgrupo/team/questoes/med-alternativas-b)
  - [med-item-aulas](../@medgrupo/global/med-item-aulas)
+ - [med-video-thumbnail](../@medgrupo/med-video-thumbnail)
 
 ### Graph
 ```mermaid
@@ -177,6 +178,7 @@ graph TD;
   med-alternativas-a --> ion-progress-bar
   med-alternativas-b --> ion-progress-bar
   med-item-aulas --> ion-progress-bar
+  med-video-thumbnail --> ion-progress-bar
   style ion-progress-bar fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

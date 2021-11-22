@@ -1,12 +1,6 @@
 @import "../../../../../templarios/abstracts";
 
 :host {
-  /**
-    * @prop --background-header: Define a cor de background do header do componente.
-    * @prop --background-content: Define a cor de background do conteudo componente.
-    * @prop --icon-color: Define a cor de do icone do componente.
-    * @prop --border-radius: Define o border-radius do componente.
-  */
   --background-header: linear-gradient(to right, #{color('brand', '1')}, #{color('neutral', '2')}, #{color('neutral', '2')});
   --background-content: #{color('neutral', '2')};
   --icon-color: #{color('neutral', '10')};
@@ -20,17 +14,17 @@
   border-radius: var(--border-radius);
 
   .med-accordion-item__header-container {
-    padding: var(--padding);
     width: 100%;
-    display: flex;
     cursor: pointer;
-    align-items: center;
     line-height: line-height();
-    box-sizing: border-box;
     z-index: 1;
+    display: flex;
+    align-items: center;
   }
 
   .med-accordion-item__header {
+    box-sizing: border-box;
+    padding: var(--padding);
     background: var(--background-header);
     border-radius: var(--border-radius);
     position: relative;
@@ -39,9 +33,6 @@
     transition: background 0.5s linear;
     background-size: 200% 100%;
     background-position: 100% 0;
-  }
-
-  .med-accordion-item__bar {
   }
 
   .med-accordion-item__heading {
@@ -61,12 +52,6 @@
     }
   }
 
-  .med-accordion-item__icon {
-    stroke: var(--icon-color);
-    font-size: var(--icon-font-size);
-    transform: rotate(0);
-  }
-
   .med-accordion-item__content {
     display: none;
     overflow: auto;
@@ -75,10 +60,14 @@
     border-bottom-right-radius: var(--border-radius);
     z-index: 0;
   }
-}
 
-:host(.med-accordion-item--open) .med-accordion-item__icon {
-  transform: rotate(180deg);
+  .header-container__start {}
+
+  .header-container__middle {}
+
+  .header-container__end {
+    margin-left: auto;
+  }
 }
 
 // ////////////////////
@@ -87,6 +76,11 @@
 
 :host(.med-accordion-item--no-border) {
   --border-radius: 0;
+}
+
+:host(.med-accordion-item--keep-border) .med-accordion-item__header {
+  border-bottom-left-radius: var(--med-border-radius-sm) !important;
+    border-bottom-right-radius: var(--med-border-radius-sm) !important;
 }
 
 // ////////////////////

@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, Element, Event, EventEmitter, h, Host, Prop, State } from '@stencil/core';
+import { Component, ComponentInterface, Element, Event, EventEmitter, h, Host, Prop, State, Watch } from '@stencil/core';
 import { Color } from '../../../../interface';
 import { generateMedColor } from '../../../../utils/med-theme';
 
@@ -9,6 +9,7 @@ import { generateMedColor } from '../../../../utils/med-theme';
   * @slot auxiliar - Define o conteúdo auxiliar do componente.
   * @slot progress - Slot destinado a progress-bar.
   */
+
 @Component({
   tag: 'med-accordion-item',
   styleUrl: 'med-accordion-item.scss',
@@ -38,11 +39,40 @@ export class MedAccordionItem implements ComponentInterface {
   @Prop({ reflect: true }) background = false;
 
   /**
-   * TODO
+   * Permite que a abertura do accordion seja bloqueada pelo front.
+   */
+  @Prop({ reflect: true, mutable: true }) canCollapse = true;
+
+  /**
+   * Permite que o front consiga definir quando o accordion vem aberto ou fechado.
+   */
+   @Prop({ reflect: true, mutable: true }) isOpened = false;
+
+   /**
+   * Permite que o front consiga definir quando o accordion vem aberto ou fechado.
+   */
+   @Prop({ reflect: true, mutable: true }) slotsToggle: 'start' | 'middle' | 'end' [] = [];
+
+  /**
+   * Internal
    */
   @Event() toggle!: EventEmitter;
 
+  @Event() opened!: EventEmitter;
+
   @State() isOpen = false;
+
+  @Watch('isOpened')
+    watchPropHandler(newValue: boolean) {
+      if (newValue !== this.isOpen){}
+        this.toggleOpen();
+      }
+
+  componentDidLoad(){
+    if (this.isOpened){
+      this.toggleOpen();
+    }
+  }
 
   private content!: HTMLDivElement;
 
@@ -50,8 +80,13 @@ export class MedAccordionItem implements ComponentInterface {
 
   private isTransitioning = false;
 
-  private onClick = () => {
-    this.toggleOpen();
+  private onClick = (slot : any) => {
+    if (!this.canCollapse) {
+      return
+    }
+    if (!this.slotsToggle.length || this.slotsToggle.indexOf(slot) >= 0) {
+      this.toggleOpen();
+    }
   }
 
   private toggleOpen() {
@@ -60,6 +95,7 @@ export class MedAccordionItem implements ComponentInterface {
     }
 
     this.isOpen = !this.isOpen;
+    this.opened.emit(this.isOpen);
     this.isTransitioning = true;
 
     this.toggle.emit({
@@ -75,16 +111,16 @@ export class MedAccordionItem implements ComponentInterface {
       },
       setClosed: () => {
         this.isOpen = false;
+        this.opened.emit(this.isOpen);
       },
     });
   }
 
   render() {
-    const { dsColor, noBorder, icon, isOpen, background } = this;
+    const { dsColor, noBorder, isOpen, background } = this;
 
     return (
       <Host
-        from-stencil
         class={generateMedColor(dsColor, {
           'med-accordion-item': true,
           'med-accordion-item--no-border': noBorder,
@@ -92,25 +128,25 @@ export class MedAccordionItem implements ComponentInterface {
           'med-accordion-item--background': background,
         })}>
         <div class="med-accordion-item__header" ref={(el) => this.header = el as HTMLDivElement}>
-          <div class="med-accordion-item__header-container">
-            {icon === 'left' && <div class="med-accordion-item__icon-container med-accordion-item__icon-container--left" onClick={() => this.onClick()}>
-              <ion-icon class="med-icon med-accordion-item__icon" name="med-baixo"></ion-icon>
-            </div>}
 
-            <div class="med-accordion-item__heading" onClick={() => this.onClick()}>
-              <slot name="header"></slot>
-              <slot name="auxiliar"></slot>
+          <div class="med-accordion-item__header-container">
+
+            <div class="header-container__start" onClick={() => this.onClick('start')}>
+              <slot name="start"></slot>
             </div>
 
-            <slot name="button"></slot>
+            <div class="header-container__middle" onClick={() => this.onClick('middle')}>
+              <slot name="middle"></slot>
+            </div>
 
-            {(!icon || icon === 'right') && <div class="med-accordion-item__icon-container med-accordion-item__icon-container--right" onClick={() => this.onClick()}>
-              <ion-icon class="med-icon med-accordion-item__icon" name="med-baixo"></ion-icon>
-            </div>}
+            <div class="header-container__end" onClick={() => this.onClick('end')}>
+              <slot name="end"></slot>
+            </div>
+
           </div>
 
-          <div class="med-accordion-item__bar">
-            <slot name="progress"></slot>
+          <div>
+            <slot name="auxiliar"></slot>
           </div>
         </div>
 

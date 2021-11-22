@@ -9,7 +9,7 @@
 
 | Property    | Attribute   | Description                    | Type                  | Default     |
 | ----------- | ----------- | ------------------------------ | --------------------- | ----------- |
-| `collapsed` | `collapsed` | Define o estado do componente. | `boolean`             | `true`      |
+| `collapsed` | `collapsed` | Define o estado do componente. | `boolean`             | `false`     |
 | `dsColor`   | `ds-color`  | Define a cor do componente.    | `string \| undefined` | `undefined` |
 
 
@@ -17,7 +17,7 @@
 
 ### `toggle(event?: Event | undefined) => Promise<void>`
 
-TODO
+Define o estado do componente programaticamente.
 
 #### Returns
 

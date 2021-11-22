@@ -10,7 +10,7 @@ import { generateMedColor } from '../../utils/med-theme';
 @Component({
   tag: 'ion-tab-bar',
   styleUrls: {
-    ios: 'tab-bar.ios.scss',
+    ios: 'tab-bar.md.scss',
     md: 'tab-bar.md.scss'
   },
   shadow: true

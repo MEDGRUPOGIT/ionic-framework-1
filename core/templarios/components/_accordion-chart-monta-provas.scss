@@ -1,0 +1,64 @@
+@import "../../templarios/abstracts";
+
+.med-accordion__text-header {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.med-accordion-aulas__end {
+  margin-left: auto;
+}
+.med-rotate {
+  transition: transform 300ms ease;
+}
+.monta-provas-content {
+  display: block;
+
+  @include breakpoint-up("lg") {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.monta-provas-content__chart {
+  background: hsl(var(--med-color-neutral-2));
+  padding: 0 var(--med-spacing-stretch-md);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+
+  @include breakpoint-up("lg") {
+    margin: unset;
+  }
+}
+.monta-provas-content__chart-data {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  line-height: var(--med-line-height-compressed);
+  text-align: center;
+}
+.monta-provas-content__chart-label {
+}
+.monta-provas-content__button {
+  display: flex;
+  padding: 0 var(--med-spacing-stretch-xs);
+}
+.monta-provas-content__button-realizar {
+  margin-left: auto;
+}
+.monta-provas-content__button-icon {
+  margin-right: 16px;
+}
+
+.monta-provas-content__button-icon-duplicar {
+  margin-top: 3px;
+  margin-right: 16px;
+}
+
+.med-icon-tooltip {
+  opacity: 0.3;
+}

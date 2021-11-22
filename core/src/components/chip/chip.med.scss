@@ -1,18 +1,8 @@
 @import "../../../templarios/abstracts";
 
 :host {
-  /**
-   * OBS: sobreescrita das css custom properties do ionic.
-   * @prop --background: Define a cor de background do componente.
-   * @prop --color: Define a cor de texto do componente.
-   */
   --background: #{color('neutral', '7')};
   --color: #{color('neutral', '7', 'contrast')};
-
-  /**
-   * OBS: design system css custom properties.
-   * @prop --border-color: Define a cor da borda do componente.
-   */
   --border-color: #{color('neutral', '7')};
   --ripple-color: transparent;
 }
@@ -36,7 +26,7 @@
 // ////////////////////
 
 :host(.med-chip) ::slotted(ion-icon) {
-  stroke: color('neutral', '7', 'contrast');
+  stroke: var(--color);
 }
 
 ::slotted(ion-icon:last-child) {
@@ -51,18 +41,6 @@
 
 ::slotted(ion-label) {
   margin: var(--med-spacing-inline-nano);
-}
-
-:host(.med-color) ::slotted(ion-icon) {
-  stroke: curr-color('color', '3', 'contrast');
-}
-
-:host(.med-color-neutral) ::slotted(ion-icon) {
-  stroke: curr-color('neutral', null, 'contrast');
-}
-
-:host(.med-color-feedback) ::slotted(ion-icon) {
-  stroke: curr-color('feedback', null, 'contrast');
 }
 
 // ////////////////////
@@ -95,6 +73,10 @@
   }
 }
 
+:host(.med-color) ::slotted(ion-icon) {
+  stroke: curr-color('color', '3', 'contrast');
+}
+
 // ////////////////////
 // neutral
 // ////////////////////
@@ -113,6 +95,10 @@
   }
 }
 
+:host(.med-color-neutral) ::slotted(ion-icon) {
+  stroke: curr-color('neutral', null, 'contrast');
+}
+
 // //////////
 // feedback
 // //////////
@@ -129,6 +115,10 @@
     background: curr-color('feedback');
     color: curr-color('feedback', null, 'contrast');
   }
+}
+
+:host(.med-color-feedback) ::slotted(ion-icon) {
+  stroke: curr-color('feedback', null, 'contrast');
 }
 
 // //////////////////////////////
@@ -163,6 +153,10 @@
   color: #{curr-color('color', '3')};
 }
 
+:host(.med-chip--secondary.med-color) ::slotted(ion-icon) {
+  stroke: curr-color('color', 3);
+}
+
 @media (any-hover: hover) {
   :host(.med-chip--secondary.med-color:hover) {
     --border-color: #{curr-color('color', '3')};
@@ -181,6 +175,10 @@
   color: #{curr-color('neutral')};
 }
 
+:host(.med-chip--secondary.med-color-neutral) ::slotted(ion-icon) {
+  stroke: curr-color('neutral');
+}
+
 @media (any-hover: hover) {
   :host(.med-chip--secondary.med-color-neutral:hover) {
     --border-color: #{curr-color('neutral')};
@@ -197,6 +195,10 @@
   --border-color: #{curr-color('feedback')};
   background: transparent;
   color: curr-color('feedback');
+}
+
+:host(.med-chip--secondary.med-color-feedback) ::slotted(ion-icon) {
+  stroke: curr-color('feedback');
 }
 
 @media (any-hover: hover) {

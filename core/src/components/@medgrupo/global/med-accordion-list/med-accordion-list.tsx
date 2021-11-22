@@ -4,7 +4,7 @@ import { Animation } from '../../../../utils/animation/animation-interface';
 import { generateMedColor } from '../../../../utils/med-theme';
 
 /**
-  * @slot -
+  * @slot - Slot default destinado ao componente `med-accordion-item`
   */
 @Component({
   tag: 'med-accordion-list',

@@ -15,7 +15,7 @@ import { generateMedColor } from '../../utils/med-theme';
 @Component({
   tag: 'ion-tab-button',
   styleUrls: {
-    ios: 'tab-button.ios.scss',
+    ios: 'tab-button.md.scss',
     md: 'tab-button.md.scss'
   },
   shadow: true
@@ -181,7 +181,7 @@ export class TabButton implements ComponentInterface, AnchorInterface {
           <span class="button-inner">
             <slot></slot>
           </span>
-          {mode === 'md' && <ion-ripple-effect type="unbounded"></ion-ripple-effect>}
+          {/* {mode === 'md' && <ion-ripple-effect type="unbounded"></ion-ripple-effect>} */}
         </a>
       </Host>
     );

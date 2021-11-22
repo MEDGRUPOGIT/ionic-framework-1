@@ -219,7 +219,6 @@ Type: `Promise<() => void>`
  - [ion-item-option](../item-option)
  - [ion-menu-button](../menu-button)
  - [ion-segment-button](../segment-button)
- - [ion-tab-button](../tab-button)
  - [ion-toast](../toast)
 
 ### Graph
@@ -235,7 +234,6 @@ graph TD;
   ion-item-option --> ion-ripple-effect
   ion-menu-button --> ion-ripple-effect
   ion-segment-button --> ion-ripple-effect
-  ion-tab-button --> ion-ripple-effect
   ion-toast --> ion-ripple-effect
   style ion-ripple-effect fill:#f9f,stroke:#333,stroke-width:4px
 ```

@@ -529,7 +529,8 @@ export class Searchbar implements ComponentInterface {
 
           <ion-icon aria-hidden="true" mode={mode} icon={searchIcon} lazy={false} class="med-icon searchbar-search-icon"></ion-icon>
 
-          <button
+          <ion-button
+            ds-name="tertiary"
             aria-label="reset"
             type="button"
             no-blur
@@ -537,8 +538,8 @@ export class Searchbar implements ComponentInterface {
             onMouseDown={ev => this.onClearInput(ev, true)}
             onTouchStart={ev => this.onClearInput(ev, true)}
           >
-            <ion-icon aria-hidden="true" mode={mode} icon={clearIcon} lazy={false} class="med-icon searchbar-clear-icon"></ion-icon>
-          </button>
+            <ion-icon slot="icon-only" name="med-fechar" aria-hidden="true" mode={mode} icon={clearIcon} lazy={false} class="med-icon searchbar-clear-icon"></ion-icon>
+          </ion-button>
         </div>
         {mode === 'ios' && cancelButton}
       </Host>

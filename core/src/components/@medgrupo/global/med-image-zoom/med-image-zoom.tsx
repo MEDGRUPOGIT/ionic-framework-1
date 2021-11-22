@@ -58,7 +58,7 @@ export class MedImageZoom {
           <med-navbar slot="navbar" ds-name="transparent" ds-theme="light">
             <span slot="title" innerHTML={this.titulo}></span>
 
-            <ion-button ds-name="icon-only" slot="right" onClick={() => this.dismiss()}>
+            <ion-button ds-name="tertiary" slot="right" onClick={() => this.dismiss()}>
               <ion-icon class="med-icon" slot="icon-only" name="med-fechar"></ion-icon>
             </ion-button>
           </med-navbar>
