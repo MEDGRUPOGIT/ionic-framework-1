@@ -883,8 +883,8 @@ export class IonToolbar {
 }
 export declare interface MedAccordionItem extends Components.MedAccordionItem {
 }
-@ProxyCmp({ inputs: ["background", "dsColor", "icon", "noBorder"] })
-@Component({ selector: "med-accordion-item", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["background", "dsColor", "icon", "noBorder"] })
+@ProxyCmp({ inputs: ["background", "canCollapse", "dsColor", "icon", "isOpened", "noBorder", "slotsToggle"] })
+@Component({ selector: "med-accordion-item", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["background", "canCollapse", "dsColor", "icon", "isOpened", "noBorder", "slotsToggle"] })
 export class MedAccordionItem {
   toggle!: EventEmitter<CustomEvent>;
   opened!: EventEmitter<CustomEvent>;

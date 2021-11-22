@@ -1389,9 +1389,12 @@ ion-virtual-scroll,method,positionForItem,positionForItem(index: number) => Prom
 
 med-accordion-item,shadow
 med-accordion-item,prop,background,boolean,false,false,true
+med-accordion-item,prop,canCollapse,boolean,true,false,true
 med-accordion-item,prop,dsColor,string | undefined,undefined,false,true
 med-accordion-item,prop,icon,"left" | "right" | undefined,undefined,false,true
+med-accordion-item,prop,isOpened,boolean,false,false,true
 med-accordion-item,prop,noBorder,boolean,false,false,true
+med-accordion-item,prop,slotsToggle,"end"[] | "middle" | "start",[],false,true
 med-accordion-item,event,opened,any,true
 med-accordion-item,event,toggle,any,true
 

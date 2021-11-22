@@ -91,6 +91,7 @@ export const MedIcons = [
   'med-menos',
   'med-menos-circulo',
   'med-mnemonica',
+  'med-montaprovas',
   'med-naorespondida',
   'med-negativo',
   'med-notificacao',

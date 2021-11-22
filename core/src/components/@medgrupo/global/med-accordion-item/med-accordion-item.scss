@@ -19,6 +19,7 @@
     line-height: line-height();
     z-index: 1;
     display: flex;
+    align-items: center;
   }
 
   .med-accordion-item__header {
@@ -58,6 +59,14 @@
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
     z-index: 0;
+  }
+
+  .header-container__start {}
+
+  .header-container__middle {}
+
+  .header-container__end {
+    margin-left: auto;
   }
 }
 

@@ -830,6 +830,9 @@ export const MedAccordionItem = /*@__PURE__*/ defineContainer<JSX.MedAccordionIt
   'icon',
   'noBorder',
   'background',
+  'canCollapse',
+  'isOpened',
+  'slotsToggle',
   'toggle',
   'opened'
 ]);

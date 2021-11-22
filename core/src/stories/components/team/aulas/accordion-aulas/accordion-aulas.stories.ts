@@ -8,15 +8,7 @@ export default {
 
 const Template = () => {
 
-  setTimeout(() => {
-    document.querySelector('.med-accordion-aulas__start').addEventListener('click', (e) => {
-      e.stopPropagation();
-    })
 
-    document.querySelector('.med-accordion-aulas__middle').addEventListener('click', (e) => {
-      e.stopPropagation();
-    })
-  }, 1000);
 
   return html`
   <style>
@@ -28,7 +20,7 @@ const Template = () => {
 
       <!-- component -->
       <med-accordion-list class="med-accordion-aulas" single-open="false">
-        <med-accordion-item background>
+        <med-accordion-item background slots-toggle=[middle,end]">
 
           <ion-icon slot="start" name="med-video" class="med-icon med-accordion-aulas__start"></ion-icon>
 

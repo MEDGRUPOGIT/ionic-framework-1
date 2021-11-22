@@ -52,11 +52,23 @@
   padding: 16px 0;
 }
 
+.monta-provas-filtro__content--desktop {
+  @include breakpoint-up("lg") {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
 .monta-prova-filtro__search {
   --background: hsl(var(--med-color-neutral-3));
   --icon-size: 16px;
   --spacing: var(--med-spacing-inset-xxs);
   --padding-left-icon: 8px;
+
+  @include breakpoint-up("lg") {
+    flex-basis: 50%;
+  }
 }
 
 .monta-prova-filtro__todas {
@@ -64,6 +76,17 @@
   align-items: center;
   margin: 8px 0px 8px 0px;
   --padding: 8px 16px;
+
+  @include breakpoint-up("lg") {
+    flex-basis: 50%;
+    height: 45px;
+  }
+}
+
+.monta-prova-filtro__lista {
+  @include breakpoint-up("lg") {
+    flex-basis: 100%;
+  }
 }
 
 .monta-prova-filtro__todas-caption {
@@ -137,4 +160,3 @@
   --min-width: 50px;
   --min-height: 45px;
 }
-

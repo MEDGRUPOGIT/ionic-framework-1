@@ -14,6 +14,7 @@ const TemplateDefault = ({valores}) => {
   }, 1000);
 
   return html`
+
     <ion-app>
       <ion-content>
 
@@ -48,6 +49,9 @@ const TemplateDefault = ({valores}) => {
                 <ion-button ds-name="tertiary" class="monta-provas-content__button-icon">
                   <ion-icon slot="icon-only" class="med-icon" name="med-duplicar"></ion-icon>
                 </ion-button>
+                <med-tooltip from-stencil class="med-tooltip monta-provas-content__button-icon-duplicar" placement="top" content="Tooltip Simples">
+                  <ion-icon slot="icon" class="med-icon med-icon-tooltip" name="med-duplicar"></ion-icon>
+                </med-tooltip>
                 <ion-button ds-name="tertiary" class="monta-provas-content__button-icon">
                   <ion-icon slot="icon-only" class="med-icon" name="med-lixeira"></ion-icon>
                 </ion-button>

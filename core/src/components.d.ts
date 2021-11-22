@@ -2853,6 +2853,10 @@ export namespace Components {
          */
         "background": boolean;
         /**
+          * Permite que a abertura do accordion seja bloqueada pelo front.
+         */
+        "canCollapse": boolean;
+        /**
           * Define a cor do componente.
          */
         "dsColor"?: Color;
@@ -2861,9 +2865,17 @@ export namespace Components {
          */
         "icon"?: 'left' | 'right';
         /**
+          * Permite que o front consiga definir quando o accordion vem aberto ou fechado.
+         */
+        "isOpened": boolean;
+        /**
           * Define a variação da borda do componente.
          */
         "noBorder": boolean;
+        /**
+          * Permite que o front consiga definir quando o accordion vem aberto ou fechado.
+         */
+        "slotsToggle": 'start' | 'middle' | 'end' [];
     }
     interface MedAccordionList {
         /**
@@ -7550,6 +7562,10 @@ declare namespace LocalJSX {
          */
         "background"?: boolean;
         /**
+          * Permite que a abertura do accordion seja bloqueada pelo front.
+         */
+        "canCollapse"?: boolean;
+        /**
           * Define a cor do componente.
          */
         "dsColor"?: Color;
@@ -7557,6 +7573,10 @@ declare namespace LocalJSX {
           * Define a posição do ícone de abertura do componente.
          */
         "icon"?: 'left' | 'right';
+        /**
+          * Permite que o front consiga definir quando o accordion vem aberto ou fechado.
+         */
+        "isOpened"?: boolean;
         /**
           * Define a variação da borda do componente.
          */
@@ -7566,6 +7586,10 @@ declare namespace LocalJSX {
           * Internal
          */
         "onToggle"?: (event: CustomEvent<any>) => void;
+        /**
+          * Permite que o front consiga definir quando o accordion vem aberto ou fechado.
+         */
+        "slotsToggle"?: 'start' | 'middle' | 'end' [];
     }
     interface MedAccordionList {
         /**

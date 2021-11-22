@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, Element, Event, EventEmitter, h, Host, Prop, State } from '@stencil/core';
+import { Component, ComponentInterface, Element, Event, EventEmitter, h, Host, Prop, State, Watch } from '@stencil/core';
 import { Color } from '../../../../interface';
 import { generateMedColor } from '../../../../utils/med-theme';
 
@@ -9,6 +9,7 @@ import { generateMedColor } from '../../../../utils/med-theme';
   * @slot auxiliar - Define o conteúdo auxiliar do componente.
   * @slot progress - Slot destinado a progress-bar.
   */
+
 @Component({
   tag: 'med-accordion-item',
   styleUrl: 'med-accordion-item.scss',
@@ -38,6 +39,21 @@ export class MedAccordionItem implements ComponentInterface {
   @Prop({ reflect: true }) background = false;
 
   /**
+   * Permite que a abertura do accordion seja bloqueada pelo front.
+   */
+  @Prop({ reflect: true, mutable: true }) canCollapse = true;
+
+  /**
+   * Permite que o front consiga definir quando o accordion vem aberto ou fechado.
+   */
+   @Prop({ reflect: true, mutable: true }) isOpened = false;
+
+   /**
+   * Permite que o front consiga definir quando o accordion vem aberto ou fechado.
+   */
+   @Prop({ reflect: true, mutable: true }) slotsToggle: 'start' | 'middle' | 'end' [] = [];
+
+  /**
    * Internal
    */
   @Event() toggle!: EventEmitter;
@@ -46,14 +62,31 @@ export class MedAccordionItem implements ComponentInterface {
 
   @State() isOpen = false;
 
+  @Watch('isOpened')
+    watchPropHandler(newValue: boolean) {
+      if (newValue !== this.isOpen){}
+        this.toggleOpen();
+      }
+
+  componentDidLoad(){
+    if (this.isOpened){
+      this.toggleOpen();
+    }
+  }
+
   private content!: HTMLDivElement;
 
   private header!: HTMLDivElement;
 
   private isTransitioning = false;
 
-  private onClick = () => {
-    this.toggleOpen();
+  private onClick = (slot : any) => {
+    if (!this.canCollapse) {
+      return
+    }
+    if (!this.slotsToggle.length || this.slotsToggle.indexOf(slot) >= 0) {
+      this.toggleOpen();
+    }
   }
 
   private toggleOpen() {
@@ -96,10 +129,20 @@ export class MedAccordionItem implements ComponentInterface {
         })}>
         <div class="med-accordion-item__header" ref={(el) => this.header = el as HTMLDivElement}>
 
-          <div class="med-accordion-item__header-container" onClick={() => this.onClick()}>
-            <slot name="start"></slot>
-            <slot name="middle"></slot>
-            <slot name="end"></slot>
+          <div class="med-accordion-item__header-container">
+
+            <div class="header-container__start" onClick={() => this.onClick('start')}>
+              <slot name="start"></slot>
+            </div>
+
+            <div class="header-container__middle" onClick={() => this.onClick('middle')}>
+              <slot name="middle"></slot>
+            </div>
+
+            <div class="header-container__end" onClick={() => this.onClick('end')}>
+              <slot name="end"></slot>
+            </div>
+
           </div>
 
           <div>
