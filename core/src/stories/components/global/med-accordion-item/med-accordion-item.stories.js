@@ -11,6 +11,20 @@ const Template = ({dsColor, background, icon, noBorder}) => {
   return html`
     <style>
 
+      .med-accordion-item__middle {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .med-accordion-item__end {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+      }
+
     </style>
 
     <ion-app>
@@ -18,31 +32,32 @@ const Template = ({dsColor, background, icon, noBorder}) => {
 
         <!-- component -->
 
-        <med-accordion-list class="med-accordion-aulas" single-open="false">
-        <med-accordion-item slots-toggle=[middle,end]" .dsColor=${dsColor} .background=${background} .icon=${icon} ?no-border=${noBorder}>
+        <med-accordion-list single-open="false">
 
-          <ion-icon slot="start" name="med-video" class="med-icon med-accordion-aulas__start"></ion-icon>
+          <med-accordion-item slots-toggle=[middle,end]" .dsColor=${dsColor} .background=${background} .icon=${icon} ?no-border=${noBorder}>
 
-          <div class="med-accordion-aulas__middle" slot="middle">
-            <med-caption ds-size="xxs" ds-color="neutral-5">
-              <h3>84% concluído</h3>
-            </med-caption>
-          </div>
+            <ion-icon slot="start" name="med-video" class="med-icon med-accordion-aulas__start"></ion-icon>
 
-          <div class="med-accordion-aulas__end" slot="end">
-            <ion-button class="med-list-item-accordion__button" ds-color="aula" ds-name="tertiary" ds-size="xs">
-              <ion-icon slot="icon-only" class="med-icon med-rotate" name="med-cima"></ion-icon>
-            </ion-button>
-          </div>
+            <div class="med-accordion-item__middle" slot="middle">
+              <med-caption ds-size="xxs" ds-color="neutral-5">
+                <h3>84% concluído</h3>
+              </med-caption>
+            </div>
+
+            <div class="med-accordion-item__end" slot="end">
+              <ion-button class="med-list-item-accordion__button" ds-color="aula" ds-name="tertiary" ds-size="xs">
+                <ion-icon slot="icon-only" class="med-icon med-rotate" name="med-cima"></ion-icon>
+              </ion-button>
+            </div>
 
 
-          <div slot="content" class="med-accordion__content">
+            <div slot="content" class="med-accordion__content">
 
-          </div>
+            </div>
 
-        </med-accordion-item>
+          </med-accordion-item>
 
-      </med-accordion-list>
+        </med-accordion-list>
         <!-- component -->
 
       </ion-content>

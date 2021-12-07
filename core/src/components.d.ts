@@ -5,7 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { ActionSheetButton, AlertButton, AlertInput, AnimationBuilder, AutocompleteTypes, CheckboxChangeEventDetail, Color, ComponentProps, ComponentRef, DatetimeChangeEventDetail, DatetimeOptions, DomRenderFn, FooterHeightFn, FrameworkDelegate, HeaderFn, HeaderHeightFn, InputChangeEventDetail, ItemHeightFn, ItemRenderFn, ItemReorderEventDetail, MedColor, MenuChangeEventDetail, NavComponent, NavComponentWithProps, NavOptions, Neutral, OverlayEventDetail, PickerButton, PickerColumn, RadioGroupChangeEventDetail, RangeChangeEventDetail, RangeValue, RefresherEventDetail, RouteID, RouterDirection, RouterEventDetail, RouterOutletOptions, RouteWrite, ScrollBaseDetail, ScrollDetail, SearchbarChangeEventDetail, SegmentButtonLayout, SegmentChangeEventDetail, SelectChangeEventDetail, SelectInterface, SelectPopoverOption, Side, SpinnerTypes, StyleEventDetail, SwipeGestureHandler, TabBarChangedEventDetail, TabBarResizeEventDetail, TabButtonClickEventDetail, TabButtonLayout, TextareaChangeEventDetail, TextFieldTypes, ToastButton, ToggleChangeEventDetail, TransitionDoneFn, TransitionInstruction, ViewController } from "./interface";
+import { ActionSheetButton, AlertButton, AlertInput, AnimationBuilder, AutocompleteTypes, CheckboxChangeEventDetail, Color, ComponentProps, ComponentRef, DatetimeChangeEventDetail, DatetimeOptions, DomRenderFn, FooterHeightFn, FrameworkDelegate, HeaderFn, HeaderHeightFn, InputChangeEventDetail, ItemHeightFn, ItemRenderFn, ItemReorderEventDetail, MedColor, MenuChangeEventDetail, NavComponent, NavComponentWithProps, NavOptions, Neutral, OverlayEventDetail, PickerButton, PickerColumn, RadioGroupChangeEventDetail, RangeChangeEventDetail, RangeValue, RefresherEventDetail, RouteID, RouterDirection, RouterEventDetail, RouterOutletOptions, RouteWrite, ScrollBaseDetail, ScrollDetail, SearchbarChangeEventDetail, SegmentButtonLayout, SegmentChangeEventDetail, SelectChangeEventDetail, SelectInterface, SelectPopoverOption, Side, SpinnerTypes, StyleEventDetail, SwipeGestureHandler, TabBarChangedEventDetail, TabBarResizeEventDetail, TabButtonClickEventDetail, TabButtonLayout, TextareaChangeEventDetail, TextFieldTypes, ToastButton, ToggleChangeEventDetail, TransitionDoneFn, TransitionInstruction, Type, ViewController } from "./interface";
 import { IonicSafeString } from "./utils/sanitization";
 import { NavigationHookCallback } from "./components/route/route-interface";
 import { SelectCompareFn } from "./components/select/select-interface";
@@ -19,6 +19,10 @@ import { RateStatus } from "./components/@medgrupo/global/med-rate-like/med-rate
 import { MedTema } from "./components/@medgrupo/global/med-themes/med-themes-interface";
 import { PlusMinusStatus } from "./components/@medgrupo/team/monta-provas/monta-provas-plusminus/monta-provas-plusminus.enum";
 export namespace Components {
+    interface AccordionGroup {
+    }
+    interface AccordionItem {
+    }
     interface IonActionSheet {
         /**
           * If `true`, the action sheet will animate.
@@ -3149,6 +3153,28 @@ export namespace Components {
     }
     interface MedCartaoRespostaLista {
     }
+    interface MedChartBar {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define o height em px do componente.
+         */
+        "height": number;
+        /**
+          * Define o token do label do componente.
+         */
+        "token": string;
+        /**
+          * Define a valor do componente.
+         */
+        "value": number;
+        /**
+          * Define o width em px do componente.
+         */
+        "width": number;
+    }
     interface MedChartRadial {
         /**
           * Define a cor do componente.
@@ -3240,11 +3266,11 @@ export namespace Components {
     }
     interface MedDownloadButton {
         /**
-          * Define o estado do componente.
+          * TODO.
          */
         "downloaded": boolean;
         /**
-          * Define o estado do componente.
+          * TODO.
          */
         "downloading": boolean;
         /**
@@ -3252,9 +3278,9 @@ export namespace Components {
          */
         "dsColor"?: MedColor;
         /**
-          * Define o estado do componente programaticamente.
+          * TODO.
          */
-        "toggle": (event?: Event | undefined) => Promise<void>;
+        "initial": boolean;
         /**
           * Define o valor da progress bar do componente.
          */
@@ -3482,6 +3508,36 @@ export namespace Components {
          */
         "fill"?: 'outline';
     }
+    interface MedPiechart {
+        /**
+          * Define o estado do componente.
+         */
+        "active": boolean;
+        /**
+          * Define a porcentagem de download do botão de download.
+         */
+        "downloadProgresso": number;
+        /**
+          * Define o estado do componente.
+         */
+        "downloaded": boolean;
+        /**
+          * Define o estado do componente.
+         */
+        "downloading": boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define o progresso a ser mostrado.
+         */
+        "progresso": number;
+        /**
+          * TODO
+         */
+        "toggle": (event?: Event | undefined) => Promise<void>;
+    }
     interface MedQuestion {
         /**
           * Define o estado do componente.
@@ -3674,6 +3730,16 @@ export namespace Components {
          */
         "toggle": (event?: Event | undefined) => Promise<void>;
     }
+    interface MedType {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define o token do componente.
+         */
+        "token"?: Type;
+    }
     interface MedVideoThumbnail {
         /**
           * Define a cor do componente.
@@ -3704,6 +3770,10 @@ export namespace Components {
     }
     interface MontaProvasPlusminus {
         /**
+          * TODO
+         */
+        "disabled"?: 'minus' | 'plus' | 'both';
+        /**
           * Define a cor do componente.
          */
         "dsColor"?: MedColor;
@@ -3714,6 +3784,18 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLAccordionGroupElement extends Components.AccordionGroup, HTMLStencilElement {
+    }
+    var HTMLAccordionGroupElement: {
+        prototype: HTMLAccordionGroupElement;
+        new (): HTMLAccordionGroupElement;
+    };
+    interface HTMLAccordionItemElement extends Components.AccordionItem, HTMLStencilElement {
+    }
+    var HTMLAccordionItemElement: {
+        prototype: HTMLAccordionItemElement;
+        new (): HTMLAccordionItemElement;
+    };
     interface HTMLIonActionSheetElement extends Components.IonActionSheet, HTMLStencilElement {
     }
     var HTMLIonActionSheetElement: {
@@ -4314,6 +4396,12 @@ declare global {
         prototype: HTMLMedCartaoRespostaListaElement;
         new (): HTMLMedCartaoRespostaListaElement;
     };
+    interface HTMLMedChartBarElement extends Components.MedChartBar, HTMLStencilElement {
+    }
+    var HTMLMedChartBarElement: {
+        prototype: HTMLMedChartBarElement;
+        new (): HTMLMedChartBarElement;
+    };
     interface HTMLMedChartRadialElement extends Components.MedChartRadial, HTMLStencilElement {
     }
     var HTMLMedChartRadialElement: {
@@ -4464,6 +4552,12 @@ declare global {
         prototype: HTMLMedParentElement;
         new (): HTMLMedParentElement;
     };
+    interface HTMLMedPiechartElement extends Components.MedPiechart, HTMLStencilElement {
+    }
+    var HTMLMedPiechartElement: {
+        prototype: HTMLMedPiechartElement;
+        new (): HTMLMedPiechartElement;
+    };
     interface HTMLMedQuestionElement extends Components.MedQuestion, HTMLStencilElement {
     }
     var HTMLMedQuestionElement: {
@@ -4536,6 +4630,12 @@ declare global {
         prototype: HTMLMedTooltipElement;
         new (): HTMLMedTooltipElement;
     };
+    interface HTMLMedTypeElement extends Components.MedType, HTMLStencilElement {
+    }
+    var HTMLMedTypeElement: {
+        prototype: HTMLMedTypeElement;
+        new (): HTMLMedTypeElement;
+    };
     interface HTMLMedVideoThumbnailElement extends Components.MedVideoThumbnail, HTMLStencilElement {
     }
     var HTMLMedVideoThumbnailElement: {
@@ -4555,6 +4655,8 @@ declare global {
         new (): HTMLMontaProvasPlusminusElement;
     };
     interface HTMLElementTagNameMap {
+        "accordion-group": HTMLAccordionGroupElement;
+        "accordion-item": HTMLAccordionItemElement;
         "ion-action-sheet": HTMLIonActionSheetElement;
         "ion-alert": HTMLIonAlertElement;
         "ion-app": HTMLIonAppElement;
@@ -4655,6 +4757,7 @@ declare global {
         "med-caption": HTMLMedCaptionElement;
         "med-cartao-resposta-item": HTMLMedCartaoRespostaItemElement;
         "med-cartao-resposta-lista": HTMLMedCartaoRespostaListaElement;
+        "med-chart-bar": HTMLMedChartBarElement;
         "med-chart-radial": HTMLMedChartRadialElement;
         "med-chart-radial-content": HTMLMedChartRadialContentElement;
         "med-chart-radial-label": HTMLMedChartRadialLabelElement;
@@ -4680,6 +4783,7 @@ declare global {
         "med-option": HTMLMedOptionElement;
         "med-paragraph": HTMLMedParagraphElement;
         "med-parent": HTMLMedParentElement;
+        "med-piechart": HTMLMedPiechartElement;
         "med-question": HTMLMedQuestionElement;
         "med-rate-aula": HTMLMedRateAulaElement;
         "med-rate-bar": HTMLMedRateBarElement;
@@ -4692,12 +4796,21 @@ declare global {
         "med-titulo-materia": HTMLMedTituloMateriaElement;
         "med-toolbar": HTMLMedToolbarElement;
         "med-tooltip": HTMLMedTooltipElement;
+        "med-type": HTMLMedTypeElement;
         "med-video-thumbnail": HTMLMedVideoThumbnailElement;
         "med-vote": HTMLMedVoteElement;
         "monta-provas-plusminus": HTMLMontaProvasPlusminusElement;
     }
 }
 declare namespace LocalJSX {
+    interface AccordionGroup {
+    }
+    interface AccordionItem {
+        /**
+          * Internal
+         */
+        "onToggle"?: (event: CustomEvent<any>) => void;
+    }
     interface IonActionSheet {
         /**
           * If `true`, the action sheet will animate.
@@ -7903,6 +8016,28 @@ declare namespace LocalJSX {
     }
     interface MedCartaoRespostaLista {
     }
+    interface MedChartBar {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define o height em px do componente.
+         */
+        "height"?: number;
+        /**
+          * Define o token do label do componente.
+         */
+        "token"?: string;
+        /**
+          * Define a valor do componente.
+         */
+        "value"?: number;
+        /**
+          * Define o width em px do componente.
+         */
+        "width"?: number;
+    }
     interface MedChartRadial {
         /**
           * Define a cor do componente.
@@ -7990,17 +8125,29 @@ declare namespace LocalJSX {
     }
     interface MedDownloadButton {
         /**
-          * Define o estado do componente.
+          * TODO.
          */
         "downloaded"?: boolean;
         /**
-          * Define o estado do componente.
+          * TODO.
          */
         "downloading"?: boolean;
         /**
           * Define a cor do componente.
          */
         "dsColor"?: MedColor;
+        /**
+          * TODO.
+         */
+        "initial"?: boolean;
+        /**
+          * TODO.
+         */
+        "onMedCancelar"?: (event: CustomEvent<any>) => void;
+        /**
+          * TODO.
+         */
+        "onMedDownloaded"?: (event: CustomEvent<any>) => void;
         /**
           * Define o valor da progress bar do componente.
          */
@@ -8240,6 +8387,32 @@ declare namespace LocalJSX {
          */
         "fill"?: 'outline';
     }
+    interface MedPiechart {
+        /**
+          * Define o estado do componente.
+         */
+        "active"?: boolean;
+        /**
+          * Define a porcentagem de download do botão de download.
+         */
+        "downloadProgresso"?: number;
+        /**
+          * Define o estado do componente.
+         */
+        "downloaded"?: boolean;
+        /**
+          * Define o estado do componente.
+         */
+        "downloading"?: boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define o progresso a ser mostrado.
+         */
+        "progresso"?: number;
+    }
     interface MedQuestion {
         /**
           * Define o estado do componente.
@@ -8428,6 +8601,16 @@ declare namespace LocalJSX {
          */
         "titulo"?: string;
     }
+    interface MedType {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define o token do componente.
+         */
+        "token"?: Type;
+    }
     interface MedVideoThumbnail {
         /**
           * Define a cor do componente.
@@ -8458,6 +8641,10 @@ declare namespace LocalJSX {
     }
     interface MontaProvasPlusminus {
         /**
+          * TODO
+         */
+        "disabled"?: 'minus' | 'plus' | 'both';
+        /**
           * Define a cor do componente.
          */
         "dsColor"?: MedColor;
@@ -8471,6 +8658,8 @@ declare namespace LocalJSX {
         "onMedChange"?: (event: CustomEvent<PlusMinusStatus>) => void;
     }
     interface IntrinsicElements {
+        "accordion-group": AccordionGroup;
+        "accordion-item": AccordionItem;
         "ion-action-sheet": IonActionSheet;
         "ion-alert": IonAlert;
         "ion-app": IonApp;
@@ -8571,6 +8760,7 @@ declare namespace LocalJSX {
         "med-caption": MedCaption;
         "med-cartao-resposta-item": MedCartaoRespostaItem;
         "med-cartao-resposta-lista": MedCartaoRespostaLista;
+        "med-chart-bar": MedChartBar;
         "med-chart-radial": MedChartRadial;
         "med-chart-radial-content": MedChartRadialContent;
         "med-chart-radial-label": MedChartRadialLabel;
@@ -8596,6 +8786,7 @@ declare namespace LocalJSX {
         "med-option": MedOption;
         "med-paragraph": MedParagraph;
         "med-parent": MedParent;
+        "med-piechart": MedPiechart;
         "med-question": MedQuestion;
         "med-rate-aula": MedRateAula;
         "med-rate-bar": MedRateBar;
@@ -8608,6 +8799,7 @@ declare namespace LocalJSX {
         "med-titulo-materia": MedTituloMateria;
         "med-toolbar": MedToolbar;
         "med-tooltip": MedTooltip;
+        "med-type": MedType;
         "med-video-thumbnail": MedVideoThumbnail;
         "med-vote": MedVote;
         "monta-provas-plusminus": MontaProvasPlusminus;
@@ -8617,6 +8809,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "accordion-group": LocalJSX.AccordionGroup & JSXBase.HTMLAttributes<HTMLAccordionGroupElement>;
+            "accordion-item": LocalJSX.AccordionItem & JSXBase.HTMLAttributes<HTMLAccordionItemElement>;
             "ion-action-sheet": LocalJSX.IonActionSheet & JSXBase.HTMLAttributes<HTMLIonActionSheetElement>;
             "ion-alert": LocalJSX.IonAlert & JSXBase.HTMLAttributes<HTMLIonAlertElement>;
             "ion-app": LocalJSX.IonApp & JSXBase.HTMLAttributes<HTMLIonAppElement>;
@@ -8717,6 +8911,7 @@ declare module "@stencil/core" {
             "med-caption": LocalJSX.MedCaption & JSXBase.HTMLAttributes<HTMLMedCaptionElement>;
             "med-cartao-resposta-item": LocalJSX.MedCartaoRespostaItem & JSXBase.HTMLAttributes<HTMLMedCartaoRespostaItemElement>;
             "med-cartao-resposta-lista": LocalJSX.MedCartaoRespostaLista & JSXBase.HTMLAttributes<HTMLMedCartaoRespostaListaElement>;
+            "med-chart-bar": LocalJSX.MedChartBar & JSXBase.HTMLAttributes<HTMLMedChartBarElement>;
             "med-chart-radial": LocalJSX.MedChartRadial & JSXBase.HTMLAttributes<HTMLMedChartRadialElement>;
             "med-chart-radial-content": LocalJSX.MedChartRadialContent & JSXBase.HTMLAttributes<HTMLMedChartRadialContentElement>;
             "med-chart-radial-label": LocalJSX.MedChartRadialLabel & JSXBase.HTMLAttributes<HTMLMedChartRadialLabelElement>;
@@ -8742,6 +8937,7 @@ declare module "@stencil/core" {
             "med-option": LocalJSX.MedOption & JSXBase.HTMLAttributes<HTMLMedOptionElement>;
             "med-paragraph": LocalJSX.MedParagraph & JSXBase.HTMLAttributes<HTMLMedParagraphElement>;
             "med-parent": LocalJSX.MedParent & JSXBase.HTMLAttributes<HTMLMedParentElement>;
+            "med-piechart": LocalJSX.MedPiechart & JSXBase.HTMLAttributes<HTMLMedPiechartElement>;
             "med-question": LocalJSX.MedQuestion & JSXBase.HTMLAttributes<HTMLMedQuestionElement>;
             "med-rate-aula": LocalJSX.MedRateAula & JSXBase.HTMLAttributes<HTMLMedRateAulaElement>;
             "med-rate-bar": LocalJSX.MedRateBar & JSXBase.HTMLAttributes<HTMLMedRateBarElement>;
@@ -8754,6 +8950,7 @@ declare module "@stencil/core" {
             "med-titulo-materia": LocalJSX.MedTituloMateria & JSXBase.HTMLAttributes<HTMLMedTituloMateriaElement>;
             "med-toolbar": LocalJSX.MedToolbar & JSXBase.HTMLAttributes<HTMLMedToolbarElement>;
             "med-tooltip": LocalJSX.MedTooltip & JSXBase.HTMLAttributes<HTMLMedTooltipElement>;
+            "med-type": LocalJSX.MedType & JSXBase.HTMLAttributes<HTMLMedTypeElement>;
             "med-video-thumbnail": LocalJSX.MedVideoThumbnail & JSXBase.HTMLAttributes<HTMLMedVideoThumbnailElement>;
             "med-vote": LocalJSX.MedVote & JSXBase.HTMLAttributes<HTMLMedVoteElement>;
             "monta-provas-plusminus": LocalJSX.MontaProvasPlusminus & JSXBase.HTMLAttributes<HTMLMontaProvasPlusminusElement>;

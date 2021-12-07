@@ -377,7 +377,6 @@ export default defineComponent({
  - [med-list-item-accordion](../@medgrupo/global/med-list-item-accordion)
  - [med-offline](../@medgrupo/global/med-offline)
  - [med-rate-aula](../@medgrupo/global/med-rate-aula)
- - [med-tooltip](../@medgrupo/global/med-tooltip)
 
 ### Depends on
 
@@ -394,7 +393,6 @@ graph TD;
   med-list-item-accordion --> ion-button
   med-offline --> ion-button
   med-rate-aula --> ion-button
-  med-tooltip --> ion-button
   style ion-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

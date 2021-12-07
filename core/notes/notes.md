@@ -30,3 +30,32 @@ npm run custom:build:storybook
 
 - para estilização de um componente ionic utilizar como referência o componente `ion-badge`.
 - para que o live reload funcione com o ionic é necessário que o scss seja construido nos arquivos md ou ios.
+
+# Para Documentacao
+
+Accordion item
+Nova estrutura de slots
+
+Accordion list
+Novas propriedades
+
+Med-base
+Criar doc
+
+Med-caption
+Complementar doc
+
+Med-downloadbutton
+Criar doc
+
+Med-piechart
+Criar doc
+
+Med-rate-aula
+Criar doc
+
+Med-theme
+Complementar doc
+
+Med-video-thumbnail
+Criar doc

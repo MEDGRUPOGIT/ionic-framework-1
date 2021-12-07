@@ -1,4 +1,9 @@
 
+accordion-group,shadow
+
+accordion-item,shadow
+accordion-item,event,toggle,any,true
+
 ion-action-sheet,scoped
 ion-action-sheet,prop,animated,boolean,true,false,false
 ion-action-sheet,prop,backdropDismiss,boolean,true,false,false
@@ -1501,6 +1506,13 @@ med-cartao-resposta-item,prop,impressa,boolean,false,false,true
 
 med-cartao-resposta-lista,shadow
 
+med-chart-bar,shadow
+med-chart-bar,prop,dsColor,string | undefined,undefined,false,true
+med-chart-bar,prop,height,number,50,false,true
+med-chart-bar,prop,token,string,'p12b',false,true
+med-chart-bar,prop,value,number,0,false,true
+med-chart-bar,prop,width,number,42,false,true
+
 med-chart-radial,scoped
 med-chart-radial,prop,dsColor,string | undefined,undefined,false,true
 med-chart-radial,prop,dsName,string | undefined,undefined,false,false
@@ -1541,8 +1553,10 @@ med-download-button,shadow
 med-download-button,prop,downloaded,boolean,false,false,true
 med-download-button,prop,downloading,boolean,false,false,true
 med-download-button,prop,dsColor,string | undefined,undefined,false,true
+med-download-button,prop,initial,boolean,true,false,true
 med-download-button,prop,value,number,0,false,true
-med-download-button,method,toggle,toggle(event?: Event | undefined) => Promise<void>
+med-download-button,event,medCancelar,any,true
+med-download-button,event,medDownloaded,any,true
 
 med-enunciado,shadow
 med-enunciado,prop,dsName,"skin" | undefined,undefined,false,true
@@ -1638,6 +1652,15 @@ med-parent,prop,child,boolean,false,false,true
 med-parent,prop,dsColor,string | undefined,undefined,false,true
 med-parent,prop,fill,"outline" | undefined,undefined,false,true
 
+med-piechart,shadow
+med-piechart,prop,active,boolean,false,false,true
+med-piechart,prop,downloadProgresso,number,0,false,true
+med-piechart,prop,downloaded,boolean,false,false,true
+med-piechart,prop,downloading,boolean,false,false,true
+med-piechart,prop,dsColor,string | undefined,undefined,false,true
+med-piechart,prop,progresso,number,0,false,true
+med-piechart,method,toggle,toggle(event?: Event | undefined) => Promise<void>
+
 med-question,shadow
 med-question,prop,collapsed,boolean,false,false,true
 med-question,prop,dsColor,string | undefined,undefined,false,true
@@ -1720,6 +1743,10 @@ med-tooltip,method,toggle,toggle(event?: Event | undefined) => Promise<void>
 med-tooltip,css-prop,--background
 med-tooltip,css-prop,--z-index
 
+med-type,shadow
+med-type,prop,dsColor,string | undefined,undefined,false,true
+med-type,prop,token,string | undefined,undefined,false,true
+
 med-video-thumbnail,shadow
 med-video-thumbnail,prop,dsColor,string | undefined,undefined,false,true
 med-video-thumbnail,prop,url,string | undefined,undefined,false,true
@@ -1731,6 +1758,7 @@ med-vote,prop,titulo,string | undefined,'Cabe recurso?',false,false
 med-vote,prop,unlike,number,0,false,false
 
 monta-provas-plusminus,shadow
+monta-provas-plusminus,prop,disabled,"both" | "minus" | "plus" | undefined,undefined,false,true
 monta-provas-plusminus,prop,dsColor,string | undefined,undefined,false,true
 monta-provas-plusminus,prop,dsSize,"xl" | undefined,undefined,false,true
 monta-provas-plusminus,event,medChange,PlusMinusStatus.MINUS | PlusMinusStatus.PLUS,true

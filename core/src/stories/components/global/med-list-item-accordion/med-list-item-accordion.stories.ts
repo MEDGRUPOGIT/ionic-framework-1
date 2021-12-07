@@ -7,7 +7,7 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ dsColor }) => {
+const Template = ({ dsColor, disabled }) => {
   return html`
     <ion-app>
       <ion-content>
@@ -19,7 +19,7 @@ const Template = ({ dsColor }) => {
             <ion-checkbox slot="start"></ion-checkbox>
           </med-list-item>
 
-          <med-list-item-accordion .dsColor=${dsColor} titulo="Titulo" label="label">
+          <med-list-item-accordion ?disabled=${disabled} .dsColor=${dsColor} titulo="Titulo" label="label">
 
             <ion-checkbox slot="start"></ion-checkbox>
 
@@ -62,6 +62,15 @@ ListItemAccordion.argTypes = {
     table: {
       type:  { summary: 'MedColor' },
       defaultValue: { summary: 'undefined' },
+    },
+  },
+  disabled: {
+    control: { type: 'boolean' },
+    description: 'Define o estado do componente.',
+    defaultValue: false,
+    table: {
+      type:  { summary: 'boolean' },
+      defaultValue: { summary: 'false' },
     },
   },
 };

@@ -50,6 +50,11 @@ export class MedListItemAccordion {
   @Prop({ reflect: true, mutable: true }) collapsed = true;
 
   /**
+   * If `true`, the user cannot interact with the button.
+   */
+   @Prop({ reflect: true }) disabled = false;
+
+  /**
    * TODO
    */
   @Method()
@@ -59,13 +64,14 @@ export class MedListItemAccordion {
   }
 
   render() {
-    const { dsColor, titulo, label, selected, dsSize, border, margin, collapsed } = this;
+    const { dsColor, titulo, label, selected, dsSize, border, margin, collapsed, disabled } = this;
 
     return (
       <Host
         from-stencil
         class={generateMedColor(dsColor, {
           'med-list-item-accordion': true,
+          'med-list-item-accordion--disabled': disabled,
           'med-list-item-accordion--selected': selected,
           'med-list-item-accordion--border-radius': border,
           [`med-list-item-accordion--${dsSize}`]: dsSize !== undefined,

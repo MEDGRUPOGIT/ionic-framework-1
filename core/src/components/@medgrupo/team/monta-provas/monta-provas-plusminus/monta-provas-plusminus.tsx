@@ -25,18 +25,24 @@ export class MontaProvasPlusminus {
    */
   @Event() medChange!: EventEmitter<PlusMinusStatus>;
 
+   /**
+   * TODO
+   */
+   @Prop({ reflect: true }) disabled?: 'minus' | 'plus' | 'both';
+
   private onClick = (status: PlusMinusStatus) => {
     this.medChange.emit(status);
   }
 
   render() {
-    const { dsSize, dsColor } = this;
+    const { dsSize, dsColor, disabled } = this;
 
     return (
       <Host
         from-stencil
         class={generateMedColor(dsColor, {
           'monta-provas-plusminus': true,
+          [`monta-provas-plusminus--disabled-${disabled}`]: disabled !== undefined,
           [`monta-provas-plusminus--${dsSize}`]: dsSize !== undefined,
         },)}
       >

@@ -39,7 +39,7 @@ const TemplateDefault = ({ valores }) => {
         </div>
 
         <med-accordion-list
-          class="med-accordion-aulas monta-provas-filtro__accordion"
+          class="monta-provas-filtro__accordion"
           single-open="true"
         >
           <med-accordion-item
@@ -55,7 +55,7 @@ const TemplateDefault = ({ valores }) => {
             </med-caption>
 
             <div
-              class="med-accordion-aulas__end monta-provas-filtro__accordion-icon"
+              class="monta-provas__header-end monta-provas-filtro__accordion-icon"
               slot="end"
             >
               <ion-button ds-name="tertiary" ds-size="xs">
@@ -106,7 +106,7 @@ const TemplateDefault = ({ valores }) => {
             </ion-chip>
 
             <div
-              class="med-accordion-aulas__end monta-provas-filtro__accordion-icon"
+              class="monta-provas__header-end monta-provas-filtro__accordion-icon"
               slot="end"
             >
               <ion-button ds-name="tertiary" ds-size="xs">
@@ -148,7 +148,7 @@ const TemplateDefault = ({ valores }) => {
                 </med-caption>
               </med-base>
 
-              <med-list-item-accordion titulo="Titulo">
+              <med-list-item-accordion titulo="Titulo" class="monta-provas-filtro-concurso__items">
                 <ion-checkbox slot="start"></ion-checkbox>
                 <med-list-item slot="end" titulo="Titulo">
                   <ion-checkbox slot="start"></ion-checkbox>
@@ -216,7 +216,7 @@ const TemplateDefault = ({ valores }) => {
             </ion-chip>
 
             <div
-              class="med-accordion-aulas__end monta-provas-filtro__accordion-icon"
+              class="monta-provas__header-end monta-provas-filtro__accordion-icon"
               slot="end"
             >
               <ion-button ds-name="tertiary" ds-size="xs">
@@ -311,7 +311,7 @@ const TemplateDefault = ({ valores }) => {
             </ion-chip>
 
             <div
-              class="med-accordion-aulas__end monta-provas-filtro__accordion-icon"
+              class="monta-provas__header-end monta-provas-filtro__accordion-icon"
               slot="end"
             >
               <ion-button ds-name="tertiary" ds-size="xs">
@@ -366,7 +366,7 @@ const TemplateDefault = ({ valores }) => {
             </ion-chip>
 
             <div
-              class="med-accordion-aulas__end monta-provas-filtro__accordion-icon"
+              class="monta-provas__header-end monta-provas-filtro__accordion-icon"
               slot="end"
             >
               <ion-button ds-name="tertiary" ds-size="xs">
@@ -493,7 +493,7 @@ const TemplateDefault = ({ valores }) => {
             </ion-chip>
 
             <div
-              class="med-accordion-aulas__end monta-provas-filtro__accordion-icon"
+              class="monta-provas__header-end monta-provas-filtro__accordion-icon"
               slot="end"
             >
               <ion-button ds-name="tertiary" ds-size="xs">

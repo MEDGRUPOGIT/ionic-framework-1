@@ -2,8 +2,8 @@
 
 :host {
   --background: #{color('neutral', '2')};
-  --border-radius: 0;
-  --padding: 8px;
+  --border-radius: 8px;
+  --padding: 16px;
 }
 
 :host(.med-base) {
@@ -11,10 +11,6 @@
   border-radius: var(--border-radius);
   padding: var(--padding);
   display: flex;
-}
-
-:host(.med-base--gap-s02)[slot="start"] {
-
 }
 
 // ////////////////////

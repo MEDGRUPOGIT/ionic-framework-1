@@ -13,6 +13,19 @@
 | `dsSize`  | `ds-size`  | Define a variação de tamanho do componente. | `"lg" \| "md" \| "sm" \| "xl" \| "xs" \| "xxs" \| undefined` | `undefined` |
 
 
+## Dependencies
+
+### Used by
+
+ - [med-piechart](../med-piechart)
+
+### Graph
+```mermaid
+graph TD;
+  med-piechart --> med-caption
+  style med-caption fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

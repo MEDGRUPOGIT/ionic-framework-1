@@ -4,7 +4,7 @@
   --padding: var(--med-spacing-squish-xs);
   --background: transparent;
   --border-radius: var(--med-border-radius-sm);
-  --font-size-title: var(--med-font-size-xs);
+  --font-size-title: 14px;
   --color-title: #{color('neutral', '10')};
   --font-size-label: var(--med-font-size-xxxs);
   --color-label: #{color('brand', '4')};
@@ -53,6 +53,11 @@
 
 :host(.med-list-item--selected) {
   background-position: 0 0;
+}
+
+:host(.med-list-item--disabled) {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 // ////////////////////

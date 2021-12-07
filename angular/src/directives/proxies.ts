@@ -4,6 +4,28 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, EventEmitter, NgZone } from "@angular/core";
 import { ProxyCmp, proxyOutputs } from "./proxies-utils";
 import { Components } from "@ionic/core";
+export declare interface AccordionGroup extends Components.AccordionGroup {
+}
+@Component({ selector: "accordion-group", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class AccordionGroup {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface AccordionItem extends Components.AccordionItem {
+}
+@Component({ selector: "accordion-item", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class AccordionItem {
+  toggle!: EventEmitter<CustomEvent>;
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ["toggle"]);
+  }
+}
 export declare interface IonApp extends Components.IonApp {
 }
 @Component({ selector: "ion-app", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
@@ -1041,6 +1063,17 @@ export class MedCartaoRespostaLista {
     this.el = r.nativeElement;
   }
 }
+export declare interface MedChartBar extends Components.MedChartBar {
+}
+@ProxyCmp({ inputs: ["dsColor", "height", "token", "value", "width"] })
+@Component({ selector: "med-chart-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "height", "token", "value", "width"] })
+export class MedChartBar {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedChartRadial extends Components.MedChartRadial {
 }
 @ProxyCmp({ inputs: ["dsColor", "dsName", "dsSize", "valores"] })
@@ -1120,13 +1153,16 @@ export class MedDivider {
 }
 export declare interface MedDownloadButton extends Components.MedDownloadButton {
 }
-@ProxyCmp({ inputs: ["downloaded", "downloading", "dsColor", "value"], "methods": ["toggle"] })
-@Component({ selector: "med-download-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["downloaded", "downloading", "dsColor", "value"] })
+@ProxyCmp({ inputs: ["downloaded", "downloading", "dsColor", "initial", "value"] })
+@Component({ selector: "med-download-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["downloaded", "downloading", "dsColor", "initial", "value"] })
 export class MedDownloadButton {
+  medDownloaded!: EventEmitter<CustomEvent>;
+  medCancelar!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ["medDownloaded", "medCancelar"]);
   }
 }
 export declare interface MedEnunciado extends Components.MedEnunciado {
@@ -1321,6 +1357,17 @@ export class MedParent {
     this.el = r.nativeElement;
   }
 }
+export declare interface MedPiechart extends Components.MedPiechart {
+}
+@ProxyCmp({ inputs: ["active", "downloadProgresso", "downloaded", "downloading", "dsColor", "progresso"], "methods": ["toggle"] })
+@Component({ selector: "med-piechart", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["active", "downloadProgresso", "downloaded", "downloading", "dsColor", "progresso"] })
+export class MedPiechart {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedQuestion extends Components.MedQuestion {
 }
 @ProxyCmp({ inputs: ["collapsed", "dsColor", "texto"], "methods": ["toggle"] })
@@ -1457,6 +1504,17 @@ export class MedTooltip {
     this.el = r.nativeElement;
   }
 }
+export declare interface MedType extends Components.MedType {
+}
+@ProxyCmp({ inputs: ["dsColor", "token"] })
+@Component({ selector: "med-type", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "token"] })
+export class MedType {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedVideoThumbnail extends Components.MedVideoThumbnail {
 }
 @ProxyCmp({ inputs: ["dsColor", "url", "value"] })
@@ -1481,8 +1539,8 @@ export class MedVote {
 }
 export declare interface MontaProvasPlusminus extends Components.MontaProvasPlusminus {
 }
-@ProxyCmp({ inputs: ["dsColor", "dsSize"] })
-@Component({ selector: "monta-provas-plusminus", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "dsSize"] })
+@ProxyCmp({ inputs: ["disabled", "dsColor", "dsSize"] })
+@Component({ selector: "monta-provas-plusminus", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled", "dsColor", "dsSize"] })
 export class MontaProvasPlusminus {
   medChange!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;

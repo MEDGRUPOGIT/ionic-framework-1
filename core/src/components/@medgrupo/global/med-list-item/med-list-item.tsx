@@ -39,13 +39,19 @@ export class MedListItem {
    */
   @Prop({ reflect:true }) border = false;
 
+  /**
+   * If `true`, the user cannot interact with the button.
+   */
+   @Prop({ reflect: true }) disabled = false;
+
   render() {
-    const { dsColor, titulo, label, selected, dsSize, border } = this;
+    const { dsColor, titulo, label, selected, dsSize, border, disabled } = this;
     return (
       <Host
         class={generateMedColor(dsColor, {
           'med-list-item': true,
           'med-list-item--selected': selected,
+          'med-list-item--disabled': disabled,
           'med-list-item--border-radius': border,
           [`med-list-item--${dsSize}`]: dsSize !== undefined,
         })}>

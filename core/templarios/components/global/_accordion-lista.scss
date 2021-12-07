@@ -1,4 +1,4 @@
-@import "../../templarios/abstracts";
+@import "../../../templarios/abstracts";
 
 // ////////////////////
 // Accordion usado na lista de professores
@@ -42,4 +42,8 @@
 
 .med-accordion-lista__item:not(:last-of-type) {
   border-bottom: 1px solid hsl(var(--med-color-aula-3));
+}
+
+.med-rotate {
+  transition: transform 300ms ease;
 }

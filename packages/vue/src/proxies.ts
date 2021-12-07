@@ -8,6 +8,14 @@ import type { JSX } from '@ionic/core';
 
 
 
+export const AccordionGroup = /*@__PURE__*/ defineContainer<JSX.AccordionGroup>('accordion-group');
+
+
+export const AccordionItem = /*@__PURE__*/ defineContainer<JSX.AccordionItem>('accordion-item', [
+  'toggle'
+]);
+
+
 export const IonAvatar = /*@__PURE__*/ defineContainer<JSX.IonAvatar>('ion-avatar');
 
 
@@ -957,6 +965,15 @@ export const MedCartaoRespostaItem = /*@__PURE__*/ defineContainer<JSX.MedCartao
 export const MedCartaoRespostaLista = /*@__PURE__*/ defineContainer<JSX.MedCartaoRespostaLista>('med-cartao-resposta-lista');
 
 
+export const MedChartBar = /*@__PURE__*/ defineContainer<JSX.MedChartBar>('med-chart-bar', [
+  'dsColor',
+  'value',
+  'height',
+  'width',
+  'token'
+]);
+
+
 export const MedChartRadial = /*@__PURE__*/ defineContainer<JSX.MedChartRadial>('med-chart-radial', [
   'dsColor',
   'dsName',
@@ -1005,8 +1022,11 @@ export const MedDivider = /*@__PURE__*/ defineContainer<JSX.MedDivider>('med-div
 export const MedDownloadButton = /*@__PURE__*/ defineContainer<JSX.MedDownloadButton>('med-download-button', [
   'dsColor',
   'value',
+  'downloaded',
   'downloading',
-  'downloaded'
+  'initial',
+  'medDownloaded',
+  'medCancelar'
 ]);
 
 
@@ -1127,6 +1147,16 @@ export const MedParent = /*@__PURE__*/ defineContainer<JSX.MedParent>('med-paren
 ]);
 
 
+export const MedPiechart = /*@__PURE__*/ defineContainer<JSX.MedPiechart>('med-piechart', [
+  'dsColor',
+  'active',
+  'progresso',
+  'downloadProgresso',
+  'downloading',
+  'downloaded'
+]);
+
+
 export const MedQuestion = /*@__PURE__*/ defineContainer<JSX.MedQuestion>('med-question', [
   'dsColor',
   'collapsed',
@@ -1216,6 +1246,12 @@ export const MedTooltip = /*@__PURE__*/ defineContainer<JSX.MedTooltip>('med-too
 ]);
 
 
+export const MedType = /*@__PURE__*/ defineContainer<JSX.MedType>('med-type', [
+  'dsColor',
+  'token'
+]);
+
+
 export const MedVideoThumbnail = /*@__PURE__*/ defineContainer<JSX.MedVideoThumbnail>('med-video-thumbnail', [
   'dsColor',
   'url',
@@ -1233,6 +1269,7 @@ export const MedVote = /*@__PURE__*/ defineContainer<JSX.MedVote>('med-vote', [
 export const MontaProvasPlusminus = /*@__PURE__*/ defineContainer<JSX.MontaProvasPlusminus>('monta-provas-plusminus', [
   'dsColor',
   'dsSize',
+  'disabled',
   'medChange'
 ]);
 
