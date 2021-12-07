@@ -7,10 +7,11 @@
 
 ## Properties
 
-| Property  | Attribute  | Description                 | Type                  | Default     |
-| --------- | ---------- | --------------------------- | --------------------- | ----------- |
-| `dsColor` | `ds-color` | Define a cor do componente. | `string \| undefined` | `undefined` |
-| `dsSize`  | `ds-size`  | TODO                        | `"xl" \| undefined`   | `undefined` |
+| Property   | Attribute  | Description                 | Type                                       | Default     |
+| ---------- | ---------- | --------------------------- | ------------------------------------------ | ----------- |
+| `disabled` | `disabled` | TODO                        | `"both" \| "minus" \| "plus" \| undefined` | `undefined` |
+| `dsColor`  | `ds-color` | Define a cor do componente. | `string \| undefined`                      | `undefined` |
+| `dsSize`   | `ds-size`  | TODO                        | `"xl" \| undefined`                        | `undefined` |
 
 
 ## Events

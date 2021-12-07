@@ -1,0 +1,219 @@
+@import "../../../../../templarios/abstracts";
+
+:host {
+  --background-stroke: #{color("neutral", "2")};
+  --color: #{color("brand", "4")};
+  --background-active: #{color("neutral", "2")};
+  --text-color: #{color("neutral", "10")};
+  --fill-background: #{color("neutral", "2")};
+}
+
+:host(.med-piechart) {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  display: block;
+
+  .draw {
+    width: auto;
+    height: 100%;
+    flex-shrink: 0;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+
+    &__background {
+      stroke-dashoffset: 0;
+      stroke: var(--background-stroke);
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke-dasharray 1s ease-in-out;
+      transform: rotate(-90deg);
+      transform-origin: 18px 18px;
+      background: transparent;
+      fill: var(--fill-background);
+
+      &--porcentagem {
+        stroke: var(--color);
+        stroke-dasharray: var(--porcentagem) 100;
+        animation: start 0.7s;
+        stroke-width: 2;
+        fill: none;
+      }
+    }
+
+    &__text {
+      fill: var(--text-color);
+      font-size: 10px;
+      font-weight: 700;
+      text-anchor: middle;
+    }
+  }
+
+  .draw-flip {
+    background: hsl(var(--med-color-neutral-2));
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 0;
+
+    &__text {
+      --font-weight: 700;
+      height: 16px;
+      line-height: 16px;
+    }
+
+    &__download {
+      position: absolute;
+      display: block;
+      bottom: -4px;
+      left: -9px;
+      transform: scale(0);
+      transition: transform 0.7s;
+      --background: #{color("neutral", "1")};
+    }
+  }
+}
+
+// ////////////////////
+// states
+// ////////////////////
+
+:host(.med-piechart--active) {
+  .draw {
+    animation: flip-front 2s;
+    animation-fill-mode: forwards;
+
+    &__text {
+      transform: none;
+    }
+  }
+
+  .draw-flip {
+    animation: flip-back 2s;
+    animation-fill-mode: forwards;
+
+    &__download {
+      transform: scale(1);
+    }
+
+    &__text {
+      transform: none;
+    }
+  }
+}
+
+:host(.med-piechart--reverse) {
+  .draw {
+    animation: flip-front-reverse 2s;
+    animation-fill-mode: forwards;
+    &__text {
+      transform: none;
+    }
+  }
+
+  .draw-flip {
+    animation: flip-back-reverse 2s;
+    animation-fill-mode: forwards;
+
+    &__text {
+      transform: none;
+    }
+
+    &__download {
+      transform: scale(0);
+    }
+  }
+}
+
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-color) {
+  --color: #{curr-color("color", "4")};
+}
+
+// ////////////////////
+// neutral
+// ////////////////////
+
+:host(.med-color-neutral) {
+  --color: #{curr-color("neutral", "2")};
+}
+
+// //////////
+// feedback
+// //////////
+
+:host(.med-color-feedback) {
+  --color: #{curr-color("feedback")};
+}
+
+@keyframes start {
+  from {
+    stroke-dasharray: 0 100;
+  }
+  to {
+    stroke-dasharray: var(--porcentagem) 100;
+  }
+}
+
+@keyframes flip-front {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+    z-index: 0;
+  }
+}
+
+@keyframes flip-front-reverse {
+  0% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+    z-index: 1;
+  }
+}
+
+@keyframes flip-back {
+  0% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+    z-index: 1;
+  }
+}
+
+@keyframes flip-back-reverse {
+  0% {
+    transform: rotateY(0deg);
+    z-index: 1;
+  }
+  90% {
+    z-index: 0;
+  }
+  100% {
+    transform: rotateY(180deg);
+    z-index: 0;
+  }
+}

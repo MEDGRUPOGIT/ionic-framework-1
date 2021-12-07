@@ -1,0 +1,15 @@
+@import "../../../../../templarios/abstracts";
+
+:host {
+  --margin: 10px;
+  --background-page: #{color('neutral', '1')};
+}
+
+:host {
+  display: block;
+}
+
+/* .blocker {
+  background-color: red;
+  will-change: transform;
+} */

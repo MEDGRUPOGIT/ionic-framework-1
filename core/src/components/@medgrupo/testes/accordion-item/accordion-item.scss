@@ -1,0 +1,29 @@
+
+@import "../../../../../templarios/abstracts";
+
+:host {
+  --margin: 10px;
+  --background-page: #{color('neutral', '1')};
+  --background-header: #{color('neutral', '2')};
+  --background-content: #{color('neutral', '2')};
+}
+
+:host {
+  display: block;
+  will-change: transform;
+  border-bottom: var(--margin) solid var(--background-page);
+  overflow: hidden;
+}
+
+.header {
+  background-color: var(--background-header);
+  z-index: 2;
+  position: relative;
+}
+
+.content {
+  display: none;
+  background-color: var(--background-content);
+  z-index: 1;
+  position: relative;
+}

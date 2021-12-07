@@ -47,8 +47,6 @@
 graph TD;
   med-message --> med-tooltip
   med-message --> ion-icon
-  med-tooltip --> ion-button
-  ion-button --> ion-ripple-effect
   style med-message fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

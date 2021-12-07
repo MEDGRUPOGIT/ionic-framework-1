@@ -73,10 +73,8 @@ export class MedTooltip {
           'med-tooltip--collapsed': collapsed
         })}
       >
-        <div class="med-tooltip__icon-container">
-          <ion-button ds-name="tertiary" onClick={(event) => {this.toggle(event)}} class="med-tooltip__button">
-            <slot name="icon"></slot>
-          </ion-button>
+        <div class="med-tooltip__input-container" onClick={(event) => {this.toggle(event)}}>
+          <slot name="input"></slot>
         </div>
 
         <div class="med-tooltip__content">

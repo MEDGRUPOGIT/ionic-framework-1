@@ -1,25 +1,30 @@
-@import "../../templarios/abstracts";
+@import "../../../templarios/abstracts";
 
-.med-accordion__text-header {
+.monta-provas-accordion__text-header {
   display: flex;
   align-items: center;
   height: 100%;
 }
-.med-accordion-aulas__end {
+
+.monta-provas__header-end {
   margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
-.med-rotate {
-  transition: transform 300ms ease;
-}
+
 .monta-provas-content {
   display: block;
 
   @include breakpoint-up("lg") {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 44px 0 10px 0;
   }
 }
+
 .monta-provas-content__chart {
   background: hsl(var(--med-color-neutral-2));
   padding: 0 var(--med-spacing-stretch-md);
@@ -31,8 +36,10 @@
 
   @include breakpoint-up("lg") {
     margin: unset;
+    max-width: 500px;
   }
 }
+
 .monta-provas-content__chart-data {
   position: absolute;
   left: 50%;
@@ -40,16 +47,27 @@
   transform: translate(-50%, -50%);
   line-height: var(--med-line-height-compressed);
   text-align: center;
+  --font-size-label: var(--med-font-size-xxxs);
+
 }
+
 .monta-provas-content__chart-label {
+  --font-size-item: var(--med-font-size-xxxs);
 }
+
+.med-chart-radial-label__quantia {
+  min-width: 70px !important;
+}
+
 .monta-provas-content__button {
   display: flex;
   padding: 0 var(--med-spacing-stretch-xs);
 }
+
 .monta-provas-content__button-realizar {
   margin-left: auto;
 }
+
 .monta-provas-content__button-icon {
   margin-right: 16px;
 }
@@ -59,6 +77,6 @@
   margin-right: 16px;
 }
 
-.med-icon-tooltip {
+.monta-provas-content__button-tooltip {
   opacity: 0.3;
 }

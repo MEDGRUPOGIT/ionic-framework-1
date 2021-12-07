@@ -4,7 +4,7 @@
   --padding: 6px 16px;
   --background: transparent;
   --border-radius: var(--med-border-radius-sm);
-  --font-size-title: var(--med-font-size-xs);
+  --font-size-title: 14px;
   --color-title: #{color(neutral, 10)};
   --font-size-label: var(--med-font-size-xxxs);
   --color-label: #{color('brand', '4')};
@@ -120,6 +120,11 @@
 
 :host(.med-list-item-accordion--md) {
   --padding: var(--med-spacing-stretch-md);
+}
+
+:host(.med-list-item-accordion--disabled) {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 // ////////////////////

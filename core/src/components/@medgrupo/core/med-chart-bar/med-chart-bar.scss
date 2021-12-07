@@ -1,0 +1,37 @@
+@import "../../../../../templarios/abstracts";
+
+:host {
+  --background: #{color('brand', '3')};
+}
+
+:host {
+  display: block;
+  overflow: hidden;
+  height: calc(var(--height) + 12px);
+}
+
+.med-chart-bar__container {
+  transform: translateY(var(--value));
+}
+
+.med-chart-bar__progress {
+  background: var(--background);
+  width: var(--width);
+  height: var(--height);
+}
+
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-color) {
+  --background: #{curr-color('color', '3')};
+}
+
+:host(.med-color-neutral) {
+  --background: #{curr-color('neutral')};
+}
+
+:host(.med-color-feedback) {
+  --background: #{curr-color('feedback')};
+}

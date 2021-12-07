@@ -7,26 +7,26 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ dsColor, titulo, label, selected }) => {
+const Template = ({ dsColor, titulo, label, selected, disabled }) => {
   return html`
     <ion-app>
       <ion-content>
 
         <!-- component -->
         <med-list margin="sm">
-          <med-list-item .dsColor=${dsColor} .titulo=${titulo} .label=${label} .selected=${selected}>
+          <med-list-item .dsColor=${dsColor} .titulo=${titulo} .label=${label} .selected=${selected} disabled="true">
             <ion-checkbox slot="start"></ion-checkbox>
           </med-list-item>
 
-          <med-list-item .dsColor=${dsColor} .titulo=${titulo} .label=${label} .selected=${selected}>
+          <med-list-item .dsColor=${dsColor} .titulo=${titulo} .label=${label} .selected=${selected} ?disabled=${disabled}>
             <ion-checkbox slot="start"></ion-checkbox>
           </med-list-item>
 
-          <med-list-item .dsColor=${dsColor} .titulo=${titulo} .label=${label} .selected=${selected}>
+          <med-list-item .dsColor=${dsColor} .titulo=${titulo} .label=${label} .selected=${selected} ?disabled=${disabled}>
             <ion-checkbox slot="start"></ion-checkbox>
           </med-list-item>
 
-          <med-list-item .dsColor=${dsColor} .titulo=${titulo} .label=${label} .selected=${selected}>
+          <med-list-item .dsColor=${dsColor} .titulo=${titulo} .label=${label} .selected=${selected} ?disabled=${disabled}>
             <ion-checkbox slot="start"></ion-checkbox>
           </med-list-item>
         </med-list>
@@ -63,6 +63,15 @@ ListItem.argTypes = {
     defaultValue: 'Teste',
   },
   selected: {
+    control: { type: 'boolean' },
+    description: 'Define o estado do componente.',
+    defaultValue: false,
+    table: {
+      type:  { summary: 'boolean' },
+      defaultValue: { summary: 'false' },
+    },
+  },
+  disabled: {
     control: { type: 'boolean' },
     description: 'Define o estado do componente.',
     defaultValue: false,

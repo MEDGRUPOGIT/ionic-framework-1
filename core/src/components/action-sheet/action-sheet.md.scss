@@ -85,3 +85,16 @@
 .action-sheet-selected {
   font-weight: bold;
 }
+
+
+//////////////////////
+/// Custom
+/////////////////////
+
+:host {
+  --background: hsl(var(--med-color-neutral-10));
+
+  .action-sheet-selected {
+    color: hsl(var(--med-color-brand-4));
+  }
+}

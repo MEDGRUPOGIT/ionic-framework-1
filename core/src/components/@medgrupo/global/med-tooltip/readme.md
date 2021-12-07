@@ -45,15 +45,9 @@ Type: `Promise<void>`
 
  - [med-message](../med-message)
 
-### Depends on
-
-- [ion-button](../../../button)
-
 ### Graph
 ```mermaid
 graph TD;
-  med-tooltip --> ion-button
-  ion-button --> ion-ripple-effect
   med-message --> med-tooltip
   style med-tooltip fill:#f9f,stroke:#333,stroke-width:4px
 ```
