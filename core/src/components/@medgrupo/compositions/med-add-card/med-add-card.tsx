@@ -21,7 +21,7 @@ export class MedAddCard {
       <Host class={generateMedColor(dsColor, {
         'med-add-card': true,
       })}>
-        <med-base class="med-add-card__container">
+        <med-base class="med-add-card__container" spacing-h="s12">
           <ion-icon class="med-icon med-add-card__icon" name="med-marcar"></ion-icon>
           <med-type token="p14">Adicionar Card</med-type>
         </med-base>

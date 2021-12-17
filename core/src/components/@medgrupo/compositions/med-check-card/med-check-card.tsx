@@ -24,7 +24,7 @@ export class MedCheckCard {
         'med-check-card': true,
         'med-check-card--alert': alert,
       })}>
-        <med-base class="med-check-card__container" spacing-v="" spacing-h="">
+        <med-base class="med-check-card__container" spacing-h="s12">
           <ion-checkbox ds-color={dsColor}></ion-checkbox>
 
           <div class="med-check-card__text-container">
@@ -38,7 +38,7 @@ export class MedCheckCard {
           </div>
 
           <med-tooltip class="med-check-card__tooltip" placement="top" position="start">
-            <ion-icon class="med-check-card__alert-icon med-icon med-icon--sm" name="med-marcar"></ion-icon>
+            <ion-icon class="med-check-card__alert-icon med-icon med-icon--sm" name="med-marcar" slot="input"></ion-icon>
             <med-type token="p14x" slot="content">Para reagendar este card, clique no menu ao lado e selecione Editar.</med-type>
           </med-tooltip>
 

@@ -1775,6 +1775,8 @@ med-tooltip,prop,placement,"bottom" | "left" | "right" | "top" | undefined,undef
 med-tooltip,prop,position,"center" | "end" | "start" | undefined,undefined,false,true
 med-tooltip,prop,titulo,string | undefined,undefined,false,true
 med-tooltip,method,toggle,toggle(event?: Event | undefined) => Promise<void>
+med-tooltip,css-prop,--background
+med-tooltip,css-prop,--z-index
 
 med-type,shadow
 med-type,prop,dsColor,string | undefined,undefined,false,true
