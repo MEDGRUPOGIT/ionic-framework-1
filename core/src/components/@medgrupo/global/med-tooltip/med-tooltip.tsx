@@ -73,9 +73,9 @@ export class MedTooltip {
           'med-tooltip--collapsed': collapsed
         })}
       >
-      {/*   <div class="med-tooltip__input-container" onClick={(event) => {this.toggle(event)}}>
+        <div class="med-tooltip__input-container" onClick={(event) => {this.toggle(event)}}>
           <slot name="input"></slot>
-        </div> */}
+        </div>
 
         <div class="med-tooltip__content">
           {titulo && <h3 class="med-tooltip__titulo">{titulo}</h3>}
