@@ -2924,6 +2924,12 @@ export namespace Components {
          */
         "singleOpen": boolean;
     }
+    interface MedAddCard {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+    }
     interface MedAgrupador {
         /**
           * Define o estado do componente.
@@ -3253,6 +3259,12 @@ export namespace Components {
           * TODO
          */
         "valores": MedChartRadiaItem[];
+    }
+    interface MedCheckCard {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
     }
     interface MedChild {
         /**
@@ -4411,6 +4423,12 @@ declare global {
         prototype: HTMLMedAccordionListElement;
         new (): HTMLMedAccordionListElement;
     };
+    interface HTMLMedAddCardElement extends Components.MedAddCard, HTMLStencilElement {
+    }
+    var HTMLMedAddCardElement: {
+        prototype: HTMLMedAddCardElement;
+        new (): HTMLMedAddCardElement;
+    };
     interface HTMLMedAgrupadorElement extends Components.MedAgrupador, HTMLStencilElement {
     }
     var HTMLMedAgrupadorElement: {
@@ -4500,6 +4518,12 @@ declare global {
     var HTMLMedChartRadialLabelElement: {
         prototype: HTMLMedChartRadialLabelElement;
         new (): HTMLMedChartRadialLabelElement;
+    };
+    interface HTMLMedCheckCardElement extends Components.MedCheckCard, HTMLStencilElement {
+    }
+    var HTMLMedCheckCardElement: {
+        prototype: HTMLMedCheckCardElement;
+        new (): HTMLMedCheckCardElement;
     };
     interface HTMLMedChildElement extends Components.MedChild, HTMLStencilElement {
     }
@@ -4859,6 +4883,7 @@ declare global {
         "ion-virtual-scroll": HTMLIonVirtualScrollElement;
         "med-accordion-item": HTMLMedAccordionItemElement;
         "med-accordion-list": HTMLMedAccordionListElement;
+        "med-add-card": HTMLMedAddCardElement;
         "med-agrupador": HTMLMedAgrupadorElement;
         "med-alternativas": HTMLMedAlternativasElement;
         "med-alternativas-a": HTMLMedAlternativasAElement;
@@ -4874,6 +4899,7 @@ declare global {
         "med-chart-radial": HTMLMedChartRadialElement;
         "med-chart-radial-content": HTMLMedChartRadialContentElement;
         "med-chart-radial-label": HTMLMedChartRadialLabelElement;
+        "med-check-card": HTMLMedCheckCardElement;
         "med-child": HTMLMedChildElement;
         "med-config": HTMLMedConfigElement;
         "med-context-menu": HTMLMedContextMenuElement;
@@ -7866,6 +7892,12 @@ declare namespace LocalJSX {
          */
         "singleOpen"?: boolean;
     }
+    interface MedAddCard {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+    }
     interface MedAgrupador {
         /**
           * Define o estado do componente.
@@ -8235,6 +8267,12 @@ declare namespace LocalJSX {
           * TODO
          */
         "valores"?: MedChartRadiaItem[];
+    }
+    interface MedCheckCard {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
     }
     interface MedChild {
         /**
@@ -8942,6 +8980,7 @@ declare namespace LocalJSX {
         "ion-virtual-scroll": IonVirtualScroll;
         "med-accordion-item": MedAccordionItem;
         "med-accordion-list": MedAccordionList;
+        "med-add-card": MedAddCard;
         "med-agrupador": MedAgrupador;
         "med-alternativas": MedAlternativas;
         "med-alternativas-a": MedAlternativasA;
@@ -8957,6 +8996,7 @@ declare namespace LocalJSX {
         "med-chart-radial": MedChartRadial;
         "med-chart-radial-content": MedChartRadialContent;
         "med-chart-radial-label": MedChartRadialLabel;
+        "med-check-card": MedCheckCard;
         "med-child": MedChild;
         "med-config": MedConfig;
         "med-context-menu": MedContextMenu;
@@ -9100,6 +9140,7 @@ declare module "@stencil/core" {
             "ion-virtual-scroll": LocalJSX.IonVirtualScroll & JSXBase.HTMLAttributes<HTMLIonVirtualScrollElement>;
             "med-accordion-item": LocalJSX.MedAccordionItem & JSXBase.HTMLAttributes<HTMLMedAccordionItemElement>;
             "med-accordion-list": LocalJSX.MedAccordionList & JSXBase.HTMLAttributes<HTMLMedAccordionListElement>;
+            "med-add-card": LocalJSX.MedAddCard & JSXBase.HTMLAttributes<HTMLMedAddCardElement>;
             "med-agrupador": LocalJSX.MedAgrupador & JSXBase.HTMLAttributes<HTMLMedAgrupadorElement>;
             "med-alternativas": LocalJSX.MedAlternativas & JSXBase.HTMLAttributes<HTMLMedAlternativasElement>;
             "med-alternativas-a": LocalJSX.MedAlternativasA & JSXBase.HTMLAttributes<HTMLMedAlternativasAElement>;
@@ -9115,6 +9156,7 @@ declare module "@stencil/core" {
             "med-chart-radial": LocalJSX.MedChartRadial & JSXBase.HTMLAttributes<HTMLMedChartRadialElement>;
             "med-chart-radial-content": LocalJSX.MedChartRadialContent & JSXBase.HTMLAttributes<HTMLMedChartRadialContentElement>;
             "med-chart-radial-label": LocalJSX.MedChartRadialLabel & JSXBase.HTMLAttributes<HTMLMedChartRadialLabelElement>;
+            "med-check-card": LocalJSX.MedCheckCard & JSXBase.HTMLAttributes<HTMLMedCheckCardElement>;
             "med-child": LocalJSX.MedChild & JSXBase.HTMLAttributes<HTMLMedChildElement>;
             "med-config": LocalJSX.MedConfig & JSXBase.HTMLAttributes<HTMLMedConfigElement>;
             "med-context-menu": LocalJSX.MedContextMenu & JSXBase.HTMLAttributes<HTMLMedContextMenuElement>;

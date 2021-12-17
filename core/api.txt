@@ -1423,6 +1423,9 @@ med-accordion-list,css-prop,--background
 med-accordion-list,css-prop,--border
 med-accordion-list,css-prop,--border-radius
 
+med-add-card,scoped
+med-add-card,prop,dsColor,string | undefined,undefined,false,true
+
 med-agrupador,shadow
 med-agrupador,prop,collapsed,boolean,false,false,true
 med-agrupador,prop,dsColor,string | undefined,undefined,false,true
@@ -1541,6 +1544,9 @@ med-chart-radial-label,scoped
 med-chart-radial-label,prop,dsColor,string | undefined,undefined,false,true
 med-chart-radial-label,prop,dsSize,"lg" | undefined,undefined,false,false
 med-chart-radial-label,prop,valores,MedChartRadiaItem[],[],false,false
+
+med-check-card,shadow
+med-check-card,prop,dsColor,string | undefined,undefined,false,true
 
 med-child,shadow
 med-child,prop,dsColor,string | undefined,undefined,false,false

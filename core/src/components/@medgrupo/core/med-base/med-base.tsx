@@ -47,6 +47,7 @@ export class MedBase {
         <slot name="start"></slot>
         <slot name="middle"></slot>
         <slot name="end"></slot>
+        <slot></slot>
       </Host>
     );
   }
