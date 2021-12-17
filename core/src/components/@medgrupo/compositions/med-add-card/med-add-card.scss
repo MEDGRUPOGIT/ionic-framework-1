@@ -2,16 +2,18 @@
 
 }
 
-:host(.med-check-card) {
+:host(.med-add-card) {
 
 }
 
-.med-check-card {
-  &__text-container {
-
+.med-add-card {
+  &__container {
+    display: flex;
+    align-items: center;
   }
 
-  &__info-container {
-
+  &__icon {
+    stroke: color('neutral', '10');
+    margin-right: 18px;
   }
 }

@@ -868,6 +868,11 @@ export const MedAccordionList = /*@__PURE__*/ defineContainer<JSX.MedAccordionLi
 ]);
 
 
+export const MedAddCard = /*@__PURE__*/ defineContainer<JSX.MedAddCard>('med-add-card', [
+  'dsColor'
+]);
+
+
 export const MedAgrupador = /*@__PURE__*/ defineContainer<JSX.MedAgrupador>('med-agrupador', [
   'dsColor',
   'texto1',
@@ -1009,6 +1014,12 @@ export const MedChartRadialLabel = /*@__PURE__*/ defineContainer<JSX.MedChartRad
   'valores',
   'dsColor',
   'dsSize'
+]);
+
+
+export const MedCheckCard = /*@__PURE__*/ defineContainer<JSX.MedCheckCard>('med-check-card', [
+  'dsColor',
+  'alert'
 ]);
 
 

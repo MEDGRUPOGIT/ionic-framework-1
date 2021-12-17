@@ -3261,6 +3261,7 @@ export namespace Components {
         "valores": MedChartRadiaItem[];
     }
     interface MedCheckCard {
+        "alert": boolean;
         /**
           * Define a cor do componente.
          */
@@ -8269,6 +8270,7 @@ declare namespace LocalJSX {
         "valores"?: MedChartRadiaItem[];
     }
     interface MedCheckCard {
+        "alert"?: boolean;
         /**
           * Define a cor do componente.
          */

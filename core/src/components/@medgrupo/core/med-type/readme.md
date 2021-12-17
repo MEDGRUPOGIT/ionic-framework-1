@@ -18,6 +18,8 @@
 ### Used by
 
  - [filtro-modal](../../team/dashboard/filtro-modal)
+ - [med-add-card](../../compositions/med-add-card)
+ - [med-check-card](../../compositions/med-check-card)
  - [med-piechart](../med-piechart)
  - [med-semana](../../compositions/med-semana)
  - [med-video-list-item](../../testes/med-video-list-item)
@@ -26,6 +28,8 @@
 ```mermaid
 graph TD;
   filtro-modal --> med-type
+  med-add-card --> med-type
+  med-check-card --> med-type
   med-piechart --> med-type
   med-semana --> med-type
   med-video-list-item --> med-type

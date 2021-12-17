@@ -7,11 +7,51 @@
 }
 
 .med-check-card {
-  &__text-container {
+  &__container {
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+  }
 
+  &__text-container {
+    padding: 0 18px;
   }
 
   &__info-container {
+    display: flex;
+    align-items: center;
+    padding-top: 4px;
+  }
 
+  &__icon {
+    stroke: color('neutral', '8');
+  }
+
+  &__subtitulo {
+    margin: 0 8px 0 10px;
+  }
+
+  &__tooltip {
+    display: none;
+  }
+
+  &__alert-icon {
+    stroke: color('feedback', 'warning');
+  }
+}
+
+//////////////////////////////
+// state
+//////////////////////////////
+
+:host(.med-check-card--alert) {
+  .med-check-card {
+    &__container {
+      border: 1px solid color('feedback', 'warning');
+    }
+
+    &__tooltip {
+      display: block;
+    }
   }
 }

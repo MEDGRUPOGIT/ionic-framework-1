@@ -7,15 +7,17 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ dsColor }) => {
+const Template = ({ dsColor, alert }) => {
   return html`
     <ion-app>
       <ion-content>
         <div class="flex-center flex-center--xs">
 
           <!-- component -->
-          <med-check-card .dsColor=${dsColor}></med-check-card>
+          <med-check-card .dsColor=${dsColor} .alert=${alert}></med-check-card>
           <!-- component -->
+
+        </med-tooltip>
 
         </div>
       </ion-content>
@@ -38,6 +40,15 @@ Default.argTypes = {
     table: {
       type: { summary: "MedColor" },
       defaultValue: { summary: "undefined" },
+    },
+  },
+  alert: {
+    control: { type: 'boolean' },
+    description: 'Define o estado do componente.',
+    defaultValue: false,
+    table: {
+      type:  { summary: 'boolean' },
+      defaultValue: { summary: 'false' },
     },
   },
 };

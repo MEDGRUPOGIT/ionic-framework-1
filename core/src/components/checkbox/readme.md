@@ -304,6 +304,19 @@ export default defineComponent({
 | `--transition`           | Transition of the checkbox icon                |
 
 
+## Dependencies
+
+### Used by
+
+ - [med-check-card](../@medgrupo/compositions/med-check-card)
+
+### Graph
+```mermaid
+graph TD;
+  med-check-card --> ion-checkbox
+  style ion-checkbox fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

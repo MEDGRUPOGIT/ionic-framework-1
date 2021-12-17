@@ -951,6 +951,17 @@ export class MedAccordionList {
     this.el = r.nativeElement;
   }
 }
+export declare interface MedAddCard extends Components.MedAddCard {
+}
+@ProxyCmp({ inputs: ["dsColor"] })
+@Component({ selector: "med-add-card", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor"] })
+export class MedAddCard {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedAgrupador extends Components.MedAgrupador {
 }
 @ProxyCmp({ inputs: ["collapsed", "dsColor", "texto1", "texto2"], "methods": ["toggle"] })
@@ -1124,6 +1135,17 @@ export declare interface MedChartRadialLabel extends Components.MedChartRadialLa
 @ProxyCmp({ inputs: ["dsColor", "dsSize", "valores"] })
 @Component({ selector: "med-chart-radial-label", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "dsSize", "valores"] })
 export class MedChartRadialLabel {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface MedCheckCard extends Components.MedCheckCard {
+}
+@ProxyCmp({ inputs: ["alert", "dsColor"] })
+@Component({ selector: "med-check-card", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alert", "dsColor"] })
+export class MedCheckCard {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();

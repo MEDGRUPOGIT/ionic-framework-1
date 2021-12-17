@@ -4,8 +4,8 @@ import { generateMedColor } from '../../../../utils/med-theme';
 
 @Component({
   tag: 'med-add-card',
-  styleUrl: 'med-add-card.css',
-  scoped: true,
+  styleUrl: 'med-add-card.scss',
+  shadow: true,
 })
 export class MedAddCard {
 
@@ -21,8 +21,9 @@ export class MedAddCard {
       <Host class={generateMedColor(dsColor, {
         'med-add-card': true,
       })}>
-        <med-base>
-          <ion-icon class="med-icon" name=""></ion-icon>
+        <med-base class="med-add-card__container">
+          <ion-icon class="med-icon med-add-card__icon" name="med-marcar"></ion-icon>
+          <med-type token="p14">Adicionar Card</med-type>
         </med-base>
       </Host>
     );
