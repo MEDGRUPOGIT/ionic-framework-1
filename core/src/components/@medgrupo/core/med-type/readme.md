@@ -17,12 +17,18 @@
 
 ### Used by
 
- - [med-chart-bar](../med-chart-bar)
+ - [filtro-modal](../../team/dashboard/filtro-modal)
+ - [med-piechart](../med-piechart)
+ - [med-semana](../../compositions/med-semana)
+ - [med-video-list-item](../../testes/med-video-list-item)
 
 ### Graph
 ```mermaid
 graph TD;
-  med-chart-bar --> med-type
+  filtro-modal --> med-type
+  med-piechart --> med-type
+  med-semana --> med-type
+  med-video-list-item --> med-type
   style med-type fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

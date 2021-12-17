@@ -370,6 +370,8 @@ export default defineComponent({
 
 ### Used by
 
+ - [filtro-dashboard](../@medgrupo/team/dashboard/filtro-dashboard)
+ - [filtro-modal](../@medgrupo/team/dashboard/filtro-modal)
  - [ion-searchbar](../searchbar)
  - [med-config](../@medgrupo/global/med-config)
  - [med-context-menu](../@medgrupo/global/med-context-menu)
@@ -377,6 +379,7 @@ export default defineComponent({
  - [med-list-item-accordion](../@medgrupo/global/med-list-item-accordion)
  - [med-offline](../@medgrupo/global/med-offline)
  - [med-rate-aula](../@medgrupo/global/med-rate-aula)
+ - [med-video-list-item](../@medgrupo/testes/med-video-list-item)
 
 ### Depends on
 
@@ -386,6 +389,8 @@ export default defineComponent({
 ```mermaid
 graph TD;
   ion-button --> ion-ripple-effect
+  filtro-dashboard --> ion-button
+  filtro-modal --> ion-button
   ion-searchbar --> ion-button
   med-config --> ion-button
   med-context-menu --> ion-button
@@ -393,6 +398,7 @@ graph TD;
   med-list-item-accordion --> ion-button
   med-offline --> ion-button
   med-rate-aula --> ion-button
+  med-video-list-item --> ion-button
   style ion-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

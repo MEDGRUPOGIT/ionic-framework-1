@@ -1,13 +1,20 @@
-import { Component, Host, h, Prop } from '@stencil/core';
+import { Component, Host, h, Prop, Element } from '@stencil/core';
 import { MedColor } from '../../../../interface';
 import { generateMedColor } from '../../../../utils/med-theme';
 
+/**
+ * @slot  Slot default.
+ */
 @Component({
   tag: 'med-chart-bar',
   styleUrl: 'med-chart-bar.scss',
   shadow: true,
 })
 export class MedChartBar {
+  @Element() hostElement!: HTMLElement;
+
+  private hostHeight = 0;
+  private hostResizeObserver!: ResizeObserver;
 
   /**
     * Define a cor do componente.
@@ -27,24 +34,44 @@ export class MedChartBar {
   /**
     * Define o width em px do componente.
     */
-  @Prop({ reflect: true }) width = 42;
+  @Prop({ reflect: true }) width = 24;
 
-  /**
-    * Define o token do label do componente.
-    */
-  @Prop({ reflect: true }) token = 'p12b';
+  componentDidLoad() {
+    this.setSize();
+  }
+
+  disconnectedCallback() {
+    if(this.hostResizeObserver){
+      this.hostResizeObserver.disconnect();
+    }
+  }
+
+  private setSize() {
+    this.hostResizeObserver = new ResizeObserver(() => {
+      let newHostHeight = Number(this.hostElement?.getBoundingClientRect().height);
+
+      if (newHostHeight !== this.hostHeight) {
+        this.hostHeight = newHostHeight;
+      }
+    });
+
+    this.hostResizeObserver.observe(this.hostElement);
+  }
 
   render() {
-    const { dsColor, value, height, width, token } = this;
+    const { dsColor, value, height, width } = this;
 
-    const percentage = value === 0 ? 100 : 100 - value;
+    const percentage = value === 0 ? height : height - ((height * value) / 100);
 
     return (
-      <Host class={generateMedColor(dsColor, {
-        'med-chart-bar': true
-      })}>
-        <div class="med-chart-bar__container" style={{ '--value': `${percentage}`, '--height': `${height}px`, '--width': `${width}px` }}>
-          <med-type class="med-chart-bar__label" token={token}>{value}%</med-type>
+      <Host
+        class={generateMedColor(dsColor, {'med-chart-bar': true})}
+        style={{ '--value': `${percentage}`, '--height': `${height}`, '--width': `${width}` }}
+      >
+        <div class="med-chart-bar__container">
+          <div class="med-chart-bar__label">
+            <slot></slot>
+          </div>
           <div class="med-chart-bar__progress"></div>
         </div>
       </Host>

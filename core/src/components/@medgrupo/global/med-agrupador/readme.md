@@ -7,10 +7,12 @@
 
 ## Properties
 
-| Property    | Attribute   | Description                    | Type                  | Default     |
-| ----------- | ----------- | ------------------------------ | --------------------- | ----------- |
-| `collapsed` | `collapsed` | Define o estado do componente. | `boolean`             | `false`     |
-| `dsColor`   | `ds-color`  | Define a cor do componente.    | `string \| undefined` | `undefined` |
+| Property    | Attribute   | Description                    | Type                  | Default              |
+| ----------- | ----------- | ------------------------------ | --------------------- | -------------------- |
+| `collapsed` | `collapsed` | Define o estado do componente. | `boolean`             | `false`              |
+| `dsColor`   | `ds-color`  | Define a cor do componente.    | `string \| undefined` | `undefined`          |
+| `texto1`    | `texto-1`   | TODO.                          | `string`              | ``Expandir a lista`` |
+| `texto2`    | `texto-2`   | TODO.                          | `string`              | ``Ocultar a lista``  |
 
 
 ## Methods

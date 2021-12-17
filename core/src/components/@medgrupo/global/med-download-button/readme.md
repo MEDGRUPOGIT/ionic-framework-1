@@ -24,6 +24,19 @@
 | `medDownloaded` | TODO.       | `CustomEvent<any>` |
 
 
+## Dependencies
+
+### Used by
+
+ - [med-semana](../../compositions/med-semana)
+
+### Graph
+```mermaid
+graph TD;
+  med-semana --> med-download-button
+  style med-download-button fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h, Host, Element, Event, EventEmitter, State } from '@stencil/core';
+import { Component, ComponentInterface, h, Host, Element, Event, EventEmitter, State, Prop, Watch } from '@stencil/core';
 
 @Component({
   tag: 'accordion-item',
@@ -8,6 +8,26 @@ import { Component, ComponentInterface, h, Host, Element, Event, EventEmitter, S
 export class AccordionItem implements ComponentInterface {
   @Element() hostElement!: HTMLElement;
 
+  /**
+    * Define se o componente irá ter background quando aberto.
+    */
+  @Prop({ reflect: true }) background = false;
+
+  /**
+    * Desabilita o componente.
+    */
+  @Prop({ reflect: true }) disable = false;
+
+  /**
+    * Abre programaticamente o componente.
+    */
+  @Prop({ reflect: true }) open = false;
+
+  /**
+    * Desabilita o componente.
+    */
+  @Prop({ reflect: true }) headerToggle = true;
+
   @State() isOpen: boolean = false;
 
   /**
@@ -15,13 +35,29 @@ export class AccordionItem implements ComponentInterface {
    */
   @Event() toggle!: EventEmitter;
 
+  @Watch('open')
+  watchPropHandler(newValue: boolean) {
+    if (newValue !== this.isOpen) { }
+    this.toggleOpen();
+  }
+
+  componentDidLoad() {
+    if (this.open) {
+      this.toggleOpen();
+    }
+  }
+
   public contentElement!: HTMLDivElement;
 
   private itemId = `accordion-item-${itemId++}`;
   private isTransitioning: boolean = false;
 
   private onClick = () => {
-    this.toggleOpen();
+    if (this.disable) return;
+
+    if (this.headerToggle) {
+      this.toggleOpen();
+    }
   }
 
   private toggleOpen() {
@@ -50,14 +86,21 @@ export class AccordionItem implements ComponentInterface {
   }
 
   render() {
-    const { itemId } = this;
+    const { itemId, isOpen, background } = this;
 
     return (
-      <Host id={itemId}>
-        <div class="header" onClick={() => this.onClick()}>
+      <Host id={itemId}
+        from-stencil
+        class={{
+          'accordion-item': true,
+          'accordion-item--background': background,
+          'accordion-item--open': isOpen,
+        }}
+      >
+        <div class="accordion-item__header" onClick={() => this.onClick()}>
           <slot name="header"></slot>
         </div>
-        <div class="content" ref={(el) => this.contentElement = el as HTMLDivElement}>
+        <div class="accordion-item__content" ref={(el) => this.contentElement = el as HTMLDivElement}>
           <slot name="content"></slot>
         </div>
       </Host>

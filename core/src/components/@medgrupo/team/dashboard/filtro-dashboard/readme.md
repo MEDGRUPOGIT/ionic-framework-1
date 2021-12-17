@@ -9,7 +9,7 @@
 
 ### Depends on
 
-- [med-base](../../../global/med-base)
+- [med-base](../../../core/med-base)
 - [med-heading](../../../global/med-heading)
 - [ion-button](../../../../button)
 - ion-icon

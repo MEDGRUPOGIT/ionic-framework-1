@@ -1,0 +1,231 @@
+@import "../../../../../templarios/abstracts";
+
+:host {
+  --background: #{color('neutral', '1')};
+  --background-row: #{color('neutral', '1')};
+}
+
+:host(.med-semana) {
+  background: var(--background);
+  padding: 8px;
+  border-radius: 8px 31px 31px 8px;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  max-width: 100%;
+}
+
+.med-semana {
+  &__heading-container {
+    padding-right: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  &__text {
+    display: block;
+    text-align: left;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid color('brand', '4');
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 1px;
+      background: color('brand', '4');
+    }
+
+    &::before {
+      transform: rotate(90deg);
+      transition: transform 0.7s;
+    }
+  }
+
+  &__chart-container {
+    display: flex;
+    // overflow-x: scroll;
+  }
+
+  &__chart {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}
+
+.med-scrollbar {
+  --padding: 0;
+}
+
+//////////////////////////////
+// colors
+//////////////////////////////
+
+////////////////////
+// color
+////////////////////
+
+:host(.med-color) {
+  .med-semana__icon {
+    border-color: curr-color('color', '4');
+
+    &::after,
+    &::before {
+      background: curr-color('color', '4');
+    }
+  }
+}
+
+////////////////////
+// neutral
+////////////////////
+
+:host(.med-color-neutral) {
+  .med-semana__icon {
+    border-color: curr-color('neutral');
+
+    &::after,
+    &::before {
+      background: curr-color('neutral');
+    }
+  }
+}
+
+////////////////////
+// feedback
+////////////////////
+
+:host(.med-color-feedback) {
+  .med-semana__icon {
+    border-color: curr-color('feedback');
+
+    &::after,
+    &::before {
+      background: curr-color('feedback');
+    }
+  }
+}
+
+//////////////////////////////
+// state
+//////////////////////////////
+
+:host(.med-semana--active) {
+  .med-semana__chart {
+    --stroke-background: #{color('neutral', '1')};
+  }
+}
+
+:host(.med-color.med-semana--active) {
+  --background: #{curr-color('color', '1')};
+}
+
+:host(.med-semana--active.med-color-neutral) {
+  --background: #{curr-color('neutral')};
+}
+
+:host(.med-semana--active.med-color-feedback) {
+  --background: #{curr-color('feedback')};
+}
+
+@import './med-semana.skin.scss';
+
+:host(.med-semana--skin-lista) {
+  --background: none;
+  flex-direction: column;
+  justify-content: start;
+  padding: 0;
+
+  .med-semana {
+    &__heading-container {
+      flex-direction: row;
+      cursor: initial;
+    }
+
+    &__text-container {
+      display: flex;
+      align-items: baseline;
+      margin: 8px;
+    }
+
+    &__text {
+      text-transform: uppercase;
+
+      &--number {
+        margin: 0 8px;
+      }
+    }
+
+    &__week-container {
+      display: flex;
+      margin-left: 4px;
+    }
+
+    &__auxiliar {
+      margin-right: 4px;
+    }
+
+    &__chart-container {
+      flex-direction: column;
+      overflow-x: scroll;
+    }
+
+    &__chart-row {
+      display: flex;
+      width: 100%;
+      height: 60px;
+      padding: 8px;
+      border-radius: 31px 8px 8px 31px;
+      background: var(--background-row);
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+
+    &__description {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      line-height: 1;
+      padding: 0 16px 0 8px;
+      max-height: 48px;
+      min-width: 268px;
+      //overflow: hidden;
+      text-align: left;
+    }
+  }
+}
+
+////////////////////
+// state
+////////////////////
+
+:host(.med-semana--skin-lista.med-semana--active) {
+  --background: none;
+}
+
+:host(.med-color.med-semana--active.med-semana--skin-lista) {
+  --background-row: #{curr-color('color', '1')};
+}
+
+:host(.med-semana--active.med-color-neutral.med-semana--skin-lista) {
+  --background-row: #{curr-color('neutral')};
+}
+
+:host(.med-semana--active.med-color-feedback.med-semana--skin-lista) {
+  --background-row: #{curr-color('feedback')};
+}

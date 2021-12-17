@@ -127,6 +127,19 @@ export default defineComponent({
 | `translucent` | `translucent` | If `true`, the footer will be translucent. Only applies when the mode is `"ios"` and the device supports [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).  Note: In order to scroll content behind the footer, the `fullscreen` attribute needs to be set on the content. | `boolean`       | `false`     |
 
 
+## Dependencies
+
+### Used by
+
+ - [filtro-modal](../@medgrupo/team/dashboard/filtro-modal)
+
+### Graph
+```mermaid
+graph TD;
+  filtro-modal --> ion-footer
+  style ion-footer fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

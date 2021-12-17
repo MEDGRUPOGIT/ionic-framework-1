@@ -4,26 +4,47 @@
 :host {
   --margin: 10px;
   --background-page: #{color('neutral', '1')};
-  --background-header: #{color('neutral', '2')};
   --background-content: #{color('neutral', '2')};
+  --background-header: linear-gradient(to right, #{color('brand', '1')}, #{color('neutral', '2')}, #{color('neutral', '2')});
+  --border-radius: var(--med-border-radius-sm);
 }
 
-:host {
+:host(.accordion-item) {
   display: block;
   will-change: transform;
   border-bottom: var(--margin) solid var(--background-page);
   overflow: hidden;
+
+  .accordion-item__header {
+    background: var(--background-header);
+    position: relative;
+    transition: background 0.5s linear;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+  }
+
+  .accordion-item__content {
+    display: none;
+    background-color: var(--background-content);
+    z-index: -1;
+    position: relative;
+  }
 }
 
-.header {
-  background-color: var(--background-header);
-  z-index: 2;
-  position: relative;
+// ////////////////////
+// state
+// ////////////////////
+
+:host(.accordion-item--open.accordion-item--background) {
+  .accordion-item__header {
+    background-position: 0 0;
+  }
 }
 
-.content {
-  display: none;
-  background-color: var(--background-content);
-  z-index: 1;
-  position: relative;
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-color.accordion-item--background) {
+  --background-header: linear-gradient(to right, #{curr-color('color', '1')}, #{color('neutral', '2')}, #{color('neutral', '2')});
 }

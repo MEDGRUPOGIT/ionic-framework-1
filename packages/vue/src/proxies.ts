@@ -8,12 +8,25 @@ import type { JSX } from '@ionic/core';
 
 
 
-export const AccordionGroup = /*@__PURE__*/ defineContainer<JSX.AccordionGroup>('accordion-group');
+export const AccordionGroup = /*@__PURE__*/ defineContainer<JSX.AccordionGroup>('accordion-group', [
+  'singleOpen',
+  'noAnimation'
+]);
 
 
 export const AccordionItem = /*@__PURE__*/ defineContainer<JSX.AccordionItem>('accordion-item', [
+  'background',
+  'disable',
+  'open',
+  'headerToggle',
   'toggle'
 ]);
+
+
+export const FiltroDashboard = /*@__PURE__*/ defineContainer<JSX.FiltroDashboard>('filtro-dashboard');
+
+
+export const FiltroModal = /*@__PURE__*/ defineContainer<JSX.FiltroModal>('filtro-modal');
 
 
 export const IonAvatar = /*@__PURE__*/ defineContainer<JSX.IonAvatar>('ion-avatar');
@@ -842,19 +855,23 @@ export const MedAccordionItem = /*@__PURE__*/ defineContainer<JSX.MedAccordionIt
   'isOpened',
   'slotsToggle',
   'toggle',
-  'opened'
+  'opened',
+  'medClick'
 ]);
 
 
 export const MedAccordionList = /*@__PURE__*/ defineContainer<JSX.MedAccordionList>('med-accordion-list', [
   'margin',
   'singleOpen',
-  'noBorder'
+  'noBorder',
+  'noAnimation'
 ]);
 
 
 export const MedAgrupador = /*@__PURE__*/ defineContainer<JSX.MedAgrupador>('med-agrupador', [
   'dsColor',
+  'texto1',
+  'texto2',
   'collapsed'
 ]);
 
@@ -969,8 +986,7 @@ export const MedChartBar = /*@__PURE__*/ defineContainer<JSX.MedChartBar>('med-c
   'dsColor',
   'value',
   'height',
-  'width',
-  'token'
+  'width'
 ]);
 
 
@@ -1089,7 +1105,8 @@ export const MedListItem = /*@__PURE__*/ defineContainer<JSX.MedListItem>('med-l
   'label',
   'selected',
   'dsSize',
-  'border'
+  'border',
+  'disabled'
 ]);
 
 
@@ -1101,7 +1118,8 @@ export const MedListItemAccordion = /*@__PURE__*/ defineContainer<JSX.MedListIte
   'dsSize',
   'margin',
   'border',
-  'collapsed'
+  'collapsed',
+  'disabled'
 ]);
 
 
@@ -1150,10 +1168,8 @@ export const MedParent = /*@__PURE__*/ defineContainer<JSX.MedParent>('med-paren
 export const MedPiechart = /*@__PURE__*/ defineContainer<JSX.MedPiechart>('med-piechart', [
   'dsColor',
   'active',
-  'progresso',
-  'downloadProgresso',
-  'downloading',
-  'downloaded'
+  'value',
+  'text'
 ]);
 
 
@@ -1199,10 +1215,33 @@ export const MedRating = /*@__PURE__*/ defineContainer<JSX.MedRating>('med-ratin
 ]);
 
 
+export const MedSemana = /*@__PURE__*/ defineContainer<JSX.MedSemana>('med-semana', [
+  'dsColor',
+  'active',
+  'skin'
+]);
+
+
+export const MedSemanas = /*@__PURE__*/ defineContainer<JSX.MedSemanas>('med-semanas', [
+  'skin'
+]);
+
+
 export const MedSubtitle = /*@__PURE__*/ defineContainer<JSX.MedSubtitle>('med-subtitle', [
   'dsColor',
   'dsName',
   'dsSize'
+]);
+
+
+export const MedTabButton = /*@__PURE__*/ defineContainer<JSX.MedTabButton>('med-tab-button', [
+  'dsColor',
+  'active'
+]);
+
+
+export const MedTabs = /*@__PURE__*/ defineContainer<JSX.MedTabs>('med-tabs', [
+  'dsColor'
 ]);
 
 
@@ -1249,6 +1288,11 @@ export const MedTooltip = /*@__PURE__*/ defineContainer<JSX.MedTooltip>('med-too
 export const MedType = /*@__PURE__*/ defineContainer<JSX.MedType>('med-type', [
   'dsColor',
   'token'
+]);
+
+
+export const MedVideoListItem = /*@__PURE__*/ defineContainer<JSX.MedVideoListItem>('med-video-list-item', [
+  'dsColor'
 ]);
 
 

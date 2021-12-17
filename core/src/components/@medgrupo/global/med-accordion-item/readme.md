@@ -20,10 +20,11 @@
 
 ## Events
 
-| Event    | Description | Type               |
-| -------- | ----------- | ------------------ |
-| `opened` |             | `CustomEvent<any>` |
-| `toggle` | Internal    | `CustomEvent<any>` |
+| Event      | Description | Type               |
+| ---------- | ----------- | ------------------ |
+| `medClick` |             | `CustomEvent<any>` |
+| `opened`   |             | `CustomEvent<any>` |
+| `toggle`   | Internal    | `CustomEvent<any>` |
 
 
 ## Slots

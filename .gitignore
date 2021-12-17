@@ -65,6 +65,7 @@ core/css/
 core/hydrate/
 core/loader/
 core/www/
+core/.loki/
 .stencil/
 angular/build/
 
