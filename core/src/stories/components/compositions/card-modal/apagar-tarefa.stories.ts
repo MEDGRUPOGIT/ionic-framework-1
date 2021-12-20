@@ -9,64 +9,103 @@ export default {
 const Template = () => {
   return html`
     <style>
-      .cp-card-modal__titulo-tarefa {
-        margin-top: 16px;
+      .cp-card-modal {
+        padding: 30px;
       }
 
-      .cp-card-modal__detalhes-tarefa {
-        display: flex;
-        align-items: center;
-        margin: 16px 0;
+      .cp-card-modal__titulo-acao {
+        margin-bottom: 16px;
       }
 
-      .cp-card-modal__categoria {
-        display: flex;
-        align-items: center;
-        margin-right: 8px
+      .cp-card-modal__input-label {
+        margin-bottom: 8px;
       }
 
-      .cp-card-modal__buttons {
+      .cp-card-modal__input-container {
+        margin-bottom: 16px;
+      }
+
+      .cp-card-modal__inputs {
         display: flex;
-        align-items: center;
         justify-content: space-between;
-        margin: 16px 0;
       }
 
-      .cp-card-modal__icon {
-        stroke: hsl(var(--med-color-neutral-8));
-        margin-right: 8px
+      .cp-card-modal__input {
+        background: hsl(var(--med-color-neutral-3));
+        color: hsl(var(--med-color-neutral-9));
+        border: none;
+        --placeholder-opacity: 1;
+      }
+
+      .cp-card-modal__text-area {
+        margin-bottom: 46px;
       }
 
     </style>
     <ion-app>
       <ion-content>
-        <div class="flex-center flex-center--xs">
-
           <!-- component -->
           <div class="cp-card-modal">
-            <med-type token="h20x" ds-color="brand">Deseja realmente apagar essa tarefa?</med-type>
-            <med-type class="cp-card-modal__titulo-tarefa" token="h20x">Título da tarefa</med-type>
-            <div class="cp-card-modal__detalhes-tarefa">
-              <div class="cp-card-modal__categoria">
-                <ion-icon class="cp-card-modal__icon med-icon" name="med-apostila"></ion-icon>
-                <med-type token="p14b" ds-color="neutral-8">Categoria</med-type>
+            <med-type class="cp-card-modal__titulo-acao" token="h20x">Editar Tarefa</med-type>
+
+            <div class="cp-card-modal__input-container">
+              <med-type class="cp-card-modal__input-label" token="p14" ds-color="neutral-9">Título</med-type>
+              <ion-input class="cp-card-modal__input" placeholder="Nome da Tarefa"></ion-input>
+            </div>
+
+            <div class="cp-card-modal__input-container">
+              <med-type class="cp-card-modal__input-label" token="p14" ds-color="neutral-9">Categoria</med-type>
+              <ion-select okText="Okay" placeholder="Selecione uma categoria" cancelText="Dismiss">
+                <ion-select-option value="categoria-1">Categoria 1</ion-select-option>
+                <ion-select-option value="categoria-2">Categoria 2</ion-select-option>
+                <ion-select-option value="categoria-3">Categoria 3</ion-select-option>
+              </ion-select>
+            </div>
+
+            <div class="cp-card-modal__input-container">
+              <med-type class="cp-card-modal__input-label" token="p14" ds-color="neutral-9">Data</med-type>
+              <ion-input class="cp-card-modal__input" placeholder="10/09/2021"></ion-input>
+            </div>
+
+            <div class="cp-card-modal__inputs">
+              <div class="cp-card-modal__input-container">
+                <med-type class="cp-card-modal__input-label" token="p14" ds-color="neutral-9">Começo</med-type>
+                <ion-select okText="Okay" placeholder="Selecione uma categoria" cancelText="Dismiss">
+                  <ion-select-option value="categoria-1">Categoria 1</ion-select-option>
+                  <ion-select-option value="categoria-2">Categoria 2</ion-select-option>
+                  <ion-select-option value="categoria-3">Categoria 3</ion-select-option>
+                </ion-select>
               </div>
-              <med-type token="p14" ds-color="neutral-8">21:00 - 23:00</med-type>
+              <div class="cp-card-modal__input-container">
+                <med-type class="cp-card-modal__input-label" token="p14" ds-color="neutral-9">Fim</med-type>
+                <ion-select okText="Okay" placeholder="Selecione uma categoria" cancelText="Dismiss">
+                  <ion-select-option value="categoria-1">Categoria 1</ion-select-option>
+                  <ion-select-option value="categoria-2">Categoria 2</ion-select-option>
+                  <ion-select-option value="categoria-3">Categoria 3</ion-select-option>
+                </ion-select>
+              </div>
             </div>
-            <div class="cp-card-modal__buttons">
-              <ion-button ds-name="secondary" ds-size="sm" ds-color="brand">
-                Cancelar
-              </ion-button>
-              <ion-button ds-name="primary" ds-size="sm">
-                apagar
-              </ion-button>
+
+            <div class="cp-card-modal__input-container">
+              <med-type class="cp-card-modal__input-label" token="p14" ds-color="neutral-9">Recorrência</med-type>
+              <ion-select okText="Okay" placeholder="Selecione uma opçãp" cancelText="Dismiss">
+                <ion-select-option value="categoria-1">Não se repete</ion-select-option>
+                <ion-select-option value="categoria-2">Repete</ion-select-option>
+                <ion-select-option value="categoria-3">Repete 2</ion-select-option>
+              </ion-select>
+            </div>
+
+            <div class="cp-card-modal__input-container">
+              <med-type class="cp-card-modal__input-label" token="p14" ds-color="neutral-9">Notas</med-type>
+              <ion-textarea class="cp-card-modal__input cp-card-modal__text-area" placeholder="Deixe aqui suas notas"></ion-textarea>
             </div>
 
 
+            <ion-button ds-name="primary" ds-size="sm" expand="block">
+              Criar
+            </ion-button>
           </div>
           <!-- component -->
-
-        </div>
       </ion-content>
     </ion-app>
     `;
