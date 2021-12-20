@@ -7,17 +7,19 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ dsColor, alert }) => {
+const Template = ({ dsColor, data }) => {
+  setTimeout(() => {
+    document.querySelector('med-check-card').data = data;
+  }, 1);
+
   return html`
     <ion-app>
       <ion-content>
         <div class="flex-center flex-center--xs">
 
           <!-- component -->
-          <med-check-card .dsColor=${dsColor} .alert=${alert}></med-check-card>
+          <med-check-card .dsColor=${dsColor}></med-check-card>
           <!-- component -->
-
-        </med-tooltip>
 
         </div>
       </ion-content>
@@ -42,14 +44,16 @@ Default.argTypes = {
       defaultValue: { summary: "undefined" },
     },
   },
-  alert: {
-    control: { type: 'boolean' },
-    description: 'Define o estado do componente.',
-    defaultValue: false,
-    table: {
-      type:  { summary: 'boolean' },
-      defaultValue: { summary: 'false' },
-    },
+  data: {
+    defaultValue: {
+      titulo: 'Título',
+      categoria: 'Categoria',
+      horaInicial: '21h00',
+      horaFinal: '23h00',
+      finalizada: false,
+      iconName: 'med-marcar',
+      alert: false,
+    }
   },
 };
 

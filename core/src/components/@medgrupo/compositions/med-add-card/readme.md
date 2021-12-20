@@ -7,9 +7,11 @@
 
 ## Properties
 
-| Property  | Attribute  | Description                 | Type                  | Default     |
-| --------- | ---------- | --------------------------- | --------------------- | ----------- |
-| `dsColor` | `ds-color` | Define a cor do componente. | `string \| undefined` | `undefined` |
+| Property   | Attribute   | Description                 | Type                  | Default     |
+| ---------- | ----------- | --------------------------- | --------------------- | ----------- |
+| `dsColor`  | `ds-color`  | Define a cor do componente. | `string \| undefined` | `undefined` |
+| `iconName` | `icon-name` |                             | `string \| undefined` | `undefined` |
+| `titulo`   | `titulo`    |                             | `string \| undefined` | `undefined` |
 
 
 ## Dependencies

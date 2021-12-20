@@ -1425,6 +1425,8 @@ med-accordion-list,css-prop,--border-radius
 
 med-add-card,shadow
 med-add-card,prop,dsColor,string | undefined,undefined,false,true
+med-add-card,prop,iconName,string | undefined,undefined,false,true
+med-add-card,prop,titulo,string | undefined,undefined,false,true
 
 med-agrupador,shadow
 med-agrupador,prop,collapsed,boolean,false,false,true
@@ -1511,6 +1513,9 @@ med-base,prop,radius,string | undefined,undefined,false,true
 med-base,prop,spacingH,string | undefined,undefined,false,true
 med-base,prop,spacingV,string | undefined,undefined,false,true
 
+med-calendar,shadow
+med-calendar,prop,dsColor,string | undefined,undefined,false,true
+
 med-caption,shadow
 med-caption,prop,dsColor,string | undefined,undefined,false,true
 med-caption,prop,dsSize,"lg" | "md" | "sm" | "xl" | "xs" | "xxs" | undefined,undefined,false,true
@@ -1528,6 +1533,16 @@ med-chart-bar,prop,dsColor,string | undefined,undefined,false,true
 med-chart-bar,prop,height,number,50,false,true
 med-chart-bar,prop,value,number,0,false,true
 med-chart-bar,prop,width,number,24,false,true
+
+med-chart-bar-horizontal,shadow
+med-chart-bar-horizontal,prop,dsColor,string | undefined,undefined,false,true
+med-chart-bar-horizontal,prop,value,number,0,false,true
+med-chart-bar-horizontal,part,progress
+med-chart-bar-horizontal,part,track
+
+med-chart-categoria,scoped
+med-chart-categoria,prop,dsColor,string | undefined,undefined,false,true
+med-chart-categoria,prop,value,number,0,false,true
 
 med-chart-radial,scoped
 med-chart-radial,prop,dsColor,string | undefined,undefined,false,true
@@ -1547,7 +1562,13 @@ med-chart-radial-label,prop,valores,MedChartRadiaItem[],[],false,false
 
 med-check-card,scoped
 med-check-card,prop,alert,boolean,false,false,true
+med-check-card,prop,categoria,string | undefined,undefined,false,true
 med-check-card,prop,dsColor,string | undefined,undefined,false,true
+med-check-card,prop,finalizada,string | undefined,undefined,false,true
+med-check-card,prop,horaFinal,string | undefined,undefined,false,true
+med-check-card,prop,horaInicial,string | undefined,undefined,false,true
+med-check-card,prop,iconName,string | undefined,undefined,false,true
+med-check-card,prop,titulo,string | undefined,undefined,false,true
 
 med-child,shadow
 med-child,prop,dsColor,string | undefined,undefined,false,false

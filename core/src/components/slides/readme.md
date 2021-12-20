@@ -853,11 +853,13 @@ Type: `Promise<void>`
 
 ### Used by
 
+ - [med-calendar](../@medgrupo/core/med-calendar)
  - [med-image-zoom](../@medgrupo/global/med-image-zoom)
 
 ### Graph
 ```mermaid
 graph TD;
+  med-calendar --> ion-slides
   med-image-zoom --> ion-slides
   style ion-slides fill:#f9f,stroke:#333,stroke-width:4px
 ```

@@ -1,0 +1,42 @@
+@import "../../../../../templarios/abstracts";
+
+:host {
+  --color: #{color('brand', '4')};
+}
+
+:host {
+  display: block;
+}
+
+.med-chart-categoria {
+  &__header {
+    display: flex;
+  }
+
+  &__info {
+    display: flex;
+    margin-left: auto;
+  }
+
+  &__meta {
+    display: flex;
+  }
+
+  &__tempo-meta {
+    margin-left: 5px;
+  }
+
+  &__realizado {
+    display: flex;
+    margin-left: 16px;
+  }
+
+  &__tempo-realizado {
+    --color: var(--color);
+    margin-left: 5px;
+  }
+
+  &__chart {
+    padding-top: 10px;
+  }
+}

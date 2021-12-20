@@ -19,6 +19,8 @@
 
  - [filtro-modal](../../team/dashboard/filtro-modal)
  - [med-add-card](../../compositions/med-add-card)
+ - [med-chart-bar-horizontal](../med-chart-bar-horizontal)
+ - [med-chart-categoria](../../compositions/med-chart-categoria)
  - [med-check-card](../../compositions/med-check-card)
  - [med-piechart](../med-piechart)
  - [med-semana](../../compositions/med-semana)
@@ -29,6 +31,8 @@
 graph TD;
   filtro-modal --> med-type
   med-add-card --> med-type
+  med-chart-bar-horizontal --> med-type
+  med-chart-categoria --> med-type
   med-check-card --> med-type
   med-piechart --> med-type
   med-semana --> med-type

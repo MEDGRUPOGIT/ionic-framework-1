@@ -869,7 +869,9 @@ export const MedAccordionList = /*@__PURE__*/ defineContainer<JSX.MedAccordionLi
 
 
 export const MedAddCard = /*@__PURE__*/ defineContainer<JSX.MedAddCard>('med-add-card', [
-  'dsColor'
+  'dsColor',
+  'titulo',
+  'iconName'
 ]);
 
 
@@ -970,6 +972,11 @@ export const MedBase = /*@__PURE__*/ defineContainer<JSX.MedBase>('med-base', [
 ]);
 
 
+export const MedCalendar = /*@__PURE__*/ defineContainer<JSX.MedCalendar>('med-calendar', [
+  'dsColor'
+]);
+
+
 export const MedCaption = /*@__PURE__*/ defineContainer<JSX.MedCaption>('med-caption', [
   'dsColor',
   'dsSize'
@@ -992,6 +999,18 @@ export const MedChartBar = /*@__PURE__*/ defineContainer<JSX.MedChartBar>('med-c
   'value',
   'height',
   'width'
+]);
+
+
+export const MedChartBarHorizontal = /*@__PURE__*/ defineContainer<JSX.MedChartBarHorizontal>('med-chart-bar-horizontal', [
+  'dsColor',
+  'value'
+]);
+
+
+export const MedChartCategoria = /*@__PURE__*/ defineContainer<JSX.MedChartCategoria>('med-chart-categoria', [
+  'dsColor',
+  'value'
 ]);
 
 
@@ -1019,7 +1038,13 @@ export const MedChartRadialLabel = /*@__PURE__*/ defineContainer<JSX.MedChartRad
 
 export const MedCheckCard = /*@__PURE__*/ defineContainer<JSX.MedCheckCard>('med-check-card', [
   'dsColor',
-  'alert'
+  'alert',
+  'titulo',
+  'categoria',
+  'horaInicial',
+  'horaFinal',
+  'finalizada',
+  'iconName'
 ]);
 
 

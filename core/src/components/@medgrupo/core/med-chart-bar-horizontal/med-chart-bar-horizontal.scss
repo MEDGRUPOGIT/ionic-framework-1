@@ -1,0 +1,84 @@
+@import "../../../../../templarios/abstracts";
+
+:host {
+  --background: #{color('neutral', '1')};
+  --progress-background: #{color('brand', '4')};
+  --label-color: #{color('brand', '4')};
+  --border-radius: 4px;
+  --height: 8px;
+}
+
+:host {
+  display: flex;
+  align-items: center;
+}
+
+.med-chart-bar-horizontal {
+  &__container {
+    position: relative;
+    width: 100%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+  }
+
+  &__progress,
+  &__track {
+    transform-origin: left;
+    transition: transform 150ms linear;
+    height: var(--height);
+    border-radius: var(--border-radius);
+  }
+
+  &__progress {
+    background: var(--progress-background);
+    transform: translateX(calc(var(--progress) * 1%));
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: start 300ms linear;
+  }
+
+  &__track {
+    background: var(--background);
+  }
+
+  &__label {
+    --color: var(--label-color);
+    margin-left: 12px;
+  }
+}
+
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-color) {
+  --progress-background: #{curr-color('color', '4')};
+  --label-color: #{curr-color('color', '4')};
+}
+
+:host(.med-color-neutral) {
+  --progress-background: #{curr-color('neutral')};
+  --label-color: #{curr-color('neutral')};
+}
+
+:host(.med-color-feedback) {
+  --progress-background: #{curr-color('feedback')};
+  --label-color: #{curr-color('feedback')};
+}
+
+//////////////////////////////
+// animation
+//////////////////////////////
+
+@keyframes start {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(calc(var(--progress) * 1%));
+  }
+}

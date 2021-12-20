@@ -14,16 +14,20 @@ export class MedAddCard {
     */
   @Prop({ reflect: true }) dsColor?: MedColor;
 
+  @Prop({ reflect: true }) titulo?: string;
+
+  @Prop({ reflect: true }) iconName?: string;
+
   render() {
-    const { dsColor } = this;
+    const { dsColor, titulo, iconName } = this;
 
     return (
       <Host class={generateMedColor(dsColor, {
         'med-add-card': true,
       })}>
-        <med-base class="med-add-card__container" spacing-h="s12">
-          <ion-icon class="med-icon med-add-card__icon" name="med-marcar"></ion-icon>
-          <med-type token="p14">Adicionar Card</med-type>
+        <med-base class="med-add-card__container" spacing-h="s16" spacing-v="s12">
+          <ion-icon class="med-icon med-add-card__icon" name={iconName}></ion-icon>
+          <med-type token="p14">{titulo}</med-type>
         </med-base>
       </Host>
     );

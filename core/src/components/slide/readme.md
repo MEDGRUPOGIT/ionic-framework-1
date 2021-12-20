@@ -14,11 +14,13 @@ See the [Slides API Docs](../slides) for more usage information.
 
 ### Used by
 
+ - [med-calendar](../@medgrupo/core/med-calendar)
  - [med-image-zoom](../@medgrupo/global/med-image-zoom)
 
 ### Graph
 ```mermaid
 graph TD;
+  med-calendar --> ion-slide
   med-image-zoom --> ion-slide
   style ion-slide fill:#f9f,stroke:#333,stroke-width:4px
 ```

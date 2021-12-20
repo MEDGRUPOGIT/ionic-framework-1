@@ -1,3 +1,5 @@
+@import "../../../../../templarios/abstracts";
+
 :host {
 
 }
@@ -35,8 +37,21 @@
     display: none;
   }
 
+  &__tooltip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+
+  &__tooltip-icon {
+    stroke: color('neutral', '1');
+    cursor: pointer;
+  }
+
   &__alert-icon {
     stroke: color('feedback', 'warning');
+    cursor: pointer;
   }
 }
 
