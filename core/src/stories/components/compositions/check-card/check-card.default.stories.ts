@@ -3,18 +3,18 @@ import { withDesign } from 'storybook-addon-designs';
 import { MedColor } from "../../../constants";
 
 export default {
-  title: 'Components/Compositions/Add Card',
+  title: 'Components/Compositions/Check Card',
   decorators: [withDesign],
 };
 
-const Template = ({ dsColor, titulo, iconName }) => {
+const Template = ({ dsColor, alert, titulo, categoria, horaInicial, horaFinal, iconName }) => {
   return html`
     <ion-app>
       <ion-content>
         <div class="flex-center flex-center--xs">
 
           <!-- component -->
-          <med-add-card .dsColor=${dsColor} titulo=${titulo} icon-name=${iconName}></med-add-card>
+          <med-check-card .dsColor=${dsColor} .alert=${alert} titulo=${titulo} categoria=${categoria} hora-inicial=${horaInicial} hora-final=${horaFinal} icon-name=${iconName}></med-check-card>
           <!-- component -->
 
         </div>
@@ -40,13 +40,33 @@ Default.argTypes = {
       defaultValue: { summary: "undefined" },
     },
   },
+  alert: {
+    control: { type: 'boolean' },
+    description: 'Define o estado do componente.',
+    defaultValue: false,
+    table: {
+      type:  { summary: 'boolean' },
+      defaultValue: { summary: 'false' },
+    },
+  },
   titulo: {
     control: { type: 'text' },
     defaultValue: 'Título',
+  },
+  categoria: {
+    control: { type: 'text' },
+    defaultValue: 'Categoria',
+  },
+  horaInicial: {
+    control: { type: 'text' },
+    defaultValue: '21h00',
+  },
+  horaFinal: {
+    control: { type: 'text' },
+    defaultValue: '23h00',
   },
   iconName: {
     control: { type: 'text' },
     defaultValue: 'med-marcar',
   },
 };
-
