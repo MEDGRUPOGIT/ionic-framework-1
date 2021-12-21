@@ -25,7 +25,7 @@ const Template = () => {
               <!-- component -->
               <med-input>
                 <med-type tag="label" token="p14" slot="label">Digite o título:</med-type>
-                <ion-select placeholder="Select One">
+                <ion-select placeholder="Select One" slot="input">
                   <ion-select-option value="f">Female</ion-select-option>
                   <ion-select-option value="m">Male</ion-select-option>
                 </ion-select>

@@ -25,7 +25,7 @@ const Template = () => {
               <!-- component -->
               <med-input>
                 <med-type tag="label" token="p14" slot="label">Digite o título:</med-type>
-                <ion-input slot="input"></ion-input>
+                <ion-input placeholder="Enter Input" slot="input"></ion-input>
               </med-input>
               <!-- component -->
 
