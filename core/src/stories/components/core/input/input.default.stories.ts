@@ -1,13 +1,12 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
-import { MedColor } from '../../../constants';
 
 export default {
   title: 'Components/Core/Input',
   decorators: [withDesign],
 };
 
-const Template = ({ dsColor }) => {
+const Template = () => {
   return html`
     <style>
       /* !NÃO UTILIZAR! Apenas para estória */
@@ -19,14 +18,20 @@ const Template = ({ dsColor }) => {
 
     <ion-app>
       <ion-content>
-        <div class="flex-center">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
 
-          <!-- component -->
-          <med-type token="p14">Digite o título:</med-type>
-          <ion-input></ion-input>
-          <!-- component -->
+              <!-- component -->
+              <med-input>
+                <med-type tag="label" token="p14" slot="label">Digite o título:</med-type>
+                <ion-input slot="input"></ion-input>
+              </med-input>
+              <!-- component -->
 
-        </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </ion-content>
     </ion-app>
   `
@@ -36,17 +41,6 @@ export const Default = Template.bind({});
 Default.parameters = {
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/Componentes?node-id=7380%3A50289',
+    url: '',
   },
 }
-Default.argTypes = {
-  dsColor: {
-    options: MedColor,
-    control: { type: 'select'},
-    description: 'Define a cor do componente.',
-    table: {
-      type:  { summary: 'MedColor' },
-      defaultValue: { summary: 'undefined' },
-    },
-  },
-};

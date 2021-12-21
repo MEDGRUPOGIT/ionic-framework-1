@@ -1314,6 +1314,16 @@ export class MedImageZoom {
     this.el = r.nativeElement;
   }
 }
+export declare interface MedInput extends Components.MedInput {
+}
+@Component({ selector: "med-input", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class MedInput {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedItemAulas extends Components.MedItemAulas {
 }
 @ProxyCmp({ inputs: ["dsColor", "porcentagem", "professor", "videos"] })

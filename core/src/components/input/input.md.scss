@@ -30,7 +30,6 @@
   background-size: $input-md-input-clear-icon-size;
 }
 
-// @import './input.med.scss';
 @import "../../../templarios/abstracts";
 
 :host {
@@ -40,5 +39,26 @@
   --padding-end: 8px;
   --padding-start: 16px;
   --padding-top: 8px;
-  --placeholder-color: #{color('neutral', '10')};
+  --placeholder-color: #{color('neutral', '5')};
+
+  --font-size: 14px;
+  --font-weight: 600;
+  --line-height: 16px;
+  --placeholder-font-size: 14px;
+  --placeholder-font-weight: 400;
+  --placeholder-line-height: 16px;
+  --height: 40px;
+  --border-radius: 8px;
+
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  height: var(--height);
+  border-radius: var(--border-radius);
+
+  &::placeholder {
+    font-size: var(--placeholder-font-size);
+    font-weight: var(--placeholder-font-weight);
+    line-height: var(--placeholder-line-height);
+  }
 }

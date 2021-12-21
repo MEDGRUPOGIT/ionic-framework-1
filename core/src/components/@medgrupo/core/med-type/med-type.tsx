@@ -22,7 +22,7 @@ export class MedType implements ComponentInterface {
   /**
     * Define a tag HTML do componente.
     */
-  @Prop({ reflect: true }) tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' = 'span';
+  @Prop({ reflect: true }) tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'label' = 'span';
 
   render() {
     const { dsColor, token, tag } = this;

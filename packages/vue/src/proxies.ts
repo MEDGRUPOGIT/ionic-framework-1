@@ -1126,6 +1126,9 @@ export const MedImageZoom = /*@__PURE__*/ defineContainer<JSX.MedImageZoom>('med
 ]);
 
 
+export const MedInput = /*@__PURE__*/ defineContainer<JSX.MedInput>('med-input');
+
+
 export const MedItemAulas = /*@__PURE__*/ defineContainer<JSX.MedItemAulas>('med-item-aulas', [
   'dsColor',
   'professor',

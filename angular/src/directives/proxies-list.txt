@@ -110,6 +110,7 @@ export const DIRECTIVES = [
   d.MedHeader,
   d.MedHeading,
   d.MedImageZoom,
+  d.MedInput,
   d.MedItemAulas,
   d.MedList,
   d.MedListItem,

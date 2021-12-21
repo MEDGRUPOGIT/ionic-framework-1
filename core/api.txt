@@ -1631,6 +1631,8 @@ med-image-zoom,prop,marcaAguaInferior,string | undefined,undefined,false,true
 med-image-zoom,prop,marcaAguaSuperior,string | undefined,undefined,false,true
 med-image-zoom,prop,titulo,string | undefined,undefined,false,true
 
+med-input,shadow
+
 med-item-aulas,shadow
 med-item-aulas,prop,dsColor,string | undefined,undefined,false,true
 med-item-aulas,prop,porcentagem,number,undefined,true,false
@@ -1806,7 +1808,7 @@ med-tooltip,css-prop,--z-index
 
 med-type,shadow
 med-type,prop,dsColor,string | undefined,undefined,false,true
-med-type,prop,tag,"h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span" | undefined,'span',false,true
+med-type,prop,tag,"h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "label" | "p" | "span" | undefined,'span',false,true
 med-type,prop,token,string | undefined,undefined,false,true
 
 med-video-list-item,scoped

@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property  | Attribute  | Description                      | Type                                                                         | Default     |
-| --------- | ---------- | -------------------------------- | ---------------------------------------------------------------------------- | ----------- |
-| `dsColor` | `ds-color` | Define a cor do componente.      | `string \| undefined`                                                        | `undefined` |
-| `tag`     | `tag`      | Define a tag HTML do componente. | `"h1" \| "h2" \| "h3" \| "h4" \| "h5" \| "h6" \| "p" \| "span" \| undefined` | `'span'`    |
-| `token`   | `token`    | Define o token do componente.    | `string \| undefined`                                                        | `undefined` |
+| Property  | Attribute  | Description                      | Type                                                                                    | Default     |
+| --------- | ---------- | -------------------------------- | --------------------------------------------------------------------------------------- | ----------- |
+| `dsColor` | `ds-color` | Define a cor do componente.      | `string \| undefined`                                                                   | `undefined` |
+| `tag`     | `tag`      | Define a tag HTML do componente. | `"h1" \| "h2" \| "h3" \| "h4" \| "h5" \| "h6" \| "label" \| "p" \| "span" \| undefined` | `'span'`    |
+| `token`   | `token`    | Define o token do componente.    | `string \| undefined`                                                                   | `undefined` |
 
 
 ## Dependencies
