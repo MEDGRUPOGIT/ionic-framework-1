@@ -30,8 +30,10 @@ export class MedCheckCard {
 
   @Prop({ reflect: true }) tooltipPlacement: "top" | "bottom" | "left" | "right" | undefined= 'top';
 
+  @Prop({ reflect: true, mutable: true }) tooltipCollapsed = true;
+
   render() {
-    const { dsColor, alert, titulo, categoria, horaInicial, horaFinal, iconName, tooltipPlacement } = this;
+    const { dsColor, alert, titulo, categoria, horaInicial, horaFinal, iconName, tooltipPlacement, tooltipCollapsed } = this;
 
     return (
       <Host class={generateMedColor(dsColor, {
@@ -51,7 +53,7 @@ export class MedCheckCard {
             </div>
           </div>
 
-          <med-tooltip class="med-check-card__tooltip" ds-color="fb-warning" placement={tooltipPlacement} position="end">
+          <med-tooltip class="med-check-card__tooltip" ds-color="fb-warning" placement={tooltipPlacement} position="end" collapsed={tooltipCollapsed}>
             <ion-icon class="med-check-card__alert-icon med-icon med-icon--sm" name="med-marcar" slot="input"></ion-icon>
             <div slot="content">
               <div class="med-check-card__tooltip-header">

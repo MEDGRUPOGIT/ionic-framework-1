@@ -7,16 +7,18 @@
 
 ## Properties
 
-| Property      | Attribute      | Description                 | Type                  | Default     |
-| ------------- | -------------- | --------------------------- | --------------------- | ----------- |
-| `alert`       | `alert`        |                             | `boolean`             | `false`     |
-| `categoria`   | `categoria`    |                             | `string \| undefined` | `undefined` |
-| `dsColor`     | `ds-color`     | Define a cor do componente. | `string \| undefined` | `undefined` |
-| `finalizada`  | `finalizada`   |                             | `string \| undefined` | `undefined` |
-| `horaFinal`   | `hora-final`   |                             | `string \| undefined` | `undefined` |
-| `horaInicial` | `hora-inicial` |                             | `string \| undefined` | `undefined` |
-| `iconName`    | `icon-name`    |                             | `string \| undefined` | `undefined` |
-| `titulo`      | `titulo`       |                             | `string \| undefined` | `undefined` |
+| Property           | Attribute           | Description                 | Type                                                  | Default     |
+| ------------------ | ------------------- | --------------------------- | ----------------------------------------------------- | ----------- |
+| `alert`            | `alert`             |                             | `boolean`                                             | `false`     |
+| `categoria`        | `categoria`         |                             | `string \| undefined`                                 | `undefined` |
+| `dsColor`          | `ds-color`          | Define a cor do componente. | `string \| undefined`                                 | `undefined` |
+| `finalizada`       | `finalizada`        |                             | `string \| undefined`                                 | `undefined` |
+| `horaFinal`        | `hora-final`        |                             | `string \| undefined`                                 | `undefined` |
+| `horaInicial`      | `hora-inicial`      |                             | `string \| undefined`                                 | `undefined` |
+| `iconName`         | `icon-name`         |                             | `string \| undefined`                                 | `undefined` |
+| `titulo`           | `titulo`            |                             | `string \| undefined`                                 | `undefined` |
+| `tooltipCollapsed` | `tooltip-collapsed` |                             | `boolean`                                             | `true`      |
+| `tooltipPlacement` | `tooltip-placement` |                             | `"bottom" \| "left" \| "right" \| "top" \| undefined` | `'top'`     |
 
 
 ## Dependencies

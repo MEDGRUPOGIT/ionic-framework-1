@@ -1047,7 +1047,9 @@ export const MedCheckCard = /*@__PURE__*/ defineContainer<JSX.MedCheckCard>('med
   'horaInicial',
   'horaFinal',
   'finalizada',
-  'iconName'
+  'iconName',
+  'tooltipPlacement',
+  'tooltipCollapsed'
 ]);
 
 
@@ -1326,7 +1328,8 @@ export const MedTooltip = /*@__PURE__*/ defineContainer<JSX.MedTooltip>('med-too
 
 export const MedType = /*@__PURE__*/ defineContainer<JSX.MedType>('med-type', [
   'dsColor',
-  'token'
+  'token',
+  'tag'
 ]);
 
 

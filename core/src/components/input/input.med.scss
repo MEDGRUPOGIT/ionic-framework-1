@@ -1,24 +1,18 @@
 @import "../../../templarios/abstracts";
 
 :host {
-  --spacing: var(--med-spacing-squish-xs)
-  --background: var(--med-color-neutral-light-prime);
-  --height: 48px;
-  --border-radius: var(--med-border-radius-sm);
-  --border-width: var(--med-border-width-hairline);
-  --border-color: var(--med-color-neutral-light-10);
+  --spacing: 8px 8px 8px 16px;
+  --background: #{color('neutral', '3')};
+  --height: 40px;
+  --border-radius: 8px;
+  --border-width: 1px;
+  --border-color: #{color('neutral', '3')};
   --border-style: solid;
-  --color: var(--med-color-neutral-dark-20);
+  --color: #{color('neutral', '10')};
 
   --placeholder-spacing: var(--med-spacing-stack-nano);
   --placeholder-font-size: var(--med-font-size-xs);
   --placeholder-line-height: var(--med-line-height-compressed);
-
-
-  //ionic
-  --padding-end: var(--med-spacing-inline-base);
-  --placeholder-color: var(--med-color-neutral-light-20);
-  --placeholder-font-weight: var(--med-font-weight-regular);
 
   padding: var(--spacing);
   padding-right: 56px;

@@ -7,14 +7,25 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ dsColor, alert, titulo, categoria, horaInicial, horaFinal, iconName }) => {
+const Template = ({ dsColor, alert, titulo, categoria, horaInicial, horaFinal, iconName, modalPlacement, tooltipCollapsed }) => {
   return html`
     <ion-app>
       <ion-content>
         <div class="flex-center flex-center--xs">
 
           <!-- component -->
-          <med-check-card .dsColor=${dsColor} .alert=${alert} titulo=${titulo} categoria=${categoria} hora-inicial=${horaInicial} hora-final=${horaFinal} icon-name=${iconName}></med-check-card>
+          <med-check-card
+            .dsColor=${dsColor}
+            .alert=${alert}
+            titulo=${titulo}
+            categoria=${categoria}
+            hora-inicial=${horaInicial}
+            hora-final=${horaFinal}
+            icon-name=${iconName}
+            modal-placement=${modalPlacement}
+            tooltip-collapsed=${tooltipCollapsed}
+          >
+          </med-check-card>
           <!-- component -->
 
         </div>
@@ -68,5 +79,23 @@ Default.argTypes = {
   iconName: {
     control: { type: 'text' },
     defaultValue: 'med-marcar',
+  },
+  modalPlacement: {
+    options: [undefined, 'top', 'bottom', 'left', 'right'],
+    control: { type: 'radio'},
+    description: "Define posicionamento em relação ao ícone.",
+    table: {
+      type:  { summary: 'top | bottom | left | right' },
+      defaultValue: { summary: 'top' },
+    },
+  },
+  tooltipCollapsed: {
+    control: { type: 'boolean' },
+    description: 'Define o estado do componente.',
+    defaultValue: true,
+    table: {
+      type:  { summary: 'boolean' },
+      defaultValue: { summary: 'true' },
+    },
   },
 };

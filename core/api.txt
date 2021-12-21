@@ -1572,6 +1572,8 @@ med-check-card,prop,horaFinal,string | undefined,undefined,false,true
 med-check-card,prop,horaInicial,string | undefined,undefined,false,true
 med-check-card,prop,iconName,string | undefined,undefined,false,true
 med-check-card,prop,titulo,string | undefined,undefined,false,true
+med-check-card,prop,tooltipCollapsed,boolean,true,false,true
+med-check-card,prop,tooltipPlacement,"bottom" | "left" | "right" | "top" | undefined,'top',false,true
 
 med-child,shadow
 med-child,prop,dsColor,string | undefined,undefined,false,false
@@ -1804,6 +1806,7 @@ med-tooltip,css-prop,--z-index
 
 med-type,shadow
 med-type,prop,dsColor,string | undefined,undefined,false,true
+med-type,prop,tag,"h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span" | undefined,'span',false,true
 med-type,prop,token,string | undefined,undefined,false,true
 
 med-video-list-item,scoped

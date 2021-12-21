@@ -1176,8 +1176,8 @@ export class MedChartRadialLabel {
 }
 export declare interface MedCheckCard extends Components.MedCheckCard {
 }
-@ProxyCmp({ inputs: ["alert", "categoria", "dsColor", "finalizada", "horaFinal", "horaInicial", "iconName", "titulo"] })
-@Component({ selector: "med-check-card", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alert", "categoria", "dsColor", "finalizada", "horaFinal", "horaInicial", "iconName", "titulo"] })
+@ProxyCmp({ inputs: ["alert", "categoria", "dsColor", "finalizada", "horaFinal", "horaInicial", "iconName", "titulo", "tooltipCollapsed", "tooltipPlacement"] })
+@Component({ selector: "med-check-card", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alert", "categoria", "dsColor", "finalizada", "horaFinal", "horaInicial", "iconName", "titulo", "tooltipCollapsed", "tooltipPlacement"] })
 export class MedCheckCard {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1628,8 +1628,8 @@ export class MedTooltip {
 }
 export declare interface MedType extends Components.MedType {
 }
-@ProxyCmp({ inputs: ["dsColor", "token"] })
-@Component({ selector: "med-type", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "token"] })
+@ProxyCmp({ inputs: ["dsColor", "tag", "token"] })
+@Component({ selector: "med-type", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "tag", "token"] })
 export class MedType {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

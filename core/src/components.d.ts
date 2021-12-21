@@ -3303,6 +3303,8 @@ export namespace Components {
         "horaInicial"?: string;
         "iconName"?: string;
         "titulo"?: string;
+        "tooltipCollapsed": boolean;
+        "tooltipPlacement": "top" | "bottom" | "left" | "right" | undefined;
     }
     interface MedChild {
         /**
@@ -3848,6 +3850,10 @@ export namespace Components {
           * Define a cor do componente.
          */
         "dsColor"?: MedColor;
+        /**
+          * Define a tag HTML do componente.
+         */
+        "tag"?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
         /**
           * Define o token do componente.
          */
@@ -8370,6 +8376,8 @@ declare namespace LocalJSX {
         "horaInicial"?: string;
         "iconName"?: string;
         "titulo"?: string;
+        "tooltipCollapsed"?: boolean;
+        "tooltipPlacement"?: "top" | "bottom" | "left" | "right" | undefined;
     }
     interface MedChild {
         /**
@@ -8926,6 +8934,10 @@ declare namespace LocalJSX {
           * Define a cor do componente.
          */
         "dsColor"?: MedColor;
+        /**
+          * Define a tag HTML do componente.
+         */
+        "tag"?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
         /**
           * Define o token do componente.
          */
