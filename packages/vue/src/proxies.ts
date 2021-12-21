@@ -1010,7 +1010,10 @@ export const MedChartBarHorizontal = /*@__PURE__*/ defineContainer<JSX.MedChartB
 
 export const MedChartCategoria = /*@__PURE__*/ defineContainer<JSX.MedChartCategoria>('med-chart-categoria', [
   'dsColor',
-  'value'
+  'value',
+  'titulo',
+  'meta',
+  'realizado'
 ]);
 
 

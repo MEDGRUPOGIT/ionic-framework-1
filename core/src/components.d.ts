@@ -3237,6 +3237,9 @@ export namespace Components {
           * Define a cor do componente.
          */
         "dsColor"?: MedColor;
+        "meta"?: string;
+        "realizado"?: string;
+        "titulo"?: string;
         /**
           * Define o valor do componente.
          */
@@ -8301,6 +8304,9 @@ declare namespace LocalJSX {
           * Define a cor do componente.
          */
         "dsColor"?: MedColor;
+        "meta"?: string;
+        "realizado"?: string;
+        "titulo"?: string;
         /**
           * Define o valor do componente.
          */

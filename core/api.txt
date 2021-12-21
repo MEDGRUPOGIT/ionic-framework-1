@@ -1542,6 +1542,9 @@ med-chart-bar-horizontal,part,track
 
 med-chart-categoria,scoped
 med-chart-categoria,prop,dsColor,string | undefined,undefined,false,true
+med-chart-categoria,prop,meta,string | undefined,undefined,false,true
+med-chart-categoria,prop,realizado,string | undefined,undefined,false,true
+med-chart-categoria,prop,titulo,string | undefined,undefined,false,true
 med-chart-categoria,prop,value,number,0,false,true
 
 med-chart-radial,scoped

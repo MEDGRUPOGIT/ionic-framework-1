@@ -7,10 +7,13 @@
 
 ## Properties
 
-| Property  | Attribute  | Description                   | Type                  | Default     |
-| --------- | ---------- | ----------------------------- | --------------------- | ----------- |
-| `dsColor` | `ds-color` | Define a cor do componente.   | `string \| undefined` | `undefined` |
-| `value`   | `value`    | Define o valor do componente. | `number`              | `0`         |
+| Property    | Attribute   | Description                   | Type                  | Default     |
+| ----------- | ----------- | ----------------------------- | --------------------- | ----------- |
+| `dsColor`   | `ds-color`  | Define a cor do componente.   | `string \| undefined` | `undefined` |
+| `meta`      | `meta`      |                               | `string \| undefined` | `undefined` |
+| `realizado` | `realizado` |                               | `string \| undefined` | `undefined` |
+| `titulo`    | `titulo`    |                               | `string \| undefined` | `undefined` |
+| `value`     | `value`     | Define o valor do componente. | `number`              | `0`         |
 
 
 ## Dependencies
