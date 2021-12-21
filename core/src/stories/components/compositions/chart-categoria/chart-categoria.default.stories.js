@@ -11,11 +11,13 @@ const Template = ({ dsColor, value }) => {
   return html`
     <ion-app>
       <ion-content>
+        <div class="flex-center flex-center--xs">
 
-        <!-- component -->
-        <med-chart-categoria .dsColor=${dsColor} value=${value}></med-chart-categoria>
-        <!-- component -->
+          <!-- component -->
+          <med-chart-categoria .dsColor=${dsColor} value=${value}></med-chart-categoria>
+          <!-- component -->
 
+        </div>
       </ion-content>
     </ion-app>
     `;

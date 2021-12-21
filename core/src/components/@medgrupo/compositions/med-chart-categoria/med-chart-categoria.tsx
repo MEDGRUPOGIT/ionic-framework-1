@@ -32,12 +32,12 @@ export class MedChartCategoria {
           <div class="med-chart-categoria__info">
             <div class="med-chart-categoria__meta">
               <med-type token="p10" dsColor="neutral-8">Meta</med-type>
-              <med-type token="p10b">100h</med-type>
+              <med-type class="med-chart-categoria__info-type" token="p10b">100h</med-type>
             </div>
 
             <div class="med-chart-categoria__realizado">
               <med-type token="p10" dsColor="neutral-8">Realizado</med-type>
-              <med-type class="med-chart-categoria__tempo-realizado" token="p10b">85h</med-type>
+              <med-type class="med-chart-categoria__info-type med-chart-categoria__info-type--realizado" token="p10b">85h</med-type>
             </div>
           </div>
         </div>

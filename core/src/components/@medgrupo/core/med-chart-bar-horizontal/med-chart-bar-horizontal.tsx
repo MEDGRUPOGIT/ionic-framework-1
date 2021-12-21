@@ -27,7 +27,7 @@ export class MedChartBarHorizontal {
           <div class="med-chart-bar-horizontal__progress" part="progress" style={{ '--progress': `${value === 0 ? -100 : value - 100}` }}></div>
           <div class="med-chart-bar-horizontal__track" part="track"></div>
         </div>
-        <med-type class="med-chart-bar-horizontal__label">
+        <med-type class="med-chart-bar-horizontal__label" token="p10b">
           {value}%
         </med-type>
       </Host>

@@ -1,7 +1,7 @@
 @import "../../../../../templarios/abstracts";
 
 :host {
-  --color: #{color('brand', '4')};
+  --color-realizado: #{color('brand', '4')};
 }
 
 :host {
@@ -16,27 +16,44 @@
   &__info {
     display: flex;
     margin-left: auto;
+    padding-left: 16px;
+  }
+
+  &__info-type {
+    margin-left: 3px;
+
+    &--realizado {
+      --color: var(--color-realizado);
+    }
   }
 
   &__meta {
     display: flex;
   }
 
-  &__tempo-meta {
-    margin-left: 5px;
-  }
-
   &__realizado {
     display: flex;
-    margin-left: 16px;
-  }
-
-  &__tempo-realizado {
-    --color: var(--color);
-    margin-left: 5px;
+    margin-left: 30px;
   }
 
   &__chart {
-    padding-top: 10px;
+    padding-top: 8px;
   }
+}
+
+
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-color) {
+  --color-realizado: #{curr-color('color', '4')};
+}
+
+:host(.med-color-neutral) {
+  --color-realizado: #{curr-color('neutral')};
+}
+
+:host(.med-color-feedback) {
+  --color-realizado: #{curr-color('feedback')};
 }

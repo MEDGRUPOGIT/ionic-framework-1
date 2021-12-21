@@ -42,11 +42,11 @@ Default.argTypes = {
   },
   titulo: {
     control: { type: 'text' },
-    defaultValue: 'Título',
+    defaultValue: 'Adicionar tarefa',
   },
   iconName: {
     control: { type: 'text' },
-    defaultValue: 'med-marcar',
+    defaultValue: 'med-mais-circulo',
   },
 };
 
