@@ -35,19 +35,19 @@
 :host {
   --background: #{color('neutral', '3')};
   --color: #{color('neutral', '10')};
+  --font-size: 14px;
+  --font-weight: 600;
+  --line-height: 16px;
   --padding-bottom: 8px;
   --padding-end: 8px;
   --padding-start: 16px;
   --padding-top: 8px;
   --placeholder-color: #{color('neutral', '5')};
-
-  --font-size: 14px;
-  --font-weight: 600;
-  --line-height: 16px;
   --placeholder-font-size: 14px;
   --placeholder-font-weight: 400;
   --placeholder-line-height: 16px;
   --placeholder-opacity: 1;
+ 
   --height: 40px;
   --border-radius: 8px;
 
