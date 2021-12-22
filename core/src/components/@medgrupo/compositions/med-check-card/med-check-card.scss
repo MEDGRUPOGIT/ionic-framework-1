@@ -36,6 +36,7 @@
 
   &__tooltip {
     display: none;
+    --z-index: 4;
   }
 
   &__tooltip-header {
