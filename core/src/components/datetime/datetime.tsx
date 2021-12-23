@@ -50,6 +50,9 @@ export class Datetime implements ComponentInterface {
    */
   @Prop() readonly = false;
 
+
+  @Prop() iconName = "med-baixo";
+
   @Watch('disabled')
   protected disabledChanged() {
     this.emitStyle();
@@ -613,7 +616,7 @@ export class Datetime implements ComponentInterface {
   }
 
   render() {
-    const { inputId, text, disabled, readonly, isExpanded, el, placeholder } = this;
+    const { inputId, text, disabled, readonly, isExpanded, el, placeholder, iconName } = this;
     const mode = getIonMode(this);
     const labelId = inputId + '-lbl';
     const label = findItemLabel(el);
@@ -651,6 +654,8 @@ export class Datetime implements ComponentInterface {
         }}
       >
         <div class="datetime-text" part={datetimeTextPart}>{datetimeText}</div>
+        <ion-icon class="datetime-icon med-icon" slot="icon-only" name={iconName}></ion-icon>
+
         <button
           type="button"
           onFocus={this.onFocus}
