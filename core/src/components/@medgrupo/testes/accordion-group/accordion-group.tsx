@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h, Host, Listen, Element } from '@stencil/core';
+import { Component, ComponentInterface, h, Host, Listen, Element, Prop } from '@stencil/core';
 import { createAnimation } from '../../../../utils/animation/animation';
 import { Animation } from '../../../../utils/animation/animation-interface';
 
@@ -10,6 +10,16 @@ import { Animation } from '../../../../utils/animation/animation-interface';
 export class AccordionGroup implements ComponentInterface {
   @Element() hostElement!: HTMLElement;
 
+  /**
+    * TODO.
+    */
+  @Prop({ reflect: true }) singleOpen = true;
+
+  /**
+    * TODO.
+    */
+  @Prop({ reflect: true }) noAnimation = false;
+
   // public blockerElement!: HTMLElement;
   public itemsToShift!: Array<any>;
 
@@ -19,8 +29,8 @@ export class AccordionGroup implements ComponentInterface {
   public contentDownAnimation!: Animation;
   // public blockerDownAnimation!: Animation;
 
-  private openAnimationTime = 300;
-  private closeAnimationTime = 300;
+  private openAnimationTime = this.noAnimation ? 0 : 300;
+  private closeAnimationTime = this.noAnimation ? 0 : 300;
 
   @Listen('toggle')
   async handleToggle(event: any) {
@@ -47,7 +57,9 @@ export class AccordionGroup implements ComponentInterface {
     const contentElement = event.detail.content;
 
     // fecha qualquer item aberto
-    await this.closeOpenItem();
+    if (this.singleOpen) {
+      await this.closeOpenItem();
+    }
     this.currentlyOpen = event;
 
     // cria um array com todos itens do accordion

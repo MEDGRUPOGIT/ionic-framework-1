@@ -7,11 +7,12 @@
 
 ## Properties
 
-| Property     | Attribute     | Description                                  | Type                                        | Default     |
-| ------------ | ------------- | -------------------------------------------- | ------------------------------------------- | ----------- |
-| `margin`     | `margin`      | Define a margin entre os itens do accordion. | `"lg" \| "md" \| "sm" \| "xs" \| undefined` | `undefined` |
-| `noBorder`   | `no-border`   | Define a variação da borda do componente.    | `boolean`                                   | `false`     |
-| `singleOpen` | `single-open` | Define a variação da borda do componente.    | `boolean`                                   | `true`      |
+| Property      | Attribute      | Description                                  | Type                                        | Default     |
+| ------------- | -------------- | -------------------------------------------- | ------------------------------------------- | ----------- |
+| `margin`      | `margin`       | Define a margin entre os itens do accordion. | `"lg" \| "md" \| "sm" \| "xs" \| undefined` | `undefined` |
+| `noAnimation` | `no-animation` |                                              | `boolean`                                   | `false`     |
+| `noBorder`    | `no-border`    | Define a variação da borda do componente.    | `boolean`                                   | `false`     |
+| `singleOpen`  | `single-open`  | Define a variação da borda do componente.    | `boolean`                                   | `true`      |
 
 
 ## Slots

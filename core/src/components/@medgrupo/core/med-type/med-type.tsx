@@ -1,5 +1,5 @@
 import { Component, Host, h, Prop } from '@stencil/core';
-import { MedColor, Type } from '../../../../interface';
+import { MedColor, MedTypeToken } from '../../../../interface';
 import { generateMedColor } from '../../../../utils/med-theme';
 
 @Component({
@@ -17,7 +17,7 @@ export class MedType {
   /**
     * Define o token do componente.
     */
-  @Prop({ reflect: true }) token?: Type;
+  @Prop({ reflect: true }) token?: MedTypeToken;
 
   render() {
     const { dsColor, token } = this;

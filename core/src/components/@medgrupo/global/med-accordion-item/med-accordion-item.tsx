@@ -46,12 +46,12 @@ export class MedAccordionItem implements ComponentInterface {
   /**
    * Permite que o front consiga definir quando o accordion vem aberto ou fechado.
    */
-   @Prop({ reflect: true, mutable: true }) isOpened = false;
+  @Prop({ reflect: true, mutable: true }) isOpened = false;
 
-   /**
-   * Permite que o front consiga definir quando o accordion vem aberto ou fechado.
-   */
-   @Prop({ reflect: true, mutable: true }) slotsToggle: 'start' | 'middle' | 'end' [] = [];
+  /**
+  * Permite que o front consiga definir quando o accordion vem aberto ou fechado.
+  */
+  @Prop({ reflect: true, mutable: true }) slotsToggle: 'start' | 'middle' | 'end'[] = [];
 
   /**
    * Internal
@@ -60,16 +60,18 @@ export class MedAccordionItem implements ComponentInterface {
 
   @Event() opened!: EventEmitter;
 
+  @Event() medClick!: EventEmitter;
+
   @State() isOpen = false;
 
   @Watch('isOpened')
-    watchPropHandler(newValue: boolean) {
-      if (newValue !== this.isOpen){}
-        this.toggleOpen();
-      }
+  watchPropHandler(newValue: boolean) {
+    if (newValue !== this.isOpen) { }
+    this.toggleOpen();
+  }
 
-  componentDidLoad(){
-    if (this.isOpened){
+  componentDidLoad() {
+    if (this.isOpened) {
       this.toggleOpen();
     }
   }
@@ -80,7 +82,7 @@ export class MedAccordionItem implements ComponentInterface {
 
   private isTransitioning = false;
 
-  private onClick = (slot : any) => {
+  private onClick = (slot: any) => {
     if (!this.canCollapse) {
       return
     }
@@ -116,18 +118,23 @@ export class MedAccordionItem implements ComponentInterface {
     });
   }
 
+  private onHeaderClick() {
+    this.medClick.emit();
+  }
+
   render() {
     const { dsColor, noBorder, isOpen, background } = this;
 
     return (
       <Host
+        from-stencil
         class={generateMedColor(dsColor, {
           'med-accordion-item': true,
           'med-accordion-item--no-border': noBorder,
           'med-accordion-item--open': isOpen,
           'med-accordion-item--background': background,
         })}>
-        <div class="med-accordion-item__header" ref={(el) => this.header = el as HTMLDivElement}>
+        <div class="med-accordion-item__header" onClick={() => this.onHeaderClick()} ref={(el) => this.header = el as HTMLDivElement}>
 
           <div class="med-accordion-item__header-container">
 

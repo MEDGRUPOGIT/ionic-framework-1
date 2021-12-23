@@ -165,6 +165,15 @@ html {
   height: 100%;
 }
 
+.flex-center--xs {
+  width: 340px;
+  margin: 0 auto;
+}
+
+.flex-center--column {
+  flex-direction:column;
+}
+
 .flex-center-vertical {
   display: flex;
   align-items: center;

@@ -1,8 +1,18 @@
 
 accordion-group,shadow
+accordion-group,prop,noAnimation,boolean,false,false,true
+accordion-group,prop,singleOpen,boolean,true,false,true
 
 accordion-item,shadow
+accordion-item,prop,background,boolean,false,false,true
+accordion-item,prop,disable,boolean,false,false,true
+accordion-item,prop,headerToggle,boolean,true,false,true
+accordion-item,prop,open,boolean,false,false,true
 accordion-item,event,toggle,any,true
+
+filtro-dashboard,shadow
+
+filtro-modal,shadow
 
 ion-action-sheet,scoped
 ion-action-sheet,prop,animated,boolean,true,false,false
@@ -1400,11 +1410,13 @@ med-accordion-item,prop,icon,"left" | "right" | undefined,undefined,false,true
 med-accordion-item,prop,isOpened,boolean,false,false,true
 med-accordion-item,prop,noBorder,boolean,false,false,true
 med-accordion-item,prop,slotsToggle,"end"[] | "middle" | "start",[],false,true
+med-accordion-item,event,medClick,any,true
 med-accordion-item,event,opened,any,true
 med-accordion-item,event,toggle,any,true
 
 med-accordion-list,shadow
 med-accordion-list,prop,margin,"lg" | "md" | "sm" | "xs" | undefined,undefined,false,false
+med-accordion-list,prop,noAnimation,boolean,false,false,true
 med-accordion-list,prop,noBorder,boolean,false,false,true
 med-accordion-list,prop,singleOpen,boolean,true,false,true
 med-accordion-list,css-prop,--background
@@ -1414,6 +1426,8 @@ med-accordion-list,css-prop,--border-radius
 med-agrupador,shadow
 med-agrupador,prop,collapsed,boolean,false,false,true
 med-agrupador,prop,dsColor,string | undefined,undefined,false,true
+med-agrupador,prop,texto1,string,`Expandir a lista`,false,true
+med-agrupador,prop,texto2,string,`Ocultar a lista`,false,true
 med-agrupador,method,toggle,toggle(event?: Event | undefined) => Promise<void>
 med-agrupador,css-prop,--color
 
@@ -1509,9 +1523,8 @@ med-cartao-resposta-lista,shadow
 med-chart-bar,shadow
 med-chart-bar,prop,dsColor,string | undefined,undefined,false,true
 med-chart-bar,prop,height,number,50,false,true
-med-chart-bar,prop,token,string,'p12b',false,true
 med-chart-bar,prop,value,number,0,false,true
-med-chart-bar,prop,width,number,42,false,true
+med-chart-bar,prop,width,number,24,false,true
 
 med-chart-radial,scoped
 med-chart-radial,prop,dsColor,string | undefined,undefined,false,true
@@ -1597,6 +1610,7 @@ med-list,prop,margin,"lg" | "md" | "sm" | "xs" | undefined,undefined,false,false
 
 med-list-item,shadow
 med-list-item,prop,border,boolean,false,false,true
+med-list-item,prop,disabled,boolean,false,false,true
 med-list-item,prop,dsColor,string | undefined,undefined,false,true
 med-list-item,prop,dsSize,"md" | "sm" | "xs" | undefined,undefined,false,false
 med-list-item,prop,label,string | undefined,undefined,false,false
@@ -1606,6 +1620,7 @@ med-list-item,prop,titulo,string | undefined,undefined,false,false
 med-list-item-accordion,scoped
 med-list-item-accordion,prop,border,boolean,false,false,true
 med-list-item-accordion,prop,collapsed,boolean,true,false,true
+med-list-item-accordion,prop,disabled,boolean,false,false,true
 med-list-item-accordion,prop,dsColor,string | undefined,undefined,false,true
 med-list-item-accordion,prop,dsSize,"md" | "sm" | "xs" | undefined,undefined,false,false
 med-list-item-accordion,prop,label,string | undefined,undefined,false,false
@@ -1654,11 +1669,9 @@ med-parent,prop,fill,"outline" | undefined,undefined,false,true
 
 med-piechart,shadow
 med-piechart,prop,active,boolean,false,false,true
-med-piechart,prop,downloadProgresso,number,0,false,true
-med-piechart,prop,downloaded,boolean,false,false,true
-med-piechart,prop,downloading,boolean,false,false,true
 med-piechart,prop,dsColor,string | undefined,undefined,false,true
-med-piechart,prop,progresso,number,0,false,true
+med-piechart,prop,text,string | undefined,undefined,false,true
+med-piechart,prop,value,number,0,false,true
 med-piechart,method,toggle,toggle(event?: Event | undefined) => Promise<void>
 
 med-question,shadow
@@ -1705,10 +1718,25 @@ med-rating,css-prop,--color
 med-rating,css-prop,--color-date
 med-rating,css-prop,--color-icon
 
+med-semana,scoped
+med-semana,prop,active,boolean,false,false,true
+med-semana,prop,dsColor,string | undefined,undefined,false,true
+med-semana,prop,skin,"lista" | undefined,undefined,false,true
+
+med-semanas,shadow
+med-semanas,prop,skin,"lista" | undefined,undefined,false,true
+
 med-subtitle,shadow
 med-subtitle,prop,dsColor,string | undefined,undefined,false,true
 med-subtitle,prop,dsName,"high" | undefined,undefined,false,true
 med-subtitle,prop,dsSize,"base" | "lg" | "md" | "sm" | "xl" | "xs" | "xxs" | undefined,undefined,false,true
+
+med-tab-button,shadow
+med-tab-button,prop,active,boolean,false,false,true
+med-tab-button,prop,dsColor,string | undefined,undefined,false,true
+
+med-tabs,shadow
+med-tabs,prop,dsColor,string | undefined,undefined,false,true
 
 med-themes,shadow
 med-themes,prop,ativo,"theme-gold" | "theme-recursos" | undefined,undefined,false,true
@@ -1746,6 +1774,9 @@ med-tooltip,css-prop,--z-index
 med-type,shadow
 med-type,prop,dsColor,string | undefined,undefined,false,true
 med-type,prop,token,string | undefined,undefined,false,true
+
+med-video-list-item,scoped
+med-video-list-item,prop,dsColor,string | undefined,undefined,false,true
 
 med-video-thumbnail,shadow
 med-video-thumbnail,prop,dsColor,string | undefined,undefined,false,true

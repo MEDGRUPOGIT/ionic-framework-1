@@ -22,43 +22,307 @@
         window.toastController = toastController;
       </script>
     <style>
-      :root {
-        --ion-font-family: 'fsemeric';
+      .main-header-right {
+        position: relative;
       }
 
-      body {
-        font-family: 'fsemeric';
-        font-weight: 400;
+      .badge {
+        --med-color-feedback-contrast: var(--med-color-neutral-10) !important;
+        position: absolute;
+        z-index: 1;
+        top: -3px;
+        left: -20px;
       }
 
-      .dark-mode ion-content {
-        --background: #141414;
+      .med-scrollbar {
+        --style: 0;
+        --width: 0;
+        --height: 0;
       }
 
-      .light-mode ion-content {
-        --background: #fafafa;
+      .search-bar {
+        padding: 16px;
       }
 
-      h4 {
-        text-align: left;
-        margin: 0;
-      }
-
-      p {
-        text-align: left;
-        margin: 0;
-      }
-
-      .med-accordion__content {
-        padding: var(--med-spacing-inset-sm);
-        padding-top: 0;
+      ion-content {
+        --background: hsl(var(--med-color-neutral-2));
       }
     </style>
   </head>
-  <body class="dark-mode">
+  <body>
+    <med-header>
+      <med-navbar slot="navbar">
+
+        <ion-button ds-name="tertiary" slot="left">
+          <ion-icon slot="icon-only" class="med-icon" name="med-qrcode"></ion-icon>
+        </ion-button>
+
+        <ion-button id="skin" ds-name="tertiary" slot="left">
+          <ion-icon slot="icon-only" class="med-icon" name="med-cartao"></ion-icon>
+        </ion-button>
+
+        <ion-button id="scheme" ds-name="tertiary" slot="left">
+          <ion-icon slot="icon-only" class="med-icon" name="med-sun"></ion-icon>
+        </ion-button>
+
+        <ion-button ds-name="tertiary" slot="title">
+          2021 MEDCURSO
+          <ion-icon slot="end" class="med-icon" name="med-baixo"></ion-icon>
+        </ion-button>
+
+        <div slot="right" class="main-header-right">
+          <ion-badge class="badge" ds-color="fb-warning" ds-size="xs">
+            123
+          </ion-badge>
+          <ion-button ds-name="tertiary">
+            <ion-icon slot="icon-only" class="med-icon" name="med-notificacao"></ion-icon>
+          </ion-button>
+        </div>
+
+      </med-navbar>
+
+      <med-tabs class="med-scrollbar" slot="auxiliar">
+        <med-tab-button active ds-color="aula">Aulas</med-tab-button>
+        <med-tab-button ds-color="material">Material</med-tab-button>
+        <med-tab-button ds-color="questoes">Questões</med-tab-button>
+        <med-tab-button ds-color="revalida">Revalida</med-tab-button>
+        <med-tab-button ds-color="brand">Smart</med-tab-button>
+      </med-tabs>
+
+      <div class="search-bar" slot="auxiliar">
+        <ion-searchbar show-clear-button="never" show-cancel-button="focus" cancel-button-text="Cancelar" mode="ios" search-icon="med-busca"></ion-searchbar>
+      </div>
+    </med-header>
+
+    <ion-content>
+      <ion-slides>
+
+        <ion-slide>
+          <med-semanas>
+            <med-semana ds-color="aula" active></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+            <med-semana ds-color="aula"></med-semana>
+          </med-semanas>
+        </ion-slide>
+
+        <ion-slide>
+          <med-semanas>
+            <med-semana ds-color="material" active></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+            <med-semana ds-color="material"></med-semana>
+          </med-semanas>
+        </ion-slide>
+
+        <ion-slide>
+          <med-semanas>
+            <med-semana ds-color="questoes" active></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+            <med-semana ds-color="questoes"></med-semana>
+          </med-semanas>
+        </ion-slide>
+
+        <ion-slide>
+          <med-semanas>
+            <med-semana ds-color="revalida" active></med-semana>
+            <med-semana ds-color="revalida"></med-semana>
+            <med-semana ds-color="revalida"></med-semana>
+            <med-semana ds-color="revalida"></med-semana>
+            <med-semana ds-color="revalida"></med-semana>
+          </med-semanas>
+        </ion-slide>
+
+        <ion-slide>
+          <med-semanas>
+            <med-semana ds-color="brand" active></med-semana>
+            <med-semana ds-color="brand"></med-semana>
+            <med-semana ds-color="brand"></med-semana>
+            <med-semana ds-color="brand"></med-semana>
+            <med-semana ds-color="brand"></med-semana>
+          </med-semanas>
+        </ion-slide>
+
+      </ion-slides>
+    </ion-content>
+
+
     <script>
 
+setTimeout(() => {
+    const semanas = document.querySelectorAll('med-semanas');
+    const semanaList = document.querySelectorAll('med-semana');
+    const schemeButton = document.getElementById('scheme');
+    const skinButton = document.getElementById('skin');
 
+    console.log(semanaList);
+    console.log(schemeButton);
+    console.log(skinButton);
+
+    // scheme
+    schemeButton.addEventListener('click', () => {
+      if(document.documentElement.classList.contains('scheme-light')) {
+        console.log('light');
+        document.documentElement.classList.remove('scheme-light');
+        document.documentElement.classList.add('scheme-dark');
+        return;
+      }
+      console.log('dark');
+      document.documentElement.classList.remove('scheme-dark');
+      document.documentElement.classList.add('scheme-light');
+    });
+
+    // skin
+    skinButton.addEventListener('click', () => {
+      semanaList.forEach(semana => {
+        if (semana.skin) {
+          semana.skin = undefined;
+          return;
+        }
+
+        semana.skin = 'lista';
+      });
+
+      semanas.forEach(semana => {
+        if (semana.skin) {
+          semana.skin = undefined;
+          return;
+        }
+
+        semana.skin = 'lista';
+      });
+    });
+  }, 1000);
     </script>
   </body>
 </html>

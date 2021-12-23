@@ -238,6 +238,7 @@ export default defineComponent({
 
 ### Used by
 
+ - [filtro-modal](../@medgrupo/team/dashboard/filtro-modal)
  - ion-select-popover
  - [med-config](../@medgrupo/global/med-config)
  - [med-themes](../@medgrupo/global/med-themes)
@@ -245,6 +246,7 @@ export default defineComponent({
 ### Graph
 ```mermaid
 graph TD;
+  filtro-modal --> ion-radio-group
   ion-select-popover --> ion-radio-group
   med-config --> ion-radio-group
   med-themes --> ion-radio-group

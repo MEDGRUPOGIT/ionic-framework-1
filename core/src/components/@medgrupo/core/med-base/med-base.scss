@@ -1,0 +1,129 @@
+@import "../../../../../templarios/abstracts";
+
+:host {
+  --background: #{color('neutral', '2')};
+  --border-radius: 8px;
+  --padding: 16px;
+}
+
+:host(.med-base) {
+  background: var(--background);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  display: flex;
+}
+
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-color) {
+  --background: #{curr-color('color', '1')};
+}
+
+// ////////////////////
+// neutral
+// ////////////////////
+
+:host(.med-color-neutral) {
+  --background: #{curr-color('neutral')};
+}
+
+// //////////
+// feedback
+// //////////
+
+:host(.med-color-feedback) {
+  --background: #{curr-color('feedback')};
+}
+
+// ////////////////////
+// Border
+// ////////////////////
+
+:host(.med-base--radius-s00) {
+  border-radius: 0px;
+}
+:host(.med-base--radius-s02) {
+  border-radius: 2px;
+}
+:host(.med-base--radius-s04) {
+  border-radius: 4px;
+}
+:host(.med-base--radius-s08) {
+  border-radius: 8px;
+}
+
+// ////////////////////
+// Spacing-h
+// ////////////////////
+
+:host(.med-base--spacing-h-s00) {
+  padding-left: 0;
+  padding-right: 0;
+}
+:host(.med-base--spacing-h-s02) {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+:host(.med-base--spacing-h-s04) {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+:host(.med-base--spacing-h-s08) {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+:host(.med-base--spacing-h-s12) {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+:host(.med-base--spacing-h-s16) {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+:host(.med-base--spacing-h-s20) {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+:host(.med-base--spacing-h-s24) {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+// ////////////////////
+// Spacing-v
+// ////////////////////
+
+:host(.med-base--spacing-v-s00) {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+:host(.med-base--spacing-v-s02) {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+:host(.med-base--spacing-v-s04) {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+:host(.med-base--spacing-v-s08) {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+:host(.med-base--spacing-v-s12) {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+:host(.med-base--spacing-v-s16) {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+:host(.med-base--spacing-v-s20) {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+:host(.med-base--spacing-v-s24) {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}

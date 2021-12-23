@@ -29,6 +29,8 @@ export class Accordion implements ComponentInterface {
     */
   @Prop({ reflect: true }) noBorder = false;
 
+  @Prop({ reflect: true }) noAnimation = false;
+
   private blocker!: HTMLElement;
 
   private currentlyOpen: CustomEvent | any = null;
@@ -65,7 +67,7 @@ export class Accordion implements ComponentInterface {
   }
 
   createOpenAnimation(elements: Element | Node | Element[] | Node[] | NodeList, amountToShift: number, isBlocker: boolean) {
-    const openAnimationTime = 300;
+    const openAnimationTime = this.noAnimation ? 0 : 300;
     const beforeStyles: any = {
       transform: `translateY(-${amountToShift}px)`,
       position: 'relative',
@@ -118,7 +120,7 @@ export class Accordion implements ComponentInterface {
   }
 
   createCloseAnimation(elements: Element | Node | Element[] | Node[] | NodeList, amountToShift: number) {
-    const closeAnimationTime = 300;
+    const closeAnimationTime = this.noAnimation ? 0 : 300;
 
     return createAnimation()
       .addElement(elements)

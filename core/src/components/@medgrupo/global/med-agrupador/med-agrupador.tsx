@@ -15,6 +15,16 @@ export class MedAgrupador {
   @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
+    * TODO.
+    */
+  @Prop({ reflect: true }) texto1 = `Expandir a lista`;
+
+  /**
+    * TODO.
+    */
+  @Prop({ reflect: true }) texto2 = `Ocultar a lista`;
+
+  /**
     * Define o estado do componente.
     */
   @Prop({ reflect: true, mutable: true }) collapsed = false;
@@ -29,7 +39,7 @@ export class MedAgrupador {
   }
 
   render() {
-    const { dsColor, collapsed } = this;
+    const { dsColor, collapsed, texto1, texto2 } = this;
 
     return (
       <Host
@@ -38,9 +48,9 @@ export class MedAgrupador {
           'med-agrupador': true,
           'med-agrupador--collapsed': collapsed
         })}
-        onClick={(event: any) => {this.toggle(event)}}>
-        <div class="med-agrupador__expandir">Expandir a lista</div>
-        <div class="med-agrupador__ocultar">Ocultar a lista</div>
+        onClick={(event: any) => { this.toggle(event) }}>
+        <div class="med-agrupador__expandir">{texto1}</div>
+        <div class="med-agrupador__ocultar">{texto2}</div>
         <ion-icon class="med-icon med-agrupador__icon" name="med-baixo"></ion-icon>
       </Host>
     );

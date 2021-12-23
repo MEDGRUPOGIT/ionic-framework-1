@@ -144,13 +144,13 @@ export const parameters = {
     storySort: {
       method: 'alphabetical',
       order: [
-        'General', ['Welcome', 'Biblioteca', 'Arquitetura', 'Styleguide'],
+        'General', ['Welcome', 'Biblioteca', 'Styleguide'],
         'Conhecimento', ['Metodologia BEM'],
         'Components',
+        'Pages',
         'Enums',
-        'Tokens', ['Tokens', 'Cores', 'Tipografia', 'Espacamento', 'Complementares', 'Exemplo'],
-        'Sass', ['Variables', 'Functions', 'Mixins'],
-        'Ionic 1',
+        'Tokens',
+        'Sass',
       ],
     },
   },
