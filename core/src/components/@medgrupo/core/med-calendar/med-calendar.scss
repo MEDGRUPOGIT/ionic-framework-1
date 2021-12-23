@@ -2,6 +2,11 @@
 
 :host {
   --main-color: #{color('brand', '3')};
+  --background: #{color('neutral', '1')};
+}
+
+:host {
+  background: var(--background);
 }
 
 .header {
