@@ -32,10 +32,16 @@
 
   &__subtitulo {
     margin: 0 8px 0 10px;
+    stroke: color('neutral', '8');
+  }
+
+  &__hora {
+    stroke: color('neutral', '8');
   }
 
   &__tooltip {
     display: none;
+    --background: hsl(var(--med-color-fb-warning));
   }
 
   &__tooltip-header {

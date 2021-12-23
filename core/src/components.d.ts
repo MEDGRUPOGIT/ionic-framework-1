@@ -3304,6 +3304,8 @@ export namespace Components {
         "iconName"?: string;
         "titulo"?: string;
         "tooltipCollapsed": boolean;
+        "tooltipContent"?: string;
+        "tooltipHeading"?: string;
         "tooltipPlacement": "top" | "bottom" | "left" | "right" | undefined;
     }
     interface MedChild {
@@ -8386,6 +8388,8 @@ declare namespace LocalJSX {
         "iconName"?: string;
         "titulo"?: string;
         "tooltipCollapsed"?: boolean;
+        "tooltipContent"?: string;
+        "tooltipHeading"?: string;
         "tooltipPlacement"?: "top" | "bottom" | "left" | "right" | undefined;
     }
     interface MedChild {

@@ -7,7 +7,7 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ dsColor, alert, titulo, categoria, horaInicial, horaFinal, iconName, modalPlacement, tooltipCollapsed }) => {
+const Template = ({ dsColor, alert, titulo, categoria, horaInicial, horaFinal, iconName, modalPlacement, tooltipCollapsed, tooltipHeading, tooltipContent }) => {
   return html`
     <ion-app>
       <ion-content>
@@ -24,7 +24,10 @@ const Template = ({ dsColor, alert, titulo, categoria, horaInicial, horaFinal, i
             icon-name=${iconName}
             modal-placement=${modalPlacement}
             tooltip-collapsed=${tooltipCollapsed}
+            tooltip-heading=${tooltipHeading}
+            tooltip-content=${tooltipContent}
           >
+            <ion-checkbox slot="input"></ion-checkbox>
           </med-check-card>
           <!-- component -->
 
@@ -75,6 +78,14 @@ Default.argTypes = {
   horaFinal: {
     control: { type: 'text' },
     defaultValue: '23h00',
+  },
+  tooltipHeading: {
+    control: { type: 'text' },
+    defaultValue: 'Tarefa pendente',
+  },
+  tooltipContent: {
+    control: { type: 'text' },
+    defaultValue: 'Para reagendar este card, clique no menu ao lado e selecione Editar.',
   },
   iconName: {
     control: { type: 'text' },

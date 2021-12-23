@@ -18,6 +18,8 @@
 | `iconName`         | `icon-name`         |                             | `string \| undefined`                                 | `undefined` |
 | `titulo`           | `titulo`            |                             | `string \| undefined`                                 | `undefined` |
 | `tooltipCollapsed` | `tooltip-collapsed` |                             | `boolean`                                             | `true`      |
+| `tooltipContent`   | `tooltip-content`   |                             | `string \| undefined`                                 | `undefined` |
+| `tooltipHeading`   | `tooltip-heading`   |                             | `string \| undefined`                                 | `undefined` |
 | `tooltipPlacement` | `tooltip-placement` |                             | `"bottom" \| "left" \| "right" \| "top" \| undefined` | `'top'`     |
 
 
@@ -26,7 +28,6 @@
 ### Depends on
 
 - [med-base](../../core/med-base)
-- [ion-checkbox](../../../checkbox)
 - [med-type](../../core/med-type)
 - ion-icon
 - [med-tooltip](../../global/med-tooltip)
@@ -35,7 +36,6 @@
 ```mermaid
 graph TD;
   med-check-card --> med-base
-  med-check-card --> ion-checkbox
   med-check-card --> med-type
   med-check-card --> ion-icon
   med-check-card --> med-tooltip

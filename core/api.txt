@@ -1563,7 +1563,7 @@ med-chart-radial-label,prop,dsColor,string | undefined,undefined,false,true
 med-chart-radial-label,prop,dsSize,"lg" | undefined,undefined,false,false
 med-chart-radial-label,prop,valores,MedChartRadiaItem[],[],false,false
 
-med-check-card,scoped
+med-check-card,shadow
 med-check-card,prop,alert,boolean,false,false,true
 med-check-card,prop,categoria,string | undefined,undefined,false,true
 med-check-card,prop,dsColor,string | undefined,undefined,false,true
@@ -1573,6 +1573,8 @@ med-check-card,prop,horaInicial,string | undefined,undefined,false,true
 med-check-card,prop,iconName,string | undefined,undefined,false,true
 med-check-card,prop,titulo,string | undefined,undefined,false,true
 med-check-card,prop,tooltipCollapsed,boolean,true,false,true
+med-check-card,prop,tooltipContent,string | undefined,undefined,false,true
+med-check-card,prop,tooltipHeading,string | undefined,undefined,false,true
 med-check-card,prop,tooltipPlacement,"bottom" | "left" | "right" | "top" | undefined,'top',false,true
 
 med-child,shadow

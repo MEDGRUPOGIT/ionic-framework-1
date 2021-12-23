@@ -16,14 +16,17 @@
 
 ### Depends on
 
-- [ion-slides](../../../slides)
-- [ion-slide](../../../slide)
+- [ion-button](../../../button)
+- ion-icon
+- [med-type](../med-type)
 
 ### Graph
 ```mermaid
 graph TD;
-  med-calendar --> ion-slides
-  med-calendar --> ion-slide
+  med-calendar --> ion-button
+  med-calendar --> ion-icon
+  med-calendar --> med-type
+  ion-button --> ion-ripple-effect
   style med-calendar fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
