@@ -1,5 +1,18 @@
+@import "../../../../../templarios/abstracts";
+
+:host {
+  --main-color: #{color('brand', '3')};
+}
+
 .header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 24px;
+
+  &__type {
+    flex: 1;
+  }
 
   &__left {
     display: flex;
@@ -9,11 +22,16 @@
   }
 
   &__right {
-
+    display: flex;
+    align-items: center;
   }
 
-  &__type {
-    flex: 1;
+  &__button-icon {
+    font-size: 18px;
+  }
+
+  &__icon {
+    stroke: #{color('neutral', '8')}
   }
 }
 
@@ -32,7 +50,10 @@
   }
 
   &__week-type {
-    --color:
+    --font-size: 12px;
+    --font-weight: 400;
+    --line-height: 12px;
+    --color: hsl(var(--med-color-neutral-8));
   }
 
   &__container {
@@ -42,11 +63,69 @@
   }
 }
 
+.choice {
+  &__type {
+    --font-size: 16px;
+    --font-weight: 400;
+    --line-height: 16px;
+    --color: hsl(var(--med-color-neutral-8));
+    text-transform: none;
+  }
+}
+
 .date {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 48px;
+  cursor: pointer;
+
+  &__type {
+    --font-size: 12px;
+    --font-weight: 600;
+    --line-height: 11px;
+    --color: hsl(var(--med-color-neutral-10));
+  }
 
   &__active {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-color);
+  }
+}
 
+.footer {
+  display: none;
+}
+
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-color) {
+  --main-color: #{curr-color('color', '3')};
+
+  .date__type--active {
+    --color: #{color('brand', '3', 'contrast')};
+  }
+}
+
+:host(.med-color-neutral) {
+  --main-color: #{curr-color('neutral')};
+
+  .date__type--active {
+    --color: #{color('neutral', 'contrast')};
+  }
+}
+
+:host(.med-color-feedback) {
+  --main-color: #{curr-color('feedback')};
+
+  .date__type--active {
+    --color: #{color('feedback', 'contrast')};
   }
 }

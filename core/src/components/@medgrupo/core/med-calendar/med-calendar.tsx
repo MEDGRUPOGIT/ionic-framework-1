@@ -39,7 +39,7 @@ export class MedCalendar {
     this.days.forEach((day:any) => {
       this.calendarHead.insertAdjacentHTML('afterbegin', `
         <div class="content__week-day">
-          <med-type class="content__week-type" token="p12" ds-color="neutral-8" data-days="${day}">${day}</med-type>
+          <med-type class="content__week-type" data-days="${day}">${day}</med-type>
         </div>
       `);
     });
@@ -97,14 +97,16 @@ export class MedCalendar {
         } else {
           this.calendarBody.insertAdjacentHTML('afterbegin', `
             <div data-date="${date}" data-month="${month + 1}" data-year="${year}" data-month-name="${this.months[month]}" class="date">
-              <med-type tokeb="p12b" ds-color="neutral-10">${date}</med-type>
+              <med-type class="date__type">${date}</med-type>
             </div>
           `);
 
           if (date === this.today.getDate() && year === this.today.getFullYear() && month === this.today.getMonth()) {
             this.calendarBody.insertAdjacentHTML('afterbegin', `
-              <div data-date="${date}" data-month="${month + 1}" data-year="${year}" data-month-name="${this.months[month]}" class="date date__active">
-                <med-type tokeb="p12b" ds-color="neutral-10">${date}</med-type>
+              <div data-date="${date}" data-month="${month + 1}" data-year="${year}" data-month-name="${this.months[month]}" class="date">
+                <div class="date__active">
+                  <med-type class="date__type date__type--active">${date}</med-type>
+                </div>
               </div>
             `);
           }
@@ -125,47 +127,51 @@ export class MedCalendar {
     return (
       <Host class={generateMedColor(dsColor, {'med-badge': true })}>
 
-          <div class="header">
-            <div class="header__left">
-              <ion-button ds-name="tertiary" onClick={() => this.previous()}>
-                <ion-icon slot="icon-only" class="med-icon" name="med-esquerda"></ion-icon>
-              </ion-button>
+        <div class="header">
+          <div class="header__left">
+            <ion-button ds-name="tertiary" onClick={() => this.previous()}>
+              <ion-icon slot="icon-only" class="med-icon" name="med-esquerda"></ion-icon>
+            </ion-button>
 
-              <med-type class="header__type" token="p16b" ref={(el) => this.monthAndYear = el as any}></med-type>
+            <med-type class="header__type" token="p16b" ref={(el) => this.monthAndYear = el as any}></med-type>
 
-              <ion-button ds-name="tertiary" onClick={() => this.next()}>
-                <ion-icon slot="icon-only" class="med-icon" name="med-direita"></ion-icon>
-              </ion-button>
-            </div>
-            <div class="header__right">
-              <div></div>
-              <ion-icon class="med-icon" name="med-esquerda"></ion-icon>
-            </div>
+            <ion-button ds-name="tertiary" onClick={() => this.next()}>
+              <ion-icon slot="icon-only" class="med-icon" name="med-direita"></ion-icon>
+            </ion-button>
           </div>
 
-          <div class="content">
-            <div class="content__header" ref={(el) => this.calendarHead = el as any}></div>
-            <div class="content__container" ref={(el) => this.calendarBody = el as any}></div>
+          <div class="header__right">
+            <ion-button ds-name="tertiary">
+              <med-type class="choice__type">Mês</med-type>
+              <ion-icon slot="end" class="med-icon header__button-icon" name="med-baixo"></ion-icon>
+            </ion-button>
+            <ion-icon class="med-icon header__icon" name="med-grafico"></ion-icon>
           </div>
+        </div>
 
-          <div class="footer">
-            <label htmlFor="month">Jump To: </label>
-            <select id="month" class="month" onChange={() => this.jump()} ref={(el) => this.selectMonth = el as any}>
-              <option value="0">Jan</option>
-              <option value="1">Feb</option>
-              <option value="2">Mar</option>
-              <option value="3">Apr</option>
-              <option value="4">May</option>
-              <option value="5">Jun</option>
-              <option value="6">Jul</option>
-              <option value="7">Aug</option>
-              <option value="8">Sep</option>
-              <option value="9">Oct</option>
-              <option value="10">Nov</option>
-              <option value="11">Dec</option>
-            </select>
-            <select id="year" class="year" onChange={() => this.jump()} ref={(el) => this.selectYear = el as any}></select>
-          </div>
+        <div class="content">
+          <div class="content__header" ref={(el) => this.calendarHead = el as any}></div>
+          <div class="content__container" ref={(el) => this.calendarBody = el as any}></div>
+        </div>
+
+        <div class="footer">
+          <label htmlFor="month">Jump To: </label>
+          <select onChange={() => this.jump()} ref={(el) => this.selectMonth = el as any}>
+            <option value="0">Jan</option>
+            <option value="1">Feb</option>
+            <option value="2">Mar</option>
+            <option value="3">Apr</option>
+            <option value="4">May</option>
+            <option value="5">Jun</option>
+            <option value="6">Jul</option>
+            <option value="7">Aug</option>
+            <option value="8">Sep</option>
+            <option value="9">Oct</option>
+            <option value="10">Nov</option>
+            <option value="11">Dec</option>
+          </select>
+          <select onChange={() => this.jump()} ref={(el) => this.selectYear = el as any}></select>
+        </div>
 
       </Host>
     );
