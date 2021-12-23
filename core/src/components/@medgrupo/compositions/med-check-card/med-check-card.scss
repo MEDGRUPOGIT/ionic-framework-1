@@ -42,6 +42,7 @@
   &__tooltip {
     display: none;
     --background: hsl(var(--med-color-fb-warning));
+    --z-index: 4;
   }
 
   &__tooltip-header {

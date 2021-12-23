@@ -187,6 +187,7 @@ export const IonDatetime = /*@__PURE__*/ defineContainer<JSX.IonDatetime>('ion-d
   'name',
   'disabled',
   'readonly',
+  'iconName',
   'min',
   'max',
   'displayFormat',
