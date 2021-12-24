@@ -388,7 +388,7 @@ export class Textarea implements ComponentInterface {
           >
             {value}
           </textarea>
-          <span class="length">123 / 123</span>
+          <slot></slot>
         </div>
 
       </Host>
