@@ -1,4 +1,4 @@
-import { Component, Host, h, Element, Prop } from '@stencil/core';
+import { Component, Host, h, Element, Prop, Event, EventEmitter, State } from '@stencil/core';
 import { MedColor } from '../../../../interface';
 import { generateMedColor } from '../../../../utils/med-theme';
 
@@ -14,6 +14,10 @@ export class MedCalendar {
     * Define a cor do componente.
     */
   @Prop({ reflect: true }) dsColor?: MedColor;
+
+  @State() choice = 'Semana';
+
+  @Event() medClick!: EventEmitter;
 
   today = new Date();
   currentMonth = this.today.getMonth();
@@ -78,6 +82,8 @@ export class MedCalendar {
     this.showCalendar(this.currentMonth, this.currentYear);
   }
 
+  // ${onClick={() => this.onDayClick(${{date, month: month + 1, year, monthName: this.months[month]}}})}
+
   private showCalendar = (month: any, year: any) => {
     const firstDay = ( new Date( year, month ) ).getDay();
 
@@ -121,6 +127,11 @@ export class MedCalendar {
     return 32 - new Date(iYear, iMonth, 32).getDate();
   }
 
+  private onChoiceClick() {
+    this.choice = this.choice === 'Semana' ? 'Semana' : 'Mês'
+    this.medClick.emit(this.choice);
+  }
+
   render() {
     const { dsColor } = this;
 
@@ -141,8 +152,8 @@ export class MedCalendar {
           </div>
 
           <div class="header__right">
-            <ion-button ds-name="tertiary">
-              <med-type class="choice__type">Mês</med-type>
+            <ion-button ds-name="tertiary" onClick={() => this.onChoiceClick()}>
+              <med-type class="choice__type">{this.choice}</med-type>
               <ion-icon slot="end" class="med-icon header__button-icon" name="med-baixo"></ion-icon>
             </ion-button>
             <ion-icon class="med-icon header__icon" name="med-grafico"></ion-icon>

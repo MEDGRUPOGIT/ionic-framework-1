@@ -8261,6 +8261,7 @@ declare namespace LocalJSX {
           * Define a cor do componente.
          */
         "dsColor"?: MedColor;
+        "onMedClick"?: (event: CustomEvent<any>) => void;
     }
     interface MedCaption {
         /**

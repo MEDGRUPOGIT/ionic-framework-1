@@ -12,6 +12,13 @@
 | `dsColor` | `ds-color` | Define a cor do componente. | `string \| undefined` | `undefined` |
 
 
+## Events
+
+| Event      | Description | Type               |
+| ---------- | ----------- | ------------------ |
+| `medClick` |             | `CustomEvent<any>` |
+
+
 ## Dependencies
 
 ### Depends on

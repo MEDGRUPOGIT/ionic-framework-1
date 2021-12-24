@@ -1516,6 +1516,7 @@ med-base,prop,spacingV,string | undefined,undefined,false,true
 
 med-calendar,shadow
 med-calendar,prop,dsColor,string | undefined,undefined,false,true
+med-calendar,event,medClick,any,true
 
 med-caption,shadow
 med-caption,prop,dsColor,string | undefined,undefined,false,true
