@@ -1176,8 +1176,8 @@ export class MedChartRadialLabel {
 }
 export declare interface MedCheckCard extends Components.MedCheckCard {
 }
-@ProxyCmp({ inputs: ["alert", "categoria", "dsColor", "finalizada", "horaFinal", "horaInicial", "iconName", "titulo", "tooltipCollapsed", "tooltipContent", "tooltipHeading", "tooltipPlacement"] })
-@Component({ selector: "med-check-card", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alert", "categoria", "dsColor", "finalizada", "horaFinal", "horaInicial", "iconName", "titulo", "tooltipCollapsed", "tooltipContent", "tooltipHeading", "tooltipPlacement"] })
+@ProxyCmp({ inputs: ["alert", "categoria", "dataFinal", "dataInicial", "dsColor", "finalizada", "horaFinal", "horaInicial", "iconName", "titulo", "tooltipCollapsed", "tooltipContent", "tooltipHeading", "tooltipPlacement"] })
+@Component({ selector: "med-check-card", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alert", "categoria", "dataFinal", "dataInicial", "dsColor", "finalizada", "horaFinal", "horaInicial", "iconName", "titulo", "tooltipCollapsed", "tooltipContent", "tooltipHeading", "tooltipPlacement"] })
 export class MedCheckCard {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

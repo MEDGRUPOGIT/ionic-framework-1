@@ -7,7 +7,7 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ dsColor, alert, titulo, categoria, horaInicial, horaFinal, iconName, modalPlacement, tooltipCollapsed, tooltipHeading, tooltipContent }) => {
+const Template = ({ dsColor, alert, titulo, categoria, horaInicial, horaFinal, dataInicial, dataFinal,iconName, modalPlacement, tooltipCollapsed, tooltipHeading, tooltipContent }) => {
   return html`
     <ion-app>
       <ion-content>
@@ -21,6 +21,8 @@ const Template = ({ dsColor, alert, titulo, categoria, horaInicial, horaFinal, i
             categoria=${categoria}
             hora-inicial=${horaInicial}
             hora-final=${horaFinal}
+            data-inicial=${dataInicial}
+            data-final=${dataFinal}
             icon-name=${iconName}
             modal-placement=${modalPlacement}
             tooltip-collapsed=${tooltipCollapsed}
@@ -78,6 +80,14 @@ Default.argTypes = {
   horaFinal: {
     control: { type: 'text' },
     defaultValue: '23h00',
+  },
+  dataInicial: {
+    control: { type: 'text' },
+    defaultValue: '25/12',
+  },
+  dataFinal: {
+    control: { type: 'text' },
+    defaultValue: '25/12',
   },
   tooltipHeading: {
     control: { type: 'text' },

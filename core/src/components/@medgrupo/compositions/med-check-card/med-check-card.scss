@@ -31,12 +31,17 @@
   }
 
   &__subtitulo {
-    margin: 0 8px 0 10px;
+    margin: 0 8px;
     stroke: color('neutral', '8');
   }
 
   &__hora {
-    stroke: color('neutral', '8');
+    color: color('neutral', '8');
+  }
+
+  &__data {
+    margin-top: 4px;
+    color: color('neutral', '8');
   }
 
   &__tooltip {

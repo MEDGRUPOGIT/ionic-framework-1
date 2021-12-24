@@ -1047,6 +1047,8 @@ export const MedCheckCard = /*@__PURE__*/ defineContainer<JSX.MedCheckCard>('med
   'categoria',
   'horaInicial',
   'horaFinal',
+  'dataInicial',
+  'dataFinal',
   'finalizada',
   'iconName',
   'tooltipPlacement',

@@ -1567,6 +1567,8 @@ med-chart-radial-label,prop,valores,MedChartRadiaItem[],[],false,false
 med-check-card,shadow
 med-check-card,prop,alert,boolean,false,false,true
 med-check-card,prop,categoria,string | undefined,undefined,false,true
+med-check-card,prop,dataFinal,string | undefined,undefined,false,true
+med-check-card,prop,dataInicial,string | undefined,undefined,false,true
 med-check-card,prop,dsColor,string | undefined,undefined,false,true
 med-check-card,prop,finalizada,string | undefined,undefined,false,true
 med-check-card,prop,horaFinal,string | undefined,undefined,false,true
