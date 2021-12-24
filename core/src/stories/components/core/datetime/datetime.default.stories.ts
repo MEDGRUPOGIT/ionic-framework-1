@@ -28,14 +28,7 @@ const Template = () => {
                 <med-type tag="label" token="p14" slot="label">Data de Início</med-type>
                 <ion-datetime
                   mode="ios"
-                  [pickerOptions]="medDateTime"
                   placeholder="22/12/2021"
-                  displayFormat="DD/MM/YYYY"
-                  pickerFormat="DD MMMM YYYY"
-                  monthShortNames='jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez'
-                  monthNames='janeiro, fevereiro, março, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro'
-                  cancelText="Cancelar"
-                  doneText="Selecionar"
                   slot="input">
                 </ion-datetime>
               </med-input>
