@@ -128,7 +128,8 @@ export class MedCalendar {
   }
 
   private onChoiceClick() {
-    this.choice = this.choice === 'Semana' ? 'Semana' : 'Mês'
+    this.choice = this.choice === 'Semana' ? 'Mês' : 'Semana';
+    console.log(this.choice);
     this.medClick.emit(this.choice);
   }
 
