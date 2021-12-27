@@ -1,5 +1,5 @@
 import { Component, Host, h, Element, Prop, Event, EventEmitter, State } from '@stencil/core';
-import { Gesture, MedColor } from '../../../../interface';
+import { GestureConfig, Gesture, MedColor } from '../../../../interface';
 import { createGesture } from '../../../../utils/gesture';
 import { generateMedColor } from '../../../../utils/med-theme';
 
@@ -20,24 +20,24 @@ export class MedCalendar {
 
   @Prop({ reflect: true }) dsColor?: MedColor;
 
-  @Prop({ reflect: true }) calendario?: string;
+  @Prop({ reflect: true }) mes?: string;
+
+  @Prop({ reflect: true }) ano?: string;
 
   @State() choice = 'Semana';
 
   @Event() medClick!: EventEmitter;
 
-  @Event() medChoiceClick!: EventEmitter;
-
-  @Event() medMonthClick!: EventEmitter;
-
   @Event() medSwipe!: EventEmitter;
+
+  private gesture!: Gesture;
 
   private container!: HTMLElement;
 
   componentDidLoad() {
     let direction: string;
 
-    const swipeGesture: Gesture = createGesture({
+    const options: GestureConfig = {
       el: this.container,
       gestureName: 'swipe',
       onStart: () => {
@@ -50,13 +50,18 @@ export class MedCalendar {
         }
       },
       onEnd: () => {
-        console.log(direction);
-
         this.medSwipe.emit(direction);
       }
-    });
+    };
 
-    swipeGesture.enable();
+    this.gesture = createGesture(options);
+    this.gesture.enable();
+  }
+
+  disconnectedCallback() {
+    if (this.gesture) {
+      this.gesture.destroy();
+    }
   }
 
   private onChoiceClick() {
@@ -68,11 +73,15 @@ export class MedCalendar {
     this.medClick.emit(type);
   }
 
+  private onGraficoClick() {
+    this.medClick.emit('graph');
+  }
+
   render() {
-    const { dsColor, calendario } = this;
+    const { dsColor, mes, ano } = this;
 
     return (
-      <Host class={generateMedColor(dsColor, {'med-calendar': true })}>
+      <Host from-stencil class={generateMedColor(dsColor, {'med-calendar': true })}>
 
         <div class="header">
           <div class="header__left">
@@ -81,7 +90,7 @@ export class MedCalendar {
             </ion-button>
 
             <med-type class="header__type" token="p16b">
-              {calendario}
+              {mes} {ano}
             </med-type>
 
             <ion-button ds-name="tertiary" onClick={() => this.onMonthClick('next')}>
@@ -92,6 +101,10 @@ export class MedCalendar {
           <div class="header__right">
             <ion-button ds-name="tertiary" onClick={() => this.onChoiceClick()}>
               <med-type class="choice__type">{this.choice}</med-type>
+              <ion-icon class="med-icon header__icon" name="med-baixo"></ion-icon>
+            </ion-button>
+
+            <ion-button ds-name="tertiary" onClick={() => this.onGraficoClick()}>
               <ion-icon class="med-icon header__icon" name="med-grafico"></ion-icon>
             </ion-button>
           </div>

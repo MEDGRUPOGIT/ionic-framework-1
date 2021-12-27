@@ -7,20 +7,19 @@
 
 ## Properties
 
-| Property     | Attribute    | Description | Type                  | Default     |
-| ------------ | ------------ | ----------- | --------------------- | ----------- |
-| `calendario` | `calendario` |             | `string \| undefined` | `undefined` |
-| `dsColor`    | `ds-color`   |             | `string \| undefined` | `undefined` |
+| Property  | Attribute  | Description | Type                  | Default     |
+| --------- | ---------- | ----------- | --------------------- | ----------- |
+| `ano`     | `ano`      |             | `string \| undefined` | `undefined` |
+| `dsColor` | `ds-color` |             | `string \| undefined` | `undefined` |
+| `mes`     | `mes`      |             | `string \| undefined` | `undefined` |
 
 
 ## Events
 
-| Event            | Description | Type               |
-| ---------------- | ----------- | ------------------ |
-| `medChoiceClick` |             | `CustomEvent<any>` |
-| `medClick`       |             | `CustomEvent<any>` |
-| `medMonthClick`  |             | `CustomEvent<any>` |
-| `medSwipe`       |             | `CustomEvent<any>` |
+| Event      | Description | Type               |
+| ---------- | ----------- | ------------------ |
+| `medClick` |             | `CustomEvent<any>` |
+| `medSwipe` |             | `CustomEvent<any>` |
 
 
 ## Dependencies

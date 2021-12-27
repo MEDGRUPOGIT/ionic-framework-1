@@ -7,10 +7,10 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({dsColor, calendario}) => {
+const Template = ({dsColor, mes, ano}) => {
   return html`
     <ion-app>
-      <med-calendar .dsColor=${dsColor} calendario=${calendario}>
+      <med-calendar .dsColor=${dsColor} mes=${mes} ano=${ano}>
         <med-calendar-day .dsColor=${dsColor} active>1</med-calendar-day>
         <med-calendar-day .dsColor=${dsColor}>2</med-calendar-day>
         <med-calendar-day .dsColor=${dsColor}>3</med-calendar-day>
@@ -64,8 +64,12 @@ Default.argTypes = {
       defaultValue: { summary: 'undefined' },
     },
   },
-  calendario: {
+  mes: {
     control: { type: 'text' },
-    defaultValue: 'Dezembro 2021',
+    defaultValue: 'Dezembro',
+  },
+  ano: {
+    control: { type: 'text' },
+    defaultValue: '2021',
   },
 }

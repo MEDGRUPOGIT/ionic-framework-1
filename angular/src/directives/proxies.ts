@@ -1067,18 +1067,16 @@ export class MedBase {
 }
 export declare interface MedCalendar extends Components.MedCalendar {
 }
-@ProxyCmp({ inputs: ["calendario", "dsColor"] })
-@Component({ selector: "med-calendar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["calendario", "dsColor"] })
+@ProxyCmp({ inputs: ["ano", "dsColor", "mes"] })
+@Component({ selector: "med-calendar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["ano", "dsColor", "mes"] })
 export class MedCalendar {
   medClick!: EventEmitter<CustomEvent>;
-  medChoiceClick!: EventEmitter<CustomEvent>;
-  medMonthClick!: EventEmitter<CustomEvent>;
   medSwipe!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ["medClick", "medChoiceClick", "medMonthClick", "medSwipe"]);
+    proxyOutputs(this, this.el, ["medClick", "medSwipe"]);
   }
 }
 export declare interface MedCalendarDay extends Components.MedCalendarDay {

@@ -1515,11 +1515,10 @@ med-base,prop,spacingH,string | undefined,undefined,false,true
 med-base,prop,spacingV,string | undefined,undefined,false,true
 
 med-calendar,shadow
-med-calendar,prop,calendario,string | undefined,undefined,false,true
+med-calendar,prop,ano,string | undefined,undefined,false,true
 med-calendar,prop,dsColor,string | undefined,undefined,false,true
-med-calendar,event,medChoiceClick,any,true
+med-calendar,prop,mes,string | undefined,undefined,false,true
 med-calendar,event,medClick,any,true
-med-calendar,event,medMonthClick,any,true
 med-calendar,event,medSwipe,any,true
 
 med-calendar-day,shadow
