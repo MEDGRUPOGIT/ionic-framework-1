@@ -3,17 +3,16 @@
 
 :host {
   --background: #{color('neutral', '3')};
-  --placeholder-opacity: 1;
   --padding-top: 8px;
   --padding-end: 8px;
   --padding-bottom: 8px;
   --padding-start: 16px;
-  --placeholder-color: #{color('neutral', '9')};
-  --placeholder-opacity: 1;
+  --placeholder-color: #{color('neutral', '5')};
+  --placeholder-opacity: 0.5;
   --placeholder-font-size: 14px;
   --placeholder-font-weight: 400;
   --placeholder-line-height: 16px;
-
+  --color: #{color('neutral', '10')};
   --height: 40px;
   --border-radius: 8px;
 }
@@ -23,7 +22,7 @@
   border-radius: 8px;
 
   .select-text {
-    color: var(--placeholder-color);
+    color: var(--color);
   }
 
   .med-select-icon {
