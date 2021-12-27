@@ -1,5 +1,6 @@
 import { Component, Host, h, Element, Prop, Event, EventEmitter, State } from '@stencil/core';
-import { MedColor } from '../../../../interface';
+import { Gesture, MedColor } from '../../../../interface';
+import { createGesture } from '../../../../utils/gesture';
 import { generateMedColor } from '../../../../utils/med-theme';
 
 export interface MedCalendar {
@@ -17,28 +18,54 @@ export interface MedCalendar {
 export class MedCalendar {
   @Element() hostElement!: any;
 
-  /**
-    * Define a cor do componente.
-    */
   @Prop({ reflect: true }) dsColor?: MedColor;
 
   @Prop({ reflect: true }) calendario?: string;
 
   @State() choice = 'Semana';
 
+  @Event() medClick!: EventEmitter;
+
   @Event() medChoiceClick!: EventEmitter;
 
   @Event() medMonthClick!: EventEmitter;
 
+  @Event() medSwipe!: EventEmitter;
+
+  private container!: HTMLElement;
+
+  componentDidLoad() {
+    let direction: string;
+
+    const swipeGesture: Gesture = createGesture({
+      el: this.container,
+      gestureName: 'swipe',
+      onStart: () => {
+      },
+      onMove: (event) => {
+        if (event.deltaX > 0) {
+          direction = 'right';
+        } else {
+          direction = 'left';
+        }
+      },
+      onEnd: () => {
+        console.log(direction);
+
+        this.medSwipe.emit(direction);
+      }
+    });
+
+    swipeGesture.enable();
+  }
+
   private onChoiceClick() {
     this.choice = this.choice === 'Semana' ? 'Mês' : 'Semana';
-    console.log(this.choice);
-    this.medChoiceClick.emit(this.choice);
+    this.medClick.emit(this.choice);
   }
 
   private onMonthClick(type: string) {
-    console.log(type);
-    this.medMonthClick.emit(type);
+    this.medClick.emit(type);
   }
 
   render() {
@@ -65,9 +92,8 @@ export class MedCalendar {
           <div class="header__right">
             <ion-button ds-name="tertiary" onClick={() => this.onChoiceClick()}>
               <med-type class="choice__type">{this.choice}</med-type>
-              <ion-icon slot="end" class="med-icon header__button-icon" name="med-baixo"></ion-icon>
+              <ion-icon class="med-icon header__icon" name="med-grafico"></ion-icon>
             </ion-button>
-            <ion-icon class="med-icon header__icon" name="med-grafico"></ion-icon>
           </div>
         </div>
 
@@ -96,7 +122,7 @@ export class MedCalendar {
             </div>
 
           </div>
-          <div class="content__container">
+          <div class="content__container" ref={(el) => { this.container = el as any }}>
             <slot></slot>
           </div>
         </div>

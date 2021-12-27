@@ -976,15 +976,16 @@ export const MedBase = /*@__PURE__*/ defineContainer<JSX.MedBase>('med-base', [
 export const MedCalendar = /*@__PURE__*/ defineContainer<JSX.MedCalendar>('med-calendar', [
   'dsColor',
   'calendario',
+  'medClick',
   'medChoiceClick',
-  'medMonthClick'
+  'medMonthClick',
+  'medSwipe'
 ]);
 
 
 export const MedCalendarDay = /*@__PURE__*/ defineContainer<JSX.MedCalendarDay>('med-calendar-day', [
   'dsColor',
-  'active',
-  'medDayClick'
+  'active'
 ]);
 
 

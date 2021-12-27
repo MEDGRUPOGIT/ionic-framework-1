@@ -1518,12 +1518,13 @@ med-calendar,shadow
 med-calendar,prop,calendario,string | undefined,undefined,false,true
 med-calendar,prop,dsColor,string | undefined,undefined,false,true
 med-calendar,event,medChoiceClick,any,true
+med-calendar,event,medClick,any,true
 med-calendar,event,medMonthClick,any,true
+med-calendar,event,medSwipe,any,true
 
 med-calendar-day,shadow
 med-calendar-day,prop,active,boolean,false,false,true
 med-calendar-day,prop,dsColor,string | undefined,undefined,false,true
-med-calendar-day,event,medDayClick,any,true
 
 med-caption,shadow
 med-caption,prop,dsColor,string | undefined,undefined,false,true

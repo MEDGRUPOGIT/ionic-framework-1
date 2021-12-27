@@ -1070,13 +1070,15 @@ export declare interface MedCalendar extends Components.MedCalendar {
 @ProxyCmp({ inputs: ["calendario", "dsColor"] })
 @Component({ selector: "med-calendar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["calendario", "dsColor"] })
 export class MedCalendar {
+  medClick!: EventEmitter<CustomEvent>;
   medChoiceClick!: EventEmitter<CustomEvent>;
   medMonthClick!: EventEmitter<CustomEvent>;
+  medSwipe!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ["medChoiceClick", "medMonthClick"]);
+    proxyOutputs(this, this.el, ["medClick", "medChoiceClick", "medMonthClick", "medSwipe"]);
   }
 }
 export declare interface MedCalendarDay extends Components.MedCalendarDay {
@@ -1084,12 +1086,10 @@ export declare interface MedCalendarDay extends Components.MedCalendarDay {
 @ProxyCmp({ inputs: ["active", "dsColor"] })
 @Component({ selector: "med-calendar-day", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["active", "dsColor"] })
 export class MedCalendarDay {
-  medDayClick!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ["medDayClick"]);
   }
 }
 export declare interface MedCaption extends Components.MedCaption {

@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, Event, EventEmitter } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 import { MedColor } from '../../../../interface';
 import { generateMedColor } from '../../../../utils/med-theme';
 
@@ -9,18 +9,12 @@ import { generateMedColor } from '../../../../utils/med-theme';
 })
 export class MedCalendarDay {
 
-  @Event() medDayClick!: EventEmitter;
-
   /**
     * Define a cor do componente.
     */
   @Prop({ reflect: true }) dsColor?: MedColor;
 
   @Prop({ reflect: true }) active = false;
-
-  private onDayClick() {
-    this.medDayClick.emit();
-  }
 
   render() {
     const { dsColor, active } = this;
@@ -30,9 +24,7 @@ export class MedCalendarDay {
         class={generateMedColor(dsColor, {
           'med-calendar-day': true,
           'med-calendar-day--active': active
-        })}
-        onClick={() => this.onDayClick()}
-        >
+        })}>
         <div class="date">
           <div class="date__container">
             <med-type class="date__type"><slot></slot></med-type>
