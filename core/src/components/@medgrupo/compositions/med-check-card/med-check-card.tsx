@@ -58,9 +58,9 @@ export class MedCheckCard {
             <div class="med-check-card__info-container">
               <ion-icon class="med-check-card__icon med-icon med-icon--xxs" name={iconName}></ion-icon>
               <med-type class="med-check-card__subtitulo" token="p12xb">{categoria}</med-type>
-              <med-type class="med-check-card__hora" token="p12x">{horaInicial} – {horaFinal}</med-type>
+              {!dataInicial && !dataFinal && <med-type class="med-check-card__hora" token="p12x">{horaInicial} – {horaFinal}</med-type>}
             </div>
-            {dataInicial || dataFinal && <med-type class="med-check-card__data" token="p12x">{dataInicial} - {horaInicial} até {dataFinal} - {horaFinal}</med-type>}
+            {dataInicial && dataFinal && <med-type class="med-check-card__data" token="p12x">{dataInicial} - {horaInicial} até {dataFinal} - {horaFinal}</med-type>}
           </div>
 
           <med-tooltip class="med-check-card__tooltip" ds-color="fb-warning" placement={tooltipPlacement} position="end" collapsed={tooltipCollapsed}>
