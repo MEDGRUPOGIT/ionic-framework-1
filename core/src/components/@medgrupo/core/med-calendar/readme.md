@@ -7,16 +7,18 @@
 
 ## Properties
 
-| Property  | Attribute  | Description                 | Type                  | Default     |
-| --------- | ---------- | --------------------------- | --------------------- | ----------- |
-| `dsColor` | `ds-color` | Define a cor do componente. | `string \| undefined` | `undefined` |
+| Property     | Attribute    | Description                 | Type                  | Default     |
+| ------------ | ------------ | --------------------------- | --------------------- | ----------- |
+| `calendario` | `calendario` |                             | `string \| undefined` | `undefined` |
+| `dsColor`    | `ds-color`   | Define a cor do componente. | `string \| undefined` | `undefined` |
 
 
 ## Events
 
-| Event      | Description | Type               |
-| ---------- | ----------- | ------------------ |
-| `medClick` |             | `CustomEvent<any>` |
+| Event            | Description | Type               |
+| ---------------- | ----------- | ------------------ |
+| `medChoiceClick` |             | `CustomEvent<any>` |
+| `medMonthClick`  |             | `CustomEvent<any>` |
 
 
 ## Dependencies

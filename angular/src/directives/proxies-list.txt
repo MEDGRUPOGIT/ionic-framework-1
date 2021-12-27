@@ -89,6 +89,7 @@ export const DIRECTIVES = [
   d.MedBanner,
   d.MedBase,
   d.MedCalendar,
+  d.MedCalendarDay,
   d.MedCaption,
   d.MedCartaoRespostaItem,
   d.MedCartaoRespostaLista,
