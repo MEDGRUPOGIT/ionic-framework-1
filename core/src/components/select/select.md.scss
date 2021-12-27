@@ -20,42 +20,4 @@
   @include transform(translate3d(0, -9px, 0));
 }
 
-@import "../../../templarios/abstracts";
-
-:host {
-  --background: #{color('neutral', '3')};
-  --placeholder-color: #{color('neutral', '3')};
-  --placeholder-opacity: 1;
-  --padding-top: 8px;
-  --padding-end: 8px;
-  --padding-bottom: 8px;
-  --padding-start: 16px;
-
-  --placeholder-color: #{color('neutral', '5')};
-  --placeholder-opacity: 1;
-  --placeholder-font-size: 14px;
-  --placeholder-font-weight: 400;
-  --placeholder-line-height: 16px;
-
-  --height: 40px;
-  --border-radius: 8px;
-}
-
-:host(.med-select) {
-  background: var(--background);
-  border-radius: 8px;
-
-  .select-text {
-    color: var(--placeholder-color);
-  }
-
-  .med-select-icon {
-    stroke: #{color('neutral', '5')};
-  }
-
-  .select-placeholder {
-    font-size: var(--placeholder-font-size);
-    font-weight: var(--placeholder-font-weight);
-    line-height: var(--placeholder-line-height);
-  }
-}
+@import "./select.med.scss"
