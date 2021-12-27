@@ -60,7 +60,7 @@ export class MedCheckCard {
               <med-type class="med-check-card__subtitulo" token="p12xb">{categoria}</med-type>
               <med-type class="med-check-card__hora" token="p12x">{horaInicial} – {horaFinal}</med-type>
             </div>
-            <med-type class="med-check-card__data" token="p12x">{dataInicial} - {horaInicial} até {dataFinal} - {horaFinal}</med-type>
+            {dataInicial || dataFinal && <med-type class="med-check-card__data" token="p12x">{dataInicial} - {horaInicial} até {dataFinal} - {horaFinal}</med-type>}
           </div>
 
           <med-tooltip class="med-check-card__tooltip" ds-color="fb-warning" placement={tooltipPlacement} position="end" collapsed={tooltipCollapsed}>
