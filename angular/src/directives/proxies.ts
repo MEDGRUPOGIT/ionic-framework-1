@@ -1081,8 +1081,8 @@ export class MedCalendar {
 }
 export declare interface MedCalendarDay extends Components.MedCalendarDay {
 }
-@ProxyCmp({ inputs: ["active", "dsColor"] })
-@Component({ selector: "med-calendar-day", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["active", "dsColor"] })
+@ProxyCmp({ inputs: ["active", "dsColor", "fill"] })
+@Component({ selector: "med-calendar-day", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["active", "dsColor", "fill"] })
 export class MedCalendarDay {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

@@ -984,7 +984,8 @@ export const MedCalendar = /*@__PURE__*/ defineContainer<JSX.MedCalendar>('med-c
 
 export const MedCalendarDay = /*@__PURE__*/ defineContainer<JSX.MedCalendarDay>('med-calendar-day', [
   'dsColor',
-  'active'
+  'active',
+  'fill'
 ]);
 
 
