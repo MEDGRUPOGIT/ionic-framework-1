@@ -3,12 +3,7 @@ import { GestureConfig, Gesture, MedColor } from '../../../../interface';
 import { createGesture } from '../../../../utils/gesture';
 import { generateMedColor } from '../../../../utils/med-theme';
 
-export interface MedCalendar {
-  date: number
-  month: number
-  year: number
-  monthName: string
-}
+declare var ResizeObserver: any;
 
 @Component({
   tag: 'med-calendar',
@@ -26,6 +21,8 @@ export class MedCalendar {
 
   @State() choice = 'Semana';
 
+  @State() width = 166;
+
   @Event() medClick!: EventEmitter;
 
   @Event() medSwipe!: EventEmitter;
@@ -33,6 +30,25 @@ export class MedCalendar {
   private gesture!: Gesture;
 
   private container!: HTMLElement;
+
+  connectedCallback() {
+    const resizeObserver = new ResizeObserver(() => {
+      this.init();
+    });
+
+    resizeObserver.observe(document.body);
+  }
+
+  init() {
+    const windowWidth = window.innerWidth;
+
+    if(windowWidth < 1200) {
+      console.log(windowWidth);
+      console.log(windowWidth / 7);
+      this.width = windowWidth / 7;
+    }
+
+  }
 
   componentDidLoad() {
     let direction: string;
@@ -81,8 +97,9 @@ export class MedCalendar {
     const { dsColor, mes, ano } = this;
 
     return (
-      <Host from-stencil class={generateMedColor(dsColor, {'med-calendar': true })}>
-
+      <Host from-stencil
+        class={generateMedColor(dsColor, {'med-calendar': true })}
+        style={{ '--width': `${this.width}` }}>
         <div class="header">
           <div class="header__left">
             <ion-button ds-name="tertiary" onClick={() => this.onMonthClick('prev')}>

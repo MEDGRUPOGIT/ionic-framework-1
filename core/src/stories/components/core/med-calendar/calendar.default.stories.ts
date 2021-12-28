@@ -9,6 +9,12 @@ export default {
 
 const Template = ({dsColor, mes, ano}) => {
   return html`
+    <style>
+      med-calendar {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    </style>
     <ion-app>
       <med-calendar .dsColor=${dsColor} mes=${mes} ano=${ano}>
         <med-calendar-day .dsColor=${dsColor} active>1</med-calendar-day>

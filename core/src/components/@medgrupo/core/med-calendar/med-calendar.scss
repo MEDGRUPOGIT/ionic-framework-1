@@ -2,6 +2,7 @@
 
 :host {
   --background: #{color('neutral', '1')};
+  --width: 166;
 }
 
 :host {
@@ -62,7 +63,7 @@
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(7, minmax(calc(var(--width) * 1px), 1fr));
     height: 100%;
   }
 }
