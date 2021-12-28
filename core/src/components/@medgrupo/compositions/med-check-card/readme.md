@@ -25,6 +25,13 @@
 | `tooltipPlacement` | `tooltip-placement` |                             | `"bottom" \| "left" \| "right" \| "top" \| undefined` | `'top'`     |
 
 
+## Events
+
+| Event      | Description | Type               |
+| ---------- | ----------- | ------------------ |
+| `medClick` |             | `CustomEvent<any>` |
+
+
 ## Dependencies
 
 ### Depends on

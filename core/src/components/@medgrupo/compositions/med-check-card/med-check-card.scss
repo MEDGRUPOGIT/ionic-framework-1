@@ -1,18 +1,22 @@
 @import "../../../../../templarios/abstracts";
 
-:host {
-
-}
-
-:host(.med-check-card) {
-
-}
-
 .med-check-card {
-  &__container {
+  &__base{
+    --padding: 0;
     display: flex;
     align-items: center;
     border: 1px solid transparent;
+  }
+
+  &__container {
+    padding: 16px 0 16px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__input-container {
+    padding: 16px 0 16px 12px;
   }
 
   &__text-container {
@@ -42,6 +46,10 @@
   &__data {
     margin-top: 4px;
     color: color('neutral', '8');
+  }
+
+  &__tooltip-container {
+    padding: 16px 12px 16px 0;
   }
 
   &__tooltip {
@@ -74,7 +82,7 @@
 
 :host(.med-check-card--alert) {
   .med-check-card {
-    &__container {
+    &__base {
       border: 1px solid color('feedback', 'warning');
     }
 
