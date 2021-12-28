@@ -52,6 +52,7 @@
     align-items: center;
     justify-content: center;
     height: 24px;
+    width: calc(var(--width) * 1px);
   }
 
   &__week-type {
