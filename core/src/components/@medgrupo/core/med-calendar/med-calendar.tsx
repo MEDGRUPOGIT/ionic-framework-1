@@ -43,11 +43,8 @@ export class MedCalendar {
     const windowWidth = window.innerWidth;
 
     if(windowWidth < 1200) {
-      console.log(windowWidth);
-      console.log(windowWidth / 7);
       this.width = windowWidth / 7;
     }
-
   }
 
   componentDidLoad() {
