@@ -7,10 +7,11 @@
 
 ## Properties
 
-| Property  | Attribute  | Description                 | Type                  | Default     |
-| --------- | ---------- | --------------------------- | --------------------- | ----------- |
-| `active`  | `active`   |                             | `boolean`             | `false`     |
-| `dsColor` | `ds-color` | Define a cor do componente. | `string \| undefined` | `undefined` |
+| Property  | Attribute  | Description                 | Type                     | Default     |
+| --------- | ---------- | --------------------------- | ------------------------ | ----------- |
+| `active`  | `active`   |                             | `boolean`                | `false`     |
+| `dsColor` | `ds-color` | Define a cor do componente. | `string \| undefined`    | `undefined` |
+| `fill`    | `fill`     |                             | `"outline" \| undefined` | `undefined` |
 
 
 ## Dependencies

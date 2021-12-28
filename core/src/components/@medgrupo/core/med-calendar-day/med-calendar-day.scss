@@ -1,5 +1,9 @@
 @import "../../../../../templarios/abstracts";
 
+:host {
+  --border-color: #{color('feedback', 'warning')};
+}
+
 .date {
   display: flex;
   align-items: center;
@@ -28,6 +32,16 @@
 :host(.med-calendar-day--active) {
   --background: #{color('brand', '3')};
 }
+
+
+// ////////////////////
+// state
+// ////////////////////
+
+:host(.med-calendar-day--outline) .date__container {
+  border: 1px solid var(--border-color);
+}
+
 
 // ////////////////////
 // color

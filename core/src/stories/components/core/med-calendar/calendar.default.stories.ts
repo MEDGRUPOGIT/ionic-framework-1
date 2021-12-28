@@ -7,7 +7,7 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({dsColor, mes, ano}) => {
+const Template = ({dsColor, mes, ano, fill}) => {
   return html`
     <style>
       med-calendar {
@@ -18,7 +18,7 @@ const Template = ({dsColor, mes, ano}) => {
     <ion-app>
       <med-calendar .dsColor=${dsColor} mes=${mes} ano=${ano}>
         <med-calendar-day .dsColor=${dsColor} active>1</med-calendar-day>
-        <med-calendar-day .dsColor=${dsColor}>2</med-calendar-day>
+        <med-calendar-day .fill=${fill} .dsColor=${dsColor}>2</med-calendar-day>
         <med-calendar-day .dsColor=${dsColor}>3</med-calendar-day>
         <med-calendar-day .dsColor=${dsColor}>4</med-calendar-day>
         <med-calendar-day .dsColor=${dsColor}>5</med-calendar-day>
@@ -77,5 +77,15 @@ Default.argTypes = {
   ano: {
     control: { type: 'text' },
     defaultValue: '2021',
+  },
+  fill: {
+    defaultValue: 'none',
+    options: [undefined, 'outline'],
+    control: { type: 'radio'},
+    description: "Define a variação de estilo do componente.",
+    table: {
+      type:  { summary: ['outline'] },
+      defaultValue: { summary: 'undefined' },
+    },
   },
 }

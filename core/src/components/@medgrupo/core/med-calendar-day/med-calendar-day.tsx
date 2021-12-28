@@ -16,14 +16,17 @@ export class MedCalendarDay {
 
   @Prop({ reflect: true }) active = false;
 
+  @Prop({ reflect: true }) fill?: 'outline';
+
   render() {
-    const { dsColor, active } = this;
+    const { dsColor, active, fill } = this;
 
     return (
       <Host
         class={generateMedColor(dsColor, {
           'med-calendar-day': true,
-          'med-calendar-day--active': active
+          'med-calendar-day--active': active,
+          [`med-calendar-day--${fill}`]: fill !== undefined
         })}>
         <div class="date">
           <div class="date__container">
