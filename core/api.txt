@@ -1589,6 +1589,7 @@ med-check-card,prop,tooltipContent,string | undefined,undefined,false,true
 med-check-card,prop,tooltipHeading,string | undefined,undefined,false,true
 med-check-card,prop,tooltipPlacement,"bottom" | "left" | "right" | "top" | undefined,'top',false,true
 med-check-card,event,medClick,any,true
+med-check-card,event,medTooltipClose,any,true
 
 med-child,shadow
 med-child,prop,dsColor,string | undefined,undefined,false,false

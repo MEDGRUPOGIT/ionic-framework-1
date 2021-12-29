@@ -1194,11 +1194,12 @@ export declare interface MedCheckCard extends Components.MedCheckCard {
 @Component({ selector: "med-check-card", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alert", "categoria", "dataFinal", "dataInicial", "dsColor", "finalizada", "horaFinal", "horaInicial", "iconName", "titulo", "tooltipCollapsed", "tooltipContent", "tooltipHeading", "tooltipPlacement"] })
 export class MedCheckCard {
   medClick!: EventEmitter<CustomEvent>;
+  medTooltipClose!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ["medClick"]);
+    proxyOutputs(this, this.el, ["medClick", "medTooltipClose"]);
   }
 }
 export declare interface MedChild extends Components.MedChild {

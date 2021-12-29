@@ -42,8 +42,15 @@ export class MedCheckCard {
 
   @Event() medClick!: EventEmitter;
 
+  @Event() medTooltipClose!: EventEmitter;
+
+
   onClick() {
     this.medClick.emit();
+  }
+
+  onTooltipCloseClick() {
+    this.medTooltipClose.emit();
   }
 
   render() {
@@ -66,7 +73,7 @@ export class MedCheckCard {
               <med-type token="p16xb">{titulo}</med-type>
 
               <div class="med-check-card__info-container">
-                <ion-icon class="med-check-card__icon med-icon med-icon--xxs" name={iconName}></ion-icon>
+                <ion-icon class="med-check-card__icon med-icon med-icon--xs" name={iconName}></ion-icon>
                 <med-type class="med-check-card__subtitulo" token="p12xb">{categoria}</med-type>
                 {!dataInicial && !dataFinal && <med-type class="med-check-card__hora" token="p12x">{horaInicial} – {horaFinal}</med-type>}
               </div>
@@ -75,7 +82,7 @@ export class MedCheckCard {
           </div>
 
           <div class={alert ? 'med-check-card__tooltip-container' : ''}>
-            <med-tooltip class="med-check-card__tooltip" ds-color="fb-warning" placement={tooltipPlacement} position="end" collapsed={tooltipCollapsed}>
+            <med-tooltip class="med-check-card__tooltip" ds-color="fb-warning" placement={tooltipPlacement} position="end" collapsed={tooltipCollapsed} onClick={() => this.onTooltipCloseClick()}>
               <ion-icon class="med-check-card__alert-icon med-icon med-icon--sm" name="med-marcar" slot="input"></ion-icon>
               <div slot="content">
                 <div class="med-check-card__tooltip-header">

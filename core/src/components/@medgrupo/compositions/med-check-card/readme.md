@@ -27,9 +27,10 @@
 
 ## Events
 
-| Event      | Description | Type               |
-| ---------- | ----------- | ------------------ |
-| `medClick` |             | `CustomEvent<any>` |
+| Event             | Description | Type               |
+| ----------------- | ----------- | ------------------ |
+| `medClick`        |             | `CustomEvent<any>` |
+| `medTooltipClose` |             | `CustomEvent<any>` |
 
 
 ## Dependencies
