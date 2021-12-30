@@ -1,0 +1,94 @@
+@import "../../../../../templarios/abstracts";
+
+.med-check-card {
+  &__base{
+    --padding: 0;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+  }
+
+  &__container {
+    padding: 16px 0 16px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex: 1;
+  }
+
+  &__input-container {
+    padding: 16px 0 16px 12px;
+  }
+
+  &__text-container {
+    padding: 0 18px;
+    flex: 1;
+  }
+
+  &__info-container {
+    display: flex;
+    align-items: center;
+    padding-top: 4px;
+  }
+
+  &__icon {
+    stroke: color('neutral', '8');
+  }
+
+  &__subtitulo {
+    margin: 0 8px;
+    stroke: color('neutral', '8');
+  }
+
+  &__hora {
+    color: color('neutral', '8');
+  }
+
+  &__data {
+    margin-top: 4px;
+    color: color('neutral', '8');
+  }
+
+  &__tooltip-container {
+    padding: 16px 12px 16px 0;
+  }
+
+  &__tooltip {
+    display: none;
+    --background: hsl(var(--med-color-fb-warning));
+    --z-index: 4;
+  }
+
+  &__tooltip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+
+  &__tooltip-icon {
+    stroke: color('neutral', '1');
+    cursor: pointer;
+  }
+
+  &__alert-icon {
+    stroke: color('feedback', 'warning');
+    cursor: pointer;
+  }
+}
+
+//////////////////////////////
+// state
+//////////////////////////////
+
+:host(.med-check-card--alert) {
+  .med-check-card {
+    &__base {
+      border: 1px solid color('feedback', 'warning');
+    }
+
+    &__tooltip {
+      display: block;
+    }
+  }
+}

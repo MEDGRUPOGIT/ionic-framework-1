@@ -342,6 +342,7 @@ ion-datetime,prop,displayFormat,string,'MMM D, YYYY',false,false
 ion-datetime,prop,displayTimezone,string | undefined,undefined,false,false
 ion-datetime,prop,doneText,string,'Done',false,false
 ion-datetime,prop,hourValues,number | number[] | string | undefined,undefined,false,false
+ion-datetime,prop,iconName,string,"med-baixo",false,false
 ion-datetime,prop,max,string | undefined,undefined,false,false
 ion-datetime,prop,min,string | undefined,undefined,false,false
 ion-datetime,prop,minuteValues,number | number[] | string | undefined,undefined,false,false
@@ -1423,6 +1424,11 @@ med-accordion-list,css-prop,--background
 med-accordion-list,css-prop,--border
 med-accordion-list,css-prop,--border-radius
 
+med-add-card,shadow
+med-add-card,prop,dsColor,string | undefined,undefined,false,true
+med-add-card,prop,iconName,string | undefined,undefined,false,true
+med-add-card,prop,titulo,string | undefined,undefined,false,true
+
 med-agrupador,shadow
 med-agrupador,prop,collapsed,boolean,false,false,true
 med-agrupador,prop,dsColor,string | undefined,undefined,false,true
@@ -1502,11 +1508,23 @@ med-banner,prop,header,string,undefined,true,false
 med-banner,event,btnLeftClick,void,true
 med-banner,event,btnRightClick,void,true
 
-med-base,shadow
+med-base,scoped
 med-base,prop,dsColor,string | undefined,undefined,false,true
 med-base,prop,radius,string | undefined,undefined,false,true
 med-base,prop,spacingH,string | undefined,undefined,false,true
 med-base,prop,spacingV,string | undefined,undefined,false,true
+
+med-calendar,shadow
+med-calendar,prop,ano,string | undefined,undefined,false,true
+med-calendar,prop,dsColor,string | undefined,undefined,false,true
+med-calendar,prop,mes,string | undefined,undefined,false,true
+med-calendar,event,medClick,any,true
+med-calendar,event,medSwipe,any,true
+
+med-calendar-day,shadow
+med-calendar-day,prop,active,boolean,false,false,true
+med-calendar-day,prop,dsColor,string | undefined,undefined,false,true
+med-calendar-day,prop,fill,"outline" | undefined,undefined,false,true
 
 med-caption,shadow
 med-caption,prop,dsColor,string | undefined,undefined,false,true
@@ -1526,6 +1544,19 @@ med-chart-bar,prop,height,number,50,false,true
 med-chart-bar,prop,value,number,0,false,true
 med-chart-bar,prop,width,number,24,false,true
 
+med-chart-bar-horizontal,shadow
+med-chart-bar-horizontal,prop,dsColor,string | undefined,undefined,false,true
+med-chart-bar-horizontal,prop,value,number,0,false,true
+med-chart-bar-horizontal,part,progress
+med-chart-bar-horizontal,part,track
+
+med-chart-categoria,scoped
+med-chart-categoria,prop,dsColor,string | undefined,undefined,false,true
+med-chart-categoria,prop,meta,string | undefined,undefined,false,true
+med-chart-categoria,prop,realizado,string | undefined,undefined,false,true
+med-chart-categoria,prop,titulo,string | undefined,undefined,false,true
+med-chart-categoria,prop,value,number,0,false,true
+
 med-chart-radial,scoped
 med-chart-radial,prop,dsColor,string | undefined,undefined,false,true
 med-chart-radial,prop,dsName,string | undefined,undefined,false,false
@@ -1541,6 +1572,24 @@ med-chart-radial-label,scoped
 med-chart-radial-label,prop,dsColor,string | undefined,undefined,false,true
 med-chart-radial-label,prop,dsSize,"lg" | undefined,undefined,false,false
 med-chart-radial-label,prop,valores,MedChartRadiaItem[],[],false,false
+
+med-check-card,shadow
+med-check-card,prop,alert,boolean,false,false,true
+med-check-card,prop,categoria,string | undefined,undefined,false,true
+med-check-card,prop,dataFinal,string | undefined,undefined,false,true
+med-check-card,prop,dataInicial,string | undefined,undefined,false,true
+med-check-card,prop,dsColor,string | undefined,undefined,false,true
+med-check-card,prop,finalizada,string | undefined,undefined,false,true
+med-check-card,prop,horaFinal,string | undefined,undefined,false,true
+med-check-card,prop,horaInicial,string | undefined,undefined,false,true
+med-check-card,prop,iconName,string | undefined,undefined,false,true
+med-check-card,prop,titulo,string | undefined,undefined,false,true
+med-check-card,prop,tooltipCollapsed,boolean,true,false,true
+med-check-card,prop,tooltipContent,string | undefined,undefined,false,true
+med-check-card,prop,tooltipHeading,string | undefined,undefined,false,true
+med-check-card,prop,tooltipPlacement,"bottom" | "left" | "right" | "top" | undefined,'top',false,true
+med-check-card,event,medClick,any,true
+med-check-card,event,medTooltipClose,any,true
 
 med-child,shadow
 med-child,prop,dsColor,string | undefined,undefined,false,false
@@ -1597,6 +1646,8 @@ med-image-zoom,prop,imagens,any,[],false,true
 med-image-zoom,prop,marcaAguaInferior,string | undefined,undefined,false,true
 med-image-zoom,prop,marcaAguaSuperior,string | undefined,undefined,false,true
 med-image-zoom,prop,titulo,string | undefined,undefined,false,true
+
+med-input,shadow
 
 med-item-aulas,shadow
 med-item-aulas,prop,dsColor,string | undefined,undefined,false,true
@@ -1773,6 +1824,7 @@ med-tooltip,css-prop,--z-index
 
 med-type,shadow
 med-type,prop,dsColor,string | undefined,undefined,false,true
+med-type,prop,tag,"h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "label" | "p" | "span" | undefined,'span',false,true
 med-type,prop,token,string | undefined,undefined,false,true
 
 med-video-list-item,scoped

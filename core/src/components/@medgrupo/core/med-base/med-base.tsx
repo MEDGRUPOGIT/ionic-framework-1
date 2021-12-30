@@ -10,7 +10,7 @@ import { generateMedColor } from '../../../../utils/med-theme';
 @Component({
   tag: 'med-base',
   styleUrl: 'med-base.scss',
-  shadow: true,
+  scoped: true,
 })
 export class MedBase {
 
@@ -47,6 +47,7 @@ export class MedBase {
         <slot name="start"></slot>
         <slot name="middle"></slot>
         <slot name="end"></slot>
+        <slot></slot>
       </Host>
     );
   }

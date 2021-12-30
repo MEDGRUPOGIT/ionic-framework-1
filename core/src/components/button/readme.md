@@ -373,6 +373,7 @@ export default defineComponent({
  - [filtro-dashboard](../@medgrupo/team/dashboard/filtro-dashboard)
  - [filtro-modal](../@medgrupo/team/dashboard/filtro-modal)
  - [ion-searchbar](../searchbar)
+ - [med-calendar](../@medgrupo/core/med-calendar)
  - [med-config](../@medgrupo/global/med-config)
  - [med-context-menu](../@medgrupo/global/med-context-menu)
  - [med-image-zoom](../@medgrupo/global/med-image-zoom)
@@ -392,6 +393,7 @@ graph TD;
   filtro-dashboard --> ion-button
   filtro-modal --> ion-button
   ion-searchbar --> ion-button
+  med-calendar --> ion-button
   med-config --> ion-button
   med-context-menu --> ion-button
   med-image-zoom --> ion-button

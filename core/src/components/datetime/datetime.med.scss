@@ -1,0 +1,31 @@
+@import "../../../templarios/abstracts";
+
+:host {
+  --icon-color: #{color('neutral', '10')};
+  background: #{color('neutral', '3')};
+  border-radius: 8px;
+}
+
+:host {
+  --placeholder-color: #{color('neutral', '5')};
+  color: #{color('neutral', '10')};
+
+  .datetime-text {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+  }
+
+  .datetime-icon {
+    stroke: var(--icon-color);
+  }
+}
+
+
+
+
+
+
+
+

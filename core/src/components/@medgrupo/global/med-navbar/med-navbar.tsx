@@ -24,7 +24,7 @@ export class MedNavbar {
 
   /**
    * Define a variação do componente.
-   */
+    */
   @Prop() dsName?: 'secondary' | 'transparent';
 
   private leftEl!: HTMLDivElement;

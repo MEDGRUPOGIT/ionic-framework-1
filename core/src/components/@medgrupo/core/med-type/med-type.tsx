@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop } from '@stencil/core';
+import { Component, Host, h, Prop, ComponentInterface } from '@stencil/core';
 import { MedColor, MedTypeToken } from '../../../../interface';
 import { generateMedColor } from '../../../../utils/med-theme';
 
@@ -7,7 +7,7 @@ import { generateMedColor } from '../../../../utils/med-theme';
   styleUrl: 'med-type.scss',
   shadow: true,
 })
-export class MedType {
+export class MedType implements ComponentInterface {
 
   /**
     * Define a cor do componente.
@@ -19,15 +19,24 @@ export class MedType {
     */
   @Prop({ reflect: true }) token?: MedTypeToken;
 
+  /**
+    * Define a tag HTML do componente.
+    */
+  @Prop({ reflect: true }) tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'label' = 'span';
+
   render() {
-    const { dsColor, token } = this;
+    const { dsColor, token, tag } = this;
+
+    const TagType = tag === undefined ? 'span' : tag;
 
     return (
       <Host class={generateMedColor(dsColor, {
         'med-type': true,
         [`med-type--${token}`]: token !== undefined,
       })}>
-        <slot></slot>
+        <TagType>
+          <slot></slot>
+        </TagType>
       </Host>
     );
   }

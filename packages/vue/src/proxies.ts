@@ -187,6 +187,7 @@ export const IonDatetime = /*@__PURE__*/ defineContainer<JSX.IonDatetime>('ion-d
   'name',
   'disabled',
   'readonly',
+  'iconName',
   'min',
   'max',
   'displayFormat',
@@ -868,6 +869,13 @@ export const MedAccordionList = /*@__PURE__*/ defineContainer<JSX.MedAccordionLi
 ]);
 
 
+export const MedAddCard = /*@__PURE__*/ defineContainer<JSX.MedAddCard>('med-add-card', [
+  'dsColor',
+  'titulo',
+  'iconName'
+]);
+
+
 export const MedAgrupador = /*@__PURE__*/ defineContainer<JSX.MedAgrupador>('med-agrupador', [
   'dsColor',
   'texto1',
@@ -965,6 +973,22 @@ export const MedBase = /*@__PURE__*/ defineContainer<JSX.MedBase>('med-base', [
 ]);
 
 
+export const MedCalendar = /*@__PURE__*/ defineContainer<JSX.MedCalendar>('med-calendar', [
+  'dsColor',
+  'mes',
+  'ano',
+  'medClick',
+  'medSwipe'
+]);
+
+
+export const MedCalendarDay = /*@__PURE__*/ defineContainer<JSX.MedCalendarDay>('med-calendar-day', [
+  'dsColor',
+  'active',
+  'fill'
+]);
+
+
 export const MedCaption = /*@__PURE__*/ defineContainer<JSX.MedCaption>('med-caption', [
   'dsColor',
   'dsSize'
@@ -990,6 +1014,21 @@ export const MedChartBar = /*@__PURE__*/ defineContainer<JSX.MedChartBar>('med-c
 ]);
 
 
+export const MedChartBarHorizontal = /*@__PURE__*/ defineContainer<JSX.MedChartBarHorizontal>('med-chart-bar-horizontal', [
+  'dsColor',
+  'value'
+]);
+
+
+export const MedChartCategoria = /*@__PURE__*/ defineContainer<JSX.MedChartCategoria>('med-chart-categoria', [
+  'dsColor',
+  'value',
+  'titulo',
+  'meta',
+  'realizado'
+]);
+
+
 export const MedChartRadial = /*@__PURE__*/ defineContainer<JSX.MedChartRadial>('med-chart-radial', [
   'dsColor',
   'dsName',
@@ -1009,6 +1048,26 @@ export const MedChartRadialLabel = /*@__PURE__*/ defineContainer<JSX.MedChartRad
   'valores',
   'dsColor',
   'dsSize'
+]);
+
+
+export const MedCheckCard = /*@__PURE__*/ defineContainer<JSX.MedCheckCard>('med-check-card', [
+  'dsColor',
+  'alert',
+  'titulo',
+  'categoria',
+  'horaInicial',
+  'horaFinal',
+  'dataInicial',
+  'dataFinal',
+  'finalizada',
+  'iconName',
+  'tooltipPlacement',
+  'tooltipCollapsed',
+  'tooltipHeading',
+  'tooltipContent',
+  'medClick',
+  'medTooltipClose'
 ]);
 
 
@@ -1083,6 +1142,9 @@ export const MedImageZoom = /*@__PURE__*/ defineContainer<JSX.MedImageZoom>('med
   'marcaAguaInferior',
   'titulo'
 ]);
+
+
+export const MedInput = /*@__PURE__*/ defineContainer<JSX.MedInput>('med-input');
 
 
 export const MedItemAulas = /*@__PURE__*/ defineContainer<JSX.MedItemAulas>('med-item-aulas', [
@@ -1287,7 +1349,8 @@ export const MedTooltip = /*@__PURE__*/ defineContainer<JSX.MedTooltip>('med-too
 
 export const MedType = /*@__PURE__*/ defineContainer<JSX.MedType>('med-type', [
   'dsColor',
-  'token'
+  'token',
+  'tag'
 ]);
 
 
