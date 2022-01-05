@@ -45,7 +45,6 @@ export const parameters = {
       if(snipet) {
         document.querySelector('iframe').contentWindow.document.querySelector('.snipet__value--class').textContent = `${themeName.class.join(' ')}`;
       }
-
     },
     list: [
       {
