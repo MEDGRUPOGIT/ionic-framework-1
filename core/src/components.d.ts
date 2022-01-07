@@ -727,6 +727,7 @@ export namespace Components {
           * The name of the control, which is submitted with the form data.
          */
         "name": string;
+        "noStyle": boolean;
         /**
           * Opens the datetime overlay.
          */
@@ -3143,13 +3144,25 @@ export namespace Components {
          */
         "btnLeft": string;
         /**
-          * Define o texto do botão direito.
+          * Define o texto do botão direito, se existir.
          */
         "btnRight": string;
         /**
-          * Define o título do banner.
+          * Define a cor do componente.
          */
-        "header": string;
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação de tamanho do componente.
+         */
+        "dsSize"?: 'sm' | 'md';
+        /**
+          * Define o texto do componente.
+         */
+        "texto"?: string;
+        /**
+          * Define o título do componente.
+         */
+        "titulo"?: string;
     }
     interface MedBase {
         /**
@@ -3760,6 +3773,8 @@ export namespace Components {
     }
     interface MedSemanas {
         "skin"?: 'lista';
+    }
+    interface MedSheet {
     }
     interface MedSubtitle {
         /**
@@ -4827,6 +4842,12 @@ declare global {
         prototype: HTMLMedSemanasElement;
         new (): HTMLMedSemanasElement;
     };
+    interface HTMLMedSheetElement extends Components.MedSheet, HTMLStencilElement {
+    }
+    var HTMLMedSheetElement: {
+        prototype: HTMLMedSheetElement;
+        new (): HTMLMedSheetElement;
+    };
     interface HTMLMedSubtitleElement extends Components.MedSubtitle, HTMLStencilElement {
     }
     var HTMLMedSubtitleElement: {
@@ -5053,6 +5074,7 @@ declare global {
         "med-rating": HTMLMedRatingElement;
         "med-semana": HTMLMedSemanaElement;
         "med-semanas": HTMLMedSemanasElement;
+        "med-sheet": HTMLMedSheetElement;
         "med-subtitle": HTMLMedSubtitleElement;
         "med-tab-button": HTMLMedTabButtonElement;
         "med-tabs": HTMLMedTabsElement;
@@ -5789,6 +5811,7 @@ declare namespace LocalJSX {
           * The name of the control, which is submitted with the form data.
          */
         "name"?: string;
+        "noStyle"?: boolean;
         /**
           * Emitted when the datetime loses focus.
          */
@@ -8265,21 +8288,33 @@ declare namespace LocalJSX {
          */
         "btnLeft": string;
         /**
-          * Define o texto do botão direito.
+          * Define o texto do botão direito, se existir.
          */
         "btnRight": string;
         /**
-          * Define o título do banner.
+          * Define a cor do componente.
          */
-        "header": string;
+        "dsColor"?: MedColor;
         /**
-          * Define o texto texto do botão direito, se existir.
+          * Define a variação de tamanho do componente.
+         */
+        "dsSize"?: 'sm' | 'md';
+        /**
+          * Emitido quando há um click no botão esquerdo.
          */
         "onBtnLeftClick"?: (event: CustomEvent<void>) => void;
         /**
-          * Emitido quando é feito um click no botão direito.
+          * Emitido quando há um click no botão direito.
          */
         "onBtnRightClick"?: (event: CustomEvent<void>) => void;
+        /**
+          * Define o texto do componente.
+         */
+        "texto"?: string;
+        /**
+          * Define o título do componente.
+         */
+        "titulo"?: string;
     }
     interface MedBase {
         /**
@@ -8914,6 +8949,9 @@ declare namespace LocalJSX {
     interface MedSemanas {
         "skin"?: 'lista';
     }
+    interface MedSheet {
+        "onMedClick"?: (event: CustomEvent<any>) => void;
+    }
     interface MedSubtitle {
         /**
           * Define a cor do componente.
@@ -9248,6 +9286,7 @@ declare namespace LocalJSX {
         "med-rating": MedRating;
         "med-semana": MedSemana;
         "med-semanas": MedSemanas;
+        "med-sheet": MedSheet;
         "med-subtitle": MedSubtitle;
         "med-tab-button": MedTabButton;
         "med-tabs": MedTabs;
@@ -9414,6 +9453,7 @@ declare module "@stencil/core" {
             "med-rating": LocalJSX.MedRating & JSXBase.HTMLAttributes<HTMLMedRatingElement>;
             "med-semana": LocalJSX.MedSemana & JSXBase.HTMLAttributes<HTMLMedSemanaElement>;
             "med-semanas": LocalJSX.MedSemanas & JSXBase.HTMLAttributes<HTMLMedSemanasElement>;
+            "med-sheet": LocalJSX.MedSheet & JSXBase.HTMLAttributes<HTMLMedSheetElement>;
             "med-subtitle": LocalJSX.MedSubtitle & JSXBase.HTMLAttributes<HTMLMedSubtitleElement>;
             "med-tab-button": LocalJSX.MedTabButton & JSXBase.HTMLAttributes<HTMLMedTabButtonElement>;
             "med-tabs": LocalJSX.MedTabs & JSXBase.HTMLAttributes<HTMLMedTabsElement>;

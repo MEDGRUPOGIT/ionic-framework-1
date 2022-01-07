@@ -21,6 +21,8 @@
 
   --border-width: var(--med-border-width-thin);
   --border-style: solid;
+
+  cursor: pointer;
 }
 
 :host(.med-button--secondary) ion-ripple-effect {

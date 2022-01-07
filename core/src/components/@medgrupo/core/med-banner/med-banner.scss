@@ -1,0 +1,111 @@
+:host {
+  --background: #{color('neutral', '2')};
+  --padding-content: 16px 16px 0 16px;
+  --padding-footer: 8px 8px 8px 8px;
+  --padding-texto: 8px;
+  --footer-height: 32px;
+  --padding-right: 16px;
+}
+
+:host {
+  display: block;
+  background-color: var(--background);
+}
+
+.med-notification {
+  &__content {
+    padding: var(--padding-content);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__titulo {
+    text-align: left;
+    padding-right: var(--padding-right);
+  }
+
+  &__texto {
+    text-align: left;
+    padding-top: var(--padding-texto);
+    padding-right: var(--padding-right);
+  }
+
+  &__footer {
+    padding: var(--padding-footer);
+    display: flex;
+    justify-content: space-between;
+    height: var(--footer-height);
+  }
+}
+
+//////////////////////////////
+// size
+//////////////////////////////
+
+:host(.med-notification--md) {
+  --padding-content: 24px 24px 0 24px;
+  --padding-footer: 8px 16px;
+  --footer-height: 40px;
+  --padding-right: 32px;
+}
+
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-color) {
+  --background: #{curr-color('color', '3')};
+
+  .med-notification {
+    &__titulo {
+      --color: #{curr-color('color', '3', 'contrast')};
+    }
+
+    &__texto {
+      --color: #{curr-color('color', '3', 'contrast')};
+    }
+
+    &__button {
+      --color: #{curr-color('color', '3', 'contrast')};
+    }
+  }
+
+}
+
+:host(.med-color-neutral) {
+  --background: #{curr-color('neutral')};
+
+  .med-notification {
+    &__titulo {
+      --color: #{curr-color('neutral', null, 'contrast')};
+    }
+
+    &__texto {
+      --color: #{curr-color('neutral', null, 'contrast')};
+    }
+
+    &__button {
+      --color: #{curr-color('neutral', null, 'contrast')};
+    }
+  }
+}
+
+:host(.med-color-feedback) {
+  --background: #{curr-color('feedback')};
+
+  .med-notification {
+    &__titulo {
+      --color: #{curr-color('feedback', null, 'contrast')};
+    }
+
+    &__texto {
+      --color: #{curr-color('feedback', null, 'contrast')};
+    }
+
+    &__button {
+      --color: #{curr-color('feedback', null, 'contrast')};
+    }
+  }
+}
+
+

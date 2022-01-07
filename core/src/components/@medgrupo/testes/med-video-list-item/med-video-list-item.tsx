@@ -24,12 +24,12 @@ export class MedVideoListItem {
         'med-video-list-item': true,
       })}>
         <div class="med-video-list-item__text-container">
-          <ion-icon class="med-icon med-icon--sm" name="med-play" ></ion-icon>
-          <med-type class="cp-time-stamp__title" token="p12x" ds-color="neutral-9" >Taquiarritmias</med-type>
+          <ion-icon class="med-icon med-video-list-item__icon" name="med-play"></ion-icon>
+          <med-type class="med-video-list-item__title" token="p12x" ds-color="neutral-9" >Taquiarritmias</med-type>
           <med-type token="p12x" ds-color={dsColor}>00:42:25</med-type>
         </div>
         <ion-button class="med-video-list-item__avancar" ds-color={dsColor} ds-name="tertiary">
-          <ion-icon class="med-video-list-item__icon med-icon" slot="icon-only" name="med-direita"></ion-icon>
+          <ion-icon class="med-icon" slot="icon-only" name="med-direita"></ion-icon>
         </ion-button>
       </Host>
     );

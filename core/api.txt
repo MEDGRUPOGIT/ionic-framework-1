@@ -342,7 +342,7 @@ ion-datetime,prop,displayFormat,string,'MMM D, YYYY',false,false
 ion-datetime,prop,displayTimezone,string | undefined,undefined,false,false
 ion-datetime,prop,doneText,string,'Done',false,false
 ion-datetime,prop,hourValues,number | number[] | string | undefined,undefined,false,false
-ion-datetime,prop,iconName,string,"med-baixo",false,false
+ion-datetime,prop,iconName,string,this.noStyle ? '' : 'med-baixo',false,false
 ion-datetime,prop,max,string | undefined,undefined,false,false
 ion-datetime,prop,min,string | undefined,undefined,false,false
 ion-datetime,prop,minuteValues,number | number[] | string | undefined,undefined,false,false
@@ -351,6 +351,7 @@ ion-datetime,prop,monthNames,string | string[] | undefined,undefined,false,false
 ion-datetime,prop,monthShortNames,string | string[] | undefined,undefined,false,false
 ion-datetime,prop,monthValues,number | number[] | string | undefined,undefined,false,false
 ion-datetime,prop,name,string,this.inputId,false,false
+ion-datetime,prop,noStyle,boolean,false,false,false
 ion-datetime,prop,pickerFormat,string | undefined,undefined,false,false
 ion-datetime,prop,pickerOptions,undefined | { columns?: PickerColumn[] | undefined; buttons?: PickerButton[] | undefined; cssClass?: string | string[] | undefined; showBackdrop?: boolean | undefined; backdropDismiss?: boolean | undefined; animated?: boolean | undefined; mode?: Mode | undefined; keyboardClose?: boolean | undefined; id?: string | undefined; enterAnimation?: AnimationBuilder | undefined; leaveAnimation?: AnimationBuilder | undefined; },undefined,false,false
 ion-datetime,prop,placeholder,null | string | undefined,undefined,false,false
@@ -1504,7 +1505,10 @@ med-avatar,css-prop,--color
 med-banner,shadow
 med-banner,prop,btnLeft,string,undefined,true,false
 med-banner,prop,btnRight,string,undefined,true,false
-med-banner,prop,header,string,undefined,true,false
+med-banner,prop,dsColor,string | undefined,undefined,false,true
+med-banner,prop,dsSize,"md" | "sm" | undefined,'sm',false,true
+med-banner,prop,texto,string | undefined,undefined,false,false
+med-banner,prop,titulo,string | undefined,undefined,false,false
 med-banner,event,btnLeftClick,void,true
 med-banner,event,btnRightClick,void,true
 
@@ -1584,10 +1588,6 @@ med-check-card,prop,horaFinal,string | undefined,undefined,false,true
 med-check-card,prop,horaInicial,string | undefined,undefined,false,true
 med-check-card,prop,iconName,string | undefined,undefined,false,true
 med-check-card,prop,titulo,string | undefined,undefined,false,true
-med-check-card,prop,tooltipCollapsed,boolean,true,false,true
-med-check-card,prop,tooltipContent,string | undefined,undefined,false,true
-med-check-card,prop,tooltipHeading,string | undefined,undefined,false,true
-med-check-card,prop,tooltipPlacement,"bottom" | "left" | "right" | "top" | undefined,'top',false,true
 med-check-card,event,medClick,any,true
 med-check-card,event,medTooltipClose,any,true
 
@@ -1776,6 +1776,9 @@ med-semana,prop,skin,"lista" | undefined,undefined,false,true
 
 med-semanas,shadow
 med-semanas,prop,skin,"lista" | undefined,undefined,false,true
+
+med-sheet,shadow
+med-sheet,event,medClick,any,true
 
 med-subtitle,shadow
 med-subtitle,prop,dsColor,string | undefined,undefined,false,true

@@ -187,6 +187,7 @@ export const IonDatetime = /*@__PURE__*/ defineContainer<JSX.IonDatetime>('ion-d
   'name',
   'disabled',
   'readonly',
+  'noStyle',
   'iconName',
   'min',
   'max',
@@ -957,7 +958,10 @@ export const MedAvatar = /*@__PURE__*/ defineContainer<JSX.MedAvatar>('med-avata
 
 
 export const MedBanner = /*@__PURE__*/ defineContainer<JSX.MedBanner>('med-banner', [
-  'header',
+  'dsColor',
+  'dsSize',
+  'titulo',
+  'texto',
   'btnLeft',
   'btnRight',
   'btnLeftClick',
@@ -1062,10 +1066,6 @@ export const MedCheckCard = /*@__PURE__*/ defineContainer<JSX.MedCheckCard>('med
   'dataFinal',
   'finalizada',
   'iconName',
-  'tooltipPlacement',
-  'tooltipCollapsed',
-  'tooltipHeading',
-  'tooltipContent',
   'medClick',
   'medTooltipClose'
 ]);
@@ -1286,6 +1286,11 @@ export const MedSemana = /*@__PURE__*/ defineContainer<JSX.MedSemana>('med-seman
 
 export const MedSemanas = /*@__PURE__*/ defineContainer<JSX.MedSemanas>('med-semanas', [
   'skin'
+]);
+
+
+export const MedSheet = /*@__PURE__*/ defineContainer<JSX.MedSheet>('med-sheet', [
+  'medClick'
 ]);
 
 

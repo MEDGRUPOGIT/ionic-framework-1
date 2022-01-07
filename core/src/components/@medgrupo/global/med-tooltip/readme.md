@@ -43,13 +43,11 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [med-check-card](../../compositions/med-check-card)
  - [med-message](../med-message)
 
 ### Graph
 ```mermaid
 graph TD;
-  med-check-card --> med-tooltip
   med-message --> med-tooltip
   style med-tooltip fill:#f9f,stroke:#333,stroke-width:4px
 ```

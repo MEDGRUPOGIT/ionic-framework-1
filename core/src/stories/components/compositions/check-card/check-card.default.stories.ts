@@ -9,6 +9,34 @@ export default {
 
 const Template = ({ dsColor, alert, titulo, categoria, horaInicial, horaFinal, dataInicial, dataFinal,iconName, modalPlacement, tooltipCollapsed, tooltipHeading, tooltipContent }) => {
   return html`
+    <style>
+      .med-check-card__tooltip {
+        --background: hsl(var(--med-color-fb-warning));
+        --z-index: 4;
+        display: none;
+      }
+
+      .med-check-card--alert .med-check-card__tooltip {
+        display: block;
+      }
+
+      .med-check-card__tooltip-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+      }
+
+      .med-check-card&__tooltip-icon {
+        stroke: hsl(var(--med-color-neutral-1));
+        cursor: pointer;
+      }
+
+      .med-check-card__alert-icon {
+        stroke: hsl(var(--med-color-fb-warning));
+        cursor: pointer;
+      }
+    </style>
     <ion-app>
       <ion-content>
         <div class="flex-center flex-center--xs">
@@ -30,6 +58,17 @@ const Template = ({ dsColor, alert, titulo, categoria, horaInicial, horaFinal, d
             tooltip-content=${tooltipContent}
           >
             <ion-checkbox slot="input"></ion-checkbox>
+
+            <med-tooltip slot="tooltip" class="med-check-card__tooltip" ds-color="fb-warning" placement="top" position="end">
+              <ion-icon class="med-check-card__alert-icon med-icon med-icon--sm" name="med-marcar" slot="input"></ion-icon>
+              <div slot="content">
+                <div class="med-check-card__tooltip-header">
+                  <med-type ds-color="neutral-01" token="p14b">{tooltipHeading}</med-type>
+                  <ion-icon class="med-check-card__tooltip-icon med-icon med-icon--sm" name="med-fechar"></ion-icon>
+                </div>
+                <med-type ds-color="neutral-01" token="p14x" slot="content">{tooltipContent}</med-type>
+              </div>
+            </med-tooltip>
           </med-check-card>
           <!-- component -->
 

@@ -237,8 +237,8 @@ export class IonContent {
 }
 export declare interface IonDatetime extends Components.IonDatetime {
 }
-@ProxyCmp({ inputs: ["cancelText", "dayNames", "dayShortNames", "dayValues", "disabled", "displayFormat", "displayTimezone", "doneText", "hourValues", "iconName", "max", "min", "minuteValues", "mode", "monthNames", "monthShortNames", "monthValues", "name", "pickerFormat", "pickerOptions", "placeholder", "readonly", "value", "yearValues"], "methods": ["open"] })
-@Component({ selector: "ion-datetime", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["cancelText", "dayNames", "dayShortNames", "dayValues", "disabled", "displayFormat", "displayTimezone", "doneText", "hourValues", "iconName", "max", "min", "minuteValues", "mode", "monthNames", "monthShortNames", "monthValues", "name", "pickerFormat", "pickerOptions", "placeholder", "readonly", "value", "yearValues"] })
+@ProxyCmp({ inputs: ["cancelText", "dayNames", "dayShortNames", "dayValues", "disabled", "displayFormat", "displayTimezone", "doneText", "hourValues", "iconName", "max", "min", "minuteValues", "mode", "monthNames", "monthShortNames", "monthValues", "name", "noStyle", "pickerFormat", "pickerOptions", "placeholder", "readonly", "value", "yearValues"], "methods": ["open"] })
+@Component({ selector: "ion-datetime", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["cancelText", "dayNames", "dayShortNames", "dayValues", "disabled", "displayFormat", "displayTimezone", "doneText", "hourValues", "iconName", "max", "min", "minuteValues", "mode", "monthNames", "monthShortNames", "monthValues", "name", "noStyle", "pickerFormat", "pickerOptions", "placeholder", "readonly", "value", "yearValues"] })
 export class IonDatetime {
   ionCancel!: EventEmitter<CustomEvent>;
   ionChange!: EventEmitter<CustomEvent>;
@@ -1042,8 +1042,8 @@ export class MedAvatar {
 }
 export declare interface MedBanner extends Components.MedBanner {
 }
-@ProxyCmp({ inputs: ["btnLeft", "btnRight", "header"] })
-@Component({ selector: "med-banner", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["btnLeft", "btnRight", "header"] })
+@ProxyCmp({ inputs: ["btnLeft", "btnRight", "dsColor", "dsSize", "texto", "titulo"] })
+@Component({ selector: "med-banner", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["btnLeft", "btnRight", "dsColor", "dsSize", "texto", "titulo"] })
 export class MedBanner {
   btnLeftClick!: EventEmitter<CustomEvent>;
   btnRightClick!: EventEmitter<CustomEvent>;
@@ -1190,8 +1190,8 @@ export class MedChartRadialLabel {
 }
 export declare interface MedCheckCard extends Components.MedCheckCard {
 }
-@ProxyCmp({ inputs: ["alert", "categoria", "dataFinal", "dataInicial", "dsColor", "finalizada", "horaFinal", "horaInicial", "iconName", "titulo", "tooltipCollapsed", "tooltipContent", "tooltipHeading", "tooltipPlacement"] })
-@Component({ selector: "med-check-card", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alert", "categoria", "dataFinal", "dataInicial", "dsColor", "finalizada", "horaFinal", "horaInicial", "iconName", "titulo", "tooltipCollapsed", "tooltipContent", "tooltipHeading", "tooltipPlacement"] })
+@ProxyCmp({ inputs: ["alert", "categoria", "dataFinal", "dataInicial", "dsColor", "finalizada", "horaFinal", "horaInicial", "iconName", "titulo"] })
+@Component({ selector: "med-check-card", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alert", "categoria", "dataFinal", "dataInicial", "dsColor", "finalizada", "horaFinal", "horaInicial", "iconName", "titulo"] })
 export class MedCheckCard {
   medClick!: EventEmitter<CustomEvent>;
   medTooltipClose!: EventEmitter<CustomEvent>;
@@ -1561,6 +1561,18 @@ export class MedSemanas {
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
+  }
+}
+export declare interface MedSheet extends Components.MedSheet {
+}
+@Component({ selector: "med-sheet", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class MedSheet {
+  medClick!: EventEmitter<CustomEvent>;
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ["medClick"]);
   }
 }
 export declare interface MedSubtitle extends Components.MedSubtitle {

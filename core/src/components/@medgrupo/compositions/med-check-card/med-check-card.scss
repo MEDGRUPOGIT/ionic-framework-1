@@ -52,29 +52,6 @@
   &__tooltip-container {
     padding: 16px 12px 16px 0;
   }
-
-  &__tooltip {
-    display: none;
-    --background: hsl(var(--med-color-fb-warning));
-    --z-index: 4;
-  }
-
-  &__tooltip-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 20px;
-  }
-
-  &__tooltip-icon {
-    stroke: color('neutral', '1');
-    cursor: pointer;
-  }
-
-  &__alert-icon {
-    stroke: color('feedback', 'warning');
-    cursor: pointer;
-  }
 }
 
 //////////////////////////////
@@ -85,10 +62,6 @@
   .med-check-card {
     &__base {
       border: 1px solid color('feedback', 'warning');
-    }
-
-    &__tooltip {
-      display: block;
     }
   }
 }

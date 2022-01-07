@@ -1,0 +1,96 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Components/Core/Sheet/Usage" />
+
+# Sheet
+
+```
+<ion-button ds-name="primary" (click)="abrirFiltros()">Abrir sheet mobile</ion-button>
+```
+
+```
+import { Component } from '@angular/core';
+import { BreakPointPixelEnum } from 'src/medsoft/app/shared/enums/breakpoint.enum';
+import { BreakpointUtils } from 'src/medsoft/app/shared/utils/breakpoint.utils';
+import {
+  modalEnterAnimationFiltroRevisao,
+  modalLeaveAnimationFiltroRevisao,
+  modalEnterAnimationFiltroRevisaoDesktop,
+  modalLeaveAnimationFiltroRevisaoDesktop
+} from '@ionic/core/dist/collection/components/@medgrupo/core/med-sheet/sheet-animation';
+
+@Component({
+  selector: 'component',
+  templateUrl: './component.component.html',
+  styleUrls: ['./component.component.scss']
+})
+export class Component {
+
+  constructor(
+    private readonly modalController: ModalController
+  ) {}
+
+  async abrirFiltros(): Promise<void> {
+    const modal = await this.modalController.create({
+      component: 'component',
+      cssClass: 'tp-sheet',
+      mode: 'ios',
+      enterAnimation: BreakpointUtils.mediaQueryDown(BreakPointPixelEnum.LG)
+        ? modalEnterAnimationSheetMobile
+        : modalEnterAnimationSheetDesktop,
+      leaveAnimation: BreakpointUtils.mediaQueryDown(BreakPointPixelEnum.LG)
+        ? modalLeaveAnimationSheetMobile
+        : modalLeaveAnimationSheetDesktop,
+    });
+
+    await modal.present();
+  }
+}
+```
+
+## ion-content
+
+Se o componente sendo passado para modar utilizar ion-content é necessario utilizar `cssClass: 'tp-sheet tp-sheet--ion-content'`.
+
+o ion-content dentro do componente deve setar `height: 100vh` para que a modal funcione corretamente.
+
+```
+import { Component } from '@angular/core';
+import { BreakPointPixelEnum } from 'src/medsoft/app/shared/enums/breakpoint.enum';
+import { BreakpointUtils } from 'src/medsoft/app/shared/utils/breakpoint.utils';
+import {
+  modalEnterAnimationFiltroRevisao,
+  modalLeaveAnimationFiltroRevisao,
+  modalEnterAnimationFiltroRevisaoDesktop,
+  modalLeaveAnimationFiltroRevisaoDesktop
+} from '@ionic/core/dist/collection/components/@medgrupo/core/med-sheet/sheet-animation';
+
+@Component({
+  selector: 'component',
+  templateUrl: './component.component.html',
+  styleUrls: ['./component.component.scss']
+})
+export class Component {
+
+  constructor(
+    private readonly modalController: ModalController
+  ) {}
+
+  async abrirFiltros(): Promise<void> {
+    const modal = await this.modalController.create({
+      component: 'component',
+      cssClass: 'tp-sheet tp-sheet--ion-content',
+      mode: 'ios',
+      enterAnimation: BreakpointUtils.mediaQueryDown(BreakPointPixelEnum.LG)
+        ? modalEnterAnimationSheetMobile
+        : modalEnterAnimationSheetDesktop,
+      leaveAnimation: BreakpointUtils.mediaQueryDown(BreakPointPixelEnum.LG)
+        ? modalLeaveAnimationSheetMobile
+        : modalLeaveAnimationSheetDesktop,
+    });
+
+    await modal.present();
+  }
+
+}
+```
