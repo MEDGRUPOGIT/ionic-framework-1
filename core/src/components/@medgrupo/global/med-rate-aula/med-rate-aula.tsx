@@ -27,10 +27,10 @@ export class MedRateAula {
 
     return (
       <Host
-      class={generateMedColor(null, {
-        'med-rate-aula': true,
-        'med-rate-aula--collapsed': collapsed
-      })}>
+        class={generateMedColor(null, {
+          'med-rate-aula': true,
+          'med-rate-aula--collapsed': collapsed
+        })}>
         <div class="med-rate-aula__container">
           <div class="med-rate-aula__item">
             <button class="med-rate-aula__button med-rate-aula__button--otimo">
@@ -57,17 +57,18 @@ export class MedRateAula {
             <h4 class="med-rate-aula__label med-rate-aula__label--ruim">Rium</h4>
           </div>
 
-          <div class="med-rate-aula__button-fechar" onClick={(event: any) => {this.toggle(event)}}>
+          <div class="med-rate-aula__button-fechar" onClick={(event: any) => { this.toggle(event) }}>
             <ion-button ds-size="xs" ds-name="primary" class="">
               <ion-icon slot="icon-only" class="med-icon" name="med-fechar"></ion-icon>
             </ion-button>
           </div>
         </div>
 
-        <div class="med-rate-aula__end" onClick={(event: any) => {this.toggle(event)}}>
+        <div class="med-rate-aula__end" onClick={(event: any) => { this.toggle(event) }}>
           <ion-button ds-size="xs" ds-name="tertiary">
             <ion-icon slot="icon-only" class="med-rate-aula__icon-abrir" name="med-avaliar"></ion-icon>
           </ion-button>
+          <med-type token="p12x">Avalie</med-type>
         </div>
       </Host>
     );

@@ -1,10 +1,20 @@
 @import "../../../../../templarios/abstracts";
 
+:host {
+  --border-color: #{color("brand", "3")};
+  --icon-stroke-color: #{color("brand", "3")};
+}
+
 :host(.med-video-list-item) {
   padding: 8px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: solid 1px var(--border-color);
+
+  &:last-child{
+    border-bottom: 0;
+  }
 
   .med-video-list-item__avancar {
     margin-left: auto;
@@ -16,11 +26,14 @@
   }
 
   .med-video-list-item__icon {
-    &--color {
-      stroke: color("aula", "3");
-      margin-right: 8px;
-    }
+    stroke: var(--icon-stroke-color);
   }
+
+  .med-video-list-item__title {
+    margin: 0 8px;
+  }
+
+
 }
 
 // ////////////////////
@@ -29,7 +42,7 @@
 
 :host(.med-color) {
   --border-color: #{curr-color('color', '3')};
-  background: curr-color('color', '3');
+  --icon-stroke-color: #{curr-color('color', '3')};
   color: curr-color('color', '3', 'contrast');
 }
 
@@ -39,7 +52,7 @@
 
 :host(.med-color-neutral) {
   --border-color: #{curr-color('neutral')};
-  background: curr-color('neutral');
+  --icon-stroke-color: #{curr-color('neutral')};
   color: curr-color('neutral', null, 'contrast');
 }
 
@@ -49,7 +62,7 @@
 
 :host(.med-color-feedback) {
   --border-color: #{curr-color('feedback')};
-  background: curr-color('feedback');
+  --icon-stroke-color: #{curr-color('feedback')};
   color: curr-color('feedback', null, 'contrast');
 }
 

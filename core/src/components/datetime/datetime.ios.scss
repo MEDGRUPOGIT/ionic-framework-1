@@ -12,11 +12,42 @@
   --padding-start: #{$datetime-ios-padding-start};
 }
 
-@import "./datetime.med.scss";
+//@import "./datetime.med.scss";
 
+:host {
+  --icon-color: #{color('neutral', '10')};
+  --background: #{color('neutral', '3')};
+  --placeholder-color: #{color('neutral', '5')};
+  --border-radius: 8px;
+  --font-size: 14px;
+  --font-weight: 600;
+  --color: #{color('neutral', '10')};
+}
 
+:host {
+  background: var(--background);
+  border-radius: var(--border-radius);
 
+  .datetime-text {
+    font-size: var(--font-size);
+    display: flex;
+    align-items: center;
+    font-weight: var(--font-weight);
+    color: var(--color);
+    line-height: var(--line-height);
+  }
 
+  .datetime-icon {
+    stroke: var(--icon-color);
+  }
+}
 
-
-
+:host(.datetime--no-style) {
+  --background: transparent;
+  --font-size: 32px;
+  --padding-top: 0;
+  --padding-end: 0;
+  --padding-bottom: 0;
+  --padding-start: 0;
+  --line-height: 32px;
+}

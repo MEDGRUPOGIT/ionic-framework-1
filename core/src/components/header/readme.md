@@ -196,6 +196,19 @@ export default defineComponent({
 | `translucent` | `translucent` | If `true`, the header will be translucent. Only applies when the mode is `"ios"` and the device supports [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).  Note: In order to scroll content behind the header, the `fullscreen` attribute needs to be set on the content. | `boolean`                 | `false`     |
 
 
+## Dependencies
+
+### Used by
+
+ - [med-sheet](../@medgrupo/core/med-sheet)
+
+### Graph
+```mermaid
+graph TD;
+  med-sheet --> ion-header
+  style ion-header fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

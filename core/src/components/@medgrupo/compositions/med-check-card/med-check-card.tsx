@@ -32,14 +32,6 @@ export class MedCheckCard {
 
   @Prop({ reflect: true }) iconName?: string;
 
-  @Prop({ reflect: true }) tooltipPlacement: "top" | "bottom" | "left" | "right" | undefined = 'top';
-
-  @Prop({ reflect: true, mutable: true }) tooltipCollapsed = true;
-
-  @Prop({ reflect: true }) tooltipHeading?: string;
-
-  @Prop({ reflect: true }) tooltipContent?: string;
-
   @Event() medClick!: EventEmitter;
 
   @Event() medTooltipClose!: EventEmitter;
@@ -54,7 +46,7 @@ export class MedCheckCard {
   }
 
   render() {
-    const { dsColor, alert, titulo, categoria, horaInicial, horaFinal, dataInicial, dataFinal, iconName, tooltipPlacement, tooltipCollapsed, tooltipHeading, tooltipContent } = this;
+    const { dsColor, alert, titulo, categoria, horaInicial, horaFinal, dataInicial, dataFinal, iconName } = this;
 
     return (
       <Host
@@ -82,16 +74,7 @@ export class MedCheckCard {
           </div>
 
           <div class={alert ? 'med-check-card__tooltip-container' : ''}>
-            <med-tooltip class="med-check-card__tooltip" ds-color="fb-warning" placement={tooltipPlacement} position="end" collapsed={tooltipCollapsed} onClick={() => this.onTooltipCloseClick()}>
-              <ion-icon class="med-check-card__alert-icon med-icon med-icon--sm" name="med-marcar" slot="input"></ion-icon>
-              <div slot="content">
-                <div class="med-check-card__tooltip-header">
-                  <med-type ds-color="neutral-01" token="p14b">{tooltipHeading}</med-type>
-                  <ion-icon class="med-check-card__tooltip-icon med-icon med-icon--sm" name="med-fechar"></ion-icon>
-                </div>
-                <med-type ds-color="neutral-01" token="p14x" slot="content">{tooltipContent}</med-type>
-              </div>
-            </med-tooltip>
+            <slot name="tooltip"></slot>
           </div>
         </med-base>
       </Host>

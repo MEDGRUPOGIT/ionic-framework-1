@@ -24,6 +24,8 @@
   --min-height: 24px;
   --min-width: 24px;
   --border-radius: var(--med-border-radius-nano);
+
+  cursor: pointer;
 }
 
 :host(.med-button--tertiary) ion-ripple-effect {

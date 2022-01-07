@@ -7,7 +7,7 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = () => {
+const Template = ({noStyle}) => {
   return html`
     <style>
       /* !NÃO UTILIZAR! Apenas para estória */
@@ -27,6 +27,7 @@ const Template = () => {
               <med-input>
                 <med-type tag="label" token="p14" slot="label">Data de Início</med-type>
                 <ion-datetime
+                  ?no-style=${noStyle}
                   mode="ios"
                   placeholder="22/12/2021"
                   slot="input">
@@ -47,5 +48,16 @@ Default.parameters = {
   design: {
     type: 'figma',
     url: '',
+  },
+}
+Default.argTypes = {
+  noStyle: {
+    active: false,
+    control: { type: "boolean" },
+    description: "Define o estado do componente.",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "undefined" },
+    },
   },
 }

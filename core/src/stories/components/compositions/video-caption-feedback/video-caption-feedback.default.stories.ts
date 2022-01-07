@@ -12,7 +12,7 @@ const Template = () => {
       <ion-content>
         <!-- component -->
         <med-base class="cp-video-caption-feedback" radius="s00">
-          <med-type class="cp-video-caption-feedback__start" token="p14" slot="start">Ventilação Mecânica; Cardiointensivismo; Sepse; Neurointensivismo; Cuidados Paliativos</med-type>
+          <med-type class="cp-video-caption-feedback__start" token="p14" slot="start" ds-color="neutral-5">Ventilação Mecânica; Cardiointensivismo; Sepse; Neurointensivismo; Cuidados Paliativos</med-type>
           <med-rate-aula class="cp-video-caption-feedback__end" slot="end" ></med-rate-aula>
         </med-base>
         <!-- component -->

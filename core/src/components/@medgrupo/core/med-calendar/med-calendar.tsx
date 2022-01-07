@@ -32,6 +32,8 @@ export class MedCalendar {
   private container!: HTMLElement;
 
   connectedCallback() {
+    this.init();
+
     const resizeObserver = new ResizeObserver(() => {
       this.init();
     });

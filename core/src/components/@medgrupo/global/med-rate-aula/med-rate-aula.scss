@@ -112,10 +112,12 @@
     margin-left: auto;
     display: flex;
     align-items: center;
+    flex-direction: column;
   }
 
   .med-rate-aula__icon-abrir {
     font-size: 38px;
+    margin-bottom: 8px;
   }
 }
 

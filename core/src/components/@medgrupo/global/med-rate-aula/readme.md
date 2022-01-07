@@ -31,12 +31,14 @@ Type: `Promise<void>`
 
 - ion-icon
 - [ion-button](../../../button)
+- [med-type](../../core/med-type)
 
 ### Graph
 ```mermaid
 graph TD;
   med-rate-aula --> ion-icon
   med-rate-aula --> ion-button
+  med-rate-aula --> med-type
   ion-button --> ion-ripple-effect
   style med-rate-aula fill:#f9f,stroke:#333,stroke-width:4px
 ```

@@ -132,6 +132,7 @@ export const DIRECTIVES = [
   d.MedRating,
   d.MedSemana,
   d.MedSemanas,
+  d.MedSheet,
   d.MedSubtitle,
   d.MedTabButton,
   d.MedTabs,
