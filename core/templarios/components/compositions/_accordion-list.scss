@@ -1,7 +1,6 @@
-@import "../../templarios/abstracts";
+@import "../../../templarios/abstracts";
 
 .cp-accordion-list {
-
   &__item {
     border-radius: 8px;
     --margin: 0;
@@ -78,18 +77,17 @@
 
   &__aulas-btn {
     display: block;
-    @include breakpoint-down('xxs') {
+    @include breakpoint-down("xxs") {
       display: none;
     }
   }
 
- &__aulas-btn-small {
+  &__aulas-btn-small {
     display: none;
-    @include breakpoint-down('xxs') {
+    @include breakpoint-down("xxs") {
       display: block;
     }
   }
-
 }
 
 .med-rotate {

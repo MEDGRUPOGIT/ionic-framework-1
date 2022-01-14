@@ -31,13 +31,12 @@
 
   &__progress {
     background: var(--progress-background);
-    transform: translateX(calc(var(--progress) * 1%));
+    transform: translate(calc(var(--progress) * 1%), -50%);
     position: absolute;
-    top: 0;
     right: 0;
-    bottom: 0;
     left: 0;
     animation: start 300ms linear;
+    top: 50%;
   }
 
   &__track {
@@ -48,6 +47,24 @@
     --color: var(--label-color);
     margin-left: 12px;
   }
+}
+
+//////////////////////////////
+// state
+//////////////////////////////
+
+:host(.med-chart-bar-horizontal--full) {
+  --progress-background: #{color('feedback','success')};
+  --label-color: #{color('feedback','success')};
+}
+
+:host(.med-chart-bar-horizontal--spill) .med-chart-bar-horizontal__track {
+  border: 1px solid color('brand', '5');
+}
+
+:host(.med-chart-bar-horizontal--spill) .med-chart-bar-horizontal__progress {
+  background-image: linear-gradient(45deg, color('brand', '4') 47.06%, color('brand', '5') 47.06%, color('brand', '5') 50%, color('brand', '4') 50%, color('brand', '4') 97.06%, color('brand', '5') 97.06%, color('brand', '5') 100%);
+  background-size: 24.04px 24.04px;
 }
 
 // ////////////////////

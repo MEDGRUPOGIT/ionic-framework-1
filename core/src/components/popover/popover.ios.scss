@@ -15,7 +15,6 @@
   @include border-radius($popover-ios-border-radius);
 }
 
-
 // Popover Arrow
 // -----------------------------------------
 
@@ -66,13 +65,13 @@
   }
 }
 
-@import './popover.med.scss';
+@import "./popover.med.scss";
 
 //
 // custom
 //
 
-@import "../../../templarios/abstracts";
+/* @import "../../../templarios/abstracts";
 
 //
 // med-popover
@@ -130,4 +129,4 @@
   .popover-content {
     border-radius: var(--med-border-radius-quark);
   }
-}
+} */
