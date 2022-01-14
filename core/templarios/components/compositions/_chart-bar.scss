@@ -1,4 +1,4 @@
-@import "../../templarios/abstracts";
+@import "../../../templarios/abstracts";
 
 .cp-chart-bar {
   flex-direction: column;
@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 16px
+    padding-bottom: 16px;
   }
 
   &__legenda {
@@ -31,14 +31,14 @@
     height: 6px;
     border-radius: 1px;
     margin-right: 6px;
-    background: color('neutral', '10');
+    background: color("neutral", "10");
 
     &--voce {
-      background: color('brand', '4');
+      background: color("brand", "4");
     }
 
     &--concorrencia {
-      background: color('neutral', '8');
+      background: color("neutral", "8");
     }
   }
 

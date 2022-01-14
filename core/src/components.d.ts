@@ -3588,32 +3588,6 @@ export namespace Components {
          */
         "dsName"?: 'secondary' | 'transparent';
     }
-    interface MedNotification {
-        /**
-          * Define o texto do botão esquerdo, se existir.
-         */
-        "btnLeft": string;
-        /**
-          * Define o texto do botão direito, se existir.
-         */
-        "btnRight": string;
-        /**
-          * Define a cor do componente.
-         */
-        "dsColor"?: MedColor;
-        /**
-          * Define a variação de tamanho do componente.
-         */
-        "dsSize"?: 'sm' | 'md';
-        /**
-          * Define o texto do componente.
-         */
-        "texto"?: string;
-        /**
-          * Define o título do componente.
-         */
-        "titulo"?: string;
-    }
     interface MedOffline {
     }
     interface MedOption {
@@ -4758,12 +4732,6 @@ declare global {
         prototype: HTMLMedNavbarElement;
         new (): HTMLMedNavbarElement;
     };
-    interface HTMLMedNotificationElement extends Components.MedNotification, HTMLStencilElement {
-    }
-    var HTMLMedNotificationElement: {
-        prototype: HTMLMedNotificationElement;
-        new (): HTMLMedNotificationElement;
-    };
     interface HTMLMedOfflineElement extends Components.MedOffline, HTMLStencilElement {
     }
     var HTMLMedOfflineElement: {
@@ -5060,7 +5028,6 @@ declare global {
         "med-message": HTMLMedMessageElement;
         "med-message-list": HTMLMedMessageListElement;
         "med-navbar": HTMLMedNavbarElement;
-        "med-notification": HTMLMedNotificationElement;
         "med-offline": HTMLMedOfflineElement;
         "med-option": HTMLMedOptionElement;
         "med-paragraph": HTMLMedParagraphElement;
@@ -8756,40 +8723,6 @@ declare namespace LocalJSX {
          */
         "dsName"?: 'secondary' | 'transparent';
     }
-    interface MedNotification {
-        /**
-          * Define o texto do botão esquerdo, se existir.
-         */
-        "btnLeft": string;
-        /**
-          * Define o texto do botão direito, se existir.
-         */
-        "btnRight": string;
-        /**
-          * Define a cor do componente.
-         */
-        "dsColor"?: MedColor;
-        /**
-          * Define a variação de tamanho do componente.
-         */
-        "dsSize"?: 'sm' | 'md';
-        /**
-          * Emitido quando há um click no botão esquerdo.
-         */
-        "onBtnLeftClick"?: (event: CustomEvent<void>) => void;
-        /**
-          * Emitido quando há um click no botão direito.
-         */
-        "onBtnRightClick"?: (event: CustomEvent<void>) => void;
-        /**
-          * Define o texto do componente.
-         */
-        "texto"?: string;
-        /**
-          * Define o título do componente.
-         */
-        "titulo"?: string;
-    }
     interface MedOffline {
         /**
           * TODO
@@ -9272,7 +9205,6 @@ declare namespace LocalJSX {
         "med-message": MedMessage;
         "med-message-list": MedMessageList;
         "med-navbar": MedNavbar;
-        "med-notification": MedNotification;
         "med-offline": MedOffline;
         "med-option": MedOption;
         "med-paragraph": MedParagraph;
@@ -9439,7 +9371,6 @@ declare module "@stencil/core" {
             "med-message": LocalJSX.MedMessage & JSXBase.HTMLAttributes<HTMLMedMessageElement>;
             "med-message-list": LocalJSX.MedMessageList & JSXBase.HTMLAttributes<HTMLMedMessageListElement>;
             "med-navbar": LocalJSX.MedNavbar & JSXBase.HTMLAttributes<HTMLMedNavbarElement>;
-            "med-notification": LocalJSX.MedNotification & JSXBase.HTMLAttributes<HTMLMedNotificationElement>;
             "med-offline": LocalJSX.MedOffline & JSXBase.HTMLAttributes<HTMLMedOfflineElement>;
             "med-option": LocalJSX.MedOption & JSXBase.HTMLAttributes<HTMLMedOptionElement>;
             "med-paragraph": LocalJSX.MedParagraph & JSXBase.HTMLAttributes<HTMLMedParagraphElement>;
