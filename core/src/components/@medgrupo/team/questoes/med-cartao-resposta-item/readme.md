@@ -7,12 +7,12 @@
 
 ## Properties
 
-| Property   | Attribute  | Description                                  | Type                  | Default     |
-| ---------- | ---------- | -------------------------------------------- | --------------------- | ----------- |
-| `anulada`  | `anulada`  | Define o estado do componente para anulado.  | `boolean`             | `false`     |
-| `ativa`    | `ativa`    | Define o estado do componente para ativo.    | `boolean`             | `false`     |
-| `dsColor`  | `ds-color` | Define a cor do componente.                  | `string \| undefined` | `undefined` |
-| `impressa` | `impressa` | Define o estado do componente para impresso. | `boolean`             | `false`     |
+| Property   | Attribute  | Description | Type                  | Default     |
+| ---------- | ---------- | ----------- | --------------------- | ----------- |
+| `anulada`  | `anulada`  | TODO        | `boolean`             | `false`     |
+| `ativa`    | `ativa`    | TODO        | `boolean`             | `false`     |
+| `dsColor`  | `ds-color` | TODO        | `string \| undefined` | `undefined` |
+| `impressa` | `impressa` | TODO        | `boolean`             | `false`     |
 
 
 ----------------------------------------------

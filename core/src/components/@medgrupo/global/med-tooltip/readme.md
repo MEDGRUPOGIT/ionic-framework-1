@@ -7,15 +7,15 @@
 
 ## Properties
 
-| Property    | Attribute   | Description                      | Type                                                  | Default     |
-| ----------- | ----------- | -------------------------------- | ----------------------------------------------------- | ----------- |
-| `collapsed` | `collapsed` | Define o estado do componente.   | `boolean`                                             | `true`      |
-| `content`   | `content`   | TODO                             | `string \| undefined`                                 | `undefined` |
-| `dsColor`   | `ds-color`  | Define a cor do componente.      | `string \| undefined`                                 | `undefined` |
-| `dsName`    | `ds-name`   | Define a variação do componente. | `"definition" \| undefined`                           | `undefined` |
-| `placement` | `placement` | TODO                             | `"bottom" \| "left" \| "right" \| "top" \| undefined` | `undefined` |
-| `position`  | `position`  | TODO                             | `"center" \| "end" \| "start" \| undefined`           | `undefined` |
-| `titulo`    | `titulo`    | TODO                             | `string \| undefined`                                 | `undefined` |
+| Property    | Attribute   | Description | Type                                                  | Default     |
+| ----------- | ----------- | ----------- | ----------------------------------------------------- | ----------- |
+| `collapsed` | `collapsed` | TODO        | `boolean`                                             | `true`      |
+| `content`   | `content`   | TODO        | `string \| undefined`                                 | `undefined` |
+| `dsColor`   | `ds-color`  | TODO        | `string \| undefined`                                 | `undefined` |
+| `dsName`    | `ds-name`   | TODO        | `"definition" \| undefined`                           | `undefined` |
+| `placement` | `placement` | TODO        | `"bottom" \| "left" \| "right" \| "top" \| undefined` | `undefined` |
+| `position`  | `position`  | TODO        | `"center" \| "end" \| "start" \| undefined`           | `undefined` |
+| `titulo`    | `titulo`    | TODO        | `string \| undefined`                                 | `undefined` |
 
 
 ## Methods

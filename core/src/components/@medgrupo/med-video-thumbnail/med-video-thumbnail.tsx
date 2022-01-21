@@ -10,22 +10,21 @@ import { generateMedColor } from '../../../utils/med-theme';
 export class MedVideoThumbnail {
 
   /**
-    * Define a cor do componente.
+    * TODO
     */
   @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
-    * Define a url do componente.
+    * TODO
     */
- @Prop({ reflect: true }) url?: string;
+  @Prop({ reflect: true }) url?: string;
 
   /**
-    * Define o valor da progress bar do componente.
+    * TODO
     */
- @Prop({ reflect: true }) value = 0;
+  @Prop({ reflect: true }) value = 0;
 
   render() {
-
     const {url, value, dsColor} = this;
 
     return (
@@ -39,5 +38,4 @@ export class MedVideoThumbnail {
       </Host>
     );
   }
-
 }

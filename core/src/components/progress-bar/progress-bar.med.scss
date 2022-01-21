@@ -170,7 +170,7 @@
   --height: 10px;
 
   .progress-container {
-    width: 96%;
+    width: calc(100% - 30px);
   }
 
   .progress__percentage {

@@ -16,7 +16,7 @@ export class MedFontZoom {
   /**
    * TODO
    */
-  @Prop() value: MedFontSize = MedFontSize.XS;
+  @Prop({mutable: true}) value: MedFontSize = MedFontSize.XS;
 
   readonly min: number = 1;
   readonly max: number = 5;
@@ -58,6 +58,7 @@ export class MedFontZoom {
         default:
           this.value = MedFontSize.XS;
       }
+
       this.emitter.emit(this.value);
     }
   };

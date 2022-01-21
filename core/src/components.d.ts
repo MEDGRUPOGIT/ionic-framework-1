@@ -3207,19 +3207,19 @@ export namespace Components {
     }
     interface MedCartaoRespostaItem {
         /**
-          * Define o estado do componente para anulado.
+          * TODO
          */
         "anulada": boolean;
         /**
-          * Define o estado do componente para ativo.
+          * TODO
          */
         "ativa": boolean;
         /**
-          * Define a cor do componente.
+          * TODO
          */
         "dsColor"?: MedColor;
         /**
-          * Define o estado do componente para impresso.
+          * TODO
          */
         "impressa": boolean;
     }
@@ -3394,7 +3394,7 @@ export namespace Components {
     }
     interface MedEnunciado {
         /**
-          * Define a variação do componente.
+          * TODO
          */
         "dsName"?: 'skin';
         /**
@@ -3838,7 +3838,7 @@ export namespace Components {
     }
     interface MedTooltip {
         /**
-          * Define o estado do componente.
+          * TODO
          */
         "collapsed": boolean;
         /**
@@ -3846,11 +3846,11 @@ export namespace Components {
          */
         "content"?: string;
         /**
-          * Define a cor do componente.
+          * TODO
          */
         "dsColor"?: MedColor;
         /**
-          * Define a variação do componente.
+          * TODO
          */
         "dsName"?: 'definition';
         /**
@@ -3892,29 +3892,29 @@ export namespace Components {
     }
     interface MedVideoThumbnail {
         /**
-          * Define a cor do componente.
+          * TODO
          */
         "dsColor"?: MedColor;
         /**
-          * Define a url do componente.
+          * TODO
          */
         "url"?: string;
         /**
-          * Define o valor da progress bar do componente.
+          * TODO
          */
         "value": number;
     }
     interface MedVote {
         /**
-          * Define o conteúdo de texto do componente.
+          * TODO
          */
         "like": number;
         /**
-          * Define o conteúdo de texto do componente.
+          * TODO
          */
         "titulo"?: string | undefined;
         /**
-          * Define o conteúdo de texto do componente.
+          * TODO
          */
         "unlike": number;
     }
@@ -8328,19 +8328,19 @@ declare namespace LocalJSX {
     }
     interface MedCartaoRespostaItem {
         /**
-          * Define o estado do componente para anulado.
+          * TODO
          */
         "anulada"?: boolean;
         /**
-          * Define o estado do componente para ativo.
+          * TODO
          */
         "ativa"?: boolean;
         /**
-          * Define a cor do componente.
+          * TODO
          */
         "dsColor"?: MedColor;
         /**
-          * Define o estado do componente para impresso.
+          * TODO
          */
         "impressa"?: boolean;
     }
@@ -8521,7 +8521,7 @@ declare namespace LocalJSX {
     }
     interface MedEnunciado {
         /**
-          * Define a variação do componente.
+          * TODO
          */
         "dsName"?: 'skin';
         /**
@@ -8977,7 +8977,7 @@ declare namespace LocalJSX {
     }
     interface MedTooltip {
         /**
-          * Define o estado do componente.
+          * TODO
          */
         "collapsed"?: boolean;
         /**
@@ -8985,11 +8985,11 @@ declare namespace LocalJSX {
          */
         "content"?: string;
         /**
-          * Define a cor do componente.
+          * TODO
          */
         "dsColor"?: MedColor;
         /**
-          * Define a variação do componente.
+          * TODO
          */
         "dsName"?: 'definition';
         /**
@@ -9027,29 +9027,29 @@ declare namespace LocalJSX {
     }
     interface MedVideoThumbnail {
         /**
-          * Define a cor do componente.
+          * TODO
          */
         "dsColor"?: MedColor;
         /**
-          * Define a url do componente.
+          * TODO
          */
         "url"?: string;
         /**
-          * Define o valor da progress bar do componente.
+          * TODO
          */
         "value"?: number;
     }
     interface MedVote {
         /**
-          * Define o conteúdo de texto do componente.
+          * TODO
          */
         "like"?: number;
         /**
-          * Define o conteúdo de texto do componente.
+          * TODO
          */
         "titulo"?: string | undefined;
         /**
-          * Define o conteúdo de texto do componente.
+          * TODO
          */
         "unlike"?: number;
     }

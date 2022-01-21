@@ -145,7 +145,7 @@ export class MedAlternativasB implements MedAlternativasInternoInterface {
                           <img class='image-container__image' src={alternativa[this.keyImagem]} />
 
                           <div class='image-container__button'>
-                            <ion-icon name="med-expand image-container__icon"></ion-icon>
+                            <ion-icon class="med-icon image-container__icon" name="med-busca"></ion-icon>
                           </div>
                         </div>
                       </div>

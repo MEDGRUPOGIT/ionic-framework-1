@@ -1,13 +1,11 @@
-@import "../../../../../templarios/abstracts";
-
 :host(.med-vote) {
   display: block;
-  padding-top: var(--med-spacing-stack-base);
+  padding-top: 16px;
 
   .med-vote__row {
     display: flex;
     justify-content: space-between;
-    padding-bottom: var(--med-spacing-stack-base);
+    padding-bottom: 16px;
     align-items: center;
   }
 
@@ -29,9 +27,9 @@
   }
 
   .med-vote__heading {
-    font-size: var(--med-font-size-sm);
-    line-height: var(--med-line-height-compressed);
-    font-weight: var(--med-font-weight-semibold);
+    font-size: 20px;
+    line-height: 100%;
+    font-weight: 600;
     color: #{color('neutral', '10')};
     margin: 0;
   }
@@ -39,25 +37,25 @@
   .med-vote__badge {
     display: flex;
     height: 26px;
-    border-radius: var(--med-border-radius-md);
-    font-size: var(--med-font-size-xs);
-    line-height: var(--med-line-height-compressed);
+    border-radius: 16px;
+    font-size: 16px;
+    line-height: 100%;
     justify-content: center;
     align-items: center;
-    font-weight: var(--med-font-weight-semibold);
+    font-weight: 600;
     width: 100%;
-    padding: 0 var(--med-spacing-inline-xxxs);
+    padding: 0 8px;
 
     &--cabe {
       background-color: color('feedback', 'success');
       color: color('feedback', 'success', 'contrast');
-      margin-left: var(--med-spacing-inline-xxxs);
+      margin-left: 8px;
     }
 
     &--nao-cabe {
       background-color: color('feedback', 'warning');
       color: color('feedback', 'warning', 'contrast');
-      margin-right: var(--med-spacing-inline-xxxs);
+      margin-right: 8px;
     }
   }
 
@@ -66,12 +64,12 @@
 
     &--cabe {
       background-color: color('feedback', 'success');
-      margin-right: var(--med-spacing-inline-nano);
+      margin-right: 4px;
     }
 
     &--nao-cabe {
       background-color: color('feedback', 'warning');
-      margin-left: var(--med-spacing-inline-nano);
+      margin-left: 4px;
     }
   }
 }

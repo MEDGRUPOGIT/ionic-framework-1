@@ -1,44 +1,42 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
-import { MedColor } from '../../../../constants';
+import { MedColors } from "../../../../../global/templarios/color.enum";
 
 export default {
-  title: 'Components/Team/Questões/Cartão Resposta Item',
+  title: 'Components/Team/Questões/Cartão Resposta/Item',
   decorators: [withDesign],
 };
 
-const Template = ({dsColor, anulada, impressa, ativa}) => {
+const Template = ({dsColor, ativa, impressa, anulada, slot}) => {
   return html`
-      <ion-app>
-        <ion-content>
-          <div class="flex-center">
-
-            <!-- component -->
-            <med-cartao-resposta-lista>
-              <med-cartao-resposta-item .dsColor=${dsColor} ?anulada=${anulada} ?impressa=${impressa} ?ativa=${ativa}>01</med-cartao-resposta-item>
-            </med-cartao-resposta-lista>
-            <!-- component -->
-
-          </div>
-        </ion-content>
-      </ion-app>
-    `
+    <ion-app>
+      <ion-content>
+        <!-- component -->
+        <med-cartao-resposta-lista>
+          <med-cartao-resposta-item .dsColor=${dsColor} ?ativa=${ativa} ?impressa=${impressa} ?anulada=${anulada}>
+            ${slot}
+          </med-cartao-resposta-item>
+        </med-cartao-resposta-lista>
+        <!-- component -->
+      </ion-content>
+    </ion-app>
+  `
 }
 
-export const Default = Template.bind({});
-Default.parameters = {
+export const Item = Template.bind({});
+Item.parameters = {
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/zdbyAa3XpX3loOjJEaXc6E/Quest%C3%B5es?node-id=802%3A477',
+    url: '',
   },
 }
-Default.argTypes = {
+Item.argTypes = {
   dsColor: {
-    options: MedColor,
+    options: Object.values(MedColors),
     control: { type: 'select'},
     description: "Define a cor do componente.",
     table: {
-      type:  { summary: 'MedColor' },
+      type:  { summary: Object.values(MedColors).join(' |') },
       defaultValue: { summary: 'undefined' },
     },
   },
@@ -68,5 +66,9 @@ Default.argTypes = {
       type:  { summary: 'boolean' },
       defaultValue: { summary: 'undefined' },
     },
+  },
+  slot: {
+    control: { type: 'text' },
+    defaultValue: '01',
   },
 };

@@ -11,6 +11,12 @@
   --storybook-color-code: #484d5b;
 }
 
+.full-height-center {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
 html {
   --ion-font-family: fsemeric;
 

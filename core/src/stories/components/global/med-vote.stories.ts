@@ -6,16 +6,16 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ titulo: titulo, like: like, unlike: unlike }) => {
+const Template = ({ titulo, like,  unlike }) => {
   return html`
-    <ion-app class="storybook-only">
-      <div class="storybook-only__container">
+    <ion-app>
+      <ion-content>
 
-        <!-- component -->
+        <!-- component markdown -->
         <med-vote .titulo=${titulo} .like=${like} .unlike=${unlike}></med-vote>
-        <!-- component -->
+        <!-- component markdown -->
 
-      </div>
+      <ion-content>
     </ion-app>
   `
 }
@@ -24,7 +24,7 @@ export const Vote = Template.bind({});
 Vote.parameters = {
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/Componentes?node-id=5404%3A38994',
+    url: '',
   },
 }
 Vote.argTypes = {
@@ -32,15 +32,27 @@ Vote.argTypes = {
     control: { type: 'text' },
     description: "Define o titulo do componente.",
     defaultValue: 'Cabe recurso?',
+    table: {
+      type:  { summary: 'String' },
+      defaultValue: { summary: 'Cabe recurso?' },
+    },
   },
   like: {
     control: { type: 'text' },
     description: "Define a quantidade de recursos que cabem.",
     defaultValue: '2',
+    table: {
+      type:  { summary: 'String' },
+      defaultValue: { summary: 'undefined' },
+    },
   },
   unlike: {
     control: { type: 'text' },
-    description: "Define a quantidade de recursos que cabem.",
+    description: "Define a quantidade de recursos que não cabem.",
     defaultValue: '4',
+    table: {
+      type:  { summary: 'String' },
+      defaultValue: { summary: 'undefined' },
+    },
   },
 };

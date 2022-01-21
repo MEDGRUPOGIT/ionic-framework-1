@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property  | Attribute  | Description                                   | Type                  | Default     |
-| --------- | ---------- | --------------------------------------------- | --------------------- | ----------- |
-| `dsColor` | `ds-color` | Define a cor do componente.                   | `string \| undefined` | `undefined` |
-| `url`     | `url`      | Define a url do componente.                   | `string \| undefined` | `undefined` |
-| `value`   | `value`    | Define o valor da progress bar do componente. | `number`              | `0`         |
+| Property  | Attribute  | Description | Type                  | Default     |
+| --------- | ---------- | ----------- | --------------------- | ----------- |
+| `dsColor` | `ds-color` | TODO        | `string \| undefined` | `undefined` |
+| `url`     | `url`      | TODO        | `string \| undefined` | `undefined` |
+| `value`   | `value`    | TODO        | `number`              | `0`         |
 
 
 ## Dependencies

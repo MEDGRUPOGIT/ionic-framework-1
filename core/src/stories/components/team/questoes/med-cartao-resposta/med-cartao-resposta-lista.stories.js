@@ -2,12 +2,11 @@ import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
 
 export default {
-  title: 'Components/Team/Questões/Cartão Resposta Lista',
+  title: 'Components/Team/Questões/Cartão Resposta/Lista',
   decorators: [withDesign],
 };
 
-const TemplateDefault = () => {
-
+const Template = () => {
   const generateCartaoResposta = () => {
     let cartaoResposta = [];
 
@@ -31,6 +30,7 @@ const TemplateDefault = () => {
         })
       }
     }
+
     return cartaoResposta;
   };
 
@@ -38,30 +38,26 @@ const TemplateDefault = () => {
 
   const itemTemplates = [];
   for (const item of items) {
-    itemTemplates.push(html`<med-cartao-resposta-item ?ativa=${item.ativa} .dsColor=${item.color} ?impressa=${item.impressa} ?anulada=${item.anulada}>${item.index}</med-cartao-resposta-item>`);
+    itemTemplates.push(html`<med-cartao-resposta-item .dsColor=${item.color} ?ativa=${item.ativa} ?impressa=${item.impressa} ?anulada=${item.anulada}>${item.index}</med-cartao-resposta-item>`);
   }
 
   return html`
     <ion-app>
       <ion-content>
-        <div class="flex-center">
 
-          <!-- component -->
-          <med-cartao-resposta-lista>
-            ${itemTemplates}
-          </med-cartao-resposta-lista>
-          <!-- component -->
+        <!-- component markdown -->
+        <med-cartao-resposta-lista> ${itemTemplates} </med-cartao-resposta-lista>
+        <!-- component markdown -->
 
-        </div>
       </ion-content>
     </ion-app>
-    `
+  `
 }
 
-export const CartaoRespostaLista = TemplateDefault.bind({});
-CartaoRespostaLista.parameters = {
+export const Lista = Template.bind({});
+Lista.parameters = {
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/zdbyAa3XpX3loOjJEaXc6E/Quest%C3%B5es?node-id=802%3A477',
+    url: '',
   },
 }

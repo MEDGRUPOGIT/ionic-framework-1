@@ -9,13 +9,13 @@ import { MedColor } from '../../../../interface';
 })
 export class MedTooltip {
   /**
-   * Define a variação do componente.
+   * TODO
    */
   @Prop() dsName?: 'definition';
 
   /**
-    * Define a cor do componente.
-    */
+   * TODO
+   */
   @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
@@ -39,7 +39,7 @@ export class MedTooltip {
   @Prop({ reflect: true }) content?: string;
 
   /**
-   * Define o estado do componente.
+   * TODO
    */
   @Prop({ reflect: true, mutable: true }) collapsed = true;
 

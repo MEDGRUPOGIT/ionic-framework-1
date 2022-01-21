@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property               | Attribute | Description                      | Type                  | Default     |
-| ---------------------- | --------- | -------------------------------- | --------------------- | ----------- |
-| `dsName`               | `ds-name` | Define a variação do componente. | `"skin" \| undefined` | `undefined` |
-| `imagens` _(required)_ | `imagens` | TODO                             | `string \| string[]`  | `undefined` |
+| Property               | Attribute | Description | Type                  | Default     |
+| ---------------------- | --------- | ----------- | --------------------- | ----------- |
+| `dsName`               | `ds-name` | TODO        | `"skin" \| undefined` | `undefined` |
+| `imagens` _(required)_ | `imagens` | TODO        | `string \| string[]`  | `undefined` |
 
 
 ## Events

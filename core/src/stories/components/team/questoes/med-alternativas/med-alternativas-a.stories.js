@@ -3,11 +3,11 @@ import { withDesign } from 'storybook-addon-designs';
 import { MedColor } from '../../../../constants';
 
 export default {
-  title: 'Components/Team/Questões/Alternativas A',
+  title: 'Components/Team/Questões/Alternativas/Skins/Skin A',
   decorators: [withDesign],
 };
 
-const TemplateDefault = ({ alternativas, dsColor }) => {
+const Template = ({ alternativas, dsColor }) => {
   const id = Math.random().toString(36).substr(2, 9);
 
   setTimeout(() => {
@@ -22,27 +22,29 @@ const TemplateDefault = ({ alternativas, dsColor }) => {
     <ion-app>
       <ion-content>
 
-        <!-- component -->
-        <med-alternativas-a id=${id} .dsColor=${dsColor}></med-alternativas-a>
-        <!-- component -->
+        <!-- component markdown -->
+        <med-alternativas-a id=${id}></med-alternativas-a>
+        <!-- component markdown -->
 
       </ion-content>
     </ion-app>
     `
   }
 
-export const Alternativas = TemplateDefault.bind({});
-Alternativas.parameters = {
+export const SkinA = Template.bind({});
+SkinA.parameters = {
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/zdbyAa3XpX3loOjJEaXc6E/Quest%C3%B5es?node-id=313%3A107',
+    url: '',
   },
   actions: {
-    handles: ['medChange','medClick'],
+    handles: ['medChange','medClick', 'medGalleryRequest', 'medRiscada'],
   },
 }
-Alternativas.argTypes = {
+SkinA.argTypes = {
   alternativas: {
+    control: { type: 'array' },
+    description: "Define a listagem de alternativas. **OBS:** paa visualizar as alternativas com imagem basta colocar a string 'https://via.placeholder.com/500' no atributo **alternativas[0]['Imagem']** no objeto ao lado.",
     defaultValue: {
       alternativas: [
         {
@@ -82,19 +84,8 @@ Alternativas.argTypes = {
       mostraResposta: true,
       permiteRiscar: true
     },
-    control: { type: 'array' },
-    description: 'Define a listagem de alternativas.',
     table: {
-      type:  { summary: 'MedAlternativaInterface[]' },
-      defaultValue: { summary: 'undefined' },
-    },
-  },
-  dsColor: {
-    options: MedColor,
-    control: { type: 'select'},
-    description: "Define a cor do componente.",
-    table: {
-      type:  { summary: 'MedColor' },
+      type:  { summary: 'MedAlternativasInterface' },
       defaultValue: { summary: 'undefined' },
     },
   },
