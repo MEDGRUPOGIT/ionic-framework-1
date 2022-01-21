@@ -1,15 +1,13 @@
-@import "../../../../../templarios/abstracts";
-
 :host {
   --background: #{color('neutral', '2')};
   --center-width: auto;
-  --center-margin: 0 var(--spacing-inline-base);
+  --center-margin: 0 16px;
 
-  padding: var(--med-spacing-squish-xs);
+  padding: 8px 16px;
   background: var(--background);
   min-height: 48px;
   height: auto;
-  box-shadow: var(--med-shadow-level-1);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.2);
   display: block;
   display: flex;
   align-items: center;
@@ -34,11 +32,6 @@
   stroke: #{color('neutral', '2', 'contrast')};
 }
 
-/* ::slotted(ion-button) {
-  stroke: #{color('neutral', '2', 'contrast')};
-}
- */
-
 // ////////////////////
 // color
 // ////////////////////
@@ -51,11 +44,6 @@
   color: #{color('neutral', '2', 'contrast')};
   stroke: #{color('neutral', '2', 'contrast')};
 }
-
-/* :host(.med-color) ::slotted(ion-button) {
-  stroke: #{curr-color('color', '1', 'contrast')};
-} */
-
 
 // ////////////////////
 // neutral
@@ -70,10 +58,6 @@
   stroke: #{color('neutral', '2', 'contrast')};
 }
 
-/* :host(.med-color-neutral) ::slotted(ion-button) {
-  stroke: #{curr-color('neutral', null, 'contrast')};
-} */
-
 // //////////
 // feedback
 // //////////
@@ -86,10 +70,6 @@
   color: #{color('feedback', '2', 'contrast')};
   stroke: #{color('neutral', '2', 'contrast')};
 }
-
-/* :host(.med-color-feedback) ::slotted(ion-button) {
-  stroke: #{curr-color('feedback', null, 'contrast')};
-} */
 
 //
 // slotted

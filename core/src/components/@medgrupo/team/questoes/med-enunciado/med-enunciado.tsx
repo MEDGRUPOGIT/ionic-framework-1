@@ -19,7 +19,7 @@ export class MedEnunciado {
   @Event() medGalleryRequest!: EventEmitter<string>;
 
   /**
-   * Define a variação do componente.
+   * TODO
    */
   @Prop({ reflect: true }) dsName?: 'skin';
 

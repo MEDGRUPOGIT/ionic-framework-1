@@ -10,23 +10,23 @@ import { generateMedColor } from '../../../../../utils/med-theme';
 export class MedCartaoRespostaItem {
 
   /**
-    * Define a cor do componente.
-    */
+   * TODO
+   */
   @Prop({ reflect: true }) dsColor?: MedColor;
 
    /**
-    * Define o estado do componente para anulado.
-    */
+   * TODO
+   */
   @Prop({ reflect: true }) anulada = false;
 
   /**
-    * Define o estado do componente para impresso.
-    */
+   * TODO
+   */
   @Prop({ reflect: true }) impressa = false;
 
   /**
-    * Define o estado do componente para ativo.
-    */
+   * TODO
+   */
   @Prop({ reflect: true }) ativa = false;
 
   render() {

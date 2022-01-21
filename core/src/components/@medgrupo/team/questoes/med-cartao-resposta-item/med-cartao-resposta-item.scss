@@ -1,11 +1,8 @@
-@import "../../../../../../templarios/abstracts";
 @import "../../../../../themes/ionic.globals.scss";
 
 :host {
   --border-width: var(--med-border-width-hairline);
   --border-style: solid;
-  // --border-color: #{color('neutral', '10', null, var(--med-opacity-level-light))};
-  // --color: #{color('neutral', '10', null, var(--med-opacity-level-semiopaque))};
   --border-color: #{color('neutral', '3')};
   --color: #{color('neutral', '6')};
   --spacing: var(--med-spacing-inset-nano);
@@ -103,7 +100,7 @@ slot[name] {
 
 @media (any-hover: hover) {
   :host(:hover) {
-    --background: #{color('neutral', '10', null, var(--med-opacity-level-light))};
+    --background: #{color('neutral', '10', null, 0.16)};
     --border-color: #{color('neutral', '10')};
   }
 }
@@ -114,8 +111,8 @@ slot[name] {
 
 :host(.med-cartao-resposta-item--ativa) {
   --background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(50, 210, 243, 0.3) 100%);
-  --font-weight: var(--med-font-weight-bold);
-  box-shadow: var(--med-shadow-level-3);
+  --font-weight: 700;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.14), 0 3px 4px rgba(0, 0, 0, 0.12), 0 1px 8px rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid #32d2f3;
 }
 

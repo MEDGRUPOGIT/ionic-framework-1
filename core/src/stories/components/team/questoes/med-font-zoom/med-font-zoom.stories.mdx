@@ -4,36 +4,28 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 # Font Zoom
 
-Documentação auxiliar ion-popover: **https://ionicframework.com/docs/api/popover**
-
-**As propriedades marcadas com ⚠️ são extritamente necessárias.**
-
 ```
-  async presentPopover(ev: any) {
-    const popover = await popoverController.create({
-      component: 'med-font-zoom', ⚠️
-      cssClass: 'med-popover', ⚠️
-      mode: 'ios', ⚠️
-      event: ev, ⚠️
-      showBackdrop: true, ⚠️
+async (ev, value) => {
+  popoverController
+    .create({
+      component: "med-font-zoom",
+      cssClass: "med-popover med-popover--font-zoom",
       componentProps: {
         value,
-        emitter: { ⚠️
+        emitter: {
           emit: (values) => {
-            console.log(values)
+            action("emitter")(values);
           },
         },
       },
+      mode: "ios",
+      showBackdrop: true,
+      event: ev,
+    })
+    .then((popover) => {
+      currentPopover = popover;
+      call = true;
+      popover.present();
     });
-    await popover.present();
-  }
-```
-
-## componentProps
-
-```
-componentProps: {
-  emitter!: { emit: (value: MedFontSize) => void }, // Output com as mudanças de valor.
-  value?: MedFontSize = MedFontSize.XS // Valor atual do range
-},
+};
 ```

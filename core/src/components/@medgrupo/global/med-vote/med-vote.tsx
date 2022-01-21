@@ -9,18 +9,18 @@ import { createColorClasses } from '../../../../utils/theme';
 export class MedVote {
 
   /**
-    * Define o conteúdo de texto do componente.
-    */
+   * TODO
+   */
   @Prop() titulo? = 'Cabe recurso?';
 
   /**
-    * Define o conteúdo de texto do componente.
-    */
+   * TODO
+   */
   @Prop() like: number = 0;
 
   /**
-    * Define o conteúdo de texto do componente.
-    */
+   * TODO
+   */
   @Prop() unlike: number = 0;
 
   render() {
