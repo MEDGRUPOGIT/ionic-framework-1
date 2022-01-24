@@ -28,20 +28,27 @@
   &__info-container {
     display: flex;
     align-items: center;
-    padding-top: 4px;
+    flex-wrap: wrap;
   }
 
   &__icon {
     stroke: color('neutral', '8');
+    padding-top: 4px;
+  }
+
+  &__container-fix {
+    display: flex;
   }
 
   &__subtitulo {
     margin: 0 8px;
+    padding-top: 4px;
     stroke: color('neutral', '8');
   }
 
   &__hora {
     color: color('neutral', '8');
+    padding-top: 4px;
   }
 
   &__data {
