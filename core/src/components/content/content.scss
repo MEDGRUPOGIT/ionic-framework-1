@@ -54,46 +54,6 @@
   contain: size style;
 }
 
-:host main {
-  ::-webkit-scrollbar {
-    scrollbar-width: var(--style);
-    padding-bottom: var(--padding);
-    height: var(--height);
-    width: var(--width);
-    display: block !important;
-  }
-  ::-webkit-scrollbar-track {
-    background: hsl(var(--med-color-neutral-2));
-  }
-  ::-webkit-scrollbar-thumb {
-    background: hsl(var(--med-color-neutral-3));
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--med-color-neutral-4));
-  }
-
-  &::-webkit-scrollbar {
-    --style: thin;
-    --width: 7px;
-    --height: 7px;
-    --padding: 10px;
-    scrollbar-width: var(--style);
-    padding-bottom: var(--padding);
-    height: var(--height);
-    width: var(--width);
-    display: block !important;
-  }
-  &::-webkit-scrollbar-track {
-    background: hsl(var(--med-color-neutral-2));
-  }
-  &::-webkit-scrollbar-thumb {
-    background: hsl(var(--med-color-neutral-3));
-  }
-  &::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--med-color-neutral-4));
-  }
-}
-
 :host(.ion-color) .inner-scroll {
   background: current-color(base);
   color: current-color(contrast);
