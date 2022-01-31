@@ -1,22 +1,13 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
 
-
 export default {
-  title: 'Components/Core/Date Time',
+  title: 'Components/Core/Nav Item',
   decorators: [withDesign],
 };
 
-const Template = ({noStyle}) => {
+const Template = ({ active, iconOnly }) => {
   return html`
-    <style>
-      /* !NÃO UTILIZAR! Apenas para estória */
-        .middle {
-          padding: 0 16px;
-        }
-      /* !NÃO UTILIZAR! Apenas para estória */
-    </style>
-
     <ion-app>
       <ion-content>
         <ion-grid>
@@ -24,16 +15,7 @@ const Template = ({noStyle}) => {
             <ion-col>
 
               <!-- component -->
-              <med-input>
-                <med-type tag="label" token="p14" slot="label">Data de Início</med-type>
-                <ion-datetime
-                  picker-option="{cssClass: 'med-datetime'}"
-                  ?no-style=${noStyle}
-                  mode="ios"
-                  placeholder="22/12/2021"
-                  slot="input">
-                </ion-datetime>
-              </med-input>
+              <med-nav-item text="Aulas" icon="med-duvidas" ?active=${active}></med-nav-item>
               <!-- component -->
 
             </ion-col>
@@ -52,13 +34,22 @@ Default.parameters = {
   },
 }
 Default.argTypes = {
-  noStyle: {
+  active: {
     active: false,
     control: { type: "boolean" },
-    description: "Remove a seta.",
+    description: "Define o estado do componente.",
     table: {
       type: { summary: "boolean" },
       defaultValue: { summary: "undefined" },
+    },
+  },
+  iconOnly: {
+    defaultValue: false,
+    control: { type: 'boolean' },
+    description: 'Define o estado do componente.',
+    table: {
+      type:  { summary: 'boolean' },
+      defaultValue: { summary: 'undefined' },
     },
   },
 }

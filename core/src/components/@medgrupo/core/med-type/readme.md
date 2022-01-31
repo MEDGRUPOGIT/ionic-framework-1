@@ -26,6 +26,9 @@
  - [med-chart-bar-horizontal](../med-chart-bar-horizontal)
  - [med-chart-categoria](../../compositions/med-chart-categoria)
  - [med-check-card](../../compositions/med-check-card)
+ - [med-nav](../med-nav)
+ - [med-nav-accordion](../med-nav-accordion)
+ - [med-nav-item](../med-nav-item)
  - [med-piechart](../med-piechart)
  - [med-rate-aula](../../global/med-rate-aula)
  - [med-semana](../../compositions/med-semana)
@@ -42,6 +45,9 @@ graph TD;
   med-chart-bar-horizontal --> med-type
   med-chart-categoria --> med-type
   med-check-card --> med-type
+  med-nav --> med-type
+  med-nav-accordion --> med-type
+  med-nav-item --> med-type
   med-piechart --> med-type
   med-rate-aula --> med-type
   med-semana --> med-type

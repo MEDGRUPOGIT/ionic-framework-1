@@ -1,0 +1,94 @@
+@import '../../../../themes/ionic.mixins.scss';
+
+:host {
+  --stroke: #{color('neutral', '7')};
+  --margin-left-text: 16px;
+}
+
+:host {
+  display: block;
+}
+
+.med-nav-item {
+  &__button {
+    @include font-smoothing();
+    @include text-inherit();
+    margin: 0;
+    padding: 8px;
+    background: var(--background);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 300ms ease-out;
+    border: 0;
+    width: 100%;
+
+    &::-moz-focus-inner {
+      border: 0;
+    }
+  }
+
+  &__icon {
+    font-size: 24px;
+    stroke: var(--stroke);
+    transition: stroke 300ms ease-out;
+  }
+
+  &__text {
+    --color: #{color('neutral', '7')};
+    margin-left: var(--margin-left-text);
+  }
+}
+
+//////////////////////////////
+// state
+//////////////////////////////
+
+:host(.med-nav-item--active) {
+  --background: #{color('brand', '1')};
+  --stroke: #{color('neutral', '10')};
+}
+
+:host(.med-nav-item--active) .med-nav-item__text {
+  --color: #{color('neutral', '10')};
+}
+
+@media (any-hover: hover) {
+  :host(:hover) {
+    --background: #{color('neutral', '2')};
+    --stroke: #{color('neutral', '10')};
+  }
+
+  :host(:hover) .med-nav-item__text {
+    --color: #{color('neutral', '10')};
+  }
+}
+
+//////////////////////////////
+// colors
+//////////////////////////////
+
+////////////////////
+// color
+////////////////////
+
+:host(.med-color.active) {
+  --background: #{curr-color('color', '4')};
+}
+
+////////////////////
+// neutral
+////////////////////
+
+:host(.med-color-neutral.active) {
+  --background: #{curr-color('neutral')};
+}
+
+////////////////////
+// feedback
+////////////////////
+
+:host(.med-color-feedback.active) {
+  --background: #{curr-color('feedback')};
+}

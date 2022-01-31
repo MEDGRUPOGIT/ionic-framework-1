@@ -1197,6 +1197,36 @@ export const MedMessage = /*@__PURE__*/ defineContainer<JSX.MedMessage>('med-mes
 export const MedMessageList = /*@__PURE__*/ defineContainer<JSX.MedMessageList>('med-message-list');
 
 
+export const MedNav = /*@__PURE__*/ defineContainer<JSX.MedNav>('med-nav', [
+  'dsColor'
+]);
+
+
+export const MedNavAccordion = /*@__PURE__*/ defineContainer<JSX.MedNavAccordion>('med-nav-accordion', [
+  'dsColor'
+]);
+
+
+export const MedNavItem = /*@__PURE__*/ defineContainer<JSX.MedNavItem>('med-nav-item', [
+  'dsColor',
+  'active',
+  'text',
+  'icon',
+  'disabled',
+  'routerDirection',
+  'routerAnimation',
+  'iconOnly',
+  'medFocus',
+  'medBlur',
+  'medClick'
+]);
+
+
+export const MedNavSimple = /*@__PURE__*/ defineContainer<JSX.MedNavSimple>('med-nav-simple', [
+  'dsColor'
+]);
+
+
 export const MedNavbar = /*@__PURE__*/ defineContainer<JSX.MedNavbar>('med-navbar', [
   'dsColor',
   'dsName'

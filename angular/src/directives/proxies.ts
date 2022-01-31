@@ -1406,6 +1406,54 @@ export class MedMessageList {
     this.el = r.nativeElement;
   }
 }
+export declare interface MedNav extends Components.MedNav {
+}
+@ProxyCmp({ inputs: ["dsColor"] })
+@Component({ selector: "med-nav", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor"] })
+export class MedNav {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface MedNavAccordion extends Components.MedNavAccordion {
+}
+@ProxyCmp({ inputs: ["dsColor"] })
+@Component({ selector: "med-nav-accordion", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor"] })
+export class MedNavAccordion {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface MedNavItem extends Components.MedNavItem {
+}
+@ProxyCmp({ inputs: ["active", "disabled", "dsColor", "icon", "iconOnly", "routerAnimation", "routerDirection", "text"] })
+@Component({ selector: "med-nav-item", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["active", "disabled", "dsColor", "icon", "iconOnly", "routerAnimation", "routerDirection", "text"] })
+export class MedNavItem {
+  medFocus!: EventEmitter<CustomEvent>;
+  medBlur!: EventEmitter<CustomEvent>;
+  medClick!: EventEmitter<CustomEvent>;
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ["medFocus", "medBlur", "medClick"]);
+  }
+}
+export declare interface MedNavSimple extends Components.MedNavSimple {
+}
+@ProxyCmp({ inputs: ["dsColor"] })
+@Component({ selector: "med-nav-simple", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor"] })
+export class MedNavSimple {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedNavbar extends Components.MedNavbar {
 }
 @ProxyCmp({ inputs: ["dsColor", "dsName"] })

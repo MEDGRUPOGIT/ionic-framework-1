@@ -3578,6 +3578,55 @@ export namespace Components {
     }
     interface MedMessageList {
     }
+    interface MedNav {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+    }
+    interface MedNavAccordion {
+        "dsColor"?: MedColor;
+    }
+    interface MedNavItem {
+        /**
+          * TODO.
+         */
+        "active": boolean;
+        /**
+          * TODO.
+         */
+        "disabled": boolean;
+        /**
+          * TODO.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * TODO.
+         */
+        "icon"?: string;
+        /**
+          * TODO.
+         */
+        "iconOnly": boolean;
+        /**
+          * TODO.
+         */
+        "routerAnimation": AnimationBuilder | undefined;
+        /**
+          * TODO.
+         */
+        "routerDirection": RouterDirection;
+        /**
+          * TODO.
+         */
+        "text"?: string;
+    }
+    interface MedNavSimple {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+    }
     interface MedNavbar {
         /**
           * Define a cor do componente.
@@ -4726,6 +4775,30 @@ declare global {
         prototype: HTMLMedMessageListElement;
         new (): HTMLMedMessageListElement;
     };
+    interface HTMLMedNavElement extends Components.MedNav, HTMLStencilElement {
+    }
+    var HTMLMedNavElement: {
+        prototype: HTMLMedNavElement;
+        new (): HTMLMedNavElement;
+    };
+    interface HTMLMedNavAccordionElement extends Components.MedNavAccordion, HTMLStencilElement {
+    }
+    var HTMLMedNavAccordionElement: {
+        prototype: HTMLMedNavAccordionElement;
+        new (): HTMLMedNavAccordionElement;
+    };
+    interface HTMLMedNavItemElement extends Components.MedNavItem, HTMLStencilElement {
+    }
+    var HTMLMedNavItemElement: {
+        prototype: HTMLMedNavItemElement;
+        new (): HTMLMedNavItemElement;
+    };
+    interface HTMLMedNavSimpleElement extends Components.MedNavSimple, HTMLStencilElement {
+    }
+    var HTMLMedNavSimpleElement: {
+        prototype: HTMLMedNavSimpleElement;
+        new (): HTMLMedNavSimpleElement;
+    };
     interface HTMLMedNavbarElement extends Components.MedNavbar, HTMLStencilElement {
     }
     var HTMLMedNavbarElement: {
@@ -5027,6 +5100,10 @@ declare global {
         "med-list-item-accordion": HTMLMedListItemAccordionElement;
         "med-message": HTMLMedMessageElement;
         "med-message-list": HTMLMedMessageListElement;
+        "med-nav": HTMLMedNavElement;
+        "med-nav-accordion": HTMLMedNavAccordionElement;
+        "med-nav-item": HTMLMedNavItemElement;
+        "med-nav-simple": HTMLMedNavSimpleElement;
         "med-navbar": HTMLMedNavbarElement;
         "med-offline": HTMLMedOfflineElement;
         "med-option": HTMLMedOptionElement;
@@ -8713,6 +8790,67 @@ declare namespace LocalJSX {
     }
     interface MedMessageList {
     }
+    interface MedNav {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+    }
+    interface MedNavAccordion {
+        "dsColor"?: MedColor;
+    }
+    interface MedNavItem {
+        /**
+          * TODO.
+         */
+        "active"?: boolean;
+        /**
+          * TODO.
+         */
+        "disabled"?: boolean;
+        /**
+          * TODO.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * TODO.
+         */
+        "icon"?: string;
+        /**
+          * TODO.
+         */
+        "iconOnly"?: boolean;
+        /**
+          * TODO.
+         */
+        "onMedBlur"?: (event: CustomEvent<void>) => void;
+        /**
+          * TODO.
+         */
+        "onMedClick"?: (event: CustomEvent<void>) => void;
+        /**
+          * TODO.
+         */
+        "onMedFocus"?: (event: CustomEvent<void>) => void;
+        /**
+          * TODO.
+         */
+        "routerAnimation"?: AnimationBuilder | undefined;
+        /**
+          * TODO.
+         */
+        "routerDirection"?: RouterDirection;
+        /**
+          * TODO.
+         */
+        "text"?: string;
+    }
+    interface MedNavSimple {
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+    }
     interface MedNavbar {
         /**
           * Define a cor do componente.
@@ -9204,6 +9342,10 @@ declare namespace LocalJSX {
         "med-list-item-accordion": MedListItemAccordion;
         "med-message": MedMessage;
         "med-message-list": MedMessageList;
+        "med-nav": MedNav;
+        "med-nav-accordion": MedNavAccordion;
+        "med-nav-item": MedNavItem;
+        "med-nav-simple": MedNavSimple;
         "med-navbar": MedNavbar;
         "med-offline": MedOffline;
         "med-option": MedOption;
@@ -9370,6 +9512,10 @@ declare module "@stencil/core" {
             "med-list-item-accordion": LocalJSX.MedListItemAccordion & JSXBase.HTMLAttributes<HTMLMedListItemAccordionElement>;
             "med-message": LocalJSX.MedMessage & JSXBase.HTMLAttributes<HTMLMedMessageElement>;
             "med-message-list": LocalJSX.MedMessageList & JSXBase.HTMLAttributes<HTMLMedMessageListElement>;
+            "med-nav": LocalJSX.MedNav & JSXBase.HTMLAttributes<HTMLMedNavElement>;
+            "med-nav-accordion": LocalJSX.MedNavAccordion & JSXBase.HTMLAttributes<HTMLMedNavAccordionElement>;
+            "med-nav-item": LocalJSX.MedNavItem & JSXBase.HTMLAttributes<HTMLMedNavItemElement>;
+            "med-nav-simple": LocalJSX.MedNavSimple & JSXBase.HTMLAttributes<HTMLMedNavSimpleElement>;
             "med-navbar": LocalJSX.MedNavbar & JSXBase.HTMLAttributes<HTMLMedNavbarElement>;
             "med-offline": LocalJSX.MedOffline & JSXBase.HTMLAttributes<HTMLMedOfflineElement>;
             "med-option": LocalJSX.MedOption & JSXBase.HTMLAttributes<HTMLMedOptionElement>;

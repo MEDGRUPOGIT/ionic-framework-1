@@ -31,6 +31,19 @@
 | `--border-radius` | Define o border-radius do componente.        |
 
 
+## Dependencies
+
+### Used by
+
+ - [med-nav-accordion](../../core/med-nav-accordion)
+
+### Graph
+```mermaid
+graph TD;
+  med-nav-accordion --> med-accordion-list
+  style med-accordion-list fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
