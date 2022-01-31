@@ -1696,6 +1696,28 @@ med-message-list,css-prop,--margin-left-response
 med-message-list,css-prop,--margin-top-message
 med-message-list,css-prop,--margin-top-response
 
+med-nav,shadow
+med-nav,prop,dsColor,string | undefined,undefined,false,true
+
+med-nav-accordion,shadow
+med-nav-accordion,prop,dsColor,string | undefined,undefined,false,true
+
+med-nav-item,shadow
+med-nav-item,prop,active,boolean,false,false,true
+med-nav-item,prop,disabled,boolean,false,false,true
+med-nav-item,prop,dsColor,string | undefined,undefined,false,true
+med-nav-item,prop,icon,string | undefined,undefined,false,true
+med-nav-item,prop,iconOnly,boolean,false,false,true
+med-nav-item,prop,routerAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
+med-nav-item,prop,routerDirection,"back" | "forward" | "root",'forward',false,false
+med-nav-item,prop,text,string | undefined,undefined,false,true
+med-nav-item,event,medBlur,void,true
+med-nav-item,event,medClick,void,true
+med-nav-item,event,medFocus,void,true
+
+med-nav-simple,shadow
+med-nav-simple,prop,dsColor,string | undefined,undefined,false,true
+
 med-navbar,shadow
 med-navbar,prop,dsColor,string | undefined,undefined,false,true
 med-navbar,prop,dsName,"secondary" | "transparent" | undefined,undefined,false,false

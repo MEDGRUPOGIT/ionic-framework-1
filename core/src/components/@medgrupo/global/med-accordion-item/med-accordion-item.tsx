@@ -135,7 +135,6 @@ export class MedAccordionItem implements ComponentInterface {
           'med-accordion-item--background': background,
         })}>
         <div class="med-accordion-item__header" onClick={() => this.onHeaderClick()} ref={(el) => this.header = el as HTMLDivElement}>
-
           <div class="med-accordion-item__header-container">
 
             <div class="header-container__start" onClick={() => this.onClick('start')}>
@@ -154,6 +153,10 @@ export class MedAccordionItem implements ComponentInterface {
 
           <div>
             <slot name="auxiliar"></slot>
+          </div>
+
+          <div onClick={() => this.onClick('middle')}>
+            <slot name="full-header"></slot>
           </div>
         </div>
 

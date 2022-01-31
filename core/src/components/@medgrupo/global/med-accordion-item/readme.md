@@ -38,6 +38,19 @@
 | `"progress"` | Slot destinado a progress-bar.                                      |
 
 
+## Dependencies
+
+### Used by
+
+ - [med-nav-accordion](../../core/med-nav-accordion)
+
+### Graph
+```mermaid
+graph TD;
+  med-nav-accordion --> med-accordion-item
+  style med-accordion-item fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

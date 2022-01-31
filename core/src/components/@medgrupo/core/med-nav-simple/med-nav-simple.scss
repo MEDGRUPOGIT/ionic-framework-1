@@ -1,0 +1,47 @@
+:host {
+  --logo-background: #{color('brand', '2')};
+
+  display: block;
+  overflow: auto;
+  padding-top: calc(24px + var(--ion-safe-area-top, 0));
+  padding-bottom: calc(50px + var(--ion-safe-area-bottom));
+}
+
+.med-nav-simple {
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    min-height: 100vh;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    justify-content: center;
+  }
+
+  &__icon-wrapper {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    background: var(--logo-background);
+    display: flex;
+    justify-content: center;
+  }
+
+  &__icon {
+    stroke: color('neutral', '10');
+  }
+
+  &__item {
+    width: 40px;
+    margin-bottom: 16px;
+    --margin-left-text: 0;
+  }
+}
