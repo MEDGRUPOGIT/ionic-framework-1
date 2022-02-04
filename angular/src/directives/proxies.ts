@@ -372,8 +372,8 @@ export class IonInfiniteScrollContent {
 }
 export declare interface IonInput extends Components.IonInput {
 }
-@ProxyCmp({ inputs: ["accept", "autocapitalize", "autocomplete", "autocorrect", "autofocus", "clearInput", "clearOnEdit", "color", "debounce", "disabled", "enterkeyhint", "inputmode", "max", "maxlength", "min", "minlength", "mode", "multiple", "name", "pattern", "placeholder", "readonly", "required", "size", "spellcheck", "step", "type", "value"], "methods": ["setFocus", "getInputElement"] })
-@Component({ selector: "ion-input", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["accept", "autocapitalize", "autocomplete", "autocorrect", "autofocus", "clearInput", "clearOnEdit", "color", "debounce", "disabled", "enterkeyhint", "inputmode", "max", "maxlength", "min", "minlength", "mode", "multiple", "name", "pattern", "placeholder", "readonly", "required", "size", "spellcheck", "step", "type", "value"] })
+@ProxyCmp({ inputs: ["accept", "autocapitalize", "autocomplete", "autocorrect", "autofocus", "clearInput", "clearOnEdit", "color", "debounce", "disabled", "enterkeyhint", "icon", "inputmode", "max", "maxlength", "min", "minlength", "mode", "multiple", "name", "pattern", "placeholder", "readonly", "required", "size", "spellcheck", "step", "type", "value"], "methods": ["setFocus", "getInputElement"] })
+@Component({ selector: "ion-input", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["accept", "autocapitalize", "autocomplete", "autocorrect", "autofocus", "clearInput", "clearOnEdit", "color", "debounce", "disabled", "enterkeyhint", "icon", "inputmode", "max", "maxlength", "min", "minlength", "mode", "multiple", "name", "pattern", "placeholder", "readonly", "required", "size", "spellcheck", "step", "type", "value"] })
 export class IonInput {
   ionInput!: EventEmitter<CustomEvent>;
   ionChange!: EventEmitter<CustomEvent>;
@@ -1018,6 +1018,17 @@ export class MedAlternativasB {
     proxyOutputs(this, this.el, ["medChange", "medRiscada", "medGalleryRequest"]);
   }
 }
+export declare interface MedAulaProfessor extends Components.MedAulaProfessor {
+}
+@ProxyCmp({ inputs: ["active", "dsColor", "icon", "professores", "titulo", "value", "videos"] })
+@Component({ selector: "med-aula-professor", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["active", "dsColor", "icon", "professores", "titulo", "value", "videos"] })
+export class MedAulaProfessor {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedAutocomplete extends Components.MedAutocomplete {
 }
 @ProxyCmp({ inputs: ["list"] })
@@ -1408,8 +1419,8 @@ export class MedMessageList {
 }
 export declare interface MedNav extends Components.MedNav {
 }
-@ProxyCmp({ inputs: ["dsColor"] })
-@Component({ selector: "med-nav", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor"] })
+@ProxyCmp({ inputs: ["active", "dsColor"] })
+@Component({ selector: "med-nav", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["active", "dsColor"] })
 export class MedNav {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1448,10 +1459,12 @@ export declare interface MedNavSimple extends Components.MedNavSimple {
 @ProxyCmp({ inputs: ["dsColor"] })
 @Component({ selector: "med-nav-simple", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor"] })
 export class MedNavSimple {
+  close!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ["close"]);
   }
 }
 export declare interface MedNavbar extends Components.MedNavbar {

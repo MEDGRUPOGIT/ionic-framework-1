@@ -486,6 +486,7 @@ ion-input,prop,color,string | undefined,undefined,false,false
 ion-input,prop,debounce,number,0,false,false
 ion-input,prop,disabled,boolean,false,false,false
 ion-input,prop,enterkeyhint,"done" | "enter" | "go" | "next" | "previous" | "search" | "send" | undefined,undefined,false,false
+ion-input,prop,icon,string | undefined,undefined,false,true
 ion-input,prop,inputmode,"decimal" | "email" | "none" | "numeric" | "search" | "tel" | "text" | "url" | undefined,undefined,false,false
 ion-input,prop,max,string | undefined,undefined,false,false
 ion-input,prop,maxlength,number | undefined,undefined,false,false
@@ -1304,8 +1305,8 @@ ion-title,css-prop,--color
 ion-toast,shadow
 ion-toast,prop,animated,boolean,true,false,false
 ion-toast,prop,buttons,(string | ToastButton)[] | undefined,undefined,false,false
-ion-toast,prop,color,string | undefined,undefined,false,false
 ion-toast,prop,cssClass,string | string[] | undefined,undefined,false,false
+ion-toast,prop,dsColor,string | undefined,undefined,false,true
 ion-toast,prop,duration,number,0,false,false
 ion-toast,prop,enterAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
 ion-toast,prop,header,string | undefined,undefined,false,false
@@ -1490,6 +1491,15 @@ med-alternativas-b,prop,respostaCorreta,string,undefined,true,true
 med-alternativas-b,event,medChange,MedAlternativaInterface,true
 med-alternativas-b,event,medGalleryRequest,MedAlternativaInterface,true
 med-alternativas-b,event,medRiscada,MedAlternativaInterface,true
+
+med-aula-professor,scoped
+med-aula-professor,prop,active,boolean,false,false,true
+med-aula-professor,prop,dsColor,string | undefined,undefined,false,true
+med-aula-professor,prop,icon,string,undefined,true,true
+med-aula-professor,prop,professores,string,undefined,true,true
+med-aula-professor,prop,titulo,string,undefined,true,true
+med-aula-professor,prop,value,number,undefined,true,true
+med-aula-professor,prop,videos,string,undefined,true,true
 
 med-autocomplete,shadow
 med-autocomplete,prop,list,boolean,false,false,false
@@ -1697,6 +1707,7 @@ med-message-list,css-prop,--margin-top-message
 med-message-list,css-prop,--margin-top-response
 
 med-nav,shadow
+med-nav,prop,active,boolean,false,false,true
 med-nav,prop,dsColor,string | undefined,undefined,false,true
 
 med-nav-accordion,shadow
@@ -1717,6 +1728,7 @@ med-nav-item,event,medFocus,void,true
 
 med-nav-simple,shadow
 med-nav-simple,prop,dsColor,string | undefined,undefined,false,true
+med-nav-simple,event,close,any,true
 
 med-navbar,shadow
 med-navbar,prop,dsColor,string | undefined,undefined,false,true

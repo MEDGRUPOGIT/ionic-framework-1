@@ -7,14 +7,14 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ dsColor }) => {
+const Template = ({ dsColor, active, skin }) => {
   return html`
     <ion-app>
       <ion-content>
         <div class="flex-center flex-center--xs">
 
           <!-- component -->
-          <med-semana .dsColor=${dsColor}></med-semana>
+          <med-semana .dsColor=${dsColor} .active=${active} .skin=${skin}></med-semana>
           <!-- component -->
 
         </div>
@@ -38,6 +38,25 @@ Default.argTypes = {
     table: {
       type: { summary: "MedColor" },
       defaultValue: { summary: "undefined" },
+    },
+  },
+  active: {
+    control: { type: 'boolean' },
+    description: 'Define se o componente irá estar ativo.',
+    defaultValue: false,
+    table: {
+      type:  { summary: 'boolean' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  skin: {
+    options: [undefined, 'lista'],
+    control: { type: 'select' },
+    description: 'Define se o componente irá mostrar skin lista.',
+    defaultValue: false,
+    table: {
+      type:  { summary: 'boolean' },
+      defaultValue: { summary: 'undefined' },
     },
   },
 };

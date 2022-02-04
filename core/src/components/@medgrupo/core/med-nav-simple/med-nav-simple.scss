@@ -4,11 +4,12 @@
   display: block;
   overflow: auto;
   padding-top: calc(24px + var(--ion-safe-area-top, 0));
-  padding-bottom: calc(50px + var(--ion-safe-area-bottom));
+  padding-bottom: calc(24px + var(--ion-safe-area-bottom));
+  overflow: auto;
+  height: calc(100vh - calc(24px + var(--ion-safe-area-top, 0)) - calc(24px + var(--ion-safe-area-bottom)));
 }
 
 .med-nav-simple {
-
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -16,6 +17,7 @@
     justify-content: center;
     width: 80px;
     min-height: 100vh;
+    background: color('neutral', '1');
   }
 
   &__logo {
@@ -44,4 +46,32 @@
     margin-bottom: 16px;
     --margin-left-text: 0;
   }
+}
+
+//////////////////////////////
+// colors
+//////////////////////////////
+
+////////////////////
+// color
+////////////////////
+
+:host(.med-color) {
+  --logo-background: #{curr-color('color', '2')};
+}
+
+////////////////////
+// neutral
+////////////////////
+
+:host(.med-color-neutral) {
+  --logo-background: #{curr-color('neutral')};
+}
+
+////////////////////
+// feedback
+////////////////////
+
+:host(.med-color-feedback) {
+  --logo-background: #{curr-color('feedback')};
 }

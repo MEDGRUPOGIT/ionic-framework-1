@@ -15,7 +15,7 @@
   --placeholder-font-weight: 400;
   --placeholder-line-height: 16px;
   --placeholder-opacity: 1;
- 
+
   --height: 40px;
   --border-radius: 8px;
 
@@ -30,4 +30,10 @@
     font-weight: var(--placeholder-font-weight);
     line-height: var(--placeholder-line-height);
   }
+
+  .med-icon {
+    stroke: color('neutral', '6');
+    padding-right: 16px;
+  }
+
 }

@@ -6,7 +6,7 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = () => {
+const Template = ({icon}) => {
   return html`
     <style>
       /* !NÃO UTILIZAR! Apenas para estória */
@@ -25,7 +25,7 @@ const Template = () => {
               <!-- component -->
               <med-input>
                 <med-type tag="label" token="p14" slot="label">Digite o título:</med-type>
-                <ion-input placeholder="Enter Input" slot="input"></ion-input>
+                <ion-input placeholder="Enter Input" slot="input" icon=${icon}></ion-input>
               </med-input>
               <!-- component -->
 
@@ -42,5 +42,16 @@ Default.parameters = {
   design: {
     type: 'figma',
     url: '',
+  },
+}
+Default.argTypes = {
+  icon: {
+    control: { type: 'text' },
+    description: 'TODO',
+    defaultValue: 'med-semana',
+    table: {
+      type:  { summary: 'string' },
+      defaultValue: { summary: 'undefined' },
+    },
   },
 }
