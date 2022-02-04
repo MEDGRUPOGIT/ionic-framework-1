@@ -102,4 +102,135 @@
   }
 }
 
-@import './toast.med.scss';
+// @import './toast.med.scss';
+
+// Custom
+
+:host {
+  --width: 100%;
+  --start: 0;
+  --end: 0;
+  --border-radius: 0;
+  --background: #{color('neutral', '2')};
+
+  //templarios
+  --spacing: 16px;
+
+  border-radius: 4px;
+
+  .toast-container {
+    padding: var(--spacing);
+  }
+
+  .toast-header {
+    font-weight: 600;
+  }
+
+  .toast-content {
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    color: #{color('neutral', '10')};
+  }
+
+  .toast-button-group-end,
+  .toast-button-group-start {
+    margin: 0;
+  }
+
+  .toast-button-group-start .toast-button {
+    padding: 0;
+    margin-right: 12px;
+  }
+
+  .toast-button-group-end .toast-button {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #{color('neutral', '10')};
+  }
+
+  .toast-button:hover,
+  .toast-button-cancel:hover {
+    background-color: transparent;
+  }
+
+  .toast-icon {
+    font-size: 24px;
+    stroke: #{color('neutral', '10')};
+  }
+}
+
+// Toast com 2 linhas
+:host(.ion-toast--rows) {
+  .toast-content {
+    padding-top: 2px;
+  }
+
+  .toast-container {
+    display: block;
+  }
+
+  .toast-button-group-start {
+    float: left;
+  }
+
+  .toast-button-group-end {
+    padding-top: 16px;
+    justify-content: flex-end;
+  }
+}
+
+// Toast Flutuante
+:host(.ion-toast--float) {
+  --width: auto;
+  --start: 8px;
+  --end: 8px;
+  --border-radius: 4px;
+
+  // .toast-content {
+  //   flex-direction: row;
+  // }
+
+  .toast-message {
+    padding-left: 4px;
+  }
+
+  .toast-wrapper.toast-bottom {
+    bottom: calc(8px + var(--ion-safe-area-bottom, 0px)) !important;
+  }
+
+  .toast-wrapper.toast-top {
+    top: calc(8px + var(--ion-safe-area-bottom, 0px)) !important;
+  }
+}
+
+:host(.ion-color) .toast-wrapper {
+  background: #{curr-color('color', '3')};
+}
+
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-color) {
+  --background: #{curr-color('color', '3')};
+}
+
+// ////////////////////
+// neutral
+// ////////////////////
+
+:host(.med-color-neutral) {
+  --background: #{curr-color('neutral')};
+}
+
+// //////////
+// feedback
+// //////////
+
+:host(.med-color-feedback) {
+  --background: #{curr-color('feedback')};
+}

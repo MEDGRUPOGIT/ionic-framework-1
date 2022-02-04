@@ -1,8 +1,8 @@
 @import "../../../../../templarios/abstracts";
 
 :host {
-  --background: #{color('neutral', '1')};
-  --background-row: #{color('neutral', '1')};
+  --background: #{color('neutral', '2')};
+  --background-row: #{color('neutral', '2')};
 }
 
 :host(.med-semana) {
@@ -59,6 +59,7 @@
   }
 
   &__chart {
+    --stroke-background: #{color('neutral', '3')};
     &:not(:last-child) {
       margin-right: 8px;
     }
@@ -123,6 +124,8 @@
 //////////////////////////////
 
 :host(.med-semana--active) {
+  --background: #{color('neutral', '3')};
+
   .med-semana__chart {
     --stroke-background: #{color('neutral', '1')};
   }
@@ -147,6 +150,7 @@
   flex-direction: column;
   justify-content: start;
   padding: 0;
+  max-width: unset;
 
   .med-semana {
     &__heading-container {

@@ -169,6 +169,7 @@ export default defineComponent({
 
  - [med-alternativas-a](../@medgrupo/team/questoes/med-alternativas-a)
  - [med-alternativas-b](../@medgrupo/team/questoes/med-alternativas-b)
+ - [med-aula-professor](../@medgrupo/compositions/med-aula-professor)
  - [med-item-aulas](../@medgrupo/global/med-item-aulas)
  - [med-video-thumbnail](../@medgrupo/med-video-thumbnail)
 
@@ -177,6 +178,7 @@ export default defineComponent({
 graph TD;
   med-alternativas-a --> ion-progress-bar
   med-alternativas-b --> ion-progress-bar
+  med-aula-professor --> ion-progress-bar
   med-item-aulas --> ion-progress-bar
   med-video-thumbnail --> ion-progress-bar
   style ion-progress-bar fill:#f9f,stroke:#333,stroke-width:4px

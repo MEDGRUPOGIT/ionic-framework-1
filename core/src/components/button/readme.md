@@ -380,6 +380,7 @@ export default defineComponent({
  - [med-image-zoom](../@medgrupo/global/med-image-zoom)
  - [med-list-item-accordion](../@medgrupo/global/med-list-item-accordion)
  - [med-nav](../@medgrupo/core/med-nav)
+ - [med-nav-simple](../@medgrupo/core/med-nav-simple)
  - [med-offline](../@medgrupo/global/med-offline)
  - [med-rate-aula](../@medgrupo/global/med-rate-aula)
  - [med-sheet](../@medgrupo/core/med-sheet)
@@ -403,6 +404,7 @@ graph TD;
   med-image-zoom --> ion-button
   med-list-item-accordion --> ion-button
   med-nav --> ion-button
+  med-nav-simple --> ion-button
   med-offline --> ion-button
   med-rate-aula --> ion-button
   med-sheet --> ion-button

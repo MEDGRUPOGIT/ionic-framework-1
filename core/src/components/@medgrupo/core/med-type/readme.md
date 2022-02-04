@@ -20,6 +20,7 @@
 
  - [filtro-modal](../../team/dashboard/filtro-modal)
  - [med-add-card](../../compositions/med-add-card)
+ - [med-aula-professor](../../compositions/med-aula-professor)
  - [med-banner](../med-banner)
  - [med-calendar](../med-calendar)
  - [med-calendar-day](../med-calendar-day)
@@ -39,6 +40,7 @@
 graph TD;
   filtro-modal --> med-type
   med-add-card --> med-type
+  med-aula-professor --> med-type
   med-banner --> med-type
   med-calendar --> med-type
   med-calendar-day --> med-type

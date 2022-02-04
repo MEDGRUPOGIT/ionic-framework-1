@@ -331,6 +331,7 @@ export const IonInput = /*@__PURE__*/ defineContainer<JSX.IonInput>('ion-input',
   'size',
   'type',
   'value',
+  'icon',
   'ionInput',
   'ionChange',
   'ionBlur',
@@ -944,6 +945,17 @@ export const MedAlternativasB = /*@__PURE__*/ defineContainer<JSX.MedAlternativa
 ]);
 
 
+export const MedAulaProfessor = /*@__PURE__*/ defineContainer<JSX.MedAulaProfessor>('med-aula-professor', [
+  'dsColor',
+  'active',
+  'icon',
+  'titulo',
+  'professores',
+  'videos',
+  'value'
+]);
+
+
 export const MedAutocomplete = /*@__PURE__*/ defineContainer<JSX.MedAutocomplete>('med-autocomplete', [
   'list'
 ]);
@@ -1198,7 +1210,8 @@ export const MedMessageList = /*@__PURE__*/ defineContainer<JSX.MedMessageList>(
 
 
 export const MedNav = /*@__PURE__*/ defineContainer<JSX.MedNav>('med-nav', [
-  'dsColor'
+  'dsColor',
+  'active'
 ]);
 
 
@@ -1223,7 +1236,8 @@ export const MedNavItem = /*@__PURE__*/ defineContainer<JSX.MedNavItem>('med-nav
 
 
 export const MedNavSimple = /*@__PURE__*/ defineContainer<JSX.MedNavSimple>('med-nav-simple', [
-  'dsColor'
+  'dsColor',
+  'close'
 ]);
 
 

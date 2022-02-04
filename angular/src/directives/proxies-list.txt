@@ -84,6 +84,7 @@ export const DIRECTIVES = [
   d.MedAlternativas,
   d.MedAlternativasA,
   d.MedAlternativasB,
+  d.MedAulaProfessor,
   d.MedAutocomplete,
   d.MedAvatar,
   d.MedBanner,

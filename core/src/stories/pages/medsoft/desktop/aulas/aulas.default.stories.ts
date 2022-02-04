@@ -9,25 +9,96 @@ export default {
 
 const Template = ({ dsColor }) => {
   return html`
+    <style>
+      .desktop {
+        display: flex;
+      }
+
+      .wrapper-right {
+        width: 100%;
+        height: 100vh;
+      }
+
+      .col-left {
+        margin: 24px;
+      }
+
+      .week-date__container {
+        margin: 16px 0;
+        display: flex;
+        align-items: center;
+      }
+
+      .week {
+        margin-right: 16px;
+      }
+
+      .chart:last-child {
+        margin-top: 16px;
+        margin-bottom 24px;
+      }
+    </style>
+
     <ion-app>
-      <med-nav-simple></med-nav-simple>
+      <div class="desktop">
 
-      <med-nav .dsColor=${dsColor}>
-        <med-nav-item icon="med-play" text="Aulas" active></med-nav-item>
-        <med-nav-item icon="med-apostila" text="Materiais"></med-nav-item>
-        <med-nav-item icon="med-concursos" text="Questões"></med-nav-item>
+        <div class="wrapper-left">
 
-        <med-nav-accordion></med-nav-accordion>
+          <med-nav .dsColor=${dsColor}>
+            <med-nav-item .dsColor=${dsColor} icon="med-play" text="Aulas" active></med-nav-item>
+            <med-nav-item .dsColor=${dsColor} icon="med-apostila" text="Materiais"></med-nav-item>
+            <med-nav-item .dsColor=${dsColor} icon="med-concursos" text="Questões"></med-nav-item>
 
-      </med-nav>
+            <med-nav-accordion></med-nav-accordion>
+          </med-nav>
 
-      <ion-content>
-        <div class="col-left">
         </div>
 
-        <div class="col-right">
+        <div class="wrapper-right">
+          <ion-content>
+            <div class="col-left">
+              <div class="week-date__container">
+                <med-type class="week" token="h20x">Semana 10</med-type>
+                <med-type class="date" token="p16" ds-color="neutral-7">De 02/01 até 08/01</med-type>
+              </div>
+              <div class="week-chart__container">
+                <med-semana class="chart" .dsColor=${dsColor}></med-semana>
+                <med-semana class="chart" .dsColor=${dsColor}></med-semana>
+              </div>
+
+              <div class="week-date__container">
+                <med-type class="week" token="h20x">Semana 10</med-type>
+                <med-type class="date" token="p16" ds-color="neutral-7">De 02/01 até 08/01</med-type>
+              </div>
+              <div class="week-chart__container">
+                <med-semana class="chart" active .dsColor=${dsColor}></med-semana>
+                <med-semana class="chart" active .dsColor=${dsColor}></med-semana>
+              </div>
+
+              <div class="week-date__container">
+                <med-type class="week" token="h20x">Semana 10</med-type>
+                <med-type class="date" token="p16" ds-color="neutral-7">De 02/01 até 08/01</med-type>
+              </div>
+              <div class="week-chart__container">
+                <med-semana class="chart" .dsColor=${dsColor}></med-semana>
+                <med-semana class="chart" .dsColor=${dsColor}></med-semana>
+              </div>
+
+              <div class="week-date__container">
+                <med-type class="week" token="h20x">Semana 10</med-type>
+                <med-type class="date" token="p16" ds-color="neutral-7">De 02/01 até 08/01</med-type>
+              </div>
+              <div class="week-chart__container">
+                <med-semana class="chart" .dsColor=${dsColor}></med-semana>
+                <med-semana class="chart" .dsColor=${dsColor}></med-semana>
+              </div>
+            </div>
+
+            <div class="col-right">
+            </div>
+          </ion-content>
         </div>
-      </ion-content>
+      </div>
     </ion-app>
   `;
 };

@@ -73,15 +73,15 @@
 // color
 ////////////////////
 
-:host(.med-color.active) {
-  --background: #{curr-color('color', '4')};
+:host(.med-color.med-nav-item--active) {
+  --background: #{curr-color('color', '2')};
 }
 
 ////////////////////
 // neutral
 ////////////////////
 
-:host(.med-color-neutral.active) {
+:host(.med-color-neutral.med-nav-item--active) {
   --background: #{curr-color('neutral')};
 }
 
@@ -89,6 +89,6 @@
 // feedback
 ////////////////////
 
-:host(.med-color-feedback.active) {
+:host(.med-color-feedback.med-nav-item--active) {
   --background: #{curr-color('feedback')};
 }

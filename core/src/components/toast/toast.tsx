@@ -1,10 +1,13 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, Prop, h } from '@stencil/core';
 
 import { getIonMode } from '../../global/ionic-global';
-import { AnimationBuilder, Color, CssClassMap, OverlayEventDetail, OverlayInterface, ToastButton } from '../../interface';
+import { AnimationBuilder, CssClassMap, OverlayEventDetail, OverlayInterface, ToastButton } from '../../interface';
 import { dismiss, eventMethod, isCancel, prepareOverlay, present, safeCall } from '../../utils/overlays';
 import { IonicSafeString, sanitizeDOMString } from '../../utils/sanitization';
-import { createColorClasses, getClassMap } from '../../utils/theme';
+import { getClassMap } from '../../utils/theme';
+
+import { MedColor } from '../../interface';
+import { generateMedColor } from '../../utils/med-theme';
 
 import { iosEnterAnimation } from './animations/ios.enter';
 import { iosLeaveAnimation } from './animations/ios.leave';
@@ -41,11 +44,9 @@ export class Toast implements ComponentInterface, OverlayInterface {
   @Prop() overlayIndex!: number;
 
   /**
-   * The color to use from your application's color palette.
-   * Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`.
-   * For more information on colors, see [theming](/docs/theming/basics).
-   */
-  @Prop() color?: Color;
+    * Define a cor do componente.
+    */
+  @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
    * Animation to use when the toast is presented.
@@ -269,7 +270,7 @@ export class Toast implements ComponentInterface, OverlayInterface {
         style={{
           zIndex: `${60000 + this.overlayIndex}`,
         }}
-        class={createColorClasses(this.color, {
+        class={generateMedColor(this.dsColor, {
           [mode]: true,
           ...getClassMap(this.cssClass),
           'toast-translucent': this.translucent

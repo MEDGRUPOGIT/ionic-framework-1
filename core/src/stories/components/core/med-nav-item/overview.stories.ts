@@ -6,7 +6,7 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ active, iconOnly }) => {
+const Template = ({ active }) => {
   return html`
     <ion-app>
       <ion-content>
@@ -41,15 +41,6 @@ Default.argTypes = {
     table: {
       type: { summary: "boolean" },
       defaultValue: { summary: "undefined" },
-    },
-  },
-  iconOnly: {
-    defaultValue: false,
-    control: { type: 'boolean' },
-    description: 'Define o estado do componente.',
-    table: {
-      type:  { summary: 'boolean' },
-      defaultValue: { summary: 'undefined' },
     },
   },
 }

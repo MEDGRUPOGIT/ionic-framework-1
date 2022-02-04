@@ -190,6 +190,8 @@ export class Input implements ComponentInterface {
    */
   @Prop({ mutable: true }) value?: string | number | null = '';
 
+  @Prop({ reflect: true }) icon?: string;
+
   /**
    * Emitted when a keyboard input occurred.
    */
@@ -446,6 +448,7 @@ export class Input implements ComponentInterface {
           onMouseDown={this.clearTextInput}
           onKeyDown={this.clearTextOnEnter}
         />}
+        {this.icon && <ion-icon class="med-icon" name={this.icon}></ion-icon>}
       </Host>
     );
   }
