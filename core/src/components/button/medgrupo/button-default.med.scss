@@ -1,24 +1,22 @@
-@import "../../../templarios/abstracts";
-
 :host {
   --background: #{color("brand", "3")};
   --border-color: #{color("brand", "3")};
   --color: #{color("brand", "3", "contrast")};
 
-  --bg-hover: #{color("brand", "1")};
+  --bg-hover: #{color("brand", "2")};
   --bg-hover-opacity: 1;
   --border-color-hover: transparent;
-  --color-hover: #{color("brand", "1", "contrast")};
+  --color-hover: #{color("brand", "2", "contrast")};
 
-  --bg-focused: #{color("brand", "1")};
+  --bg-focused: #{color("brand", "2")};
   --bg-focused-opacity: 1;
   --border-color-focused: transparent;
-  --color-focused: #{color("brand", "1", "contrast")};
+  --color-focused: #{color("brand", "2", "contrast")};
 
   --bg-activated: transparent;
   --bg-activated-opacity: 0;
   --border-color-activated: transparent;
-  --color-activated: #{color("brand", "3", "contrast")};
+  --color-activated: #{color("brand", "2", "contrast")};
 
   --font-size: var(--med-font-size-xxs);
   --font-weight: var(--med-font-weight-semibold);
@@ -268,7 +266,8 @@
 :host(.button-disabled) {
   cursor: initial;
   pointer-events: none;
-  opacity: var(--med-opacity-level-half);
+  --background: #{color("neutral", "3")};
+  --color: #{color("neutral", "5", "contrast")};
 }
 
 // //////////////////////////////

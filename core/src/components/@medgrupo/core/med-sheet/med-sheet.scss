@@ -1,6 +1,4 @@
 .med-sheet {
-  height: var(--height-mobile);
-
   &__header {
     margin: 20px 0;
     display: flex;
@@ -13,11 +11,5 @@
   &__content {
     overflow: auto;
     position: relative;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  :host {
-    height:var(--height-desktop);
   }
 }

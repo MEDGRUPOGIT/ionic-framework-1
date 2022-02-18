@@ -2,6 +2,7 @@
 
 :host {
   --color-realizado: #{color('brand', '4')};
+  --chart-track-background: #{color('neutral', '1')};
 }
 
 :host {
@@ -38,6 +39,7 @@
 
   &__chart {
     padding-top: 8px;
+    --background: var(--chart-track-background);
   }
 }
 

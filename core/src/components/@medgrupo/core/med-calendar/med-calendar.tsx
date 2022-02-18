@@ -1,4 +1,4 @@
-import { Component, Host, h, Element, Prop, Event, EventEmitter, State } from '@stencil/core';
+import { Component, Host, h, Element, Prop, Event, EventEmitter, State, Watch } from '@stencil/core';
 import { GestureConfig, Gesture, MedColor } from '../../../../interface';
 import { createGesture } from '../../../../utils/gesture';
 import { generateMedColor } from '../../../../utils/med-theme';
@@ -19,6 +19,8 @@ export class MedCalendar {
 
   @Prop({ reflect: true }) ano?: string;
 
+  @Prop({ reflect: true, mutable: true  }) container?: string;
+
   @State() choice = 'Semana';
 
   @State() width = 166;
@@ -29,7 +31,7 @@ export class MedCalendar {
 
   private gesture!: Gesture;
 
-  private container!: HTMLElement;
+  private containerEl!: HTMLElement;
 
   connectedCallback() {
     this.init();
@@ -38,25 +40,45 @@ export class MedCalendar {
       this.init();
     });
 
-    resizeObserver.observe(document.body);
+    if(this.container) {
+      const container = document.querySelector(`.${this.container}`);
+
+      resizeObserver.observe(container);
+    } else {
+      resizeObserver.observe(document.body);
+    }
   }
 
   init() {
-    const windowWidth = window.innerWidth;
+    if(this.container) {
+      const container = document.querySelector(`.${this.container}`);
+      const containerWidth: any = container?.clientWidth;
 
-    if(windowWidth < 1200) {
-      this.width = windowWidth / 7;
+      if(containerWidth < 1200) {
+        this.width = containerWidth / 7;
+      }
+    } else {
+      const windowWidth = window.innerWidth;
+
+      if(windowWidth < 1200) {
+        this.width = windowWidth / 7;
+      }
     }
+  }
+
+  @Watch('container')
+  watchPropHandler(newValue: any) {
+    if (newValue !== this.container) { }
+    this.init();
   }
 
   componentDidLoad() {
     let direction: string;
 
     const options: GestureConfig = {
-      el: this.container,
+      el: this.containerEl,
       gestureName: 'swipe',
-      onStart: () => {
-      },
+      onStart: () => {},
       onMove: (event) => {
         if (event.deltaX > 0) {
           direction = 'right';
@@ -88,9 +110,9 @@ export class MedCalendar {
     this.medClick.emit(type);
   }
 
-  private onGraficoClick() {
+  /* private onGraficoClick() {
     this.medClick.emit('graph');
-  }
+  } */
 
   render() {
     const { dsColor, mes, ano } = this;
@@ -120,9 +142,9 @@ export class MedCalendar {
               <ion-icon class="med-icon header__icon" name="med-baixo"></ion-icon>
             </ion-button>
 
-            <ion-button ds-name="tertiary" onClick={() => this.onGraficoClick()}>
+            {/* <ion-button ds-name="tertiary" onClick={() => this.onGraficoClick()}>
               <ion-icon class="med-icon header__icon" name="med-grafico"></ion-icon>
-            </ion-button>
+            </ion-button> */}
           </div>
         </div>
 
@@ -151,12 +173,11 @@ export class MedCalendar {
             </div>
 
           </div>
-          <div class="content__container" ref={(el) => { this.container = el as any }}>
+          <div class="content__container" ref={(el) => { this.containerEl = el as any }}>
             <slot></slot>
           </div>
         </div>
       </Host>
     );
   }
-
 }

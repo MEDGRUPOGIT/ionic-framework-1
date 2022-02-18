@@ -19,6 +19,7 @@
 
 | Slot       | Description                                      |
 | ---------- | ------------------------------------------------ |
+|            | Slot default.                                    |
 | `"end"`    | Conteúdo é posicionado a direita do componente.  |
 | `"middle"` | Conteúdo é posicionado ao centro do componente.  |
 | `"start"`  | Conteúdo é posicionado a esquerda do componente. |

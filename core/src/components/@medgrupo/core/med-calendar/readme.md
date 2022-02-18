@@ -7,11 +7,12 @@
 
 ## Properties
 
-| Property  | Attribute  | Description | Type                  | Default     |
-| --------- | ---------- | ----------- | --------------------- | ----------- |
-| `ano`     | `ano`      |             | `string \| undefined` | `undefined` |
-| `dsColor` | `ds-color` |             | `string \| undefined` | `undefined` |
-| `mes`     | `mes`      |             | `string \| undefined` | `undefined` |
+| Property    | Attribute   | Description | Type                  | Default     |
+| ----------- | ----------- | ----------- | --------------------- | ----------- |
+| `ano`       | `ano`       |             | `string \| undefined` | `undefined` |
+| `container` | `container` |             | `string \| undefined` | `undefined` |
+| `dsColor`   | `ds-color`  |             | `string \| undefined` | `undefined` |
+| `mes`       | `mes`       |             | `string \| undefined` | `undefined` |
 
 
 ## Events

@@ -1,0 +1,54 @@
+@import '../../../../themes/ionic.mixins.scss';
+
+:host {
+  --padding: 0;
+}
+
+:host {
+  @include font-smoothing();
+  display: block;
+  padding: var(--padding);
+  position: relative;
+}
+
+:host(.med-item) {
+  background: transparent !important;
+}
+
+:host(.med-item--padding) {
+  --padding: 12px 16px;
+}
+
+.item-inner {
+  display: flex;
+}
+
+.input-wrapper {
+  flex: 1;
+}
+
+.item-native {
+  @include text-inherit();
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  width: 100%;
+  border: 0;
+  text-align: left;
+  outline: none;
+}
+
+.item-native::-moz-focus-inner {
+  border: 0;
+}
+
+.item-native::after {
+  @include button-state();
+  z-index: -1;
+}
+
+button, a {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+}

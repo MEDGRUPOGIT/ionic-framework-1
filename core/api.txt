@@ -1516,7 +1516,8 @@ med-banner,shadow
 med-banner,prop,btnLeft,string,undefined,true,false
 med-banner,prop,btnRight,string,undefined,true,false
 med-banner,prop,dsColor,string | undefined,undefined,false,true
-med-banner,prop,dsSize,"md" | "sm" | undefined,'sm',false,true
+med-banner,prop,icon,string,undefined,true,false
+med-banner,prop,image,string,undefined,true,false
 med-banner,prop,texto,string | undefined,undefined,false,false
 med-banner,prop,titulo,string | undefined,undefined,false,false
 med-banner,event,btnLeftClick,void,true
@@ -1530,6 +1531,7 @@ med-base,prop,spacingV,string | undefined,undefined,false,true
 
 med-calendar,shadow
 med-calendar,prop,ano,string | undefined,undefined,false,true
+med-calendar,prop,container,string | undefined,undefined,false,true
 med-calendar,prop,dsColor,string | undefined,undefined,false,true
 med-calendar,prop,mes,string | undefined,undefined,false,true
 med-calendar,event,medClick,any,true
@@ -1659,6 +1661,25 @@ med-image-zoom,prop,titulo,string | undefined,undefined,false,true
 
 med-input,shadow
 
+med-item,shadow
+med-item,prop,button,boolean,false,false,false
+med-item,prop,detail,boolean | undefined,undefined,false,false
+med-item,prop,detailIcon,string,'chevron-forward',false,false
+med-item,prop,disabled,boolean,false,false,false
+med-item,prop,download,string | undefined,undefined,false,false
+med-item,prop,dsColor,string | undefined,undefined,false,false
+med-item,prop,href,string | undefined,undefined,false,false
+med-item,prop,lines,"full" | "inset" | "none" | undefined,undefined,false,false
+med-item,prop,mode,"ios" | "md",undefined,false,false
+med-item,prop,padding,boolean,false,false,false
+med-item,prop,rel,string | undefined,undefined,false,false
+med-item,prop,routerAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
+med-item,prop,routerDirection,"back" | "forward" | "root",'forward',false,false
+med-item,prop,target,string | undefined,undefined,false,false
+med-item,prop,type,"button" | "reset" | "submit",'button',false,false
+med-item,part,detail-icon
+med-item,part,native
+
 med-item-aulas,shadow
 med-item-aulas,prop,dsColor,string | undefined,undefined,false,true
 med-item-aulas,prop,porcentagem,number,undefined,true,false
@@ -1689,6 +1710,14 @@ med-list-item-accordion,prop,margin,"lg" | "md" | "sm" | "xs" | undefined,undefi
 med-list-item-accordion,prop,selected,boolean,false,false,true
 med-list-item-accordion,prop,titulo,string | undefined,undefined,false,false
 med-list-item-accordion,method,toggle,toggle(event?: Event | undefined) => Promise<void>
+
+med-lista,shadow
+med-lista,prop,dsColor,string | undefined,undefined,false,true
+med-lista,prop,inset,boolean,false,false,false
+med-lista,prop,lines,"full" | "inset" | "none" | undefined,undefined,false,false
+med-lista,prop,mode,"ios" | "md",undefined,false,false
+med-lista,prop,padding,boolean,false,false,false
+med-lista,method,closeSlidingItems,closeSlidingItems() => Promise<boolean>
 
 med-message,shadow
 med-message,prop,concurso,string | undefined,undefined,false,false

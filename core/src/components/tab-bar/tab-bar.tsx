@@ -22,12 +22,14 @@ export class TabBar implements ComponentInterface {
   private hostHeight = 0;
   private hostResizeObserver!: ResizeObserver;
 
+  @Element() el!: HTMLElement;
+
   /**
    * TODO
    */
   @Event() medResize!: EventEmitter<TabBarResizeEventDetail>;
 
-  @Element() el!: HTMLElement;
+  @State() gap!: string;
 
   @State() keyboardVisible = false;
 
@@ -72,6 +74,8 @@ export class TabBar implements ComponentInterface {
   }
 
   connectedCallback() {
+    this.updateGap();
+
     if (typeof (window as any) !== 'undefined') {
       this.keyboardWillShowHandler = () => {
         if (this.el.getAttribute('slot') !== 'top') {
@@ -97,34 +101,49 @@ export class TabBar implements ComponentInterface {
     }
   }
 
-/**
- * Med Resize
- */
+  /**
+  * Med Resize
+  */
+  private updateGap() {
+    let gap = '2px';
 
- private setSize() {
-   this.medResize.emit({height:1})
-  this.hostResizeObserver = new ResizeObserver(() => {
-    let newHostHeight = Number(this.el.getBoundingClientRect().height);
-
-    if (newHostHeight !== this.hostHeight) {
-      this.medResize.emit({ height: newHostHeight });
-      this.hostHeight = newHostHeight;
+    if(this.el.children.length <= 3) {
+      gap = '8px';
     }
-  });
 
-  this.hostResizeObserver.observe(this.el);
-}
+    if(this.el.children.length === 4) {
+      gap = '4px';
+    }
+
+    this.gap = gap;
+  }
+
+  private setSize() {
+    this.medResize.emit({height:1})
+    this.hostResizeObserver = new ResizeObserver(() => {
+      let newHostHeight = Number(this.el.getBoundingClientRect().height);
+
+      if (newHostHeight !== this.hostHeight) {
+        this.medResize.emit({ height: newHostHeight });
+        this.hostHeight = newHostHeight;
+      }
+    });
+
+    this.hostResizeObserver.observe(this.el);
+  }
 
   render() {
     const { dsColor, translucent, keyboardVisible } = this;
     const mode = getIonMode(this);
-    this.medResize.emit({height:1})
+    
+    this.medResize.emit({height:1});
 
     return (
       <Host
-      from-stencil
+        from-stencil
         role="tablist"
         aria-hidden={keyboardVisible ? 'true' : null}
+        style={{ '--gap': `${this.gap}` }}
         class={generateMedColor(dsColor, {
           [mode]: true,
           'tab-bar-translucent': translucent,

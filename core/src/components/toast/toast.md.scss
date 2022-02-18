@@ -112,6 +112,7 @@
   --end: 0;
   --border-radius: 0;
   --background: #{color('neutral', '2')};
+  --color: #{color('neutral', '2', 'contrast')};
 
   //templarios
   --spacing: 16px;
@@ -129,9 +130,9 @@
   .toast-content {
     padding: 0;
     font-size: 16px;
-    font-weight: 400;
-    line-height: 100%;
-    color: #{color('neutral', '10')};
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--color);
   }
 
   .toast-button-group-end,
@@ -149,7 +150,7 @@
     padding-bottom: 0;
     font-size: 16px;
     font-weight: 700;
-    color: #{color('neutral', '10')};
+    color: var(--color);
   }
 
   .toast-button:hover,
@@ -157,9 +158,14 @@
     background-color: transparent;
   }
 
+  .toast-button-inner {
+    width: 24px;
+  }
+
   .toast-icon {
     font-size: 24px;
-    stroke: #{color('neutral', '10')};
+    min-width: 24px;
+    stroke: var(--color);
   }
 }
 
@@ -217,6 +223,7 @@
 
 :host(.med-color) {
   --background: #{curr-color('color', '3')};
+  --color: #{curr-color('color', '3', 'contrast')};
 }
 
 // ////////////////////
@@ -225,6 +232,7 @@
 
 :host(.med-color-neutral) {
   --background: #{curr-color('neutral')};
+  --color: #{curr-color('neutral', null, 'contrast')};
 }
 
 // //////////
@@ -233,4 +241,5 @@
 
 :host(.med-color-feedback) {
   --background: #{curr-color('feedback')};
+  --color: #{curr-color('feedback', null, 'contrast')};
 }
