@@ -30,6 +30,16 @@ const createPopoverDesktop = async () => {
   await modal.present();
 }
 
+const createDialog= async () => {
+  const modal = await modalController.create({
+    component: 'med-sheet',
+    cssClass: 'tp-dialog',
+    mode: 'md',
+  });
+
+  await modal.present();
+}
+
 const Template = () => {
   return html`
     <style>
@@ -49,8 +59,13 @@ const Template = () => {
               </ion-col>
             </ion-row>
             <ion-row>
-              <ion-col class="ion-text-center">
+              <ion-col class="ion-text-center ion-margin-bottom">
                 <ion-button ds-name="primary" @click="${() => createPopoverDesktop()}">Abrir sheet desktop</ion-button>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="ion-text-center">
+                <ion-button ds-name="primary" @click="${() => createDialog()}">Abrir Dialog</ion-button>
               </ion-col>
             </ion-row>
           </ion-grid>

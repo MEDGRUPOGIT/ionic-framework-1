@@ -1,57 +1,92 @@
 :host {
   --background: #{color('neutral', '2')};
+  --padding-header: 8px;
   --padding-content: 16px 16px 0 16px;
-  --padding-footer: 8px 8px 8px 8px;
-  --padding-texto: 8px;
-  --footer-height: 32px;
   --padding-right: 16px;
+  --padding-footer: 8px 8px 8px 8px;
+  --height-footer: 32px;
 }
 
 :host {
   display: block;
   background-color: var(--background);
+  transition: background-color 300ms ease-out, color 300ms ease-out;
 }
 
 .med-notification {
-  &__content {
-    padding: var(--padding-content);
-    display: flex;
-    justify-content: space-between;
-  }
-
   &__titulo {
-    text-align: left;
-    padding-right: var(--padding-right);
+    --font-size: 16px;
+    --line-height: 16px;
+    --font-weight: 600;
+    text-align: justify;
   }
 
   &__texto {
-    text-align: left;
-    padding-top: var(--padding-texto);
-    padding-right: var(--padding-right);
+    --font-size: 14px;
+    --line-height: 20px;
+    text-align: justify;
+  }
+
+  &__icon {
+    stroke: color('neutral', '10');
+    margin-left: auto;
+    transition: stroke 300ms ease-out;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding-content);
+  }
+
+  &__left {
+    flex: 1;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding-bottom: var(--padding-header);
+  }
+
+  &__right {
+    padding-left: var(--padding-right);
   }
 
   &__footer {
-    padding: var(--padding-footer);
     display: flex;
     justify-content: space-between;
-    height: var(--footer-height);
+    height: var(--height-footer);
+    padding: var(--padding-footer);
   }
 }
 
 //////////////////////////////
-// size
+// desktop
 //////////////////////////////
 
-:host(.med-notification--md) {
-  --padding-content: 24px 24px 0 24px;
-  --padding-footer: 8px 16px;
-  --footer-height: 40px;
-  --padding-right: 32px;
+:host {
+  @include breakpoint-up('lg') {
+    --padding-titulo: 16px;
+    --padding-content: 24px 24px 0 24px;
+    --padding-footer: 8px 16px 8px 16px;
+    --height-footer: 40px;
+
+    &__titulo {
+      --font-size: 20px;
+      --line-height: 20px;
+    }
+
+    &__texto {
+      --font-size: 16px;
+      --line-height: 24px;
+    }
+  }
 }
 
-// ////////////////////
+//////////////////////////////
 // color
-// ////////////////////
+//////////////////////////////
 
 :host(.med-color) {
   --background: #{curr-color('color', '3')};
@@ -63,6 +98,10 @@
 
     &__texto {
       --color: #{curr-color('color', '3', 'contrast')};
+    }
+
+    &__icon {
+      stroke: #{curr-color('color', '3', 'contrast')};
     }
 
     &__button {
@@ -84,6 +123,10 @@
       --color: #{curr-color('neutral', null, 'contrast')};
     }
 
+    &__icon {
+      stroke: #{curr-color('neutral', null, 'contrast')};
+    }
+
     &__button {
       --color: #{curr-color('neutral', null, 'contrast')};
     }
@@ -102,10 +145,12 @@
       --color: #{curr-color('feedback', null, 'contrast')};
     }
 
+    &__icon {
+      stroke: #{curr-color('feedback', null, 'contrast')};
+    }
+
     &__button {
       --color: #{curr-color('feedback', null, 'contrast')};
     }
   }
 }
-
-

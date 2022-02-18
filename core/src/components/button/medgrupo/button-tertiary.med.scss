@@ -3,10 +3,10 @@
   --border-color: transparent;
   --color: #{color("neutral", "10")};
 
-  --bg-hover: #{color("brand", "3")};
-  --bg-hover-opacity: var(--med-opacity-level-light);
+  --bg-hover: transparent;
+  --bg-hover-opacity: 0;
   --border-color-hover: transparent;
-  --color-hover: #{color("neutral", "10")};
+  --color-hover: #{color("brand", "3")};
 
   --bg-focused: #{color("brand", "3")};
   --bg-focused-opacity: var(--med-opacity-level-light);
@@ -31,6 +31,17 @@
 :host(.med-button--tertiary) ion-ripple-effect {
   --ripple-color: #{color("brand", "3")};
   --ripple-opacity: var(--med-opacity-level-light);
+}
+
+// ////////////////////
+// disabled
+// ////////////////////
+
+:host(.med-button--tertiary.button-disabled) {
+  cursor: initial;
+  pointer-events: none;
+  --bg-hover: transparent;
+  --color: #{color("neutral", "5")};
 }
 
 // ////////////////////

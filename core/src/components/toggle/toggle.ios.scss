@@ -122,7 +122,12 @@
 
 
 :host(.med-toggle) {
+  --background: #{color('neutral', '4')};
   --background-checked: #{color('brand', '3')};
+  --handle-height: calc(20px - (2px * 2));
+  --handle-width: calc(20px - (2px * 2));
+  height: 20px;
+  width: 32px;
 }
 
 // ////////////////////

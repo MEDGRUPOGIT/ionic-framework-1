@@ -31,6 +31,17 @@
 }
 
 // ////////////////////
+// disabled
+// ////////////////////
+
+:host(.med-button--secondary.button-disabled) {
+  cursor: initial;
+  pointer-events: none;
+  --border-color: #{color("neutral", "3")};
+  --color: #{color("neutral", "5")};
+}
+
+// ////////////////////
 // icon-only
 // ////////////////////
 

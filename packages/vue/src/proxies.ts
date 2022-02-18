@@ -971,11 +971,12 @@ export const MedAvatar = /*@__PURE__*/ defineContainer<JSX.MedAvatar>('med-avata
 
 export const MedBanner = /*@__PURE__*/ defineContainer<JSX.MedBanner>('med-banner', [
   'dsColor',
-  'dsSize',
   'titulo',
   'texto',
   'btnLeft',
   'btnRight',
+  'icon',
+  'image',
   'btnLeftClick',
   'btnRightClick'
 ]);
@@ -993,6 +994,7 @@ export const MedCalendar = /*@__PURE__*/ defineContainer<JSX.MedCalendar>('med-c
   'dsColor',
   'mes',
   'ano',
+  'container',
   'medClick',
   'medSwipe'
 ]);
@@ -1159,6 +1161,24 @@ export const MedImageZoom = /*@__PURE__*/ defineContainer<JSX.MedImageZoom>('med
 export const MedInput = /*@__PURE__*/ defineContainer<JSX.MedInput>('med-input');
 
 
+export const MedItem = /*@__PURE__*/ defineContainer<JSX.MedItem>('med-item', [
+  'dsColor',
+  'padding',
+  'button',
+  'detail',
+  'detailIcon',
+  'disabled',
+  'download',
+  'href',
+  'rel',
+  'lines',
+  'routerAnimation',
+  'routerDirection',
+  'target',
+  'type'
+]);
+
+
 export const MedItemAulas = /*@__PURE__*/ defineContainer<JSX.MedItemAulas>('med-item-aulas', [
   'dsColor',
   'professor',
@@ -1194,6 +1214,14 @@ export const MedListItemAccordion = /*@__PURE__*/ defineContainer<JSX.MedListIte
   'border',
   'collapsed',
   'disabled'
+]);
+
+
+export const MedLista = /*@__PURE__*/ defineContainer<JSX.MedLista>('med-lista', [
+  'dsColor',
+  'padding',
+  'lines',
+  'inset'
 ]);
 
 

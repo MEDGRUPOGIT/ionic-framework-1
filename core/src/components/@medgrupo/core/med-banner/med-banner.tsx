@@ -15,11 +15,6 @@ export class MedBanner {
   @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
-   * Define a variação de tamanho do componente.
-   */
-  @Prop({ reflect: true }) dsSize?: 'sm' | 'md' = 'sm';
-
-  /**
     * Define o título do componente.
     */
   @Prop() titulo?: string;
@@ -30,14 +25,24 @@ export class MedBanner {
   @Prop() texto?: string;
 
   /**
-   * Define o texto do botão esquerdo, se existir.
-   */
+    * Define o texto do botão esquerdo, se existir.
+    */
   @Prop() btnLeft!: string;
 
   /**
     * Define o texto do botão direito, se existir.
     */
   @Prop() btnRight!: string;
+
+  /**
+    * Define o icone, se existir.
+    */
+  @Prop() icon!: string;
+
+  /**
+    * Define a url da imagem, se existir.
+    */
+  @Prop() image!: string;
 
   /**
     * Emitido quando há um click no botão esquerdo.
@@ -49,34 +54,36 @@ export class MedBanner {
     */
   @Event() btnRightClick!: EventEmitter<void>;
 
-  private onBtnLeftClick = () => {
+  private onButtonLeftClick = () => {
     this.btnLeftClick.emit();
   }
 
-  private onBtnRightClick = () => {
+  private onButtonRightClick = () => {
     this.btnRightClick.emit();
   }
 
   render() {
-    const { dsColor, dsSize, titulo, texto, btnLeft, btnRight } = this;
+    const { dsColor, titulo, texto, btnLeft, btnRight, icon, image } = this;
 
     return (
       <Host class={generateMedColor(dsColor, {
         'med-notification': true,
-        [`med-notification--${dsSize}`]: dsSize !== undefined,
       })}>
         {(titulo || texto) && <div class="med-notification__content">
           <div class="med-notification__left">
-            {titulo && <med-type class="med-notification__titulo" token={dsSize === 'md' ? 'h20' : 'p16b'}>{titulo}</med-type>}
-            {texto && <med-type class="med-notification__texto" token={dsSize === 'md' ? 'p16x' : 'p14x'}>{texto}</med-type>}
+            <div class="med-notification__header">
+              {titulo && <med-type class="med-notification__titulo"> {titulo} </med-type>}
+              {icon && <ion-icon class="med-notification__icon med-icon" name={icon}></ion-icon>}
+            </div>
+            {texto && <med-type class="med-notification__texto"> {texto} </med-type>}
           </div>
-          <div class="med-notification__right">
-            <slot name="imagem"></slot>
-          </div>
+          {image && <div class="med-notification__right">
+             <img class="med-notification__image" src={image}></img>
+          </div>}
         </div>}
         {(btnLeft || btnRight) && <div class="med-notification__footer">
-          {btnLeft && <ion-button class="med-notification__button" ds-color={dsColor} ds-name="tertiary" ds-size={dsSize} onClick={this.onBtnLeftClick}> {btnLeft} </ion-button>}
-          {btnRight && <ion-button class="med-notification__button" ds-color={dsColor} ds-name="tertiary" ds-size={dsSize} onClick={this.onBtnRightClick}> {btnRight} </ion-button>}
+          {btnLeft && <ion-button class="med-notification__button" ds-color={dsColor} ds-name="tertiary" onClick={this.onButtonLeftClick}> {btnLeft} </ion-button>}
+          {btnRight && <ion-button class="med-notification__button" ds-color={dsColor} ds-name="tertiary" onClick={this.onButtonRightClick}> {btnRight} </ion-button>}
         </div>}
       </Host>
     );

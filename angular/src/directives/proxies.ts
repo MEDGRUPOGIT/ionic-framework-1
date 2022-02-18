@@ -1053,8 +1053,8 @@ export class MedAvatar {
 }
 export declare interface MedBanner extends Components.MedBanner {
 }
-@ProxyCmp({ inputs: ["btnLeft", "btnRight", "dsColor", "dsSize", "texto", "titulo"] })
-@Component({ selector: "med-banner", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["btnLeft", "btnRight", "dsColor", "dsSize", "texto", "titulo"] })
+@ProxyCmp({ inputs: ["btnLeft", "btnRight", "dsColor", "icon", "image", "texto", "titulo"] })
+@Component({ selector: "med-banner", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["btnLeft", "btnRight", "dsColor", "icon", "image", "texto", "titulo"] })
 export class MedBanner {
   btnLeftClick!: EventEmitter<CustomEvent>;
   btnRightClick!: EventEmitter<CustomEvent>;
@@ -1078,8 +1078,8 @@ export class MedBase {
 }
 export declare interface MedCalendar extends Components.MedCalendar {
 }
-@ProxyCmp({ inputs: ["ano", "dsColor", "mes"] })
-@Component({ selector: "med-calendar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["ano", "dsColor", "mes"] })
+@ProxyCmp({ inputs: ["ano", "container", "dsColor", "mes"] })
+@Component({ selector: "med-calendar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["ano", "container", "dsColor", "mes"] })
 export class MedCalendar {
   medClick!: EventEmitter<CustomEvent>;
   medSwipe!: EventEmitter<CustomEvent>;
@@ -1352,6 +1352,17 @@ export class MedInput {
     this.el = r.nativeElement;
   }
 }
+export declare interface MedItem extends Components.MedItem {
+}
+@ProxyCmp({ inputs: ["button", "detail", "detailIcon", "disabled", "download", "dsColor", "href", "lines", "mode", "padding", "rel", "routerAnimation", "routerDirection", "target", "type"] })
+@Component({ selector: "med-item", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["button", "detail", "detailIcon", "disabled", "download", "dsColor", "href", "lines", "mode", "padding", "rel", "routerAnimation", "routerDirection", "target", "type"] })
+export class MedItem {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedItemAulas extends Components.MedItemAulas {
 }
 @ProxyCmp({ inputs: ["dsColor", "porcentagem", "professor", "videos"] })
@@ -1390,6 +1401,17 @@ export declare interface MedListItemAccordion extends Components.MedListItemAcco
 @ProxyCmp({ inputs: ["border", "collapsed", "disabled", "dsColor", "dsSize", "label", "margin", "selected", "titulo"], "methods": ["toggle"] })
 @Component({ selector: "med-list-item-accordion", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["border", "collapsed", "disabled", "dsColor", "dsSize", "label", "margin", "selected", "titulo"] })
 export class MedListItemAccordion {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface MedLista extends Components.MedLista {
+}
+@ProxyCmp({ inputs: ["dsColor", "inset", "lines", "mode", "padding"], "methods": ["closeSlidingItems"] })
+@Component({ selector: "med-lista", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "inset", "lines", "mode", "padding"] })
+export class MedLista {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();

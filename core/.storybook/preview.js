@@ -151,10 +151,10 @@ export const parameters = {
       order: [
         'General', ['Welcome', 'Biblioteca', 'Styleguide'],
         'Conhecimento', ['Metodologia BEM'],
+        'Foundation',
         'Components',
         'Pages',
         'Enums',
-        'Tokens',
         'Sass',
       ],
     },

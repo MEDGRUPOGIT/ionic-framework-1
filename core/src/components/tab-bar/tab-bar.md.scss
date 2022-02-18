@@ -13,5 +13,34 @@
   height: 56px;
 }
 
-@import './tab-bar.med.scss';
+/* :host {
+  --background: #{color('neutral', '1')};
 
+  height: auto;
+  contain: initial;
+  box-shadow: none;
+}
+
+:host(.med-color-neutral) {
+  --background: #{curr-color('neutral')};
+}
+
+:host(.med-color-neutral) ::slotted(ion-tab-button) {
+  --color: #{curr-color('neutral', null, 'contrast')};
+  --color-hover: #{curr-color('brand', null, 'contrast')};
+  --color-focused: #{curr-color('brand', null, 'contrast')};
+  --color-selected: #{curr-color('brand', null, 'contrast')};
+  --color-activated: #{curr-color('brand', null, 'contrast')};
+  --color-icon: #{curr-color('neutral', null, 'contrast')};
+}
+ */
+
+:host {
+  --background: #{color('neutral', '1')};
+  contain: initial;
+  padding: 8px 0;
+}
+
+::slotted(ion-tab-button) {
+  --padding-gap: var(--gap);
+}

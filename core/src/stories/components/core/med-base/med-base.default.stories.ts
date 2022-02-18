@@ -1,10 +1,13 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
-import { MedColor } from '../../../constants';
+import { MedColors } from "../../../../global/templarios/color.enum";
 
 export default {
-  title: 'Components/Core/Base',
+  title: 'Components/Core/Base OK',
   decorators: [withDesign],
+  parameters: {
+    layout: 'centered',
+  },
 };
 
 const Template = ({ dsColor, radius, spacingV, spacingH }) => {
@@ -13,21 +16,22 @@ const Template = ({ dsColor, radius, spacingV, spacingH }) => {
       /* !NÃO UTILIZAR! Apenas para estória */
         .middle {
           padding: 0 16px;
+          flex: 1;
         }
       /* !NÃO UTILIZAR! Apenas para estória */
     </style>
 
     <ion-app>
       <ion-content>
-        <div class="flex-center flex-center--xs">
+        <div class="full-height-center">
 
-          <!-- component -->
+          <!-- component markdown -->
           <med-base .dsColor=${dsColor} .radius=${radius} .spacingV=${spacingV} .spacingH=${spacingH}>
             <med-type slot="start">Left</med-type>
             <med-type class="middle" slot="middle">Middle</med-type>
             <med-type slot="end">Right</med-type>
           </med-base>
-          <!-- component -->
+          <!-- component markdown -->
 
         </div>
       </ion-content>
@@ -37,6 +41,7 @@ const Template = ({ dsColor, radius, spacingV, spacingH }) => {
 
 export const Default = Template.bind({});
 Default.parameters = {
+  layout: 'centered',
   design: {
     type: 'figma',
     url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/Componentes?node-id=7380%3A50289',
@@ -44,11 +49,11 @@ Default.parameters = {
 }
 Default.argTypes = {
   dsColor: {
-    options: MedColor,
+    options: Object.values(MedColors),
     control: { type: 'select'},
-    description: 'Define a cor do componente.',
+    description: "Define a cor do componente.",
     table: {
-      type:  { summary: 'MedColor' },
+      type:  { summary: Object.values(MedColors).join(' |') },
       defaultValue: { summary: 'undefined' },
     },
   },

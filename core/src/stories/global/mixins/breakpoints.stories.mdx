@@ -18,15 +18,17 @@ No arquivo em que a utilização dos **mixins** forem **necessárias**, importar
 Os breakpoints são quebras de layout padrões criadas com o intuito de padronizar as principais resoluções de viewport que as aplicações
 do medgrupo necessitam.
 
-<img src={breakpoints} alt="breakpoints" />
+<img style={{padding: "30px 0"}} src={breakpoints} alt="breakpoints" />
 
 ## 🧪 breakpoint-up()
 
 ### 💈 Utilização:
 
 ```
-.class {
-  @include breakpoint-up('md') { ... }
+@include breakpoint-up('md') {
+  .class {
+    ...
+  }
 }
 ```
 
@@ -43,8 +45,10 @@ do medgrupo necessitam.
 ### 💈 Utilização:
 
 ```
-.class {
-  @include breakpoint-down('lg') { ... }
+@include breakpoint-down('md') {
+  .class {
+    ...
+  }
 }
 ```
 
@@ -61,8 +65,10 @@ do medgrupo necessitam.
 ### 💈 Utilização:
 
 ```
-.class {
-  @include breakpoint-between('sm','lg') { ... }
+@include breakpoint-between('sm','lg') {
+  .class {
+    ...
+  }
 }
 ```
 
@@ -79,8 +85,10 @@ do medgrupo necessitam.
 ### 💈 Utilização:
 
 ```
-.class {
-  @include breakpoint-only('xxs') { ... }
+@include breakpoint-between('xxs') {
+  .class {
+    ...
+  }
 }
 ```
 
@@ -91,5 +99,3 @@ do medgrupo necessitam.
   .class { ... }
 }
 ```
-
-<img src={breakpoints} alt="breakpoints" />

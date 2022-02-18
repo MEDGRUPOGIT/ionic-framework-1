@@ -3,6 +3,7 @@ import { MedColor } from '../../../../interface';
 import { generateMedColor } from '../../../../utils/med-theme';
 
 /**
+ * @slot - Slot default.
  * @slot start - Conteúdo é posicionado a esquerda do componente.
  * @slot middle - Conteúdo é posicionado ao centro do componente.
  * @slot end - Conteúdo é posicionado a direita do componente.
@@ -51,5 +52,4 @@ export class MedBase {
       </Host>
     );
   }
-
 }
