@@ -1,6 +1,8 @@
-@import "../../../../../templarios/abstracts";
+:host {
+  --background: none;
+}
 
-:host(.med-semana--skin-lista) {
+:host {
   --background: none;
   flex-direction: column;
   justify-content: start;

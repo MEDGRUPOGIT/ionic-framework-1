@@ -14,12 +14,22 @@ export class MedChartBarHorizontal {
   @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
+    * Define a variação de tamanho do componente.
+    */
+   @Prop() dsSize?: 'md';
+
+  /**
+   * Define a visibilidade do label.
+   */
+  @Prop({ reflect: true }) label = true;
+
+  /**
    * Define o valor do componente.
    */
   @Prop({ reflect: true, mutable: true }) value = 0;
 
   render() {
-    const { dsColor, value } = this;
+    const { dsColor, dsSize, label, value } = this;
     let progressClass, progressWidth;
 
     if(value > 100) {
@@ -34,14 +44,19 @@ export class MedChartBarHorizontal {
     }
 
     return (
-      <Host class={generateMedColor(dsColor, { [`med-chart-bar-horizontal ${progressClass}`]: true,  })} aria-valuenow={value} aria-valuemin="0" aria-valuemax="1" role="progressbar">
+      <Host class={generateMedColor(dsColor, {
+          [`med-chart-bar-horizontal ${progressClass}`]: true,
+          [`med-chart-bar-horizontal--${dsSize}`]: dsSize !== undefined,
+        })}
+        aria-valuenow={value}
+        aria-valuemin="0"
+        aria-valuemax="1"
+        role="progressbar">
         <div class="med-chart-bar-horizontal__container">
           <div class="med-chart-bar-horizontal__progress" part="progress" style={{ '--progress': `${progressWidth === 0 ? -100 : progressWidth - 100}` }}></div>
           <div class="med-chart-bar-horizontal__track" part="track"></div>
         </div>
-        <med-type class="med-chart-bar-horizontal__label" token="p10b">
-          {value}%
-        </med-type>
+        {label && <med-type class="med-chart-bar-horizontal__label">{value}%</med-type>}
       </Host>
     );
   }

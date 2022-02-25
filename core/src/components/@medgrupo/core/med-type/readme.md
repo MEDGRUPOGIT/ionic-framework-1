@@ -30,7 +30,7 @@
  - [med-nav](../med-nav)
  - [med-nav-accordion](../med-nav-accordion)
  - [med-nav-item](../med-nav-item)
- - [med-piechart](../med-piechart)
+ - [med-piechart](../../compositions/med-piechart)
  - [med-rate-aula](../../global/med-rate-aula)
  - [med-semana](../../compositions/med-semana)
  - [med-video-list-item](../../testes/med-video-list-item)

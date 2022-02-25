@@ -21,7 +21,9 @@ export class MedCalendar {
 
   @Prop({ reflect: true, mutable: true  }) container?: string;
 
-  @State() choice = 'Semana';
+  @Prop({ reflect: true }) disable = false;
+
+  @Prop({ reflect: true, mutable: true }) choice = 'Semana';
 
   @State() width = 166;
 
@@ -115,11 +117,14 @@ export class MedCalendar {
   } */
 
   render() {
-    const { dsColor, mes, ano } = this;
+    const { dsColor, mes, ano, disable } = this;
 
     return (
       <Host from-stencil
-        class={generateMedColor(dsColor, {'med-calendar': true })}
+        class={generateMedColor(dsColor, {
+          'med-calendar': true,
+          'med-calendar--disable': disable,
+        })}
         style={{ '--width': `${this.width}` }}>
         <div class="header">
           <div class="header__left">

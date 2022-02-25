@@ -7,7 +7,7 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({dsColor, mes, ano, fill, container}) => {
+const Template = ({dsColor, mes, ano, fill, container, disable, choice}) => {
   return html`
     <style>
       med-calendar {
@@ -21,7 +21,7 @@ const Template = ({dsColor, mes, ano, fill, container}) => {
     </style>
     <ion-app>
       <div class="teste">
-        <med-calendar .dsColor=${dsColor} mes=${mes} ano=${ano} container=${container}>
+        <med-calendar .dsColor=${dsColor} mes=${mes} ano=${ano} container=${container} ?disable=${disable} choice=${choice}>
           <med-calendar-day .dsColor=${dsColor} active>1</med-calendar-day>
           <med-calendar-day .fill=${fill} .dsColor=${dsColor}>2</med-calendar-day>
           <med-calendar-day .dsColor=${dsColor}>3</med-calendar-day>
@@ -88,6 +88,10 @@ Default.argTypes = {
     control: { type: 'text' },
     defaultValue: 'teste',
   },
+  choice: {
+    control: { type: 'text' },
+    defaultValue: 'teste',
+  },
   fill: {
     defaultValue: 'none',
     options: [undefined, 'outline'],
@@ -95,6 +99,15 @@ Default.argTypes = {
     description: "Define a variação de estilo do componente.",
     table: {
       type:  { summary: ['outline'] },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  disable: {
+    control: { type: 'boolean' },
+    description: 'Desabilita botão do componente.',
+    defaultValue: false,
+    table: {
+      type:  { summary: 'boolean' },
       defaultValue: { summary: 'undefined' },
     },
   },

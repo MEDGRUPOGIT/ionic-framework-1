@@ -10,6 +10,7 @@
 | Property   | Attribute   | Description                                            | Type                  | Default     |
 | ---------- | ----------- | ------------------------------------------------------ | --------------------- | ----------- |
 | `dsColor`  | `ds-color`  | Define a cor do componente.                            | `string \| undefined` | `undefined` |
+| `gap`      | `gap`       | Define o gap entre slots.                              | `string \| undefined` | `undefined` |
 | `radius`   | `radius`    | Define a variação de borde-radius do componente.       | `string \| undefined` | `undefined` |
 | `spacingH` | `spacing-h` | Define a variação de padding horizontal do componente. | `string \| undefined` | `undefined` |
 | `spacingV` | `spacing-v` | Define a variação de padding vertical do componente.   | `string \| undefined` | `undefined` |

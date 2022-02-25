@@ -81,6 +81,14 @@
 }
 
 // ////////////////////
+// disabled
+// ////////////////////
+
+:host(.med-calendar--disable) .header__right .med-button {
+  pointer-events: none;
+}
+
+// ////////////////////
 // color
 // ////////////////////
 

@@ -24,7 +24,7 @@ const Template = ({ dsColor }) => {
       }
 
       .content {
-        height: calc(100% - 120px);
+        height: calc(100% - 100px);
       }
 
       .wrapper-right {
@@ -64,6 +64,20 @@ const Template = ({ dsColor }) => {
         --med-color-feedback-contrast: hsl(var(--med-color-neutral-10)) !important;
       }
 
+      .search {
+        display: flex;
+        padding: 0 12px;
+      }
+
+      .search__bar {
+        margin-right: 32px;
+        width: calc(100% - 170px);
+      }
+
+      .search__grid {
+        margin-left: 16px;
+      }
+
       .week-date__container {
         margin: 16px 0;
         display: flex;
@@ -87,7 +101,7 @@ const Template = ({ dsColor }) => {
         height: 90vh;
         z-index: 961;
 
-        transform: translateY(85%);
+        transform: translateY(calc(100% - 75px));
         transition: 300ms all ease;
       }
 
@@ -96,7 +110,7 @@ const Template = ({ dsColor }) => {
       }
 
       .cp-menu__logo {
-        background: linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, #141414 100%);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #141414 100%);
       }
 
       .cp-menu__logo-wrap {
@@ -111,8 +125,16 @@ const Template = ({ dsColor }) => {
         transform: translateX(0px);
       }
 
+      .svg-left path {
+        fill: hsl(var(--med-color-neutral-10));
+      }
+
       .svg-right {
         transform: translateX(-6px);
+      }
+
+      .svg-right path {
+        fill: hsl(var(--med-color-neutral-10));
       }
 
       .cp-menu__logo-item {
@@ -235,6 +257,18 @@ const Template = ({ dsColor }) => {
             </div>
           </div>
 
+          <div class="search">
+            <ion-searchbar class="search__bar" show-clear-button="never" show-cancel-button="focus" cancel-button-text="Cancelar" mode="ios" search-icon="med-busca"></ion-searchbar>
+            <ion-button ds-name="tertiary">
+              <med-type token="p14b">List</med-type>
+              <ion-icon slot="end" class="med-icon" name="med-indice"></ion-icon>
+            </ion-button>
+            <ion-button class="search__grid" ds-name="tertiary">
+              <med-type token="p14b">Grid</med-type>
+              <ion-icon slot="end" class="med-icon" name="med-cartao"></ion-icon>
+            </ion-button>
+          </div>
+
           <ion-content class="content">
             <div class="col-left">
               <div class="week-date__container">
@@ -297,7 +331,7 @@ const Template = ({ dsColor }) => {
           </div>
         </div>
 
-        <div class="cp-menu__wrap">
+        <div class="cp-menu__wrap tp-scroll">
           <div class="cp-menu__aluno">
             <med-type class="cp-menu__title" token="h14x" ds-color="neutral-3">Olá Acadêmico</med-type>
           </div>

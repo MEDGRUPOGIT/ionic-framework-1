@@ -26,6 +26,11 @@ export class MedBase {
   @Prop({ reflect: true }) radius?: 's00' | 's02' | 's04' | 's08' | string;
 
   /**
+    * Define o gap entre slots.
+    */
+   @Prop({ reflect: true }) gap?: 's00' | 's02' | 's04' | 's08' | string;
+
+  /**
    * Define a variação de padding vertical do componente.
    */
   @Prop({ reflect: true }) spacingV?: 's00' | 's02' | 's04' | 's08' | 's12' | 's16' | 's24' | string;
@@ -36,12 +41,13 @@ export class MedBase {
   @Prop({ reflect: true }) spacingH?: 's00' | 's02' | 's04' | 's08' | 's12' | 's16' | 's24' | string;
 
   render() {
-    const { dsColor, radius, spacingV, spacingH } = this;
+    const { dsColor, radius, gap, spacingV, spacingH } = this;
 
     return (
       <Host class={generateMedColor(dsColor, {
         'med-base': true,
         [`med-base--radius-${radius}`]: radius !== undefined,
+        [`med-base--gap-${gap}`]: gap !== undefined,
         [`med-base--spacing-v-${spacingV}`]: spacingV !== undefined,
         [`med-base--spacing-h-${spacingH}`]: spacingH !== undefined,
       })}>
