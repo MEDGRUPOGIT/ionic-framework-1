@@ -1434,10 +1434,9 @@ med-add-card,prop,titulo,string | undefined,undefined,false,true
 med-agrupador,shadow
 med-agrupador,prop,collapsed,boolean,false,false,true
 med-agrupador,prop,dsColor,string | undefined,undefined,false,true
-med-agrupador,prop,texto1,string,`Expandir a lista`,false,true
-med-agrupador,prop,texto2,string,`Ocultar a lista`,false,true
+med-agrupador,prop,labelAlternativo,string,'Ocultar a lista',false,true
+med-agrupador,prop,labelDefault,string,'Expandir a lista',false,true
 med-agrupador,method,toggle,toggle(event?: Event | undefined) => Promise<void>
-med-agrupador,css-prop,--color
 
 med-alternativas,shadow
 med-alternativas,prop,alternativaSelecionada,string,undefined,true,true
@@ -1509,8 +1508,6 @@ med-avatar,prop,dsColor,string | undefined,undefined,false,true
 med-avatar,prop,dsSize,"base" | "lg" | "md" | "sm" | "xl" | "xs" | "xxl" | "xxs" | undefined,undefined,false,false
 med-avatar,prop,image,string | undefined,undefined,false,false
 med-avatar,prop,letter,string | undefined,undefined,false,false
-med-avatar,css-prop,--background
-med-avatar,css-prop,--color
 
 med-banner,shadow
 med-banner,prop,btnLeft,string,undefined,true,false
@@ -1525,13 +1522,16 @@ med-banner,event,btnRightClick,void,true
 
 med-base,scoped
 med-base,prop,dsColor,string | undefined,undefined,false,true
+med-base,prop,gap,string | undefined,undefined,false,true
 med-base,prop,radius,string | undefined,undefined,false,true
 med-base,prop,spacingH,string | undefined,undefined,false,true
 med-base,prop,spacingV,string | undefined,undefined,false,true
 
 med-calendar,shadow
 med-calendar,prop,ano,string | undefined,undefined,false,true
+med-calendar,prop,choice,string,'Semana',false,true
 med-calendar,prop,container,string | undefined,undefined,false,true
+med-calendar,prop,disable,boolean,false,false,true
 med-calendar,prop,dsColor,string | undefined,undefined,false,true
 med-calendar,prop,mes,string | undefined,undefined,false,true
 med-calendar,event,medClick,any,true
@@ -1562,6 +1562,8 @@ med-chart-bar,prop,width,number,24,false,true
 
 med-chart-bar-horizontal,shadow
 med-chart-bar-horizontal,prop,dsColor,string | undefined,undefined,false,true
+med-chart-bar-horizontal,prop,dsSize,"md" | undefined,undefined,false,false
+med-chart-bar-horizontal,prop,label,boolean,true,false,true
 med-chart-bar-horizontal,prop,value,number,0,false,true
 med-chart-bar-horizontal,part,progress
 med-chart-bar-horizontal,part,track
@@ -1782,9 +1784,11 @@ med-parent,prop,dsColor,string | undefined,undefined,false,true
 med-parent,prop,fill,"outline" | undefined,undefined,false,true
 
 med-piechart,shadow
-med-piechart,prop,active,boolean,false,false,true
+med-piechart,prop,download,boolean,false,false,true
+med-piechart,prop,downloaded,boolean,false,false,true
 med-piechart,prop,dsColor,string | undefined,undefined,false,true
-med-piechart,prop,text,string | undefined,undefined,false,true
+med-piechart,prop,dsSize,"sm" | undefined,undefined,false,false
+med-piechart,prop,label,string | undefined,undefined,false,true
 med-piechart,prop,value,number,0,false,true
 med-piechart,method,toggle,toggle(event?: Event | undefined) => Promise<void>
 
@@ -1835,6 +1839,7 @@ med-rating,css-prop,--color-icon
 med-semana,scoped
 med-semana,prop,active,boolean,false,false,true
 med-semana,prop,dsColor,string | undefined,undefined,false,true
+med-semana,prop,dsSize,"sm" | undefined,undefined,false,false
 med-semana,prop,skin,"lista" | undefined,undefined,false,true
 
 med-semanas,shadow

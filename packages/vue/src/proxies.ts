@@ -880,8 +880,8 @@ export const MedAddCard = /*@__PURE__*/ defineContainer<JSX.MedAddCard>('med-add
 
 export const MedAgrupador = /*@__PURE__*/ defineContainer<JSX.MedAgrupador>('med-agrupador', [
   'dsColor',
-  'texto1',
-  'texto2',
+  'labelDefault',
+  'labelAlternativo',
   'collapsed'
 ]);
 
@@ -985,6 +985,7 @@ export const MedBanner = /*@__PURE__*/ defineContainer<JSX.MedBanner>('med-banne
 export const MedBase = /*@__PURE__*/ defineContainer<JSX.MedBase>('med-base', [
   'dsColor',
   'radius',
+  'gap',
   'spacingV',
   'spacingH'
 ]);
@@ -995,6 +996,8 @@ export const MedCalendar = /*@__PURE__*/ defineContainer<JSX.MedCalendar>('med-c
   'mes',
   'ano',
   'container',
+  'disable',
+  'choice',
   'medClick',
   'medSwipe'
 ]);
@@ -1034,6 +1037,8 @@ export const MedChartBar = /*@__PURE__*/ defineContainer<JSX.MedChartBar>('med-c
 
 export const MedChartBarHorizontal = /*@__PURE__*/ defineContainer<JSX.MedChartBarHorizontal>('med-chart-bar-horizontal', [
   'dsColor',
+  'dsSize',
+  'label',
   'value'
 ]);
 
@@ -1301,9 +1306,11 @@ export const MedParent = /*@__PURE__*/ defineContainer<JSX.MedParent>('med-paren
 
 export const MedPiechart = /*@__PURE__*/ defineContainer<JSX.MedPiechart>('med-piechart', [
   'dsColor',
-  'active',
+  'dsSize',
+  'download',
+  'downloaded',
   'value',
-  'text'
+  'label'
 ]);
 
 
@@ -1351,6 +1358,7 @@ export const MedRating = /*@__PURE__*/ defineContainer<JSX.MedRating>('med-ratin
 
 export const MedSemana = /*@__PURE__*/ defineContainer<JSX.MedSemana>('med-semana', [
   'dsColor',
+  'dsSize',
   'active',
   'skin'
 ]);

@@ -55,7 +55,7 @@ export class MedCheckCard {
           'med-check-card': true,
           'med-check-card--alert': alert,
         })}>
-        <med-base class="med-check-card__base">
+        <med-base spacing-v="s00" spacing-h="s00" class="med-check-card__base">
           <div class="med-check-card__input-container">
             <slot name="input"></slot>
           </div>

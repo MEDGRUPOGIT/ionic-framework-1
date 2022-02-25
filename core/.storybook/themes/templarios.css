@@ -11,9 +11,18 @@
   --storybook-color-code: #484d5b;
 }
 
-.full-height-center {
+.full-height-grid {
   display: grid;
   align-items: center;
+  height: 100vh;
+  padding: 16px;
+}
+
+
+.full-height-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   padding: 16px;
 }

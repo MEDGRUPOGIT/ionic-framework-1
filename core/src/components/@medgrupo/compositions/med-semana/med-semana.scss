@@ -1,11 +1,26 @@
-@import "../../../../../templarios/abstracts";
-
 :host {
   --background: #{color('neutral', '2')};
   --background-row: #{color('neutral', '2')};
+
+  --semana-color: #{color('neutral', '10')};
+  --semana-font-size: 10px;
+
+  --numero-color: #{color('neutral', '10')};
+  --numero-font-size: 16px;
+
+  --semana-back-color: #{color('neutral', '10')};
+  --semana-back-font-size: 10px;
+
+  --description-color: #{color('neutral', '10')};
+  --description-font-size: 14px;
+
+  --tempo-color: #{color('neutral', '10')};
+  --tempo-font-size: 12px;
+
+  --button-flip-color: #{color('brand', '4')};
 }
 
-:host(.med-semana) {
+:host {
   background: var(--background);
   padding: 8px;
   border-radius: 8px 31px 31px 8px;
@@ -22,21 +37,75 @@
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
+    position: relative;
   }
 
-  &__text {
-    display: block;
-    text-align: left;
+  &__back {
+    --font-size: var(--semana-back-font-size);
+    --line-height: 12px;
+    --font-weight: 400;
+    --color: var(--semana-back-color);
   }
 
-  &__icon {
+  &__text-animate  {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    &--default {
+      transition: transform 0.6s ease;
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+
+    &--back {
+      transition: transform 0.6s ease;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0);
+    }
+
+    // state
+    &--flipped {
+      &.med-semana__text-animate--default {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0);
+      }
+
+      &.med-semana__text-animate--back {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__semana {
+    --font-size: var(--semana-font-size);
+    --line-height: 12px;
+    --font-weight: 400;
+    --color: var(--semana-color);
+  }
+
+  &__numero {
+    --font-size: var(--numero-font-size);
+    --line-height: 16px;
+    --font-weight: 600;
+    --color: var(--numero-color);
+  }
+
+  &__button-flip {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    border: 1px solid color('brand', '4');
+    border: 1px solid var(--button-flip-color);
+    position: relative;
+    margin-top: 4px;
 
     &::after,
     &::before {
@@ -44,12 +113,19 @@
       position: absolute;
       width: 7px;
       height: 1px;
-      background: color('brand', '4');
+      background: var(--button-flip-color);
     }
 
     &::before {
       transform: rotate(90deg);
       transition: transform 0.7s;
+    }
+
+    // state
+    &--active {
+      &::before {
+        transform: rotate(0deg);
+      }
     }
   }
 
@@ -59,7 +135,6 @@
   }
 
   &__chart {
-    --stroke-background: #{color('neutral', '3')};
     &:not(:last-child) {
       margin-right: 8px;
     }
@@ -71,52 +146,19 @@
 }
 
 //////////////////////////////
-// colors
+// dsColor
 //////////////////////////////
 
-////////////////////
-// color
-////////////////////
-
 :host(.med-color) {
-  .med-semana__icon {
-    border-color: curr-color('color', '4');
-
-    &::after,
-    &::before {
-      background: curr-color('color', '4');
-    }
-  }
+  --button-flip-color: #{curr-color('color', '4')};
 }
-
-////////////////////
-// neutral
-////////////////////
 
 :host(.med-color-neutral) {
-  .med-semana__icon {
-    border-color: curr-color('neutral');
-
-    &::after,
-    &::before {
-      background: curr-color('neutral');
-    }
-  }
+  --button-flip-color: #{curr-color('neutral')};
 }
 
-////////////////////
-// feedback
-////////////////////
-
 :host(.med-color-feedback) {
-  .med-semana__icon {
-    border-color: curr-color('feedback');
-
-    &::after,
-    &::before {
-      background: curr-color('feedback');
-    }
-  }
+  --button-flip-color: #{curr-color('feedback')};
 }
 
 //////////////////////////////
@@ -124,26 +166,87 @@
 //////////////////////////////
 
 :host(.med-semana--active) {
-  --background: #{color('neutral', '3')};
-
-  .med-semana__chart {
-    --stroke-background: #{color('neutral', '1')};
-  }
+  --background: #{color('brand', '1')};
+  // transition: background-color 0.6s ease;
 }
 
-:host(.med-color.med-semana--active) {
+////////////////////
+// state dsColor
+////////////////////
+
+:host(.med-semana--active.med-color) {
   --background: #{curr-color('color', '1')};
+  --semana-color: #{curr-color('color', '1', 'contrast')};
+  --numero-color: #{curr-color('color', '1', 'contrast')};
+  --semana-back-color: #{color('color', '1', 'contrast')};
+
+  .med-semana {
+    &__chart {
+      --text-color-front: #{curr-color('color', '1', 'contrast')};
+    }
+  }
 }
 
 :host(.med-semana--active.med-color-neutral) {
   --background: #{curr-color('neutral')};
+  --semana-color: #{curr-color('neutral', null, 'contrast')};
+  --numero-color: #{curr-color('neutral', null, 'contrast')};
+  --semana-back-color: #{color('neutral', null, 'contrast')};
+  --button-flip-color: #{curr-color('neutral', null, 'contrast')};
+
+  .med-semana {
+    &__chart {
+      --text-color-front: #{curr-color('neutral', null, 'contrast')};
+    }
+  }
 }
 
 :host(.med-semana--active.med-color-feedback) {
   --background: #{curr-color('feedback')};
+  --semana-color: #{curr-color('feedback', null, 'contrast')};
+  --numero-color: #{curr-color('feedback', null, 'contrast')};
+  --semana-back-color: #{color('feedback', null, 'contrast')};
+  --button-flip-color: #{curr-color('feedback', null, 'contrast')};
+
+  .med-semana {
+    &__chart {
+      --text-color-front: #{curr-color('feedback', null, 'contrast')};
+    }
+  }
 }
 
-@import './med-semana.skin.scss';
+//@import './med-semana.skin.scss';
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 :host(.med-semana--skin-lista) {
   --background: none;
@@ -201,15 +304,36 @@
     }
 
     &__description {
+      --font-size: var(--description-font-size);
+      --line-height: 16px;
+      --font-weight: 400;
+      --color: var(--description-color);
+
       display: flex;
       align-items: center;
-      font-size: 14px;
-      line-height: 1;
       padding: 0 16px 0 8px;
       max-height: 48px;
       min-width: 268px;
-      //overflow: hidden;
       text-align: left;
+    }
+
+    &__tempo-container {
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    &__download-button {
+      --padding: 5px 0 5px 5px;
+    }
+
+    &__tempo {
+      --font-size: var(--tempo-font-size);
+      --line-height: 12px;
+      --font-weight: 400;
+      --color: var(--tempo-color);
     }
   }
 }

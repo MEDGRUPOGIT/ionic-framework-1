@@ -10,7 +10,9 @@
 | Property    | Attribute   | Description | Type                  | Default     |
 | ----------- | ----------- | ----------- | --------------------- | ----------- |
 | `ano`       | `ano`       |             | `string \| undefined` | `undefined` |
+| `choice`    | `choice`    |             | `string`              | `'Semana'`  |
 | `container` | `container` |             | `string \| undefined` | `undefined` |
+| `disable`   | `disable`   |             | `boolean`             | `false`     |
 | `dsColor`   | `ds-color`  |             | `string \| undefined` | `undefined` |
 | `mes`       | `mes`       |             | `string \| undefined` | `undefined` |
 
