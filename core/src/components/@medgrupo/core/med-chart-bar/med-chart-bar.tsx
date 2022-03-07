@@ -22,19 +22,19 @@ export class MedChartBar {
   @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
-    * Define a valor do componente.
+    * Define a valor da %(porcentagem) do componente.
     */
   @Prop({ reflect: true }) value = 0;
 
   /**
-    * Define o height em px do componente.
+    * Define a valor da altura do componente.
     */
   @Prop({ reflect: true }) height = 50;
 
   /**
-    * Define o width em px do componente.
+    * Define a valor da largura do componente.
     */
-  @Prop({ reflect: true }) width = 24;
+  @Prop({ reflect: true }) width = 32;
 
   componentDidLoad() {
     this.setSize();

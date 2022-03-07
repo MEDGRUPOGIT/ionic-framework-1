@@ -10,6 +10,7 @@
 | Property  | Attribute  | Description                                 | Type                   | Default     |
 | --------- | ---------- | ------------------------------------------- | ---------------------- | ----------- |
 | `active`  | `active`   | Define o estado active do componente.       | `boolean`              | `false`     |
+| `content` | `content`  |                                             | `any`                  | `this.A`    |
 | `dsColor` | `ds-color` | Define a cor do componente.                 | `string \| undefined`  | `undefined` |
 | `dsSize`  | `ds-size`  | Define a variação de tamanho do componente. | `"sm" \| undefined`    | `undefined` |
 | `skin`    | `skin`     | Define a skin do componente.                | `"lista" \| undefined` | `undefined` |

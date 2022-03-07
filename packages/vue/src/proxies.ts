@@ -1120,7 +1120,8 @@ export const MedDownloadButton = /*@__PURE__*/ defineContainer<JSX.MedDownloadBu
   'downloading',
   'initial',
   'medDownloaded',
-  'medCancelar'
+  'medCancelar',
+  'medDownloading'
 ]);
 
 
@@ -1310,6 +1311,7 @@ export const MedPiechart = /*@__PURE__*/ defineContainer<JSX.MedPiechart>('med-p
   'download',
   'downloaded',
   'value',
+  'downloadProgress',
   'label'
 ]);
 
@@ -1360,7 +1362,8 @@ export const MedSemana = /*@__PURE__*/ defineContainer<JSX.MedSemana>('med-seman
   'dsColor',
   'dsSize',
   'active',
-  'skin'
+  'skin',
+  'content'
 ]);
 
 

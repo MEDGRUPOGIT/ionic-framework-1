@@ -3273,15 +3273,15 @@ export namespace Components {
          */
         "dsColor"?: MedColor;
         /**
-          * Define o height em px do componente.
+          * Define a valor da altura do componente.
          */
         "height": number;
         /**
-          * Define a valor do componente.
+          * Define a valor da %(porcentagem) do componente.
          */
         "value": number;
         /**
-          * Define o width em px do componente.
+          * Define a valor da largura do componente.
          */
         "width": number;
     }
@@ -3813,6 +3813,10 @@ export namespace Components {
          */
         "download": boolean;
         /**
+          * Define o valor do progresso do componente de download.
+         */
+        "downloadProgress": number;
+        /**
           * Define o estado de downloaded do componente.
          */
         "downloaded": boolean;
@@ -3833,7 +3837,7 @@ export namespace Components {
          */
         "toggle": (event?: Event | undefined) => Promise<void>;
         /**
-          * Define o valor do progresso do componente.
+          * Define o valor do progresso do componente do piechart.
          */
         "value": number;
     }
@@ -3930,6 +3934,7 @@ export namespace Components {
           * Define o estado active do componente.
          */
         "active": boolean;
+        "content": any;
         /**
           * Define a cor do componente.
          */
@@ -8641,15 +8646,15 @@ declare namespace LocalJSX {
          */
         "dsColor"?: MedColor;
         /**
-          * Define o height em px do componente.
+          * Define a valor da altura do componente.
          */
         "height"?: number;
         /**
-          * Define a valor do componente.
+          * Define a valor da %(porcentagem) do componente.
          */
         "value"?: number;
         /**
-          * Define o width em px do componente.
+          * Define a valor da largura do componente.
          */
         "width"?: number;
     }
@@ -8811,6 +8816,10 @@ declare namespace LocalJSX {
           * Emitido quando download está concluído.
          */
         "onMedDownloaded"?: (event: CustomEvent<any>) => void;
+        /**
+          * Emitido quando download for iniciado.
+         */
+        "onMedDownloading"?: (event: CustomEvent<any>) => void;
         /**
           * Define o valor da progress bar do componente.
          */
@@ -9211,6 +9220,10 @@ declare namespace LocalJSX {
          */
         "download"?: boolean;
         /**
+          * Define o valor do progresso do componente de download.
+         */
+        "downloadProgress"?: number;
+        /**
           * Define o estado de downloaded do componente.
          */
         "downloaded"?: boolean;
@@ -9227,7 +9240,7 @@ declare namespace LocalJSX {
          */
         "label"?: string;
         /**
-          * Define o valor do progresso do componente.
+          * Define o valor do progresso do componente do piechart.
          */
         "value"?: number;
     }
@@ -9320,6 +9333,7 @@ declare namespace LocalJSX {
           * Define o estado active do componente.
          */
         "active"?: boolean;
+        "content"?: any;
         /**
           * Define a cor do componente.
          */

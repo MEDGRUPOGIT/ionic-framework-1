@@ -18,10 +18,11 @@
 
 ## Events
 
-| Event           | Description                             | Type               |
-| --------------- | --------------------------------------- | ------------------ |
-| `medCancelar`   | Emitido quando download for cancelado.  | `CustomEvent<any>` |
-| `medDownloaded` | Emitido quando download está concluído. | `CustomEvent<any>` |
+| Event            | Description                             | Type               |
+| ---------------- | --------------------------------------- | ------------------ |
+| `medCancelar`    | Emitido quando download for cancelado.  | `CustomEvent<any>` |
+| `medDownloaded`  | Emitido quando download está concluído. | `CustomEvent<any>` |
+| `medDownloading` | Emitido quando download for iniciado.   | `CustomEvent<any>` |
 
 
 ## Dependencies

@@ -1264,11 +1264,12 @@ export declare interface MedDownloadButton extends Components.MedDownloadButton 
 export class MedDownloadButton {
   medDownloaded!: EventEmitter<CustomEvent>;
   medCancelar!: EventEmitter<CustomEvent>;
+  medDownloading!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ["medDownloaded", "medCancelar"]);
+    proxyOutputs(this, this.el, ["medDownloaded", "medCancelar", "medDownloading"]);
   }
 }
 export declare interface MedEnunciado extends Components.MedEnunciado {
@@ -1547,8 +1548,8 @@ export class MedParent {
 }
 export declare interface MedPiechart extends Components.MedPiechart {
 }
-@ProxyCmp({ inputs: ["download", "downloaded", "dsColor", "dsSize", "label", "value"], "methods": ["toggle"] })
-@Component({ selector: "med-piechart", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["download", "downloaded", "dsColor", "dsSize", "label", "value"] })
+@ProxyCmp({ inputs: ["download", "downloadProgress", "downloaded", "dsColor", "dsSize", "label", "value"], "methods": ["toggle"] })
+@Component({ selector: "med-piechart", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["download", "downloadProgress", "downloaded", "dsColor", "dsSize", "label", "value"] })
 export class MedPiechart {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1626,8 +1627,8 @@ export class MedRating {
 }
 export declare interface MedSemana extends Components.MedSemana {
 }
-@ProxyCmp({ inputs: ["active", "dsColor", "dsSize", "skin"] })
-@Component({ selector: "med-semana", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["active", "dsColor", "dsSize", "skin"] })
+@ProxyCmp({ inputs: ["active", "content", "dsColor", "dsSize", "skin"] })
+@Component({ selector: "med-semana", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["active", "content", "dsColor", "dsSize", "skin"] })
 export class MedSemana {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

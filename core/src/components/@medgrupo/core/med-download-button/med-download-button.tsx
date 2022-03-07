@@ -43,13 +43,25 @@ export class MedDownloadButton {
     */
   @Event() medCancelar!: EventEmitter;
 
+  /**
+  * Emitido quando download for iniciado.
+  */
+  @Event() medDownloading!:EventEmitter;
+
+
   @Watch('downloaded')
   downloadedChanged() {
-    this.medDownloaded.emit();
+    this.medDownloaded.emit({downloaded:this.downloaded});
+  }
+
+  @Watch('downloading')
+  downloadingChange(){
+    this.medDownloading.emit();
   }
 
   @Watch('value')
   valueChanged() {
+    console.log('value',this.value)
     if (this.value !== 0 && this.value !== 100) {
       this.initial = false;
       this.downloaded = false;
@@ -65,25 +77,34 @@ export class MedDownloadButton {
     if (this.value === 100) {
       this.downloaded = true;
       this.downloading = false;
-      this.medDownloaded.emit();
     }
   }
 
   toggle(event?: Event) {
     event?.stopPropagation();
-    if (this.initial) {
+    console.log('toggle',this.value)
+    if(this.downloaded){
+      console.log('emitiu medDownload-button')
+      this.medDownloaded.emit({downloaded:this.downloaded})
+
+    } else if (this.initial) {
       this.initial = false;
 
       if (this.value !== 100) {
         this.downloaded = false;
         this.downloading = true;
-      } else if (this.value === 100) {
+      }
+      else if (this.value === 100) {
         this.downloaded = true;
         this.downloading = false;
-        this.medDownloaded.emit();
+        this.medDownloaded.emit({downloaded:this.downloaded});
       }
-    } else {
+    }  else {
       this.medCancelar.emit();
+      this.initial = true;
+      this.downloaded = false;
+      this.downloading = false;
+      this.value = 0
     }
   }
 

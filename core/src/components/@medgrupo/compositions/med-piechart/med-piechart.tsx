@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, Method } from '@stencil/core';
+import { Component, Host, h, Prop, Method, Listen } from '@stencil/core';
 import { MedColor } from '../../../../interface';
 import { generateMedColor } from '../../../../utils/med-theme';
 
@@ -29,9 +29,14 @@ export class MedPiechart {
   @Prop({ reflect: true }) downloaded = false;
 
   /**
-    * Define o valor do progresso do componente.
+    * Define o valor do progresso do componente do piechart.
     */
   @Prop({ reflect: true, mutable: true }) value = 0;
+
+    /**
+    * Define o valor do progresso do componente de download.
+    */
+  @Prop({reflect: true, mutable:true })  downloadProgress= 0;
 
   /**
     * Define a porcentagem a ser mostrada.
@@ -47,8 +52,14 @@ export class MedPiechart {
     this.download = !this.download;
   }
 
+  @Listen('medDownloaded')
+  Isdownloaded(event?:CustomEvent){
+    event?.stopPropagation();
+    this.downloaded = event?.detail?.downloaded
+  }
+
   render() {
-    const { dsColor, dsSize, download, downloaded, label, value } = this;
+    const { dsColor, dsSize, download, downloaded, label, value, downloadProgress } = this;
 
     return (
       <Host class={generateMedColor(dsColor, {
@@ -70,7 +81,7 @@ export class MedPiechart {
           <div class="med-piechart__side med-piechart__side--back">
             <med-type class="med-piechart__text med-piechart__text--back">{label}</med-type>
 
-            <med-download-button class="med-piechart__button" ds-color={dsColor} value={value} downloaded={downloaded}></med-download-button>
+            <med-download-button class="med-piechart__button" ds-color={dsColor} value={downloadProgress} downloaded={downloaded}></med-download-button>
           </div>
         </div>
       </Host>
