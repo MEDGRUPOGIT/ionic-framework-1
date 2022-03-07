@@ -1,6 +1,7 @@
 :host {
   --height-label: 18;
   --background: #{color('brand', '3')};
+  --padding-label: 6px;
 }
 
 :host {
@@ -30,9 +31,17 @@
   }
 }
 
-// ////////////////////
-// color
-// ////////////////////
+//////////////////////////////
+// slotted
+//////////////////////////////
+
+::slotted(med-type) {
+  padding-bottom: var(--padding-label);
+}
+
+//////////////////////////////
+// dsColor
+//////////////////////////////
 
 :host(.med-color) {
   --background: #{curr-color('color', '3')};

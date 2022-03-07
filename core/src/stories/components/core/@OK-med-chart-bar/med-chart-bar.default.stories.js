@@ -1,31 +1,23 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
-import { MedColor } from '../../../constants';
+import { MedColors } from "../../../../global/templarios/color.enum";
 
 export default {
-  title: 'Components/Core/Chart Bar',
+  title: 'Components/Core/@OK Chart Bar (Chart Column)',
   decorators: [withDesign],
 };
 
 const Template = ({dsColor, value, height, width}) => {
   return html`
-    <style>
-      /* !NÃO UTILIZAR! Apenas para estória */
-        med-type {
-          padding-bottom: 6px;
-        }
-      /* !NÃO UTILIZAR! Apenas para estória */
-    </style>
-
     <ion-app>
       <ion-content>
-        <div class="flex-center">
+        <div class="full-height-flex">
 
-          <!-- component -->
+          <!-- component markdown -->
           <med-chart-bar .dsColor=${dsColor} value=${value} height=${height} width=${width}>
             <med-type token="p12b">50%</med-type>
           </med-chart-bar>
-          <!-- component -->
+          <!-- component markdown -->
 
         </div>
       </ion-content>
@@ -37,44 +29,44 @@ export const Default = Template.bind({});
 Default.parameters = {
   design: {
     type: 'figma',
-    url: '',
+    url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/Componentes?node-id=11906%3A47663',
   },
 }
 Default.argTypes = {
   dsColor: {
-    options: MedColor,
+    options: Object.values(MedColors),
     control: { type: 'select'},
-    description: 'Define a cor do componente.',
+    description: "Define a cor do componente.",
     table: {
-      type:  { summary: 'MedColor' },
+      type:  { summary: Object.values(MedColors).join(' |') },
       defaultValue: { summary: 'undefined' },
     },
   },
   value: {
     control: { type: 'range', min: 0, max: 100, step: 1 },
-    description: 'Define a valor do componente.',
-    defaultValue: '0',
+    description: 'Define a valor da %(porcentagem) do componente.',
+    defaultValue: '50',
     table: {
       type:  { summary: 'nummber' },
-      defaultValue: { summary: '0' },
+      defaultValue: { summary: 'undefined' },
     },
   },
   height: {
     control: { type: 'number' },
-    description: 'Define a valor do componente.',
+    description: 'Define a valor da altura do componente.',
     defaultValue: '50',
     table: {
       type:  { summary: 'nummber' },
-      defaultValue: { summary: '50' },
+      defaultValue: { summary: 'undefined' },
     },
   },
   width: {
     control: { type: 'number' },
-    description: 'Define a valor do componente.',
-    defaultValue: '20',
+    description: 'Define a valor da largura do componente.',
+    defaultValue: '32',
     table: {
       type:  { summary: 'nummber' },
-      defaultValue: { summary: '20' },
+      defaultValue: { summary: 'undefined' },
     },
   },
 };

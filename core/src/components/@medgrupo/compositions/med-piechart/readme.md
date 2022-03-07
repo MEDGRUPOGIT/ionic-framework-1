@@ -7,14 +7,15 @@
 
 ## Properties
 
-| Property     | Attribute    | Description                                  | Type                  | Default     |
-| ------------ | ------------ | -------------------------------------------- | --------------------- | ----------- |
-| `download`   | `download`   | Define o estado de download do componente.   | `boolean`             | `false`     |
-| `downloaded` | `downloaded` | Define o estado de downloaded do componente. | `boolean`             | `false`     |
-| `dsColor`    | `ds-color`   | Define a cor do componente.                  | `string \| undefined` | `undefined` |
-| `dsSize`     | `ds-size`    | Define a variação de tamanho do componente.  | `"sm" \| undefined`   | `undefined` |
-| `label`      | `label`      | Define a porcentagem a ser mostrada.         | `string \| undefined` | `undefined` |
-| `value`      | `value`      | Define o valor do progresso do componente.   | `number`              | `0`         |
+| Property           | Attribute           | Description                                            | Type                  | Default     |
+| ------------------ | ------------------- | ------------------------------------------------------ | --------------------- | ----------- |
+| `download`         | `download`          | Define o estado de download do componente.             | `boolean`             | `false`     |
+| `downloadProgress` | `download-progress` | Define o valor do progresso do componente de download. | `number`              | `0`         |
+| `downloaded`       | `downloaded`        | Define o estado de downloaded do componente.           | `boolean`             | `false`     |
+| `dsColor`          | `ds-color`          | Define a cor do componente.                            | `string \| undefined` | `undefined` |
+| `dsSize`           | `ds-size`           | Define a variação de tamanho do componente.            | `"sm" \| undefined`   | `undefined` |
+| `label`            | `label`             | Define a porcentagem a ser mostrada.                   | `string \| undefined` | `undefined` |
+| `value`            | `value`             | Define o valor do progresso do componente do piechart. | `number`              | `0`         |
 
 
 ## Methods

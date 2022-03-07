@@ -7,14 +7,16 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ dsColor, dsSize , download, downloaded, label, value }) => {
+const Template = ({ dsColor, dsSize , download, downloaded, label, value, downloadProgress }) => {
   return html`
     <ion-app>
       <ion-content>
         <div class="full-height-flex">
 
           <!-- component markdown -->
-          <med-piechart .dsColor=${dsColor} .dsSize=${dsSize} ?download=${download} ?downloaded=${downloaded} label=${label} value=${value}></med-piechart>
+          <med-piechart .dsColor=${dsColor} .dsSize=${dsSize}
+          .downloadProgress=${downloadProgress} ?download=${download} ?downloaded=${downloaded}
+          label=${label} value=${value} ></med-piechart>
           <!-- component markdown -->
 
         </div>
@@ -28,6 +30,9 @@ Default.parameters = {
   design: {
     type: "figma",
     url: "https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/Componentes?node-id=12147%3A42985",
+  },
+  actions: {
+    handles: ['medDownloaded', 'medCancelar'],
   },
 };
 Default.argTypes = {
@@ -66,6 +71,11 @@ Default.argTypes = {
       type: { summary: "boolean" },
       defaultValue: { summary: "undefined" },
     },
+  },
+  downloadProgress: {
+    defaultValue: '40',
+    control: { type: 'range', min: 0, max: 100, step: 1 },
+    description: 'Define o progresso de download.'
   },
   label: {
     control: { type: 'text' },

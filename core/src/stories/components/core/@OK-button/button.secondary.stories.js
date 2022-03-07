@@ -4,7 +4,7 @@ import { MedColors } from "../../../../global/templarios/color.enum";
 import { MedIcons } from '../../../constants';
 
 export default {
-  title: 'Components/Core/Button/Secondary',
+  title: 'Components/Core/@OK Button/Secondary',
   decorators: [withDesign],
 };
 

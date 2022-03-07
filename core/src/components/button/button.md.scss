@@ -185,8 +185,8 @@
     --font-size: 16px;
     --font-weight: 600;
     --line-height: 16px;
-    --padding: 0 24px;
-    --padding-text: 0 8px;
+    --padding: 24px;
+    --padding-text: 8px;
     --border-radius: 500px;
     --min-height: 48px;
     --min-width: 48px;
@@ -209,14 +209,14 @@
   }
   
   :host .button-native {
-    padding: var(--padding);
+    padding: 0 var(--padding);
     min-height: var(--min-height);
     line-height: var(--line-height);
     box-shadow: none;
   }
   
   :host .button-inner__text {
-    padding: var(--padding-text);
+    padding: 0 var(--padding-text);
     display: flex;
     align-items: center;
   }
@@ -291,7 +291,7 @@
   :host(.med-button--md) {
     --min-height: 48px;
     --min-height: 48px;
-    --padding: 0 24px;
+    --padding: 24px;
     --icon-font-size: 24px;
     --font-size: 16px;
     --font-weight: 600;
@@ -307,7 +307,7 @@
   :host(.med-button--sm) {
     --min-height: 40px;
     --min-height: 40px;
-    --padding: 0 24px;
+    --padding: 24px;
     --icon-font-size: 24px;
     --font-size: 16px;
     --font-weight: 600;
@@ -323,7 +323,7 @@
   :host(.med-button--xs) {
     --min-height: 32px;
     --min-width: 32px;
-    --padding: 0 16px;
+    --padding: 16px;
     --icon-font-size: 16px;
     --font-size: 14px;
     --font-weight: 600;
@@ -339,7 +339,7 @@
   :host(.med-button--xxs) {
     --min-height: 24px;
     --min-width: 16px;
-    --padding: 0 8px;
+    --padding: 8px;
     --icon-font-size: 16px;
     --font-size: 12px;
     --font-weight: 600;
@@ -511,6 +511,19 @@
   
   
   
+  
+
+
+
+
+
+
+
+
+
+
+
+
   
   
   

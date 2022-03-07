@@ -4,11 +4,12 @@ import { MedColors } from "../../../../global/templarios/color.enum";
 import { MedIcons } from '../../../constants';
 
 export default {
-  title: 'Components/Core/Button',
+  title: 'Components/Core/@OK Button',
   decorators: [withDesign],
 };
 
 const Template = ({ dsColor, disabled, expand, dsSize, iconLeft, iconRight, iconOnly, slot }) => {
+  console.log(dsSize);
   return html`
     <style>
       /* !NÃO UTILIZAR! Apenas para estória */
@@ -17,43 +18,33 @@ const Template = ({ dsColor, disabled, expand, dsSize, iconLeft, iconRight, icon
         }
       /* !NÃO UTILIZAR! Apenas para estória */
     </style>
+
     <ion-app>
       <ion-content>
-        <div class="full-height-center">
-
-          <div>
-            <ion-button .dsColor=${dsColor} ds-size=${dsSize} ?disabled=${disabled} .expand=${expand}>${slot}</ion-button>
-          </div>
-
-          <div>
-            <ion-button .dsColor=${dsColor} ds-size=${dsSize} ?disabled=${disabled} .expand=${expand}>
-              <ion-icon slot="start" class="med-icon" name=${iconLeft}></ion-icon>
-              ${slot}
-            </ion-button>
-          </div>
-          
-          <div>
-            <ion-button .dsColor=${dsColor} ds-size=${dsSize} ?disabled=${disabled} .expand=${expand}>
-              ${slot}
-              <ion-icon slot="end" class="med-icon" name=${iconRight}></ion-icon>
-            </ion-button>
-          </div>
-
-          <div>
-            <ion-button .dsColor=${dsColor} ds-size=${dsSize} ?disabled=${disabled} .expand=${expand}>
-              <ion-icon slot="start" class="med-icon" name=${iconLeft}></ion-icon>
-              ${slot}
-              <ion-icon slot="end" class="med-icon" name=${iconRight}></ion-icon>
-            </ion-button>
-          </div>
-
-          <div>
-            <ion-button .dsColor=${dsColor} ds-size=${dsSize} ?disabled=${disabled} .expand=${expand}>
-              <ion-icon slot="icon-only" class="med-icon" name=${iconOnly}></ion-icon>
-            </ion-button>
-          </div>
-      
+        <div>
+          <ion-button .dsColor=${dsColor} ds-size=${dsSize} ?disabled=${disabled} .expand=${expand}>${slot} ${dsSize}</ion-button>
         </div>
+
+        <div>
+          <ion-button .dsColor=${dsColor} ds-size=${dsSize} ?disabled=${disabled} .expand=${expand}>
+            <ion-icon slot="start" class="med-icon" name=${iconLeft}></ion-icon>
+            ${slot} ${dsSize}
+          </ion-button>
+        </div>
+
+        <div>
+          <ion-button .dsColor=${dsColor} ds-size=${dsSize} ?disabled=${disabled} .expand=${expand}>
+            ${slot} ${dsSize}
+            <ion-icon slot="end" class="med-icon" name=${iconRight}></ion-icon>
+          </ion-button>
+        </div>
+
+        <div>
+          <ion-button .dsColor=${dsColor} ds-size=${dsSize} ?disabled=${disabled} .expand=${expand}>
+            <ion-icon slot="icon-only" class="med-icon" name=${iconOnly}></ion-icon>
+          </ion-button>
+        </div>
+
       </ion-content>
     </ion-app>
   `
@@ -107,21 +98,21 @@ Default.argTypes = {
   iconLeft: {
     options: MedIcons,
     control: { type: 'select'},
-    defaultValue: 'med-setaesquerda',
+    defaultValue: 'med-esquerda',
     description: '**Atributo utilizado apenas no storybook. Não é um atributo do componente!.**',
     table: {
       type:  { summary: ['string'] },
-      defaultValue: { summary: 'med-setaesquerda' },
+      defaultValue: { summary: 'med-esquerda' },
     },
   },
   iconRight: {
     options: MedIcons,
     control: { type: 'select'},
-    defaultValue: 'med-setadireita',
+    defaultValue: 'med-direita',
     description: '**Atributo utilizado apenas no storybook. Não é um atributo do componente!.**',
     table: {
       type:  { summary: ['string'] },
-      defaultValue: { summary: 'med-setadireita' },
+      defaultValue: { summary: 'med-direita' },
     },
   },
   iconOnly: {

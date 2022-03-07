@@ -1558,7 +1558,7 @@ med-chart-bar,shadow
 med-chart-bar,prop,dsColor,string | undefined,undefined,false,true
 med-chart-bar,prop,height,number,50,false,true
 med-chart-bar,prop,value,number,0,false,true
-med-chart-bar,prop,width,number,24,false,true
+med-chart-bar,prop,width,number,32,false,true
 
 med-chart-bar-horizontal,shadow
 med-chart-bar-horizontal,prop,dsColor,string | undefined,undefined,false,true
@@ -1633,6 +1633,7 @@ med-download-button,prop,initial,boolean,true,false,true
 med-download-button,prop,value,number,0,false,true
 med-download-button,event,medCancelar,any,true
 med-download-button,event,medDownloaded,any,true
+med-download-button,event,medDownloading,any,true
 
 med-enunciado,shadow
 med-enunciado,prop,dsName,"skin" | undefined,undefined,false,true
@@ -1785,6 +1786,7 @@ med-parent,prop,fill,"outline" | undefined,undefined,false,true
 
 med-piechart,shadow
 med-piechart,prop,download,boolean,false,false,true
+med-piechart,prop,downloadProgress,number,0,false,true
 med-piechart,prop,downloaded,boolean,false,false,true
 med-piechart,prop,dsColor,string | undefined,undefined,false,true
 med-piechart,prop,dsSize,"sm" | undefined,undefined,false,false
@@ -1838,6 +1840,7 @@ med-rating,css-prop,--color-icon
 
 med-semana,scoped
 med-semana,prop,active,boolean,false,false,true
+med-semana,prop,content,any,this.A,false,true
 med-semana,prop,dsColor,string | undefined,undefined,false,true
 med-semana,prop,dsSize,"sm" | undefined,undefined,false,false
 med-semana,prop,skin,"lista" | undefined,undefined,false,true
