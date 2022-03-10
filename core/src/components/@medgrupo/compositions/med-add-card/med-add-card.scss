@@ -1,9 +1,6 @@
 :host {
-
-}
-
-:host(.med-add-card) {
   cursor: pointer;
+  display: block;
 }
 
 .med-add-card {
@@ -14,6 +11,6 @@
 
   &__icon {
     stroke: color('neutral', '10');
-    margin-right: 18px;
+    margin-right: 16px;
   }
 }

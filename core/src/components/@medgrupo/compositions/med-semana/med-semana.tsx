@@ -1,6 +1,7 @@
-import { Component, Host, h, Prop, State } from "@stencil/core";
+import { Component, Host, h, Prop, State } from '@stencil/core';
 import { MedColor } from "../../../../interface";
 import { generateMedColor } from "../../../../utils/med-theme";
+import { MedSemanaInterface, ItensInterface } from './med-semana.interface';
 
 @Component({
   tag: "med-semana",
@@ -8,22 +9,6 @@ import { generateMedColor } from "../../../../utils/med-theme";
   scoped: true,
 })
 export class MedSemana {
-  private A = {
-    Title: "semana",
-    Numero: "01",
-    DataInicio: "16/08",
-    DataFim: "24/08",
-    Itens: [
-      {
-        Nome: "nef 1",
-        PercentLido: 75,
-        Downloaded: false,
-        DownloadProgress: 0,
-        Time: "2h30m",
-        Descricao: "Lorem Ipslum at lanium",
-      },
-    ],
-  };
 
   /**
    * Define a cor do componente.
@@ -45,7 +30,10 @@ export class MedSemana {
    */
   @Prop({ reflect: true }) skin?: "lista";
 
-  @Prop({ reflect: true }) content: any = this.A;
+  /**
+   * Define o conteudo da semana.
+   */
+  @Prop({ reflect: true }) content!: MedSemanaInterface;
 
   @State() flipped = false;
 
@@ -54,12 +42,7 @@ export class MedSemana {
   }
 
   private createTextContainerEl(
-    content: {
-      Title: string;
-      Numero: number;
-      DataInicio: string;
-      DataFim: string;
-    },
+    content: MedSemanaInterface,
     skin?: string
   ) {
     if (skin === "lista") {
@@ -119,29 +102,37 @@ export class MedSemana {
     }
   }
 
-  private createPieChartEl(Itens: any, skin?: string) {
+  private createPieChartEl(Itens: ItensInterface[], skin?: string) {
+    console.log('itens',Itens)
     if (skin === "lista") {
       return (
-        <div class="med-semana__chart-container med-scrollbar">
-          {Itens?.map((item: any) => (
+        <div class="med-semana__chart-container tp-scrollbar">
+          {Itens?.map((item: ItensInterface, index:number) => (
             <div class="med-semana__chart-row">
               <med-piechart
                 class="med-semana__chart"
                 ds-color={this.dsColor}
                 label={item.Nome}
-                value={item.ChartProgress}
+                value={item.PercentLido}
                 download-progress={item.DownloadProgress}
                 downloaded={item.Downloaded}
                 download={this.flipped}
+                index={index}
+                identification={item.Id}
+                hide-download
               ></med-piechart>
               <med-type class="med-semana__description">
-                {item.Description}
+                {item.Descricao}
               </med-type>
               <div class="med-semana__tempo-container">
                 <med-type class="med-semana__tempo">{item?.Time}</med-type>
                 <med-download-button
                   class="med-semana__download-button"
                   ds-color={this.dsColor}
+                  value={item.DownloadProgress}
+                  downloaded={item.Downloaded}
+                  index={index}
+                  identification={item.Id}
                 ></med-download-button>
               </div>
             </div>
@@ -150,13 +141,13 @@ export class MedSemana {
       );
     } else {
       return (
-        <div class="med-semana__chart-container med-scrollbar">
+        <div class="med-semana__chart-container tp-scrollbar">
           {Itens?.map((item: any) => (
             <med-piechart
               class="med-semana__chart"
               ds-color={this.dsColor}
               label={item.Nome}
-              value={item.ChartProgress}
+              value={item.PercentLido}
               download-progress={item.DownloadProgress}
               downloaded={item.Downloaded}
               download={this.flipped}
@@ -169,7 +160,6 @@ export class MedSemana {
 
   render() {
     const { dsColor, active, skin, content } = this;
-    console.log(this.A);
     let textContainerEl;
     let piechartContainerEl;
     textContainerEl = this.createTextContainerEl(content, skin);

@@ -142,8 +142,8 @@ ion-backdrop,event,ionBackdropTap,void,true
 ion-badge,shadow
 ion-badge,prop,color,string | undefined,undefined,false,false
 ion-badge,prop,dsColor,string | undefined,undefined,false,true
-ion-badge,prop,dsName,"secondary" | undefined,undefined,false,true
-ion-badge,prop,dsSize,"lg" | "md" | "sm" | "xs" | "xxs" | undefined,undefined,false,true
+ion-badge,prop,dsSize,"md" | "sm" | undefined,undefined,false,true
+ion-badge,prop,fill,"outline" | undefined,undefined,false,true
 ion-badge,prop,mode,"ios" | "md",undefined,false,false
 ion-badge,css-prop,--background
 ion-badge,css-prop,--color
@@ -238,7 +238,6 @@ ion-card-title,css-prop,--color
 
 ion-checkbox,shadow
 ion-checkbox,prop,checked,boolean,false,false,false
-ion-checkbox,prop,color,string | undefined,undefined,false,false
 ion-checkbox,prop,disabled,boolean,false,false,false
 ion-checkbox,prop,dsColor,string | undefined,undefined,false,true
 ion-checkbox,prop,indeterminate,boolean,false,false,false
@@ -1427,7 +1426,6 @@ med-accordion-list,css-prop,--border
 med-accordion-list,css-prop,--border-radius
 
 med-add-card,shadow
-med-add-card,prop,dsColor,string | undefined,undefined,false,true
 med-add-card,prop,iconName,string | undefined,undefined,false,true
 med-add-card,prop,titulo,string | undefined,undefined,false,true
 
@@ -1629,6 +1627,8 @@ med-download-button,shadow
 med-download-button,prop,downloaded,boolean,false,false,true
 med-download-button,prop,downloading,boolean,false,false,true
 med-download-button,prop,dsColor,string | undefined,undefined,false,true
+med-download-button,prop,identification,number | string | undefined,undefined,false,true
+med-download-button,prop,index,number | undefined,undefined,false,true
 med-download-button,prop,initial,boolean,true,false,true
 med-download-button,prop,value,number,0,false,true
 med-download-button,event,medCancelar,any,true
@@ -1790,6 +1790,9 @@ med-piechart,prop,downloadProgress,number,0,false,true
 med-piechart,prop,downloaded,boolean,false,false,true
 med-piechart,prop,dsColor,string | undefined,undefined,false,true
 med-piechart,prop,dsSize,"sm" | undefined,undefined,false,false
+med-piechart,prop,hideDownload,boolean,false,false,true
+med-piechart,prop,identification,number | string | undefined,undefined,false,true
+med-piechart,prop,index,number | undefined,undefined,false,true
 med-piechart,prop,label,string | undefined,undefined,false,true
 med-piechart,prop,value,number,0,false,true
 med-piechart,method,toggle,toggle(event?: Event | undefined) => Promise<void>
@@ -1840,7 +1843,7 @@ med-rating,css-prop,--color-icon
 
 med-semana,scoped
 med-semana,prop,active,boolean,false,false,true
-med-semana,prop,content,any,this.A,false,true
+med-semana,prop,content,MedSemanaInterface,undefined,true,false
 med-semana,prop,dsColor,string | undefined,undefined,false,true
 med-semana,prop,dsSize,"sm" | undefined,undefined,false,false
 med-semana,prop,skin,"lista" | undefined,undefined,false,true

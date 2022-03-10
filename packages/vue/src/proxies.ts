@@ -42,7 +42,7 @@ export const IonBackdrop = /*@__PURE__*/ defineContainer<JSX.IonBackdrop>('ion-b
 
 export const IonBadge = /*@__PURE__*/ defineContainer<JSX.IonBadge>('ion-badge', [
   'dsColor',
-  'dsName',
+  'fill',
   'dsSize',
   'color'
 ]);
@@ -112,7 +112,6 @@ export const IonCardTitle = /*@__PURE__*/ defineContainer<JSX.IonCardTitle>('ion
 
 export const IonCheckbox = /*@__PURE__*/ defineContainer<JSX.IonCheckbox>('ion-checkbox', [
   'dsColor',
-  'color',
   'name',
   'checked',
   'indeterminate',
@@ -872,7 +871,6 @@ export const MedAccordionList = /*@__PURE__*/ defineContainer<JSX.MedAccordionLi
 
 
 export const MedAddCard = /*@__PURE__*/ defineContainer<JSX.MedAddCard>('med-add-card', [
-  'dsColor',
   'titulo',
   'iconName'
 ]);
@@ -1116,9 +1114,11 @@ export const MedDivider = /*@__PURE__*/ defineContainer<JSX.MedDivider>('med-div
 export const MedDownloadButton = /*@__PURE__*/ defineContainer<JSX.MedDownloadButton>('med-download-button', [
   'dsColor',
   'value',
-  'downloaded',
-  'downloading',
   'initial',
+  'downloading',
+  'downloaded',
+  'index',
+  'identification',
   'medDownloaded',
   'medCancelar',
   'medDownloading'
@@ -1310,9 +1310,12 @@ export const MedPiechart = /*@__PURE__*/ defineContainer<JSX.MedPiechart>('med-p
   'dsSize',
   'download',
   'downloaded',
+  'label',
   'value',
   'downloadProgress',
-  'label'
+  'index',
+  'identification',
+  'hideDownload'
 ]);
 
 

@@ -1,5 +1,4 @@
 import { Component, Host, h, Prop } from '@stencil/core';
-import { MedColor } from '../../../../interface';
 import { generateMedColor } from '../../../../utils/med-theme';
 
 @Component({
@@ -8,26 +7,26 @@ import { generateMedColor } from '../../../../utils/med-theme';
   shadow: true,
 })
 export class MedAddCard {
-
   /**
-    * Define a cor do componente.
+    * Define o titulo.
     */
-  @Prop({ reflect: true }) dsColor?: MedColor;
-
   @Prop({ reflect: true }) titulo?: string;
 
+  /**
+    * Define o icone.
+    */
   @Prop({ reflect: true }) iconName?: string;
 
   render() {
-    const { dsColor, titulo, iconName } = this;
+    const { titulo, iconName } = this;
 
     return (
-      <Host class={generateMedColor(dsColor, {
+      <Host class={generateMedColor(null, {
         'med-add-card': true,
       })}>
-        <med-base class="med-add-card__container" spacing-h="s16" spacing-v="s22">
+        <med-base class="med-add-card__container" spacing-h="s16" spacing-v="s16">
           <ion-icon class="med-icon med-add-card__icon" name={iconName}></ion-icon>
-          <med-type token="p14">{titulo}</med-type>
+          <med-type token="p16x">{titulo}</med-type>
         </med-base>
       </Host>
     );

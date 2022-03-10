@@ -94,8 +94,8 @@ export class IonBackdrop {
 }
 export declare interface IonBadge extends Components.IonBadge {
 }
-@ProxyCmp({ inputs: ["color", "dsColor", "dsName", "dsSize", "mode"] })
-@Component({ selector: "ion-badge", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "dsColor", "dsName", "dsSize", "mode"] })
+@ProxyCmp({ inputs: ["color", "dsColor", "dsSize", "fill", "mode"] })
+@Component({ selector: "ion-badge", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "dsColor", "dsSize", "fill", "mode"] })
 export class IonBadge {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -185,8 +185,8 @@ export class IonCardTitle {
 }
 export declare interface IonCheckbox extends Components.IonCheckbox {
 }
-@ProxyCmp({ inputs: ["checked", "color", "disabled", "dsColor", "indeterminate", "mode", "name", "value"] })
-@Component({ selector: "ion-checkbox", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["checked", "color", "disabled", "dsColor", "indeterminate", "mode", "name", "value"] })
+@ProxyCmp({ inputs: ["checked", "disabled", "dsColor", "indeterminate", "mode", "name", "value"] })
+@Component({ selector: "ion-checkbox", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["checked", "disabled", "dsColor", "indeterminate", "mode", "name", "value"] })
 export class IonCheckbox {
   ionChange!: EventEmitter<CustomEvent>;
   ionFocus!: EventEmitter<CustomEvent>;
@@ -953,8 +953,8 @@ export class MedAccordionList {
 }
 export declare interface MedAddCard extends Components.MedAddCard {
 }
-@ProxyCmp({ inputs: ["dsColor", "iconName", "titulo"] })
-@Component({ selector: "med-add-card", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "iconName", "titulo"] })
+@ProxyCmp({ inputs: ["iconName", "titulo"] })
+@Component({ selector: "med-add-card", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["iconName", "titulo"] })
 export class MedAddCard {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1259,8 +1259,8 @@ export class MedDivider {
 }
 export declare interface MedDownloadButton extends Components.MedDownloadButton {
 }
-@ProxyCmp({ inputs: ["downloaded", "downloading", "dsColor", "initial", "value"] })
-@Component({ selector: "med-download-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["downloaded", "downloading", "dsColor", "initial", "value"] })
+@ProxyCmp({ inputs: ["downloaded", "downloading", "dsColor", "identification", "index", "initial", "value"] })
+@Component({ selector: "med-download-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["downloaded", "downloading", "dsColor", "identification", "index", "initial", "value"] })
 export class MedDownloadButton {
   medDownloaded!: EventEmitter<CustomEvent>;
   medCancelar!: EventEmitter<CustomEvent>;
@@ -1548,8 +1548,8 @@ export class MedParent {
 }
 export declare interface MedPiechart extends Components.MedPiechart {
 }
-@ProxyCmp({ inputs: ["download", "downloadProgress", "downloaded", "dsColor", "dsSize", "label", "value"], "methods": ["toggle"] })
-@Component({ selector: "med-piechart", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["download", "downloadProgress", "downloaded", "dsColor", "dsSize", "label", "value"] })
+@ProxyCmp({ inputs: ["download", "downloadProgress", "downloaded", "dsColor", "dsSize", "hideDownload", "identification", "index", "label", "value"], "methods": ["toggle"] })
+@Component({ selector: "med-piechart", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["download", "downloadProgress", "downloaded", "dsColor", "dsSize", "hideDownload", "identification", "index", "label", "value"] })
 export class MedPiechart {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

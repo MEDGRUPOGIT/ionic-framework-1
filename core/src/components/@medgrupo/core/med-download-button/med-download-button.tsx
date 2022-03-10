@@ -19,9 +19,9 @@ export class MedDownloadButton {
   @Prop({ reflect: true }) value = 0;
 
   /**
-    * Define o estado do componente quando download tiver concluído.
+    * Define o estado inicial do componente.
     */
-  @Prop({ reflect: true }) downloaded = false;
+   @Prop({ reflect: true, mutable: true }) initial = true;
 
   /**
     * Define o estado do componente durante o download.
@@ -29,9 +29,19 @@ export class MedDownloadButton {
   @Prop({ reflect: true }) downloading = false;
 
   /**
-    * Define o estado inicial do componente.
+    * Define o estado do componente quando download tiver concluído.
     */
-  @Prop({ reflect: true, mutable: true }) initial = true;
+  @Prop({ reflect: true }) downloaded = false;
+
+  /**
+  * Define qual a posição do array se encontra esse chart. Opcional.
+  */
+   @Prop({ reflect: true }) index?: number;
+
+   /**
+   * Identificador do pieChart para emissão de eventos
+   */
+   @Prop({ reflect: true }) identification?: string|number|undefined;
 
   /**
     * Emitido quando download está concluído.
@@ -44,24 +54,32 @@ export class MedDownloadButton {
   @Event() medCancelar!: EventEmitter;
 
   /**
-  * Emitido quando download for iniciado.
-  */
+    * Emitido quando download for iniciado.
+    */
   @Event() medDownloading!:EventEmitter;
-
 
   @Watch('downloaded')
   downloadedChanged() {
-    this.medDownloaded.emit({downloaded:this.downloaded});
+    this.medDownloaded.emit(
+      {
+        downloaded: this.downloaded,
+        id: this.identification,
+        index: this.index
+      }
+      );
   }
 
   @Watch('downloading')
   downloadingChange(){
-    this.medDownloading.emit();
+    this.medDownloading.emit({
+      downloading: this.downloading,
+      id: this.identification,
+      index: this.index
+    });
   }
 
   @Watch('value')
   valueChanged() {
-    console.log('value',this.value)
     if (this.value !== 0 && this.value !== 100) {
       this.initial = false;
       this.downloaded = false;
@@ -82,10 +100,12 @@ export class MedDownloadButton {
 
   toggle(event?: Event) {
     event?.stopPropagation();
-    console.log('toggle',this.value)
     if(this.downloaded){
-      console.log('emitiu medDownload-button')
-      this.medDownloaded.emit({downloaded:this.downloaded})
+      this.medDownloaded.emit({
+        downloaded: this.downloaded,
+        id: this.identification,
+        index: this.index
+      })
 
     } else if (this.initial) {
       this.initial = false;
@@ -97,10 +117,17 @@ export class MedDownloadButton {
       else if (this.value === 100) {
         this.downloaded = true;
         this.downloading = false;
-        this.medDownloaded.emit({downloaded:this.downloaded});
+        this.medDownloaded.emit({
+          downloaded:this.downloaded,
+          id: this.identification,
+          index: this.index
+        });
       }
     }  else {
-      this.medCancelar.emit();
+      this.medCancelar.emit({
+        id: this.identification,
+        index: this.index
+      });
       this.initial = true;
       this.downloaded = false;
       this.downloading = false;

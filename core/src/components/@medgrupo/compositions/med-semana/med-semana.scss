@@ -32,7 +32,7 @@
 
 .med-semana {
   &__heading-container {
-    padding-right: 8px;
+    padding-right: 33px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -131,10 +131,12 @@
 
   &__chart-container {
     display: flex;
-    // overflow-x: scroll;
+    overflow-x: scroll;
   }
 
   &__chart {
+    --stroke-background: #{color('neutral', '1')};
+
     &:not(:last-child) {
       margin-right: 8px;
     }

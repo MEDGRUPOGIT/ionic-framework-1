@@ -152,7 +152,7 @@ export const parameters = {
         'General', ['Welcome', 'Biblioteca', 'Styleguide'],
         'Conhecimento', ['Metodologia BEM'],
         'Foundation',
-        'Components',
+        'Components', ['Foundation', 'Core', 'Compositions', 'Team', 'Remover'],
         'Pages',
         'Enums',
         'Sass',

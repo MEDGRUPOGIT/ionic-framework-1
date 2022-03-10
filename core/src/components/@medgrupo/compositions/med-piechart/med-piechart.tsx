@@ -29,6 +29,11 @@ export class MedPiechart {
   @Prop({ reflect: true }) downloaded = false;
 
   /**
+    * Define a porcentagem a ser mostrada.
+    */
+  @Prop({ reflect: true }) label?: string;
+
+  /**
     * Define o valor do progresso do componente do piechart.
     */
   @Prop({ reflect: true, mutable: true }) value = 0;
@@ -36,16 +41,26 @@ export class MedPiechart {
     /**
     * Define o valor do progresso do componente de download.
     */
-  @Prop({reflect: true, mutable:true })  downloadProgress= 0;
+  @Prop({reflect: true, mutable:true })  downloadProgress = 0;
 
   /**
-    * Define a porcentagem a ser mostrada.
+    * Define qual a posição do array se encontra esse chart. Opcional.
     */
-  @Prop({ reflect: true }) label?: string;
+  @Prop({ reflect: true }) index?: number;
 
   /**
-   * Define o estado do componente programaticamente.
-   */
+    * Identificador do pie-chart para emissão de eventos.
+    */
+  @Prop({ reflect: true }) identification?: string | number | undefined;
+
+  /**
+    * Esconde o download do pie-chart.
+    */
+  @Prop({ reflect: true }) hideDownload = false;
+
+  /**
+    * Define o estado do componente programaticamente.
+    */
   @Method()
   async toggle(event?: Event) {
     event?.stopPropagation();
@@ -54,12 +69,11 @@ export class MedPiechart {
 
   @Listen('medDownloaded')
   Isdownloaded(event?:CustomEvent){
-    event?.stopPropagation();
     this.downloaded = event?.detail?.downloaded
   }
 
   render() {
-    const { dsColor, dsSize, download, downloaded, label, value, downloadProgress } = this;
+    const { dsColor, dsSize, download, downloaded, label, value, downloadProgress, identification, index, hideDownload } = this;
 
     return (
       <Host class={generateMedColor(dsColor, {
@@ -81,7 +95,14 @@ export class MedPiechart {
           <div class="med-piechart__side med-piechart__side--back">
             <med-type class="med-piechart__text med-piechart__text--back">{label}</med-type>
 
-            <med-download-button class="med-piechart__button" ds-color={dsColor} value={downloadProgress} downloaded={downloaded}></med-download-button>
+            {!hideDownload && <med-download-button class="med-piechart__button"
+              ds-color={dsColor}
+              index={index}
+              value={downloadProgress}
+              downloaded={downloaded}
+              identification={identification}>
+              </med-download-button>
+            }
           </div>
         </div>
       </Host>
