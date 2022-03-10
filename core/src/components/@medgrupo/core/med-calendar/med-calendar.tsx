@@ -128,7 +128,7 @@ export class MedCalendar {
         style={{ '--width': `${this.width}` }}>
         <div class="header">
           <div class="header__left">
-            <ion-button ds-name="tertiary" onClick={() => this.onMonthClick('prev')}>
+            <ion-button ds-size="sm" ds-name="tertiary" onClick={() => this.onMonthClick('prev')}>
               <ion-icon slot="icon-only" class="med-icon" name="med-esquerda"></ion-icon>
             </ion-button>
 
@@ -136,7 +136,7 @@ export class MedCalendar {
               {mes} {ano}
             </med-type>
 
-            <ion-button ds-name="tertiary" onClick={() => this.onMonthClick('next')}>
+            <ion-button ds-size="sm" ds-name="tertiary" onClick={() => this.onMonthClick('next')}>
               <ion-icon slot="icon-only" class="med-icon" name="med-direita"></ion-icon>
             </ion-button>
           </div>
