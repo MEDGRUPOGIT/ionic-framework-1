@@ -7,18 +7,18 @@
 
 ## Properties
 
-| Property      | Attribute      | Description                 | Type                  | Default     |
-| ------------- | -------------- | --------------------------- | --------------------- | ----------- |
-| `alert`       | `alert`        |                             | `boolean`             | `false`     |
-| `categoria`   | `categoria`    |                             | `string \| undefined` | `undefined` |
-| `dataFinal`   | `data-final`   |                             | `string \| undefined` | `undefined` |
-| `dataInicial` | `data-inicial` |                             | `string \| undefined` | `undefined` |
-| `dsColor`     | `ds-color`     | Define a cor do componente. | `string \| undefined` | `undefined` |
-| `finalizada`  | `finalizada`   |                             | `string \| undefined` | `undefined` |
-| `horaFinal`   | `hora-final`   |                             | `string \| undefined` | `undefined` |
-| `horaInicial` | `hora-inicial` |                             | `string \| undefined` | `undefined` |
-| `iconName`    | `icon-name`    |                             | `string \| undefined` | `undefined` |
-| `titulo`      | `titulo`       |                             | `string \| undefined` | `undefined` |
+| Property      | Attribute      | Description                      | Type                  | Default     |
+| ------------- | -------------- | -------------------------------- | --------------------- | ----------- |
+| `alert`       | `alert`        | Define o estado.                 | `boolean`             | `false`     |
+| `categoria`   | `categoria`    | Define a categoria.              | `string \| undefined` | `undefined` |
+| `dataFinal`   | `data-final`   | Define a data de termino.        | `string \| undefined` | `undefined` |
+| `dataInicial` | `data-inicial` | Define a data de inicio.         | `string \| undefined` | `undefined` |
+| `dsColor`     | `ds-color`     | Define a cor.                    | `string \| undefined` | `undefined` |
+| `finalizada`  | `finalizada`   | Define se a task foi finalizada. | `string \| undefined` | `undefined` |
+| `horaFinal`   | `hora-final`   | Define a hora de termino.        | `string \| undefined` | `undefined` |
+| `horaInicial` | `hora-inicial` | Define a hora de inicio.         | `string \| undefined` | `undefined` |
+| `iconName`    | `icon-name`    | Define o icone.                  | `string \| undefined` | `undefined` |
+| `titulo`      | `titulo`       | Define o titulo.                 | `string \| undefined` | `undefined` |
 
 
 ## Events

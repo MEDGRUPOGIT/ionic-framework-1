@@ -7,13 +7,15 @@
 
 ## Properties
 
-| Property      | Attribute     | Description                                                    | Type                  | Default     |
-| ------------- | ------------- | -------------------------------------------------------------- | --------------------- | ----------- |
-| `downloaded`  | `downloaded`  | Define o estado do componente quando download tiver concluído. | `boolean`             | `false`     |
-| `downloading` | `downloading` | Define o estado do componente durante o download.              | `boolean`             | `false`     |
-| `dsColor`     | `ds-color`    | Define a cor do componente.                                    | `string \| undefined` | `undefined` |
-| `initial`     | `initial`     | Define o estado inicial do componente.                         | `boolean`             | `true`      |
-| `value`       | `value`       | Define o valor da progress bar do componente.                  | `number`              | `0`         |
+| Property         | Attribute        | Description                                                      | Type                            | Default     |
+| ---------------- | ---------------- | ---------------------------------------------------------------- | ------------------------------- | ----------- |
+| `downloaded`     | `downloaded`     | Define o estado do componente quando download tiver concluído.   | `boolean`                       | `false`     |
+| `downloading`    | `downloading`    | Define o estado do componente durante o download.                | `boolean`                       | `false`     |
+| `dsColor`        | `ds-color`       | Define a cor do componente.                                      | `string \| undefined`           | `undefined` |
+| `identification` | `identification` | Identificador do pieChart para emissão de eventos                | `number \| string \| undefined` | `undefined` |
+| `index`          | `index`          | Define qual a posição do array se encontra esse chart. Opcional. | `number \| undefined`           | `undefined` |
+| `initial`        | `initial`        | Define o estado inicial do componente.                           | `boolean`                       | `true`      |
+| `value`          | `value`          | Define o valor da progress bar do componente.                    | `number`                        | `0`         |
 
 
 ## Events

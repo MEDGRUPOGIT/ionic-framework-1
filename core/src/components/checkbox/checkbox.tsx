@@ -1,10 +1,11 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, Watch, h } from '@stencil/core';
 
 import { getIonMode } from '../../global/ionic-global';
-import { CheckboxChangeEventDetail, Color, StyleEventDetail, MedColor } from '../../interface';
+import { CheckboxChangeEventDetail, StyleEventDetail, MedColor } from '../../interface';
 import { getAriaLabel, renderHiddenInput } from '../../utils/helpers';
 import { hostContext } from '../../utils/theme';
 import { generateMedColor } from '../../utils/med-theme';
+
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
@@ -15,7 +16,7 @@ import { generateMedColor } from '../../utils/med-theme';
 @Component({
   tag: 'ion-checkbox',
   styleUrls: {
-    ios: 'checkbox.md.scss',
+    ios: 'checkbox.ios.scss',
     md: 'checkbox.md.scss'
   },
   shadow: true
@@ -30,14 +31,7 @@ export class Checkbox implements ComponentInterface {
   /**
     * Define a cor do componente.
     */
-  @Prop({ reflect: true }) dsColor?: MedColor;
-
-  /**
-   * The color to use from your application's color palette.
-   * Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`.
-   * For more information on colors, see [theming](/docs/theming/basics).
-   */
-  @Prop() color?: Color;
+   @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
    * The name of the control, which is submitted with the form data.
@@ -126,8 +120,6 @@ export class Checkbox implements ComponentInterface {
     this.setFocus();
     this.checked = !this.checked;
     this.indeterminate = false;
-    console.log('clicked');
-
   }
 
   private onFocus = () => {
@@ -146,17 +138,13 @@ export class Checkbox implements ComponentInterface {
     renderHiddenInput(true, el, name, (checked ? value : ''), disabled);
 
     let path = indeterminate
-      // ? <path d="M6 12L18 12" part="mark" />
-      ? <div class="indeterminate"></div>
-      // : <path d="M5.9,12.5l3.8,3.8l8.8-8.8" part="mark" />;
-      : <div class="checked"></div>
+      ? <path d="M6 12L18 12" part="mark" />
+      : <path d="M5.9,12.5l3.8,3.8l8.8-8.8" part="mark" />;
 
     if (mode === 'md') {
       path = indeterminate
-        // ? <path d="M2 12H22" part="mark" />
-        ? <div class="indeterminate"></div>
-        // : <path d="M1.73,12.91 8.1,19.28 22.79,4.59" part="mark" />;
-        : <div class="checked"></div>
+        ? <path d="M2 12H22" part="mark" />
+        : <path d="M1.73,12.91 8.1,19.28 22.79,4.59" part="mark" />;
     }
 
     return (
@@ -175,12 +163,9 @@ export class Checkbox implements ComponentInterface {
           'interactive': true
         })}
       >
-        {/* <svg class="checkbox-icon" viewBox="0 0 24 24" part="container">
+        <svg class="checkbox-icon" viewBox="0 0 24 24" part="container">
           {path}
-        </svg> */}
-        <div part="container" class="checkbox-icon">
-          {path}
-        </div>
+        </svg>
         <label htmlFor={inputId}>
           {labelText}
         </label>

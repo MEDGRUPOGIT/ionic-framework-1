@@ -61,6 +61,10 @@ Default.argTypes = {
   value: {
     defaultValue: '150',
     control: { type: 'range', min: 0, max: 150, step: 1 },
-    description: 'Define a porcentagem a ser mostrada.'
+    description: 'Define a porcentagem a ser mostrada.',
+    table: {
+      type:  { summary: 'number' },
+      defaultValue: { summary: 'undefined' },
+    },
   },
 };

@@ -1,10 +1,6 @@
 :host {
   --background: #{color('brand', '3')};
   --color: #{color('brand', '3', 'contrast')};
-  --size: 48px;
-  --font-weight: 600;
-  --font-size: 24px;
-  --line-height: 24px;
 }
 
 :host {
@@ -19,6 +15,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .med-avatar {
@@ -68,6 +65,13 @@
 
 :host(.med-avatar--sm) {
   --size: 40px;
+  --font-weight: 600;
+  --font-size: 24px;
+  --line-height: 24px;
+}
+
+:host(.med-avatar--base) {
+  --size: 48px;
   --font-weight: 600;
   --font-size: 24px;
   --line-height: 24px;

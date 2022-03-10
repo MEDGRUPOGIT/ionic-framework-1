@@ -66,25 +66,23 @@
   @include margin($checkbox-md-item-start-margin-top, $checkbox-md-item-start-margin-end, $checkbox-md-item-start-margin-bottom, $checkbox-md-item-start-margin-start);
 }
 
-// REVIEW
-// .checkbox-md + .item-inner ion-label {
-//   @include margin-horizontal(0, null);
-// }
 
-// CUSTOM
+// @import './checkbox.med.scss';
 
-@import "../../../templarios/abstracts";
 
 :host {
   --background: transparent;
-  --border-radius: var(--med-border-radius-sm);
+  --border-radius: 4px;
   --border-color: #{color('brand', '4')};
-  --border-width: var(--med-border-width-thin);
-  --size: 24px;
+  --border-width: 2px;
+  --size: 20px;
+}
+
+:host {
   min-width: var(--size);
 }
 
-:host .checkbox-icon {
+.checkbox-icon {
   position: relative;
 }
 
@@ -94,11 +92,11 @@
   background: var(--background);
 }
 
-:host .checked {
-  transform: translate(-50%, -50%) scale(0);
-}
+//////////////////////////////
+// checked
+//////////////////////////////
 
-:host .indeterminate {
+.checked {
   transform: translate(-50%, -50%) scale(0);
 }
 
@@ -114,6 +112,14 @@
   transition: 300ms all ease;
 }
 
+//////////////////////////////
+// indeterminate
+//////////////////////////////
+
+.indeterminate {
+  transform: translate(-50%, -50%) scale(0);
+}
+
 :host(.checkbox-indeterminate) .indeterminate {
   position: absolute;
   top: 50%;
@@ -125,25 +131,17 @@
   background: var(--border-color);
 }
 
-// ////////////////////
-// color
-// ////////////////////
+//////////////////////////////
+// dsColor
+//////////////////////////////
 
 :host(.med-color) {
   --border-color: #{curr-color('color', '3')};
 }
 
-// ////////////////////
-// neutral
-// ////////////////////
-
 :host(.med-color-neutral) {
   --border-color: #{curr-color('neutral')};
 }
-
-// //////////
-// feedback
-// //////////
 
 :host(.med-color-feedback) {
   --border-color: #{curr-color('feedback')};

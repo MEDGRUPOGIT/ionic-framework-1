@@ -25,12 +25,12 @@ export class Badge implements ComponentInterface {
   /**
    * Define a variação do componente.
    */
-  @Prop({ reflect: true }) dsName?: 'secondary';
+  @Prop({ reflect: true }) fill?: 'outline';
 
   /**
    * Define a variação de tamanho do componente.
    */
-  @Prop({ reflect: true }) dsSize?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
+  @Prop({ reflect: true }) dsSize?: 'sm' | 'md';
 
   /**
    * The color to use from your application's color palette.
@@ -40,7 +40,7 @@ export class Badge implements ComponentInterface {
   @Prop() color?: Color;
 
   render() {
-    const { dsColor, dsName, dsSize } = this;
+    const { dsColor, fill, dsSize } = this;
     const mode = getIonMode(this);
 
     return (
@@ -48,7 +48,7 @@ export class Badge implements ComponentInterface {
         class={generateMedColor(dsColor, {
           [mode]: true,
           'med-badge': true,
-          [`med-badge--${dsName}`]: dsName !== undefined,
+          [`med-badge--${fill}`]: fill !== undefined,
           [`med-badge--${dsSize}`]: dsSize !== undefined,
         })}>
         <slot></slot>

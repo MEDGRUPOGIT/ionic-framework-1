@@ -61,7 +61,7 @@ export class MedChartBar {
   render() {
     const { dsColor, value, height, width } = this;
 
-    const percentage = value === 0 ? height : height - ((height * value) / 100);
+    const percentage = value === 0 ? height - 1 : height - ((height * value) / 100);
 
     return (
       <Host

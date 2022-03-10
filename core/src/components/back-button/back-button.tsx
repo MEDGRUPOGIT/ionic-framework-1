@@ -161,10 +161,7 @@ export class BackButton implements ComponentInterface, ButtonInterface {
           aria-label={backButtonText || 'back'}
         >
           <span class="button-inner">
-            <div class="button-inner__text">
-              {backButtonIcon && <ion-icon class="med-icon" part="icon" icon={backButtonIcon} aria-hidden="true" lazy={false}></ion-icon>}
-              {backButtonText && <span part="text" aria-hidden="true" class="button-text">{backButtonText}</span>}
-            </div>
+            {backButtonIcon && <ion-icon class="med-icon" part="icon" icon={backButtonIcon} aria-hidden="true" lazy={false}></ion-icon>}
           </span>
           <ion-ripple-effect type={this.rippleType}></ion-ripple-effect>
         </button>

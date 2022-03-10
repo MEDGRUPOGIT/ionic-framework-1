@@ -7,14 +7,14 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ dsColor, active, skin }) => {
+const Template = ({ dsColor, active, skin, content }) => {
   return html`
     <ion-app>
       <ion-content>
         <div class="full-height-flex">
 
           <!-- component -->
-          <med-semana .dsColor=${dsColor} .active=${active} .skin=${skin} ></med-semana>
+          <med-semana .dsColor=${dsColor} .active=${active} .skin=${skin} .content=${content}></med-semana>
           <!-- component -->
 
         </div>
@@ -71,42 +71,41 @@ Default.argTypes = {
       defaultValue: { summary: 'undefined' },
     },
   },
-  download: {
-    download: false,
-    control: { type: "boolean" },
-    description: "Define o estado de download do componente.",
-    table: {
-      type: { summary: "boolean" },
-      defaultValue: { summary: "undefined" },
+  content:{
+    defaultValue: {
+      Title: "semana",
+      Numero: "01",
+      DataInicio: "16/08",
+      DataFim: "24/08",
+      Itens: [
+        {
+          Nome: "nef 1",
+          PercentLido: 75,
+          Downloaded: false,
+          DownloadProgress: 0,
+          Time: "2h30m",
+          Descricao: "Lorem Ipslum at lanium",
+        },
+        {
+          Nome: "nef 2",
+          PercentLido: 100,
+          Downloaded: true,
+          DownloadProgress: 0,
+          Time: "2h30m",
+          Descricao: "Lorem Ipslum at lanium",
+        },
+        {
+          Nome: "nef 3",
+          PercentLido: 0,
+          Downloaded: false,
+          DownloadProgress: 20,
+          Time: "2h30m",
+          Descricao: "Lorem Ipslum at lanium",
+        },
+      ],
     },
-  },
-  downloaded: {
-    downloaded: false,
-    control: { type: "boolean" },
-    description: "Define o estado de downloaded do componente.",
-    table: {
-      type: { summary: "boolean" },
-      defaultValue: { summary: "undefined" },
-    },
-  },
-  downloadProgress: {
-    defaultValue: '40',
-    control: { type: 'range', min: 0, max: 100, step: 1 },
-    description: 'Define o progresso de download.'
-  },
-  label: {
-    control: { type: 'text' },
-    description: 'Define o texto do componente',
-    defaultValue: 'nef 1',
-    table: {
-      type:  { summary: 'string' },
-      defaultValue: { summary: 'undefined' },
-    },
-  },
-  value: {
-    defaultValue: '50',
-    control: { type: 'range', min: 0, max: 100, step: 1 },
-    description: 'Define a porcentagem a ser mostrada.'
-  },
+    control: { type: 'object' },
+    description: 'Define o conteúdo do componente.',
+  }
 };
 
