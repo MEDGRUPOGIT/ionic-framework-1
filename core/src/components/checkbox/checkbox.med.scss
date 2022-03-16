@@ -1,0 +1,61 @@
+:host {
+  --background: transparent;
+  --background-checked: #{color('brand', '4')};
+  --checkmark-color: #{color('neutral', '2')};
+  --border-radius: 4px;
+  --border-color: #{color('brand', '4')};
+  --border-color-checked: #{color('brand', '4')};
+  --border-width: 2px;
+  --size: 20px;
+  --transition: background-color 300ms ease-out, border-color 300ms ease-out,
+}
+
+:host {
+  min-width: var(--size);
+}
+
+//////////////////////////////
+// states
+//////////////////////////////
+
+@media (any-hover: hover) {
+  :host(:hover) {
+    --border-color: #{color('brand', '5')};
+    --background-checked: #{color('brand', '5')};
+    --border-color-checked: #{color('brand', '5')};
+  }
+}
+
+:host(.checkbox-disabled) {
+  opacity: 0.5;
+}
+
+//////////////////////////////
+// dsColor
+//////////////////////////////
+
+:host(.med-color) {
+  --border-color: #{curr-color('color', '4')};
+  --background-checked: #{curr-color('color', '4')};
+  --border-color-checked: #{curr-color('color', '4')};
+}
+
+@media (any-hover: hover) {
+  :host(.med-color:hover) {
+    --border-color: #{curr-color('color', '5')};
+    --background-checked: #{curr-color('color', '5')};
+    --border-color-checked: #{curr-color('color', '5')};
+  }
+}
+
+:host(.med-color-neutral) {
+  --border-color: #{curr-color('neutral')};
+  --background-checked: #{curr-color('neutral')};
+  --border-color-checked: #{curr-color('neutral')};
+}
+
+:host(.med-color-feedback) {
+  --border-color: #{curr-color('feedback')};
+  --background-checked: #{curr-color('feedback')};
+  --border-color-checked: #{curr-color('feedback')};
+} 

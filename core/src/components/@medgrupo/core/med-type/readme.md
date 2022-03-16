@@ -26,6 +26,7 @@
  - [med-calendar-day](../med-calendar-day)
  - [med-chart-bar-horizontal](../med-chart-bar-horizontal)
  - [med-chart-categoria](../../compositions/med-chart-categoria)
+ - [med-chart-radial](../med-chart-radial)
  - [med-check-card](../../compositions/med-check-card)
  - [med-nav](../med-nav)
  - [med-nav-accordion](../med-nav-accordion)
@@ -46,6 +47,7 @@ graph TD;
   med-calendar-day --> med-type
   med-chart-bar-horizontal --> med-type
   med-chart-categoria --> med-type
+  med-chart-radial --> med-type
   med-check-card --> med-type
   med-nav --> med-type
   med-nav-accordion --> med-type

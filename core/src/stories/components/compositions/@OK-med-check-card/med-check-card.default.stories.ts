@@ -40,36 +40,40 @@ const Template = ({ dsColor, alert, titulo, categoria, horaInicial, horaFinal, d
     <ion-app>
       <ion-content>
 
-        <!-- component markdown-->
-        <med-check-card
-          .dsColor=${dsColor}
-          .alert=${alert}
-          titulo=${titulo}
-          categoria=${categoria}
-          hora-inicial=${horaInicial}
-          hora-final=${horaFinal}
-          data-inicial=${dataInicial}
-          data-final=${dataFinal}
-          icon-name=${iconName}
-          modal-placement=${modalPlacement}
-          tooltip-collapsed=${tooltipCollapsed}
-          tooltip-heading=${tooltipHeading}
-          tooltip-content=${tooltipContent}
-        >
-          <ion-checkbox slot="input"></ion-checkbox>
+        <div class="full-height-flex">
 
-          <med-tooltip slot="tooltip" class="med-check-card__tooltip" ds-color="fb-warning" placement="top" position="end">
-            <ion-icon class="med-check-card__alert-icon med-icon med-icon--sm" name="med-alerta" slot="input"></ion-icon>
-            <div slot="content">
-              <div class="med-check-card__tooltip-header">
-                <med-type ds-color="neutral-01" token="p14b">{tooltipHeading}</med-type>
-                <ion-icon class="med-check-card__tooltip-icon med-icon med-icon--sm" name="med-fechar"></ion-icon>
+          <!-- component markdown-->
+          <med-check-card
+            .dsColor=${dsColor}
+            .alert=${alert}
+            titulo=${titulo}
+            categoria=${categoria}
+            hora-inicial=${horaInicial}
+            hora-final=${horaFinal}
+            data-inicial=${dataInicial}
+            data-final=${dataFinal}
+            icon-name=${iconName}
+            modal-placement=${modalPlacement}
+            tooltip-collapsed=${tooltipCollapsed}
+            tooltip-heading=${tooltipHeading}
+            tooltip-content=${tooltipContent}
+          >
+            <ion-checkbox slot="input"></ion-checkbox>
+
+            <med-tooltip slot="tooltip" class="med-check-card__tooltip" ds-color="fb-warning" placement="top" position="end">
+              <ion-icon class="med-check-card__alert-icon med-icon med-icon--sm" name="med-alerta" slot="input"></ion-icon>
+              <div slot="content">
+                <div class="med-check-card__tooltip-header">
+                  <med-type ds-color="neutral-01" token="p14b">${tooltipHeading}</med-type>
+                  <ion-icon class="med-check-card__tooltip-icon med-icon med-icon--sm" name="med-fechar"></ion-icon>
+                </div>
+                <med-type ds-color="neutral-01" token="p14x" slot="content">${tooltipContent}</med-type>
               </div>
-              <med-type ds-color="neutral-01" token="p14x" slot="content">{tooltipContent}</med-type>
-            </div>
-          </med-tooltip>
-        </med-check-card>
-        <!-- component markdown-->
+            </med-tooltip>
+          </med-check-card>
+          <!-- component markdown-->
+
+        </div>
 
       </ion-content>
     </ion-app>

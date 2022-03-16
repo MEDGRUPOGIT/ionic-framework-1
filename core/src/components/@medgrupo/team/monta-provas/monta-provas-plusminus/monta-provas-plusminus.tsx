@@ -6,7 +6,7 @@ import { generateMedColor } from '../../../../../utils/med-theme';
 @Component({
   tag: 'monta-provas-plusminus',
   styleUrl: 'monta-provas-plusminus.scss',
-  shadow: true,
+  scoped: true,
 })
 export class MontaProvasPlusminus {
 

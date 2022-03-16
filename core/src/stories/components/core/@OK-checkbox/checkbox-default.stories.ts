@@ -7,14 +7,14 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ dsColor, indeterminate}) => {
+const Template = ({ dsColor, indeterminate, disabled }) => {
   return html`
     <ion-app>
       <ion-content>
         <div class="full-height-flex">
 
           <!-- component markdown -->
-          <ion-checkbox .dsColor=${dsColor} .indeterminate=${indeterminate}></ion-checkbox>
+          <ion-checkbox .dsColor=${dsColor} .indeterminate=${indeterminate} .disabled=${disabled}></ion-checkbox>
           <!-- component -->
 
         </div>
@@ -47,6 +47,15 @@ Default.argTypes = {
     table: {
       type:  { summary: 'boolean' },
       defaultValue: { summary: 'false' },
+    },
+  },
+  disabled: {
+    disabled: false,
+    control: { type: 'boolean' },
+    description: 'Define o comportamento disabled do componente.',
+    table: {
+      type:  { summary: 'boolean' },
+      defaultValue: { summary: 'undefined' },
     },
   },
 };

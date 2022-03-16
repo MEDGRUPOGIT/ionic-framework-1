@@ -18,11 +18,13 @@
   --tempo-font-size: 12px;
 
   --button-flip-color: #{color('brand', '4')};
+
+  --padding: 8px;
 }
 
 :host {
   background: var(--background);
-  padding: 8px;
+  padding: var(--padding);
   border-radius: 8px 31px 31px 8px;
   display: flex;
   justify-content: space-between;
@@ -131,7 +133,6 @@
 
   &__chart-container {
     display: flex;
-    overflow-x: scroll;
   }
 
   &__chart {
@@ -143,8 +144,40 @@
   }
 }
 
-.med-scrollbar {
+.tp-scrollbar {
   --padding: 0;
+}
+
+//////////////////////////////
+// dsSize
+//////////////////////////////
+
+:host(.med-semana--sm) {
+  --padding: 12px;
+  border-radius: 8px 40px 40px 8px;
+
+  .med-semana {
+    &__semana {
+      --semana-font-size: 12px;
+      --line-height: 12px;
+      --font-weight: 400;
+    }
+
+    &__numero {
+      --numero-font-size: 24px;
+      --line-height: 24px;
+      --font-weight: 600;
+    }
+
+    &__back {
+      --semana-back-font-size: 16px;
+      --line-height: 16px;
+    }
+
+    &__heading-container {
+      padding-right: 45px;
+    }
+  }
 }
 
 //////////////////////////////
@@ -273,7 +306,7 @@
       text-transform: uppercase;
 
       &--number {
-        margin: 0 8px;
+        margin: 0 16px 0 4px;
       }
     }
 
@@ -288,7 +321,6 @@
 
     &__chart-container {
       flex-direction: column;
-      overflow-x: scroll;
     }
 
     &__chart-row {
@@ -340,12 +372,32 @@
   }
 }
 
+//////////////////////////////
+// dsSize
+//////////////////////////////
+
+:host(.med-semana--skin-lista.med-semana--sm) {
+  .med-semana__download-button {
+    display: none;
+  }
+
+  .med-semana__tempo-container {
+    justify-content: center;
+  }
+
+  .med-semana__chart-row {
+    height: 71px;
+    border-radius: 50px 8px 8px 50px;
+  }
+}
+
 ////////////////////
 // state
 ////////////////////
 
 :host(.med-semana--skin-lista.med-semana--active) {
   --background: none;
+  --background-row: #{color('brand', '1')};
 }
 
 :host(.med-color.med-semana--active.med-semana--skin-lista) {

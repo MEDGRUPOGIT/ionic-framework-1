@@ -1,21 +1,21 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
-import { MedColor } from "../../../constants";
+import { MedColors } from "../../../../global/templarios/color.enum";
 
 export default {
   title: "Components/Compositions/@OK Semana (Week)",
   decorators: [withDesign],
 };
 
-const Template = ({ dsColor, active, skin, content }) => {
+const Template = ({ dsColor, dsSize, active, skin, content }) => {
   return html`
     <ion-app>
       <ion-content>
         <div class="full-height-flex">
 
-          <!-- component -->
-          <med-semana .dsColor=${dsColor} .active=${active} .skin=${skin} .content=${content}></med-semana>
-          <!-- component -->
+          <!-- component markdown -->
+          <med-semana .dsColor=${dsColor} .dsSize=${dsSize} .active=${active} .skin=${skin} .content=${content}></med-semana>
+          <!-- component markdown -->
 
         </div>
       </ion-content>
@@ -29,18 +29,15 @@ Default.parameters = {
     type: 'figma',
     url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/Componentes?node-id=12138%3A43556',
   },
-  actions: {
-    handles: ['medDownloaded', 'medCancelar','medDownloading'],
-  },
 };
 Default.argTypes = {
   dsColor: {
-    options: MedColor,
-    control: { type: "select" },
+    options: Object.values(MedColors),
+    control: { type: 'select'},
     description: "Define a cor do componente.",
     table: {
-      type: { summary: "MedColor" },
-      defaultValue: { summary: "undefined" },
+      type:  { summary: Object.values(MedColors).join(' |') },
+      defaultValue: { summary: 'undefined' },
     },
   },
   dsSize: {
@@ -73,7 +70,7 @@ Default.argTypes = {
   },
   content:{
     defaultValue: {
-      Title: "semana",
+      Title: "Semana",
       Numero: "01",
       DataInicio: "16/08",
       DataFim: "24/08",

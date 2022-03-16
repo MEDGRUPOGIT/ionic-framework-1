@@ -18,7 +18,7 @@ export class MedSemana {
   /**
    * Define a variação de tamanho do componente.
    */
-  @Prop() dsSize?: "sm";
+  @Prop() dsSize?: 'sm';
 
   /**
    * Define o estado active do componente.
@@ -26,9 +26,14 @@ export class MedSemana {
   @Prop({ reflect: true }) active = false;
 
   /**
+   * Define o estado habilitado ou desabilitado do componente.
+   */
+  @Prop({ reflect: true }) disabled = false;
+
+  /**
    * Define a skin do componente.
    */
-  @Prop({ reflect: true }) skin?: "lista";
+  @Prop({ reflect: true }) skin?: 'lista';
 
   /**
    * Define o conteudo da semana.
@@ -49,18 +54,18 @@ export class MedSemana {
       return (
         <div class="med-semana__heading-container">
           <div class="med-semana__text-container">
-            <med-type class="med-semana__text">{content?.Title}</med-type>
-            <med-type class="med-semana__text med-semana__text--number">
+            <med-type token="h20" class="med-semana__text">{content?.Title}</med-type>
+            <med-type token="h20" class="med-semana__text med-semana__text--number">
               {content?.Numero}
             </med-type>
 
             <div class="med-semana__week-container">
-              <med-type class="med-semana__auxiliar">De</med-type>
-              <med-type class="med-semana__auxiliar">
+              <med-type token="p16" ds-color="neutral-7" class="med-semana__auxiliar">De</med-type>
+              <med-type token="p16" ds-color="neutral-7" class="med-semana__auxiliar">
                 {content?.DataInicio}
               </med-type>
-              <med-type class="med-semana__auxiliar">até</med-type>
-              <med-type class="med-semana__auxiliar">
+              <med-type token="p16" ds-color="neutral-7" class="med-semana__auxiliar">até</med-type>
+              <med-type token="p16" ds-color="neutral-7" class="med-semana__auxiliar">
                 {content?.DataFim}
               </med-type>
             </div>
@@ -103,20 +108,22 @@ export class MedSemana {
   }
 
   private createPieChartEl(Itens: ItensInterface[], skin?: string) {
-    console.log('itens',Itens)
+
     if (skin === "lista") {
       return (
-        <div class="med-semana__chart-container tp-scrollbar">
+        <div class="med-semana__chart-container">
           {Itens?.map((item: ItensInterface, index:number) => (
             <div class="med-semana__chart-row">
               <med-piechart
                 class="med-semana__chart"
                 ds-color={this.dsColor}
+                ds-size={this.dsSize}
                 label={item.Nome}
                 value={item.PercentLido}
                 download-progress={item.DownloadProgress}
                 downloaded={item.Downloaded}
                 download={this.flipped}
+                disabled={this.disabled}
                 index={index}
                 identification={item.Id}
                 hide-download
@@ -131,6 +138,7 @@ export class MedSemana {
                   ds-color={this.dsColor}
                   value={item.DownloadProgress}
                   downloaded={item.Downloaded}
+                  disabled={this.disabled}
                   index={index}
                   identification={item.Id}
                 ></med-download-button>
@@ -141,16 +149,18 @@ export class MedSemana {
       );
     } else {
       return (
-        <div class="med-semana__chart-container tp-scrollbar">
+        <div class="med-semana__chart-container">
           {Itens?.map((item: any) => (
             <med-piechart
               class="med-semana__chart"
               ds-color={this.dsColor}
+              ds-size={this.dsSize}
               label={item.Nome}
               value={item.PercentLido}
               download-progress={item.DownloadProgress}
               downloaded={item.Downloaded}
               download={this.flipped}
+              disabled={this.disabled}
             ></med-piechart>
           ))}
         </div>
@@ -159,17 +169,20 @@ export class MedSemana {
   }
 
   render() {
-    const { dsColor, active, skin, content } = this;
+    const { dsColor, dsSize, active, skin, content} = this;
     let textContainerEl;
     let piechartContainerEl;
+
     textContainerEl = this.createTextContainerEl(content, skin);
     piechartContainerEl = this.createPieChartEl(content.Itens, skin);
+
     return (
       <Host
         class={generateMedColor(dsColor, {
           "med-semana": true,
           "med-semana--active": active,
           [`med-semana--skin-${skin}`]: skin !== undefined,
+          [`med-semana--${dsSize}`]: dsSize !== undefined,
         })}
       >
         {textContainerEl}

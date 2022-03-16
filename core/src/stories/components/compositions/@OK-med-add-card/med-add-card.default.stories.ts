@@ -10,11 +10,13 @@ const Template = ({ titulo, iconName }) => {
   return html`
     <ion-app>
       <ion-content>
+        <div class="full-height-flex">
 
         <!-- component markdown-->
         <med-add-card titulo=${titulo} icon-name=${iconName}></med-add-card>
         <!-- component markdown-->
 
+        </div>
       </ion-content>
     </ion-app>
   `;

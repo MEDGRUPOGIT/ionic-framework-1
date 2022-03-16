@@ -97,10 +97,10 @@ export class MedCheckCard {
                     <med-type class="med-check-card__subtitulo" token="p12xb">{categoria}</med-type>
                   </div>
                   {!dataInicial && !dataFinal && horaInicial && horaFinal && <med-type class="med-check-card__hora" token="p12x">{horaInicial} – {horaFinal}</med-type>}
+                  {dataInicial && dataFinal && !horaInicial && !horaFinal && <med-type class="med-check-card__data" token="p12x">{dataInicial} até {dataFinal}</med-type>}
                 </div>
-                {dataInicial && dataFinal && !horaInicial && !horaFinal && <med-type class="med-check-card__data" token="p12x">{dataInicial} até {dataFinal}</med-type>}
-                {dataInicial && dataFinal && horaInicial && horaFinal && <med-type class="med-check-card__data" token="p12x">{dataInicial} - {horaInicial} até {dataFinal} - {horaFinal}</med-type>}
               </div>
+              {dataInicial && dataFinal && horaInicial && horaFinal && <med-type class="med-check-card__data-hora" token="p12x">{dataInicial} - {horaInicial} até {dataFinal} - {horaFinal}</med-type>}
             </div>
           </div>
 

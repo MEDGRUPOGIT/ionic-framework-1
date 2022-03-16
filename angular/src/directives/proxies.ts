@@ -1168,8 +1168,8 @@ export class MedChartCategoria {
 }
 export declare interface MedChartRadial extends Components.MedChartRadial {
 }
-@ProxyCmp({ inputs: ["dsColor", "dsName", "dsSize", "valores"] })
-@Component({ selector: "med-chart-radial", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "dsName", "dsSize", "valores"] })
+@ProxyCmp({ inputs: ["dsColor", "dsSize", "subtitulo", "titulo", "valores"] })
+@Component({ selector: "med-chart-radial", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "dsSize", "subtitulo", "titulo", "valores"] })
 export class MedChartRadial {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1259,8 +1259,8 @@ export class MedDivider {
 }
 export declare interface MedDownloadButton extends Components.MedDownloadButton {
 }
-@ProxyCmp({ inputs: ["downloaded", "downloading", "dsColor", "identification", "index", "initial", "value"] })
-@Component({ selector: "med-download-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["downloaded", "downloading", "dsColor", "identification", "index", "initial", "value"] })
+@ProxyCmp({ inputs: ["disabled", "downloaded", "downloading", "dsColor", "identification", "index", "initial", "value"] })
+@Component({ selector: "med-download-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled", "downloaded", "downloading", "dsColor", "identification", "index", "initial", "value"] })
 export class MedDownloadButton {
   medDownloaded!: EventEmitter<CustomEvent>;
   medCancelar!: EventEmitter<CustomEvent>;
@@ -1548,8 +1548,8 @@ export class MedParent {
 }
 export declare interface MedPiechart extends Components.MedPiechart {
 }
-@ProxyCmp({ inputs: ["download", "downloadProgress", "downloaded", "dsColor", "dsSize", "hideDownload", "identification", "index", "label", "value"], "methods": ["toggle"] })
-@Component({ selector: "med-piechart", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["download", "downloadProgress", "downloaded", "dsColor", "dsSize", "hideDownload", "identification", "index", "label", "value"] })
+@ProxyCmp({ inputs: ["disabled", "download", "downloadProgress", "downloaded", "dsColor", "dsSize", "hideDownload", "identification", "index", "label", "value"], "methods": ["toggle"] })
+@Component({ selector: "med-piechart", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled", "download", "downloadProgress", "downloaded", "dsColor", "dsSize", "hideDownload", "identification", "index", "label", "value"] })
 export class MedPiechart {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1627,8 +1627,8 @@ export class MedRating {
 }
 export declare interface MedSemana extends Components.MedSemana {
 }
-@ProxyCmp({ inputs: ["active", "content", "dsColor", "dsSize", "skin"] })
-@Component({ selector: "med-semana", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["active", "content", "dsColor", "dsSize", "skin"] })
+@ProxyCmp({ inputs: ["active", "content", "disabled", "dsColor", "dsSize", "skin"] })
+@Component({ selector: "med-semana", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["active", "content", "disabled", "dsColor", "dsSize", "skin"] })
 export class MedSemana {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

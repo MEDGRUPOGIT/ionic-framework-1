@@ -7,21 +7,22 @@
   --back-background: #{color('neutral', '3')};
   --text-color-front: #{color('neutral', '10')};
   --text-color-back: #{color('brand', '2', 'contrast')};
-  --downloaded-background: #{color('brand', '2')};;
+  --downloaded-background: #{color('brand', '2')};
+  --size: 46px;
  }
 
 .med-piechart {
   &__container {
-    height: 46px;
-    width: 46px;
+    height: var(--size);
+    width: var(--size);
     position: relative;
     perspective: 80px;
     transform-style: preserve-3d;
   }
 
   &__side {
-    height: 46px;
-    width: 46px;
+    height: var(--size);
+    width: var(--size);
     position: absolute;
     top: 0;
     left: 0;
@@ -80,6 +81,24 @@
     left: -8px;
     transform: scale(0);
     transition: all 0.7s ease;
+  }
+}
+
+//////////////////////////////
+// dsSize
+//////////////////////////////
+
+:host(.med-piechart--sm) {
+  --size: 56px;
+
+  .med-piechart__container {
+    perspective: 80px;
+  }
+
+  .med-piechart__text {
+    --font-size: 14px;
+    --line-height: 16px;
+    --font-weight: 600;
   }
 }
 

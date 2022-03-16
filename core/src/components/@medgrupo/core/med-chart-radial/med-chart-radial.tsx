@@ -11,27 +11,32 @@ import { generateMedColor } from '../../../../utils/med-theme';
 export class MedChartRadial {
 
   /**
-    * Define a cor do componente.
-    */
+  * Define a cor do componente.
+  */
   @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
-   * Define a variação do componente.
+   * Define a variação de tamanho.
    */
-  @Prop() dsName?: string;
-
-  /**
-   * Define a variação de tamanho do componente.
-   */
-  @Prop() dsSize?: 'lg';
+  @Prop() dsSize?: 'xs' | 'sm' | 'md' | 'lg';
 
   /**
    * Define os valores do gráfico
    */
   @Prop({reflect: true}) valores: MedChartRadiaItem[] = [];
 
+  /**
+    * Define o texto primario.
+    */
+   @Prop() titulo?: string;
+
+    /**
+    * Define o texto secundario.
+    */
+    @Prop() subtitulo?: string;
+
   render() {
-    const { dsName, dsColor, dsSize } = this;
+    const { dsColor, dsSize, titulo, subtitulo } = this;
     const totais = {
       total: 0,
       subtotais: [] as number[]
@@ -49,7 +54,6 @@ export class MedChartRadial {
         from-stencil
         class={generateMedColor(dsColor, {
           'med-chart-radial': true,
-          [`med-chart-radial--${dsName}`]: dsName !== undefined,
           [`med-chart-radial--${dsSize}`]: dsSize !== undefined,
         })}>
         <svg viewBox="0 0 36 36">
@@ -68,7 +72,11 @@ export class MedChartRadial {
             })
           }
         </svg>
-        {dsName === "secondary" && <div class="med-chart-radial__percent">10%</div>}
+        <div class="med-chart-radial__text-wrap">
+          {titulo && <med-type class="med-chart-radial__titulo">{titulo}</med-type>}
+          {titulo && <med-type class="med-chart-radial__subtitulo">{subtitulo}</med-type>}
+        </div>
+        <slot></slot>
       </Host>
     );
   }
