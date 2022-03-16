@@ -9,6 +9,7 @@
 
 | Property         | Attribute        | Description                                                      | Type                            | Default     |
 | ---------------- | ---------------- | ---------------------------------------------------------------- | ------------------------------- | ----------- |
+| `disabled`       | `disabled`       | Define o estado habilitado ou desabilitado do componente.        | `boolean`                       | `false`     |
 | `downloaded`     | `downloaded`     | Define o estado do componente quando download tiver concluído.   | `boolean`                       | `false`     |
 | `downloading`    | `downloading`    | Define o estado do componente durante o download.                | `boolean`                       | `false`     |
 | `dsColor`        | `ds-color`       | Define a cor do componente.                                      | `string \| undefined`           | `undefined` |

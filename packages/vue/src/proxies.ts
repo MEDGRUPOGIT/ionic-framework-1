@@ -1052,9 +1052,10 @@ export const MedChartCategoria = /*@__PURE__*/ defineContainer<JSX.MedChartCateg
 
 export const MedChartRadial = /*@__PURE__*/ defineContainer<JSX.MedChartRadial>('med-chart-radial', [
   'dsColor',
-  'dsName',
   'dsSize',
-  'valores'
+  'valores',
+  'titulo',
+  'subtitulo'
 ]);
 
 
@@ -1119,6 +1120,7 @@ export const MedDownloadButton = /*@__PURE__*/ defineContainer<JSX.MedDownloadBu
   'downloaded',
   'index',
   'identification',
+  'disabled',
   'medDownloaded',
   'medCancelar',
   'medDownloading'
@@ -1315,7 +1317,8 @@ export const MedPiechart = /*@__PURE__*/ defineContainer<JSX.MedPiechart>('med-p
   'downloadProgress',
   'index',
   'identification',
-  'hideDownload'
+  'hideDownload',
+  'disabled'
 ]);
 
 
@@ -1365,6 +1368,7 @@ export const MedSemana = /*@__PURE__*/ defineContainer<JSX.MedSemana>('med-seman
   'dsColor',
   'dsSize',
   'active',
+  'disabled',
   'skin',
   'content'
 ]);

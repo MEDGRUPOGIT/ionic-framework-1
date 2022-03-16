@@ -9,6 +9,7 @@
 
 | Property           | Attribute           | Description                                                      | Type                            | Default     |
 | ------------------ | ------------------- | ---------------------------------------------------------------- | ------------------------------- | ----------- |
+| `disabled`         | `disabled`          | Define o estado habilitado ou desabilitado do componente.        | `boolean`                       | `false`     |
 | `download`         | `download`          | Define o estado de download do componente.                       | `boolean`                       | `false`     |
 | `downloadProgress` | `download-progress` | Define o valor do progresso do componente de download.           | `number`                        | `0`         |
 | `downloaded`       | `downloaded`        | Define o estado de downloaded do componente.                     | `boolean`                       | `false`     |

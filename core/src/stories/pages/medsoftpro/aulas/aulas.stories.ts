@@ -1,4 +1,4 @@
-import { html } from 'lit-html';
+import { html,render } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
 import { MedColors } from "../../../../global/templarios/color.enum";
 
@@ -7,9 +7,8 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ dsColor }) => {
+const Template = ({ dsColor, dsSize, skin, contents }) => {
   return html`
-
     <script type="text/javascript">
       function a() {
         var element = document.getElementById("logo");
@@ -90,7 +89,7 @@ const Template = ({ dsColor }) => {
 
       .chart:last-child {
         margin-top: 16px;
-        margin-bottom 24px;
+        margin-bottom: 24px;
       }
 
       .cp-menu {
@@ -268,46 +267,12 @@ const Template = ({ dsColor }) => {
               <ion-icon slot="end" class="med-icon" name="med-cartao"></ion-icon>
             </ion-button>
           </div>
-
           <ion-content class="content">
-            <div class="col-left">
-              <div class="week-date__container">
-                <med-type class="week" token="h20x">Semana 10</med-type>
-                <med-type class="date" token="p16" ds-color="neutral-7">De 02/01 até 08/01</med-type>
-              </div>
-              <div class="week-chart__container">
-                <med-semana class="chart" .dsColor=${dsColor}></med-semana>
-                <med-semana class="chart" .dsColor=${dsColor}></med-semana>
-              </div>
-
-              <div class="week-date__container">
-                <med-type class="week" token="h20x">Semana 10</med-type>
-                <med-type class="date" token="p16" ds-color="neutral-7">De 02/01 até 08/01</med-type>
-              </div>
-              <div class="week-chart__container">
-                <med-semana class="chart" active .dsColor=${dsColor}></med-semana>
-                <med-semana class="chart" active .dsColor=${dsColor}></med-semana>
-              </div>
-
-              <div class="week-date__container">
-                <med-type class="week" token="h20x">Semana 10</med-type>
-                <med-type class="date" token="p16" ds-color="neutral-7">De 02/01 até 08/01</med-type>
-              </div>
-              <div class="week-chart__container">
-                <med-semana class="chart" .dsColor=${dsColor}></med-semana>
-                <med-semana class="chart" .dsColor=${dsColor}></med-semana>
-              </div>
-
-              <div class="week-date__container">
-                <med-type class="week" token="h20x">Semana 10</med-type>
-                <med-type class="date" token="p16" ds-color="neutral-7">De 02/01 até 08/01</med-type>
-              </div>
-              <div class="week-chart__container">
-                <med-semana class="chart" .dsColor=${dsColor}></med-semana>
-                <med-semana class="chart" .dsColor=${dsColor}></med-semana>
-              </div>
-            </div>
-
+            <med-semana .dsColor=${dsColor} .dsSize=${dsSize} .active=${contents[0].active} .skin=${skin} .content=${contents[0]}></med-semana>
+            <med-semana .dsColor=${dsColor} .dsSize=${dsSize} .active=${contents[1].active} .skin=${skin} .content=${contents[1]}></med-semana>
+            <med-semana .dsColor=${dsColor} .dsSize=${dsSize} .active=${contents[2].active} .skin=${skin} .content=${contents[2]}></med-semana>
+            <med-semana .dsColor=${dsColor} .dsSize=${dsSize} .active=${contents[2].active} .skin=${skin} .content=${contents[2]}></med-semana>
+            <med-semana .dsColor=${dsColor} .dsSize=${dsSize} .active=${contents[2].active} .skin=${skin} .content=${contents[2]}></med-semana>
             <div class="col-right">
             </div>
           </ion-content>
@@ -450,4 +415,102 @@ AulasMain.argTypes = {
       defaultValue: { summary: 'undefined' },
     },
   },
+  dsSize: {
+    options: [undefined, 'sm'],
+    control: { type: 'radio'},
+    description: "Define a variação de tamanho componente.",
+    table: {
+      type:  { summary: 'sm' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  contents:{
+    defaultValue:[
+      {
+        Title: "Semana",
+        Numero: "01",
+        DataInicio: "16/08",
+        DataFim: "24/08",
+        active:true,
+        Itens: [
+          {
+            Nome: "nef 1",
+            PercentLido: 75,
+            Downloaded: false,
+            DownloadProgress: 0,
+            Time: "2h30m",
+            Descricao: "Lorem Ipslum at lanium",
+          },
+          {
+            Nome: "nef 2",
+            PercentLido: 100,
+            Downloaded: true,
+            DownloadProgress: 0,
+            Time: "2h30m",
+            Descricao: "Lorem Ipslum at lanium",
+          },
+          {
+            Nome: "nef 3",
+            PercentLido: 0,
+            Downloaded: false,
+            DownloadProgress: 20,
+            Time: "2h30m",
+            Descricao: "Lorem Ipslum at lanium",
+          },
+        ],
+      },
+      {
+        Title: "Semana",
+        Numero: "02",
+        DataInicio: "24/08",
+        DataFim: "1/09",
+        active:true,
+        Itens: [
+          {
+            Nome: "nef 3",
+            PercentLido: 75,
+            Downloaded: false,
+            DownloadProgress: 0,
+            Time: "2h30m",
+            Descricao: "Lorem Ipslum at lanium",
+          },
+          {
+            Nome: "nef 4",
+            PercentLido: 100,
+            Downloaded: true,
+            DownloadProgress: 0,
+            Time: "2h30m",
+            Descricao: "Lorem Ipslum at lanium",
+          },
+        ],
+      },
+      {
+        Title: "Semana",
+        Numero: "03",
+        DataInicio: "01/09",
+        DataFim: "17/09",
+        active:false,
+        Itens: [
+          {
+            Nome: "CLM 1",
+            PercentLido: 0,
+            Downloaded: false,
+            DownloadProgress: 0,
+            Time: "2h30m",
+            Descricao: "Lorem Ipslum at lanium",
+          },
+          {
+            Nome: "nef 6",
+            PercentLido: 0,
+            Downloaded: false,
+            DownloadProgress: 0,
+            Time: "2h30m",
+            Descricao: "Lorem Ipslum at lanium",
+          },
+        ],
+      },
+    ],
+  control: { type: 'object' },
+  description: 'Define o conteúdo do componente.',
+  }
 };

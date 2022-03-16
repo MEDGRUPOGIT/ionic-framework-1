@@ -44,6 +44,11 @@ export class MedDownloadButton {
    @Prop({ reflect: true }) identification?: string|number|undefined;
 
   /**
+   * Define o estado habilitado ou desabilitado do componente.
+   */
+   @Prop({ reflect: true }) disabled = false;
+
+  /**
     * Emitido quando download está concluído.
     */
   @Event() medDownloaded!: EventEmitter;

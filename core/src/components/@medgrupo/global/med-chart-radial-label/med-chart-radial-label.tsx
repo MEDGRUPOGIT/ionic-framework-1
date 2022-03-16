@@ -1,7 +1,7 @@
 import { Component, Host, h, Prop } from '@stencil/core';
 import { MedColor } from '../../../../interface';
 import { generateMedColor } from '../../../../utils/med-theme';
-import { MedChartRadiaItem } from '../med-chart-radial/med-chart-radial-interface';
+import { MedChartRadiaItem } from '../../core/med-chart-radial/med-chart-radial-interface';
 
 @Component({
   tag: 'med-chart-radial-label',

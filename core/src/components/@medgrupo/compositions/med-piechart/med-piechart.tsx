@@ -59,6 +59,11 @@ export class MedPiechart {
   @Prop({ reflect: true }) hideDownload = false;
 
   /**
+   * Define o estado habilitado ou desabilitado do componente.
+   */
+   @Prop({ reflect: true }) disabled = false;
+
+  /**
     * Define o estado do componente programaticamente.
     */
   @Method()
@@ -73,14 +78,14 @@ export class MedPiechart {
   }
 
   render() {
-    const { dsColor, dsSize, download, downloaded, label, value, downloadProgress, identification, index, hideDownload } = this;
+    const { dsColor, dsSize, download, downloaded, label, value, downloadProgress, identification, index, hideDownload,disabled } = this;
 
     return (
       <Host class={generateMedColor(dsColor, {
         'med-piechart': true,
         'med-piechart--download': download,
         'med-piechart--downloaded': downloaded,
-        [`med-avatar--${dsSize}`]: dsSize !== undefined,
+        [`med-piechart--${dsSize}`]: dsSize !== undefined,
         })}>
          <div class="med-piechart__container">
           <div class="med-piechart__side med-piechart__side--front">
@@ -100,6 +105,7 @@ export class MedPiechart {
               index={index}
               value={downloadProgress}
               downloaded={downloaded}
+              disabled={disabled}
               identification={identification}>
               </med-download-button>
             }

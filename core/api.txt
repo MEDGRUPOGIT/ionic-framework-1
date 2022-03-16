@@ -1575,8 +1575,9 @@ med-chart-categoria,prop,value,number,0,false,true
 
 med-chart-radial,scoped
 med-chart-radial,prop,dsColor,string | undefined,undefined,false,true
-med-chart-radial,prop,dsName,string | undefined,undefined,false,false
-med-chart-radial,prop,dsSize,"lg" | undefined,undefined,false,false
+med-chart-radial,prop,dsSize,"lg" | "md" | "sm" | "xs" | undefined,undefined,false,false
+med-chart-radial,prop,subtitulo,string | undefined,undefined,false,false
+med-chart-radial,prop,titulo,string | undefined,undefined,false,false
 med-chart-radial,prop,valores,MedChartRadiaItem[],[],false,false
 
 med-chart-radial-content,shadow
@@ -1624,6 +1625,7 @@ med-divider,prop,text,string,undefined,true,false
 med-divider,css-prop,--color
 
 med-download-button,shadow
+med-download-button,prop,disabled,boolean,false,false,true
 med-download-button,prop,downloaded,boolean,false,false,true
 med-download-button,prop,downloading,boolean,false,false,true
 med-download-button,prop,dsColor,string | undefined,undefined,false,true
@@ -1785,6 +1787,7 @@ med-parent,prop,dsColor,string | undefined,undefined,false,true
 med-parent,prop,fill,"outline" | undefined,undefined,false,true
 
 med-piechart,shadow
+med-piechart,prop,disabled,boolean,false,false,true
 med-piechart,prop,download,boolean,false,false,true
 med-piechart,prop,downloadProgress,number,0,false,true
 med-piechart,prop,downloaded,boolean,false,false,true
@@ -1844,6 +1847,7 @@ med-rating,css-prop,--color-icon
 med-semana,scoped
 med-semana,prop,active,boolean,false,false,true
 med-semana,prop,content,MedSemanaInterface,undefined,true,false
+med-semana,prop,disabled,boolean,false,false,true
 med-semana,prop,dsColor,string | undefined,undefined,false,true
 med-semana,prop,dsSize,"sm" | undefined,undefined,false,false
 med-semana,prop,skin,"lista" | undefined,undefined,false,true
@@ -1917,7 +1921,7 @@ med-vote,prop,like,number,0,false,false
 med-vote,prop,titulo,string | undefined,'Cabe recurso?',false,false
 med-vote,prop,unlike,number,0,false,false
 
-monta-provas-plusminus,shadow
+monta-provas-plusminus,scoped
 monta-provas-plusminus,prop,disabled,"both" | "minus" | "plus" | undefined,undefined,false,true
 monta-provas-plusminus,prop,dsColor,string | undefined,undefined,false,true
 monta-provas-plusminus,prop,dsSize,"xl" | undefined,undefined,false,true
