@@ -1,0 +1,216 @@
+:host {
+  --background: transparent;
+  --text-color: #{color('brand', '3')};
+  --stroke-color: #{color('neutral', '1')};
+  --border-color: #{color('brand', '3')};
+  --ripple-color: transparent;
+  --background-image: #{color('brand', '3')};
+  --padding: 8px 12px;
+  --height: 28px;
+}
+
+:host {
+  padding: var(--padding);
+  background: var(--background);
+  border-radius: 50px;
+  border-color: var(--border-color);
+  border-width: 1px;
+  border-style: solid;
+  height: var(--height);
+  transition: 300ms all ease;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.med-chip {
+  &__img-warp {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--background-image);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    font-size: 16px;
+    stroke: var(--stroke-color);
+  }
+
+  &__label {
+    --font-size: 12px;
+    --font-weight: 600;
+    --line-height: 12px;
+    --color: var(--text-color);
+  }
+}
+
+//////////////////////////////
+// icons
+//////////////////////////////
+
+:host(.med-chip--icon-left) {
+  --padding: 4px 12px 4px 4px;
+
+  .med-chip__img-warp {
+    margin-right: 8px;
+  }
+}
+
+:host(.med-chip--icon-right) {
+  --padding: 4px 4px 4px 12px;
+
+  .med-chip__img-warp {
+    margin-left: 8px;
+  }
+}
+
+//////////////////////////////
+// dsName
+//////////////////////////////
+
+:host(.med-chip--secondary) {
+  --stroke-color: #{color('neutral', '2')};
+}
+
+//////////////////////////////
+// states
+//////////////////////////////
+
+@media (any-hover: hover) {
+  :host(:hover) {
+    --background: #{color('brand', '3')};
+    --background-image: #{color('brand', '3', 'contrast')};
+    --text-color: #{color('brand', '3', 'contrast')};
+    --stroke-color: #{color('brand', '3')};
+  }
+}
+
+:host(.med-chip--active) {
+  --background: #{color('brand', '3')};
+  --background-image: #{color('brand', '3', 'contrast')};
+  --text-color: #{color('brand', '3', 'contrast')};
+  --stroke-color: #{color('brand', '3')};
+}
+
+:host(.med-chip--disabled) {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+//////////////////////////////
+// dsSize
+//////////////////////////////
+
+:host(.med-chip--md) {
+  --height: 32px;
+
+  .med-chip {
+    &__label {
+      --font-size: 16px;
+      --line-height: 16px;
+    }
+
+    &__img-warp {
+      width: 24px;
+      height: 24px;
+    }
+
+    &__icon {
+      font-size: 20px;
+    }
+  }
+}
+
+//////////////////////////////
+// dsColor
+//////////////////////////////
+
+////////////////////
+// color
+////////////////////
+
+:host(.med-color)  {
+  --border-color: #{curr-color('color', '3')};
+  --text-color: #{curr-color('color', '3')};
+  --background-image: #{curr-color('color', '3')};
+  --stroke-color: #{color('neutral', '1')};
+}
+
+@media (any-hover: hover) {
+  :host(.med-color:hover) {
+    --background: #{curr-color('color', '3')};
+    --border-color: #{curr-color('color', '3')};
+    --text-color: #{curr-color('color', '3', 'contrast')};
+    --background-image: #{curr-color('color', '3', 'contrast')};
+    --stroke-color: #{curr-color('color', '3')};
+  }
+}
+
+:host(.med-color.med-chip--active) {
+  --background: #{curr-color('color', '3')};
+  --border-color: #{curr-color('color', '3')};
+  --text-color: #{curr-color('color', '3', 'contrast')};
+  --background-image: #{curr-color('color', '3', 'contrast')};
+  --stroke-color: #{curr-color('color', '3')};
+}
+
+////////////////////
+// neutral
+////////////////////
+
+:host(.med-color-neutral)  {
+  --border-color: #{curr-color('neutral')};
+  --text-color: #{curr-color('neutral')};
+  --background-image: #{curr-color('neutral')};
+  --stroke-color: #{color('neutral', '1')};
+}
+
+@media (any-hover: hover) {
+  :host(.med-color-neutral:hover) {
+    --background: #{curr-color('neutral')};
+    --border-color: #{curr-color('neutral')};
+    --text-color: #{curr-color('neutral', null, 'contrast')};
+    --background-image: #{curr-color('neutral', null, 'contrast')};
+    --stroke-color: #{curr-color('neutral')};
+  }
+}
+
+:host(.med-color-neutral.med-chip--active) {
+  --background: #{curr-color('neutral')};
+  --border-color: #{curr-color('neutral')};
+  --text-color: #{curr-color('neutral', null, 'contrast')};
+  --background-image: #{curr-color('neutral', null, 'contrast')};
+  --stroke-color: #{curr-color('neutral')};
+}
+
+////////////////////
+// feedback
+////////////////////
+
+:host(.med-color-feedback)  {
+  --border-color: #{curr-color('feedback')};
+  --text-color: #{curr-color('feedback')};
+  --background-image: #{curr-color('feedback')};
+  --stroke-color: #{color('neutral', '1')};
+}
+
+@media (any-hover: hover) {
+  :host(.med-color-feedback:hover) {
+    --background: #{curr-color('feedback')};
+    --border-color: #{curr-color('feedback')};
+    --text-color: #{curr-color('feedback', null, 'contrast')};
+    --background-image: #{curr-color('feedback', null, 'contrast')};
+    --stroke-color: #{curr-color('feedback')};
+  }
+}
+
+:host(.med-color-feedback.med-chip--active) {
+  --background: #{curr-color('feedback')};
+  --border-color: #{curr-color('feedback')};
+  --text-color: #{curr-color('feedback', null, 'contrast')};
+  --background-image: #{curr-color('feedback', null, 'contrast')};
+  --stroke-color: #{curr-color('feedback')};
+}

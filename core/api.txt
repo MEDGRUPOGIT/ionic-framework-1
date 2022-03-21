@@ -264,8 +264,6 @@ ion-checkbox,part,mark
 ion-chip,shadow
 ion-chip,prop,color,string | undefined,undefined,false,false
 ion-chip,prop,disabled,boolean,false,false,false
-ion-chip,prop,dsColor,string | undefined,undefined,false,true
-ion-chip,prop,dsName,"secondary" | undefined,undefined,false,false
 ion-chip,prop,mode,"ios" | "md",undefined,false,false
 ion-chip,prop,outline,boolean,false,false,false
 ion-chip,css-prop,--background
@@ -484,8 +482,9 @@ ion-input,prop,clearOnEdit,boolean | undefined,undefined,false,false
 ion-input,prop,color,string | undefined,undefined,false,false
 ion-input,prop,debounce,number,0,false,false
 ion-input,prop,disabled,boolean,false,false,false
+ion-input,prop,dsName,"secondary" | undefined,undefined,false,true
 ion-input,prop,enterkeyhint,"done" | "enter" | "go" | "next" | "previous" | "search" | "send" | undefined,undefined,false,false
-ion-input,prop,icon,string | undefined,undefined,false,true
+ion-input,prop,icon,string | undefined,undefined,false,false
 ion-input,prop,inputmode,"decimal" | "email" | "none" | "numeric" | "search" | "tel" | "text" | "url" | undefined,undefined,false,false
 ion-input,prop,max,string | undefined,undefined,false,false
 ion-input,prop,maxlength,number | undefined,undefined,false,false
@@ -1016,11 +1015,11 @@ ion-searchbar,prop,clearIcon,string | undefined,undefined,false,false
 ion-searchbar,prop,color,string | undefined,undefined,false,false
 ion-searchbar,prop,debounce,number,250,false,false
 ion-searchbar,prop,disabled,boolean,false,false,false
-ion-searchbar,prop,dsColor,string | undefined,undefined,false,true
+ion-searchbar,prop,dsName,"secondary" | undefined,undefined,false,true
 ion-searchbar,prop,enterkeyhint,"done" | "enter" | "go" | "next" | "previous" | "search" | "send" | undefined,undefined,false,false
 ion-searchbar,prop,inputmode,"decimal" | "email" | "none" | "numeric" | "search" | "tel" | "text" | "url" | undefined,undefined,false,false
 ion-searchbar,prop,mode,"ios" | "md",undefined,false,false
-ion-searchbar,prop,placeholder,string,'Pesquisar',false,false
+ion-searchbar,prop,placeholder,string,'Search',false,false
 ion-searchbar,prop,searchIcon,string | undefined,undefined,false,false
 ion-searchbar,prop,showCancelButton,"always" | "focus" | "never",'never',false,false
 ion-searchbar,prop,showClearButton,"always" | "focus" | "never",'focus',false,false
@@ -1103,7 +1102,8 @@ ion-select,shadow
 ion-select,prop,cancelText,string,'Cancel',false,false
 ion-select,prop,compareWith,((currentValue: any, compareValue: any) => boolean) | null | string | undefined,undefined,false,false
 ion-select,prop,disabled,boolean,false,false,false
-ion-select,prop,dsColor,string | undefined,undefined,false,true
+ion-select,prop,dsName,"secondary" | undefined,undefined,false,true
+ion-select,prop,icon,string | undefined,'med-baixo',false,false
 ion-select,prop,interface,"action-sheet" | "alert" | "popover",'alert',false,false
 ion-select,prop,interfaceOptions,any,{},false,false
 ion-select,prop,mode,"ios" | "md",undefined,false,false
@@ -1607,6 +1607,16 @@ med-check-card,event,medTooltipClose,any,true
 med-child,shadow
 med-child,prop,dsColor,string | undefined,undefined,false,false
 med-child,prop,fill,"outline" | undefined,undefined,false,true
+
+med-chip,scoped
+med-chip,prop,active,boolean,false,false,true
+med-chip,prop,disabled,boolean,false,false,true
+med-chip,prop,dsColor,string | undefined,undefined,false,true
+med-chip,prop,dsName,"secondary" | undefined,undefined,false,true
+med-chip,prop,dsSize,"md" | undefined,undefined,false,true
+med-chip,prop,iconLeft,string,undefined,true,true
+med-chip,prop,iconRight,string,undefined,true,true
+med-chip,prop,label,string,undefined,true,true
 
 med-config,scoped
 med-config,prop,emitter,{ scheme: (value: string) => void; theme: (value: string) => void; },undefined,true,false

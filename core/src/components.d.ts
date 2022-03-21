@@ -486,14 +486,6 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
-          * Define a cor do componente.
-         */
-        "dsColor"?: MedColor;
-        /**
-          * Define a variação do componente.
-         */
-        "dsName"?: 'secondary';
-        /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
@@ -978,6 +970,10 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
+          * Define o icone do componente.
+         */
+        "dsName"?: 'secondary';
+        /**
           * A hint to the browser for which enter key to display. Possible values: `"enter"`, `"done"`, `"go"`, `"next"`, `"previous"`, `"search"`, and `"send"`.
          */
         "enterkeyhint"?: 'enter' | 'done' | 'go' | 'next' | 'previous' | 'search' | 'send';
@@ -989,6 +985,9 @@ export namespace Components {
           * Returns the native `<input>` element used under the hood.
          */
         "getInputElement": () => Promise<HTMLInputElement>;
+        /**
+          * Define o icone do componente.
+         */
         "icon"?: string;
         /**
           * A hint to the browser for which keyboard to display. Possible values: `"none"`, `"text"`, `"tel"`, `"url"`, `"email"`, `"numeric"`, `"decimal"`, and `"search"`.
@@ -2140,9 +2139,9 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
-          * Define a cor do componente.
+          * Define o icone do componente.
          */
-        "dsColor"?: MedColor;
+        "dsName"?: 'secondary';
         /**
           * A hint to the browser for which enter key to display. Possible values: `"enter"`, `"done"`, `"go"`, `"next"`, `"previous"`, `"search"`, and `"send"`.
          */
@@ -2270,9 +2269,13 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
-          * Define a cor do componente.
+          * Define o icone do componente.
          */
-        "dsColor"?: MedColor;
+        "dsName"?: 'secondary';
+        /**
+          * Define o icone do componente.
+         */
+        "icon"?: string | undefined;
         /**
           * The interface the select should use: `action-sheet`, `popover` or `alert`.
          */
@@ -3416,6 +3419,40 @@ export namespace Components {
           * Define o fill do componente.
          */
         "fill"?: 'outline';
+    }
+    interface MedChip {
+        /**
+          * Define o estado active do componente.
+         */
+        "active": boolean;
+        /**
+          * Define o estado disabled do componente.
+         */
+        "disabled": boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'secondary';
+        /**
+          * Define a variação de tamanho componente.
+         */
+        "dsSize"?: 'md';
+        /**
+          * Define o icone left do componente.
+         */
+        "iconLeft": string;
+        /**
+          * Define o icone right do componente.
+         */
+        "iconRight": string;
+        /**
+          * Define o texto do componente.
+         */
+        "label": string;
     }
     interface MedConfig {
         /**
@@ -4898,6 +4935,12 @@ declare global {
         prototype: HTMLMedChildElement;
         new (): HTMLMedChildElement;
     };
+    interface HTMLMedChipElement extends Components.MedChip, HTMLStencilElement {
+    }
+    var HTMLMedChipElement: {
+        prototype: HTMLMedChipElement;
+        new (): HTMLMedChipElement;
+    };
     interface HTMLMedConfigElement extends Components.MedConfig, HTMLStencilElement {
     }
     var HTMLMedConfigElement: {
@@ -5321,6 +5364,7 @@ declare global {
         "med-chart-radial-label": HTMLMedChartRadialLabelElement;
         "med-check-card": HTMLMedCheckCardElement;
         "med-child": HTMLMedChildElement;
+        "med-chip": HTMLMedChipElement;
         "med-config": HTMLMedConfigElement;
         "med-context-menu": HTMLMedContextMenuElement;
         "med-divider": HTMLMedDividerElement;
@@ -5869,14 +5913,6 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
-          * Define a cor do componente.
-         */
-        "dsColor"?: MedColor;
-        /**
-          * Define a variação do componente.
-         */
-        "dsName"?: 'secondary';
-        /**
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
@@ -6377,6 +6413,10 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
+          * Define o icone do componente.
+         */
+        "dsName"?: 'secondary';
+        /**
           * A hint to the browser for which enter key to display. Possible values: `"enter"`, `"done"`, `"go"`, `"next"`, `"previous"`, `"search"`, and `"send"`.
          */
         "enterkeyhint"?: 'enter' | 'done' | 'go' | 'next' | 'previous' | 'search' | 'send';
@@ -6384,6 +6424,9 @@ declare namespace LocalJSX {
           * This is required for a WebKit bug which requires us to blur and focus an input to properly focus the input in an item with delegatesFocus. It will no longer be needed with iOS 14.
          */
         "fireFocusEvents"?: boolean;
+        /**
+          * Define o icone do componente.
+         */
         "icon"?: string;
         /**
           * A hint to the browser for which keyboard to display. Possible values: `"none"`, `"text"`, `"tel"`, `"url"`, `"email"`, `"numeric"`, `"decimal"`, and `"search"`.
@@ -7474,9 +7517,9 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
-          * Define a cor do componente.
+          * Define o icone do componente.
          */
-        "dsColor"?: MedColor;
+        "dsName"?: 'secondary';
         /**
           * A hint to the browser for which enter key to display. Possible values: `"enter"`, `"done"`, `"go"`, `"next"`, `"previous"`, `"search"`, and `"send"`.
          */
@@ -7636,9 +7679,13 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
-          * Define a cor do componente.
+          * Define o icone do componente.
          */
-        "dsColor"?: MedColor;
+        "dsName"?: 'secondary';
+        /**
+          * Define o icone do componente.
+         */
+        "icon"?: string | undefined;
         /**
           * The interface the select should use: `action-sheet`, `popover` or `alert`.
          */
@@ -8856,6 +8903,40 @@ declare namespace LocalJSX {
          */
         "fill"?: 'outline';
     }
+    interface MedChip {
+        /**
+          * Define o estado active do componente.
+         */
+        "active"?: boolean;
+        /**
+          * Define o estado disabled do componente.
+         */
+        "disabled"?: boolean;
+        /**
+          * Define a cor do componente.
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Define a variação do componente.
+         */
+        "dsName"?: 'secondary';
+        /**
+          * Define a variação de tamanho componente.
+         */
+        "dsSize"?: 'md';
+        /**
+          * Define o icone left do componente.
+         */
+        "iconLeft": string;
+        /**
+          * Define o icone right do componente.
+         */
+        "iconRight": string;
+        /**
+          * Define o texto do componente.
+         */
+        "label": string;
+    }
     interface MedConfig {
         /**
           * TODO
@@ -9785,6 +9866,7 @@ declare namespace LocalJSX {
         "med-chart-radial-label": MedChartRadialLabel;
         "med-check-card": MedCheckCard;
         "med-child": MedChild;
+        "med-chip": MedChip;
         "med-config": MedConfig;
         "med-context-menu": MedContextMenu;
         "med-divider": MedDivider;
@@ -9958,6 +10040,7 @@ declare module "@stencil/core" {
             "med-chart-radial-label": LocalJSX.MedChartRadialLabel & JSXBase.HTMLAttributes<HTMLMedChartRadialLabelElement>;
             "med-check-card": LocalJSX.MedCheckCard & JSXBase.HTMLAttributes<HTMLMedCheckCardElement>;
             "med-child": LocalJSX.MedChild & JSXBase.HTMLAttributes<HTMLMedChildElement>;
+            "med-chip": LocalJSX.MedChip & JSXBase.HTMLAttributes<HTMLMedChipElement>;
             "med-config": LocalJSX.MedConfig & JSXBase.HTMLAttributes<HTMLMedConfigElement>;
             "med-context-menu": LocalJSX.MedContextMenu & JSXBase.HTMLAttributes<HTMLMedContextMenuElement>;
             "med-divider": LocalJSX.MedDivider & JSXBase.HTMLAttributes<HTMLMedDividerElement>;

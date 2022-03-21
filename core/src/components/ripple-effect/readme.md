@@ -214,6 +214,7 @@ Type: `Promise<() => void>`
  - [ion-back-button](../back-button)
  - [ion-button](../button)
  - [ion-card](../card)
+ - [ion-chip](../chip)
  - [ion-fab-button](../fab-button)
  - [ion-item](../item)
  - [ion-item-option](../item-option)
@@ -229,6 +230,7 @@ graph TD;
   ion-back-button --> ion-ripple-effect
   ion-button --> ion-ripple-effect
   ion-card --> ion-ripple-effect
+  ion-chip --> ion-ripple-effect
   ion-fab-button --> ion-ripple-effect
   ion-item --> ion-ripple-effect
   ion-item-option --> ion-ripple-effect

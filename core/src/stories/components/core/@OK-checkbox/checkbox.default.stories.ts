@@ -15,7 +15,7 @@ const Template = ({ dsColor, indeterminate, disabled }) => {
 
           <!-- component markdown -->
           <ion-checkbox .dsColor=${dsColor} .indeterminate=${indeterminate} .disabled=${disabled}></ion-checkbox>
-          <!-- component -->
+          <!-- component markdown -->
 
         </div>
       </ion-content>
