@@ -11,7 +11,7 @@ const Template = ({ dsColor, dsSize, fill, slot }) => {
   return html`
     <ion-app>
       <ion-content>
-        <<div class="full-height-flex">
+        <div class="full-height-flex">
 
          <!-- component markdown -->
           <ion-badge .dsColor=${dsColor} ds-size=${dsSize} fill=${fill}>${slot}</ion-badge>

@@ -2,9 +2,9 @@ import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Meth
 
 import { config } from '../../global/config';
 import { getIonMode } from '../../global/ionic-global';
-import { AutocompleteTypes, MedColor, Color, SearchbarChangeEventDetail, StyleEventDetail } from '../../interface';
+import { AutocompleteTypes, Color, SearchbarChangeEventDetail, StyleEventDetail } from '../../interface';
 import { debounceEvent, raf } from '../../utils/helpers';
-import { generateMedColor } from '../../utils/med-theme';
+import { createColorClasses } from '../../utils/theme';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
@@ -13,16 +13,11 @@ import { generateMedColor } from '../../utils/med-theme';
   tag: 'ion-searchbar',
   styleUrls: {
     ios: 'searchbar.ios.scss',
-    md: 'searchbar.ios.scss'
+    md: 'searchbar.md.scss'
   },
   scoped: true
 })
 export class Searchbar implements ComponentInterface {
-
-  /**
-    * Define a cor do componente.
-    */
-   @Prop({ reflect: true }) dsColor?: MedColor;
 
   private nativeInput?: HTMLInputElement;
   private isCancelVisible = false;
@@ -32,6 +27,11 @@ export class Searchbar implements ComponentInterface {
 
   @State() focused = false;
   @State() noAnimate = true;
+
+  /**
+    * Define o icone do componente.
+    */
+   @Prop({ reflect: true }) dsName?: 'secondary';
 
   /**
    * The color to use from your application's color palette.
@@ -109,7 +109,7 @@ export class Searchbar implements ComponentInterface {
    *
    * For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
    */
-  @Prop() placeholder = 'Pesquisar';
+  @Prop() placeholder = 'Search';
 
   /**
    * The icon to use as the search icon. Defaults to `"search-outline"` in
@@ -459,11 +459,11 @@ export class Searchbar implements ComponentInterface {
   }
 
   render() {
-    const { cancelButtonText } = this;
+    const { cancelButtonText, dsName } = this;
     const animated = this.animated && config.getBoolean('animated', true);
     const mode = getIonMode(this);
-    const clearIcon = this.clearIcon || (mode === 'ios' ? 'close-circle' : 'close-sharp');
-    const searchIcon = this.searchIcon || (mode === 'ios' ? 'search-outline' : 'search-sharp');
+    const clearIcon = this.clearIcon || (mode === 'ios' ? 'med-fechar' : 'med-fechar');
+    const searchIcon = this.searchIcon || (mode === 'ios' ? 'med-busca' : 'search-sharp');
     const shouldShowCancelButton = this.shouldShowCancelButton();
 
     const cancelButton = (this.showCancelButton !== 'never') && (
@@ -480,20 +480,18 @@ export class Searchbar implements ComponentInterface {
       >
         <div aria-hidden="true">
           { mode === 'md'
-            ? <ion-icon class="med-icon" aria-hidden="true" mode={mode} icon={this.cancelButtonIcon} lazy={false}></ion-icon>
+            ? <ion-icon aria-hidden="true" class="med-icon" mode={mode} icon={this.cancelButtonIcon} lazy={false}></ion-icon>
             : cancelButtonText
           }
         </div>
       </button>
     );
 
-    const { dsColor } = this;
-
     return (
       <Host
         role="search"
         aria-disabled={this.disabled ? 'true' : null}
-        class={generateMedColor(dsColor, {
+        class={createColorClasses(this.color, {
           [mode]: true,
           'searchbar-animated': animated,
           'searchbar-disabled': this.disabled,
@@ -502,11 +500,14 @@ export class Searchbar implements ComponentInterface {
           'searchbar-left-aligned': this.shouldAlignLeft,
           'searchbar-has-focus': this.focused,
           'searchbar-should-show-clear': this.shouldShowClearButton(),
-          'searchbar-should-show-cancel': this.shouldShowCancelButton()
+          'searchbar-should-show-cancel': this.shouldShowCancelButton(),
+          [`med-searchbar--${dsName}`]: dsName !== undefined,
         })}
       >
 
         <div class="searchbar-input-container">
+          <ion-icon aria-hidden="true" class="med-icon" mode={mode} icon={searchIcon} lazy={false}></ion-icon>
+
           <input
             aria-label="search text"
             disabled={this.disabled}
@@ -527,10 +528,7 @@ export class Searchbar implements ComponentInterface {
 
           {mode === 'md' && cancelButton}
 
-          <ion-icon aria-hidden="true" mode={mode} icon={searchIcon} lazy={false} class="med-icon searchbar-search-icon"></ion-icon>
-
-          <ion-button
-            ds-name="tertiary"
+          <button
             aria-label="reset"
             type="button"
             no-blur
@@ -538,8 +536,8 @@ export class Searchbar implements ComponentInterface {
             onMouseDown={ev => this.onClearInput(ev, true)}
             onTouchStart={ev => this.onClearInput(ev, true)}
           >
-            <ion-icon slot="icon-only" name="med-fechar" aria-hidden="true" mode={mode} icon={clearIcon} lazy={false} class="med-icon searchbar-clear-icon"></ion-icon>
-          </ion-button>
+            <ion-icon aria-hidden="true" class="med-icon searchbar-clear-icon" mode={mode} icon={clearIcon} lazy={false}></ion-icon>
+          </button>
         </div>
         {mode === 'ios' && cancelButton}
       </Host>

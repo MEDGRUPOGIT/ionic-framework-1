@@ -302,14 +302,12 @@ export default defineComponent({
 
 ## Properties
 
-| Property   | Attribute  | Description                                                                                                                                                                                                                                                            | Type                       | Default     |
-| ---------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- | ----------- |
-| `color`    | `color`    | The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics). | `string \| undefined`      | `undefined` |
-| `disabled` | `disabled` | If `true`, the user cannot interact with the chip.                                                                                                                                                                                                                     | `boolean`                  | `false`     |
-| `dsColor`  | `ds-color` | Define a cor do componente.                                                                                                                                                                                                                                            | `string \| undefined`      | `undefined` |
-| `dsName`   | `ds-name`  | Define a variação do componente.                                                                                                                                                                                                                                       | `"secondary" \| undefined` | `undefined` |
-| `mode`     | `mode`     | The mode determines which platform styles to use.                                                                                                                                                                                                                      | `"ios" \| "md"`            | `undefined` |
-| `outline`  | `outline`  | Display an outline style button.                                                                                                                                                                                                                                       | `boolean`                  | `false`     |
+| Property   | Attribute  | Description                                                                                                                                                                                                                                                            | Type                  | Default     |
+| ---------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ----------- |
+| `color`    | `color`    | The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics). | `string \| undefined` | `undefined` |
+| `disabled` | `disabled` | If `true`, the user cannot interact with the chip.                                                                                                                                                                                                                     | `boolean`             | `false`     |
+| `mode`     | `mode`     | The mode determines which platform styles to use.                                                                                                                                                                                                                      | `"ios" \| "md"`       | `undefined` |
+| `outline`  | `outline`  | Display an outline style button.                                                                                                                                                                                                                                       | `boolean`             | `false`     |
 
 
 ## CSS Custom Properties
@@ -319,6 +317,19 @@ export default defineComponent({
 | `--background` | Background of the chip |
 | `--color`      | Color of the chip      |
 
+
+## Dependencies
+
+### Depends on
+
+- [ion-ripple-effect](../ripple-effect)
+
+### Graph
+```mermaid
+graph TD;
+  ion-chip --> ion-ripple-effect
+  style ion-chip fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

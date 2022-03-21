@@ -133,8 +133,6 @@ export const IonCheckbox = /*@__PURE__*/ defineContainer<JSX.IonCheckbox>('ion-c
 
 
 export const IonChip = /*@__PURE__*/ defineContainer<JSX.IonChip>('ion-chip', [
-  'dsColor',
-  'dsName',
   'color',
   'outline',
   'disabled'
@@ -303,6 +301,8 @@ export const IonInfiniteScrollContent = /*@__PURE__*/ defineContainer<JSX.IonInf
 
 export const IonInput = /*@__PURE__*/ defineContainer<JSX.IonInput>('ion-input', [
   'fireFocusEvents',
+  'dsName',
+  'icon',
   'color',
   'accept',
   'autocapitalize',
@@ -330,7 +330,6 @@ export const IonInput = /*@__PURE__*/ defineContainer<JSX.IonInput>('ion-input',
   'size',
   'type',
   'value',
-  'icon',
   'ionInput',
   'ionChange',
   'ionBlur',
@@ -591,7 +590,7 @@ export const IonRow = /*@__PURE__*/ defineContainer<JSX.IonRow>('ion-row');
 
 
 export const IonSearchbar = /*@__PURE__*/ defineContainer<JSX.IonSearchbar>('ion-searchbar', [
-  'dsColor',
+  'dsName',
   'color',
   'animated',
   'autocomplete',
@@ -669,7 +668,8 @@ export const IonSegmentButton = /*@__PURE__*/ defineContainer<JSX.IonSegmentButt
 
 
 export const IonSelect = /*@__PURE__*/ defineContainer<JSX.IonSelect>('ion-select', [
-  'dsColor',
+  'dsName',
+  'icon',
   'disabled',
   'cancelText',
   'okText',
@@ -1092,6 +1092,18 @@ export const MedCheckCard = /*@__PURE__*/ defineContainer<JSX.MedCheckCard>('med
 export const MedChild = /*@__PURE__*/ defineContainer<JSX.MedChild>('med-child', [
   'dsColor',
   'fill'
+]);
+
+
+export const MedChip = /*@__PURE__*/ defineContainer<JSX.MedChip>('med-chip', [
+  'dsColor',
+  'dsName',
+  'dsSize',
+  'label',
+  'disabled',
+  'active',
+  'iconLeft',
+  'iconRight'
 ]);
 
 

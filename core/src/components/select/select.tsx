@@ -9,9 +9,6 @@ import { watchForOptions } from '../../utils/watch-options';
 
 import { SelectCompareFn } from './select-interface';
 
-import { MedColor } from '../../interface';
-import { generateMedColor } from '../../utils/med-theme';
-
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
  *
@@ -22,7 +19,7 @@ import { generateMedColor } from '../../utils/med-theme';
 @Component({
   tag: 'ion-select',
   styleUrls: {
-    ios: 'select.md.scss',
+    ios: 'select.ios.scss',
     md: 'select.md.scss'
   },
   shadow: true
@@ -37,12 +34,17 @@ export class Select implements ComponentInterface {
 
   @Element() el!: HTMLIonSelectElement;
 
-  @State() isExpanded = false;
+  /**
+    * Define o icone do componente.
+    */
+  @Prop({ reflect: true }) dsName?: 'secondary';
 
   /**
-    * Define a cor do componente.
+    * Define o icone do componente.
     */
-   @Prop({ reflect: true }) dsColor?: MedColor;
+  @Prop() icon? = 'med-baixo';
+
+  @State() isExpanded = false;
 
   /**
    * If `true`, the user cannot interact with the select.
@@ -440,7 +442,7 @@ export class Select implements ComponentInterface {
   }
 
   render() {
-    const { disabled, el, inputId, isExpanded, name, placeholder, value, dsColor } = this;
+    const { disabled, el, inputId, isExpanded, name, placeholder, value, dsName, icon } = this;
     const mode = getIonMode(this);
     const { labelText, labelId } = getAriaLabel(el, inputId);
 
@@ -477,21 +479,18 @@ export class Select implements ComponentInterface {
         aria-haspopup="listbox"
         aria-disabled={disabled ? 'true' : null}
         aria-label={displayLabel}
-        class={generateMedColor(dsColor, {
+        class={{
           [mode]: true,
           'in-item': hostContext('ion-item', el),
           'select-disabled': disabled,
           'select-expanded': isExpanded,
-          'med-select': true
-        })}
+          [`med-select--${dsName}`]: dsName !== undefined,
+        }}
       >
         <div aria-hidden="true" class={selectTextClasses} part={textPart}>
           {selectText}
         </div>
-        {/* <div class="select-icon" role="presentation" part="icon">
-          <div class="select-icon-inner"></div>
-        </div> */}
-        <ion-icon class="med-icon med-select-icon" name="med-baixo"></ion-icon>
+        {icon && <ion-icon class="med-icon" name={icon}></ion-icon>}
         <label id={labelId}>
           {displayLabel}
         </label>

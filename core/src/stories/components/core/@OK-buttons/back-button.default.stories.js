@@ -1,7 +1,6 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
 import { MedColors } from "../../../../global/templarios/color.enum";
-import { MedIcons } from '../../../constants';
 
 export default {
   title: 'Components/Core/@OK Buttons',

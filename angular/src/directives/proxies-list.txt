@@ -102,6 +102,7 @@ export const DIRECTIVES = [
   d.MedChartRadialLabel,
   d.MedCheckCard,
   d.MedChild,
+  d.MedChip,
   d.MedConfig,
   d.MedContextMenu,
   d.MedDivider,

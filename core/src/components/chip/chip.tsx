@@ -1,8 +1,8 @@
 import { Component, ComponentInterface, Host, Prop, h } from '@stencil/core';
 
 import { getIonMode } from '../../global/ionic-global';
-import { Color, MedColor } from '../../interface';
-import { generateMedColor } from '../../utils/med-theme';
+import { Color } from '../../interface';
+import { createColorClasses } from '../../utils/theme';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
@@ -10,23 +10,12 @@ import { generateMedColor } from '../../utils/med-theme';
 @Component({
   tag: 'ion-chip',
   styleUrls: {
-    ios: 'chip.md.scss',
+    ios: 'chip.ios.scss',
     md: 'chip.md.scss'
   },
   shadow: true
 })
 export class Chip implements ComponentInterface {
-
-  /**
-    * Define a cor do componente.
-    */
-   @Prop({ reflect: true }) dsColor?: MedColor;
-
-   /**
-    * Define a variação do componente.
-    */
-   @Prop() dsName?: 'secondary';
-
   /**
    * The color to use from your application's color palette.
    * Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`.
@@ -45,23 +34,20 @@ export class Chip implements ComponentInterface {
   @Prop() disabled = false;
 
   render() {
-    const { dsColor, dsName } = this;
     const mode = getIonMode(this);
 
     return (
       <Host
         aria-disabled={this.disabled ? 'true' : null}
-        class={generateMedColor(dsColor, {
+        class={createColorClasses(this.color, {
           [mode]: true,
           'chip-outline': this.outline,
           'chip-disabled': this.disabled,
-          'ion-activatable': false,
-          'med-chip': true,
-          [`med-chip--${dsName}`]: dsName !== undefined,
+          'ion-activatable': true,
         })}
       >
         <slot></slot>
-        {/* {mode === 'md' && <ion-ripple-effect></ion-ripple-effect>} */}
+        {mode === 'md' && <ion-ripple-effect></ion-ripple-effect>}
       </Host>
     );
   }

@@ -28,6 +28,7 @@
  - [med-chart-categoria](../../compositions/med-chart-categoria)
  - [med-chart-radial](../med-chart-radial)
  - [med-check-card](../../compositions/med-check-card)
+ - [med-chip](../med-chip)
  - [med-nav](../med-nav)
  - [med-nav-accordion](../med-nav-accordion)
  - [med-nav-item](../med-nav-item)
@@ -49,6 +50,7 @@ graph TD;
   med-chart-categoria --> med-type
   med-chart-radial --> med-type
   med-check-card --> med-type
+  med-chip --> med-type
   med-nav --> med-type
   med-nav-accordion --> med-type
   med-nav-item --> med-type

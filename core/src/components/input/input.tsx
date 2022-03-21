@@ -11,7 +11,7 @@ import { createColorClasses } from '../../utils/theme';
 @Component({
   tag: 'ion-input',
   styleUrls: {
-    ios: 'input.md.scss',
+    ios: 'input.ios.scss',
     md: 'input.md.scss'
   },
   scoped: true
@@ -36,6 +36,16 @@ export class Input implements ComponentInterface {
   @State() hasFocus = false;
 
   @Element() el!: HTMLElement;
+
+  /**
+    * Define o icone do componente.
+    */
+  @Prop({ reflect: true }) dsName?: 'secondary';
+
+  /**
+   * Define o icone do componente.
+   */
+  @Prop() icon?: string;
 
   /**
    * The color to use from your application's color palette.
@@ -189,8 +199,6 @@ export class Input implements ComponentInterface {
    * The value of the input.
    */
   @Prop({ mutable: true }) value?: string | number | null = '';
-
-  @Prop({ reflect: true }) icon?: string;
 
   /**
    * Emitted when a keyboard input occurred.
@@ -390,6 +398,7 @@ export class Input implements ComponentInterface {
   }
 
   render() {
+    const { dsName, icon } = this;
     const mode = getIonMode(this);
     const value = this.getValue();
     const labelId = this.inputId + '-lbl';
@@ -404,7 +413,8 @@ export class Input implements ComponentInterface {
         class={createColorClasses(this.color, {
           [mode]: true,
           'has-value': this.hasValue(),
-          'has-focus': this.hasFocus
+          'has-focus': this.hasFocus,
+          [`med-input--${dsName}`]: dsName !== undefined,
         })}
       >
         <input
@@ -440,18 +450,18 @@ export class Input implements ComponentInterface {
           onKeyDown={this.onKeydown}
           {...this.inheritedAttributes}
         />
-        {(this.clearInput && !this.readonly && !this.disabled) && <button
-          aria-label="reset"
-          type="button"
-          class="input-clear-icon"
-          onTouchStart={this.clearTextInput}
-          onMouseDown={this.clearTextInput}
-          onKeyDown={this.clearTextOnEnter}
-        />}
-        {this.icon && <ion-icon class="med-icon" name={this.icon}></ion-icon>}
+        {(this.clearInput && !this.readonly && !this.disabled) &&
+          <ion-icon class="med-icon med-input-reset" name="med-fechar"
+            aria-label="reset"
+            onTouchStart={this.clearTextInput}
+            onMouseDown={this.clearTextInput}
+            onKeyDown={this.clearTextOnEnter}></ion-icon>
+        }
+        {icon && <ion-icon class="med-icon" name={icon}></ion-icon>}
       </Host>
     );
   }
 }
 
 let inputIds = 0;
+
