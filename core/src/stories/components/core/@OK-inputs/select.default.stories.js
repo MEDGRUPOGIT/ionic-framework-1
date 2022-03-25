@@ -9,19 +9,11 @@ export default {
 
 const Template = ({ placeholder, dsName, disabled, icon }) => {
   return html`
-    <style>
-      /* !NÃO UTILIZAR! Apenas para estória */
-        div {
-          padding: 15px;
-        }
-      /* !NÃO UTILIZAR! Apenas para estória */
-    </style>
-
     <ion-app>
       <ion-content>
+        <div class="ion-padding">
 
-        <!-- component markdown -->
-        <div>
+          <!-- component markdown -->
           <ion-select
             .dsName=${dsName}
             placeholder=${placeholder}
@@ -34,9 +26,9 @@ const Template = ({ placeholder, dsName, disabled, icon }) => {
             <ion-select-option value="black">Black</ion-select-option>
             <ion-select-option value="red">Red</ion-select-option>
           </ion-select>
-        </div>
-        <!-- component markdown -->
+          <!-- component markdown -->
 
+        </div>
       </ion-content>
     </ion-app>
   `

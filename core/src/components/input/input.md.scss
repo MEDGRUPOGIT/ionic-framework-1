@@ -56,6 +56,8 @@
   --placeholder-opacity: 1;
   --height: 40px;
   --border-radius: 8px;
+  --border-color: transparent;
+  --icon-stroke: #{color('neutral', '6')};
 }
 
 :host {
@@ -64,6 +66,7 @@
   line-height: var(--line-height);
   height: var(--height);
   border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
 
   &::placeholder {
     font-size: var(--placeholder-font-size);
@@ -72,7 +75,7 @@
   }
 
   .med-icon {
-    stroke: color('neutral', '6');
+    stroke: var(--icon-stroke);
     padding-right: 8px;
   }
 
@@ -85,6 +88,48 @@
   }
 }
 
+//////////////////////////////
+// dsName
+//////////////////////////////
+
 :host(.med-input--secondary) {
   --background: #{color('neutral', '3')};
+  --placeholder-color: #{color('neutral', '6')};
 }
+
+//////////////////////////////
+// state
+//////////////////////////////
+
+:host(.med-input--valid) {
+  --placeholder-color: #{color('feedback', 'success')};
+  --color: #{color('feedback', 'success')};
+  --icon-stroke: #{color('feedback', 'success')};
+}
+
+:host(.med-input--invalid) {
+  --placeholder-color: #{color('feedback', 'warning')};
+  --color: #{color('feedback', 'warning')};
+  --icon-stroke: #{color('feedback', 'warning')};
+}
+
+////////////////////
+// focus
+////////////////////
+
+:host(.has-focus) {
+  --border-color: #{color('neutral', '3')};
+}
+
+:host(.has-focus.med-input--secondary) {
+  --border-color: #{color('neutral', '4')};
+}
+
+:host(.has-focus.med-input--valid) {
+  --border-color: #{color('feedback', 'success')};
+}
+
+:host(.has-focus.med-input--invalid) {
+  --border-color: #{color('feedback', 'warning')};
+}
+

@@ -191,6 +191,13 @@
   opacity: $searchbar-ios-input-icon-opacity;
 }
 
+
+
+
+
+
+
+
 :host {
   --background: #{color('neutral', '2')};
   --color: #{color('neutral', '10')};
@@ -225,6 +232,12 @@
     align-items: center !important;
   }
 
+  .searchbar-clear-button {
+    height: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   .searchbar-input {
     padding: 0 0 0 8px !important;
     font-size: var(--font-size) !important;
@@ -241,4 +254,11 @@
 
 :host(.med-searchbar--secondary) {
   --background: #{color('neutral', '3')};
+  --placeholder-color: #{color('neutral', '6')};
+}
+
+:host(.med-searchbar--no-icon) {
+  .med-icon-search {
+    display: none;
+  }
 }

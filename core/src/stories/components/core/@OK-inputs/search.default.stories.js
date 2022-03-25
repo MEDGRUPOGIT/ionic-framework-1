@@ -1,36 +1,29 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
-import { MedIcons } from '../../../constants';
 
 export default {
   title: 'Components/Core/@OK Inputs',
   decorators: [withDesign],
 };
 
-const Template = ({ dsName, placeholder, disabled }) => {
+const Template = ({ dsName, placeholder, disabled, noIcon }) => {
   return html`
-    <style>
-      /* !NÃO UTILIZAR! Apenas para estória */
-        div {
-          padding: 15px;
-        }
-      /* !NÃO UTILIZAR! Apenas para estória */
-    </style>
-
     <ion-app>
       <ion-content>
+        <div class="ion-padding">
 
-        <!-- component markdown -->
-        <div>
+          <!-- component markdown -->
           <ion-searchbar
             mode="ios"
             .dsName=${dsName}
             placeholder=${placeholder}
-            ?disabled=${disabled}>
+            ?disabled=${disabled}
+            ?no-icon=${noIcon}
+          >
           </ion-searchbar>
-        </div>
-        <!-- component markdown -->
+          <!-- component markdown -->
 
+        </div>
       </ion-content>
     </ion-app>
   `
@@ -66,6 +59,15 @@ Search.argTypes = {
     disabled: false,
     control: { type: 'boolean' },
     description: 'Define o estado disabled do componente.',
+    table: {
+      type:  { summary: 'boolean' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  noIcon: {
+    noIcon: false,
+    control: { type: 'boolean' },
+    description: 'Remove icone de procura.',
     table: {
       type:  { summary: 'boolean' },
       defaultValue: { summary: 'undefined' },

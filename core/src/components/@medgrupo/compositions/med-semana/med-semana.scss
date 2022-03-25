@@ -149,6 +149,20 @@
 }
 
 //////////////////////////////
+// hideDownload
+//////////////////////////////
+
+:host(.med-semana--hide-download) {
+  .med-semana__download-button {
+    display: none;
+  }
+
+  .med-semana__tempo-container {
+    justify-content: center !important;
+  }
+}
+
+//////////////////////////////
 // dsSize
 //////////////////////////////
 
@@ -266,22 +280,7 @@
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 
 :host(.med-semana--skin-lista) {
   --background: none;
@@ -303,6 +302,9 @@
     }
 
     &__text {
+      --font-size: 16px;
+      --line-height: 16px;
+      --font-weight: 600;
       text-transform: uppercase;
 
       &--number {
@@ -316,11 +318,21 @@
     }
 
     &__auxiliar {
+      --font-size: 14px;
+      --line-height: 16px;
+      --font-weight: 400;
+      --color: #{color('neutral', '7')};
       margin-right: 4px;
     }
 
     &__chart-container {
       flex-direction: column;
+
+      @include breakpoint-up('md') {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0 8px;
+      }
     }
 
     &__chart-row {
@@ -347,7 +359,6 @@
       align-items: center;
       padding: 0 16px 0 8px;
       max-height: 48px;
-      min-width: 268px;
       text-align: left;
     }
 
@@ -388,6 +399,16 @@
   .med-semana__chart-row {
     height: 71px;
     border-radius: 50px 8px 8px 50px;
+  }
+
+  .med-semana__text {
+    --font-size: 20px;
+    --line-height: 20px;
+  }
+
+  .med-semana__auxiliar {
+    --font-size: 16px;
+    --line-height: 16px;
   }
 }
 

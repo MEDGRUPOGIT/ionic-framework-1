@@ -11,32 +11,37 @@ import { generateMedColor } from '../../../../utils/med-theme';
 export class MedChartRadial {
 
   /**
-  * Define a cor do componente.
-  */
+    * Define a cor do componente.
+    */
   @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
-   * Define a variação de tamanho.
-   */
+    * Define a variação do componente.
+    */
+  @Prop({ reflect: true }) dsName?: 'secondary';
+
+  /**
+     * Define a variação de tamanho.
+     */
   @Prop() dsSize?: 'xs' | 'sm' | 'md' | 'lg';
 
   /**
-   * Define os valores do gráfico
-   */
+     * Define os valores do gráfico
+     */
   @Prop({reflect: true}) valores: MedChartRadiaItem[] = [];
 
   /**
     * Define o texto primario.
     */
-   @Prop() titulo?: string;
+  @Prop() titulo?: string;
 
-    /**
+  /**
     * Define o texto secundario.
     */
-    @Prop() subtitulo?: string;
+  @Prop() subtitulo?: string;
 
   render() {
-    const { dsColor, dsSize, titulo, subtitulo } = this;
+    const { dsColor, dsName, dsSize, titulo, subtitulo } = this;
     const totais = {
       total: 0,
       subtotais: [] as number[]
@@ -54,6 +59,7 @@ export class MedChartRadial {
         from-stencil
         class={generateMedColor(dsColor, {
           'med-chart-radial': true,
+          [`med-chart-radial--${dsName}`]: dsName !== undefined,
           [`med-chart-radial--${dsSize}`]: dsSize !== undefined,
         })}>
         <svg viewBox="0 0 36 36">

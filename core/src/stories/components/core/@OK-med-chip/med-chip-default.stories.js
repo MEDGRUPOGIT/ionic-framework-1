@@ -10,26 +10,18 @@ export default {
 
 const Template = ({ dsColor, dsName, dsSize, label, active, disabled, iconLeft, iconRight }) => {
   return html`
-    <style>
-      /* !NÃO UTILIZAR! Apenas para estória */
-        med-chip {
-          margin: 5px 15px;
-        }
-      /* !NÃO UTILIZAR! Apenas para estória */
-    </style>
-
     <ion-app>
       <ion-content>
 
-      <div>
+      <div class="ion-padding">
         <med-chip .dsColor=${dsColor} ds-name=${dsName} ds-size=${dsSize} label=${label} ?active=${active} ?disabled=${disabled}></med-chip>
       </div>
 
-      <div>
+      <div class="ion-padding">
         <med-chip .dsColor=${dsColor} ds-name=${dsName} ds-size=${dsSize} label=${label} ?active=${active} ?disabled=${disabled} icon-left=${iconLeft}></med-chip>
       </div>
 
-      <div>
+      <div class="ion-padding">
         <med-chip .dsColor=${dsColor} ds-name=${dsName} ds-size=${dsSize} label=${label} ?active=${active} ?disabled=${disabled} icon-right=${iconRight}></med-chip>
       </div>
 

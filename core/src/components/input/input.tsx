@@ -43,6 +43,11 @@ export class Input implements ComponentInterface {
   @Prop({ reflect: true }) dsName?: 'secondary';
 
   /**
+    * Define o status do componente.
+    */
+  @Prop({ reflect: true }) status?: 'valid' | 'invalid' | string | undefined;
+
+  /**
    * Define o icone do componente.
    */
   @Prop() icon?: string;
@@ -398,13 +403,22 @@ export class Input implements ComponentInterface {
   }
 
   render() {
-    const { dsName, icon } = this;
+    const { dsName, icon, status } = this;
     const mode = getIonMode(this);
     const value = this.getValue();
     const labelId = this.inputId + '-lbl';
     const label = findItemLabel(this.el);
     if (label) {
       label.id = labelId;
+    }
+
+    let iconRender;
+    if (status === 'valid') {
+      iconRender = 'med-check'
+    } else if (status === 'invalid') {
+      iconRender = 'med-alerta'
+    } else {
+      iconRender = icon
     }
 
     return (
@@ -415,6 +429,7 @@ export class Input implements ComponentInterface {
           'has-value': this.hasValue(),
           'has-focus': this.hasFocus,
           [`med-input--${dsName}`]: dsName !== undefined,
+          [`med-input--${status}`]: status !== undefined,
         })}
       >
         <input
@@ -457,7 +472,7 @@ export class Input implements ComponentInterface {
             onMouseDown={this.clearTextInput}
             onKeyDown={this.clearTextOnEnter}></ion-icon>
         }
-        {icon && <ion-icon class="med-icon" name={icon}></ion-icon>}
+        {icon && <ion-icon class="med-icon" name={iconRender}></ion-icon>}
       </Host>
     );
   }

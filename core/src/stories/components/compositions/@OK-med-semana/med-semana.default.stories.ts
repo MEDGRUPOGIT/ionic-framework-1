@@ -7,14 +7,14 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ dsColor, dsSize, active, skin, content }) => {
+const Template = ({ dsColor, dsSize, active, skin, content, hideDownload }) => {
   return html`
     <ion-app>
       <ion-content>
         <div class="full-height-flex">
 
           <!-- component markdown -->
-          <med-semana .dsColor=${dsColor} .dsSize=${dsSize} .active=${active} .skin=${skin} .content=${content}></med-semana>
+          <med-semana .dsColor=${dsColor} .dsSize=${dsSize} .active=${active} .hideDownload=${hideDownload} .skin=${skin} .content=${content}></med-semana>
           <!-- component markdown -->
 
         </div>
@@ -52,6 +52,15 @@ Default.argTypes = {
   active: {
     control: { type: 'boolean' },
     description: 'Define se o componente irá estar ativo.',
+    defaultValue: false,
+    table: {
+      type:  { summary: 'boolean' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  hideDownload: {
+    control: { type: 'boolean' },
+    description: 'Esconde o botão download.',
     defaultValue: false,
     table: {
       type:  { summary: 'boolean' },
