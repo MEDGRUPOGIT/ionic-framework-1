@@ -31,7 +31,12 @@ export class Searchbar implements ComponentInterface {
   /**
     * Define o icone do componente.
     */
-   @Prop({ reflect: true }) dsName?: 'secondary';
+  @Prop({ reflect: true }) dsName?: 'secondary';
+
+  /**
+    * Define o icone do componente.
+    */
+  @Prop({ reflect: true }) noIcon = false;
 
   /**
    * The color to use from your application's color palette.
@@ -459,7 +464,7 @@ export class Searchbar implements ComponentInterface {
   }
 
   render() {
-    const { cancelButtonText, dsName } = this;
+    const { cancelButtonText, dsName, noIcon } = this;
     const animated = this.animated && config.getBoolean('animated', true);
     const mode = getIonMode(this);
     const clearIcon = this.clearIcon || (mode === 'ios' ? 'med-fechar' : 'med-fechar');
@@ -501,12 +506,13 @@ export class Searchbar implements ComponentInterface {
           'searchbar-has-focus': this.focused,
           'searchbar-should-show-clear': this.shouldShowClearButton(),
           'searchbar-should-show-cancel': this.shouldShowCancelButton(),
+          'med-searchbar--no-icon': noIcon,
           [`med-searchbar--${dsName}`]: dsName !== undefined,
         })}
       >
 
         <div class="searchbar-input-container">
-          <ion-icon aria-hidden="true" class="med-icon" mode={mode} icon={searchIcon} lazy={false}></ion-icon>
+          <ion-icon aria-hidden="true" class="med-icon med-icon-search" mode={mode} icon={searchIcon} lazy={false}></ion-icon>
 
           <input
             aria-label="search text"

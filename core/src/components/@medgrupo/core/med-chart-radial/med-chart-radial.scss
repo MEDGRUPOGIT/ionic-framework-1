@@ -140,3 +140,11 @@
 :host(.med-color-feedback) .med-chart-radial__titulo {
   --color: #{curr-color('feedback')};
 }
+
+//////////////////////////////
+// dsName
+//////////////////////////////
+
+:host(.med-chart-radial--secondary) {
+  --stroke-background: #{color('neutral', '1')};
+}

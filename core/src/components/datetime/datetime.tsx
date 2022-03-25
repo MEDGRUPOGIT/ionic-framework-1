@@ -50,10 +50,22 @@ export class Datetime implements ComponentInterface {
    */
   @Prop() readonly = false;
 
+  /**
+    * Define a variação do componente.
+    */
+  @Prop({ reflect: true }) dsName?: 'secondary';
 
+  /**
+    * Remove o estilo de input do componente.
+    */
   @Prop() noStyle = false;
 
-  @Prop() iconName = this.noStyle ? '' : 'med-baixo';
+  /**
+    * Define o icone do componente.
+    */
+  @Prop() iconName = this.noStyle ? '' : 'med-semana';
+
+  @State() hasFocus = false;
 
   @Watch('disabled')
   protected disabledChanged() {
@@ -611,14 +623,16 @@ export class Datetime implements ComponentInterface {
 
   private onFocus = () => {
     this.ionFocus.emit();
+    this.hasFocus = true;
   }
 
   private onBlur = () => {
     this.ionBlur.emit();
+    this.hasFocus = false;
   }
 
   render() {
-    const { inputId, text, disabled, readonly, isExpanded, el, placeholder, iconName, noStyle } = this;
+    const { inputId, text, disabled, readonly, isExpanded, el, placeholder, dsName, iconName, noStyle } = this;
     const mode = getIonMode(this);
     const labelId = inputId + '-lbl';
     const label = findItemLabel(el);
@@ -653,7 +667,9 @@ export class Datetime implements ComponentInterface {
           'datetime-readonly': readonly,
           'datetime-placeholder': addPlaceholderClass,
           'in-item': hostContext('ion-item', el),
-          'datetime--no-style': noStyle,
+          [`med-datetime--${dsName}`]: dsName !== undefined,
+          'med-datetime--no-style': noStyle,
+          'has-focus': this.hasFocus,
         }}
       >
         <div class="datetime-text" part={datetimeTextPart}>{datetimeText}</div>

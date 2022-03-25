@@ -184,6 +184,7 @@ export const IonDatetime = /*@__PURE__*/ defineContainer<JSX.IonDatetime>('ion-d
   'name',
   'disabled',
   'readonly',
+  'dsName',
   'noStyle',
   'iconName',
   'min',
@@ -302,6 +303,7 @@ export const IonInfiniteScrollContent = /*@__PURE__*/ defineContainer<JSX.IonInf
 export const IonInput = /*@__PURE__*/ defineContainer<JSX.IonInput>('ion-input', [
   'fireFocusEvents',
   'dsName',
+  'status',
   'icon',
   'color',
   'accept',
@@ -524,6 +526,7 @@ export const IonRadioGroup = /*@__PURE__*/ defineContainer<JSX.IonRadioGroup>('i
 
 
 export const IonRange = /*@__PURE__*/ defineContainer<JSX.IonRange>('ion-range', [
+  'dsColor',
   'color',
   'debounce',
   'name',
@@ -591,6 +594,7 @@ export const IonRow = /*@__PURE__*/ defineContainer<JSX.IonRow>('ion-row');
 
 export const IonSearchbar = /*@__PURE__*/ defineContainer<JSX.IonSearchbar>('ion-searchbar', [
   'dsName',
+  'noIcon',
   'color',
   'animated',
   'autocomplete',
@@ -757,6 +761,7 @@ export const IonText = /*@__PURE__*/ defineContainer<JSX.IonText>('ion-text', [
 
 export const IonTextarea = /*@__PURE__*/ defineContainer<JSX.IonTextarea>('ion-textarea', [
   'fireFocusEvents',
+  'dsName',
   'color',
   'autocapitalize',
   'autofocus',
@@ -954,9 +959,7 @@ export const MedAulaProfessor = /*@__PURE__*/ defineContainer<JSX.MedAulaProfess
 ]);
 
 
-export const MedAutocomplete = /*@__PURE__*/ defineContainer<JSX.MedAutocomplete>('med-autocomplete', [
-  'list'
-]);
+export const MedAutocomplete = /*@__PURE__*/ defineContainer<JSX.MedAutocomplete>('med-autocomplete');
 
 
 export const MedAvatar = /*@__PURE__*/ defineContainer<JSX.MedAvatar>('med-avatar', [
@@ -1052,6 +1055,7 @@ export const MedChartCategoria = /*@__PURE__*/ defineContainer<JSX.MedChartCateg
 
 export const MedChartRadial = /*@__PURE__*/ defineContainer<JSX.MedChartRadial>('med-chart-radial', [
   'dsColor',
+  'dsName',
   'dsSize',
   'valores',
   'titulo',
@@ -1137,6 +1141,14 @@ export const MedDownloadButton = /*@__PURE__*/ defineContainer<JSX.MedDownloadBu
   'medCancelar',
   'medDownloading'
 ]);
+
+
+export const MedDropdown = /*@__PURE__*/ defineContainer<JSX.MedDropdown>('med-dropdown', [
+  'dsName'
+]);
+
+
+export const MedDropdownContainer = /*@__PURE__*/ defineContainer<JSX.MedDropdownContainer>('med-dropdown-container');
 
 
 export const MedEnunciado = /*@__PURE__*/ defineContainer<JSX.MedEnunciado>('med-enunciado', [
@@ -1382,7 +1394,8 @@ export const MedSemana = /*@__PURE__*/ defineContainer<JSX.MedSemana>('med-seman
   'active',
   'disabled',
   'skin',
-  'content'
+  'content',
+  'hideDownload'
 ]);
 
 

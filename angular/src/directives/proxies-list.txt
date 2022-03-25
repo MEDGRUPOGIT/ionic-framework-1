@@ -107,6 +107,8 @@ export const DIRECTIVES = [
   d.MedContextMenu,
   d.MedDivider,
   d.MedDownloadButton,
+  d.MedDropdown,
+  d.MedDropdownContainer,
   d.MedEnunciado,
   d.MedEnunciadoDiscursiva,
   d.MedFontZoom,

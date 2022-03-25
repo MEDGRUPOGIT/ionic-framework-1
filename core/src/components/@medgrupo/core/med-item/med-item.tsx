@@ -285,15 +285,15 @@ export class MedItem implements ComponentInterface, AnchorInterface, ButtonInter
           ...childStyles,
           ...labelColorStyles,
           ...generateMedColor(dsColor, {
-            'med-item': true,
             [mode]: true,
+            'med-item': true,
             [`med-item-lines-${lines}`]: lines !== undefined,
             'med-item-disabled': disabled,
             'in-list': hostContext('med-lista', this.el),
             'med-item-multiple-inputs': this.multipleInputs,
             'ion-activatable': canActivate,
             'ion-focusable': true,
-            'med-item--padding': padding
+            'med-item--no-padding': padding
           })
         }}
       >

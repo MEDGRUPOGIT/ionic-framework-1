@@ -7,42 +7,36 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ dsName, placeholder, disabled, clearInput, icon }) => {
+const Template = ({ dsName, placeholder, disabled, status, clearInput, icon }) => {
   return html`
-    <style>
-      /* !NÃO UTILIZAR! Apenas para estória */
-        div {
-          padding: 15px;
-        }
-      /* !NÃO UTILIZAR! Apenas para estória */
-    </style>
-
     <ion-app>
       <ion-content>
 
-        <!-- component markdown -->
-        <div>
-          <ion-input
-            .dsName=${dsName}
-            placeholder=${placeholder}
-            ?disabled=${disabled}
-            ?clear-input=${clearInput}
-          >
-          </ion-input>
-        </div>
-        <!-- component markdown -->
+          <div class="ion-padding">
+            <!-- component markdown -->
+              <ion-input
+                .dsName=${dsName}
+                placeholder=${placeholder}
+                ?disabled=${disabled}
+                ?clear-input=${clearInput}
+                .status=${status}
+              >
+              </ion-input>
+            <!-- component markdown -->
+          </div>
 
-        <!-- component markdown -->
-        <div>
-          <ion-input
-            .dsName=${dsName}
-            placeholder=${placeholder}
-            ?disabled=${disabled}
-            icon=${icon}
-          >
-          </ion-input>
-        </div>
-        <!-- component markdown -->
+          <div class="ion-padding">
+            <!-- component markdown -->
+              <ion-input
+                .dsName=${dsName}
+                placeholder=${placeholder}
+                ?disabled=${disabled}
+                icon=${icon}
+                .status=${status}
+              >
+              </ion-input>
+            <!-- component markdown -->
+          </div>
 
       </ion-content>
     </ion-app>
@@ -81,6 +75,15 @@ Input.argTypes = {
     description: 'Define o estado disabled do componente.',
     table: {
       type:  { summary: 'boolean' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  status: {
+    options: [undefined, 'valid', 'invalid'],
+    control: { type: 'radio'},
+    description: "Define a variação de tamanho componente.",
+    table: {
+      type:  { summary: 'valid | invalid' },
       defaultValue: { summary: 'undefined' },
     },
   },

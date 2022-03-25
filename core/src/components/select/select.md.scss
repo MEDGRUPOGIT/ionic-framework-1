@@ -71,4 +71,5 @@
 
 :host(.med-select--secondary) {
   --background: #{color('neutral', '3')};
+  --placeholder-color: #{color('neutral', '6')};
 }

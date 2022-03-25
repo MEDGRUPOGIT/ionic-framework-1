@@ -218,6 +218,14 @@ const Template = ({ dsColor, dsSize, skin, contents }) => {
         padding-top: 10px;
         text-align: center;
       }
+
+      .semana-content {
+        margin-top: 16px;
+      }
+
+      .semana-content:nth-child(5) {
+        margin-bottom: 150px;
+      }
     </style>
 
     <ion-app>
@@ -268,11 +276,11 @@ const Template = ({ dsColor, dsSize, skin, contents }) => {
             </ion-button>
           </div>
           <ion-content class="content">
-            <med-semana .dsColor=${dsColor} .dsSize=${dsSize} .active=${contents[0].active} .skin=${skin} .content=${contents[0]}></med-semana>
-            <med-semana .dsColor=${dsColor} .dsSize=${dsSize} .active=${contents[1].active} .skin=${skin} .content=${contents[1]}></med-semana>
-            <med-semana .dsColor=${dsColor} .dsSize=${dsSize} .active=${contents[2].active} .skin=${skin} .content=${contents[2]}></med-semana>
-            <med-semana .dsColor=${dsColor} .dsSize=${dsSize} .active=${contents[2].active} .skin=${skin} .content=${contents[2]}></med-semana>
-            <med-semana .dsColor=${dsColor} .dsSize=${dsSize} .active=${contents[2].active} .skin=${skin} .content=${contents[2]}></med-semana>
+            <med-semana class="semana-content" .dsColor=${dsColor} .dsSize=${dsSize} .active=${contents[0].active} .skin=${skin} .content=${contents[0]}></med-semana>
+            <med-semana class="semana-content" .dsColor=${dsColor} .dsSize=${dsSize} .active=${contents[1].active} .skin=${skin} .content=${contents[1]}></med-semana>
+            <med-semana class="semana-content" .dsColor=${dsColor} .dsSize=${dsSize} .active=${contents[2].active} .skin=${skin} .content=${contents[2]}></med-semana>
+            <med-semana class="semana-content" .dsColor=${dsColor} .dsSize=${dsSize} .active=${contents[2].active} .skin=${skin} .content=${contents[2]}></med-semana>
+            <med-semana class="semana-content" .dsColor=${dsColor} .dsSize=${dsSize} .active=${contents[2].active} .skin=${skin} .content=${contents[2]}></med-semana>
             <div class="col-right">
             </div>
           </ion-content>
@@ -421,6 +429,16 @@ AulasMain.argTypes = {
     description: "Define a variação de tamanho componente.",
     table: {
       type:  { summary: 'sm' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  skin: {
+    options: [undefined, 'lista'],
+    control: { type: 'select' },
+    description: 'Define se o componente irá mostrar skin lista.',
+    defaultValue: undefined,
+    table: {
+      type:  { summary: 'boolean' },
       defaultValue: { summary: 'undefined' },
     },
   },

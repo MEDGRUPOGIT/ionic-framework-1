@@ -1,15 +1,30 @@
-@import "../../../templarios/abstracts";
-
 :host {
-  --bar-background: #{color('neutral', '8')};
+  --bar-background: #{color('neutral', '7')};
   --bar-background-active: #{color('brand', '4')};
+  --knob-size: 24px;
   padding: 0;
 }
 
-::slotted([slot="start"]) {
-  stroke: #{color('neutral', '8')};
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-color) {
+  --bar-background-active: #{curr-color('color', '4')};
 }
 
-::slotted([slot="end"]) {
-  stroke: #{color('neutral', '8')};
+// ////////////////////
+// neutral
+// ////////////////////
+
+:host(.med-color-neutral) {
+  --bar-background-active: #{curr-color('neutral')};
+}
+
+// //////////
+// feedback
+// //////////
+
+:host(.med-color-feedback) {
+  --bar-background-active: #{curr-color('feedback')};
 }

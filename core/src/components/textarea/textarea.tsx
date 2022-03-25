@@ -11,7 +11,7 @@ import { createColorClasses } from '../../utils/theme';
 @Component({
   tag: 'ion-textarea',
   styleUrls: {
-    ios: 'textarea.md.scss',
+    ios: 'textarea.ios.scss',
     md: 'textarea.md.scss'
   },
   scoped: true
@@ -37,6 +37,11 @@ export class Textarea implements ComponentInterface {
   @Element() el!: HTMLElement;
 
   @State() hasFocus = false;
+
+  /**
+    * Define o icone do componente.
+    */
+   @Prop({ reflect: true }) dsName?: 'secondary';
 
   /**
    * The color to use from your application's color palette.
@@ -342,6 +347,7 @@ export class Textarea implements ComponentInterface {
   }
 
   render() {
+    const { dsName } = this;
     const mode = getIonMode(this);
     const value = this.getValue();
     const labelId = this.inputId + '-lbl';
@@ -355,6 +361,7 @@ export class Textarea implements ComponentInterface {
         aria-disabled={this.disabled ? 'true' : null}
         class={createColorClasses(this.color, {
           [mode]: true,
+          [`med-textarea--${dsName}`]: dsName !== undefined,
         })}
       >
         <div
@@ -388,9 +395,7 @@ export class Textarea implements ComponentInterface {
           >
             {value}
           </textarea>
-          <slot></slot>
         </div>
-
       </Host>
     );
   }

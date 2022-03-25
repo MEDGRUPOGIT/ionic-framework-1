@@ -40,6 +40,11 @@ export class MedSemana {
    */
   @Prop({ reflect: true }) content!: MedSemanaInterface;
 
+  /**
+   * Esconde o botão de download.
+   */
+  @Prop({ reflect: true }) hideDownload = false;
+
   @State() flipped = false;
 
   private handleFlip() {
@@ -54,8 +59,8 @@ export class MedSemana {
       return (
         <div class="med-semana__heading-container">
           <div class="med-semana__text-container">
-            <med-type token="h20" class="med-semana__text">{content?.Title}</med-type>
-            <med-type token="h20" class="med-semana__text med-semana__text--number">
+            <med-type class="med-semana__text">{content?.Title}</med-type>
+            <med-type class="med-semana__text med-semana__text--number">
               {content?.Numero}
             </med-type>
 
@@ -169,7 +174,7 @@ export class MedSemana {
   }
 
   render() {
-    const { dsColor, dsSize, active, skin, content} = this;
+    const { dsColor, dsSize, active, skin, content, hideDownload} = this;
     let textContainerEl;
     let piechartContainerEl;
 
@@ -181,6 +186,7 @@ export class MedSemana {
         class={generateMedColor(dsColor, {
           "med-semana": true,
           "med-semana--active": active,
+          "med-semana--hide-download": hideDownload,
           [`med-semana--skin-${skin}`]: skin !== undefined,
           [`med-semana--${dsSize}`]: dsSize !== undefined,
         })}

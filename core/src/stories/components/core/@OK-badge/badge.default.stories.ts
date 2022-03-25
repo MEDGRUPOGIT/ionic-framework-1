@@ -7,14 +7,14 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ dsColor, dsSize, fill, slot }) => {
+const Template = ({ dsColor, dsSize, fill, label }) => {
   return html`
     <ion-app>
       <ion-content>
         <div class="full-height-flex">
 
          <!-- component markdown -->
-          <ion-badge .dsColor=${dsColor} ds-size=${dsSize} fill=${fill}>${slot}</ion-badge>
+          <ion-badge .dsColor=${dsColor} ds-size=${dsSize} fill=${fill}>${label}</ion-badge>
          <!-- component markdown -->
 
         </div>
@@ -58,8 +58,12 @@ Default.argTypes = {
       defaultValue: { summary: 'undefined' },
     },
   },
-  slot: {
+  label: {
     control: { type: 'text' },
-    defaultValue: 'Badge',
+    description: '**Atributo utilizado apenas no storybook. Não é um atributo do componente!.**',
+    defaultValue: 'Label',
+    table: {
+      type:  { summary: 'string' },
+    },
   },
 };

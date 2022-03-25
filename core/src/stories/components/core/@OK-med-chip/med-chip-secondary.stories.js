@@ -15,25 +15,21 @@ const Template = ({ dsColor, dsSize, label, active, disabled, iconLeft, iconRigh
         ion-content {
           --background: hsl(var(--med-color-neutral-2));
         }
-
-        med-chip {
-          margin: 5px 15px;
-        }
       /* !NÃO UTILIZAR! Apenas para estória */
     </style>
 
     <ion-app>
       <ion-content>
 
-        <div>
+        <div class="ion-padding">
           <med-chip ds-name="secondary" .dsColor=${dsColor} ds-size=${dsSize} label=${label} ?active=${active} ?disabled=${disabled}></med-chip>
         </div>
 
-        <div>
+        <div class="ion-padding">
           <med-chip ds-name="secondary" .dsColor=${dsColor} ds-size=${dsSize} label=${label} ?active=${active} ?disabled=${disabled} icon-left=${iconLeft}></med-chip>
         </div>
 
-        <div>
+        <div class="ion-padding">
           <med-chip ds-name="secondary" .dsColor=${dsColor} ds-size=${dsSize} label=${label} ?active=${active} ?disabled=${disabled} icon-right=${iconRight}></med-chip>
         </div>
 

@@ -1,3 +1,7 @@
 :host {
   display: block;
+
+  .med-icon {
+    stroke: #{color('neutral','8')};
+  }
 }
