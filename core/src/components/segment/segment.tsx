@@ -29,11 +29,6 @@ export class Segment implements ComponentInterface {
     */
   @Prop({ reflect: true }) dsColor?: MedColor;
 
-   /**
-    * Define a variação do componente.
-    */
-  @Prop({ reflect: true }) dsName?: 'default';
-
   // Value to be emitted when gesture ends
   private valueAfterGesture?: any;
 
@@ -433,7 +428,7 @@ export class Segment implements ComponentInterface {
   }
 
   render() {
-    const {dsColor, dsName} = this;
+    const {dsColor} = this;
     const mode = getIonMode(this);
     return (
       <Host
@@ -441,7 +436,6 @@ export class Segment implements ComponentInterface {
         class={generateMedColor(dsColor, {
           [mode]: true,
           'med-segment': true,
-          [`med-segment--${dsName}`]: dsName !== undefined,
           'in-toolbar': hostContext('ion-toolbar', this.el),
           'in-toolbar-color': hostContext('ion-toolbar[color]', this.el),
           'segment-activated': this.activated,

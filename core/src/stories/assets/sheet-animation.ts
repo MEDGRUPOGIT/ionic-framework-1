@@ -1,4 +1,4 @@
-import { createAnimation } from '../../../../utils/animation/animation';
+import { createAnimation } from '../../utils/animation/animation';
 
 const MODAL_ANIMATION_DURATION = 500;
 const MODAL_ANIMATION_DURATION_OPACITY = 100;

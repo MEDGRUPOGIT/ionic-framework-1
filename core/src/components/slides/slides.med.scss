@@ -6,10 +6,10 @@
 
 .swiper-pagination-bullet {
   background: transparent;
-  border: var(--med-border-width-thin) solid #fff;
+  border: 1px solid color('neutral','10');
 }
 
 .swiper-pagination-bullet-active {
   border: none;
-  background: #fff;
+  background: color('neutral','10');
 }

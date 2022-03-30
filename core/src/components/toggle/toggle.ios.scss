@@ -116,40 +116,4 @@
   @include padding($toggle-ios-item-start-padding-top, $toggle-ios-item-start-padding-end, $toggle-ios-item-start-padding-bottom, $toggle-ios-item-start-padding-start);
 }
 
-// ////////////////////
-// default
-// ////////////////////
-
-
-:host(.med-toggle) {
-  --background: #{color('neutral', '4')};
-  --background-checked: #{color('brand', '3')};
-  --handle-height: calc(20px - (2px * 2));
-  --handle-width: calc(20px - (2px * 2));
-  height: 20px;
-  width: 32px;
-}
-
-// ////////////////////
-// color
-// ////////////////////
-
-:host(.med-color.med-toggle) {
-  --background-checked: #{curr-color('color', '3')};
-}
-
-// ////////////////////
-// neutral
-// ////////////////////
-
-:host(.med-color-neutral.med-toggle) {
-  --background-checked: #{curr-color('neutral')};
-}
-
-// //////////
-// feedback
-// //////////
-
-:host(.med-color-feedback.med-toggle) {
-  --background-checked: #{curr-color('feedback')};
-}
+@import './toggle.med.scss';

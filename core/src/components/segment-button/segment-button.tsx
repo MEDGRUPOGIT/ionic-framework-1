@@ -34,11 +34,6 @@ export class SegmentButton implements ComponentInterface, ButtonInterface {
     */
   @Prop({ reflect: true }) dsColor?: MedColor;
 
-   /**
-    * Define a variação do componente.
-    */
-  @Prop({ reflect: true }) dsName?: 'default';
-
   @State() checked = false;
 
   /**
@@ -98,7 +93,7 @@ export class SegmentButton implements ComponentInterface, ButtonInterface {
   }
 
   render() {
-    const { checked, type, disabled, hasIcon, hasLabel, layout, segmentEl, dsColor, dsName } = this;
+    const { checked, type, disabled, hasIcon, hasLabel, layout, segmentEl, dsColor } = this;
     const mode = getIonMode(this);
     const hasSegmentColor = () => segmentEl !== null && segmentEl.color !== undefined;
     return (
@@ -108,7 +103,6 @@ export class SegmentButton implements ComponentInterface, ButtonInterface {
         class={generateMedColor(dsColor,{
           [mode]: true,
           'med-segment-button': true,
-          [`med-segment-button--${dsName}`]: dsName !== undefined,
           'in-toolbar': hostContext('ion-toolbar', this.el),
           'in-toolbar-color': hostContext('ion-toolbar[color]', this.el),
           'in-segment': hostContext('ion-segment', this.el),

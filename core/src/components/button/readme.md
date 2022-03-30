@@ -370,6 +370,7 @@ export default defineComponent({
 
 ### Used by
 
+ - [dialog-test](../@medgrupo/testes/dialog-test)
  - [filtro-dashboard](../@medgrupo/team/dashboard/filtro-dashboard)
  - [filtro-modal](../@medgrupo/team/dashboard/filtro-modal)
  - [med-banner](../@medgrupo/core/med-banner)
@@ -382,8 +383,9 @@ export default defineComponent({
  - [med-nav-simple](../@medgrupo/core/med-nav-simple)
  - [med-offline](../@medgrupo/global/med-offline)
  - [med-rate-aula](../@medgrupo/global/med-rate-aula)
- - [med-sheet](../@medgrupo/core/med-sheet)
  - [med-video-list-item](../@medgrupo/testes/med-video-list-item)
+ - [sheet-content-test](../@medgrupo/testes/sheet-content-test)
+ - [sheet-test](../@medgrupo/testes/sheet-test)
 
 ### Depends on
 
@@ -393,6 +395,7 @@ export default defineComponent({
 ```mermaid
 graph TD;
   ion-button --> ion-ripple-effect
+  dialog-test --> ion-button
   filtro-dashboard --> ion-button
   filtro-modal --> ion-button
   med-banner --> ion-button
@@ -405,8 +408,9 @@ graph TD;
   med-nav-simple --> ion-button
   med-offline --> ion-button
   med-rate-aula --> ion-button
-  med-sheet --> ion-button
   med-video-list-item --> ion-button
+  sheet-content-test --> ion-button
+  sheet-test --> ion-button
   style ion-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

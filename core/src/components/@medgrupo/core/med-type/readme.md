@@ -18,6 +18,7 @@
 
 ### Used by
 
+ - [dialog-test](../../testes/dialog-test)
  - [filtro-modal](../../team/dashboard/filtro-modal)
  - [med-add-card](../../compositions/med-add-card)
  - [med-aula-professor](../../compositions/med-aula-professor)
@@ -36,10 +37,13 @@
  - [med-rate-aula](../../global/med-rate-aula)
  - [med-semana](../../compositions/med-semana)
  - [med-video-list-item](../../testes/med-video-list-item)
+ - [sheet-content-test](../../testes/sheet-content-test)
+ - [sheet-test](../../testes/sheet-test)
 
 ### Graph
 ```mermaid
 graph TD;
+  dialog-test --> med-type
   filtro-modal --> med-type
   med-add-card --> med-type
   med-aula-professor --> med-type
@@ -58,6 +62,8 @@ graph TD;
   med-rate-aula --> med-type
   med-semana --> med-type
   med-video-list-item --> med-type
+  sheet-content-test --> med-type
+  sheet-test --> med-type
   style med-type fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

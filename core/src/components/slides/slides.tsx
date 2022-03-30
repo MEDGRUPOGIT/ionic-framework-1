@@ -11,7 +11,7 @@ import { SwiperInterface, SwiperOptions } from './swiper/swiper-interface';
 @Component({
   tag: 'ion-slides',
   styleUrls: {
-    ios: 'slides.ios.scss',
+    ios: 'slides.md.scss',
     md: 'slides.md.scss'
   },
   assetsDirs: ['swiper'],
