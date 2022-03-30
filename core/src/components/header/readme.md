@@ -200,12 +200,16 @@ export default defineComponent({
 
 ### Used by
 
- - [med-sheet](../@medgrupo/core/med-sheet)
+ - [dialog-test](../@medgrupo/testes/dialog-test)
+ - [sheet-content-test](../@medgrupo/testes/sheet-content-test)
+ - [sheet-test](../@medgrupo/testes/sheet-test)
 
 ### Graph
 ```mermaid
 graph TD;
-  med-sheet --> ion-header
+  dialog-test --> ion-header
+  sheet-content-test --> ion-header
+  sheet-test --> ion-header
   style ion-header fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

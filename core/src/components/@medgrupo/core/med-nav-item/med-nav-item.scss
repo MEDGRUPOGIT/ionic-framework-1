@@ -45,6 +45,11 @@
 // state
 //////////////////////////////
 
+:host(.button-disabled) {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 :host(.med-nav-item--active) {
   --background: #{color('brand', '1')};
   --stroke: #{color('neutral', '10')};

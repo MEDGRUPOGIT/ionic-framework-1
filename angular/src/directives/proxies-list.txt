@@ -4,6 +4,7 @@ import type * as d from './proxies';
 export const DIRECTIVES = [
   d.AccordionGroup,
   d.AccordionItem,
+  d.DialogTest,
   d.FiltroDashboard,
   d.FiltroModal,
   d.IonApp,
@@ -142,7 +143,6 @@ export const DIRECTIVES = [
   d.MedRating,
   d.MedSemana,
   d.MedSemanas,
-  d.MedSheet,
   d.MedSubtitle,
   d.MedTabButton,
   d.MedTabs,
@@ -155,5 +155,7 @@ export const DIRECTIVES = [
   d.MedVideoListItem,
   d.MedVideoThumbnail,
   d.MedVote,
-  d.MontaProvasPlusminus
+  d.MontaProvasPlusminus,
+  d.SheetContentTest,
+  d.SheetTest
 ];

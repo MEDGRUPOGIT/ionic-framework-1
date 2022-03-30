@@ -23,6 +23,9 @@ export const AccordionItem = /*@__PURE__*/ defineContainer<JSX.AccordionItem>('a
 ]);
 
 
+export const DialogTest = /*@__PURE__*/ defineContainer<JSX.DialogTest>('dialog-test');
+
+
 export const FiltroDashboard = /*@__PURE__*/ defineContainer<JSX.FiltroDashboard>('filtro-dashboard');
 
 
@@ -633,7 +636,6 @@ export const IonSearchbar = /*@__PURE__*/ defineContainer<JSX.IonSearchbar>('ion
 
 export const IonSegment = /*@__PURE__*/ defineContainer<JSX.IonSegment>('ion-segment', [
   'dsColor',
-  'dsName',
   'color',
   'disabled',
   'scrollable',
@@ -655,7 +657,6 @@ export const IonSegment = /*@__PURE__*/ defineContainer<JSX.IonSegment>('ion-seg
 
 export const IonSegmentButton = /*@__PURE__*/ defineContainer<JSX.IonSegmentButton>('ion-segment-button', [
   'dsColor',
-  'dsName',
   'disabled',
   'layout',
   'type',
@@ -1404,11 +1405,6 @@ export const MedSemanas = /*@__PURE__*/ defineContainer<JSX.MedSemanas>('med-sem
 ]);
 
 
-export const MedSheet = /*@__PURE__*/ defineContainer<JSX.MedSheet>('med-sheet', [
-  'medClick'
-]);
-
-
 export const MedSubtitle = /*@__PURE__*/ defineContainer<JSX.MedSubtitle>('med-subtitle', [
   'dsColor',
   'dsName',
@@ -1499,4 +1495,10 @@ export const MontaProvasPlusminus = /*@__PURE__*/ defineContainer<JSX.MontaProva
   'disabled',
   'medChange'
 ]);
+
+
+export const SheetContentTest = /*@__PURE__*/ defineContainer<JSX.SheetContentTest>('sheet-content-test');
+
+
+export const SheetTest = /*@__PURE__*/ defineContainer<JSX.SheetTest>('sheet-test');
 

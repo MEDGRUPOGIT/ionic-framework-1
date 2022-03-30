@@ -11,27 +11,27 @@ export class MedNavItem {
   @Element() hostElement!: HTMLElement;
 
   /**
-    * TODO.
+    * Define a cor do componente.
     */
   @Prop({ reflect: true }) dsColor?: MedColor;
 
    /**
-     * TODO.
+     * Define o estado active do componente.
      */
   @Prop({ reflect: true, mutable: true }) active = false;
 
   /**
-    * TODO.
+    * Define o texto do componente.
     */
   @Prop({ reflect: true }) text?: string;
 
   /**
-    * TODO.
+    * Define o icone do componente.
     */
   @Prop({ reflect: true }) icon?: string;
 
   /**
-    * TODO.
+    * Define o estado disabled do componente.
     */
   @Prop({ reflect: true }) disabled = false;
 

@@ -2,7 +2,7 @@ import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
 
 export default {
-  title: 'Components/Compositions/Rate Like',
+  title: 'Components/Core/@OK Rate Like',
   decorators: [withDesign],
 };
 
@@ -12,9 +12,9 @@ const TemplateDefault = ({ status }) => {
     <ion-content>
       <div class="flex-center">
 
-        <!-- component -->
+        <!-- component markdown-->
           <med-rate-like .status=${status}></med-rate-like>
-        <!-- component -->
+        <!-- component markdown-->
 
       </div>
     </ion-content>
@@ -26,7 +26,7 @@ export const RateLike = TemplateDefault.bind({});
 RateLike.parameters = {
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/Componentes?node-id=2101%3A5',
+    url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/Componentes?node-id=13509%3A51259',
   },
   actions: {
     handles: ['medChange'],

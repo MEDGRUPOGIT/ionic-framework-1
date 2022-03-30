@@ -1,12 +1,32 @@
 import { Meta } from "@storybook/addon-docs/blocks";
 
-<Meta title="Components/Core/Sheet/Usage" />
+<Meta title="Components/Core/@OK Sheet/Usage" />
 
 # Sheet
 
+## Component Markup
+
 ```
-<ion-button ds-name="primary" (click)="abrirFiltros()">Abrir sheet mobile</ion-button>
+<ion-header class="tp-sheet-header">
+  <ion-button class="tp-dialog__button" ds-name="tertiary" ds-size="xxs">
+    <ion-icon slot="icon-only" class="med-icon" name="med-fechar"></ion-icon>
+  </ion-button>
+</ion-header>
+<div class="tp-sheet-content">
+  <med-type>Sheet</med-type>
+  <med-type>Sheet</med-type>
+  <med-type>Sheet</med-type>
+
+  <med-type>Sheet</med-type>
+  <med-type>Sheet</med-type>
+  <med-type>Sheet</med-type>
+</div>
+<ion-footer class="tp-sheet-footer">
+  <ion-button class="tp-dialog__button" expand="block">button</ion-button>
+</ion-footer>
 ```
+
+## Typescript
 
 ```
 import { Component } from '@angular/core';
@@ -54,6 +74,26 @@ Se o componente sendo passado para modar utilizar ion-content é necessario util
 
 o ion-content dentro do componente deve setar `height: 100vh` para que a modal funcione corretamente.
 
+## Component Markup
+
+```
+<ion-header class="tp-sheet-header">
+  <ion-button ds-name="tertiary" ds-size="xxs">
+    <ion-icon slot="icon-only" class="med-icon" name="med-fechar"></ion-icon>
+  </ion-button>
+</ion-header>
+<ion-content class="tp-sheet-content">
+  <med-type>Sheet</med-type>
+  <med-type>Sheet</med-type>
+  <med-type>Sheet</med-type>
+</ion-content>
+<ion-footer class="tp-sheet-footer">
+  <ion-button expand="block">button</ion-button>
+</ion-footer>
+```
+
+## Typescript
+
 ```
 import { Component } from '@angular/core';
 import { BreakPointPixelEnum } from 'src/medsoft/app/shared/enums/breakpoint.enum';
@@ -91,6 +131,5 @@ export class Component {
 
     await modal.present();
   }
-
 }
 ```

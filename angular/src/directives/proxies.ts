@@ -28,6 +28,16 @@ export class AccordionItem {
     proxyOutputs(this, this.el, ["toggle"]);
   }
 }
+export declare interface DialogTest extends Components.DialogTest {
+}
+@Component({ selector: "dialog-test", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class DialogTest {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface FiltroDashboard extends Components.FiltroDashboard {
 }
 @Component({ selector: "filtro-dashboard", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
@@ -705,8 +715,8 @@ export class IonSearchbar {
 }
 export declare interface IonSegment extends Components.IonSegment {
 }
-@ProxyCmp({ inputs: ["color", "disabled", "dsColor", "dsName", "mode", "scrollable", "swipeGesture", "value"] })
-@Component({ selector: "ion-segment", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "disabled", "dsColor", "dsName", "mode", "scrollable", "swipeGesture", "value"] })
+@ProxyCmp({ inputs: ["color", "disabled", "dsColor", "mode", "scrollable", "swipeGesture", "value"] })
+@Component({ selector: "ion-segment", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "disabled", "dsColor", "mode", "scrollable", "swipeGesture", "value"] })
 export class IonSegment {
   ionChange!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
@@ -718,8 +728,8 @@ export class IonSegment {
 }
 export declare interface IonSegmentButton extends Components.IonSegmentButton {
 }
-@ProxyCmp({ inputs: ["disabled", "dsColor", "dsName", "layout", "mode", "type", "value"] })
-@Component({ selector: "ion-segment-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled", "dsColor", "dsName", "layout", "mode", "type", "value"] })
+@ProxyCmp({ inputs: ["disabled", "dsColor", "layout", "mode", "type", "value"] })
+@Component({ selector: "ion-segment-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled", "dsColor", "layout", "mode", "type", "value"] })
 export class IonSegmentButton {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1678,18 +1688,6 @@ export class MedSemanas {
     this.el = r.nativeElement;
   }
 }
-export declare interface MedSheet extends Components.MedSheet {
-}
-@Component({ selector: "med-sheet", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
-export class MedSheet {
-  medClick!: EventEmitter<CustomEvent>;
-  protected el: HTMLElement;
-  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
-    c.detach();
-    this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ["medClick"]);
-  }
-}
 export declare interface MedSubtitle extends Components.MedSubtitle {
 }
 @ProxyCmp({ inputs: ["dsColor", "dsName", "dsSize"] })
@@ -1835,5 +1833,25 @@ export class MontaProvasPlusminus {
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs(this, this.el, ["medChange"]);
+  }
+}
+export declare interface SheetContentTest extends Components.SheetContentTest {
+}
+@Component({ selector: "sheet-content-test", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class SheetContentTest {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface SheetTest extends Components.SheetTest {
+}
+@Component({ selector: "sheet-test", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class SheetTest {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
   }
 }

@@ -1,15 +1,8 @@
-# med-sheet
+# dialog-test
 
 
 
 <!-- Auto Generated Below -->
-
-
-## Events
-
-| Event      | Description | Type               |
-| ---------- | ----------- | ------------------ |
-| `medClick` |             | `CustomEvent<any>` |
 
 
 ## Dependencies
@@ -19,15 +12,17 @@
 - [ion-header](../../../header)
 - [ion-button](../../../button)
 - ion-icon
+- [med-type](../../core/med-type)
 
 ### Graph
 ```mermaid
 graph TD;
-  med-sheet --> ion-header
-  med-sheet --> ion-button
-  med-sheet --> ion-icon
+  dialog-test --> ion-header
+  dialog-test --> ion-button
+  dialog-test --> ion-icon
+  dialog-test --> med-type
   ion-button --> ion-ripple-effect
-  style med-sheet fill:#f9f,stroke:#333,stroke-width:4px
+  style dialog-test fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

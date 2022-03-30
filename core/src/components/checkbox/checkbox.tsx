@@ -16,7 +16,7 @@ import { generateMedColor } from '../../utils/med-theme';
 @Component({
   tag: 'ion-checkbox',
   styleUrls: {
-    ios: 'checkbox.ios.scss',
+    ios: 'checkbox.md.scss',
     md: 'checkbox.md.scss'
   },
   shadow: true

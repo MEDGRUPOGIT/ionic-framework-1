@@ -1,11 +1,8 @@
-@import "../../../../../templarios/abstracts";
-
 :host {
-  --spacing: var(--med-spacing-inline-base);
+  --spacing: 16px;
   --color: #{color('neutral', '1', 'contrast')};
   --color-like: #{color('feedback', 'success')};
   --color-dislike: #{color('feedback', 'warning')};
-  --color-hover: #{color('neutral', '7')};
 
   display: block;
 
@@ -29,6 +26,7 @@
 
   .button--disabled {
     pointer-events: none;
+    --color: #{color('neutral', '4')};
   }
 
   .button--like .rate {
@@ -37,13 +35,5 @@
 
   .button--dislike .rate {
     stroke: var(--color-dislike);
-  }
-}
-
-@media (any-hover: hover) {
-  :host {
-    .rate:hover {
-      stroke: var(--color-hover);
-    }
   }
 }

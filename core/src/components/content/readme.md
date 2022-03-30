@@ -265,6 +265,7 @@ Type: `Promise<void>`
  - [filtro-modal](../@medgrupo/team/dashboard/filtro-modal)
  - [med-config](../@medgrupo/global/med-config)
  - [med-image-zoom](../@medgrupo/global/med-image-zoom)
+ - [sheet-content-test](../@medgrupo/testes/sheet-content-test)
 
 ### Graph
 ```mermaid
@@ -272,6 +273,7 @@ graph TD;
   filtro-modal --> ion-content
   med-config --> ion-content
   med-image-zoom --> ion-content
+  sheet-content-test --> ion-content
   style ion-content fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
