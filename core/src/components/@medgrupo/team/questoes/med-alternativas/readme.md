@@ -44,10 +44,11 @@
 graph TD;
   med-alternativas --> med-alternativas-a
   med-alternativas --> med-alternativas-b
-  med-alternativas-a --> ion-progress-bar
+  med-alternativas-a --> med-chart-bar-horizontal
   med-alternativas-a --> ion-icon
+  med-chart-bar-horizontal --> med-type
   med-alternativas-b --> ion-icon
-  med-alternativas-b --> ion-progress-bar
+  med-alternativas-b --> med-chart-bar-horizontal
   style med-alternativas fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

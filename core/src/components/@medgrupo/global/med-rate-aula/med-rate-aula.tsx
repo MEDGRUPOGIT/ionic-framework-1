@@ -4,7 +4,7 @@ import { generateMedColor } from '../../../../utils/med-theme';
 @Component({
   tag: 'med-rate-aula',
   styleUrl: 'med-rate-aula.scss',
-  shadow: true,
+  scoped: true,
 })
 export class MedRateAula {
 
@@ -36,25 +36,25 @@ export class MedRateAula {
             <button class="med-rate-aula__button med-rate-aula__button--otimo">
               <ion-icon class="med-icon med-rate-aula__icon med-rate-aula__icon--otimo" name="med-excelente"></ion-icon>
             </button>
-            <h4 class="med-rate-aula__label med-rate-aula__label--otimo">Ótimo</h4>
+            <med-type token="p12" class="med-rate-aula__label" ds-color="fb-success">Ótimo</med-type>
           </div>
           <div class="med-rate-aula__item">
             <button class="med-rate-aula__button med-rate-aula__button--bom">
               <ion-icon class="med-icon med-rate-aula__icon med-rate-aula__icon--bom" name="med-bom"></ion-icon>
             </button>
-            <h4 class="med-rate-aula__label med-rate-aula__label--bom">Bom</h4>
+            <med-type token="p12" class="med-rate-aula__label" ds-color="fb-attention">Bom</med-type>
           </div>
           <div class="med-rate-aula__item">
             <button class="med-rate-aula__button med-rate-aula__button--regular">
               <ion-icon class="med-icon med-rate-aula__icon med-rate-aula__icon--regular" name="med-regular"></ion-icon>
             </button>
-            <h4 class="med-rate-aula__label med-rate-aula__label--regular">Regular</h4>
+            <med-type token="p12" class="med-rate-aula__label" ds-color="fb-caution">Regular</med-type>
           </div>
           <div class="med-rate-aula__item">
             <button class="med-rate-aula__button med-rate-aula__button--ruim">
               <ion-icon class="med-icon med-rate-aula__icon med-rate-aula__icon--ruim" name="med-ruim"></ion-icon>
             </button>
-            <h4 class="med-rate-aula__label med-rate-aula__label--ruim">Rium</h4>
+            <med-type token="p12" class="med-rate-aula__label" ds-color="fb-warning">Ruim</med-type>
           </div>
 
           <div class="med-rate-aula__button-fechar" onClick={(event: any) => { this.toggle(event) }}>
@@ -68,7 +68,7 @@ export class MedRateAula {
           <ion-button ds-size="xs" ds-name="tertiary">
             <ion-icon slot="icon-only" class="med-rate-aula__icon-abrir" name="med-avaliar"></ion-icon>
           </ion-button>
-          <med-type token="p12x">Avalie</med-type>
+          <med-type token="p12">Avalie</med-type>
         </div>
       </Host>
     );

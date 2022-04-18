@@ -156,7 +156,7 @@ export class Checkbox implements ComponentInterface {
         role="checkbox"
         class={generateMedColor(dsColor, {
           [mode]: true,
-          'in-item': hostContext('ion-item', el),
+          'in-item': hostContext('ion-item', el) || hostContext('med-item', el),
           'checkbox-checked': checked,
           'checkbox-disabled': disabled,
           'checkbox-indeterminate': indeterminate,

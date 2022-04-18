@@ -26,15 +26,6 @@
 | `"menu"`   | Slot destinado ao componete med-context-menu. |
 
 
-## CSS Custom Properties
-
-| Name                  | Description                                         |
-| --------------------- | --------------------------------------------------- |
-| `--background`        | Define a cor de background do componente.           |
-| `--background-footer` | Define a cor do background do footer do componente. |
-| `--color`             | Define a cor do texto.                              |
-
-
 ## Dependencies
 
 ### Depends on
@@ -47,6 +38,10 @@
 graph TD;
   med-message --> med-tooltip
   med-message --> ion-icon
+  med-tooltip --> med-type
+  med-tooltip --> ion-button
+  med-tooltip --> ion-icon
+  ion-button --> ion-ripple-effect
   style med-message fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

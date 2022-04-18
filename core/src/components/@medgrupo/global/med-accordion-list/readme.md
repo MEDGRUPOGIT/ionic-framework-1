@@ -22,15 +22,6 @@
 |      | Slot default destinado ao componente `med-accordion-item` |
 
 
-## CSS Custom Properties
-
-| Name              | Description                                  |
-| ----------------- | -------------------------------------------- |
-| `--background`    | Define a cor de background do componente.    |
-| `--border`        | Define a borda entre os itens do componente. |
-| `--border-radius` | Define o border-radius do componente.        |
-
-
 ## Dependencies
 
 ### Used by

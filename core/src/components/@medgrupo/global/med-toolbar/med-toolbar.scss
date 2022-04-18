@@ -66,17 +66,8 @@
   --background: #{curr-color('feedback', '1')};
 }
 
-:host(.med-color-neutral) ::slotted(*) {
-  color: #{color('feedback', '2', 'contrast')};
-  stroke: #{color('neutral', '2', 'contrast')};
+:host(.med-color-feedback) ::slotted(*) {
+  color: #{color('feedback', null, 'contrast')};
+  stroke: #{color('feedback', null, 'contrast')};
 }
 
-//
-// slotted
-//
-
-::slotted(*) {
-  margin: 0 !important;
-  padding: 0 !important;
-  list-style: none;
-}

@@ -23,14 +23,6 @@
 | `"title"`    | Titulo da navbar.                                |
 
 
-## CSS Custom Properties
-
-| Name           | Description                               |
-| -------------- | ----------------------------------------- |
-| `--background` | Define a cor de background do componente. |
-| `--color`      | Define a cor de texto do componente.      |
-
-
 ## Dependencies
 
 ### Used by

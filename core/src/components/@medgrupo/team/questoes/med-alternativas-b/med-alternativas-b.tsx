@@ -156,12 +156,17 @@ export class MedAlternativasB implements MedAlternativasInternoInterface {
                 </div>
               </div>
 
-              <ion-progress-bar ds-name="skin" percentage class={`
+              <med-chart-bar-horizontal label class={`
+                med-alternativas__progress-bar
+                ${mostraResposta && alternativaSelecionada ? 'med-alternativas__progress-bar--toggle' : ''}
+              `} value={Math.round(alternativa[this.keyPorcentagem] * 100)}></med-chart-bar-horizontal>
+
+              {/* <ion-progress-bar ds-name="skin" percentage class={`
                 med-alternativas__progress-bar
                 ${mostraResposta && alternativaSelecionada ? 'med-alternativas__progress-bar--toggle' : '' }
               `}
                 value={alternativa[this.keyPorcentagem]}>
-              </ion-progress-bar>
+              </ion-progress-bar> */}
             </div>
           ))}
 

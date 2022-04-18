@@ -1,7 +1,7 @@
 :host(.med-segment--default) {
-  border: var(--med-border-width-thin) solid #{color('neutral', '10')};
+  border: 2px solid #{color('neutral', '10')};
   height: 48px;
-  border-radius: var(--med-border-radius-sm);
+  border-radius: 8px;
 }
 
 // ////////////////////

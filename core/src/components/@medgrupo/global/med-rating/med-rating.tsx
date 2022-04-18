@@ -55,18 +55,18 @@ export class MedRating {
             'med-rating--nao-cabe': !cabe,
             [`med-rating--${dsName}`]: dsName !== undefined,
           })}>
+          <div class="med-rating__left">
+            <ion-icon name={cabe ? "med-positivo" : "med-negativo"} class="med-icon med-rating__icon"></ion-icon>
+          </div>
 
-            <div class="med-rating__left">
-              <ion-icon name={cabe ? "med-positivo" : "med-negativo"} class="med-icon med-rating__icon"></ion-icon>
-            </div>
-
-            <div class="med-rating__right">
-              <span class="med-rating__name">{nome}</span> <span class="med-rating__date">{data}</span>
-              <p class="med-rating__concurso">{concurso}</p>
-              <span class="med-rating__text">{texto}</span>
-              {(dsName === 'medgrupo') && <ion-icon name="med-logo" class="med-icon med-rating__icon-medgrupo"></ion-icon>}
-            </div>
-
+          <div class="med-rating__right">
+            <med-type class="med-rating__name">{nome}</med-type> <med-type class="med-rating__date">{data}</med-type>
+            <med-type class="med-rating__concurso">{concurso}</med-type>
+            <med-type class="med-rating__text">{texto}</med-type>
+            {(dsName === 'medgrupo') && <ion-icon name="med-logo" class="med-icon med-rating__icon-medgrupo"></ion-icon>}
+            {(dsName === 'banca' && cabe) && <med-type class="med-rating__banca">RECURSO CONCEDIDO</med-type>}
+            {(dsName === 'banca' && !cabe) && <med-type class="med-rating__banca">RECURSO NÃO CONCEDIDO</med-type>}
+          </div>
         </Host>
       );
     }

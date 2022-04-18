@@ -1,11 +1,9 @@
-@import "../../../../../templarios/abstracts";
-
 :host {
   --background-header: linear-gradient(to right, #{color('brand', '1')}, #{color('neutral', '2')}, #{color('neutral', '2')});
   --background-content: #{color('neutral', '2')};
   --icon-color: #{color('neutral', '10')};
-  --border-radius: var(--med-border-radius-sm);
-  --padding: var(--med-spacing-inset-sm);
+  --border-radius: 8px;
+  --padding: 16px;
   --icon-font-size: 24px;
   --align-items: initial;
 }
@@ -43,11 +41,11 @@
     display: flex;
 
     &--left {
-      padding-right: var(--med-spacing-inline-xxxs);
+      padding-right: 8px;
     }
 
     &--right {
-      padding-left: var(--med-spacing-inline-xxxs);
+      padding-left: 8px;
       margin-left: auto;
     }
   }
@@ -79,8 +77,8 @@
 }
 
 :host(.med-accordion-item--keep-border) .med-accordion-item__header {
-  border-bottom-left-radius: var(--med-border-radius-sm) !important;
-    border-bottom-right-radius: var(--med-border-radius-sm) !important;
+  border-bottom-left-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
 }
 
 // ////////////////////

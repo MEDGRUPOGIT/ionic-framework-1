@@ -19,6 +19,15 @@ Chips represent complex entities in small blocks, such as a contact. A chip can 
 | `label` _(required)_     | `label`      | Define o texto do componente.            | `string`                   | `undefined` |
 
 
+## Events
+
+| Event      | Description                          | Type                |
+| ---------- | ------------------------------------ | ------------------- |
+| `medBlur`  | Emitido quando o chip perde o focus. | `CustomEvent<void>` |
+| `medClick` | Emitido quando o chip é clicado.     | `CustomEvent<void>` |
+| `medFocus` | Emitido quando o chip tem focus.     | `CustomEvent<void>` |
+
+
 ## Dependencies
 
 ### Depends on

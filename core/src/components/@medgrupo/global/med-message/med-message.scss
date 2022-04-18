@@ -1,11 +1,6 @@
-@import "../../../../../templarios/abstracts";
+
 
 :host {
-  /**
-    * @prop --color: Define a cor do texto.
-    * @prop --background: Define a cor de background do componente.
-    * @prop --background-footer: Define a cor do background do footer do componente.
-    */
   --color: #{color('neutral', '2', 'contrast')};
   --background: #{color('neutral', '2')};
   --background-footer: #{color('neutral', '3')};
@@ -14,9 +9,9 @@
 :host(.med-message) {
   width: 100%;
   max-width: 1200px;
-  border-radius: var(--med-border-radius-sm);
+  border-radius: 8px;
   background: var(--background);
-  font-size: var(--med-font-size-xxs);
+  font-size: 14px;
   line-height: line-height($med-font-size-xxs);
   color: var(--color);
   display: block;
@@ -35,14 +30,14 @@
 }
 
 :host(.med-message) .med-message__content {
-  padding: var(--med-spacing-inset-sm);
+  padding: 16px;
 }
 
 :host(.med-message) .med-message__avatar {
   font-size: 30px;
   display: flex;
   align-items: center;
-  margin-right: var(--med-spacing-inline-xxxs);
+  margin-right: 8px;
 }
 
 :host(.med-message) .med-message__letter {
@@ -55,7 +50,7 @@
 }
 
 :host(.med-message) .med-message__header {
-  padding-bottom: var(--med-spacing-stack-xxxs);
+  padding-bottom: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -71,9 +66,9 @@
 }
 
 :host(.med-message) .med-message__number {
-  font-size: var(--med-font-size-xxxs);
-  font-weight: var(--med-font-weight-semibold);
-  line-height: var(--med-line-height-compressed);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 100%;
   margin: 0;
 }
 
@@ -88,7 +83,7 @@
 }
 
 :host(.med-message) .med-message__text {
-  font-size: var(--med-font-size-xxs);
+  font-size: 14px;
 }
 
 :host(.med-message) .med-message__icon {
@@ -96,14 +91,14 @@
 }
 
 :host(.med-message) .med-message__tooltip {
-  margin-right: var(--med-spacing-inline-xxxs);
+  margin-right: 8px;
 }
 
 :host(.med-message) .med-message__footer {
-  padding: var(--med-spacing-squish-xs);
+  padding: 8px 16px;
   background: var(--background-footer);
-  border-bottom-left-radius: var(--med-border-radius-sm);
-  border-bottom-right-radius: var(--med-border-radius-sm);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 :host(.med-message) .med-message__img {

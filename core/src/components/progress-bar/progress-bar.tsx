@@ -32,16 +32,6 @@ export class ProgressBar implements ComponentInterface {
   @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
-   * Define a variação do componente.
-   */
-   @Prop() dsName?: 'minimalist' | 'skin';
-
-  /**
-    * Esconde ou mostra a porcentagem.
-    */
-  @Prop({ reflect: true }) percentage = false;
-
-  /**
    * The state of the progress bar, based on if the time the process takes is known or not.
    * Default options are: `"determinate"` (no animation), `"indeterminate"` (animate from left to right).
    */
@@ -73,7 +63,7 @@ export class ProgressBar implements ComponentInterface {
   @Prop() color?: Color;
 
   render() {
-    const { dsColor, type, reversed, value, buffer, percentage, dsName } = this;
+    const { dsColor, type, reversed, value, buffer } = this;
     const paused = config.getBoolean('_testing');
     const mode = getIonMode(this);
     return (
@@ -85,9 +75,7 @@ export class ProgressBar implements ComponentInterface {
         class={generateMedColor(dsColor, {
           [mode]: true,
           'med-progress-bar': true,
-          [`med-progress-bar--${dsName}`]: dsName !== undefined,
           [`progress-bar-${type}`]: true,
-          'percentage': percentage,
           'progress-paused': paused,
           'progress-bar-reversed': document.dir === 'rtl' ? !reversed : reversed,
           'in-med-header': hostContext('med-header', this.el),
@@ -111,15 +99,13 @@ const renderIndeterminate = () => {
 };
 
 const renderProgress = (value: number, buffer: number) => {
-  const finalValue = value !== 0 ? (value * 100) : 8;
+  const finalValue = value !== 0 ? (value * 100) : 1;
   const unit = value !== 0 ? '%' : 'px';
   const finalBuffer = clamp(0, buffer, 1);
-  const renderedNumber = value * 100;
 
   return [
     <div class="progress-container">
       <div part="progress" class={`progress ${finalValue === 100 ? 'progress--correct' : ''}`} style={{ width: `${finalValue}${unit}` }}></div>
-      <span class="progress__percentage">{renderedNumber.toFixed()}%</span>
     </div>,
     /**
      * Buffer circles with two container to move

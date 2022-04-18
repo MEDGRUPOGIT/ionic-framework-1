@@ -201,7 +201,7 @@ export class Toggle implements ComponentInterface {
         class={generateMedColor(dsColor, {
           [mode]: true,
           'med-toggle': true,
-          'in-item': hostContext('ion-item', el),
+          'in-item': hostContext('ion-item', el) || hostContext('med-item', el),
           'toggle-activated': activated,
           'toggle-checked': checked,
           'toggle-disabled': disabled,

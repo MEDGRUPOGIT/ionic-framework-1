@@ -10,7 +10,6 @@
 ### Depends on
 
 - [med-base](../../../core/med-base)
-- [med-heading](../../../global/med-heading)
 - [ion-button](../../../../button)
 - ion-icon
 
@@ -18,7 +17,6 @@
 ```mermaid
 graph TD;
   filtro-dashboard --> med-base
-  filtro-dashboard --> med-heading
   filtro-dashboard --> ion-button
   filtro-dashboard --> ion-icon
   ion-button --> ion-ripple-effect

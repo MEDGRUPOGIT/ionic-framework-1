@@ -45,7 +45,9 @@ export class MedItem implements ComponentInterface, AnchorInterface, ButtonInter
    */
   @Prop() dsColor?: MedColor;
 
-  @Prop() padding = false;
+  @Prop({mutable: true}) contain = false;
+
+  @Prop() noPadding = false;
 
   /**
    * If `true`, a button tag will be rendered and the item will be tappable.
@@ -207,7 +209,9 @@ export class MedItem implements ComponentInterface, AnchorInterface, ButtonInter
   // that should get the hover, focused and activated states UNLESS it has multiple
   // inputs, then those need to individually get each click
   private hasCover(): boolean {
-    const inputs = this.el.querySelectorAll('ion-checkbox, ion-datetime, ion-select, ion-radio');
+    const inputs = this.el.querySelectorAll('ion-checkbox, ion-datetime, ion-select, ion-radio, ion-toggle');
+    console.log(inputs);
+
     return inputs.length === 1 && !this.multipleInputs;
   }
 
@@ -254,7 +258,7 @@ export class MedItem implements ComponentInterface, AnchorInterface, ButtonInter
   }
 
   render() {
-    const { dsColor, padding, detail, detailIcon, download, labelColorStyles, lines, disabled, href, rel, target, routerAnimation, routerDirection } = this;
+    const { dsColor, noPadding, detail, detailIcon, download, labelColorStyles, lines, disabled, href, rel, target, routerAnimation, routerDirection } = this;
     const childStyles = {};
     const mode = getIonMode(this);
     const clickable = this.isClickable();
@@ -290,10 +294,10 @@ export class MedItem implements ComponentInterface, AnchorInterface, ButtonInter
             [`med-item-lines-${lines}`]: lines !== undefined,
             'med-item-disabled': disabled,
             'in-list': hostContext('med-lista', this.el),
-            'med-item-multiple-inputs': this.multipleInputs,
+            'med-item-multiple-inputs': this.multipleInputs || this.contain,
             'ion-activatable': canActivate,
             'ion-focusable': true,
-            'med-item--no-padding': padding
+            'med-item--no-padding': noPadding
           })
         }}
       >
@@ -304,13 +308,15 @@ export class MedItem implements ComponentInterface, AnchorInterface, ButtonInter
             disabled={disabled}
             {...clickFn}
           >
-            <slot name="start"></slot>
             <div class="item-inner">
+              <slot name="start"></slot>
               <div class="input-wrapper">
                 <slot></slot>
               </div>
               <slot name="end"></slot>
+
               {showDetail && <ion-icon icon={detailIcon} lazy={false} class="med-icon item-detail-icon" part="detail-icon" aria-hidden="true"></ion-icon>}
+
               <div class="item-inner-highlight"></div>
             </div>
             {/* {canActivate && mode === 'md' && <ion-ripple-effect></ion-ripple-effect>} */}

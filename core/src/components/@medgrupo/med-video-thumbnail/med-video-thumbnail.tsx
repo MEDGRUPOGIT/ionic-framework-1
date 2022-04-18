@@ -10,28 +10,28 @@ import { generateMedColor } from '../../../utils/med-theme';
 export class MedVideoThumbnail {
 
   /**
-    * TODO
+    * Define a cor do componente.
     */
   @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
-    * TODO
+    * Define a url da imagem a ser mostrada.
     */
   @Prop({ reflect: true }) url?: string;
 
   /**
-    * TODO
+    * Define a porcentagem a ser mostrada.
     */
   @Prop({ reflect: true }) value = 0;
 
   render() {
-    const {url, value, dsColor} = this;
+    const {dsColor, url, value} = this;
 
     return (
       <Host
          class={generateMedColor(dsColor, {
-        'med-video-thumbnail': true,
-      })}>
+          'med-video-thumbnail': true
+        })}>
         <img class="med-video-thumbnail__img" src={url}/>
         <ion-icon class="med-icon med-icon--lg med-video-thumbnail__icon" name="med-play"></ion-icon>
         <ion-progress-bar ds-color={dsColor} class="med-video-thumbnail__progress" ds-name="minimalist" value={value}></ion-progress-bar>

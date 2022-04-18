@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property  | Attribute  | Description | Type                  | Default     |
-| --------- | ---------- | ----------- | --------------------- | ----------- |
-| `dsColor` | `ds-color` | TODO        | `string \| undefined` | `undefined` |
-| `url`     | `url`      | TODO        | `string \| undefined` | `undefined` |
-| `value`   | `value`    | TODO        | `number`              | `0`         |
+| Property  | Attribute  | Description                            | Type                  | Default     |
+| --------- | ---------- | -------------------------------------- | --------------------- | ----------- |
+| `dsColor` | `ds-color` | Define a cor do componente.            | `string \| undefined` | `undefined` |
+| `url`     | `url`      | Define a url da imagem a ser mostrada. | `string \| undefined` | `undefined` |
+| `value`   | `value`    | Define a porcentagem a ser mostrada.   | `number`              | `0`         |
 
 
 ## Dependencies

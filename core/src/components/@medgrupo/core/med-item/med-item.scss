@@ -1,7 +1,9 @@
 @import '../../../../themes/ionic.mixins.scss';
 
 :host {
-  --padding: 12px 16px;
+  --padding: 8px 16px;
+  --background: transparent;
+  --border-radius: 0;
 }
 
 :host {
@@ -9,18 +11,18 @@
   display: block;
   padding: var(--padding);
   position: relative;
-}
-
-:host(.med-item) {
-  background: transparent !important;
+  background-color: var(--background);
+  outline: none;
+  border-radius: var(--border-radius);
 }
 
 :host(.med-item--no-padding) {
-  --padding: 0 16px;
+  --padding: 8px 0;
 }
 
 .item-inner {
   display: flex;
+  align-items: center;
 }
 
 .input-wrapper {
@@ -49,6 +51,67 @@
 
 button, a {
   cursor: pointer;
+  outline: none;
   user-select: none;
   -webkit-user-drag: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.item-highlight,
+.item-inner-highlight {
+  @include position(null, 0, 0, 0);
+  position: absolute;
+  z-index: 1;
+}
+
+:host(.med-item-multiple-inputs) ::slotted(ion-checkbox),
+:host(.med-item-multiple-inputs) ::slotted(ion-datetime),
+:host(.med-item-multiple-inputs) ::slotted(ion-radio),
+:host(.med-item-multiple-inputs) ::slotted(ion-select),
+:host(.med-item-multiple-inputs) ::slotted(ion-toggle) {
+  position: relative;
+}
+
+//////////////////////////////
+// states
+//////////////////////////////
+
+:host(.med-item-disabled) {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+//////////////////////////////
+// slottted
+//////////////////////////////
+
+::slotted([slot="start"]) {
+  margin-right: 16px;
+}
+
+::slotted([slot="end"]) {
+  margin-left: 16px;
+}
+
+::slotted(ion-icon) {
+  stroke: color('neutral', '10');
+}
+
+//////////////////////////////
+// dsColor
+//////////////////////////////
+
+:host(.med-color) {
+  --background: #{curr-color('color', '3')};
+}
+
+:host(.med-color-neutral) {
+  --background: #{curr-color('neutral')};
+}
+
+:host(.med-color-feedback) {
+  --background: #{curr-color('feedback')};
 }

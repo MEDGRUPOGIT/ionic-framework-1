@@ -1,4 +1,4 @@
-import { Component, Host, Prop, h } from '@stencil/core';
+import { Component, Host, Prop, h, Event, EventEmitter } from '@stencil/core';
 import { MedColor } from '../../../../interface';
 import { generateMedColor } from '../../../../utils/med-theme';
 
@@ -50,6 +50,33 @@ export class MedChip {
     */
   @Prop({reflect: true}) iconRight!: string;
 
+  /**
+    * Emitido quando o chip tem focus.
+    */
+   @Event() medFocus!: EventEmitter<void>;
+
+  /**
+    * Emitido quando o chip perde o focus.
+    */
+  @Event() medBlur!: EventEmitter<void>;
+
+  /**
+    * Emitido quando o chip é clicado.
+    */
+  @Event() medClick!: EventEmitter<void>;
+
+  private onFocus = () => {
+    this.medFocus.emit();
+  }
+
+  private onBlur = () => {
+    this.medBlur.emit();
+  }
+
+  private onClick = () => {
+    this.medClick.emit();
+  }
+
   render() {
     const { dsColor, dsName, dsSize, disabled, label, active, iconLeft, iconRight } = this;
 
@@ -65,6 +92,9 @@ export class MedChip {
           [`med-chip--icon-left`]: iconLeft !== undefined,
           [`med-chip--icon-right`]:  iconRight !== undefined,
         })}
+        onFocus={this.onFocus}
+        onBlur={this.onBlur}
+        onClick={this.onClick}
       >
         {iconLeft !== undefined && <div class="med-chip__img-warp">
          <ion-icon class="med-icon med-chip__icon" name={iconLeft}></ion-icon>

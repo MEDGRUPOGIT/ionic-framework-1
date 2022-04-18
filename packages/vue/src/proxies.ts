@@ -8,21 +8,6 @@ import type { JSX } from '@ionic/core';
 
 
 
-export const AccordionGroup = /*@__PURE__*/ defineContainer<JSX.AccordionGroup>('accordion-group', [
-  'singleOpen',
-  'noAnimation'
-]);
-
-
-export const AccordionItem = /*@__PURE__*/ defineContainer<JSX.AccordionItem>('accordion-item', [
-  'background',
-  'disable',
-  'open',
-  'headerToggle',
-  'toggle'
-]);
-
-
 export const DialogTest = /*@__PURE__*/ defineContainer<JSX.DialogTest>('dialog-test');
 
 
@@ -481,8 +466,6 @@ export const IonNote = /*@__PURE__*/ defineContainer<JSX.IonNote>('ion-note', [
 
 export const IonProgressBar = /*@__PURE__*/ defineContainer<JSX.IonProgressBar>('ion-progress-bar', [
   'dsColor',
-  'dsName',
-  'percentage',
   'type',
   'reversed',
   'value',
@@ -1108,7 +1091,10 @@ export const MedChip = /*@__PURE__*/ defineContainer<JSX.MedChip>('med-chip', [
   'disabled',
   'active',
   'iconLeft',
-  'iconRight'
+  'iconRight',
+  'medFocus',
+  'medBlur',
+  'medClick'
 ]);
 
 
@@ -1176,13 +1162,6 @@ export const MedHeader = /*@__PURE__*/ defineContainer<JSX.MedHeader>('med-heade
 ]);
 
 
-export const MedHeading = /*@__PURE__*/ defineContainer<JSX.MedHeading>('med-heading', [
-  'dsColor',
-  'dsName',
-  'dsSize'
-]);
-
-
 export const MedImageZoom = /*@__PURE__*/ defineContainer<JSX.MedImageZoom>('med-image-zoom', [
   'imagens',
   'marcaAguaSuperior',
@@ -1196,7 +1175,8 @@ export const MedInput = /*@__PURE__*/ defineContainer<JSX.MedInput>('med-input')
 
 export const MedItem = /*@__PURE__*/ defineContainer<JSX.MedItem>('med-item', [
   'dsColor',
-  'padding',
+  'contain',
+  'noPadding',
   'button',
   'detail',
   'detailIcon',
@@ -1250,12 +1230,7 @@ export const MedListItemAccordion = /*@__PURE__*/ defineContainer<JSX.MedListIte
 ]);
 
 
-export const MedLista = /*@__PURE__*/ defineContainer<JSX.MedLista>('med-lista', [
-  'dsColor',
-  'padding',
-  'lines',
-  'inset'
-]);
+export const MedLista = /*@__PURE__*/ defineContainer<JSX.MedLista>('med-lista');
 
 
 export const MedMessage = /*@__PURE__*/ defineContainer<JSX.MedMessage>('med-message', [
@@ -1315,13 +1290,6 @@ export const MedOffline = /*@__PURE__*/ defineContainer<JSX.MedOffline>('med-off
 
 export const MedOption = /*@__PURE__*/ defineContainer<JSX.MedOption>('med-option', [
   'dsColor'
-]);
-
-
-export const MedParagraph = /*@__PURE__*/ defineContainer<JSX.MedParagraph>('med-paragraph', [
-  'dsColor',
-  'dsName',
-  'dsSize'
 ]);
 
 
@@ -1389,6 +1357,9 @@ export const MedRating = /*@__PURE__*/ defineContainer<JSX.MedRating>('med-ratin
 ]);
 
 
+export const MedSegment = /*@__PURE__*/ defineContainer<JSX.MedSegment>('med-segment');
+
+
 export const MedSemana = /*@__PURE__*/ defineContainer<JSX.MedSemana>('med-semana', [
   'dsColor',
   'dsSize',
@@ -1402,13 +1373,6 @@ export const MedSemana = /*@__PURE__*/ defineContainer<JSX.MedSemana>('med-seman
 
 export const MedSemanas = /*@__PURE__*/ defineContainer<JSX.MedSemanas>('med-semanas', [
   'skin'
-]);
-
-
-export const MedSubtitle = /*@__PURE__*/ defineContainer<JSX.MedSubtitle>('med-subtitle', [
-  'dsColor',
-  'dsName',
-  'dsSize'
 ]);
 
 
@@ -1453,13 +1417,16 @@ export const MedToolbar = /*@__PURE__*/ defineContainer<JSX.MedToolbar>('med-too
 
 
 export const MedTooltip = /*@__PURE__*/ defineContainer<JSX.MedTooltip>('med-tooltip', [
-  'dsName',
   'dsColor',
   'placement',
   'position',
   'titulo',
   'content',
-  'collapsed'
+  'btnLeft',
+  'btnRight',
+  'collapsed',
+  'btnLeftClick',
+  'btnRightClick'
 ]);
 
 
@@ -1467,11 +1434,6 @@ export const MedType = /*@__PURE__*/ defineContainer<JSX.MedType>('med-type', [
   'dsColor',
   'token',
   'tag'
-]);
-
-
-export const MedVideoListItem = /*@__PURE__*/ defineContainer<JSX.MedVideoListItem>('med-video-list-item', [
-  'dsColor'
 ]);
 
 
@@ -1495,6 +1457,9 @@ export const MontaProvasPlusminus = /*@__PURE__*/ defineContainer<JSX.MontaProva
   'disabled',
   'medChange'
 ]);
+
+
+export const SelectTest = /*@__PURE__*/ defineContainer<JSX.SelectTest>('select-test');
 
 
 export const SheetContentTest = /*@__PURE__*/ defineContainer<JSX.SheetContentTest>('sheet-content-test');

@@ -18,27 +18,18 @@
 | `texto`    | `texto`    | Define o conteúdo de texto.               | `string \| undefined`                | `undefined` |
 
 
-## CSS Custom Properties
-
-| Name                 | Description                                                       |
-| -------------------- | ----------------------------------------------------------------- |
-| `--background`       | Define a cor de background do componente quando cabe ou não cabe. |
-| `--background-right` | Define a cor do background do lado direito do componente.         |
-| `--color`            | Define a cor do texto.                                            |
-| `--color-date`       | Define a cor do texto da data.                                    |
-| `--color-icon`       | Define a cor do icone.                                            |
-
-
 ## Dependencies
 
 ### Depends on
 
 - ion-icon
+- [med-type](../../core/med-type)
 
 ### Graph
 ```mermaid
 graph TD;
   med-rating --> ion-icon
+  med-rating --> med-type
   style med-rating fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

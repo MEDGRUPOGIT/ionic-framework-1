@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type                  | Default           |
-| -------- | --------- | ----------- | --------------------- | ----------------- |
-| `like`   | `like`    | TODO        | `number`              | `0`               |
-| `titulo` | `titulo`  | TODO        | `string \| undefined` | `'Cabe recurso?'` |
-| `unlike` | `unlike`  | TODO        | `number`              | `0`               |
+| Property | Attribute | Description                                    | Type                  | Default           |
+| -------- | --------- | ---------------------------------------------- | --------------------- | ----------------- |
+| `like`   | `like`    | Define a quantidade de recursos que cabem.     | `number`              | `0`               |
+| `titulo` | `titulo`  | Define o titulo do componente.                 | `string \| undefined` | `'Cabe recurso?'` |
+| `unlike` | `unlike`  | Define a quantidade de recursos que não cabem. | `number`              | `0`               |
 
 
 ## Dependencies

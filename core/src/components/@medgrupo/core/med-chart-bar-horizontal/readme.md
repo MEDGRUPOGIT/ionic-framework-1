@@ -25,6 +25,8 @@
 
 ### Used by
 
+ - [med-alternativas-a](../../team/questoes/med-alternativas-a)
+ - [med-alternativas-b](../../team/questoes/med-alternativas-b)
  - [med-chart-categoria](../../compositions/med-chart-categoria)
 
 ### Depends on
@@ -35,6 +37,8 @@
 ```mermaid
 graph TD;
   med-chart-bar-horizontal --> med-type
+  med-alternativas-a --> med-chart-bar-horizontal
+  med-alternativas-b --> med-chart-bar-horizontal
   med-chart-categoria --> med-chart-bar-horizontal
   style med-chart-bar-horizontal fill:#f9f,stroke:#333,stroke-width:4px
 ```

@@ -35,8 +35,9 @@
  - [med-nav-item](../med-nav-item)
  - [med-piechart](../../compositions/med-piechart)
  - [med-rate-aula](../../global/med-rate-aula)
+ - [med-rating](../../global/med-rating)
  - [med-semana](../../compositions/med-semana)
- - [med-video-list-item](../../testes/med-video-list-item)
+ - [med-tooltip](../../global/med-tooltip)
  - [sheet-content-test](../../testes/sheet-content-test)
  - [sheet-test](../../testes/sheet-test)
 
@@ -60,8 +61,9 @@ graph TD;
   med-nav-item --> med-type
   med-piechart --> med-type
   med-rate-aula --> med-type
+  med-rating --> med-type
   med-semana --> med-type
-  med-video-list-item --> med-type
+  med-tooltip --> med-type
   sheet-content-test --> med-type
   sheet-test --> med-type
   style med-type fill:#f9f,stroke:#333,stroke-width:4px
