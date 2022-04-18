@@ -3,7 +3,7 @@ import { withDesign } from 'storybook-addon-designs';
 import { MedColors } from "../../../../global/templarios/color.enum";
 
 export default {
-  title: 'Components/Compositions/@OK Task/@OK Check Card (Task)',
+  title: 'Components/Compositions/@OK Task/Check Card (Task)',
   decorators: [withDesign],
 };
 
@@ -20,14 +20,7 @@ const Template = ({ dsColor, alert, titulo, categoria, horaInicial, horaFinal, d
         display: block;
       }
 
-      .med-check-card__tooltip-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-bottom: 20px;
-      }
-
-      .med-check-card&__tooltip-icon {
+      .med-check-card__tooltip-icon {
         stroke: hsl(var(--med-color-neutral-1));
         cursor: pointer;
       }
@@ -39,7 +32,6 @@ const Template = ({ dsColor, alert, titulo, categoria, horaInicial, horaFinal, d
     </style>
     <ion-app>
       <ion-content>
-
         <div class="full-height-flex">
 
           <!-- component markdown-->
@@ -60,24 +52,16 @@ const Template = ({ dsColor, alert, titulo, categoria, horaInicial, horaFinal, d
           >
             <ion-checkbox slot="input"></ion-checkbox>
 
-            <med-tooltip slot="tooltip" class="med-check-card__tooltip" ds-color="fb-warning" placement="top" position="end">
+            <med-tooltip class="med-check-card__tooltip" slot="tooltip" placement="top" position="end" ds-color="fb-warning" titulo=${tooltipHeading} content=${tooltipContent}>
               <ion-icon class="med-check-card__alert-icon med-icon med-icon--sm" name="med-alerta" slot="input"></ion-icon>
-              <div slot="content">
-                <div class="med-check-card__tooltip-header">
-                  <med-type ds-color="neutral-01" token="p14b">${tooltipHeading}</med-type>
-                  <ion-icon class="med-check-card__tooltip-icon med-icon med-icon--sm" name="med-fechar"></ion-icon>
-                </div>
-                <med-type ds-color="neutral-01" token="p14x" slot="content">${tooltipContent}</med-type>
-              </div>
             </med-tooltip>
           </med-check-card>
           <!-- component markdown-->
 
         </div>
-
       </ion-content>
     </ion-app>
-    `;
+  `;
 };
 
 export const Default = Template.bind({});

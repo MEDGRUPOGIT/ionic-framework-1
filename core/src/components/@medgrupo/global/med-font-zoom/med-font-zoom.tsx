@@ -14,7 +14,7 @@ export class MedFontZoom {
   @Prop() emitter!: { emit: (value: MedFontSize) => void };
 
   /**
-   * TODO
+   * Define o tamnho da fonte
    */
   @Prop({mutable: true}) value: MedFontSize = MedFontSize.XS;
 
@@ -73,12 +73,7 @@ export class MedFontZoom {
           step={this.step}
           value={this.fontSizeToValue(this.value)}
         >
-          <ion-icon
-            class="med-icon"
-            slot="start"
-            size="small"
-            name="med-fontemenor"
-          ></ion-icon>
+          <ion-icon class="med-icon" slot="start" name="med-fontemenor"></ion-icon>
           <ion-icon class="med-icon" slot="end" name="med-fontemaior"></ion-icon>
         </ion-range>
       </Host>

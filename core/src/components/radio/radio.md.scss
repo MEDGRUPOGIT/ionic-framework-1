@@ -117,3 +117,11 @@
 // ////////////////////
 
 @import './radio.med.scss';
+
+:host(.in-item[slot="start"]) {
+  margin: 0;
+}
+
+:host(.in-item[slot="end"]) {
+  margin: 0;
+}

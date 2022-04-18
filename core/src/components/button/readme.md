@@ -383,7 +383,7 @@ export default defineComponent({
  - [med-nav-simple](../@medgrupo/core/med-nav-simple)
  - [med-offline](../@medgrupo/global/med-offline)
  - [med-rate-aula](../@medgrupo/global/med-rate-aula)
- - [med-video-list-item](../@medgrupo/testes/med-video-list-item)
+ - [med-tooltip](../@medgrupo/global/med-tooltip)
  - [sheet-content-test](../@medgrupo/testes/sheet-content-test)
  - [sheet-test](../@medgrupo/testes/sheet-test)
 
@@ -408,7 +408,7 @@ graph TD;
   med-nav-simple --> ion-button
   med-offline --> ion-button
   med-rate-aula --> ion-button
-  med-video-list-item --> ion-button
+  med-tooltip --> ion-button
   sheet-content-test --> ion-button
   sheet-test --> ion-button
   style ion-button fill:#f9f,stroke:#333,stroke-width:4px

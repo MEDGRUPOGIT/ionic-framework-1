@@ -132,17 +132,15 @@ export default defineComponent({
 
 ## Properties
 
-| Property     | Attribute    | Description                                                                                                                                                                                                                                                            | Type                                  | Default         |
-| ------------ | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | --------------- |
-| `buffer`     | `buffer`     | If the buffer and value are smaller than 1, the buffer circles will show. The buffer should be between [0, 1].                                                                                                                                                         | `number`                              | `1`             |
-| `color`      | `color`      | The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics). | `string \| undefined`                 | `undefined`     |
-| `dsColor`    | `ds-color`   | Define a cor do componente.                                                                                                                                                                                                                                            | `string \| undefined`                 | `undefined`     |
-| `dsName`     | `ds-name`    | Define a variação do componente.                                                                                                                                                                                                                                       | `"minimalist" \| "skin" \| undefined` | `undefined`     |
-| `mode`       | `mode`       | The mode determines which platform styles to use.                                                                                                                                                                                                                      | `"ios" \| "md"`                       | `undefined`     |
-| `percentage` | `percentage` | Esconde ou mostra a porcentagem.                                                                                                                                                                                                                                       | `boolean`                             | `false`         |
-| `reversed`   | `reversed`   | If true, reverse the progress bar direction.                                                                                                                                                                                                                           | `boolean`                             | `false`         |
-| `type`       | `type`       | The state of the progress bar, based on if the time the process takes is known or not. Default options are: `"determinate"` (no animation), `"indeterminate"` (animate from left to right).                                                                            | `"determinate" \| "indeterminate"`    | `'determinate'` |
-| `value`      | `value`      | The value determines how much of the active bar should display when the `type` is `"determinate"`. The value should be between [0, 1].                                                                                                                                 | `number`                              | `0`             |
+| Property   | Attribute  | Description                                                                                                                                                                                                                                                            | Type                               | Default         |
+| ---------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- | --------------- |
+| `buffer`   | `buffer`   | If the buffer and value are smaller than 1, the buffer circles will show. The buffer should be between [0, 1].                                                                                                                                                         | `number`                           | `1`             |
+| `color`    | `color`    | The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics). | `string \| undefined`              | `undefined`     |
+| `dsColor`  | `ds-color` | Define a cor do componente.                                                                                                                                                                                                                                            | `string \| undefined`              | `undefined`     |
+| `mode`     | `mode`     | The mode determines which platform styles to use.                                                                                                                                                                                                                      | `"ios" \| "md"`                    | `undefined`     |
+| `reversed` | `reversed` | If true, reverse the progress bar direction.                                                                                                                                                                                                                           | `boolean`                          | `false`         |
+| `type`     | `type`     | The state of the progress bar, based on if the time the process takes is known or not. Default options are: `"determinate"` (no animation), `"indeterminate"` (animate from left to right).                                                                            | `"determinate" \| "indeterminate"` | `'determinate'` |
+| `value`    | `value`    | The value determines how much of the active bar should display when the `type` is `"determinate"`. The value should be between [0, 1].                                                                                                                                 | `number`                           | `0`             |
 
 
 ## Shadow Parts
@@ -154,21 +152,10 @@ export default defineComponent({
 | `"track"`    | The track bar behind the progress bar. If the `buffer` property is set and `type` is `"determinate"` the track will be the width of the `buffer` value. |
 
 
-## CSS Custom Properties
-
-| Name                    | Description                                                            |
-| ----------------------- | ---------------------------------------------------------------------- |
-| `--background`          | Background of the progress track, or the buffer bar if `buffer` is set |
-| `--buffer-background`   | DEPRECATED, use `--background` instead                                 |
-| `--progress-background` | Background of the progress bar representing the current value          |
-
-
 ## Dependencies
 
 ### Used by
 
- - [med-alternativas-a](../@medgrupo/team/questoes/med-alternativas-a)
- - [med-alternativas-b](../@medgrupo/team/questoes/med-alternativas-b)
  - [med-aula-professor](../@medgrupo/compositions/med-aula-professor)
  - [med-item-aulas](../@medgrupo/global/med-item-aulas)
  - [med-video-thumbnail](../@medgrupo/med-video-thumbnail)
@@ -176,8 +163,6 @@ export default defineComponent({
 ### Graph
 ```mermaid
 graph TD;
-  med-alternativas-a --> ion-progress-bar
-  med-alternativas-b --> ion-progress-bar
   med-aula-professor --> ion-progress-bar
   med-item-aulas --> ion-progress-bar
   med-video-thumbnail --> ion-progress-bar

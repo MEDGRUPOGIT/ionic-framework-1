@@ -2,7 +2,7 @@ import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
 
 export default {
-  title: 'Components/Compositions/@OK Task/@OK Add Card (New Task)',
+  title: 'Components/Compositions/@OK Task/Add Card (New Task)',
   decorators: [withDesign],
 };
 

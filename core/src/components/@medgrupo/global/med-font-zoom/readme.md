@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property               | Attribute | Description | Type                                                                                        | Default          |
-| ---------------------- | --------- | ----------- | ------------------------------------------------------------------------------------------- | ---------------- |
-| `emitter` _(required)_ | --        | TODO        | `{ emit: (value: MedFontSize) => void; }`                                                   | `undefined`      |
-| `value`                | `value`   | TODO        | `MedFontSize.MD \| MedFontSize.SM \| MedFontSize.XS \| MedFontSize.XXS \| MedFontSize.XXXS` | `MedFontSize.XS` |
+| Property               | Attribute | Description              | Type                                                                                        | Default          |
+| ---------------------- | --------- | ------------------------ | ------------------------------------------------------------------------------------------- | ---------------- |
+| `emitter` _(required)_ | --        | TODO                     | `{ emit: (value: MedFontSize) => void; }`                                                   | `undefined`      |
+| `value`                | `value`   | Define o tamnho da fonte | `MedFontSize.MD \| MedFontSize.SM \| MedFontSize.XS \| MedFontSize.XXS \| MedFontSize.XXXS` | `MedFontSize.XS` |
 
 
 ## Dependencies

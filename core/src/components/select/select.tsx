@@ -19,7 +19,7 @@ import { SelectCompareFn } from './select-interface';
 @Component({
   tag: 'ion-select',
   styleUrls: {
-    ios: 'select.ios.scss',
+    ios: 'select.md.scss',
     md: 'select.md.scss'
   },
   shadow: true

@@ -2,20 +2,20 @@
   --background: #{color('brand', '3')};
   --color: #{color('brand', '3', 'contrast')};
   --padding-bottom: 0;
-  --padding-end: var(--med-spacing-inline-base);
-  --padding-start: var(--med-spacing-inline-base);
+  --padding-end: 16px;
+  --padding-start: 16px;
   --padding-top: 0;
 
   --border-color: #{color('brand', '3')};
 }
 
 :host(.med-badge) {
-  font-size: var(--med-font-size-xxs);
-  font-weight: var(--med-font-weight-medium);
-  line-height: var(--med-line-height-compressed);
-  border-radius: var(--med-border-radius-pill);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 100%;
+  border-radius: 31.25em;
   border-color: var(--border-color);
-  border-width: var(--med-border-width-hairline);
+  border-width: 1px;
   font-family: inherit;
   min-width: auto;
   border-style: solid;
@@ -29,42 +29,42 @@
 // ////////////////////
 
 :host(.med-badge--xxs) {
-  --padding-start: var(--med-spacing-inline-xxxs);
-  --padding-end: var(--med-spacing-inline-xxxs);
-  font-size: var(--med-font-size-nano);
+  --padding-start: 8px;
+  --padding-end: 8px;
+  font-size: 10px;
   font-weight: var(--font-weight-light);
   height: 16px;
 }
 
 :host(.med-badge--xs) {
-  --padding-start: var(--med-spacing-inline-xxxs);
-  --padding-end: var(--med-spacing-inline-xxxs);
-  font-size: var(--med-font-size-nano);
-  font-weight: var(--med-font-weight-medium);
+  --padding-start: 8px;
+  --padding-end: 8px;
+  font-size: 10px;
+  font-weight: 500;
   height: 16px;
 }
 
 :host(.med-badge--sm) {
-  --padding-start: var(--med-spacing-inline-base);
-  --padding-end: var(--med-spacing-inline-base);
-  font-size: var(--med-font-size-nano);
-  font-weight: var(--med-font-weight-medium);
+  --padding-start: 16px;
+  --padding-end: 16px;
+  font-size: 10px;
+  font-weight: 500;
   height: 24px;
 }
 
 :host(.med-badge--md) {
-  --padding-start: var(--med-spacing-inline-base);
-  --padding-end: var(--med-spacing-inline-base);
-  font-size: var(--med-font-size-xxs);
-  font-weight: var(--med-font-weight-medium);
+  --padding-start: 16px;
+  --padding-end: 16px;
+  font-size: 14px;
+  font-weight: 500;
   height: 32px;
 }
 
 :host(.med-badge--lg){
-  --padding-start: var(--med-spacing-inline-xxs);
-  --padding-end: var(--med-spacing-inline-xxs);
-  font-size: var(--med-font-size-xs);
-  font-weight: var(--med-font-weight-medium);
+  --padding-start: 24px;
+  --padding-end: 24px;
+  font-size: 16px;
+  font-weight: 500;
   height: 40px;
 }
 

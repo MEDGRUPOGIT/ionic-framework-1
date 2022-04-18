@@ -2,28 +2,21 @@
   --bar-background: #{color('neutral', '7')};
   --bar-background-active: #{color('brand', '4')};
   --knob-size: 24px;
+  --height: 24px;
   padding: 0;
 }
 
 // ////////////////////
-// color
+// dsColor
 // ////////////////////
 
 :host(.med-color) {
   --bar-background-active: #{curr-color('color', '4')};
 }
 
-// ////////////////////
-// neutral
-// ////////////////////
-
 :host(.med-color-neutral) {
   --bar-background-active: #{curr-color('neutral')};
 }
-
-// //////////
-// feedback
-// //////////
 
 :host(.med-color-feedback) {
   --bar-background-active: #{curr-color('feedback')};

@@ -1,4 +1,4 @@
-@import "../../../../../templarios/abstracts";
+
 
 :host {
   display: flex;
@@ -14,9 +14,9 @@
 
     &__title {
       color: #{color('neutral', '1', 'contrast')};;
-      font-size: var(--med-font-size-xs);
-      line-height: var(--med-line-height-compressed);
-      font-weight: var(--med-font-weight-semibold);
+      font-size: 16px;
+      line-height: 100%;
+      font-weight: 600;
     }
 
     .med-icon {
@@ -111,7 +111,7 @@
 
   .zoom-button-container {
     position: fixed;
-    bottom: var(--med-spacing-stack-md);
+    bottom: 48px;
     right: 15px;
     height: 175px;
     width: 48px;
@@ -135,7 +135,7 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: var(--med-spacing-stack-base);
+      margin-bottom: 16px;
     }
 
     &--close {

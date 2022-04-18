@@ -117,3 +117,27 @@
 }
 
 @import './toggle.med.scss';
+
+label {
+  @include input-cover();
+  display: flex;
+  align-items: center;
+  opacity: 0;
+}
+
+:host(.in-item) {
+  position: static;
+  contain: none;
+}
+
+:host(.in-item[slot]) {
+  padding: 0;
+}
+
+:host(.in-item[slot="start"]) {
+  margin: 0;
+}
+
+:host(.in-item[slot="end"]) {
+  margin: 0;
+}

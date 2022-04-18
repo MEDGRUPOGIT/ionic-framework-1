@@ -2,8 +2,6 @@
 import type * as d from './proxies';
 
 export const DIRECTIVES = [
-  d.AccordionGroup,
-  d.AccordionItem,
   d.DialogTest,
   d.FiltroDashboard,
   d.FiltroModal,
@@ -114,7 +112,6 @@ export const DIRECTIVES = [
   d.MedEnunciadoDiscursiva,
   d.MedFontZoom,
   d.MedHeader,
-  d.MedHeading,
   d.MedImageZoom,
   d.MedInput,
   d.MedItem,
@@ -132,7 +129,6 @@ export const DIRECTIVES = [
   d.MedNavbar,
   d.MedOffline,
   d.MedOption,
-  d.MedParagraph,
   d.MedParent,
   d.MedPiechart,
   d.MedQuestion,
@@ -141,9 +137,9 @@ export const DIRECTIVES = [
   d.MedRateLike,
   d.MedRateResult,
   d.MedRating,
+  d.MedSegment,
   d.MedSemana,
   d.MedSemanas,
-  d.MedSubtitle,
   d.MedTabButton,
   d.MedTabs,
   d.MedThemes,
@@ -152,10 +148,10 @@ export const DIRECTIVES = [
   d.MedToolbar,
   d.MedTooltip,
   d.MedType,
-  d.MedVideoListItem,
   d.MedVideoThumbnail,
   d.MedVote,
   d.MontaProvasPlusminus,
+  d.SelectTest,
   d.SheetContentTest,
   d.SheetTest
 ];

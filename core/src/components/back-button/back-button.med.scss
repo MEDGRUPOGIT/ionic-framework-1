@@ -2,30 +2,30 @@
     --background: #{color('brand', '3')};
     --border-color: #{color('brand', '3')};
     --color: #{color('brand', '3', 'contrast')};
-  
+
     --bg-hover: #{color('brand', '1')};
     --bg-hover-opacity: 1;
     --border-color-hover: transparent;
     --color-hover: #{color('brand', '1', 'contrast')};
-  
+
     --bg-focused: #{color('brand', '1')};
     --bg-focused-opacity: 1;
     --border-color-focused: transparent;
     --color-focused: #{color('brand', '1', 'contrast')};
-  
+
     --bg-activated: transparent;
     --bg-activated-opacity: 0;
     --border-color-activated: transparent;
     --color-activated: #{color('brand', '3', 'contrast')};
-  
+
     --border-radius: 500px;
     --min-height: 48px;
     --min-width: 48px;
     --transition: background 300ms ease-out, color 300ms ease-out, border-color 300ms ease-out, opacity 300ms ease-out;
-  
+
     --icon-font-size: 24px;
   }
-  
+
   :host {
     min-height: var(--min-height);
     min-width: var(--min-width);
@@ -35,252 +35,251 @@
     text-transform: uppercase;
     margin: 0;
   }
-  
+
   :host .button-native::after {
     display: none;
   }
-  
+
   :host .button-native::before {
     @include button-state();
     transition: var(--transition);
   }
-  
+
   :host .button-native {
     padding: 0 var(--padding);
     min-height: var(--min-height);
     line-height: var(--line-height);
     box-shadow: none;
   }
-  
+
   :host(.med-button--tertiary) {
     --background: transparent;
     --border-color: transparent;
     --color: #{color('neutral', '10')};
-  
+
     --padding: 0;
     --min-height: 24px;
     --min-width: 24px;
     --border-radius: 500px;
   }
-  
+
   ion-icon {
     min-width: var(--icon-font-size);
     font-size: var(--icon-font-size);
     stroke: var(--color);
     transition: stroke 300ms ease-out;
   }
-  
+
   :host(.med-button--tertiary.button-has-icon-only) ion-ripple-effect {
     --ripple-color: #{color("neutral", "10")};
     --ripple-opacity: 0.16;
   }
-  
+
   :host(.med-button--tertiary.back-button-has-icon-only) {
     --color-hover: #{color("neutral", "10")};
     --bg-hover: #{color("neutral", "10")};
     --bg-hover-opacity: 0.08;
-  
+
     --bg-activated: #{color("neutral", "10")};
     --bg-activated-opacity: 0.16;
     --color-activated: #{color("neutral", "10")};
-  
+
     --min-height: 48px;
     --min-width: 48px;
     --icon-font-size: 32px;
-    
+
     --padding: 0;
     --padding-text: 0;
-    --border-radius: var(--med-border-radius-full);
+    --border-radius: 50%;
     --min-height: 32px;
     --min-width: 32px;
     --icon-font-size: 24px;
   }
-  
+
   //////////////////////////////
   // states
   //////////////////////////////
-  
+
   ////////////////////
   // disabled
   ////////////////////
-  
+
   :host(.med-button--tertiary.button-disabled) {
     --bg-hover: transparent;
     --color: #{color("neutral", "5")};
     cursor: initial;
     pointer-events: none;
   }
-  
+
   ////////////////////
   // hover
   ////////////////////
-  
+
   @media (any-hover: hover) {
     :host(.med-button:hover) {
       color: var(--color-hover);
     }
-  
+
     :host(.med-button:hover) .button-native {
       border-color: var(--border-color-hover);
     }
-  
+
     :host(.med-button:hover) .button-native::before {
       background: var(--bg-hover);
       opacity: var(--bg-hover-opacity);
     }
-  
+
     :host(.med-button:hover) ::slotted(ion-icon) {
       stroke: var(--color-hover);
     }
   }
-  
+
   ////////////////////
   // focus
   ////////////////////
-  
+
   :host(.ion-focused) {
     color: var(--color-focused);
   }
-  
+
   :host(.ion-focused) .button-native {
     border-color: var(--border-color-focused);
   }
-  
+
   :host(.ion-focused) .button-native::before {
     background: var(--bg-focused);
     opacity: var(--bg-focused-opacity);
     border-color: var(--border-color-focused);
   }
-  
+
   :host(.ion-focused) ::slotted(ion-icon) {
     stroke: var(--color-focused);
   }
-  
+
   ////////////////////
   // activated
   ////////////////////
-  
+
   :host(.ion-activated) {
     color: var(--color-activated);
   }
-  
+
   :host(.ion-activated) .button-native {
     border-color: var(--border-color-activated);
   }
-  
+
   :host(.ion-activated) .button-native::before {
     background: var(--bg-activated);
     opacity: var(--bg-activated-opacity);
   }
-  
+
   :host(.ion-activated) ::slotted(ion-icon) {
     stroke: var(--color-activated);
   }
-  
+
   //////////////////////////////
   // dsColor
   //////////////////////////////
-  
+
   :host(.med-button--tertiary.back-button-has-icon-only.med-color) {
     --color-hover: #{curr-color("color", "3")};
     --bg-hover: #{curr-color("color", "3")};
-  
+
     --bg-activated: #{curr-color("color", "3")};
     --color-activated: #{curr-color("color", "3")};
   }
-  
+
   :host(.med-button--tertiary.back-button-has-icon-only.med-color) ion-ripple-effect {
     --ripple-color: #{curr-color("color", "3")};
     --ripple-opacity: 0.16;
   }
-  
+
   :host(.med-button--tertiary.back-button-has-icon-only.med-color.button-disabled) {
     --background: transparent !important;
   }
-  
+
   ////////////////////
   // neutral
   ////////////////////
-    
+
   :host(.med-button--tertiary.back-button-has-icon-only.med-color-neutral) {
     --color-hover: #{curr-color("neutral")};
     --bg-hover: #{curr-color("neutral")};
     --bg-hover-opacity: 0.08;
-  
+
     --bg-activated: #{curr-color("neutral")};
     --bg-activated-opacity: 0.16;
     --color-activated: #{curr-color("neutral")};
   }
-  
+
   :host(.med-button--tertiary.back-button-has-icon-only.med-color-neutral) ion-ripple-effect {
     --ripple-color: #{color("neutral")};
     --ripple-opacity: 0.16;
   }
-  
+
   :host(.med-button--tertiary.back-button-has-icon-only.med-color-neutral.button-disabled) {
     --background: transparent !important;
   }
-  
+
   ////////////////////
   // feedback
   ////////////////////
-    
+
   :host(.med-button--tertiary.back-button-has-icon-only.med-color-feedback) {
     --color-hover: #{curr-color("feedback")};
     --bg-hover: #{curr-color("feedback")};
     --bg-hover-opacity: 0.08;
-  
+
     --bg-activated: #{curr-color("feedback")};
     --bg-activated-opacity: 0.16;
     --color-activated: #{curr-color("feedback")};
   }
-  
+
   :host(.med-button--tertiary.back-button-has-icon-only.med-color-feedback) ion-ripple-effect {
     --ripple-color: #{curr-color("feedback")};
     --ripple-opacity: 0.16;
   }
-  
+
   :host(.med-button--tertiary.back-button-has-icon-only.med-color-feedback.button-disabled) {
     --background: transparent !important;
   }
-  
+
   //////////////////////////////
   // sizes
   //////////////////////////////
-  
+
   :host(.med-button--tertiary.med-button--lg.back-button-has-icon-only) {
     --min-height: 64px;
     --min-width: 64px;
     --icon-font-size: 48px;
   }
-  
+
   :host(.med-button--tertiary.med-button--md.back-button-has-icon-only) {
     --min-height: 48px;
     --min-width: 48px;;
     --icon-font-size: 32px;
   }
-  
+
   :host(.med-button--tertiary.med-button--sm.back-button-has-icon-only) {
     --min-height: 40px;
     --min-width: 40px;
     --icon-font-size: 24px;
   }
-  
+
   :host(.med-button--tertiary.med-button--xs.back-button-has-icon-only) {
     --min-height: 32px;
     --min-width: 32px;
     --icon-font-size: 24px;
   }
-  
+
   :host(.med-button--tertiary.med-button--xxs.back-button-has-icon-only) {
     --min-height: 24px;
     --min-width: 24px;
     --icon-font-size: 24px;
   }
-  
+
   :host(.med-button--tertiary.med-button--xxxs.back-button-has-icon-only) {
     --min-height: 16px;
     --min-width: 16px;
     --icon-font-size: 16px;
   }
-  

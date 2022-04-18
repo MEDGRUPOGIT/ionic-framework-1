@@ -1,6 +1,10 @@
-:host(.med-vote) {
+:host {
+  --padding: 16px 24px;
+}
+
+:host {
   display: block;
-  padding-top: 16px;
+  padding: var(--padding);
 
   .med-vote__row {
     display: flex;
@@ -22,13 +26,13 @@
     }
 
     &--nao-cabe {
-      stroke: color('warning', 'warning');
+      stroke: color('feedback', 'warning');
     }
   }
 
   .med-vote__heading {
     font-size: 20px;
-    line-height: 100%;
+    line-height: 20px;
     font-weight: 600;
     color: #{color('neutral', '10')};
     margin: 0;
@@ -39,7 +43,7 @@
     height: 26px;
     border-radius: 16px;
     font-size: 16px;
-    line-height: 100%;
+    line-height: 16px;
     justify-content: center;
     align-items: center;
     font-weight: 600;
