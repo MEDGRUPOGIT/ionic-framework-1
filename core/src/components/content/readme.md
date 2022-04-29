@@ -262,15 +262,13 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [filtro-modal](../@medgrupo/team/dashboard/filtro-modal)
- - [med-config](../@medgrupo/global/med-config)
- - [med-image-zoom](../@medgrupo/global/med-image-zoom)
+ - [med-config](../@medgrupo/legacy/med-config)
+ - [med-image-zoom](../@medgrupo/compositions/med-image-zoom)
  - [sheet-content-test](../@medgrupo/testes/sheet-content-test)
 
 ### Graph
 ```mermaid
 graph TD;
-  filtro-modal --> ion-content
   med-config --> ion-content
   med-image-zoom --> ion-content
   sheet-content-test --> ion-content

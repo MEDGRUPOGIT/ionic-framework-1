@@ -1,10 +1,6 @@
 
 dialog-test,scoped
 
-filtro-dashboard,shadow
-
-filtro-modal,shadow
-
 ion-action-sheet,scoped
 ion-action-sheet,prop,animated,boolean,true,false,false
 ion-action-sheet,prop,backdropDismiss,boolean,true,false,false
@@ -374,11 +370,8 @@ ion-fab-button,prop,color,string | undefined,undefined,false,false
 ion-fab-button,prop,disabled,boolean,false,false,false
 ion-fab-button,prop,download,string | undefined,undefined,false,false
 ion-fab-button,prop,dsColor,string | undefined,undefined,false,true
-ion-fab-button,prop,dsName,"icon-label" | "label" | undefined,undefined,false,false
-ion-fab-button,prop,dsSize,"lg" | "md" | undefined,undefined,false,false
 ion-fab-button,prop,href,string | undefined,undefined,false,false
 ion-fab-button,prop,mode,"ios" | "md",undefined,false,false
-ion-fab-button,prop,neutral,string | undefined,undefined,false,false
 ion-fab-button,prop,rel,string | undefined,undefined,false,false
 ion-fab-button,prop,routerAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
 ion-fab-button,prop,routerDirection,"back" | "forward" | "root",'forward',false,false
@@ -417,7 +410,6 @@ ion-fab-button,part,native
 
 ion-fab-list,shadow
 ion-fab-list,prop,activated,boolean,false,false,false
-ion-fab-list,prop,dsSize,"lg" | "md" | undefined,undefined,false,false
 ion-fab-list,prop,side,"bottom" | "end" | "start" | "top",'bottom',false,false
 
 ion-footer,none
@@ -1397,7 +1389,6 @@ med-accordion-item,shadow
 med-accordion-item,prop,background,boolean,false,false,true
 med-accordion-item,prop,canCollapse,boolean,true,false,true
 med-accordion-item,prop,dsColor,string | undefined,undefined,false,true
-med-accordion-item,prop,icon,"left" | "right" | undefined,undefined,false,true
 med-accordion-item,prop,isOpened,boolean,false,false,true
 med-accordion-item,prop,noBorder,boolean,false,false,true
 med-accordion-item,prop,slotsToggle,"end"[] | "middle" | "start",[],false,true
@@ -1421,6 +1412,12 @@ med-agrupador,prop,dsColor,string | undefined,undefined,false,true
 med-agrupador,prop,labelAlternativo,string,'Ocultar a lista',false,true
 med-agrupador,prop,labelDefault,string,'Expandir a lista',false,true
 med-agrupador,method,toggle,toggle(event?: Event | undefined) => Promise<void>
+
+med-alert-fixed,shadow
+med-alert-fixed,prop,dsColor,string | undefined,undefined,false,true
+med-alert-fixed,prop,dsName,"atualizar" | "offline" | undefined,undefined,false,true
+med-alert-fixed,prop,labelAtualizar,string,'Versão desatualizada',false,true
+med-alert-fixed,prop,labelOffline,string,'Você está offline. Conecte-se para acessar o conteúdo.',false,true
 
 med-alternativas,shadow
 med-alternativas,prop,alternativaSelecionada,string,undefined,true,true
@@ -1474,15 +1471,6 @@ med-alternativas-b,prop,respostaCorreta,string,undefined,true,true
 med-alternativas-b,event,medChange,MedAlternativaInterface,true
 med-alternativas-b,event,medGalleryRequest,MedAlternativaInterface,true
 med-alternativas-b,event,medRiscada,MedAlternativaInterface,true
-
-med-aula-professor,scoped
-med-aula-professor,prop,active,boolean,false,false,true
-med-aula-professor,prop,dsColor,string | undefined,undefined,false,true
-med-aula-professor,prop,icon,string,undefined,true,true
-med-aula-professor,prop,professores,string,undefined,true,true
-med-aula-professor,prop,titulo,string,undefined,true,true
-med-aula-professor,prop,value,number,undefined,true,true
-med-aula-professor,prop,videos,string,undefined,true,true
 
 med-autocomplete,scoped
 
@@ -1547,6 +1535,7 @@ med-chart-bar-horizontal,shadow
 med-chart-bar-horizontal,prop,dsColor,string | undefined,undefined,false,true
 med-chart-bar-horizontal,prop,dsSize,"md" | undefined,undefined,false,false
 med-chart-bar-horizontal,prop,label,boolean,true,false,true
+med-chart-bar-horizontal,prop,unidade,string,'%',false,true
 med-chart-bar-horizontal,prop,value,number,0,false,true
 med-chart-bar-horizontal,part,progress
 med-chart-bar-horizontal,part,track
@@ -1614,14 +1603,6 @@ med-config,prop,opcoes,MedConfigInterface,undefined,true,false
 med-context-menu,shadow
 med-context-menu,prop,collapsed,boolean,true,false,true
 med-context-menu,method,toggle,toggle(event?: Event | undefined) => Promise<void>
-med-context-menu,css-prop,--background
-med-context-menu,css-prop,--color
-med-context-menu,css-prop,--z-index
-
-med-divider,shadow
-med-divider,prop,dsColor,string | undefined,undefined,false,false
-med-divider,prop,text,string,undefined,true,false
-med-divider,css-prop,--color
 
 med-download-button,shadow
 med-download-button,prop,disabled,boolean,false,false,true
@@ -1685,12 +1666,6 @@ med-item,prop,type,"button" | "reset" | "submit",'button',false,false
 med-item,part,detail-icon
 med-item,part,native
 
-med-item-aulas,shadow
-med-item-aulas,prop,dsColor,string | undefined,undefined,false,true
-med-item-aulas,prop,porcentagem,number,undefined,true,false
-med-item-aulas,prop,professor,string,undefined,true,false
-med-item-aulas,prop,videos,string,undefined,true,false
-
 med-list,shadow
 med-list,prop,dsColor,string | undefined,undefined,false,true
 med-list,prop,margin,"lg" | "md" | "sm" | "xs" | undefined,undefined,false,false
@@ -1719,19 +1694,6 @@ med-list-item-accordion,method,toggle,toggle(event?: Event | undefined) => Promi
 med-lista,shadow
 med-lista,prop,mode,"ios" | "md",undefined,false,false
 med-lista,method,closeSlidingItems,closeSlidingItems() => Promise<boolean>
-
-med-message,shadow
-med-message,prop,concurso,string | undefined,undefined,false,false
-med-message,prop,dsName,"comment" | "medgrupo" | "response" | "user-message" | undefined,undefined,false,false
-med-message,prop,messageId,string | undefined,undefined,false,false
-med-message,prop,nome,string | undefined,undefined,false,false
-med-message,prop,texto,string | undefined,undefined,false,false
-
-med-message-list,shadow
-med-message-list,css-prop,--margin-left-comment
-med-message-list,css-prop,--margin-left-response
-med-message-list,css-prop,--margin-top-message
-med-message-list,css-prop,--margin-top-response
 
 med-nav,shadow
 med-nav,prop,active,boolean,false,false,true
@@ -1786,14 +1748,17 @@ med-piechart,prop,label,string | undefined,undefined,false,true
 med-piechart,prop,value,number,0,false,true
 med-piechart,method,toggle,toggle(event?: Event | undefined) => Promise<void>
 
+med-plusminus,scoped
+med-plusminus,prop,disabled,"both" | "minus" | "plus" | undefined,undefined,false,true
+med-plusminus,prop,dsColor,string | undefined,undefined,false,true
+med-plusminus,prop,dsSize,"xl" | undefined,undefined,false,true
+med-plusminus,event,medChange,PlusMinusStatus.MINUS | PlusMinusStatus.PLUS,true
+
 med-question,shadow
 med-question,prop,collapsed,boolean,false,false,true
 med-question,prop,dsColor,string | undefined,undefined,false,true
 med-question,prop,texto,string | undefined,undefined,false,false
 med-question,method,toggle,toggle(event?: Event | undefined) => Promise<void>
-med-question,css-prop,--background
-med-question,css-prop,--color
-med-question,css-prop,--lines
 
 med-rate-aula,scoped
 med-rate-aula,prop,collapsed,boolean,false,false,true
@@ -1805,16 +1770,6 @@ med-rate-bar,prop,dsColor,string | undefined,undefined,false,true
 med-rate-like,shadow
 med-rate-like,prop,status,RateStatus.DISLIKE | RateStatus.LIKE | undefined,undefined,false,true
 med-rate-like,event,medChange,RateStatus.DISLIKE | RateStatus.LIKE,true
-
-med-rate-result,shadow
-med-rate-result,prop,bom,string | undefined,undefined,false,false
-med-rate-result,prop,excelente,string | undefined,undefined,false,false
-med-rate-result,prop,regular,string | undefined,undefined,false,false
-med-rate-result,prop,ruim,string | undefined,undefined,false,false
-med-rate-result,css-prop,--color-bom
-med-rate-result,css-prop,--color-excelent
-med-rate-result,css-prop,--color-regular
-med-rate-result,css-prop,--color-ruim
 
 med-rating,shadow
 med-rating,prop,cabe,boolean,false,false,false
@@ -1843,9 +1798,6 @@ med-tab-button,shadow
 med-tab-button,prop,active,boolean,false,false,true
 med-tab-button,prop,dsColor,string | undefined,undefined,false,true
 
-med-tabs,shadow
-med-tabs,prop,dsColor,string | undefined,undefined,false,true
-
 med-themes,shadow
 med-themes,prop,ativo,"theme-gold" | "theme-recursos" | undefined,undefined,false,true
 med-themes,prop,temas,MedTema[] | undefined,undefined,false,false
@@ -1858,11 +1810,6 @@ med-tiles,prop,label,string | undefined,undefined,false,false
 med-tiles,prop,selected,boolean,false,false,true
 med-tiles,prop,solid,boolean,false,false,false
 med-tiles,prop,titulo,string | undefined,undefined,false,false
-
-med-titulo-materia,shadow
-med-titulo-materia,prop,descricao,string | undefined,undefined,false,false
-med-titulo-materia,prop,dsColor,string | undefined,undefined,false,true
-med-titulo-materia,prop,titulo,string | undefined,undefined,false,false
 
 med-toolbar,shadow
 med-toolbar,prop,dsColor,string | undefined,undefined,false,true
@@ -1894,12 +1841,6 @@ med-vote,shadow
 med-vote,prop,like,number,0,false,false
 med-vote,prop,titulo,string | undefined,'Cabe recurso?',false,false
 med-vote,prop,unlike,number,0,false,false
-
-monta-provas-plusminus,scoped
-monta-provas-plusminus,prop,disabled,"both" | "minus" | "plus" | undefined,undefined,false,true
-monta-provas-plusminus,prop,dsColor,string | undefined,undefined,false,true
-monta-provas-plusminus,prop,dsSize,"xl" | undefined,undefined,false,true
-monta-provas-plusminus,event,medChange,PlusMinusStatus.MINUS | PlusMinusStatus.PLUS,true
 
 select-test,shadow
 

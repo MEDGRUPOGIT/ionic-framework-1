@@ -10,6 +10,7 @@
 | `dsColor` | `ds-color` | Define a cor do componente.                 | `string \| undefined` | `undefined` |
 | `dsSize`  | `ds-size`  | Define a variação de tamanho do componente. | `"md" \| undefined`   | `undefined` |
 | `label`   | `label`    | Define a visibilidade do label.             | `boolean`             | `true`      |
+| `unidade` | `unidade`  | Define o valor do componente.               | `string`              | `'%'`       |
 | `value`   | `value`    | Define o valor do componente.               | `number`              | `0`         |
 
 
@@ -31,7 +32,7 @@
 
 ### Depends on
 
-- [med-type](../med-type)
+- [med-type](../../foundation/med-type)
 
 ### Graph
 ```mermaid

@@ -34,7 +34,7 @@
 ### Depends on
 
 - [med-base](../../core/med-base)
-- [med-type](../../core/med-type)
+- [med-type](../../foundation/med-type)
 - ion-icon
 
 ### Graph

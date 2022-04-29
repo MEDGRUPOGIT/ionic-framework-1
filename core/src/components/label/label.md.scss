@@ -112,8 +112,6 @@
 
 //custom
 
-@import "../../../templarios/abstracts";
-
 :host([ds-name="stacked"]) {
   color: var(--med-color-neutral-dark-10);
   margin-bottom: 8px;

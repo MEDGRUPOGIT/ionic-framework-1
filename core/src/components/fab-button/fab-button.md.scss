@@ -5,7 +5,7 @@
 // --------------------------------------------------
 
 :host {
-  --background: #{$fab-md-background-color};
+  --background: #{color('brand', '3')};
   --background-activated: transparent;
   --background-focused: currentColor;
   --background-hover: currentColor;
@@ -80,103 +80,77 @@
   }
 }
 
-@import './fab-button.med.scss';
-
-@import "../../../templarios/abstracts";
+//////////////////////////////
+// medgrupo
+//////////////////////////////
 
 :host {
-  --background: #{color('brand', 'gradient')};
-  --padding-bottom: 8px;
-  --padding-end: 8px;
-  --padding-start: 8px;
-  --padding-top: 8px;
-  --border-radius: 31.25em;
-  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14), 0 3px 4px rgba(0, 0, 0, 0.12), 0 1px 5px rgba(0, 0, 0, 0.2);
-  --ripple-color: transparent;
+  --background: #{color('brand', '3')};
 
-  height: 40px;
-  min-width: 40px;
-  width: auto;
-  max-width: 100%;
+  width: 48px;
+  height: 48px;
 
-  .button-native {
-    contain: none;
-  }
-
-  .button-inner {
-    position: relative;
+  .close-icon {
+    font-size: 24px;
+    color: color('brand', '3', 'contrast');
   }
 }
 
-:host(.fab-button-disabled) {
-  --background:#{color('neutral', '8')};
-  opacity: 0.8;
-
-  ::slotted(ion-icon) {
-    fill: #{medsoft-color(neutral-light, prime)};
-  }
-}
-
-::slotted(ion-label) {
-  color: #{color('neutral')};
-  padding-left: 8px;
-  padding-right: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 100%;
-}
-
-:host(.fab-button-close-active) {
-  ::slotted(ion-label) {
-    display: none;
-  }
-}
-
-// sizes
-:host([ds-size="md"]) {
-  height: 48px !important;
-  min-width: 48px !important;
-
-  ::slotted(ion-label) {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-
-:host([ds-size="lg"]) {
-  height: 56px !important;
-  min-width: 56px !important;
-
-  ::slotted(ion-label) {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-
-:host(.fab-button-close-active) ::slotted([slot="label"]) {
-  transform: scale(.4) rotateZ(-45deg);
+::slotted(ion-icon) {
+  width: 24px;
+  height: 24px;
+  stroke: color('brand', '3', 'contrast');
 }
 
 // ////////////////////
-// color
+// dsColor
 // ////////////////////
 
 :host(.med-color) {
   --background: #{curr-color('color', '3')};
+
+  .close-icon {
+    width: 24px;
+    color: curr-color('color', '3', 'contrast');
+  }
+
+  &::slotted(ion-icon) {
+    stroke: curr-color('color', '3', 'contrast');
+  }
 }
 
-// ////////////////////
-// neutral
-// ////////////////////
+:host(.fab-button-in-list.med-color) ::slotted(ion-icon) {
+  stroke: curr-color('color', '3', 'contrast');
+}
 
 :host(.med-color-neutral) {
   --background: #{curr-color('neutral')};
+
+  .close-icon {
+    color: curr-color('neutral', null, 'contrast');
+  }
+
+  &::slotted(ion-icon) {
+    stroke: curr-color('neutral', null, 'contrast');
+  }
 }
 
-// //////////
-// feedback
-// //////////
+:host(.fab-button-in-list.med-color-neutral) ::slotted(ion-icon) {
+  stroke: curr-color('neutral', null, 'contrast');
+}
 
 :host(.med-color-feedback) {
   --background: #{curr-color('feedback')};
+
+  .close-icon {
+    color: curr-color('feedback', null, 'contrast');
+  }
+
+  &::slotted(ion-icon) {
+    stroke: curr-color('feedback', null, 'contrast');
+  }
+}
+
+:host(.fab-button-in-list.med-color-feedback) ::slotted(ion-icon) {
+  stroke: curr-color('feedback', null, 'contrast');
 }

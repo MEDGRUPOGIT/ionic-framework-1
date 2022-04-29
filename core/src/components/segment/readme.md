@@ -595,7 +595,7 @@ export default defineComponent({
 
 ### Used by
 
- - [med-config](../@medgrupo/global/med-config)
+ - [med-config](../@medgrupo/legacy/med-config)
 
 ### Graph
 ```mermaid

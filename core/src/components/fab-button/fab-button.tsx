@@ -1,10 +1,9 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, h } from '@stencil/core';
 
 import { getIonMode } from '../../global/ionic-global';
-import { AnimationBuilder, Color, RouterDirection, Neutral} from '../../interface';
+import { AnimationBuilder, Color, RouterDirection, MedColor } from '../../interface';
 import { AnchorInterface, ButtonInterface } from '../../utils/element-interface';
 import { hostContext, openURL } from '../../utils/theme';
-import { MedColor } from '../../interface';
 import { generateMedColor } from '../../utils/med-theme';
 
 /**
@@ -16,28 +15,13 @@ import { generateMedColor } from '../../utils/med-theme';
 @Component({
   tag: 'ion-fab-button',
   styleUrls: {
-    ios: 'fab-button.md.scss',
+    ios: 'fab-button.ios.scss',
     md: 'fab-button.md.scss'
   },
   shadow: true
 })
 export class FabButton implements ComponentInterface, AnchorInterface, ButtonInterface {
   @Element() el!: HTMLElement;
-
-  /**
-   * TODO
-   */
-
-  @Prop() dsSize?: 'md' | 'lg';
-  /**
-   * TODO
-   */
-
-  @Prop() dsName?: 'label' | 'icon-label';
-  /**
-   * TODO
-   */
-  @Prop() neutral?: Neutral;
 
   /**
     * Define a cor do componente.
@@ -148,7 +132,7 @@ export class FabButton implements ComponentInterface, AnchorInterface, ButtonInt
   }
 
   render() {
-    const { dsColor, el, disabled, href, activated, show, translucent, size } = this;
+    const { el, dsColor, disabled, href, activated, show, translucent, size } = this;
     const inList = hostContext('ion-fab-list', el);
     const mode = getIonMode(this);
     const TagType = href === undefined ? 'button' : 'a' as any;
@@ -187,12 +171,11 @@ export class FabButton implements ComponentInterface, AnchorInterface, ButtonInt
           onBlur={this.onBlur}
           onClick={(ev: Event) => openURL(href, ev, this.routerDirection, this.routerAnimation)}
         >
-          <ion-icon icon={this.closeIcon} part="close-icon" class="med-icon close-icon" lazy={false}></ion-icon>
+          <ion-icon icon={this.closeIcon} part="close-icon" class="close-icon" lazy={false}></ion-icon>
           <span class="button-inner">
             <slot></slot>
-            <slot name="label"></slot>
           </span>
-          {mode === 'md' && <ion-ripple-effect></ion-ripple-effect>}
+          {/* {mode === 'md' && <ion-ripple-effect></ion-ripple-effect>} */}
         </TagType>
       </Host>
     );

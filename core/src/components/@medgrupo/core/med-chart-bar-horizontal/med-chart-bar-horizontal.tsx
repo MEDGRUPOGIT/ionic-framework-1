@@ -28,8 +28,13 @@ export class MedChartBarHorizontal {
    */
   @Prop({ reflect: true, mutable: true }) value = 0;
 
+  /**
+   * Define o valor do componente.
+   */
+  @Prop({ reflect: true, mutable: true }) unidade = '%';
+
   render() {
-    const { dsColor, dsSize, label, value } = this;
+    const { dsColor, dsSize, label, value, unidade } = this;
     let progressClass, progressWidth;
 
     if(value > 100) {
@@ -56,7 +61,7 @@ export class MedChartBarHorizontal {
           <div class="med-chart-bar-horizontal__progress" part="progress" style={{ '--progress': `${progressWidth === 0 ? -100 : progressWidth - 100}` }}></div>
           <div class="med-chart-bar-horizontal__track" part="track"></div>
         </div>
-        {label && <med-type class="med-chart-bar-horizontal__label">{value}%</med-type>}
+        {label && <med-type class="med-chart-bar-horizontal__label">{value}{unidade}</med-type>}
       </Host>
     );
   }

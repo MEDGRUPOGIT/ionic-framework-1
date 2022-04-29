@@ -25,7 +25,7 @@ import { mdLeaveAnimation } from './animations/md.leave';
 @Component({
   tag: 'ion-toast',
   styleUrls: {
-    ios: 'toast.ios.scss',
+    ios: 'toast.md.scss',
     md: 'toast.md.scss'
   },
   shadow: true

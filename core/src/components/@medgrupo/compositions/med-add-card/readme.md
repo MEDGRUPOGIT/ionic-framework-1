@@ -19,7 +19,7 @@
 
 - [med-base](../../core/med-base)
 - ion-icon
-- [med-type](../../core/med-type)
+- [med-type](../../foundation/med-type)
 
 ### Graph
 ```mermaid

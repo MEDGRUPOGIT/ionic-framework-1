@@ -33,7 +33,7 @@ Chips represent complex entities in small blocks, such as a contact. A chip can 
 ### Depends on
 
 - ion-icon
-- [med-type](../med-type)
+- [med-type](../../foundation/med-type)
 
 ### Graph
 ```mermaid

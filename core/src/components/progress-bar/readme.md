@@ -156,15 +156,11 @@ export default defineComponent({
 
 ### Used by
 
- - [med-aula-professor](../@medgrupo/compositions/med-aula-professor)
- - [med-item-aulas](../@medgrupo/global/med-item-aulas)
- - [med-video-thumbnail](../@medgrupo/med-video-thumbnail)
+ - [med-video-thumbnail](../@medgrupo/compositions/med-video-thumbnail)
 
 ### Graph
 ```mermaid
 graph TD;
-  med-aula-professor --> ion-progress-bar
-  med-item-aulas --> ion-progress-bar
   med-video-thumbnail --> ion-progress-bar
   style ion-progress-bar fill:#f9f,stroke:#333,stroke-width:4px
 ```

@@ -32,13 +32,13 @@
 
 ### Used by
 
- - [med-nav-accordion](../med-nav-accordion)
- - [med-nav-simple](../med-nav-simple)
+ - [med-nav-accordion](../../compositions/med-nav-accordion)
+ - [med-nav-simple](../../compositions/med-nav-simple)
 
 ### Depends on
 
 - ion-icon
-- [med-type](../med-type)
+- [med-type](../../foundation/med-type)
 
 ### Graph
 ```mermaid

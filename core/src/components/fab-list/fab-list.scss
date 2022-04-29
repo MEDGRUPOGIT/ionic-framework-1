@@ -72,4 +72,11 @@
   flex-direction: row;
 }
 
-@import './fab-list.med.scss';
+//////////////////////////////
+// medgrupo
+//////////////////////////////
+
+:host {
+  min-width: 48px;
+  min-height: 48px;
+}

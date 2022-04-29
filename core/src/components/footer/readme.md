@@ -131,14 +131,12 @@ export default defineComponent({
 
 ### Used by
 
- - [filtro-modal](../@medgrupo/team/dashboard/filtro-modal)
  - [sheet-content-test](../@medgrupo/testes/sheet-content-test)
  - [sheet-test](../@medgrupo/testes/sheet-test)
 
 ### Graph
 ```mermaid
 graph TD;
-  filtro-modal --> ion-footer
   sheet-content-test --> ion-footer
   sheet-test --> ion-footer
   style ion-footer fill:#f9f,stroke:#333,stroke-width:4px

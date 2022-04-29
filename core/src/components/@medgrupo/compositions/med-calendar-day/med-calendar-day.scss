@@ -1,0 +1,67 @@
+:host {
+  --border-color: #{color('feedback', 'warning')};
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  cursor: pointer;
+
+  &__type {
+    --font-size: 12px;
+    --font-weight: 600;
+    --line-height: 11px;
+    --color: hsl(var(--med-color-neutral-10));
+  }
+
+  &__container {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background);
+  }
+}
+
+:host(.med-calendar-day--active) {
+  --background: #{color('brand', '3')};
+}
+
+
+// ////////////////////
+// state
+// ////////////////////
+
+:host(.med-calendar-day--outline) .date__container {
+  border: 1px solid var(--border-color);
+}
+
+@media (any-hover: hover) {
+  :host(.med-calendar-day:hover) {
+    --background: hsl(var(--med-color-neutral-3));
+  }
+}
+
+
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-color.med-calendar-day--active) {
+  --background: #{curr-color('color', '3')};
+  --color: #{curr-color('color', '3', 'contrast')};
+}
+
+:host(.med-color-neutral.med-calendar-day--active) {
+  --background: #{curr-color('neutral')};
+  --color: #{curr-color('neutral', null, 'contrast')};
+}
+
+:host(.med-color-feedback.med-calendar-day--active) {
+  --background: #{curr-color('feedback')};
+  --color: #{curr-color('feedback', null, 'contrast')};
+}
