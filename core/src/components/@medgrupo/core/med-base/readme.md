@@ -30,14 +30,12 @@
 
 ### Used by
 
- - [filtro-dashboard](../../team/dashboard/filtro-dashboard)
  - [med-add-card](../../compositions/med-add-card)
  - [med-check-card](../../compositions/med-check-card)
 
 ### Graph
 ```mermaid
 graph TD;
-  filtro-dashboard --> med-base
   med-add-card --> med-base
   med-check-card --> med-base
   style med-base fill:#f9f,stroke:#333,stroke-width:4px

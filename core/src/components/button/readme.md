@@ -371,19 +371,17 @@ export default defineComponent({
 ### Used by
 
  - [dialog-test](../@medgrupo/testes/dialog-test)
- - [filtro-dashboard](../@medgrupo/team/dashboard/filtro-dashboard)
- - [filtro-modal](../@medgrupo/team/dashboard/filtro-modal)
- - [med-banner](../@medgrupo/core/med-banner)
- - [med-calendar](../@medgrupo/core/med-calendar)
- - [med-config](../@medgrupo/global/med-config)
- - [med-context-menu](../@medgrupo/global/med-context-menu)
- - [med-image-zoom](../@medgrupo/global/med-image-zoom)
- - [med-list-item-accordion](../@medgrupo/global/med-list-item-accordion)
- - [med-nav](../@medgrupo/core/med-nav)
- - [med-nav-simple](../@medgrupo/core/med-nav-simple)
- - [med-offline](../@medgrupo/global/med-offline)
- - [med-rate-aula](../@medgrupo/global/med-rate-aula)
- - [med-tooltip](../@medgrupo/global/med-tooltip)
+ - [med-banner](../@medgrupo/compositions/med-banner)
+ - [med-calendar](../@medgrupo/compositions/med-calendar)
+ - [med-config](../@medgrupo/legacy/med-config)
+ - [med-context-menu](../@medgrupo/compositions/med-context-menu)
+ - [med-image-zoom](../@medgrupo/compositions/med-image-zoom)
+ - [med-list-item-accordion](../@medgrupo/compositions/med-list-item-accordion)
+ - [med-nav](../@medgrupo/compositions/med-nav)
+ - [med-nav-simple](../@medgrupo/compositions/med-nav-simple)
+ - [med-offline](../@medgrupo/compositions/med-offline)
+ - [med-rate-aula](../@medgrupo/compositions/med-rate-aula)
+ - [med-tooltip](../@medgrupo/compositions/med-tooltip)
  - [sheet-content-test](../@medgrupo/testes/sheet-content-test)
  - [sheet-test](../@medgrupo/testes/sheet-test)
 
@@ -396,8 +394,6 @@ export default defineComponent({
 graph TD;
   ion-button --> ion-ripple-effect
   dialog-test --> ion-button
-  filtro-dashboard --> ion-button
-  filtro-modal --> ion-button
   med-banner --> ion-button
   med-calendar --> ion-button
   med-config --> ion-button

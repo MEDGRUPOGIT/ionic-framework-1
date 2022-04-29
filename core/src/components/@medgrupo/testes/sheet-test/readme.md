@@ -12,7 +12,7 @@
 - [ion-header](../../../header)
 - [ion-button](../../../button)
 - ion-icon
-- [med-type](../../core/med-type)
+- [med-type](../../foundation/med-type)
 - [ion-footer](../../../footer)
 
 ### Graph

@@ -16,9 +16,6 @@ defineCustomElements();
 
 // templarios
 import '../css/default.css';
-import '../css/complementares.css';
-import '../css/espacamento.css';
-import '../css/tipografia.css';
 import '../css/components.css';
 import '../css/utils.css';
 

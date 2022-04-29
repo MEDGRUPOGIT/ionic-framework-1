@@ -110,17 +110,29 @@
   --width: 100%;
   --start: 0;
   --end: 0;
-  --border-radius: 0;
+  --border-radius: 8px;
   --background: #{color('neutral', '2')};
   --color: #{color('neutral', '2', 'contrast')};
-
-  //templarios
+  --max-width: calc(100% - 32px);
   --spacing: 16px;
 
-  border-radius: 4px;
+  @include breakpoint-up('md') {
+    --border-radius: 0px;
+    --max-width: 400px;
+    --start: unset;
+    --end: 20px;
+  }
 
   .toast-container {
     padding: var(--spacing);
+  }
+
+  .toast-wrapper {
+    bottom: calc(16px + var(--ion-safe-area-bottom, 0px)) !important;
+
+    @include breakpoint-up('md') {
+      bottom: calc(20px + var(--ion-safe-area-bottom, 0px)) !important;
+    }
   }
 
   .toast-header {
@@ -169,53 +181,6 @@
   }
 }
 
-// Toast com 2 linhas
-:host(.ion-toast--rows) {
-  .toast-content {
-    padding-top: 2px;
-  }
-
-  .toast-container {
-    display: block;
-  }
-
-  .toast-button-group-start {
-    float: left;
-  }
-
-  .toast-button-group-end {
-    padding-top: 16px;
-    justify-content: flex-end;
-  }
-}
-
-// Toast Flutuante
-:host(.ion-toast--float) {
-  --width: auto;
-  --start: 8px;
-  --end: 8px;
-  --border-radius: 4px;
-
-  // .toast-content {
-  //   flex-direction: row;
-  // }
-
-  .toast-message {
-    padding-left: 4px;
-  }
-
-  .toast-wrapper.toast-bottom {
-    bottom: calc(8px + var(--ion-safe-area-bottom, 0px)) !important;
-  }
-
-  .toast-wrapper.toast-top {
-    top: calc(8px + var(--ion-safe-area-bottom, 0px)) !important;
-  }
-}
-
-:host(.ion-color) .toast-wrapper {
-  background: #{curr-color('color', '3')};
-}
 
 // ////////////////////
 // color

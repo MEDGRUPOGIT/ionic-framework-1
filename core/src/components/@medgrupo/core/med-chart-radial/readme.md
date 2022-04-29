@@ -21,7 +21,7 @@
 
 ### Depends on
 
-- [med-type](../med-type)
+- [med-type](../../foundation/med-type)
 
 ### Graph
 ```mermaid

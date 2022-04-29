@@ -22,7 +22,7 @@
 
 ### Depends on
 
-- [med-type](../../core/med-type)
+- [med-type](../../foundation/med-type)
 - [med-piechart](../med-piechart)
 - [med-download-button](../../core/med-download-button)
 

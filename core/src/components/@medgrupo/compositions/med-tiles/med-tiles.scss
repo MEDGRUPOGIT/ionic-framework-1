@@ -1,0 +1,74 @@
+:host {
+  --padding: 16px;
+  --background: #{color('neutral', '2')};
+  --border-radius: 8px;
+  --border-background: #{color('neutral', '5')};
+  --border-background-selected: #{color('brand', '3')};
+  --font-size-title: 24px;
+  --color-title: #{color('neutral', '10')};
+  --font-size-label: 12px;
+  --color-label: #{color('neutral', '10')};
+}
+
+:host(.med-tiles) {
+  display: flex;
+  background: var(--background);
+  border-radius: var(--border-radius);
+
+  .med-tiles__content {
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+  }
+
+  .med-tiles__border {
+      border-top-left-radius: var(--border-radius);
+      border-bottom-left-radius: var(--border-radius);
+      width: 8px;
+      min-height: 100%;
+      background: var(--border-background);
+  }
+
+  .med-tiles__title {
+    --font-size: var(--font-size-title);
+    --font-weight: 600;
+    --line-height: 24px;
+    --color: var(--color-title);
+    padding-bottom: 4px;
+  }
+
+  .med-tiles__label {
+    --font-size: var(--font-size-label);
+    --font-weight: 400;
+    --line-height: 12px;
+    --color: var(--color-label);
+    padding-bottom: 16px;
+    text-transform: uppercase;
+  }
+}
+
+::slotted(*) {
+  margin-left: auto;
+}
+
+:host(.med-tiles--selected) .med-tiles__border {
+  background: var(--border-background-selected);
+}
+
+//////////////////////////////
+// dsColor
+//////////////////////////////
+
+:host(.med-color) {
+  --border-background-selected: #{curr-color('color', '3')};
+}
+
+:host(.med-color-neutral) {
+  --border-background-selected: #{curr-color('neutral')};
+}
+
+:host(.med-color-feedback) {
+  --border-background-selected: #{curr-color('feedback')};
+}

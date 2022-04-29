@@ -1,0 +1,57 @@
+:host {
+  --background: #{color('neutral', '3')};
+  --color: #{color('neutral', '3', 'contrast')};
+  --z-index: 1;
+}
+
+:host(.med-context-menu) {
+  display: block;
+  position: relative;
+
+  .med-context-menu {
+    &__content {
+      z-index: var(--z-index);
+      position: absolute;
+      background: var(--background);
+      right: -8px;
+      top: -8px;
+      min-width: 250px;
+      max-width: 250px;
+      width: 100%;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.14), 0 4px 5px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      padding: 16px;
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 300ms ease-in-out;
+    }
+
+    &__button {
+      --font-size: 24px;
+    }
+
+    &__inner-button {
+      position: absolute;
+      right: 8px;
+      top: 9px;
+      --font-size: 24px;
+    }
+
+    &__inner-icon {
+      stroke: color('neutral', '10');
+    }
+  }
+}
+
+// ////////////////////
+// state
+// ////////////////////
+
+:host(.med-context-menu--collapsed) {
+  .med-context-menu__content {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+    --z-index: 0;
+  }
+}
