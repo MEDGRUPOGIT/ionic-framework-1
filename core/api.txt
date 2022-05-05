@@ -1534,8 +1534,9 @@ med-chart-bar,prop,width,number,32,false,true
 med-chart-bar-horizontal,shadow
 med-chart-bar-horizontal,prop,dsColor,string | undefined,undefined,false,true
 med-chart-bar-horizontal,prop,dsSize,"md" | undefined,undefined,false,false
+med-chart-bar-horizontal,prop,hideValue,boolean,false,false,true
 med-chart-bar-horizontal,prop,label,boolean,true,false,true
-med-chart-bar-horizontal,prop,unidade,string,'%',false,true
+med-chart-bar-horizontal,prop,labelContent,string | undefined,undefined,false,true
 med-chart-bar-horizontal,prop,value,number,0,false,true
 med-chart-bar-horizontal,part,progress
 med-chart-bar-horizontal,part,track

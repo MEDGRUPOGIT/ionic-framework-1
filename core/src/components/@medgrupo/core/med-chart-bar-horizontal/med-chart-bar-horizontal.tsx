@@ -24,6 +24,11 @@ export class MedChartBarHorizontal {
   @Prop({ reflect: true }) label = true;
 
   /**
+   * Define a visibilidade do label.
+   */
+   @Prop({ reflect: true, mutable: true }) hideValue = false;
+
+  /**
    * Define o valor do componente.
    */
   @Prop({ reflect: true, mutable: true }) value = 0;
@@ -31,10 +36,10 @@ export class MedChartBarHorizontal {
   /**
    * Define o valor do componente.
    */
-  @Prop({ reflect: true, mutable: true }) unidade = '%';
+  @Prop({ reflect: true, mutable: true }) labelContent: string | undefined;
 
   render() {
-    const { dsColor, dsSize, label, value, unidade } = this;
+    const { dsColor, hideValue, dsSize, label, value, labelContent } = this;
     let progressClass, progressWidth;
 
     if(value > 100) {
@@ -61,7 +66,7 @@ export class MedChartBarHorizontal {
           <div class="med-chart-bar-horizontal__progress" part="progress" style={{ '--progress': `${progressWidth === 0 ? -100 : progressWidth - 100}` }}></div>
           <div class="med-chart-bar-horizontal__track" part="track"></div>
         </div>
-        {label && <med-type class="med-chart-bar-horizontal__label">{value}{unidade}</med-type>}
+        {label && <med-type class="med-chart-bar-horizontal__label">{!hideValue ? `${value}%` : ''}{labelContent}</med-type>}
       </Host>
     );
   }

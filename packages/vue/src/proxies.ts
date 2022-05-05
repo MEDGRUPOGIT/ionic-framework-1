@@ -1010,8 +1010,9 @@ export const MedChartBarHorizontal = /*@__PURE__*/ defineContainer<JSX.MedChartB
   'dsColor',
   'dsSize',
   'label',
+  'hideValue',
   'value',
-  'unidade'
+  'labelContent'
 ]);
 
 

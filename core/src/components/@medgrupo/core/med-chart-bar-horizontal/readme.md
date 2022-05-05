@@ -5,13 +5,14 @@
 
 ## Properties
 
-| Property  | Attribute  | Description                                 | Type                  | Default     |
-| --------- | ---------- | ------------------------------------------- | --------------------- | ----------- |
-| `dsColor` | `ds-color` | Define a cor do componente.                 | `string \| undefined` | `undefined` |
-| `dsSize`  | `ds-size`  | Define a variação de tamanho do componente. | `"md" \| undefined`   | `undefined` |
-| `label`   | `label`    | Define a visibilidade do label.             | `boolean`             | `true`      |
-| `unidade` | `unidade`  | Define o valor do componente.               | `string`              | `'%'`       |
-| `value`   | `value`    | Define o valor do componente.               | `number`              | `0`         |
+| Property       | Attribute       | Description                                 | Type                  | Default     |
+| -------------- | --------------- | ------------------------------------------- | --------------------- | ----------- |
+| `dsColor`      | `ds-color`      | Define a cor do componente.                 | `string \| undefined` | `undefined` |
+| `dsSize`       | `ds-size`       | Define a variação de tamanho do componente. | `"md" \| undefined`   | `undefined` |
+| `hideValue`    | `hide-value`    | Define a visibilidade do label.             | `boolean`             | `false`     |
+| `label`        | `label`         | Define a visibilidade do label.             | `boolean`             | `true`      |
+| `labelContent` | `label-content` | Define o valor do componente.               | `string \| undefined` | `undefined` |
+| `value`        | `value`         | Define o valor do componente.               | `number`              | `0`         |
 
 
 ## Shadow Parts
