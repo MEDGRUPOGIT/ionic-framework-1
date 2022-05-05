@@ -1111,8 +1111,8 @@ export class MedChartBar {
 }
 export declare interface MedChartBarHorizontal extends Components.MedChartBarHorizontal {
 }
-@ProxyCmp({ inputs: ["dsColor", "dsSize", "label", "unidade", "value"] })
-@Component({ selector: "med-chart-bar-horizontal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "dsSize", "label", "unidade", "value"] })
+@ProxyCmp({ inputs: ["dsColor", "dsSize", "hideValue", "label", "labelContent", "value"] })
+@Component({ selector: "med-chart-bar-horizontal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "dsSize", "hideValue", "label", "labelContent", "value"] })
 export class MedChartBarHorizontal {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

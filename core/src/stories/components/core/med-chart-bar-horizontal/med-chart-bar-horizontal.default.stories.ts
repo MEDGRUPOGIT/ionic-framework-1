@@ -7,14 +7,21 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ dsColor, dsSize, label, value }) => {
+const Template = ({ dsColor, hideValue, dsSize, label, value, labelContent }) => {
   return html`
     <ion-app>
       <ion-content>
         <div class="full-height-grid">
 
           <!-- component markdown -->
-          <med-chart-bar-horizontal .dsColor=${dsColor} .dsSize=${dsSize} .label=${label} value=${value}></med-chart-bar-horizontal>
+          <med-chart-bar-horizontal
+            .dsColor=${dsColor}
+            ?hide-value=${hideValue}
+            .dsSize=${dsSize}
+            .label=${label}
+            value=${value}
+            .labelContent=${labelContent}>
+          </med-chart-bar-horizontal>
           <!-- component -->
 
         </div>
@@ -40,12 +47,12 @@ Default.argTypes = {
       defaultValue: { summary: 'undefined' },
     },
   },
-  dsSize: {
-    options: [undefined, 'md'],
-    control: { type: 'radio'},
-    description: "Define a variação de tamanho componente.",
+  hideValue: {
+    control: { type: 'boolean' },
+    description: 'Define a visibilidade do do valor da porcentagem.',
+    defaultValue: false,
     table: {
-      type:  { summary: 'md' },
+      type:  { summary: 'boolean' },
       defaultValue: { summary: 'undefined' },
     },
   },
@@ -64,6 +71,15 @@ Default.argTypes = {
     description: 'Define a porcentagem a ser mostrada.',
     table: {
       type:  { summary: 'number' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  labelContent: {
+    control: { type: 'text' },
+    description: 'Define a url da imagem, se existir.',
+    defaultValue: '',
+    table: {
+      type:  { summary: 'string' },
       defaultValue: { summary: 'undefined' },
     },
   },

@@ -32,10 +32,9 @@ export class MedImageZoom {
 
   @State() slider!: any;
 
-  defaultMaxRatio = 13;
+  defaultMaxRatio = 8;
   aplicandoZoom = false;
   @State() sliderOpts = this.getSliderOpts(this.defaultMaxRatio);
-
   getSliderOpts(maxRatio: number) {
     const sliderOpts = {
       zoom: {
@@ -45,36 +44,14 @@ export class MedImageZoom {
     };
     return sliderOpts;
   }
-  async sleep(time: number = 500) {
-    return new Promise<void>((resolve) => {
-      setTimeout(() => {
-        resolve();
-      }, time);
-    });
-  }
-  async zoomIn(increment = 3) {
-    if (this.aplicandoZoom) {
-      return;
-    }
-    this.aplicandoZoom = true;
-    const zoom = this.slider.swiper.zoom;
-    let maxRatio = zoom.currentScale + increment;
-    if (maxRatio > this.defaultMaxRatio) {
-      maxRatio = this.defaultMaxRatio;
-    } else if (maxRatio < 1) {
-      maxRatio = 1;
-    }
-
-    this.sliderOpts = this.getSliderOpts(maxRatio);
-    await this.sleep(45);
-    zoom.in();
-    await this.sleep(45);
-    this.sliderOpts = this.getSliderOpts(this.defaultMaxRatio);
-    this.aplicandoZoom = false;
-  }
 
   async zoomOut() {
-    this.zoomIn(-3);
+    const zoom = this.slider.swiper.zoom;
+    zoom.out();
+  }
+  async zoomIn() {
+    const zoom = this.slider.swiper.zoom;
+    zoom.in();
   }
 
   dismiss() {
