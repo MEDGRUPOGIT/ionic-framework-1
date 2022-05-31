@@ -51,6 +51,11 @@
     box-shadow: none;
   }
 
+  :host a.button-native {
+    display: flex;
+    align-items: center;
+  }
+
   :host .button-inner__text {
     padding: 0 var(--padding-text);
     display: flex;
