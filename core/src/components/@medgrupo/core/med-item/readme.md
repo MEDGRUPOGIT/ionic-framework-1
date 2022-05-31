@@ -44,19 +44,6 @@
 | `"native"`      | The native HTML button, anchor or div element that wraps all child elements. |
 
 
-## Dependencies
-
-### Depends on
-
-- ion-icon
-
-### Graph
-```mermaid
-graph TD;
-  med-item --> ion-icon
-  style med-item fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

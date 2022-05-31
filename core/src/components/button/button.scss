@@ -122,6 +122,10 @@
   clear: both;
 
   contain: content;
+
+  display: flex;
+
+  align-items: center;
 }
 
 :host(.button-block) .button-native::after {
