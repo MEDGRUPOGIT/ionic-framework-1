@@ -78,6 +78,7 @@ export const DIRECTIVES = [
   d.MedAccordionList,
   d.MedAddCard,
   d.MedAgrupador,
+  d.MedAlert,
   d.MedAlertFixed,
   d.MedAlternativas,
   d.MedAlternativasA,

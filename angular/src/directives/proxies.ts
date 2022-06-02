@@ -939,6 +939,17 @@ export class MedAgrupador {
     this.el = r.nativeElement;
   }
 }
+export declare interface MedAlert extends Components.MedAlert {
+}
+@ProxyCmp({ inputs: ["cancelText", "confirmText", "heading", "message"] })
+@Component({ selector: "med-alert", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["cancelText", "confirmText", "heading", "message"] })
+export class MedAlert {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedAlertFixed extends Components.MedAlertFixed {
 }
 @ProxyCmp({ inputs: ["dsColor", "dsName", "labelAtualizar", "labelOffline"] })

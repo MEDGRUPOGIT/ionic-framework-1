@@ -201,6 +201,7 @@ export default defineComponent({
 ### Used by
 
  - [dialog-test](../@medgrupo/testes/dialog-test)
+ - [med-alert](../@medgrupo/core/med-alert)
  - [sheet-content-test](../@medgrupo/testes/sheet-content-test)
  - [sheet-test](../@medgrupo/testes/sheet-test)
 
@@ -208,6 +209,7 @@ export default defineComponent({
 ```mermaid
 graph TD;
   dialog-test --> ion-header
+  med-alert --> ion-header
   sheet-content-test --> ion-header
   sheet-test --> ion-header
   style ion-header fill:#f9f,stroke:#333,stroke-width:4px
