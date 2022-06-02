@@ -1413,6 +1413,12 @@ med-agrupador,prop,labelAlternativo,string,'Ocultar a lista',false,true
 med-agrupador,prop,labelDefault,string,'Expandir a lista',false,true
 med-agrupador,method,toggle,toggle(event?: Event | undefined) => Promise<void>
 
+med-alert,scoped
+med-alert,prop,cancelText,string | undefined,undefined,false,true
+med-alert,prop,confirmText,string | undefined,undefined,false,true
+med-alert,prop,heading,string | undefined,undefined,false,true
+med-alert,prop,message,string | undefined,undefined,false,true
+
 med-alert-fixed,shadow
 med-alert-fixed,prop,dsColor,string | undefined,undefined,false,true
 med-alert-fixed,prop,dsName,"atualizar" | "offline" | undefined,undefined,false,true

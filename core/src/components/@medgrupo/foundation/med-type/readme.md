@@ -20,6 +20,7 @@
 
  - [dialog-test](../../testes/dialog-test)
  - [med-add-card](../../compositions/med-add-card)
+ - [med-alert](../../core/med-alert)
  - [med-alert-fixed](../../core/med-alert-fixed)
  - [med-banner](../../compositions/med-banner)
  - [med-calendar](../../compositions/med-calendar)
@@ -46,6 +47,7 @@
 graph TD;
   dialog-test --> med-type
   med-add-card --> med-type
+  med-alert --> med-type
   med-alert-fixed --> med-type
   med-banner --> med-type
   med-calendar --> med-type

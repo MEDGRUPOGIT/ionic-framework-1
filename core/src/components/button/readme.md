@@ -371,6 +371,7 @@ export default defineComponent({
 ### Used by
 
  - [dialog-test](../@medgrupo/testes/dialog-test)
+ - [med-alert](../@medgrupo/core/med-alert)
  - [med-banner](../@medgrupo/compositions/med-banner)
  - [med-calendar](../@medgrupo/compositions/med-calendar)
  - [med-config](../@medgrupo/legacy/med-config)
@@ -394,6 +395,7 @@ export default defineComponent({
 graph TD;
   ion-button --> ion-ripple-effect
   dialog-test --> ion-button
+  med-alert --> ion-button
   med-banner --> ion-button
   med-calendar --> ion-button
   med-config --> ion-button

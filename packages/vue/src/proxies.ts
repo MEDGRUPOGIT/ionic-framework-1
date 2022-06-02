@@ -862,6 +862,14 @@ export const MedAgrupador = /*@__PURE__*/ defineContainer<JSX.MedAgrupador>('med
 ]);
 
 
+export const MedAlert = /*@__PURE__*/ defineContainer<JSX.MedAlert>('med-alert', [
+  'heading',
+  'message',
+  'cancelText',
+  'confirmText'
+]);
+
+
 export const MedAlertFixed = /*@__PURE__*/ defineContainer<JSX.MedAlertFixed>('med-alert-fixed', [
   'dsColor',
   'dsName',
