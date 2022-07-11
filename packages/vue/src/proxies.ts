@@ -31,9 +31,6 @@ export const IonBadge = /*@__PURE__*/ defineContainer<JSX.IonBadge>('ion-badge',
 
 
 export const IonButton = /*@__PURE__*/ defineContainer<JSX.IonButton>('ion-button', [
-  'dsColor',
-  'dsName',
-  'dsSize',
   'color',
   'buttonType',
   'disabled',
@@ -310,6 +307,7 @@ export const IonInput = /*@__PURE__*/ defineContainer<JSX.IonInput>('ion-input',
   'size',
   'type',
   'value',
+  'iconClicked',
   'ionInput',
   'ionChange',
   'ionBlur',
@@ -995,6 +993,12 @@ export const MedCaption = /*@__PURE__*/ defineContainer<JSX.MedCaption>('med-cap
 ]);
 
 
+export const MedCarregamento = /*@__PURE__*/ defineContainer<JSX.MedCarregamento>('med-carregamento', [
+  'message',
+  'color'
+]);
+
+
 export const MedCartaoRespostaItem = /*@__PURE__*/ defineContainer<JSX.MedCartaoRespostaItem>('med-cartao-resposta-item', [
   'dsColor',
   'anulada',
@@ -1156,7 +1160,8 @@ export const MedImageZoom = /*@__PURE__*/ defineContainer<JSX.MedImageZoom>('med
   'imagens',
   'marcaAguaSuperior',
   'marcaAguaInferior',
-  'titulo'
+  'titulo',
+  'initialSlide'
 ]);
 
 

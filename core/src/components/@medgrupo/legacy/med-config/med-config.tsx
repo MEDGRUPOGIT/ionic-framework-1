@@ -42,7 +42,7 @@ export class MedConfig {
           <med-navbar slot="navbar" ds-theme="light">
             <span slot="title">Configurações</span>
 
-            <ion-button ds-name="icon-only" slot="left" onClick={() => this.dismiss()}>
+            <ion-button mode="ios" icon-only ds-name="icon-only" slot="left" onClick={() => this.dismiss()}>
               <ion-icon class="med-icon" slot="icon-only" name="med-fechar"></ion-icon>
             </ion-button>
           </med-navbar>

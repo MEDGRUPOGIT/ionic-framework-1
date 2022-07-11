@@ -1,0 +1,21 @@
+@mixin generate-component-color($component, $color, $i) {
+  @if ($i == 3) {
+    #{$component}[ds-color='#{$color}'] {
+      @content;
+    }
+  }
+}
+
+// legado
+@mixin generate-component-neutral($component, $color, $i) {
+  #{$component}[ds-color='#{$color}'] {
+    @content;
+  }
+}
+
+// legado
+@mixin generate-component-feedback($component, $color, $i) {
+  #{$component}[ds-color='#{$color}'] {
+    @content;
+  }
+}

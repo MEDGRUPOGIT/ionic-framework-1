@@ -25,6 +25,7 @@
  - [med-banner](../../compositions/med-banner)
  - [med-calendar](../../compositions/med-calendar)
  - [med-calendar-day](../../compositions/med-calendar-day)
+ - [med-carregamento](../../core/med-carregamento)
  - [med-chart-bar-horizontal](../../core/med-chart-bar-horizontal)
  - [med-chart-categoria](../../compositions/med-chart-categoria)
  - [med-chart-radial](../../core/med-chart-radial)
@@ -52,6 +53,7 @@ graph TD;
   med-banner --> med-type
   med-calendar --> med-type
   med-calendar-day --> med-type
+  med-carregamento --> med-type
   med-chart-bar-horizontal --> med-type
   med-chart-categoria --> med-type
   med-chart-radial --> med-type

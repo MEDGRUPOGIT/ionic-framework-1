@@ -210,7 +210,6 @@ export class MedItem implements ComponentInterface, AnchorInterface, ButtonInter
   // inputs, then those need to individually get each click
   private hasCover(): boolean {
     const inputs = this.el.querySelectorAll('ion-checkbox, ion-datetime, ion-select, ion-radio, ion-toggle');
-    console.log(inputs);
 
     return inputs.length === 1 && !this.multipleInputs;
   }

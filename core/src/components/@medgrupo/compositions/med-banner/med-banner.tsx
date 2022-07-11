@@ -5,7 +5,7 @@ import { generateMedColor } from '../../../../utils/med-theme';
 @Component({
   tag: 'med-banner',
   styleUrl: 'med-banner.scss',
-  shadow: true,
+  scoped: true,
 })
 export class MedBanner {
 
@@ -82,8 +82,8 @@ export class MedBanner {
           </div>}
         </div>}
         {(btnLeft || btnRight) && <div class="med-notification__footer">
-          {btnLeft && <ion-button class="med-notification__button" ds-color={dsColor} ds-name="tertiary" onClick={this.onButtonLeftClick}> {btnLeft} </ion-button>}
-          {btnRight && <ion-button class="med-notification__button" ds-color={dsColor} ds-name="tertiary" onClick={this.onButtonRightClick}> {btnRight} </ion-button>}
+          {btnLeft && <ion-button class="med-notification__button" mode="ios" ds-color={dsColor} fill="clear" ds-size="xs" onClick={this.onButtonLeftClick}> {btnLeft} </ion-button>}
+          {btnRight && <ion-button class="med-notification__button" mode="ios" ds-color={dsColor} fill="clear" ds-size="xs" onClick={this.onButtonRightClick}> {btnRight} </ion-button>}
         </div>}
       </Host>
     );

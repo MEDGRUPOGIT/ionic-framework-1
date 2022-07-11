@@ -30,17 +30,21 @@ export class MedImageZoom {
    */
   @Prop({ mutable: true, reflect: true }) titulo?: string;
 
+  @Prop({ mutable: true, reflect: true }) initialSlide? = 0;
+
   @State() slider!: any;
 
   defaultMaxRatio = 8;
   aplicandoZoom = false;
+
   @State() sliderOpts = this.getSliderOpts(this.defaultMaxRatio);
+
   getSliderOpts(maxRatio: number) {
     const sliderOpts = {
       zoom: {
         maxRatio,
       },
-      intialSlide: 0,
+      initialSlide: this.initialSlide,
     };
     return sliderOpts;
   }
@@ -66,8 +70,10 @@ export class MedImageZoom {
             <span slot="title" innerHTML={this.titulo}></span>
 
             <ion-button
-              ds-name="tertiary"
+              mode="ios"
+              fill="clear"
               slot="right"
+              icon-only
               onClick={() => this.dismiss()}
             >
               <ion-icon

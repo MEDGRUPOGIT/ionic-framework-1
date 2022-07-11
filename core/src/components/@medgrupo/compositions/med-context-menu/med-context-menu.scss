@@ -15,8 +15,8 @@
       background: var(--background);
       right: -8px;
       top: -8px;
-      min-width: 250px;
-      max-width: 250px;
+      min-width: 264px;
+      max-width: 264px;
       width: 100%;
       box-shadow: 0 0 2px rgba(0, 0, 0, 0.14), 0 4px 5px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.2);
       border-radius: 4px;
@@ -30,6 +30,10 @@
       --font-size: 24px;
     }
 
+    &__icon {
+      margin-right: 0;
+    }
+
     &__inner-button {
       position: absolute;
       right: 8px;
@@ -39,6 +43,7 @@
 
     &__inner-icon {
       stroke: color('neutral', '10');
+      font-size: 24px;
     }
   }
 }

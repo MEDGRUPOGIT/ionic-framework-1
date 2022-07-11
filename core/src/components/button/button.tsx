@@ -1,11 +1,10 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, h } from '@stencil/core';
 
 import { getIonMode } from '../../global/ionic-global';
-import { AnimationBuilder, Color, RouterDirection, MedColor } from '../../interface';
+import { AnimationBuilder, Color, RouterDirection } from '../../interface';
 import { AnchorInterface, ButtonInterface } from '../../utils/element-interface';
 import { hasShadowDom, inheritAttributes } from '../../utils/helpers';
-import { hostContext, openURL } from '../../utils/theme';
-import { generateMedColor } from '../../utils/med-theme';
+import { createColorClasses, hostContext, openURL } from '../../utils/theme';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
@@ -20,7 +19,7 @@ import { generateMedColor } from '../../utils/med-theme';
 @Component({
   tag: 'ion-button',
   styleUrls: {
-    ios: 'button.md.scss',
+    ios: 'button.ios.scss',
     md: 'button.md.scss'
   },
   shadow: true,
@@ -34,26 +33,11 @@ export class Button implements ComponentInterface, AnchorInterface, ButtonInterf
   @Element() el!: HTMLElement;
 
   /**
-    * Define a cor do componente.
-    */
-  @Prop({ reflect: true }) dsColor?: MedColor;
-
-  /**
-    * Define a variação do componente.
-    */
-  @Prop() dsName?: 'secondary' | 'tertiary';
-
-  /**
-    * Define a variação de tamanho componente.
-    */
-  @Prop() dsSize?: 'xxxs' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
-
-  /**
    * The color to use from your application's color palette.
    * Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`.
    * For more information on colors, see [theming](/docs/theming/basics).
    */
-  @Prop({ reflect: true }) color?: Color;
+  @Prop() color?: Color;
 
   /**
    * The type of button.
@@ -154,12 +138,6 @@ export class Button implements ComponentInterface, AnchorInterface, ButtonInterf
     this.inheritedAttributes = inheritAttributes(this.el, ['aria-label']);
   }
 
-  componentDidLoad() {
-    if(this.el.classList.contains('button')) {
-      this.el.classList.remove('button');
-    }
-  }
-
   private get hasIconOnly() {
     return !!this.el.querySelector('[slot="icon-only"]');
   }
@@ -208,8 +186,7 @@ export class Button implements ComponentInterface, AnchorInterface, ButtonInterf
 
   render() {
     const mode = getIonMode(this);
-    const { dsColor, dsName, dsSize } = this;
-    const { buttonType, type, disabled, rel, target, size, href, expand, hasIconOnly, shape, strong, inheritedAttributes } = this;
+    const { buttonType, type, disabled, rel, target, size, href, color, expand, hasIconOnly, shape, strong, inheritedAttributes } = this;
     const finalSize = size === undefined && this.inItem ? 'small' : size;
     const TagType = href === undefined ? 'button' : 'a' as any;
     const attrs = (TagType === 'button')
@@ -229,13 +206,13 @@ export class Button implements ComponentInterface, AnchorInterface, ButtonInterf
       <Host
         onClick={this.handleClick}
         aria-disabled={disabled ? 'true' : null}
-        class={generateMedColor(dsColor, {
+        class={createColorClasses(color, {
           [mode]: true,
           [buttonType]: true,
           [`${buttonType}-${expand}`]: expand !== undefined,
           [`${buttonType}-${finalSize}`]: finalSize !== undefined,
           [`${buttonType}-${shape}`]: shape !== undefined,
-          //[`${buttonType}-${fill}`]: true,
+          [`${buttonType}-${fill}`]: true,
           [`${buttonType}-strong`]: strong,
           'in-toolbar': hostContext('ion-toolbar', this.el),
           'in-toolbar-color': hostContext('ion-toolbar[color]', this.el),
@@ -243,9 +220,6 @@ export class Button implements ComponentInterface, AnchorInterface, ButtonInterf
           'button-disabled': disabled,
           'ion-activatable': true,
           'ion-focusable': true,
-          'med-button': true,
-          [`med-button--${dsName}`]: dsName !== undefined,
-          [`med-button--${dsSize}`]: dsSize !== undefined,
         })}
       >
         <TagType
@@ -260,12 +234,10 @@ export class Button implements ComponentInterface, AnchorInterface, ButtonInterf
           <span class="button-inner">
             <slot name="icon-only"></slot>
             <slot name="start"></slot>
-            <div class="button-inner__text">
-              <slot></slot>
-            </div>
+            <slot></slot>
             <slot name="end"></slot>
           </span>
-          <ion-ripple-effect type={this.rippleType}></ion-ripple-effect>
+          {mode === 'md' && <ion-ripple-effect type={this.rippleType}></ion-ripple-effect>}
         </TagType>
       </Host>
     );

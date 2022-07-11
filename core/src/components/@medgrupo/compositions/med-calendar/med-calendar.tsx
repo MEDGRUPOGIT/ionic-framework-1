@@ -8,7 +8,7 @@ declare var ResizeObserver: any;
 @Component({
   tag: 'med-calendar',
   styleUrl: 'med-calendar.scss',
-  shadow: true,
+  scoped: true,
 })
 export class MedCalendar {
   @Element() hostElement!: any;
@@ -128,7 +128,7 @@ export class MedCalendar {
         style={{ '--width': `${this.width}` }}>
         <div class="header">
           <div class="header__left">
-            <ion-button ds-size="sm" ds-name="tertiary" onClick={() => this.onMonthClick('prev')}>
+            <ion-button icon-only mode="ios" ds-size="xxs" fill="clear" onClick={() => this.onMonthClick('prev')}>
               <ion-icon slot="icon-only" class="med-icon" name="med-esquerda"></ion-icon>
             </ion-button>
 
@@ -136,18 +136,18 @@ export class MedCalendar {
               {mes} {ano}
             </med-type>
 
-            <ion-button ds-size="sm" ds-name="tertiary" onClick={() => this.onMonthClick('next')}>
+            <ion-button icon-only mode="ios" ds-size="xxs" fill="clear" onClick={() => this.onMonthClick('next')}>
               <ion-icon slot="icon-only" class="med-icon" name="med-direita"></ion-icon>
             </ion-button>
           </div>
 
           <div class="header__right">
-            <ion-button ds-name="tertiary" onClick={() => this.onChoiceClick()}>
+            <ion-button mode="ios" ds-size="sm" fill="clear" onClick={() => this.onChoiceClick()}>
               <med-type class="choice__type">{this.choice}</med-type>
               <ion-icon class="med-icon header__icon" name="med-baixo"></ion-icon>
             </ion-button>
 
-            {/* <ion-button ds-name="tertiary" onClick={() => this.onGraficoClick()}>
+            {/* <ion-button fill="clear" onClick={() => this.onGraficoClick()}>
               <ion-icon class="med-icon header__icon" name="med-grafico"></ion-icon>
             </ion-button> */}
           </div>

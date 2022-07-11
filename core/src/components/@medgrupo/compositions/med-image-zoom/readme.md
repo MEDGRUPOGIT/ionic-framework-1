@@ -10,6 +10,7 @@
 | Property            | Attribute             | Description | Type                  | Default     |
 | ------------------- | --------------------- | ----------- | --------------------- | ----------- |
 | `imagens`           | `imagens`             | TODO        | `any`                 | `[]`        |
+| `initialSlide`      | `initial-slide`       |             | `number \| undefined` | `0`         |
 | `marcaAguaInferior` | `marca-agua-inferior` | TODO        | `string \| undefined` | `undefined` |
 | `marcaAguaSuperior` | `marca-agua-superior` | TODO        | `string \| undefined` | `undefined` |
 | `titulo`            | `titulo`              | TODO        | `string \| undefined` | `undefined` |

@@ -5,7 +5,7 @@ import { MedColor } from '../../../../interface';
 @Component({
   tag: 'med-tooltip',
   styleUrl: 'med-tooltip.scss',
-  shadow: true,
+  scoped: true,
 })
 export class MedTooltip {
   /**
@@ -110,7 +110,7 @@ export class MedTooltip {
         <div class="med-tooltip__content">
           {titulo && <div class="med-tooltip__header">
             <med-type class="med-tooltip__titulo">{titulo}</med-type>
-            <ion-button class="med-tooltip__button-fechar" ds-color={!dsColor ? 'neutral-3' : dsColor} ds-name="tertiary" ds-size="xxs" onClick={(event: any) => {this.toggle(event)}}>
+            <ion-button mode="ios" icon-only class="med-tooltip__button-fechar" ds-color={!dsColor ? 'neutral-10' : dsColor} fill="clear" ds-size="xxs" onClick={(event: any) => {this.toggle(event)}}>
               <ion-icon slot="icon-only" class="med-icon" name="med-fechar"></ion-icon>
             </ion-button>
           </div>}
@@ -120,8 +120,8 @@ export class MedTooltip {
           <slot name="content"></slot>
 
           {(btnLeft || btnRight) && <div class="med-tooltip__footer">
-            {btnLeft && <ion-button class="med-tooltip__button" ds-color={!dsColor ? 'neutral-3' : dsColor} ds-size="xxs" ds-name="tertiary" onClick={this.onBtnLeftClick}> {btnLeft} </ion-button>}
-            {btnRight && <ion-button class="med-tooltip__button" ds-color={!dsColor ? 'neutral-3' : dsColor} ds-size="xxs" ds-name="tertiary" onClick={this.onBtnRightClick}> {btnRight} </ion-button>}
+            {btnLeft && <ion-button mode="ios" class="med-tooltip__button" ds-color={!dsColor ? 'neutral-10' : dsColor} ds-size="xxs" fill="clear" onClick={this.onBtnLeftClick}> {btnLeft} </ion-button>}
+            {btnRight && <ion-button mode="ios" class="med-tooltip__button" ds-color={!dsColor ? 'neutral-10' : dsColor} ds-size="xxs" fill="clear" onClick={this.onBtnRightClick}> {btnRight} </ion-button>}
           </div>}
         </div>
       </Host>

@@ -141,12 +141,9 @@ ion-badge,css-prop,--padding-top
 
 ion-button,shadow
 ion-button,prop,buttonType,string,'button',false,false
-ion-button,prop,color,string | undefined,undefined,false,true
+ion-button,prop,color,string | undefined,undefined,false,false
 ion-button,prop,disabled,boolean,false,false,true
 ion-button,prop,download,string | undefined,undefined,false,false
-ion-button,prop,dsColor,string | undefined,undefined,false,true
-ion-button,prop,dsName,"secondary" | "tertiary" | undefined,undefined,false,false
-ion-button,prop,dsSize,"lg" | "md" | "sm" | "xs" | "xxs" | "xxxs" | undefined,undefined,false,false
 ion-button,prop,expand,"block" | "full" | undefined,undefined,false,true
 ion-button,prop,fill,"clear" | "default" | "outline" | "solid" | undefined,undefined,false,true
 ion-button,prop,href,string | undefined,undefined,false,false
@@ -489,6 +486,7 @@ ion-input,prop,type,"date" | "datetime-local" | "email" | "month" | "number" | "
 ion-input,prop,value,null | number | string | undefined,'',false,false
 ion-input,method,getInputElement,getInputElement() => Promise<HTMLInputElement>
 ion-input,method,setFocus,setFocus() => Promise<void>
+ion-input,event,iconClicked,string,true
 ion-input,event,ionBlur,FocusEvent,true
 ion-input,event,ionChange,InputChangeEventDetail,true
 ion-input,event,ionFocus,FocusEvent,true
@@ -1486,7 +1484,7 @@ med-avatar,prop,dsSize,"base" | "lg" | "md" | "sm" | "xl" | "xs" | "xxl" | "xxs"
 med-avatar,prop,image,string | undefined,undefined,false,false
 med-avatar,prop,letter,string | undefined,undefined,false,false
 
-med-banner,shadow
+med-banner,scoped
 med-banner,prop,btnLeft,string,undefined,true,false
 med-banner,prop,btnRight,string,undefined,true,false
 med-banner,prop,dsColor,string | undefined,undefined,false,true
@@ -1504,7 +1502,7 @@ med-base,prop,radius,string | undefined,undefined,false,true
 med-base,prop,spacingH,string | undefined,undefined,false,true
 med-base,prop,spacingV,string | undefined,undefined,false,true
 
-med-calendar,shadow
+med-calendar,scoped
 med-calendar,prop,ano,string | undefined,undefined,false,true
 med-calendar,prop,choice,string,'Semana',false,true
 med-calendar,prop,container,string | undefined,undefined,false,true
@@ -1522,6 +1520,10 @@ med-calendar-day,prop,fill,"outline" | undefined,undefined,false,true
 med-caption,shadow
 med-caption,prop,dsColor,string | undefined,undefined,false,true
 med-caption,prop,dsSize,"lg" | "md" | "sm" | "xl" | "xs" | "xxs" | undefined,undefined,false,true
+
+med-carregamento,scoped
+med-carregamento,prop,color,string,'#808080',false,false
+med-carregamento,prop,message,string,undefined,true,false
 
 med-cartao-resposta-item,shadow
 med-cartao-resposta-item,prop,anulada,boolean,false,false,true
@@ -1607,7 +1609,7 @@ med-config,scoped
 med-config,prop,emitter,{ scheme: (value: string) => void; theme: (value: string) => void; },undefined,true,false
 med-config,prop,opcoes,MedConfigInterface,undefined,true,false
 
-med-context-menu,shadow
+med-context-menu,scoped
 med-context-menu,prop,collapsed,boolean,true,false,true
 med-context-menu,method,toggle,toggle(event?: Event | undefined) => Promise<void>
 
@@ -1647,6 +1649,7 @@ med-header,event,medResize,headerResizeEventDetail,true
 
 med-image-zoom,scoped
 med-image-zoom,prop,imagens,any,[],false,true
+med-image-zoom,prop,initialSlide,number | undefined,0,false,true
 med-image-zoom,prop,marcaAguaInferior,string | undefined,undefined,false,true
 med-image-zoom,prop,marcaAguaSuperior,string | undefined,undefined,false,true
 med-image-zoom,prop,titulo,string | undefined,undefined,false,true
@@ -1702,7 +1705,7 @@ med-lista,shadow
 med-lista,prop,mode,"ios" | "md",undefined,false,false
 med-lista,method,closeSlidingItems,closeSlidingItems() => Promise<boolean>
 
-med-nav,shadow
+med-nav,scoped
 med-nav,prop,active,boolean,false,false,true
 med-nav,prop,dsColor,string | undefined,undefined,false,true
 
@@ -1722,7 +1725,7 @@ med-nav-item,event,medBlur,void,true
 med-nav-item,event,medClick,void,true
 med-nav-item,event,medFocus,void,true
 
-med-nav-simple,shadow
+med-nav-simple,scoped
 med-nav-simple,prop,dsColor,string | undefined,undefined,false,true
 med-nav-simple,event,close,any,true
 
@@ -1730,7 +1733,7 @@ med-navbar,shadow
 med-navbar,prop,dsColor,string | undefined,undefined,false,true
 med-navbar,prop,dsName,"secondary" | "transparent" | undefined,undefined,false,false
 
-med-offline,shadow
+med-offline,scoped
 med-offline,event,medClick,void,true
 
 med-option,shadow
@@ -1805,8 +1808,8 @@ med-tab-button,shadow
 med-tab-button,prop,active,boolean,false,false,true
 med-tab-button,prop,dsColor,string | undefined,undefined,false,true
 
-med-themes,shadow
-med-themes,prop,ativo,"theme-gold" | "theme-recursos" | undefined,undefined,false,true
+med-themes,scoped
+med-themes,prop,ativo,string | undefined,undefined,false,true
 med-themes,prop,temas,MedTema[] | undefined,undefined,false,false
 med-themes,event,medChange,string,true
 
@@ -1821,7 +1824,7 @@ med-tiles,prop,titulo,string | undefined,undefined,false,false
 med-toolbar,shadow
 med-toolbar,prop,dsColor,string | undefined,undefined,false,true
 
-med-tooltip,shadow
+med-tooltip,scoped
 med-tooltip,prop,btnLeft,string | undefined,undefined,false,false
 med-tooltip,prop,btnRight,string | undefined,undefined,false,false
 med-tooltip,prop,collapsed,boolean,true,false,true

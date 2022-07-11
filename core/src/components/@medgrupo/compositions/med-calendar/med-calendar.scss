@@ -12,6 +12,7 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 24px;
+  background-color: transparent;
 
   &__type {
     flex: 1;
@@ -75,6 +76,7 @@
     --line-height: 16px;
     --color: hsl(var(--med-color-neutral-10));
     text-transform: none;
+    margin-right: 4px;
   }
 }
 

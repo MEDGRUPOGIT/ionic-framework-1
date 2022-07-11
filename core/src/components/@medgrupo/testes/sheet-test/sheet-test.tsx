@@ -10,7 +10,7 @@ export class SheetTest {
     return (
       <Host>
         <ion-header class="tp-sheet-header">
-          <ion-button class="tp-dialog__button" ds-name="tertiary" ds-size="xxs">
+          <ion-button mode="ios" icon-only class="tp-dialog__button" fill="clear" ds-size="xxs">
             <ion-icon slot="icon-only" class="med-icon" name="med-fechar"></ion-icon>
           </ion-button>
         </ion-header>
@@ -24,7 +24,7 @@ export class SheetTest {
           <med-type>Sheet</med-type>
         </div>
         <ion-footer class="tp-sheet-footer">
-          <ion-button class="tp-dialog__button" expand="block">button</ion-button>
+          <ion-button mode="ios" class="tp-dialog__button" expand="block">button</ion-button>
         </ion-footer>
       </Host>
     );
