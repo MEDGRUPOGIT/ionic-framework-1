@@ -5,7 +5,7 @@ import { generateMedColor } from '../../../../utils/med-theme';
 @Component({
   tag: 'med-nav',
   styleUrl: 'med-nav.scss',
-  shadow: true,
+  scoped: true,
 })
 export class MedNav {
   /**
@@ -46,7 +46,7 @@ export class MedNav {
 
           <slot></slot>
 
-          <ion-button ds-color={dsColor} class="med-nav__toggle" ds-name="tertiary" onClick={() => this.clickHandle()}>
+          <ion-button mode="ios" icon-only ds-color={dsColor} class="med-nav__toggle" fill="clear" onClick={() => this.clickHandle()}>
             <ion-icon slot="icon-only" class="med-icon" name="med-esquerda"></ion-icon>
           </ion-button>
         </nav>

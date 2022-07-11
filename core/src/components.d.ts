@@ -264,18 +264,6 @@ export namespace Components {
          */
         "download": string | undefined;
         /**
-          * Define a cor do componente.
-         */
-        "dsColor"?: MedColor;
-        /**
-          * Define a variação do componente.
-         */
-        "dsName"?: 'secondary' | 'tertiary';
-        /**
-          * Define a variação de tamanho componente.
-         */
-        "dsSize"?: 'xxxs' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
-        /**
           * Set to `"block"` for a full-width button or to `"full"` for a full-width button without left and right borders.
          */
         "expand"?: 'full' | 'block';
@@ -3202,6 +3190,10 @@ export namespace Components {
          */
         "dsSize"?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     }
+    interface MedCarregamento {
+        "color": string;
+        "message": string;
+    }
     interface MedCartaoRespostaItem {
         /**
           * TODO
@@ -3518,6 +3510,7 @@ export namespace Components {
          */
         "imagens": | MedImageZoomItemInterface[]
     | any;
+        "initialSlide"?: number | undefined;
         /**
           * TODO
          */
@@ -3950,7 +3943,7 @@ export namespace Components {
         /**
           * Define a variação do componente.
          */
-        "ativo"?: 'theme-gold' | 'theme-recursos';
+        "ativo"?: 'theme-gold' | 'theme-recursos' | string;
         /**
           * Define quais os temas
          */
@@ -4700,6 +4693,12 @@ declare global {
         prototype: HTMLMedCaptionElement;
         new (): HTMLMedCaptionElement;
     };
+    interface HTMLMedCarregamentoElement extends Components.MedCarregamento, HTMLStencilElement {
+    }
+    var HTMLMedCarregamentoElement: {
+        prototype: HTMLMedCarregamentoElement;
+        new (): HTMLMedCarregamentoElement;
+    };
     interface HTMLMedCartaoRespostaItemElement extends Components.MedCartaoRespostaItem, HTMLStencilElement {
     }
     var HTMLMedCartaoRespostaItemElement: {
@@ -5141,6 +5140,7 @@ declare global {
         "med-calendar": HTMLMedCalendarElement;
         "med-calendar-day": HTMLMedCalendarDayElement;
         "med-caption": HTMLMedCaptionElement;
+        "med-carregamento": HTMLMedCarregamentoElement;
         "med-cartao-resposta-item": HTMLMedCartaoRespostaItemElement;
         "med-cartao-resposta-lista": HTMLMedCartaoRespostaListaElement;
         "med-chart-bar": HTMLMedChartBarElement;
@@ -5443,18 +5443,6 @@ declare namespace LocalJSX {
           * This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want).
          */
         "download"?: string | undefined;
-        /**
-          * Define a cor do componente.
-         */
-        "dsColor"?: MedColor;
-        /**
-          * Define a variação do componente.
-         */
-        "dsName"?: 'secondary' | 'tertiary';
-        /**
-          * Define a variação de tamanho componente.
-         */
-        "dsSize"?: 'xxxs' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
         /**
           * Set to `"block"` for a full-width button or to `"full"` for a full-width button without left and right borders.
          */
@@ -6201,6 +6189,7 @@ declare namespace LocalJSX {
           * The name of the control, which is submitted with the form data.
          */
         "name"?: string;
+        "onIconClicked"?: (event: CustomEvent<string>) => void;
         /**
           * Emitted when the input loses focus.
          */
@@ -8460,6 +8449,10 @@ declare namespace LocalJSX {
          */
         "dsSize"?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     }
+    interface MedCarregamento {
+        "color"?: string;
+        "message": string;
+    }
     interface MedCartaoRespostaItem {
         /**
           * TODO
@@ -8810,6 +8803,7 @@ declare namespace LocalJSX {
          */
         "imagens"?: | MedImageZoomItemInterface[]
     | any;
+        "initialSlide"?: number | undefined;
         /**
           * TODO
          */
@@ -9253,7 +9247,7 @@ declare namespace LocalJSX {
         /**
           * Define a variação do componente.
          */
-        "ativo"?: 'theme-gold' | 'theme-recursos';
+        "ativo"?: 'theme-gold' | 'theme-recursos' | string;
         /**
           * Retornar a cor selecionada
          */
@@ -9490,6 +9484,7 @@ declare namespace LocalJSX {
         "med-calendar": MedCalendar;
         "med-calendar-day": MedCalendarDay;
         "med-caption": MedCaption;
+        "med-carregamento": MedCarregamento;
         "med-cartao-resposta-item": MedCartaoRespostaItem;
         "med-cartao-resposta-lista": MedCartaoRespostaLista;
         "med-chart-bar": MedChartBar;
@@ -9656,6 +9651,7 @@ declare module "@stencil/core" {
             "med-calendar": LocalJSX.MedCalendar & JSXBase.HTMLAttributes<HTMLMedCalendarElement>;
             "med-calendar-day": LocalJSX.MedCalendarDay & JSXBase.HTMLAttributes<HTMLMedCalendarDayElement>;
             "med-caption": LocalJSX.MedCaption & JSXBase.HTMLAttributes<HTMLMedCaptionElement>;
+            "med-carregamento": LocalJSX.MedCarregamento & JSXBase.HTMLAttributes<HTMLMedCarregamentoElement>;
             "med-cartao-resposta-item": LocalJSX.MedCartaoRespostaItem & JSXBase.HTMLAttributes<HTMLMedCartaoRespostaItemElement>;
             "med-cartao-resposta-lista": LocalJSX.MedCartaoRespostaLista & JSXBase.HTMLAttributes<HTMLMedCartaoRespostaListaElement>;
             "med-chart-bar": LocalJSX.MedChartBar & JSXBase.HTMLAttributes<HTMLMedChartBarElement>;

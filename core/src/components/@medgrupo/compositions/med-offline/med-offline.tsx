@@ -3,7 +3,7 @@ import { Component, Host, h, Event, EventEmitter } from '@stencil/core';
 @Component({
   tag: 'med-offline',
   styleUrl: 'med-offline.scss',
-  shadow: true,
+  scoped: true,
 })
 export class MedOffline {
   /**
@@ -21,7 +21,7 @@ export class MedOffline {
         <div class="wrapper">
           <med-header>
             <med-navbar ds-name="transparent" slot="navbar">
-              <ion-button ds-name="tertiary" ds-size="xs" slot="left" onClick={() => this.onClick()}>
+              <ion-button mode="ios" icon-only fill="clear" ds-size="xs" slot="left" onClick={() => this.onClick()}>
                 <ion-icon class="med-icon" slot="icon-only" name="med-esquerda"></ion-icon>
               </ion-button>
             </med-navbar>

@@ -71,8 +71,8 @@ export class IonBadge {
 }
 export declare interface IonButton extends Components.IonButton {
 }
-@ProxyCmp({ inputs: ["buttonType", "color", "disabled", "download", "dsColor", "dsName", "dsSize", "expand", "fill", "href", "mode", "rel", "routerAnimation", "routerDirection", "shape", "size", "strong", "target", "type"] })
-@Component({ selector: "ion-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["buttonType", "color", "disabled", "download", "dsColor", "dsName", "dsSize", "expand", "fill", "href", "mode", "rel", "routerAnimation", "routerDirection", "shape", "size", "strong", "target", "type"] })
+@ProxyCmp({ inputs: ["buttonType", "color", "disabled", "download", "expand", "fill", "href", "mode", "rel", "routerAnimation", "routerDirection", "shape", "size", "strong", "target", "type"] })
+@Component({ selector: "ion-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["buttonType", "color", "disabled", "download", "expand", "fill", "href", "mode", "rel", "routerAnimation", "routerDirection", "shape", "size", "strong", "target", "type"] })
 export class IonButton {
   ionFocus!: EventEmitter<CustomEvent>;
   ionBlur!: EventEmitter<CustomEvent>;
@@ -341,6 +341,7 @@ export declare interface IonInput extends Components.IonInput {
 @ProxyCmp({ inputs: ["accept", "autocapitalize", "autocomplete", "autocorrect", "autofocus", "clearInput", "clearOnEdit", "color", "debounce", "disabled", "dsName", "enterkeyhint", "icon", "inputmode", "max", "maxlength", "min", "minlength", "mode", "multiple", "name", "pattern", "placeholder", "readonly", "required", "size", "spellcheck", "status", "step", "type", "value"], "methods": ["setFocus", "getInputElement"] })
 @Component({ selector: "ion-input", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["accept", "autocapitalize", "autocomplete", "autocorrect", "autofocus", "clearInput", "clearOnEdit", "color", "debounce", "disabled", "dsName", "enterkeyhint", "icon", "inputmode", "max", "maxlength", "min", "minlength", "mode", "multiple", "name", "pattern", "placeholder", "readonly", "required", "size", "spellcheck", "status", "step", "type", "value"] })
 export class IonInput {
+  iconClicked!: EventEmitter<CustomEvent>;
   ionInput!: EventEmitter<CustomEvent>;
   ionChange!: EventEmitter<CustomEvent>;
   ionBlur!: EventEmitter<CustomEvent>;
@@ -349,7 +350,7 @@ export class IonInput {
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ["ionInput", "ionChange", "ionBlur", "ionFocus"]);
+    proxyOutputs(this, this.el, ["iconClicked", "ionInput", "ionChange", "ionBlur", "ionFocus"]);
   }
 }
 export declare interface IonItem extends Components.IonItem {
@@ -1088,6 +1089,17 @@ export class MedCaption {
     this.el = r.nativeElement;
   }
 }
+export declare interface MedCarregamento extends Components.MedCarregamento {
+}
+@ProxyCmp({ inputs: ["color", "message"] })
+@Component({ selector: "med-carregamento", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "message"] })
+export class MedCarregamento {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedCartaoRespostaItem extends Components.MedCartaoRespostaItem {
 }
 @ProxyCmp({ inputs: ["anulada", "ativa", "dsColor", "impressa"] })
@@ -1324,8 +1336,8 @@ export class MedHeader {
 }
 export declare interface MedImageZoom extends Components.MedImageZoom {
 }
-@ProxyCmp({ inputs: ["imagens", "marcaAguaInferior", "marcaAguaSuperior", "titulo"] })
-@Component({ selector: "med-image-zoom", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["imagens", "marcaAguaInferior", "marcaAguaSuperior", "titulo"] })
+@ProxyCmp({ inputs: ["imagens", "initialSlide", "marcaAguaInferior", "marcaAguaSuperior", "titulo"] })
+@Component({ selector: "med-image-zoom", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["imagens", "initialSlide", "marcaAguaInferior", "marcaAguaSuperior", "titulo"] })
 export class MedImageZoom {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

@@ -58,14 +58,14 @@ export class MedRateAula {
           </div>
 
           <div class="med-rate-aula__button-fechar" onClick={(event: any) => { this.toggle(event) }}>
-            <ion-button ds-size="xs" ds-name="primary" class="">
+            <ion-button mode="ios" icon-only ds-size="xs">
               <ion-icon slot="icon-only" class="med-icon" name="med-fechar"></ion-icon>
             </ion-button>
           </div>
         </div>
 
         <div class="med-rate-aula__end" onClick={(event: any) => { this.toggle(event) }}>
-          <ion-button ds-size="xs" ds-name="tertiary">
+          <ion-button mode="ios" icon-only ds-size="xs" fill="clear">
             <ion-icon slot="icon-only" class="med-rate-aula__icon-abrir" name="med-avaliar"></ion-icon>
           </ion-button>
           <med-type token="p12">Avalie</med-type>

@@ -14,7 +14,7 @@ export class MedAlert {
   @Prop({ mutable: true, reflect: true }) message?: string;
 
   @Prop({ mutable: true, reflect: true }) cancelText?: string;
-  
+
   @Prop({ mutable: true, reflect: true }) confirmText?: string;
 
   dismiss(role: string) {
@@ -27,7 +27,7 @@ export class MedAlert {
     return (
       <Host>
         <ion-header class="tp-dialog-header">
-            <ion-button ds-name="tertiary" ds-size="xxs" onClick={() => this.dismiss('cancel')}>
+            <ion-button mode="ios" icon-only fill="clear" ds-size="xxs" onClick={() => this.dismiss('close')}>
               <ion-icon slot="icon-only" class="med-icon" name="med-fechar"></ion-icon>
             </ion-button>
           </ion-header>
@@ -36,8 +36,8 @@ export class MedAlert {
             <med-type ds-color="neutral-8" token="h14x" innerHTML={sanitizeDOMString(message)}></med-type>
 
             <div class="tp-dialog-footer">
-              {cancelText && <ion-button ds-name="secondary" onClick={() => this.dismiss('cancel')}>{cancelText}</ion-button>}
-              {confirmText && <ion-button onClick={() => this.dismiss('confirm')}>{confirmText}</ion-button>}
+              {cancelText && <ion-button mode="ios" fill="outline" onClick={() => this.dismiss('cancel')}>{cancelText}</ion-button>}
+              {confirmText && <ion-button mode="ios" onClick={() => this.dismiss('confirm')}>{confirmText}</ion-button>}
             </div>
           </div>
       </Host>

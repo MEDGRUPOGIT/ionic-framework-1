@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description                      | Type                                            | Default     |
-| -------- | --------- | -------------------------------- | ----------------------------------------------- | ----------- |
-| `ativo`  | `ativo`   | Define a variação do componente. | `"theme-gold" \| "theme-recursos" \| undefined` | `undefined` |
-| `temas`  | --        | Define quais os temas            | `MedTema[] \| undefined`                        | `undefined` |
+| Property | Attribute | Description                      | Type                     | Default     |
+| -------- | --------- | -------------------------------- | ------------------------ | ----------- |
+| `ativo`  | `ativo`   | Define a variação do componente. | `string \| undefined`    | `undefined` |
+| `temas`  | --        | Define quais os temas            | `MedTema[] \| undefined` | `undefined` |
 
 
 ## Events

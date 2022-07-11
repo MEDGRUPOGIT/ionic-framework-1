@@ -32,6 +32,9 @@ import '../css/recursos.css';
 import './themes/templarios.css';
 import '../src/stories/assets/fsemeric.css';
 
+// templarios 2.0
+import '../css/templarios-2.0.css';
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {

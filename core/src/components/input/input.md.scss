@@ -58,6 +58,7 @@
   --border-radius: 8px;
   --border-color: transparent;
   --icon-stroke: #{color('neutral', '6')};
+  --cursor: default;
 }
 
 :host {
@@ -133,3 +134,6 @@
   --border-color: #{color('feedback', 'warning')};
 }
 
+.med-icon {
+  cursor: var(--cursor);
+}

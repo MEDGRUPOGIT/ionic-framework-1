@@ -10,7 +10,7 @@ export class SheetContentTest {
     return (
       <Host>
         <ion-header class="tp-sheet-header">
-          <ion-button ds-name="tertiary" ds-size="xxs">
+          <ion-button mode="ios" icon-only fill="clear" ds-size="xxs">
             <ion-icon slot="icon-only" class="med-icon" name="med-fechar"></ion-icon>
           </ion-button>
         </ion-header>
@@ -20,7 +20,7 @@ export class SheetContentTest {
           <med-type>Sheet</med-type>
         </ion-content>
         <ion-footer class="tp-sheet-footer">
-          <ion-button expand="block">button</ion-button>
+          <ion-button mode="ios" expand="block">button</ion-button>
         </ion-footer>
       </Host>
     );

@@ -100,6 +100,8 @@ export class Input implements ComponentInterface {
    */
   @Prop() debounce = 0;
 
+  @Event() iconClicked!: EventEmitter<string>;
+
   @Watch('debounce')
   protected debounceChanged() {
     this.ionChange = debounceEvent(this.ionChange, this.debounce);
@@ -402,6 +404,10 @@ export class Input implements ComponentInterface {
     return this.getValue().length > 0;
   }
 
+  private iconClick() {
+    this.iconClicked.emit();
+  }
+
   render() {
     const { dsName, icon, status } = this;
     const mode = getIonMode(this);
@@ -472,7 +478,7 @@ export class Input implements ComponentInterface {
             onMouseDown={this.clearTextInput}
             onKeyDown={this.clearTextOnEnter}></ion-icon>
         }
-        {icon && <ion-icon class="med-icon" name={iconRender}></ion-icon>}
+        {icon && <ion-icon class="med-icon" name={iconRender} onClick={() => this.iconClick()}></ion-icon>}
       </Host>
     );
   }

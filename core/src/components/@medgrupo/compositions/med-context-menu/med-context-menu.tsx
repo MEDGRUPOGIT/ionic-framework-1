@@ -4,7 +4,7 @@ import { createColorClasses } from '../../../../utils/theme';
 @Component({
   tag: 'med-context-menu',
   styleUrl: 'med-context-menu.scss',
-  shadow: true,
+  scoped: true,
 })
 export class MedContextMenu {
   /**
@@ -37,12 +37,12 @@ export class MedContextMenu {
           'med-context-menu--collapsed': this.collapsed
         }, null)}
       >
-        <ion-button onClick={(event) => {this.toggle(event)}} class="med-context-menu__button" ds-name="tertiary" ds-size="xs">
+        <ion-button mode="ios" icon-only onClick={(event) => {this.toggle(event)}} class="med-context-menu__button" fill="clear" ds-size="sm">
           <ion-icon slot="icon-only" class="med-icon med-context-menu__icon" name="med-context-menu"></ion-icon>
         </ion-button>
 
         <div class="med-context-menu__content">
-          <ion-button onClick={(event) => {this.toggle(event)}} class="med-context-menu__inner-button" ds-name="tertiary" ds-size="xs">
+          <ion-button mode="ios" icon-only onClick={(event) => {this.toggle(event)}} class="med-context-menu__inner-button" fill="clear" ds-size="sm">
             <ion-icon slot="icon-only" class="med-icon med-context-menu__inner-icon" name="med-context-menu"></ion-icon>
           </ion-button>
 

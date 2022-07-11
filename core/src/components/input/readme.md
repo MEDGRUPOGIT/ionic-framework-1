@@ -335,12 +335,13 @@ export default defineComponent({
 
 ## Events
 
-| Event       | Description                             | Type                                  |
-| ----------- | --------------------------------------- | ------------------------------------- |
-| `ionBlur`   | Emitted when the input loses focus.     | `CustomEvent<FocusEvent>`             |
-| `ionChange` | Emitted when the value has changed.     | `CustomEvent<InputChangeEventDetail>` |
-| `ionFocus`  | Emitted when the input has focus.       | `CustomEvent<FocusEvent>`             |
-| `ionInput`  | Emitted when a keyboard input occurred. | `CustomEvent<KeyboardEvent>`          |
+| Event         | Description                             | Type                                  |
+| ------------- | --------------------------------------- | ------------------------------------- |
+| `iconClicked` |                                         | `CustomEvent<string>`                 |
+| `ionBlur`     | Emitted when the input loses focus.     | `CustomEvent<FocusEvent>`             |
+| `ionChange`   | Emitted when the value has changed.     | `CustomEvent<InputChangeEventDetail>` |
+| `ionFocus`    | Emitted when the input has focus.       | `CustomEvent<FocusEvent>`             |
+| `ionInput`    | Emitted when a keyboard input occurred. | `CustomEvent<KeyboardEvent>`          |
 
 
 ## Methods

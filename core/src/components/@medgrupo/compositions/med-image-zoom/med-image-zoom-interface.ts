@@ -8,4 +8,5 @@ export interface MedImageZoomInterface{
   imagens: MedImageZoomItemInterface[];
   marcaAguaSuperior?: string;
   marcaAguaInferior?: string;
+  initialSlide?: number;
 }

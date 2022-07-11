@@ -5,7 +5,7 @@ import { generateMedColor } from '../../../../utils/med-theme';
 @Component({
   tag: 'med-nav-simple',
   styleUrl: 'med-nav-simple.scss',
-  shadow: true,
+  scoped: true,
 })
 export class MedNavSimple {
 
@@ -54,7 +54,7 @@ export class MedNavSimple {
           <med-nav-item ds-color={dsColor} class="med-nav-simple__item" icon="med-multimidia"></med-nav-item>
           <med-nav-item ds-color={dsColor} class="med-nav-simple__item" icon="med-concursos"></med-nav-item>
           <med-nav-item ds-color={dsColor} class="med-nav-simple__item" icon="med-montaprovas"></med-nav-item>
-          <ion-button ds-color={dsColor} class="med-nav__toggle" ds-name="tertiary" onClick={() => this.clickHandle()}>
+          <ion-button mode="ios" icon-only ds-color={dsColor} class="med-nav__toggle" fill="clear" onClick={() => this.clickHandle()}>
             <ion-icon slot="icon-only" class="med-icon" name="med-esquerda"></ion-icon>
           </ion-button>
         </nav>

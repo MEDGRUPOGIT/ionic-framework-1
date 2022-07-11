@@ -67,7 +67,7 @@
   font-kerning: none;
 }
 
-:host(.med-button-disabled) {
+:host(.button-disabled) {
   cursor: default;
   opacity: .5;
   pointer-events: none;
@@ -77,7 +77,7 @@
 // --------------------------------------------------
 
 // Default Solid Color
-:host(.med-button-solid) {
+:host(.button-solid) {
   --background: #{ion-color(primary, base)};
   --color: #{ion-color(primary, contrast)};
 }
@@ -87,7 +87,7 @@
 // --------------------------------------------------
 
 // Default Outline Color
-:host(.med-button-outline) {
+:host(.button-outline) {
   --border-color: #{ion-color(primary, base)};
   --background: transparent;
   --color: #{ion-color(primary, base)};
@@ -98,7 +98,7 @@
 // --------------------------------------------------
 
 // Default Clear Color
-:host(.med-button-clear) {
+:host(.button-clear) {
   --border-width: 0;
   --background: transparent;
   --color: #{ion-color(primary, base)};
@@ -122,10 +122,6 @@
   clear: both;
 
   contain: content;
-
-  display: flex;
-
-  align-items: center;
 }
 
 :host(.button-block) .button-native::after {
@@ -286,17 +282,18 @@ ion-ripple-effect {
   }
 }
 
+
 // Button Colors
 // --------------------------------------------------
 
 // Solid Button with Color
-:host(.med-button-solid.ion-color) .button-native {
+:host(.button-solid.ion-color) .button-native {
   background: current-color(base);
   color: current-color(contrast);
 }
 
 // Outline Button with Color
-:host(.med-button-outline.ion-color) .button-native {
+:host(.button-outline.ion-color) .button-native {
   border-color: current-color(base);
 
   background: transparent;
@@ -304,7 +301,7 @@ ion-ripple-effect {
 }
 
 // Clear Button with Color
-:host(.med-button-clear.ion-color) .button-native {
+:host(.button-clear.ion-color) .button-native {
   background: transparent;
   color: current-color(base);
 }
@@ -316,11 +313,11 @@ ion-ripple-effect {
   color: #{var(--ion-toolbar-color, var(--color))};
 }
 
-:host(.med-button-outline.in-toolbar:not(.ion-color):not(.in-toolbar-color)) .button-native {
+:host(.button-outline.in-toolbar:not(.ion-color):not(.in-toolbar-color)) .button-native {
   border-color: #{var(--ion-toolbar-color, var(--color, var(--border-color)))};
 }
 
-:host(.med-button-solid.in-toolbar:not(.ion-color):not(.in-toolbar-color)) .button-native {
+:host(.button-solid.in-toolbar:not(.ion-color):not(.in-toolbar-color)) .button-native {
   background: #{var(--ion-toolbar-color, var(--background))};
   color: #{var(--ion-toolbar-background, var(--color))};
 }
