@@ -230,6 +230,49 @@ ion-button[icon-only] {
     }
   }
 }
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-button, neutral-#{$i}#{5}, $i) {
+    --background: #{tp-neutral($i, 5)};
+    --background-activated: #{tp-contrast-neutral($i, 0.08)};
+    --background-focused: #{tp-contrast-neutral($i, 0.08)};
+    --background-hover: #{tp-contrast-neutral($i, 0.08)};
+    --color: #{tp-contrast-neutral($i)};
+    --color-activated: #{tp-contrast-neutral($i)};
+    --color-focused: #{tp-contrast-neutral($i)};
+    --color-hover: #{tp-contrast-neutral($i)};
+
+    ion-icon {
+      stroke: var(--color);
+    }
+
+    &[disabled] {
+      --background: hsl(var(--med-color-neutral-3));
+      --color: hsl(var(--med-color-neutral-5));
+
+      ion-icon {
+        stroke: var(--color);
+      }
+    }
+
+    &.ion-activated {
+      ion-icon {
+        stroke: var(--color-activated);
+      }
+    }
+
+    &.ion-focused {
+      ion-icon {
+        stroke: var(--color-focused);
+      }
+    }
+
+    &:hover {
+      ion-icon {
+        stroke: var(--color-hover);
+      }
+    }
+  }
+}
 
 //
 // feedback

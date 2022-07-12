@@ -12,12 +12,12 @@
 //
 // neutral
 //
-@function tp-neutral($i, $alpha: null) {
+@function tp-neutral($i, $modifier: null, $alpha: null) {
   @if ($alpha) {
-    @return hsl(var(--med-color-neutral-#{$i}), $alpha);
+    @return hsl(var(--med-color-neutral-#{$i}#{$modifier}), $alpha);
   }
 
-  @return hsl(var(--med-color-neutral-#{$i}));
+  @return hsl(var(--med-color-neutral-#{$i}#{$modifier}));
 }
 
 @function tp-contrast-neutral($i, $alpha: null) {

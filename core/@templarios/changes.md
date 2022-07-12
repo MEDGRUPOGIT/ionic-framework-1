@@ -6,7 +6,7 @@
 2. Remover `ds-name="secondary"` e adicionar `fill="outline"`;
 3. Remover `ds-name="tertiary"` e adicionar `fill="clear"`;
 4. Acrescentar `icon-only` aos ion-buttons com icones `icon-only`;
-5. Remover `ds-name"primary"`;
+5. Remover `ds-name="primary"`;
 
 ## ion-icon
 

@@ -6,14 +6,12 @@
   }
 }
 
-// legado
 @mixin generate-component-neutral($component, $color, $i) {
   #{$component}[ds-color='#{$color}'] {
     @content;
   }
 }
 
-// legado
 @mixin generate-component-feedback($component, $color, $i) {
   #{$component}[ds-color='#{$color}'] {
     @content;

@@ -2,7 +2,7 @@ import { withDesign } from 'storybook-addon-designs';
 import { TemplariosButtonSize, MedColors } from '../../../templarios';
 
 export default {
-  title: 'Components/Core/Ionic/Button',
+  title: 'Components/Ionic/Button',
   decorators: [withDesign],
 };
 

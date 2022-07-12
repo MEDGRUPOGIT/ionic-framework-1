@@ -161,6 +161,7 @@ ion-button[fill='clear'][icon-only] {
 
         &[disabled] {
           --background: transparent;
+          --color: hsl(var(--med-color-neutral-5));
         }
       }
     }
@@ -180,6 +181,22 @@ ion-button[fill='clear'][icon-only] {
 
       &[disabled] {
         --background: transparent;
+        --color: hsl(var(--med-color-neutral-5));
+      }
+    }
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-button, neutral-#{$i}#{5}, $i) {
+    &[fill='clear'] {
+      --color: #{tp-neutral($i, 5)};
+      --color-activated: #{tp-neutral($i, 5)};
+      --color-focused: #{tp-neutral($i, 5)};
+      --color-hover: #{tp-neutral($i, 5)};
+
+      &[disabled] {
+        --background: transparent;
+        --color: hsl(var(--med-color-neutral-5));
       }
     }
   }
@@ -198,6 +215,7 @@ ion-button[fill='clear'][icon-only] {
 
       &[disabled] {
         --background: transparent;
+        --color: hsl(var(--med-color-neutral-5));
       }
     }
   }
