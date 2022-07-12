@@ -2,7 +2,7 @@ import { withDesign } from 'storybook-addon-designs';
 import { TemplariosButtonSize, MedColors } from '../../../templarios';
 
 export default {
-  title: 'Components/Ionic/Button',
+  title: 'Components/Ionic/Back Button',
   decorators: [withDesign],
 };
 
@@ -10,40 +10,9 @@ const Template = ({ 'ds-color': dsColor, 'ds-size': dsSize, disabled, expand }) 
   return `
     <ion-app>
       <ion-content>
-        <ion-button
+        <ion-back-button
           mode="ios"
-          ${dsColor ? `ds-color=${dsColor}` : ''}
-          ${dsSize ? `ds-size=${dsSize}` : ''}
-          ${disabled ? `disabled=${disabled}` : ''}
-          ${expand !== 'none' ? `expand=${expand}` : ''}
-          >
-          Button ${dsSize}
-        </ion-button>
-
-        <ion-button
-          mode="ios"
-          ${dsColor ? `ds-color=${dsColor}` : ''}
-          ${dsSize ? `ds-size=${dsSize}` : ''}
-          ${disabled ? `disabled=${disabled}` : ''}
-          ${expand !== 'none' ? `expand=${expand}` : ''}
-          >
-          <ion-icon slot="start" class="med-icon" name="med-esquerda"></ion-icon>
-          Button ${dsSize}
-        </ion-button>
-
-        <ion-button
-          mode="ios"
-          ${dsColor ? `ds-color=${dsColor}` : ''}
-          ${dsSize ? `ds-size=${dsSize}` : ''}
-          ${disabled ? `disabled=${disabled}` : ''}
-          ${expand !== 'none' ? `expand=${expand}` : ''}
-          >
-          Button ${dsSize}
-          <ion-icon slot="end" class="med-icon" name="med-direita"></ion-icon>
-        </ion-button>
-
-        <ion-button
-          mode="ios"
+          fill="clear"
           icon-only
           ${dsColor ? `ds-color=${dsColor}` : ''}
           ${dsSize ? `ds-size=${dsSize}` : ''}
@@ -51,20 +20,20 @@ const Template = ({ 'ds-color': dsColor, 'ds-size': dsSize, disabled, expand }) 
           ${expand !== 'none' ? `expand=${expand}` : ''}
           >
           <ion-icon slot="icon-only" class="med-icon" name="med-star-filled"></ion-icon>
-        </ion-button>
+        </ion-back-button>
       </ion-content>
     </ion-app>
   `;
 };
 
-export const Primary = Template.bind({});
-Primary.parameters = {
+export const Default = Template.bind({});
+Default.parameters = {
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/Componentes?node-id=3398%3A561',
+    url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/01.-Componentes?node-id=6441%3A51186',
   },
 };
-Primary.argTypes = {
+Default.argTypes = {
   'ds-color': {
     options: [undefined, ...Object.values(MedColors)],
     control: { type: 'select' },
@@ -76,9 +45,9 @@ Primary.argTypes = {
     },
   },
   'ds-size': {
-    options: [undefined, ...Object.values(TemplariosButtonSize)],
+    options: Object.values(TemplariosButtonSize),
     control: { type: 'select' },
-    description: 'Define a variação de tamanho do componente.',
+    description: 'Define a variação de tamanho do.',
     defaultValue: 'md',
     table: {
       type: { summary: Object.values(TemplariosButtonSize).join(' |') },

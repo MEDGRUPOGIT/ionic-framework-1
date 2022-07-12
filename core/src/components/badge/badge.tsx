@@ -1,8 +1,8 @@
 import { Component, ComponentInterface, Host, Prop, h } from '@stencil/core';
 
 import { getIonMode } from '../../global/ionic-global';
-import { Color, MedColor } from '../../interface';
-import { generateMedColor } from '../../utils/med-theme';
+import { Color } from '../../interface';
+import { createColorClasses } from '../../utils/theme';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
@@ -10,28 +10,12 @@ import { generateMedColor } from '../../utils/med-theme';
 @Component({
   tag: 'ion-badge',
   styleUrls: {
-    ios: 'badge.md.scss',
+    ios: 'badge.ios.scss',
     md: 'badge.md.scss'
   },
   shadow: true
 })
 export class Badge implements ComponentInterface {
-
-  /**
-    * Define a cor do componente.
-    */
-  @Prop({ reflect: true }) dsColor?: MedColor;
-
-  /**
-   * Define a variação do componente.
-   */
-  @Prop({ reflect: true }) fill?: 'outline';
-
-  /**
-   * Define a variação de tamanho do componente.
-   */
-  @Prop({ reflect: true }) dsSize?: 'sm' | 'md';
-
   /**
    * The color to use from your application's color palette.
    * Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`.
@@ -40,17 +24,13 @@ export class Badge implements ComponentInterface {
   @Prop() color?: Color;
 
   render() {
-    const { dsColor, fill, dsSize } = this;
     const mode = getIonMode(this);
-
     return (
       <Host
-        class={generateMedColor(dsColor, {
+        class={createColorClasses(this.color, {
           [mode]: true,
-          'med-badge': true,
-          [`med-badge--${fill}`]: fill !== undefined,
-          [`med-badge--${dsSize}`]: dsSize !== undefined,
-        })}>
+        })}
+      >
         <slot></slot>
       </Host>
     );

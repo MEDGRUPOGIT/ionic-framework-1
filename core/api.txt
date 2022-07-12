@@ -128,9 +128,6 @@ ion-backdrop,event,ionBackdropTap,void,true
 
 ion-badge,shadow
 ion-badge,prop,color,string | undefined,undefined,false,false
-ion-badge,prop,dsColor,string | undefined,undefined,false,true
-ion-badge,prop,dsSize,"md" | "sm" | undefined,undefined,false,true
-ion-badge,prop,fill,"outline" | undefined,undefined,false,true
 ion-badge,prop,mode,"ios" | "md",undefined,false,false
 ion-badge,css-prop,--background
 ion-badge,css-prop,--color
