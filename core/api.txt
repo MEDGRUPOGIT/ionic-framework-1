@@ -219,8 +219,8 @@ ion-card-title,css-prop,--color
 
 ion-checkbox,shadow
 ion-checkbox,prop,checked,boolean,false,false,false
+ion-checkbox,prop,color,string | undefined,undefined,false,false
 ion-checkbox,prop,disabled,boolean,false,false,false
-ion-checkbox,prop,dsColor,string | undefined,undefined,false,true
 ion-checkbox,prop,indeterminate,boolean,false,false,false
 ion-checkbox,prop,mode,"ios" | "md",undefined,false,false
 ion-checkbox,prop,name,string,this.inputId,false,false
@@ -855,8 +855,6 @@ ion-progress-bar,part,track
 ion-radio,shadow
 ion-radio,prop,color,string | undefined,undefined,false,false
 ion-radio,prop,disabled,boolean,false,false,false
-ion-radio,prop,dsColor,string | undefined,undefined,false,true
-ion-radio,prop,dsName,"secondary" | undefined,undefined,false,true
 ion-radio,prop,mode,"ios" | "md",undefined,false,false
 ion-radio,prop,name,string,this.inputId,false,false
 ion-radio,prop,value,any,undefined,false,false
@@ -1834,9 +1832,9 @@ med-tooltip,method,toggle,toggle(event?: any) => Promise<void>
 med-tooltip,event,btnLeftClick,void,true
 med-tooltip,event,btnRightClick,void,true
 
-med-type,shadow
+med-type,scoped
 med-type,prop,dsColor,string | undefined,undefined,false,true
-med-type,prop,tag,"h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "label" | "p" | "span" | undefined,'span',false,true
+med-type,prop,tag,string | undefined,'span',false,true
 med-type,prop,token,string | undefined,undefined,false,true
 
 med-video-thumbnail,shadow

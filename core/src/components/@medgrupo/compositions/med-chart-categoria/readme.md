@@ -20,7 +20,7 @@
 
 ### Depends on
 
-- [med-type](../../foundation/med-type)
+- [med-type](../../../@templarios/core/med-type)
 - [med-chart-bar-horizontal](../../core/med-chart-bar-horizontal)
 
 ### Graph

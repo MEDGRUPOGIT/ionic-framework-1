@@ -18,7 +18,7 @@
 ### Depends on
 
 - ion-icon
-- [med-type](../../foundation/med-type)
+- [med-type](../../../@templarios/core/med-type)
 - [ion-button](../../../button)
 - [med-nav-simple](../med-nav-simple)
 

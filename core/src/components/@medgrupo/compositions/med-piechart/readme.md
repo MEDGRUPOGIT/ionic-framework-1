@@ -43,7 +43,7 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [med-type](../../foundation/med-type)
+- [med-type](../../../@templarios/core/med-type)
 - [med-download-button](../../core/med-download-button)
 
 ### Graph

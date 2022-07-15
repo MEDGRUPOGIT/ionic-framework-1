@@ -1,10 +1,9 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, Prop, State, Watch, h } from '@stencil/core';
 
 import { getIonMode } from '../../global/ionic-global';
-import { Color, MedColor, StyleEventDetail } from '../../interface';
+import { Color, StyleEventDetail } from '../../interface';
 import { addEventListener, getAriaLabel, removeEventListener } from '../../utils/helpers';
-import { hostContext } from '../../utils/theme';
-import { generateMedColor } from '../../utils/med-theme';
+import { createColorClasses, hostContext } from '../../utils/theme';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
@@ -15,8 +14,8 @@ import { generateMedColor } from '../../utils/med-theme';
 @Component({
   tag: 'ion-radio',
   styleUrls: {
-    ios: './radio.md.scss',
-    md: './radio.md.scss'
+    ios: 'radio.ios.scss',
+    md: 'radio.md.scss'
   },
   shadow: true
 })
@@ -25,16 +24,6 @@ export class Radio implements ComponentInterface {
   private radioGroup: HTMLIonRadioGroupElement | null = null;
 
   @Element() el!: HTMLIonRadioElement;
-
-  /**
-   * Define a variação do componente.
-   */
-  @Prop({ reflect: true }) dsName?: 'secondary';
-
-   /**
-    * Define a cor do componente.
-    */
-  @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
    * If `true`, the radio is selected.
@@ -148,7 +137,7 @@ export class Radio implements ComponentInterface {
   }
 
   render() {
-    const { inputId, disabled, checked, dsColor, el, buttonTabindex, dsName } = this;
+    const { inputId, disabled, checked, color, el, buttonTabindex } = this;
     const mode = getIonMode(this);
     const { label, labelId, labelText } = getAriaLabel(el, inputId);
 
@@ -161,11 +150,9 @@ export class Radio implements ComponentInterface {
         tabindex={buttonTabindex}
         onFocus={this.onFocus}
         onBlur={this.onBlur}
-        class={generateMedColor(dsColor, {
+        class={createColorClasses(color, {
           [mode]: true,
-          'med-radio': true,
-          [`med-radio--${dsName}`]: dsName !== undefined,
-          'in-item': hostContext('ion-item', el) || hostContext('med-option', el) || hostContext('med-item', el), 
+          'in-item': hostContext('ion-item', el),
           'interactive': true,
           'radio-checked': checked,
           'radio-disabled': disabled,

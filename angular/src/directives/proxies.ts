@@ -151,8 +151,8 @@ export class IonCardTitle {
 }
 export declare interface IonCheckbox extends Components.IonCheckbox {
 }
-@ProxyCmp({ inputs: ["checked", "disabled", "dsColor", "indeterminate", "mode", "name", "value"] })
-@Component({ selector: "ion-checkbox", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["checked", "disabled", "dsColor", "indeterminate", "mode", "name", "value"] })
+@ProxyCmp({ inputs: ["checked", "color", "disabled", "indeterminate", "mode", "name", "value"] })
+@Component({ selector: "ion-checkbox", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["checked", "color", "disabled", "indeterminate", "mode", "name", "value"] })
 export class IonCheckbox {
   ionChange!: EventEmitter<CustomEvent>;
   ionFocus!: EventEmitter<CustomEvent>;
@@ -542,8 +542,8 @@ export class IonProgressBar {
 }
 export declare interface IonRadio extends Components.IonRadio {
 }
-@ProxyCmp({ inputs: ["color", "disabled", "dsColor", "dsName", "mode", "name", "value"] })
-@Component({ selector: "ion-radio", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "disabled", "dsColor", "dsName", "mode", "name", "value"] })
+@ProxyCmp({ inputs: ["color", "disabled", "mode", "name", "value"] })
+@Component({ selector: "ion-radio", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "disabled", "mode", "name", "value"] })
 export class IonRadio {
   ionFocus!: EventEmitter<CustomEvent>;
   ionBlur!: EventEmitter<CustomEvent>;

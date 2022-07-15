@@ -12,7 +12,7 @@
 - [ion-header](../../../header)
 - [ion-button](../../../button)
 - ion-icon
-- [med-type](../../foundation/med-type)
+- [med-type](../../../@templarios/core/med-type)
 
 ### Graph
 ```mermaid

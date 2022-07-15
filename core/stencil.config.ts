@@ -55,7 +55,7 @@ export const config: Config = {
   ],
   plugins: [
     sass({
-      injectGlobalPaths: ['src/themes/ionic.skip-warns.scss', 'templarios/abstracts.scss']
+      injectGlobalPaths: ['src/themes/ionic.skip-warns.scss', 'templarios/abstracts.scss', 'src/@templarios/styles/variables.scss']
     })
   ],
   outputTargets: [

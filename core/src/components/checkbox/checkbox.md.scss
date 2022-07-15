@@ -58,6 +58,7 @@
   @include margin($checkbox-md-item-end-margin-top, $checkbox-md-item-end-margin-end, $checkbox-md-item-end-margin-bottom, $checkbox-md-item-end-margin-start);
 
   display: block;
+
   position: static;
 }
 
@@ -65,12 +66,7 @@
   @include margin($checkbox-md-item-start-margin-top, $checkbox-md-item-start-margin-end, $checkbox-md-item-start-margin-bottom, $checkbox-md-item-start-margin-start);
 }
 
-@import './checkbox.med.scss';
-
-:host(.in-item[slot="start"]) {
-  margin: 0;
-}
-
-:host(.in-item[slot="end"]) {
-  margin: 0;
-}
+// REVIEW
+// .checkbox-md + .item-inner ion-label {
+//   @include margin-horizontal(0, null);
+// }

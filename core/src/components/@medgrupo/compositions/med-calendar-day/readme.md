@@ -18,7 +18,7 @@
 
 ### Depends on
 
-- [med-type](../../foundation/med-type)
+- [med-type](../../../@templarios/core/med-type)
 
 ### Graph
 ```mermaid
