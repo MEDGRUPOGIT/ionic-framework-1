@@ -18,7 +18,7 @@
 
 - [med-accordion-list](../med-accordion-list)
 - [med-accordion-item](../med-accordion-item)
-- [med-type](../../foundation/med-type)
+- [med-type](../../../@templarios/core/med-type)
 - ion-icon
 - [med-nav-item](../../core/med-nav-item)
 

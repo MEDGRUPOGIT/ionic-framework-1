@@ -87,7 +87,7 @@ export const IonCardTitle = /*@__PURE__*/ defineContainer<JSX.IonCardTitle>('ion
 
 
 export const IonCheckbox = /*@__PURE__*/ defineContainer<JSX.IonCheckbox>('ion-checkbox', [
-  'dsColor',
+  'color',
   'name',
   'checked',
   'indeterminate',
@@ -460,8 +460,6 @@ export const IonProgressBar = /*@__PURE__*/ defineContainer<JSX.IonProgressBar>(
 
 
 export const IonRadio = /*@__PURE__*/ defineContainer<JSX.IonRadio>('ion-radio', [
-  'dsName',
-  'dsColor',
   'color',
   'name',
   'disabled',

@@ -111,17 +111,3 @@
 :host(.in-item[slot="start"]) {
   @include margin($radio-md-item-start-margin-top, $radio-md-item-start-margin-end, $radio-md-item-start-margin-bottom, $radio-md-item-start-margin-start);
 }
-
-// ////////////////////
-// Med-Radio
-// ////////////////////
-
-@import './radio.med.scss';
-
-:host(.in-item[slot="start"]) {
-  margin: 0;
-}
-
-:host(.in-item[slot="end"]) {
-  margin: 0;
-}

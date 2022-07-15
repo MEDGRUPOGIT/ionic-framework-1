@@ -54,7 +54,7 @@ const Template = (
            >
 
             <div slot="start">
-              <ion-button ds-name="tertiary" ds-size="xxs">
+              <ion-button mode="ios" icon-only fill="clear" ds-size="xxs">
                 <ion-icon class="med-icon" slot="icon-only" name="med-estrela"></ion-icon>
               </ion-button>
             </div>
@@ -64,7 +64,7 @@ const Template = (
             </div>
 
             <div slot="end">
-              <ion-button ds-name="tertiary" ds-size="xxs">
+              <ion-button mode="ios" icon-only fill="clear" ds-size="xxs">
                 <ion-icon class="med-rotate med-icon" slot="icon-only" name="med-baixo"></ion-icon>
               </ion-button>
             </div>
@@ -85,7 +85,7 @@ const Template = (
           >
 
             <div slot="start">
-              <ion-button ds-name="tertiary" ds-size="xxs">
+              <ion-button mode="ios" icon-only fill="clear" ds-size="xxs">
                 <ion-icon class="med-icon" slot="icon-only" name="med-estrela"></ion-icon>
               </ion-button>
             </div>
@@ -95,7 +95,7 @@ const Template = (
             </div>
 
             <div slot="end">
-              <ion-button ds-name="tertiary" ds-size="xxs">
+              <ion-button mode="ios" icon-only fill="clear" ds-size="xxs">
                 <ion-icon class="med-rotate med-icon" slot="icon-only" name="med-baixo"></ion-icon>
               </ion-button>
             </div>

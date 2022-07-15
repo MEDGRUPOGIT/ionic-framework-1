@@ -1,11 +1,9 @@
 import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, Watch, h } from '@stencil/core';
 
 import { getIonMode } from '../../global/ionic-global';
-import { CheckboxChangeEventDetail, StyleEventDetail, MedColor } from '../../interface';
+import { CheckboxChangeEventDetail, Color, StyleEventDetail } from '../../interface';
 import { getAriaLabel, renderHiddenInput } from '../../utils/helpers';
-import { hostContext } from '../../utils/theme';
-import { generateMedColor } from '../../utils/med-theme';
-
+import { createColorClasses, hostContext } from '../../utils/theme';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
@@ -16,7 +14,7 @@ import { generateMedColor } from '../../utils/med-theme';
 @Component({
   tag: 'ion-checkbox',
   styleUrls: {
-    ios: 'checkbox.md.scss',
+    ios: 'checkbox.ios.scss',
     md: 'checkbox.md.scss'
   },
   shadow: true
@@ -29,9 +27,11 @@ export class Checkbox implements ComponentInterface {
   @Element() el!: HTMLElement;
 
   /**
-    * Define a cor do componente.
-    */
-   @Prop({ reflect: true }) dsColor?: MedColor;
+   * The color to use from your application's color palette.
+   * Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`.
+   * For more information on colors, see [theming](/docs/theming/basics).
+   */
+  @Prop() color?: Color;
 
   /**
    * The name of the control, which is submitted with the form data.
@@ -131,7 +131,7 @@ export class Checkbox implements ComponentInterface {
   }
 
   render() {
-    const { dsColor, checked, disabled, el, indeterminate, inputId, name, value } = this;
+    const { color, checked, disabled, el, indeterminate, inputId, name, value } = this;
     const mode = getIonMode(this);
     const { label, labelId, labelText } = getAriaLabel(el, inputId);
 
@@ -154,9 +154,9 @@ export class Checkbox implements ComponentInterface {
         aria-checked={`${checked}`}
         aria-hidden={disabled ? 'true' : null}
         role="checkbox"
-        class={generateMedColor(dsColor, {
+        class={createColorClasses(color, {
           [mode]: true,
-          'in-item': hostContext('ion-item', el) || hostContext('med-item', el),
+          'in-item': hostContext('ion-item', el),
           'checkbox-checked': checked,
           'checkbox-disabled': disabled,
           'checkbox-indeterminate': indeterminate,
