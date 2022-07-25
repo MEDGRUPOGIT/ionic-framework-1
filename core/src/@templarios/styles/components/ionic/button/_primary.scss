@@ -41,6 +41,7 @@ ion-button {
   &[disabled] {
     --background: hsl(var(--med-color-neutral-3));
     --color: hsl(var(--med-color-neutral-5));
+
     opacity: 1;
 
     ion-icon {
@@ -63,6 +64,7 @@ ion-button {
   &[ds-size='sm'] {
     --padding-top: 12px;
     --padding-bottom: 12px;
+
     height: 40px;
 
     ion-icon {

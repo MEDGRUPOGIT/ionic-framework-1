@@ -274,9 +274,6 @@ export const IonInfiniteScrollContent = /*@__PURE__*/ defineContainer<JSX.IonInf
 
 export const IonInput = /*@__PURE__*/ defineContainer<JSX.IonInput>('ion-input', [
   'fireFocusEvents',
-  'dsName',
-  'status',
-  'icon',
   'color',
   'accept',
   'autocapitalize',
@@ -304,7 +301,6 @@ export const IonInput = /*@__PURE__*/ defineContainer<JSX.IonInput>('ion-input',
   'size',
   'type',
   'value',
-  'iconClicked',
   'ionInput',
   'ionChange',
   'ionBlur',
@@ -639,8 +635,6 @@ export const IonSegmentButton = /*@__PURE__*/ defineContainer<JSX.IonSegmentButt
 
 
 export const IonSelect = /*@__PURE__*/ defineContainer<JSX.IonSelect>('ion-select', [
-  'dsName',
-  'icon',
   'disabled',
   'cancelText',
   'okText',
@@ -728,7 +722,6 @@ export const IonText = /*@__PURE__*/ defineContainer<JSX.IonText>('ion-text', [
 
 export const IonTextarea = /*@__PURE__*/ defineContainer<JSX.IonTextarea>('ion-textarea', [
   'fireFocusEvents',
-  'dsName',
   'color',
   'autocapitalize',
   'autofocus',
@@ -1416,4 +1409,14 @@ export const SheetContentTest = /*@__PURE__*/ defineContainer<JSX.SheetContentTe
 
 
 export const SheetTest = /*@__PURE__*/ defineContainer<JSX.SheetTest>('sheet-test');
+
+
+export const TpInputContainer = /*@__PURE__*/ defineContainer<JSX.TpInputContainer>('tp-input-container', [
+  'dsColor',
+  'dsName',
+  'disabled',
+  'feedback',
+  'hasButton',
+  'hasIcon'
+]);
 

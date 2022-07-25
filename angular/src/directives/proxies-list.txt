@@ -146,5 +146,6 @@ export const DIRECTIVES = [
   d.MedVote,
   d.SelectTest,
   d.SheetContentTest,
-  d.SheetTest
+  d.SheetTest,
+  d.TpInputContainer
 ];
