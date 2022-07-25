@@ -460,9 +460,7 @@ ion-input,prop,clearOnEdit,boolean | undefined,undefined,false,false
 ion-input,prop,color,string | undefined,undefined,false,false
 ion-input,prop,debounce,number,0,false,false
 ion-input,prop,disabled,boolean,false,false,false
-ion-input,prop,dsName,"secondary" | undefined,undefined,false,true
 ion-input,prop,enterkeyhint,"done" | "enter" | "go" | "next" | "previous" | "search" | "send" | undefined,undefined,false,false
-ion-input,prop,icon,string | undefined,undefined,false,false
 ion-input,prop,inputmode,"decimal" | "email" | "none" | "numeric" | "search" | "tel" | "text" | "url" | undefined,undefined,false,false
 ion-input,prop,max,string | undefined,undefined,false,false
 ion-input,prop,maxlength,number | undefined,undefined,false,false
@@ -477,13 +475,11 @@ ion-input,prop,readonly,boolean,false,false,false
 ion-input,prop,required,boolean,false,false,false
 ion-input,prop,size,number | undefined,undefined,false,false
 ion-input,prop,spellcheck,boolean,false,false,false
-ion-input,prop,status,string | undefined,undefined,false,true
 ion-input,prop,step,string | undefined,undefined,false,false
 ion-input,prop,type,"date" | "datetime-local" | "email" | "month" | "number" | "password" | "search" | "tel" | "text" | "time" | "url" | "week",'text',false,false
 ion-input,prop,value,null | number | string | undefined,'',false,false
 ion-input,method,getInputElement,getInputElement() => Promise<HTMLInputElement>
 ion-input,method,setFocus,setFocus() => Promise<void>
-ion-input,event,iconClicked,string,true
 ion-input,event,ionBlur,FocusEvent,true
 ion-input,event,ionChange,InputChangeEventDetail,true
 ion-input,event,ionFocus,FocusEvent,true
@@ -1075,8 +1071,6 @@ ion-select,shadow
 ion-select,prop,cancelText,string,'Cancel',false,false
 ion-select,prop,compareWith,((currentValue: any, compareValue: any) => boolean) | null | string | undefined,undefined,false,false
 ion-select,prop,disabled,boolean,false,false,false
-ion-select,prop,dsName,"secondary" | undefined,undefined,false,true
-ion-select,prop,icon,string | undefined,'med-baixo',false,false
 ion-select,prop,interface,"action-sheet" | "alert" | "popover",'alert',false,false
 ion-select,prop,interfaceOptions,any,{},false,false
 ion-select,prop,mode,"ios" | "md",undefined,false,false
@@ -1234,7 +1228,6 @@ ion-textarea,prop,color,string | undefined,undefined,false,false
 ion-textarea,prop,cols,number | undefined,undefined,false,false
 ion-textarea,prop,debounce,number,0,false,false
 ion-textarea,prop,disabled,boolean,false,false,false
-ion-textarea,prop,dsName,"secondary" | undefined,undefined,false,true
 ion-textarea,prop,enterkeyhint,"done" | "enter" | "go" | "next" | "previous" | "search" | "send" | undefined,undefined,false,false
 ion-textarea,prop,inputmode,"decimal" | "email" | "none" | "numeric" | "search" | "tel" | "text" | "url" | undefined,undefined,false,false
 ion-textarea,prop,maxlength,number | undefined,undefined,false,false
@@ -1852,3 +1845,11 @@ select-test,shadow
 sheet-content-test,scoped
 
 sheet-test,scoped
+
+tp-input-container,scoped
+tp-input-container,prop,disabled,boolean,false,false,true
+tp-input-container,prop,dsColor,string | undefined,undefined,false,true
+tp-input-container,prop,dsName,"secondary" | undefined,undefined,false,true
+tp-input-container,prop,feedback,boolean,false,false,true
+tp-input-container,prop,hasButton,"both" | "end" | "start" | undefined,undefined,false,true
+tp-input-container,prop,hasIcon,"both" | "end" | "start" | undefined,undefined,false,true

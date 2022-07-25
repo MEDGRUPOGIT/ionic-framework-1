@@ -338,10 +338,9 @@ export class IonInfiniteScrollContent {
 }
 export declare interface IonInput extends Components.IonInput {
 }
-@ProxyCmp({ inputs: ["accept", "autocapitalize", "autocomplete", "autocorrect", "autofocus", "clearInput", "clearOnEdit", "color", "debounce", "disabled", "dsName", "enterkeyhint", "icon", "inputmode", "max", "maxlength", "min", "minlength", "mode", "multiple", "name", "pattern", "placeholder", "readonly", "required", "size", "spellcheck", "status", "step", "type", "value"], "methods": ["setFocus", "getInputElement"] })
-@Component({ selector: "ion-input", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["accept", "autocapitalize", "autocomplete", "autocorrect", "autofocus", "clearInput", "clearOnEdit", "color", "debounce", "disabled", "dsName", "enterkeyhint", "icon", "inputmode", "max", "maxlength", "min", "minlength", "mode", "multiple", "name", "pattern", "placeholder", "readonly", "required", "size", "spellcheck", "status", "step", "type", "value"] })
+@ProxyCmp({ inputs: ["accept", "autocapitalize", "autocomplete", "autocorrect", "autofocus", "clearInput", "clearOnEdit", "color", "debounce", "disabled", "enterkeyhint", "inputmode", "max", "maxlength", "min", "minlength", "mode", "multiple", "name", "pattern", "placeholder", "readonly", "required", "size", "spellcheck", "step", "type", "value"], "methods": ["setFocus", "getInputElement"] })
+@Component({ selector: "ion-input", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["accept", "autocapitalize", "autocomplete", "autocorrect", "autofocus", "clearInput", "clearOnEdit", "color", "debounce", "disabled", "enterkeyhint", "inputmode", "max", "maxlength", "min", "minlength", "mode", "multiple", "name", "pattern", "placeholder", "readonly", "required", "size", "spellcheck", "step", "type", "value"] })
 export class IonInput {
-  iconClicked!: EventEmitter<CustomEvent>;
   ionInput!: EventEmitter<CustomEvent>;
   ionChange!: EventEmitter<CustomEvent>;
   ionBlur!: EventEmitter<CustomEvent>;
@@ -350,7 +349,7 @@ export class IonInput {
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ["iconClicked", "ionInput", "ionChange", "ionBlur", "ionFocus"]);
+    proxyOutputs(this, this.el, ["ionInput", "ionChange", "ionBlur", "ionFocus"]);
   }
 }
 export declare interface IonItem extends Components.IonItem {
@@ -696,8 +695,8 @@ export class IonSegmentButton {
 }
 export declare interface IonSelect extends Components.IonSelect {
 }
-@ProxyCmp({ inputs: ["cancelText", "compareWith", "disabled", "dsName", "icon", "interface", "interfaceOptions", "mode", "multiple", "name", "okText", "placeholder", "selectedText", "value"], "methods": ["open"] })
-@Component({ selector: "ion-select", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["cancelText", "compareWith", "disabled", "dsName", "icon", "interface", "interfaceOptions", "mode", "multiple", "name", "okText", "placeholder", "selectedText", "value"] })
+@ProxyCmp({ inputs: ["cancelText", "compareWith", "disabled", "interface", "interfaceOptions", "mode", "multiple", "name", "okText", "placeholder", "selectedText", "value"], "methods": ["open"] })
+@Component({ selector: "ion-select", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["cancelText", "compareWith", "disabled", "interface", "interfaceOptions", "mode", "multiple", "name", "okText", "placeholder", "selectedText", "value"] })
 export class IonSelect {
   ionChange!: EventEmitter<CustomEvent>;
   ionCancel!: EventEmitter<CustomEvent>;
@@ -831,8 +830,8 @@ export class IonText {
 }
 export declare interface IonTextarea extends Components.IonTextarea {
 }
-@ProxyCmp({ inputs: ["autoGrow", "autocapitalize", "autofocus", "clearOnEdit", "color", "cols", "debounce", "disabled", "dsName", "enterkeyhint", "inputmode", "maxlength", "minlength", "mode", "name", "placeholder", "readonly", "required", "rows", "spellcheck", "value", "wrap"], "methods": ["setFocus", "getInputElement"] })
-@Component({ selector: "ion-textarea", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["autoGrow", "autocapitalize", "autofocus", "clearOnEdit", "color", "cols", "debounce", "disabled", "dsName", "enterkeyhint", "inputmode", "maxlength", "minlength", "mode", "name", "placeholder", "readonly", "required", "rows", "spellcheck", "value", "wrap"] })
+@ProxyCmp({ inputs: ["autoGrow", "autocapitalize", "autofocus", "clearOnEdit", "color", "cols", "debounce", "disabled", "enterkeyhint", "inputmode", "maxlength", "minlength", "mode", "name", "placeholder", "readonly", "required", "rows", "spellcheck", "value", "wrap"], "methods": ["setFocus", "getInputElement"] })
+@Component({ selector: "ion-textarea", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["autoGrow", "autocapitalize", "autofocus", "clearOnEdit", "color", "cols", "debounce", "disabled", "enterkeyhint", "inputmode", "maxlength", "minlength", "mode", "name", "placeholder", "readonly", "required", "rows", "spellcheck", "value", "wrap"] })
 export class IonTextarea {
   ionChange!: EventEmitter<CustomEvent>;
   ionInput!: EventEmitter<CustomEvent>;
@@ -1735,6 +1734,17 @@ export declare interface SheetTest extends Components.SheetTest {
 }
 @Component({ selector: "sheet-test", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
 export class SheetTest {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface TpInputContainer extends Components.TpInputContainer {
+}
+@ProxyCmp({ inputs: ["disabled", "dsColor", "dsName", "feedback", "hasButton", "hasIcon"] })
+@Component({ selector: "tp-input-container", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled", "dsColor", "dsName", "feedback", "hasButton", "hasIcon"] })
+export class TpInputContainer {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();

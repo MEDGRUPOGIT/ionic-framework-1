@@ -19,7 +19,7 @@ import { SelectCompareFn } from './select-interface';
 @Component({
   tag: 'ion-select',
   styleUrls: {
-    ios: 'select.md.scss',
+    ios: 'select.ios.scss',
     md: 'select.md.scss'
   },
   shadow: true
@@ -33,16 +33,6 @@ export class Select implements ComponentInterface {
   private mutationO?: MutationObserver;
 
   @Element() el!: HTMLIonSelectElement;
-
-  /**
-    * Define o icone do componente.
-    */
-  @Prop({ reflect: true }) dsName?: 'secondary';
-
-  /**
-    * Define o icone do componente.
-    */
-  @Prop() icon? = 'med-baixo';
 
   @State() isExpanded = false;
 
@@ -442,7 +432,7 @@ export class Select implements ComponentInterface {
   }
 
   render() {
-    const { disabled, el, inputId, isExpanded, name, placeholder, value, dsName, icon } = this;
+    const { disabled, el, inputId, isExpanded, name, placeholder, value } = this;
     const mode = getIonMode(this);
     const { labelText, labelId } = getAriaLabel(el, inputId);
 
@@ -483,14 +473,17 @@ export class Select implements ComponentInterface {
           [mode]: true,
           'in-item': hostContext('ion-item', el),
           'select-disabled': disabled,
-          'select-expanded': isExpanded,
-          [`med-select--${dsName}`]: dsName !== undefined,
+          'select-expanded': isExpanded
         }}
       >
         <div aria-hidden="true" class={selectTextClasses} part={textPart}>
           {selectText}
         </div>
-        {icon && <ion-icon class="med-icon" name={icon}></ion-icon>}
+        {/* templarios */}
+        {/* <div class="select-icon" role="presentation" part="icon">
+          <div class="select-icon-inner"></div>
+        </div> */}
+        {/* templarios */}
         <label id={labelId}>
           {displayLabel}
         </label>

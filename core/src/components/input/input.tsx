@@ -11,7 +11,7 @@ import { createColorClasses } from '../../utils/theme';
 @Component({
   tag: 'ion-input',
   styleUrls: {
-    ios: 'input.md.scss',
+    ios: 'input.ios.scss',
     md: 'input.md.scss'
   },
   scoped: true
@@ -36,21 +36,6 @@ export class Input implements ComponentInterface {
   @State() hasFocus = false;
 
   @Element() el!: HTMLElement;
-
-  /**
-    * Define o icone do componente.
-    */
-  @Prop({ reflect: true }) dsName?: 'secondary';
-
-  /**
-    * Define o status do componente.
-    */
-  @Prop({ reflect: true }) status?: 'valid' | 'invalid' | string | undefined;
-
-  /**
-   * Define o icone do componente.
-   */
-  @Prop() icon?: string;
 
   /**
    * The color to use from your application's color palette.
@@ -99,8 +84,6 @@ export class Input implements ComponentInterface {
    * Set the amount of time, in milliseconds, to wait to trigger the `ionChange` event after each keystroke. This also impacts form bindings such as `ngModel` or `v-model`.
    */
   @Prop() debounce = 0;
-
-  @Event() iconClicked!: EventEmitter<string>;
 
   @Watch('debounce')
   protected debounceChanged() {
@@ -404,12 +387,7 @@ export class Input implements ComponentInterface {
     return this.getValue().length > 0;
   }
 
-  private iconClick() {
-    this.iconClicked.emit();
-  }
-
   render() {
-    const { dsName, icon, status } = this;
     const mode = getIonMode(this);
     const value = this.getValue();
     const labelId = this.inputId + '-lbl';
@@ -418,24 +396,13 @@ export class Input implements ComponentInterface {
       label.id = labelId;
     }
 
-    let iconRender;
-    if (status === 'valid') {
-      iconRender = 'med-check'
-    } else if (status === 'invalid') {
-      iconRender = 'med-alerta'
-    } else {
-      iconRender = icon
-    }
-
     return (
       <Host
         aria-disabled={this.disabled ? 'true' : null}
         class={createColorClasses(this.color, {
           [mode]: true,
           'has-value': this.hasValue(),
-          'has-focus': this.hasFocus,
-          [`med-input--${dsName}`]: dsName !== undefined,
-          [`med-input--${status}`]: status !== undefined,
+          'has-focus': this.hasFocus
         })}
       >
         <input
@@ -471,18 +438,17 @@ export class Input implements ComponentInterface {
           onKeyDown={this.onKeydown}
           {...this.inheritedAttributes}
         />
-        {(this.clearInput && !this.readonly && !this.disabled) &&
-          <ion-icon class="med-icon med-input-reset" name="med-fechar"
-            aria-label="reset"
-            onTouchStart={this.clearTextInput}
-            onMouseDown={this.clearTextInput}
-            onKeyDown={this.clearTextOnEnter}></ion-icon>
-        }
-        {icon && <ion-icon class="med-icon" name={iconRender} onClick={() => this.iconClick()}></ion-icon>}
+        {(this.clearInput && !this.readonly && !this.disabled) && <button
+          aria-label="reset"
+          type="button"
+          class="input-clear-icon"
+          onTouchStart={this.clearTextInput}
+          onMouseDown={this.clearTextInput}
+          onKeyDown={this.clearTextOnEnter}
+        />}
       </Host>
     );
   }
 }
 
 let inputIds = 0;
-
