@@ -54,8 +54,16 @@ export const config: Config = {
     { components: ['ion-virtual-scroll'] },
   ],
   plugins: [
+    // templarios
     sass({
-      injectGlobalPaths: ['src/themes/ionic.skip-warns.scss', 'templarios/abstracts.scss', 'src/@templarios/styles/variables.scss']
+      injectGlobalPaths: [
+        'src/themes/ionic.skip-warns.scss',
+        'src/@templarios/styles/variables/breakpoints.scss',
+        'src/@templarios/styles/variables/components.scss',
+        'src/@templarios/styles/functions/breakpoints.scss',
+        'src/@templarios/styles/functions/color-stencil.scss',
+        'src/@templarios/styles/mixins/breakpoints.scss',
+      ]
     })
   ],
   outputTargets: [
@@ -112,6 +120,7 @@ export const config: Config = {
     {
       type: 'dist',
       esmLoaderPath: '../loader',
+      // templarios
       copy: [
         { src: 'svg', dest: 'svg' }
       ]

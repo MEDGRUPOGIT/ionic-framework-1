@@ -239,8 +239,8 @@ export default defineComponent({
 ### Used by
 
  - ion-select-popover
- - [med-config](../@medgrupo/legacy/med-config)
- - [med-themes](../@medgrupo/team/med-themes)
+ - [med-config](../@templarios/legacy/med-config)
+ - [med-themes](../@templarios/team/med-themes)
 
 ### Graph
 ```mermaid

@@ -156,7 +156,7 @@ export default defineComponent({
 
 ### Used by
 
- - [med-video-thumbnail](../@medgrupo/compositions/med-video-thumbnail)
+ - [med-video-thumbnail](../@templarios/compositions/med-video-thumbnail)
 
 ### Graph
 ```mermaid

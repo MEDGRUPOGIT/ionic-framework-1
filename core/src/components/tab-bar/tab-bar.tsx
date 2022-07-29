@@ -1,8 +1,8 @@
-import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, State, Watch, h } from '@stencil/core';
-
+import { Component, ComponentInterface, Element, Event, EventEmitter, h, Host, Prop, State, Watch } from '@stencil/core';
+import { MedColor } from '../../@templarios/types/color.type';
 import { getIonMode } from '../../global/ionic-global';
-import { Color, MedColor, TabBarChangedEventDetail, TabBarResizeEventDetail } from '../../interface';
-import { generateMedColor } from '../../utils/med-theme';
+import { Color, TabBarChangedEventDetail, TabBarResizeEventDetail } from '../../interface';
+import { generateMedColor } from '../../@templarios/utilities/color';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
@@ -135,7 +135,7 @@ export class TabBar implements ComponentInterface {
   render() {
     const { dsColor, translucent, keyboardVisible } = this;
     const mode = getIonMode(this);
-    
+
     this.medResize.emit({height:1});
 
     return (

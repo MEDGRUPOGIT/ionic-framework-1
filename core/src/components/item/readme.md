@@ -1923,7 +1923,7 @@ export default defineComponent({
 ### Used by
 
  - ion-select-popover
- - [med-config](../@medgrupo/legacy/med-config)
+ - [med-config](../@templarios/legacy/med-config)
 
 ### Depends on
 

@@ -1,0 +1,26 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Utilities/Teclado" />
+
+# Teclado
+
+```
+import { OnDestroy, OnInit, } from '@angular/core';
+import { Keyboard, KeyboardResizeMode } from '@ionic-native/keyboard/ngx';
+
+export class ClassedoComponent implements OnInit, OnDestroy {
+
+  constructor(
+    readonly keyboard: Keyboard
+  ) { }
+
+  ngOnInit() {
+    this.keyboard.setResizeMode(KeyboardResizeMode.Native);
+  }
+
+  ngOnDestroy() {
+    this.keyboard.setResizeMode(KeyboardResizeMode.None);
+  }
+
+}
+```

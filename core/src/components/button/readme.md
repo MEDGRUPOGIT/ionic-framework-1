@@ -367,21 +367,21 @@ export default defineComponent({
 
 ### Used by
 
- - [dialog-test](../@medgrupo/testes/dialog-test)
- - [med-alert](../@medgrupo/core/med-alert)
- - [med-banner](../@medgrupo/compositions/med-banner)
- - [med-calendar](../@medgrupo/compositions/med-calendar)
- - [med-config](../@medgrupo/legacy/med-config)
- - [med-context-menu](../@medgrupo/compositions/med-context-menu)
- - [med-image-zoom](../@medgrupo/compositions/med-image-zoom)
- - [med-list-item-accordion](../@medgrupo/compositions/med-list-item-accordion)
- - [med-nav](../@medgrupo/compositions/med-nav)
- - [med-nav-simple](../@medgrupo/compositions/med-nav-simple)
- - [med-offline](../@medgrupo/compositions/med-offline)
- - [med-rate-aula](../@medgrupo/compositions/med-rate-aula)
- - [med-tooltip](../@medgrupo/compositions/med-tooltip)
- - [sheet-content-test](../@medgrupo/testes/sheet-content-test)
- - [sheet-test](../@medgrupo/testes/sheet-test)
+ - [dialog-test](../@templarios/testes/dialog-test)
+ - [med-alert](../@templarios/core/med-alert)
+ - [med-banner](../@templarios/compositions/med-banner)
+ - [med-calendar](../@templarios/compositions/med-calendar)
+ - [med-config](../@templarios/legacy/med-config)
+ - [med-context-menu](../@templarios/compositions/med-context-menu)
+ - [med-image-zoom](../@templarios/compositions/med-image-zoom)
+ - [med-list-item-accordion](../@templarios/compositions/med-list-item-accordion)
+ - [med-nav](../@templarios/compositions/med-nav)
+ - [med-nav-simple](../@templarios/compositions/med-nav-simple)
+ - [med-offline](../@templarios/compositions/med-offline)
+ - [med-rate-aula](../@templarios/compositions/med-rate-aula)
+ - [med-tooltip](../@templarios/compositions/med-tooltip)
+ - [sheet-content-test](../@templarios/testes/sheet-content-test)
+ - [sheet-test](../@templarios/testes/sheet-test)
 
 ### Depends on
 

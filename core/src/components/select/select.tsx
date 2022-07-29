@@ -479,11 +479,11 @@ export class Select implements ComponentInterface {
         <div aria-hidden="true" class={selectTextClasses} part={textPart}>
           {selectText}
         </div>
-        {/* templarios */}
+        {/* // templarios */}
         {/* <div class="select-icon" role="presentation" part="icon">
           <div class="select-icon-inner"></div>
         </div> */}
-        {/* templarios */}
+        {/* // !templarios */}
         <label id={labelId}>
           {displayLabel}
         </label>

@@ -855,7 +855,7 @@ export default defineComponent({
 
 ### Used by
 
- - [med-config](../@medgrupo/legacy/med-config)
+ - [med-config](../@templarios/legacy/med-config)
 
 ### Depends on
 

@@ -1,0 +1,65 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="General/Biblioteca" />
+
+# 📚 Biblioteca
+
+## 🗂️ Conteúdo
+
+- **[Introdução](http://desenv.ordomederi.com/templarios/?path=/story/general-biblioteca--page#introdução)**
+- **[Instalação](http://desenv.ordomederi.com/templarios/?path=/story/general-biblioteca--page#instalação)**
+- **[Utilização](http://desenv.ordomederi.com/templarios/?path=/story/general-biblioteca--page#utilização)**
+
+## 📜 Introdução
+
+A biblioteca **templarios** foi criada com o intuito de ser compartilhada entre as aplicações medgrupo de forma global.
+Ela **não pode ser** incrementada com particularidades de outros projetos, apenas consumida.
+
+As particularidades devem ser documentadas nos próprios projetos, seguindo o padrão presente nessa documentação. O time **[TheOffice](https://medgrupo.slack.com/archives/C013J7002G5)**
+é responsável por **facilitar** e dar o **suporte** e **mentoria** necessários para criação dos mesmos. Com isso o conhecimento não fica centralizado e criamos uma cultura de documentação nos times.
+
+## 🛠️ Instalação
+
+Garantir que no arquivo package.json existam as referencias abaixo:
+
+```
+"@ionic/core": "git+https://github.com/MEDGRUPOGIT/med-components.git#{versao_tag}",
+```
+
+## 💈 Utilização
+
+### Medsoft
+
+Para utilizar a biblioteca, no arquivo **./src/medsoft/global.scss**, importar:
+
+``` scss
+@import '~@ionic/core/templarios/scss/templarios.scss';
+@import '~@ionic/core/templarios/css/themes/default.css';
+@import '~@ionic/core/templarios/css/themes/medsoft.css';
+@import '~@ionic/core/templarios/css/schemes/light.css';
+@import '~@ionic/core/templarios/css/templarios.css';
+```
+Se existir a necessidade da utilização de **variáveis, functions e mixins SASS**, no arquivo em que eles serão
+utilizados, importar:
+
+``` scss
+@import '~@ionic/core/templarios/scss/templarios';
+```
+
+### Medeletro
+
+Para utilizar a biblioteca, no arquivo **./src/global.scss**, importar:
+
+``` scss
+@import '~@ionic/core/templarios/scss/templarios.scss';
+@import '~@ionic/core/templarios/css/themes/default.css';
+@import '~@ionic/core/templarios/css/themes/medsoft.css';
+@import '~@ionic/core/templarios/css/schemes/light.css';
+@import '~@ionic/core/templarios/css/templarios.css';
+```
+Se existir a necessidade da utilização de **variáveis, functions e mixins SASS**, no arquivo em que eles serão
+utilizados, importar:
+
+``` scss
+@import '~@ionic/core/templarios/scss/templarios';
+```

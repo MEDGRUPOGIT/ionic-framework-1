@@ -1,10 +1,10 @@
-import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, h } from '@stencil/core';
-
+import { Component, ComponentInterface, Element, Event, EventEmitter, h, Host, Prop } from '@stencil/core';
+import { MedColor } from '../../@templarios/types/color.type';
 import { getIonMode } from '../../global/ionic-global';
-import { AnimationBuilder, Color, RouterDirection, MedColor } from '../../interface';
+import { AnimationBuilder, Color, RouterDirection } from '../../interface';
 import { AnchorInterface, ButtonInterface } from '../../utils/element-interface';
+import { generateMedColor } from '../../@templarios/utilities/color';
 import { hostContext, openURL } from '../../utils/theme';
-import { generateMedColor } from '../../utils/med-theme';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.

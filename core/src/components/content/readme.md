@@ -262,9 +262,9 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [med-config](../@medgrupo/legacy/med-config)
- - [med-image-zoom](../@medgrupo/compositions/med-image-zoom)
- - [sheet-content-test](../@medgrupo/testes/sheet-content-test)
+ - [med-config](../@templarios/legacy/med-config)
+ - [med-image-zoom](../@templarios/compositions/med-image-zoom)
+ - [sheet-content-test](../@templarios/testes/sheet-content-test)
 
 ### Graph
 ```mermaid

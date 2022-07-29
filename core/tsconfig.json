@@ -23,7 +23,9 @@
     "outDir": ".tmp",
     "pretty": true,
     "removeComments": false,
-    "target": "es2017"
+    "target": "es2017",
+    // templarios
+    "skipLibCheck": true
   },
   "include": [
     "src",
@@ -32,6 +34,7 @@
     "node_modules",
     "**/test",
     "src/stories",
+    // templarios
     "src/@templarios/stories"
   ]
 }

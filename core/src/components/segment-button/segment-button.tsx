@@ -1,11 +1,12 @@
-import { Component, ComponentInterface, Element, Host, Prop, State, forceUpdate, h } from '@stencil/core';
+import { Component, ComponentInterface, Element, forceUpdate, h, Host, Prop, State } from '@stencil/core';
 
+import { MedColor } from '../../@templarios/types/color.type';
 import { getIonMode } from '../../global/ionic-global';
-import { SegmentButtonLayout, MedColor } from '../../interface';
+import { SegmentButtonLayout } from '../../interface';
 import { ButtonInterface } from '../../utils/element-interface';
 import { addEventListener, removeEventListener } from '../../utils/helpers';
+import { generateMedColor } from '../../@templarios/utilities/color';
 import { hostContext } from '../../utils/theme';
-import { generateMedColor } from '../../utils/med-theme';
 
 let ids = 0;
 

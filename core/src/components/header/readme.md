@@ -200,10 +200,10 @@ export default defineComponent({
 
 ### Used by
 
- - [dialog-test](../@medgrupo/testes/dialog-test)
- - [med-alert](../@medgrupo/core/med-alert)
- - [sheet-content-test](../@medgrupo/testes/sheet-content-test)
- - [sheet-test](../@medgrupo/testes/sheet-test)
+ - [dialog-test](../@templarios/testes/dialog-test)
+ - [med-alert](../@templarios/core/med-alert)
+ - [sheet-content-test](../@templarios/testes/sheet-content-test)
+ - [sheet-test](../@templarios/testes/sheet-test)
 
 ### Graph
 ```mermaid
