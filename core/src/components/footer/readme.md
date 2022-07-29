@@ -131,8 +131,8 @@ export default defineComponent({
 
 ### Used by
 
- - [sheet-content-test](../@medgrupo/testes/sheet-content-test)
- - [sheet-test](../@medgrupo/testes/sheet-test)
+ - [sheet-content-test](../@templarios/testes/sheet-content-test)
+ - [sheet-test](../@templarios/testes/sheet-test)
 
 ### Graph
 ```mermaid

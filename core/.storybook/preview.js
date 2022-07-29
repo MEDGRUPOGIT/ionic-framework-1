@@ -12,33 +12,24 @@ import '../css/structure.css';
 import '../css/text-alignment.css';
 import '../css/text-transformation.css';
 import '../css/typography.css';
+
 defineCustomElements();
 
-// templarios
-import '../css/default.css';
-import '../css/components.css';
-import '../css/utils.css';
-
-// templarios schemes
-import '../css/dark.css';
-import '../css/light.css';
-
-// templarios themes
-import '../css/medsoft.css';
-import '../css/gold.css';
-import '../css/recursos.css';
-
-// storybook canvas
+// storybook
+import './assets/fsemeric.css';
 import './themes/templarios.css';
-import '../src/stories/assets/fsemeric.css';
+import './assets/color-system.stories.css';
 
-// templarios 2.0
-import '../css/templarios-2.0.css';
+// templarios
+import '../templarios/css/themes/default.css';
+import '../templarios/css/themes/medsoft.css';
+import '../templarios/css/schemes/light.css';
+import '../templarios/css/templarios.css';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
+  backgrounds: { disable: true },
   controls: {
-    expanded: true,
     matchers: {
       color: /(background|color)$/i,
       date: /Date$/,
@@ -46,12 +37,6 @@ export const parameters = {
   },
   themes: {
     target: 'root',
-    onChange: (themeName) => {
-      const snipet = document.querySelector('iframe').contentWindow.document.querySelector('.snipet__value--class');
-      if(snipet) {
-        document.querySelector('iframe').contentWindow.document.querySelector('.snipet__value--class').textContent = `${themeName.class.join(' ')}`;
-      }
-    },
     list: [
       {
         name: 'Theme Medsoft',
@@ -63,39 +48,6 @@ export const parameters = {
         name: 'Theme Medsoft / Scheme Light',
         class: ['theme-medsoft', 'scheme-light'],
         color: '#3aa8b9'
-      },
-
-      {
-        name: 'Theme Gold',
-        class: ['theme-gold', 'scheme-dark'],
-        color: '#b89d58'
-      },
-      {
-        name: 'Theme Gold / Scheme Light',
-        class: ['theme-Gold', 'scheme-light'],
-        color: '#b89d58'
-      },
-
-      {
-        name: 'Theme Medsoft Gold',
-        class: ['theme-medsoft', 'theme-gold', 'scheme-dark'],
-        color: '#b89d58'
-      },
-      {
-        name: 'Theme Medsoft Gold / Scheme Light',
-        class: ['theme-medsoft', 'theme-gold', 'scheme-light'],
-        color: '#b89d58'
-      },
-
-      {
-        name: 'Theme Recursos',
-        class: ['theme-recursos', 'scheme-dark'],
-        color: '#68a6ba'
-      },
-      {
-        name: 'Theme Recursos / Scheme Light',
-        class: ['theme-recursos', 'scheme-light'],
-        color: '#68a6ba'
       },
     ],
   },
@@ -152,9 +104,8 @@ export const parameters = {
         'General', ['Welcome', 'Biblioteca', 'Styleguide'],
         'Conhecimento', ['Metodologia BEM'],
         'Foundation',
-        'Components', ['Foundation', 'Core', 'Compositions', 'Team', 'Remover'],
-        'Pages',
-        'Enums',
+        'Components', ['Ionic', 'Core', 'Compositions', 'Team', 'Compositions-scss', 'Legado'],
+        'Utilities',
         'Sass',
       ],
     },

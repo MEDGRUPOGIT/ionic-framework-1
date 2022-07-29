@@ -1,6 +1,7 @@
 import { Component, ComponentInterface, h, Host, Prop } from '@stencil/core';
 import { generateMedColor } from '../../../../@templarios/utilities/color';
-import { MedColor, MedTypeTag, MedTypeToken } from '../../../../interface';
+import { MedColor } from '../../../../@templarios/types/color.type';
+import { MedTypeTag, MedTypeToken } from '../../../../@templarios/types/type.type';
 
 @Component({
   tag: 'med-type',
@@ -8,18 +9,19 @@ import { MedColor, MedTypeTag, MedTypeToken } from '../../../../interface';
   scoped: true,
 })
 export class MedType implements ComponentInterface {
+
   /**
-   * Define a cor do componente.
+   * todo
    */
   @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
-   * Define o token do componente.
+   * todo
    */
   @Prop({ reflect: true }) token?: MedTypeToken;
 
   /**
-   * Define a tag HTML do componente.
+   * todo
    */
   @Prop({ reflect: true }) tag?: MedTypeTag = 'span';
 

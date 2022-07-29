@@ -4,8 +4,8 @@ import { config } from '../../global/config';
 import { getIonMode } from '../../global/ionic-global';
 import { TabBarChangedEventDetail, TabButtonClickEventDetail, TabButtonLayout } from '../../interface';
 import { AnchorInterface } from '../../utils/element-interface';
-import { MedColor } from '../../interface';
-import { generateMedColor } from '../../utils/med-theme';
+import { generateMedColor } from '../../@templarios/utilities/color';
+import { MedColor } from '../../@templarios/types/color.type';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.

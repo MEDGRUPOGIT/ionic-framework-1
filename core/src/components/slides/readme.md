@@ -853,7 +853,7 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [med-image-zoom](../@medgrupo/compositions/med-image-zoom)
+ - [med-image-zoom](../@templarios/compositions/med-image-zoom)
 
 ### Graph
 ```mermaid

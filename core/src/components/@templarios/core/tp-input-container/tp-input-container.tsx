@@ -1,6 +1,6 @@
-import { Component, Host, h, Prop } from '@stencil/core';
+import { Component, h, Host, Prop } from '@stencil/core';
+import { MedColor } from '../../../../@templarios/types/color.type';
 import { generateMedColor } from '../../../../@templarios/utilities/color';
-import { MedColor } from '../../../../interface';
 
 @Component({
   tag: 'tp-input-container',
@@ -8,16 +8,35 @@ import { MedColor } from '../../../../interface';
   scoped: true,
 })
 export class TpInputContainer {
+
+  /**
+   * todo
+   */
   @Prop({ reflect: true }) dsColor?: MedColor;
 
+  /**
+   * todo
+   */
   @Prop({ reflect: true }) dsName?: 'secondary';
 
+  /**
+   * todo
+   */
   @Prop({ reflect: true }) disabled = false;
 
+  /**
+   * todo
+   */
   @Prop({ reflect: true }) feedback = false;
 
+  /**
+   * todo
+   */
   @Prop({ reflect: true }) hasButton?: 'start' | 'end' | 'both';
 
+  /**
+   * todo
+   */
   @Prop({ reflect: true }) hasIcon?: 'start' | 'end' | 'both';
 
   render() {

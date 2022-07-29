@@ -1,5 +1,5 @@
 import { create } from '@storybook/theming';
-import templarios from './templarios-horizontal.svg';
+import templarios from './templarios.svg';
 
 export default create({
   base: 'dark',

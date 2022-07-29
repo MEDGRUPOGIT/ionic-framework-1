@@ -1065,12 +1065,6 @@ export const MedCheckCard = /*@__PURE__*/ defineContainer<JSX.MedCheckCard>('med
 ]);
 
 
-export const MedChild = /*@__PURE__*/ defineContainer<JSX.MedChild>('med-child', [
-  'dsColor',
-  'fill'
-]);
-
-
 export const MedChip = /*@__PURE__*/ defineContainer<JSX.MedChip>('med-chip', [
   'dsColor',
   'dsName',
@@ -1253,13 +1247,6 @@ export const MedOffline = /*@__PURE__*/ defineContainer<JSX.MedOffline>('med-off
 
 export const MedOption = /*@__PURE__*/ defineContainer<JSX.MedOption>('med-option', [
   'dsColor'
-]);
-
-
-export const MedParent = /*@__PURE__*/ defineContainer<JSX.MedParent>('med-parent', [
-  'dsColor',
-  'fill',
-  'child'
 ]);
 
 

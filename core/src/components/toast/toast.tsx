@@ -1,14 +1,12 @@
-import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, Prop, h } from '@stencil/core';
+import { Component, ComponentInterface, Element, Event, EventEmitter, h, Host, Method, Prop } from '@stencil/core';
 
+import { MedColor } from '../../@templarios/types/color.type';
 import { getIonMode } from '../../global/ionic-global';
 import { AnimationBuilder, CssClassMap, OverlayEventDetail, OverlayInterface, ToastButton } from '../../interface';
+import { generateMedColor } from '../../@templarios/utilities/color';
 import { dismiss, eventMethod, isCancel, prepareOverlay, present, safeCall } from '../../utils/overlays';
 import { IonicSafeString, sanitizeDOMString } from '../../utils/sanitization';
 import { getClassMap } from '../../utils/theme';
-
-import { MedColor } from '../../interface';
-import { generateMedColor } from '../../utils/med-theme';
-
 import { iosEnterAnimation } from './animations/ios.enter';
 import { iosLeaveAnimation } from './animations/ios.leave';
 import { mdEnterAnimation } from './animations/md.enter';

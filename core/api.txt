@@ -1534,8 +1534,6 @@ med-chart-bar-horizontal,prop,hideValue,boolean,false,false,true
 med-chart-bar-horizontal,prop,label,boolean,true,false,true
 med-chart-bar-horizontal,prop,labelContent,string | undefined,undefined,false,true
 med-chart-bar-horizontal,prop,value,number,0,false,true
-med-chart-bar-horizontal,part,progress
-med-chart-bar-horizontal,part,track
 
 med-chart-categoria,scoped
 med-chart-categoria,prop,dsColor,string | undefined,undefined,false,true
@@ -1575,10 +1573,6 @@ med-check-card,prop,iconName,string | undefined,undefined,false,true
 med-check-card,prop,titulo,string | undefined,undefined,false,true
 med-check-card,event,medClick,any,true
 med-check-card,event,medTooltipClose,any,true
-
-med-child,shadow
-med-child,prop,dsColor,string | undefined,undefined,false,false
-med-child,prop,fill,"outline" | undefined,undefined,false,true
 
 med-chip,scoped
 med-chip,prop,active,boolean,false,false,true
@@ -1726,11 +1720,6 @@ med-offline,event,medClick,void,true
 
 med-option,shadow
 med-option,prop,dsColor,string | undefined,undefined,false,true
-
-med-parent,shadow
-med-parent,prop,child,boolean,false,false,true
-med-parent,prop,dsColor,string | undefined,undefined,false,true
-med-parent,prop,fill,"outline" | undefined,undefined,false,true
 
 med-piechart,shadow
 med-piechart,prop,disabled,boolean,false,false,true

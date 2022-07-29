@@ -1,0 +1,110 @@
+//
+// abstracts
+//
+@import './variables/breakpoints';
+@import './variables/color-ionic';
+@import './variables/components';
+
+@import './functions/breakpoints';
+@import './functions/color-ionic';
+
+@import './mixins/breakpoints';
+@import './mixins/color-ionic';
+@import './mixins/devices';
+
+//
+// components
+//
+// accordion
+// @import './components/ionic/accordion/accordion';
+
+// accordion-group
+// @import './components/ionic/accordion-group/accordion-group';
+
+// back button
+// @import './components/ionic/ion-back-button/back-button';
+
+// badge
+@import './components/ionic/ion-badge/badge';
+
+// button
+@import './components/ionic/ion-button/primary';
+@import './components/ionic/ion-button/secondary';
+@import './components/ionic/ion-button/tertiary';
+
+// checkbox
+@import './components/ionic/ion-checkbox/checkbox';
+
+// fab-button
+// @import './components/ionic/ion-fab-button/fab-button';
+
+// fab-list
+// @import './components/ionic/ion-fab-list/fab-list';
+
+// icon
+// @import './components/ionic/icon/icon';
+
+// input
+@import './components/ionic/ion-input/input';
+
+// item
+@import './components/ionic/ion-item/item';
+
+// label
+@import './components/ionic/ion-label/label';
+
+// list
+// @import './components/ionic/ion-list/list';
+
+// radio
+@import './components/ionic/ion-radio/radio';
+
+// select
+@import './components/ionic/ion-select/select';
+
+// tab-bar
+// @import './components/ionic/ion-tab-bar/tab-bar';
+
+// tab-button
+// @import './components/ionic/ion-tab-button/tab-button';
+
+// textarea
+@import './components/ionic/ion-textarea/textarea';
+
+// toggle
+// @import './components/ionic/ion-toggle/toggle';
+
+//
+// legado
+//
+@import './functions/color-stencil';
+
+// utils
+@import "./components/utils/utils";
+
+// global
+@import "./components/global/datetime";
+@import "./components/global/dialog";
+@import "./components/global/font-zoom-popover";
+@import "./components/global/intro-tooltip";
+@import "./components/global/picker";
+@import "./components/global/scrollbar";
+@import "./components/global/sheet";
+@import "./components/global/time-stamp";
+
+// compositions
+@import "./components/compositions/accordion-list";
+@import "./components/compositions/card-assuntos-temas";
+@import "./components/compositions/chart-bar";
+@import "./components/compositions/context-menu";
+@import "./components/compositions/dialog";
+@import "./components/compositions/filtro-dashboard-modal";
+@import "./components/compositions/filtro-dashboard";
+@import "./components/compositions/header-counter";
+@import "./components/compositions/menu-mobile";
+@import "./components/compositions/tabs";
+
+// monta provas
+@import "./components/monta-provas/accordion-chart-monta-provas";
+@import "./components/monta-provas/filtros-monta-provas";
+@import "./components/monta-provas/footer-monta-provas";
