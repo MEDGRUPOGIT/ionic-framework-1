@@ -15,9 +15,10 @@
 ::slotted(ion-icon[slot='start']),
 ::slotted(ion-button[slot='end']),
 ::slotted(ion-icon[slot='end']) {
+  --color: #{color('neutral', '6')} !important;
+
   margin: 0 8px 0 8px;
   stroke: #{color('neutral', '6')};
-  --color: #{color('neutral', '6')} !important;
 }
 
 :host(.tp-input-container--has-button-start),
@@ -86,6 +87,7 @@
   &::slotted(ion-button),
   &::slotted(ion-icon) {
     --color: #{curr-color('color', '3', 'contrast')} !important;
+
     stroke: #{curr-color('color', '3', 'contrast')} !important;
   }
 }
@@ -120,6 +122,7 @@
   &::slotted(ion-button),
   &::slotted(ion-icon) {
     --color: #{curr-color('feedback', null, 'contrast')} !important;
-    stroke: #{color('neutral', '6')} !important;
+
+    stroke: #{curr-color('feedback', null, 'contrast')} !important;
   }
 }

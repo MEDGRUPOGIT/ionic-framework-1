@@ -15,14 +15,11 @@
 //
 // components
 //
-// accordion
-// @import './components/ionic/accordion/accordion';
-
-// accordion-group
-// @import './components/ionic/accordion-group/accordion-group';
+// avatar
+@import './components/ionic/ion-avatar/avatar';
 
 // back button
-// @import './components/ionic/ion-back-button/back-button';
+@import './components/ionic/ion-back-button/back-button';
 
 // badge
 @import './components/ionic/ion-badge/badge';
@@ -35,14 +32,18 @@
 // checkbox
 @import './components/ionic/ion-checkbox/checkbox';
 
+// chip
+@import './components/ionic/ion-chip/chip';
+
+// datetime
+@import './components/ionic/ion-datetime/datetime';
+@import './components/ionic/ion-datetime/datetime-modal';
+
 // fab-button
-// @import './components/ionic/ion-fab-button/fab-button';
+@import './components/ionic/ion-fab-button/fab-button';
 
 // fab-list
-// @import './components/ionic/ion-fab-list/fab-list';
-
-// icon
-// @import './components/ionic/icon/icon';
+@import './components/ionic/ion-fab-list/fab-list';
 
 // input
 @import './components/ionic/ion-input/input';
@@ -54,25 +55,28 @@
 @import './components/ionic/ion-label/label';
 
 // list
-// @import './components/ionic/ion-list/list';
+@import './components/ionic/ion-list/list';
+
+// progress-bar
+@import './components/ionic/ion-progress-bar/progress-bar';
 
 // radio
 @import './components/ionic/ion-radio/radio';
 
+// searchbar
+@import './components/ionic/ion-searchbar/searchbar';
+
 // select
 @import './components/ionic/ion-select/select';
-
-// tab-bar
-// @import './components/ionic/ion-tab-bar/tab-bar';
-
-// tab-button
-// @import './components/ionic/ion-tab-button/tab-button';
 
 // textarea
 @import './components/ionic/ion-textarea/textarea';
 
+// title
+@import './components/ionic/ion-title/title';
+
 // toggle
-// @import './components/ionic/ion-toggle/toggle';
+@import './components/ionic/ion-toggle/toggle';
 
 //
 // legado
@@ -83,7 +87,6 @@
 @import "./components/utils/utils";
 
 // global
-@import "./components/global/datetime";
 @import "./components/global/dialog";
 @import "./components/global/font-zoom-popover";
 @import "./components/global/intro-tooltip";

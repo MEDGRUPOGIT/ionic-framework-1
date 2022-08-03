@@ -16,12 +16,12 @@ const Template = ({ 'ds-color': dsColor, 'ds-name': dsName, disabled }) => {
           <ion-button slot="start" .disabled=${disabled} ds-size="xxs" mode="ios" fill="clear" icon-only>
             <ion-icon class="med-icon" slot="icon-only" name="med-direita"></ion-icon>
           </ion-button>
-          <ion-input .dsColor=${dsColor} .disabled=${disabled} placeholder="Lorem ipsum dolor"></ion-input>
+          <ion-input mode="md" .dsColor=${dsColor} .disabled=${disabled} placeholder="Lorem ipsum dolor"></ion-input>
         </tp-input-container>
 
         <ion-label token="p14">Description</ion-label>
         <tp-input-container .dsColor=${dsColor} ds-name=${dsName} .disabled=${disabled} has-button="end">
-          <ion-input .dsColor=${dsColor} .disabled=${disabled} placeholder="Lorem ipsum dolor"></ion-input>
+          <ion-input mode="md" .dsColor=${dsColor} .disabled=${disabled} placeholder="Lorem ipsum dolor"></ion-input>
           <ion-button slot="end" .disabled=${disabled} ds-size="xxs" mode="ios" fill="clear" icon-only>
             <ion-icon class="med-icon" slot="icon-only" name="med-direita"></ion-icon>
           </ion-button>
@@ -32,7 +32,7 @@ const Template = ({ 'ds-color': dsColor, 'ds-name': dsName, disabled }) => {
           <ion-button slot="start" .disabled=${disabled} ds-size="xxs" mode="ios" fill="clear" icon-only>
             <ion-icon class="med-icon" slot="icon-only" name="med-direita"></ion-icon>
           </ion-button>
-          <ion-input .dsColor=${dsColor} .disabled=${disabled} placeholder="Lorem ipsum dolor"></ion-input>
+          <ion-input mode="md" .dsColor=${dsColor} .disabled=${disabled} placeholder="Lorem ipsum dolor"></ion-input>
           <ion-button slot="end" .disabled=${disabled} ds-size="xxs" mode="ios" fill="clear" icon-only>
             <ion-icon class="med-icon" slot="icon-only" name="med-direita"></ion-icon>
           </ion-button>

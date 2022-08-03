@@ -25,7 +25,7 @@ const Template = ({ dsName }) => {
                 <med-type token="p14">Lorem ipsum Dolor</med-type>
               </med-item>
             </med-dropdown>
-            <ion-searchbar ds-name=${dsName} no-icon mode="ios" placeholder="Placeholder"></ion-searchbar>
+            <ion-searchbar ds-name=${dsName} mode="md" search-icon="med-busca" clear-icon="med-fechar" placeholder="Placeholder"></ion-searchbar>
           </med-autocomplete>
           <!-- component markdown -->
 

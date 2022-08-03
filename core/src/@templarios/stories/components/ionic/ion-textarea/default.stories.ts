@@ -12,7 +12,7 @@ const Template = ({ 'ds-color': dsColor, 'ds-name': dsName, disabled }) => {
     <ion-app>
       <ion-content>
         <ion-label token="p14">Description</ion-label>
-        <ion-textarea ds-color=${dsColor} ds-name=${dsName} .disabled=${disabled} placeholder="Lorem ipsum dolor"></ion-textarea>
+        <ion-textarea mode="md" ds-color=${dsColor} ds-name=${dsName} .disabled=${disabled} placeholder="Lorem ipsum dolor"></ion-textarea>
       </ion-content>
     </ion-app>
   `;

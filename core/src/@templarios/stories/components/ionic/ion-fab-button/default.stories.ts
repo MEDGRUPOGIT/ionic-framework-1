@@ -3,18 +3,16 @@ import { withDesign } from 'storybook-addon-designs';
 import { MedColors } from '../../../../templarios';
 
 export default {
-  title: 'Components/Compositions/Fab',
+  title: 'Components/Ionic/Fab Button',
   decorators: [withDesign],
 };
 
-const TemplateDefault = ({dsColor}) => {
+const Template = ({ 'ds-color': dsColor }) => {
   return html`
-    <ion-app class="storybook-only">
-      <div class="storybook-only__container">
-
-        <!-- component markdown -->
+    <ion-app>
+      <ion-content>
         <ion-fab vertical="center" horizontal="center" slot="fixed">
-          <ion-fab-button .dsColor=${dsColor}>
+          <ion-fab-button ds-color=${dsColor}>
             <ion-icon class="med-icon" name="med-mais"></ion-icon>
           </ion-fab-button>
           <ion-fab-list side="top">
@@ -32,29 +30,27 @@ const TemplateDefault = ({dsColor}) => {
             </ion-fab-button>
           </ion-fab-list>
         </ion-fab>
-        <!-- component markdown -->
-
-      </div>
+      </ion-content>
     </ion-app>
-  `
-}
+  `;
+};
 
-export const Default = TemplateDefault.bind({});
+export const Default = Template.bind({});
 Default.parameters = {
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/Componentes?node-id=2436%3A21',
-  }
-}
+    url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/01.-Componentes?node-id=13948%3A31953',
+  },
+};
 Default.argTypes = {
-  dsColor: {
-    options: Object.values(MedColors),
-    control: { type: 'select'},
-    description: "Define a cor do componente.",
+  'ds-color': {
+    options: [undefined, ...Object.values(MedColors)],
+    control: { type: 'select' },
+    description: 'Define a cor do componente.',
+    defaultValue: undefined,
     table: {
-      type:  { summary: Object.values(MedColors).join(' |') },
+      type: { summary: Object.values(MedColors).join(' |') },
       defaultValue: { summary: 'undefined' },
     },
   },
 };
-

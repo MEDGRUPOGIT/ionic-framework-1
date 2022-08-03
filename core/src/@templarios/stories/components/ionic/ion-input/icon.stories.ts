@@ -14,20 +14,20 @@ const Template = ({ 'ds-color': dsColor, 'ds-name': dsName, disabled }) => {
         <ion-label token="p14">Description</ion-label>
         <tp-input-container .dsColor=${dsColor} ds-name=${dsName} .disabled=${disabled} has-icon="start">
           <ion-icon class="med-icon" slot="start" name="med-direita"></ion-icon>
-          <ion-input .dsColor=${dsColor} .disabled=${disabled} placeholder="Lorem ipsum dolor"></ion-input>
+          <ion-input mode="md" .dsColor=${dsColor} .disabled=${disabled} placeholder="Lorem ipsum dolor"></ion-input>
         </tp-input-container>
 
         <ion-label token="p14">Description</ion-label>
         <tp-input-container .dsColor=${dsColor} ds-name=${dsName} .disabled=${disabled} has-icon="end">
           <ion-icon class="med-icon" slot="end" name="med-direita"></ion-icon>
-          <ion-input .dsColor=${dsColor} .disabled=${disabled} placeholder="Lorem ipsum dolor"></ion-input>
+          <ion-input mode="md" .dsColor=${dsColor} .disabled=${disabled} placeholder="Lorem ipsum dolor"></ion-input>
         </tp-input-container>
 
         <ion-label token="p14">Description</ion-label>
         <tp-input-container .dsColor=${dsColor} ds-name=${dsName} .disabled=${disabled} has-icon="both">
           <ion-icon class="med-icon" slot="start" name="med-direita"></ion-icon>
           <ion-icon class="med-icon" slot="end" name="med-direita"></ion-icon>
-          <ion-input .dsColor=${dsColor} .disabled=${disabled} placeholder="Lorem ipsum dolor"></ion-input>
+          <ion-input mode="md" .dsColor=${dsColor} .disabled=${disabled} placeholder="Lorem ipsum dolor"></ion-input>
         </tp-input-container>
       </ion-content>
     </ion-app>

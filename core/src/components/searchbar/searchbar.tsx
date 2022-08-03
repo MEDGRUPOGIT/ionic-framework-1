@@ -29,16 +29,6 @@ export class Searchbar implements ComponentInterface {
   @State() noAnimate = true;
 
   /**
-    * Define o icone do componente.
-    */
-  @Prop({ reflect: true }) dsName?: 'secondary';
-
-  /**
-    * Define o icone do componente.
-    */
-  @Prop({ reflect: true }) noIcon = false;
-
-  /**
    * The color to use from your application's color palette.
    * Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`.
    * For more information on colors, see [theming](/docs/theming/basics).
@@ -464,11 +454,11 @@ export class Searchbar implements ComponentInterface {
   }
 
   render() {
-    const { cancelButtonText, dsName, noIcon } = this;
+    const { cancelButtonText } = this;
     const animated = this.animated && config.getBoolean('animated', true);
     const mode = getIonMode(this);
-    const clearIcon = this.clearIcon || (mode === 'ios' ? 'med-fechar' : 'med-fechar');
-    const searchIcon = this.searchIcon || (mode === 'ios' ? 'med-busca' : 'search-sharp');
+    const clearIcon = this.clearIcon || (mode === 'ios' ? 'close-circle' : 'close-sharp');
+    const searchIcon = this.searchIcon || (mode === 'ios' ? 'search-outline' : 'search-sharp');
     const shouldShowCancelButton = this.shouldShowCancelButton();
 
     const cancelButton = (this.showCancelButton !== 'never') && (
@@ -485,7 +475,7 @@ export class Searchbar implements ComponentInterface {
       >
         <div aria-hidden="true">
           { mode === 'md'
-            ? <ion-icon aria-hidden="true" class="med-icon" mode={mode} icon={this.cancelButtonIcon} lazy={false}></ion-icon>
+            ? <ion-icon aria-hidden="true" mode={mode} icon={this.cancelButtonIcon} lazy={false}></ion-icon>
             : cancelButtonText
           }
         </div>
@@ -505,15 +495,11 @@ export class Searchbar implements ComponentInterface {
           'searchbar-left-aligned': this.shouldAlignLeft,
           'searchbar-has-focus': this.focused,
           'searchbar-should-show-clear': this.shouldShowClearButton(),
-          'searchbar-should-show-cancel': this.shouldShowCancelButton(),
-          'med-searchbar--no-icon': noIcon,
-          [`med-searchbar--${dsName}`]: dsName !== undefined,
+          'searchbar-should-show-cancel': this.shouldShowCancelButton()
         })}
       >
 
         <div class="searchbar-input-container">
-          <ion-icon aria-hidden="true" class="med-icon med-icon-search" mode={mode} icon={searchIcon} lazy={false}></ion-icon>
-
           <input
             aria-label="search text"
             disabled={this.disabled}
@@ -534,6 +520,10 @@ export class Searchbar implements ComponentInterface {
 
           {mode === 'md' && cancelButton}
 
+          {/* // templarios */}
+          <ion-icon aria-hidden="true" mode={mode} name={searchIcon} lazy={false} class="med-icon searchbar-search-icon"></ion-icon>
+          {/* // !templarios */}
+
           <button
             aria-label="reset"
             type="button"
@@ -542,7 +532,9 @@ export class Searchbar implements ComponentInterface {
             onMouseDown={ev => this.onClearInput(ev, true)}
             onTouchStart={ev => this.onClearInput(ev, true)}
           >
-            <ion-icon aria-hidden="true" class="med-icon searchbar-clear-icon" mode={mode} icon={clearIcon} lazy={false}></ion-icon>
+            {/* // templarios */}
+            <ion-icon aria-hidden="true" mode={mode} name={clearIcon} lazy={false} class="med-icon searchbar-clear-icon"></ion-icon>
+            {/* // !templarios */}
           </button>
         </div>
         {mode === 'ios' && cancelButton}

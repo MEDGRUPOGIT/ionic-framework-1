@@ -36,8 +36,8 @@ export class IonAvatar {
 }
 export declare interface IonBackButton extends Components.IonBackButton {
 }
-@ProxyCmp({ inputs: ["color", "defaultHref", "disabled", "dsColor", "dsName", "dsSize", "icon", "mode", "routerAnimation", "text", "type"] })
-@Component({ selector: "ion-back-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "defaultHref", "disabled", "dsColor", "dsName", "dsSize", "icon", "mode", "routerAnimation", "text", "type"] })
+@ProxyCmp({ inputs: ["color", "defaultHref", "disabled", "icon", "mode", "routerAnimation", "text", "type"] })
+@Component({ selector: "ion-back-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "defaultHref", "disabled", "icon", "mode", "routerAnimation", "text", "type"] })
 export class IonBackButton {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -203,8 +203,8 @@ export class IonContent {
 }
 export declare interface IonDatetime extends Components.IonDatetime {
 }
-@ProxyCmp({ inputs: ["cancelText", "dayNames", "dayShortNames", "dayValues", "disabled", "displayFormat", "displayTimezone", "doneText", "dsName", "hourValues", "iconName", "max", "min", "minuteValues", "mode", "monthNames", "monthShortNames", "monthValues", "name", "noStyle", "pickerFormat", "pickerOptions", "placeholder", "readonly", "value", "yearValues"], "methods": ["open"] })
-@Component({ selector: "ion-datetime", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["cancelText", "dayNames", "dayShortNames", "dayValues", "disabled", "displayFormat", "displayTimezone", "doneText", "dsName", "hourValues", "iconName", "max", "min", "minuteValues", "mode", "monthNames", "monthShortNames", "monthValues", "name", "noStyle", "pickerFormat", "pickerOptions", "placeholder", "readonly", "value", "yearValues"] })
+@ProxyCmp({ inputs: ["cancelText", "dayNames", "dayShortNames", "dayValues", "disabled", "displayFormat", "displayTimezone", "doneText", "hourValues", "max", "min", "minuteValues", "mode", "monthNames", "monthShortNames", "monthValues", "name", "pickerFormat", "pickerOptions", "placeholder", "readonly", "value", "yearValues"], "methods": ["open"] })
+@Component({ selector: "ion-datetime", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["cancelText", "dayNames", "dayShortNames", "dayValues", "disabled", "displayFormat", "displayTimezone", "doneText", "hourValues", "max", "min", "minuteValues", "mode", "monthNames", "monthShortNames", "monthValues", "name", "pickerFormat", "pickerOptions", "placeholder", "readonly", "value", "yearValues"] })
 export class IonDatetime {
   ionCancel!: EventEmitter<CustomEvent>;
   ionChange!: EventEmitter<CustomEvent>;
@@ -230,8 +230,8 @@ export class IonFab {
 }
 export declare interface IonFabButton extends Components.IonFabButton {
 }
-@ProxyCmp({ inputs: ["activated", "closeIcon", "color", "disabled", "download", "dsColor", "href", "mode", "rel", "routerAnimation", "routerDirection", "show", "size", "target", "translucent", "type"] })
-@Component({ selector: "ion-fab-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["activated", "closeIcon", "color", "disabled", "download", "dsColor", "href", "mode", "rel", "routerAnimation", "routerDirection", "show", "size", "target", "translucent", "type"] })
+@ProxyCmp({ inputs: ["activated", "closeIcon", "color", "disabled", "download", "href", "mode", "rel", "routerAnimation", "routerDirection", "show", "size", "target", "translucent", "type"] })
+@Component({ selector: "ion-fab-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["activated", "closeIcon", "color", "disabled", "download", "href", "mode", "rel", "routerAnimation", "routerDirection", "show", "size", "target", "translucent", "type"] })
 export class IonFabButton {
   ionFocus!: EventEmitter<CustomEvent>;
   ionBlur!: EventEmitter<CustomEvent>;
@@ -653,8 +653,8 @@ export class IonRow {
 }
 export declare interface IonSearchbar extends Components.IonSearchbar {
 }
-@ProxyCmp({ inputs: ["animated", "autocomplete", "autocorrect", "cancelButtonIcon", "cancelButtonText", "clearIcon", "color", "debounce", "disabled", "dsName", "enterkeyhint", "inputmode", "mode", "noIcon", "placeholder", "searchIcon", "showCancelButton", "showClearButton", "spellcheck", "type", "value"], "methods": ["setFocus", "getInputElement"] })
-@Component({ selector: "ion-searchbar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["animated", "autocomplete", "autocorrect", "cancelButtonIcon", "cancelButtonText", "clearIcon", "color", "debounce", "disabled", "dsName", "enterkeyhint", "inputmode", "mode", "noIcon", "placeholder", "searchIcon", "showCancelButton", "showClearButton", "spellcheck", "type", "value"] })
+@ProxyCmp({ inputs: ["animated", "autocomplete", "autocorrect", "cancelButtonIcon", "cancelButtonText", "clearIcon", "color", "debounce", "disabled", "enterkeyhint", "inputmode", "mode", "placeholder", "searchIcon", "showCancelButton", "showClearButton", "spellcheck", "type", "value"], "methods": ["setFocus", "getInputElement"] })
+@Component({ selector: "ion-searchbar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["animated", "autocomplete", "autocorrect", "cancelButtonIcon", "cancelButtonText", "clearIcon", "color", "debounce", "disabled", "enterkeyhint", "inputmode", "mode", "placeholder", "searchIcon", "showCancelButton", "showClearButton", "spellcheck", "type", "value"] })
 export class IonSearchbar {
   ionInput!: EventEmitter<CustomEvent>;
   ionChange!: EventEmitter<CustomEvent>;
@@ -867,8 +867,8 @@ export class IonTitle {
 }
 export declare interface IonToggle extends Components.IonToggle {
 }
-@ProxyCmp({ inputs: ["checked", "color", "disabled", "dsColor", "mode", "name", "value"] })
-@Component({ selector: "ion-toggle", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["checked", "color", "disabled", "dsColor", "mode", "name", "value"] })
+@ProxyCmp({ inputs: ["checked", "color", "disabled", "mode", "name", "value"] })
+@Component({ selector: "ion-toggle", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["checked", "color", "disabled", "mode", "name", "value"] })
 export class IonToggle {
   ionChange!: EventEmitter<CustomEvent>;
   ionFocus!: EventEmitter<CustomEvent>;
