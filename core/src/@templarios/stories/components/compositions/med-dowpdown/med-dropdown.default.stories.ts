@@ -25,7 +25,7 @@ const Template = ({ dsName }) => {
                 <med-type token="p14">Lorem ipsum Dolor</med-type>
               </med-item>
             </med-dropdown>
-            <ion-select ds-name=${dsName} placeholder="Placeholder"></ion-select>
+            <ion-select mode="md" ds-name=${dsName} placeholder="Placeholder"></ion-select>
           </med-dropdown-container>
           <!-- component markdown -->
 

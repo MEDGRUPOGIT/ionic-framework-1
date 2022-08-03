@@ -13,7 +13,7 @@ const Template = ({ 'ds-color': dsColor, 'ds-name': dsName, disabled }) => {
       <ion-content>
         <ion-label token="p14">Description</ion-label>
         <tp-input-container .dsColor=${dsColor} ds-name=${dsName} .disabled=${disabled} has-icon="end">
-          <ion-select ds-color=${dsColor} ds-name=${dsName} .disabled=${disabled} placeholder="Lorem ipsum dolor"></ion-select>
+          <ion-select mode="md" ds-color=${dsColor} ds-name=${dsName} .disabled=${disabled} placeholder="Lorem ipsum dolor"></ion-select>
           <ion-icon class="med-icon" slot="end" name="med-baixo"></ion-icon>
         </tp-input-container>
       </ion-content>

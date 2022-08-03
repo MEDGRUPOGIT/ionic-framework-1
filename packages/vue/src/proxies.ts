@@ -160,9 +160,6 @@ export const IonDatetime = /*@__PURE__*/ defineContainer<JSX.IonDatetime>('ion-d
   'name',
   'disabled',
   'readonly',
-  'dsName',
-  'noStyle',
-  'iconName',
   'min',
   'max',
   'displayFormat',
@@ -207,7 +204,6 @@ export const IonFab = /*@__PURE__*/ defineContainer<JSX.IonFab>('ion-fab', [
 
 
 export const IonFabButton = /*@__PURE__*/ defineContainer<JSX.IonFabButton>('ion-fab-button', [
-  'dsColor',
   'color',
   'activated',
   'disabled',
@@ -558,8 +554,6 @@ export const IonRow = /*@__PURE__*/ defineContainer<JSX.IonRow>('ion-row');
 
 
 export const IonSearchbar = /*@__PURE__*/ defineContainer<JSX.IonSearchbar>('ion-searchbar', [
-  'dsName',
-  'noIcon',
   'color',
   'animated',
   'autocomplete',
@@ -769,7 +763,6 @@ export const IonTitle = /*@__PURE__*/ defineContainer<JSX.IonTitle>('ion-title',
 
 
 export const IonToggle = /*@__PURE__*/ defineContainer<JSX.IonToggle>('ion-toggle', [
-  'dsColor',
   'color',
   'name',
   'checked',

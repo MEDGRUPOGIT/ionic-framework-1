@@ -85,30 +85,36 @@ ion-back-button,shadow
 ion-back-button,prop,color,string | undefined,undefined,false,false
 ion-back-button,prop,defaultHref,string | undefined,undefined,false,false
 ion-back-button,prop,disabled,boolean,false,false,true
-ion-back-button,prop,dsColor,string | undefined,undefined,false,true
-ion-back-button,prop,dsName,"secondary" | "tertiary" | undefined,undefined,false,false
-ion-back-button,prop,dsSize,"lg" | "md" | "sm" | "xs" | "xxs" | "xxxs" | undefined,undefined,false,false
 ion-back-button,prop,icon,null | string | undefined,undefined,false,false
 ion-back-button,prop,mode,"ios" | "md",undefined,false,false
 ion-back-button,prop,routerAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
 ion-back-button,prop,text,null | string | undefined,undefined,false,false
 ion-back-button,prop,type,"button" | "reset" | "submit",'button',false,false
 ion-back-button,css-prop,--background
-ion-back-button,css-prop,--background-activated
-ion-back-button,css-prop,--background-activated-opacity
 ion-back-button,css-prop,--background-focused
 ion-back-button,css-prop,--background-focused-opacity
 ion-back-button,css-prop,--background-hover
 ion-back-button,css-prop,--background-hover-opacity
-ion-back-button,css-prop,--border-color
 ion-back-button,css-prop,--border-radius
-ion-back-button,css-prop,--border-style
-ion-back-button,css-prop,--border-width
-ion-back-button,css-prop,--box-shadow
 ion-back-button,css-prop,--color
-ion-back-button,css-prop,--color-activated
 ion-back-button,css-prop,--color-focused
 ion-back-button,css-prop,--color-hover
+ion-back-button,css-prop,--icon-font-size
+ion-back-button,css-prop,--icon-font-weight
+ion-back-button,css-prop,--icon-margin-bottom
+ion-back-button,css-prop,--icon-margin-end
+ion-back-button,css-prop,--icon-margin-start
+ion-back-button,css-prop,--icon-margin-top
+ion-back-button,css-prop,--icon-padding-bottom
+ion-back-button,css-prop,--icon-padding-end
+ion-back-button,css-prop,--icon-padding-start
+ion-back-button,css-prop,--icon-padding-top
+ion-back-button,css-prop,--margin-bottom
+ion-back-button,css-prop,--margin-end
+ion-back-button,css-prop,--margin-start
+ion-back-button,css-prop,--margin-top
+ion-back-button,css-prop,--min-height
+ion-back-button,css-prop,--min-width
 ion-back-button,css-prop,--opacity
 ion-back-button,css-prop,--padding-bottom
 ion-back-button,css-prop,--padding-end
@@ -319,9 +325,7 @@ ion-datetime,prop,disabled,boolean,false,false,false
 ion-datetime,prop,displayFormat,string,'MMM D, YYYY',false,false
 ion-datetime,prop,displayTimezone,string | undefined,undefined,false,false
 ion-datetime,prop,doneText,string,'Done',false,false
-ion-datetime,prop,dsName,"secondary" | undefined,undefined,false,true
 ion-datetime,prop,hourValues,number | number[] | string | undefined,undefined,false,false
-ion-datetime,prop,iconName,string,this.noStyle ? '' : 'med-semana',false,false
 ion-datetime,prop,max,string | undefined,undefined,false,false
 ion-datetime,prop,min,string | undefined,undefined,false,false
 ion-datetime,prop,minuteValues,number | number[] | string | undefined,undefined,false,false
@@ -330,7 +334,6 @@ ion-datetime,prop,monthNames,string | string[] | undefined,undefined,false,false
 ion-datetime,prop,monthShortNames,string | string[] | undefined,undefined,false,false
 ion-datetime,prop,monthValues,number | number[] | string | undefined,undefined,false,false
 ion-datetime,prop,name,string,this.inputId,false,false
-ion-datetime,prop,noStyle,boolean,false,false,false
 ion-datetime,prop,pickerFormat,string | undefined,undefined,false,false
 ion-datetime,prop,pickerOptions,undefined | { columns?: PickerColumn[] | undefined; buttons?: PickerButton[] | undefined; cssClass?: string | string[] | undefined; showBackdrop?: boolean | undefined; backdropDismiss?: boolean | undefined; animated?: boolean | undefined; mode?: Mode | undefined; keyboardClose?: boolean | undefined; id?: string | undefined; enterAnimation?: AnimationBuilder | undefined; leaveAnimation?: AnimationBuilder | undefined; },undefined,false,false
 ion-datetime,prop,placeholder,null | string | undefined,undefined,false,false
@@ -363,7 +366,6 @@ ion-fab-button,prop,closeIcon,string,'close',false,false
 ion-fab-button,prop,color,string | undefined,undefined,false,false
 ion-fab-button,prop,disabled,boolean,false,false,false
 ion-fab-button,prop,download,string | undefined,undefined,false,false
-ion-fab-button,prop,dsColor,string | undefined,undefined,false,true
 ion-fab-button,prop,href,string | undefined,undefined,false,false
 ion-fab-button,prop,mode,"ios" | "md",undefined,false,false
 ion-fab-button,prop,rel,string | undefined,undefined,false,false
@@ -985,11 +987,9 @@ ion-searchbar,prop,clearIcon,string | undefined,undefined,false,false
 ion-searchbar,prop,color,string | undefined,undefined,false,false
 ion-searchbar,prop,debounce,number,250,false,false
 ion-searchbar,prop,disabled,boolean,false,false,false
-ion-searchbar,prop,dsName,"secondary" | undefined,undefined,false,true
 ion-searchbar,prop,enterkeyhint,"done" | "enter" | "go" | "next" | "previous" | "search" | "send" | undefined,undefined,false,false
 ion-searchbar,prop,inputmode,"decimal" | "email" | "none" | "numeric" | "search" | "tel" | "text" | "url" | undefined,undefined,false,false
 ion-searchbar,prop,mode,"ios" | "md",undefined,false,false
-ion-searchbar,prop,noIcon,boolean,false,false,true
 ion-searchbar,prop,placeholder,string,'Search',false,false
 ion-searchbar,prop,searchIcon,string | undefined,undefined,false,false
 ion-searchbar,prop,showCancelButton,"always" | "focus" | "never",'never',false,false
@@ -1316,7 +1316,6 @@ ion-toggle,shadow
 ion-toggle,prop,checked,boolean,false,false,false
 ion-toggle,prop,color,string | undefined,undefined,false,false
 ion-toggle,prop,disabled,boolean,false,false,false
-ion-toggle,prop,dsColor,string | undefined,undefined,false,true
 ion-toggle,prop,mode,"ios" | "md",undefined,false,false
 ion-toggle,prop,name,string,this.inputId,false,false
 ion-toggle,prop,value,null | string | undefined,'on',false,false

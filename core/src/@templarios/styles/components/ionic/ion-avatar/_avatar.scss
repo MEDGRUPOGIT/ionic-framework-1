@@ -1,0 +1,142 @@
+ion-avatar {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(var(--med-color-brand-4));
+
+  ion-label {
+    color: hsl(var(--med-color-neutral-10));
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+
+  &[ds-size='xxl'] {
+    width: 80px;
+    height: 80px;
+
+    ion-label {
+      font-size: 32px;
+      line-height: 32px;
+      font-weight: 600;
+    }
+  }
+
+  &[ds-size='xl'] {
+    width: 72px;
+    height: 72px;
+
+    ion-label {
+      font-size: 32px;
+      line-height: 32px;
+      font-weight: 600;
+    }
+  }
+
+  &[ds-size='lg'] {
+    width: 64px;
+    height: 64px;
+
+    ion-label {
+      font-size: 32px;
+      line-height: 32px;
+      font-weight: 600;
+    }
+  }
+
+  &[ds-size='md'] {
+    width: 56px;
+    height: 56px;
+
+    ion-label {
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: 600;
+    }
+  }
+
+  &[ds-size='sm'] {
+    width: 40px;
+    height: 40px;
+
+    ion-label {
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: 600;
+    }
+  }
+
+  &[ds-size='xs'] {
+    width: 32px;
+    height: 32px;
+
+    ion-label {
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 600;
+    }
+  }
+
+  &[ds-size='xxs'] {
+    width: 24px;
+    height: 24px;
+
+    ion-label {
+      font-size: 12px;
+      line-height: 12px;
+      font-weight: 600;
+    }
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(ion-avatar, $color, $i) {
+      background: #{tp-color($color, $i)};
+
+      ion-label {
+        color: #{tp-contrast-color($i)};
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-avatar, neutral-#{$i}, $i) {
+    background: #{tp-neutral($i)};
+
+    ion-label {
+      color: #{tp-contrast-neutral($i)};
+    }
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-avatar, neutral-#{$i}#{5}, $i) {
+    background: #{tp-neutral($i, 5)};
+
+    ion-label {
+      color: #{tp-contrast-neutral($i)};
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(ion-avatar, fb-#{$color}, $color) {
+    background: #{tp-feedback($color)};
+
+    ion-label {
+      color: hsl(var(--med-color-neutral-1));
+    }
+  }
+}

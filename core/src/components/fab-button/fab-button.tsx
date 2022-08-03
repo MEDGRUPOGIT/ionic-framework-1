@@ -1,10 +1,9 @@
-import { Component, ComponentInterface, Element, Event, EventEmitter, h, Host, Prop } from '@stencil/core';
-import { MedColor } from '../../@templarios/types/color.type';
+import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, h } from '@stencil/core';
+
 import { getIonMode } from '../../global/ionic-global';
 import { AnimationBuilder, Color, RouterDirection } from '../../interface';
 import { AnchorInterface, ButtonInterface } from '../../utils/element-interface';
-import { generateMedColor } from '../../@templarios/utilities/color';
-import { hostContext, openURL } from '../../utils/theme';
+import { createColorClasses, hostContext, openURL } from '../../utils/theme';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
@@ -22,11 +21,6 @@ import { hostContext, openURL } from '../../utils/theme';
 })
 export class FabButton implements ComponentInterface, AnchorInterface, ButtonInterface {
   @Element() el!: HTMLElement;
-
-  /**
-    * Define a cor do componente.
-    */
-   @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
    * The color to use from your application's color palette.
@@ -132,7 +126,7 @@ export class FabButton implements ComponentInterface, AnchorInterface, ButtonInt
   }
 
   render() {
-    const { el, dsColor, disabled, href, activated, show, translucent, size } = this;
+    const { el, disabled, color, href, activated, show, translucent, size } = this;
     const inList = hostContext('ion-fab-list', el);
     const mode = getIonMode(this);
     const TagType = href === undefined ? 'button' : 'a' as any;
@@ -148,7 +142,7 @@ export class FabButton implements ComponentInterface, AnchorInterface, ButtonInt
     return (
       <Host
         aria-disabled={disabled ? 'true' : null}
-        class={generateMedColor(dsColor, {
+        class={createColorClasses(color, {
           [mode]: true,
           'fab-button-in-list': inList,
           'fab-button-translucent-in-list': inList && translucent,
@@ -175,7 +169,7 @@ export class FabButton implements ComponentInterface, AnchorInterface, ButtonInt
           <span class="button-inner">
             <slot></slot>
           </span>
-          {/* {mode === 'md' && <ion-ripple-effect></ion-ripple-effect>} */}
+          {mode === 'md' && <ion-ripple-effect></ion-ripple-effect>}
         </TagType>
       </Host>
     );

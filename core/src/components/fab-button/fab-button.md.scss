@@ -5,7 +5,7 @@
 // --------------------------------------------------
 
 :host {
-  --background: #{color('brand', '3')};
+  --background: #{$fab-md-background-color};
   --background-activated: transparent;
   --background-focused: currentColor;
   --background-hover: currentColor;
@@ -78,79 +78,4 @@
       background: #{current-color(contrast)};
     }
   }
-}
-
-//////////////////////////////
-// medgrupo
-//////////////////////////////
-
-:host {
-  --background: #{color('brand', '3')};
-
-  width: 48px;
-  height: 48px;
-
-  .close-icon {
-    font-size: 24px;
-    color: color('brand', '3', 'contrast');
-  }
-}
-
-::slotted(ion-icon) {
-  width: 24px;
-  height: 24px;
-  stroke: color('brand', '3', 'contrast');
-}
-
-// ////////////////////
-// dsColor
-// ////////////////////
-
-:host(.med-color) {
-  --background: #{curr-color('color', '3')};
-
-  .close-icon {
-    width: 24px;
-    color: curr-color('color', '3', 'contrast');
-  }
-
-  &::slotted(ion-icon) {
-    stroke: curr-color('color', '3', 'contrast');
-  }
-}
-
-:host(.fab-button-in-list.med-color) ::slotted(ion-icon) {
-  stroke: curr-color('color', '3', 'contrast');
-}
-
-:host(.med-color-neutral) {
-  --background: #{curr-color('neutral')};
-
-  .close-icon {
-    color: curr-color('neutral', null, 'contrast');
-  }
-
-  &::slotted(ion-icon) {
-    stroke: curr-color('neutral', null, 'contrast');
-  }
-}
-
-:host(.fab-button-in-list.med-color-neutral) ::slotted(ion-icon) {
-  stroke: curr-color('neutral', null, 'contrast');
-}
-
-:host(.med-color-feedback) {
-  --background: #{curr-color('feedback')};
-
-  .close-icon {
-    color: curr-color('feedback', null, 'contrast');
-  }
-
-  &::slotted(ion-icon) {
-    stroke: curr-color('feedback', null, 'contrast');
-  }
-}
-
-:host(.fab-button-in-list.med-color-feedback) ::slotted(ion-icon) {
-  stroke: curr-color('feedback', null, 'contrast');
 }

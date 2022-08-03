@@ -1,11 +1,10 @@
-import { Component, ComponentInterface, Element, h, Host, Prop } from '@stencil/core';
-import { MedColor } from '../../@templarios/types/color.type';
+import { Component, ComponentInterface, Element, Host, Prop, h } from '@stencil/core';
+
 import { config } from '../../global/config';
 import { getIonMode } from '../../global/ionic-global';
 import { AnimationBuilder, Color } from '../../interface';
 import { ButtonInterface } from '../../utils/element-interface';
-import { generateMedColor } from '../../@templarios/utilities/color';
-import { hostContext, openURL } from '../../utils/theme';
+import { createColorClasses, hostContext, openURL } from '../../utils/theme';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
@@ -17,7 +16,7 @@ import { hostContext, openURL } from '../../utils/theme';
 @Component({
   tag: 'ion-back-button',
   styleUrls: {
-    ios: 'back-button.md.scss',
+    ios: 'back-button.ios.scss',
     md: 'back-button.md.scss'
   },
   shadow: true
@@ -25,21 +24,6 @@ import { hostContext, openURL } from '../../utils/theme';
 export class BackButton implements ComponentInterface, ButtonInterface {
 
   @Element() el!: HTMLElement;
-
-  /**
-    * Define a cor do componente.
-    */
-  @Prop({ reflect: true }) dsColor?: MedColor;
-
-  /**
-    * Define a variação de tamanho componente.
-    */
-  @Prop() dsSize?: 'xxxs' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
-
-  /**
-    * Define a variação solida de background do componente.
-    */
-  @Prop() dsName?: 'secondary' | 'tertiary';
 
   /**
    * The color to use from your application's color palette.
@@ -94,11 +78,11 @@ export class BackButton implements ComponentInterface, ButtonInterface {
 
     if (getIonMode(this) === 'ios') {
       // default ios back button icon
-      return config.get('backButtonIcon', 'med-esquerda');
+      return config.get('backButtonIcon', 'chevron-back');
     }
 
     // default md back button icon
-    return config.get('backButtonIcon', 'med-esquerda');
+    return config.get('backButtonIcon', 'arrow-back-sharp');
   }
 
   get backButtonText() {
@@ -131,26 +115,24 @@ export class BackButton implements ComponentInterface, ButtonInterface {
   }
 
   render() {
-    const { dsName, dsColor, dsSize, defaultHref, disabled, type, hasIconOnly, backButtonIcon, backButtonText } = this;
+    // templarios backButtonIcon
+    const { color, defaultHref, disabled, type, hasIconOnly, backButtonText } = this;
     const showBackButton = defaultHref !== undefined;
     const mode = getIonMode(this);
 
     return (
       <Host
         onClick={this.onClick}
-        class={generateMedColor(dsColor, {
+        class={createColorClasses(color, {
           [mode]: true,
-          //'button': true, // ion-buttons target .button
+          'button': true, // ion-buttons target .button
           'back-button-disabled': disabled,
           'back-button-has-icon-only': hasIconOnly,
           'in-toolbar': hostContext('ion-toolbar', this.el),
           'in-toolbar-color': hostContext('ion-toolbar[color]', this.el),
           'ion-activatable': true,
           'ion-focusable': true,
-          'show-back-button': showBackButton,
-          'med-button': true,
-          [`med-button--${dsName}`]: dsName !== undefined,
-          [`med-button--${dsSize}`]: dsSize !== undefined,
+          'show-back-button': showBackButton
         })}
       >
         <button
@@ -161,9 +143,15 @@ export class BackButton implements ComponentInterface, ButtonInterface {
           aria-label={backButtonText || 'back'}
         >
           <span class="button-inner">
-            {backButtonIcon && <ion-icon class="med-icon" part="icon" icon={backButtonIcon} aria-hidden="true" lazy={false}></ion-icon>}
+            {/* // templarios */}
+            {/* {backButtonIcon && <ion-icon part="icon" icon={backButtonIcon} aria-hidden="true" lazy={false}></ion-icon>} */}
+            {/* // !templarios */}
+            {backButtonText && <span part="text" aria-hidden="true" class="button-text">{backButtonText}</span>}
           </span>
-          <ion-ripple-effect type={this.rippleType}></ion-ripple-effect>
+          {/* // templarios */}
+          <slot></slot>
+          {/* // !templarios */}
+          {mode === 'md' && <ion-ripple-effect type={this.rippleType}></ion-ripple-effect>}
         </button>
       </Host>
     );
