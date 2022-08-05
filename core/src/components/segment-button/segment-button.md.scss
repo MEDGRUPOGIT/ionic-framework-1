@@ -200,5 +200,3 @@
 :host(.in-toolbar-color:not(.in-segment-color)) .segment-button-indicator-background {
   background: #{current-color(contrast)};
 }
-
-@import "./segment-button.med.scss";

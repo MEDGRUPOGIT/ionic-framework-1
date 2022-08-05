@@ -46,7 +46,6 @@ graph TD;
   med-config --> ion-item
   med-config --> ion-radio
   ion-button --> ion-ripple-effect
-  ion-segment-button --> ion-ripple-effect
   ion-item --> ion-icon
   ion-item --> ion-ripple-effect
   style med-config fill:#f9f,stroke:#333,stroke-width:4px

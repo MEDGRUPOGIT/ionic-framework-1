@@ -596,7 +596,6 @@ ion-item-sliding,event,ionDrag,any,true
 
 ion-label,scoped
 ion-label,prop,color,string | undefined,undefined,false,false
-ion-label,prop,dsName,"helper" | "stacked" | undefined,undefined,false,false
 ion-label,prop,mode,"ios" | "md",undefined,false,false
 ion-label,prop,position,"fixed" | "floating" | "stacked" | undefined,undefined,false,false
 ion-label,css-prop,--color
@@ -812,7 +811,6 @@ ion-popover,prop,backdropDismiss,boolean,true,false,false
 ion-popover,prop,component,Function | HTMLElement | null | string,undefined,true,false
 ion-popover,prop,componentProps,undefined | { [key: string]: any; },undefined,false,false
 ion-popover,prop,cssClass,string | string[] | undefined,undefined,false,false
-ion-popover,prop,dsName,"tooltip",undefined,true,false
 ion-popover,prop,enterAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
 ion-popover,prop,event,any,undefined,false,false
 ion-popover,prop,keyboardClose,boolean,true,false,false
@@ -875,7 +873,6 @@ ion-range,shadow
 ion-range,prop,color,string | undefined,undefined,false,false
 ion-range,prop,debounce,number,0,false,false
 ion-range,prop,disabled,boolean,false,false,false
-ion-range,prop,dsColor,string | undefined,undefined,false,true
 ion-range,prop,dualKnobs,boolean,false,false,false
 ion-range,prop,max,number,100,false,false
 ion-range,prop,min,number,0,false,false
@@ -1020,7 +1017,6 @@ ion-searchbar,css-prop,--placeholder-opacity
 ion-segment,shadow
 ion-segment,prop,color,string | undefined,undefined,false,false
 ion-segment,prop,disabled,boolean,false,false,false
-ion-segment,prop,dsColor,string | undefined,undefined,false,true
 ion-segment,prop,mode,"ios" | "md",undefined,false,false
 ion-segment,prop,scrollable,boolean,false,false,false
 ion-segment,prop,swipeGesture,boolean,true,false,false
@@ -1030,7 +1026,6 @@ ion-segment,css-prop,--background
 
 ion-segment-button,shadow
 ion-segment-button,prop,disabled,boolean,false,false,false
-ion-segment-button,prop,dsColor,string | undefined,undefined,false,true
 ion-segment-button,prop,layout,"icon-bottom" | "icon-end" | "icon-hide" | "icon-start" | "icon-top" | "label-hide" | undefined,'icon-top',false,false
 ion-segment-button,prop,mode,"ios" | "md",undefined,false,false
 ion-segment-button,prop,type,"button" | "reset" | "submit",'button',false,false
@@ -1175,11 +1170,9 @@ ion-tab,method,setActive,setActive() => Promise<void>
 
 ion-tab-bar,shadow
 ion-tab-bar,prop,color,string | undefined,undefined,false,false
-ion-tab-bar,prop,dsColor,string | undefined,undefined,false,true
 ion-tab-bar,prop,mode,"ios" | "md",undefined,false,false
 ion-tab-bar,prop,selectedTab,string | undefined,undefined,false,false
 ion-tab-bar,prop,translucent,boolean,false,false,false
-ion-tab-bar,event,medResize,TabBarResizeEventDetail,true
 ion-tab-bar,css-prop,--background
 ion-tab-bar,css-prop,--border
 ion-tab-bar,css-prop,--color
@@ -1187,7 +1180,6 @@ ion-tab-bar,css-prop,--color
 ion-tab-button,shadow
 ion-tab-button,prop,disabled,boolean,false,false,false
 ion-tab-button,prop,download,string | undefined,undefined,false,false
-ion-tab-button,prop,dsColor,string | undefined,undefined,false,true
 ion-tab-button,prop,href,string | undefined,undefined,false,false
 ion-tab-button,prop,layout,"icon-bottom" | "icon-end" | "icon-hide" | "icon-start" | "icon-top" | "label-hide" | undefined,undefined,false,false
 ion-tab-button,prop,mode,"ios" | "md",undefined,false,false
@@ -1268,11 +1260,11 @@ ion-title,prop,color,string | undefined,undefined,false,false
 ion-title,prop,size,"large" | "small" | undefined,undefined,false,false
 ion-title,css-prop,--color
 
-ion-toast,shadow
+ion-toast,scoped
 ion-toast,prop,animated,boolean,true,false,false
 ion-toast,prop,buttons,(string | ToastButton)[] | undefined,undefined,false,false
+ion-toast,prop,color,string | undefined,undefined,false,false
 ion-toast,prop,cssClass,string | string[] | undefined,undefined,false,false
-ion-toast,prop,dsColor,string | undefined,undefined,false,true
 ion-toast,prop,duration,number,0,false,false
 ion-toast,prop,enterAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
 ion-toast,prop,header,string | undefined,undefined,false,false
@@ -1621,7 +1613,7 @@ med-enunciado-discursiva,shadow
 med-enunciado-discursiva,prop,imagens,string | string[],undefined,true,true
 med-enunciado-discursiva,event,medGalleryRequest,string,true
 
-med-font-zoom,shadow
+med-font-zoom,scoped
 med-font-zoom,prop,emitter,{ emit: (value: MedFontSize) => void; },undefined,true,false
 med-font-zoom,prop,value,MedFontSize.MD | MedFontSize.SM | MedFontSize.XS | MedFontSize.XXS | MedFontSize.XXXS,MedFontSize.XS,false,false
 
@@ -1689,9 +1681,11 @@ med-lista,method,closeSlidingItems,closeSlidingItems() => Promise<boolean>
 med-nav,scoped
 med-nav,prop,active,boolean,false,false,true
 med-nav,prop,dsColor,string | undefined,undefined,false,true
+med-nav,event,clicked,any,true
 
 med-nav-accordion,shadow
 med-nav-accordion,prop,dsColor,string | undefined,undefined,false,true
+med-nav-accordion,prop,titulo,string | undefined,undefined,false,true
 
 med-nav-item,shadow
 med-nav-item,prop,active,boolean,false,false,true

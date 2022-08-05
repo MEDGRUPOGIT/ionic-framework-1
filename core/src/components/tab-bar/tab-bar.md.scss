@@ -12,13 +12,3 @@
 
   height: 56px;
 }
-
-:host {
-  --background: #{color('neutral', '1')};
-  contain: initial;
-  padding: 8px 0;
-}
-
-::slotted(ion-tab-button) {
-  --padding-gap: var(--gap);
-}

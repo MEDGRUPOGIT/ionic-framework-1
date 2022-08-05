@@ -45,6 +45,9 @@
 // fab-list
 @import './components/ionic/ion-fab-list/fab-list';
 
+// icon
+// @import './components/ionic/icon/icon';
+
 // input
 @import './components/ionic/ion-input/input';
 
@@ -57,23 +60,44 @@
 // list
 @import './components/ionic/ion-list/list';
 
+// modal
+@import "./components/ionic/ion-modal/dialog";
+
 // progress-bar
 @import './components/ionic/ion-progress-bar/progress-bar';
 
 // radio
 @import './components/ionic/ion-radio/radio';
 
+// range
+@import './components/ionic/ion-range/range';
+
 // searchbar
 @import './components/ionic/ion-searchbar/searchbar';
 
+// segment
+@import './components/ionic/ion-segment/segment';
+
+// segment-button
+@import './components/ionic/ion-segment-button/segment-button';
+
 // select
 @import './components/ionic/ion-select/select';
+
+// tab-bar
+@import './components/ionic/ion-tab-bar/tab-bar';
+
+// tab-button
+@import './components/ionic/ion-tab-button/tab-button';
 
 // textarea
 @import './components/ionic/ion-textarea/textarea';
 
 // title
 @import './components/ionic/ion-title/title';
+
+// toast
+@import './components/ionic/ion-toast/toast';
 
 // toggle
 @import './components/ionic/ion-toggle/toggle';
@@ -87,7 +111,6 @@
 @import "./components/utils/utils";
 
 // global
-@import "./components/global/dialog";
 @import "./components/global/font-zoom-popover";
 @import "./components/global/intro-tooltip";
 @import "./components/global/picker";

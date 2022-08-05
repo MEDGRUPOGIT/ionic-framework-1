@@ -39,21 +39,8 @@ export class MedNavSimple {
             </div>
           </div>
 
-          <med-nav-item ds-color={dsColor} class="med-nav-simple__item" icon="med-play" active></med-nav-item>
-          <med-nav-item ds-color={dsColor} class="med-nav-simple__item" icon="med-apostila"></med-nav-item>
-          <med-nav-item ds-color={dsColor} class="med-nav-simple__item" icon="med-concursos"></med-nav-item>
-          <med-nav-item ds-color={dsColor} class="med-nav-simple__item" icon="med-orientacao"></med-nav-item>
-          <med-nav-item ds-color={dsColor} class="med-nav-simple__item" icon="med-metricas"></med-nav-item>
-          <med-nav-item ds-color={dsColor} class="med-nav-simple__item" icon="med-qrcode"></med-nav-item>
-          <med-nav-item ds-color={dsColor} class="med-nav-simple__item" icon="med-slidedeaula"></med-nav-item>
-          <med-nav-item ds-color={dsColor} class="med-nav-simple__item" icon="med-duvidasacademicas"></med-nav-item>
-          <med-nav-item ds-color={dsColor} class="med-nav-simple__item" icon="med-cronograma"></med-nav-item>
-          <med-nav-item ds-color={dsColor} class="med-nav-simple__item" icon="med-bonus"></med-nav-item>
-          <med-nav-item ds-color={dsColor} class="med-nav-simple__item" icon="med-drogas"></med-nav-item>
-          <med-nav-item ds-color={dsColor} class="med-nav-simple__item" icon="med-anotacao"></med-nav-item>
-          <med-nav-item ds-color={dsColor} class="med-nav-simple__item" icon="med-multimidia"></med-nav-item>
-          <med-nav-item ds-color={dsColor} class="med-nav-simple__item" icon="med-concursos"></med-nav-item>
-          <med-nav-item ds-color={dsColor} class="med-nav-simple__item" icon="med-montaprovas"></med-nav-item>
+          <slot></slot>
+
           <ion-button mode="ios" icon-only ds-color={dsColor} class="med-nav__toggle" fill="clear" onClick={() => this.clickHandle()}>
             <ion-icon slot="icon-only" class="med-icon" name="med-esquerda"></ion-icon>
           </ion-button>

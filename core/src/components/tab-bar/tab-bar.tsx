@@ -1,8 +1,8 @@
-import { Component, ComponentInterface, Element, Event, EventEmitter, h, Host, Prop, State, Watch } from '@stencil/core';
-import { MedColor } from '../../@templarios/types/color.type';
+import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, State, Watch, h } from '@stencil/core';
+
 import { getIonMode } from '../../global/ionic-global';
-import { Color, TabBarChangedEventDetail, TabBarResizeEventDetail } from '../../interface';
-import { generateMedColor } from '../../@templarios/utilities/color';
+import { Color, TabBarChangedEventDetail } from '../../interface';
+import { createColorClasses } from '../../utils/theme';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
@@ -10,7 +10,7 @@ import { generateMedColor } from '../../@templarios/utilities/color';
 @Component({
   tag: 'ion-tab-bar',
   styleUrls: {
-    ios: 'tab-bar.md.scss',
+    ios: 'tab-bar.ios.scss',
     md: 'tab-bar.md.scss'
   },
   shadow: true
@@ -19,24 +19,9 @@ export class TabBar implements ComponentInterface {
   private keyboardWillShowHandler?: () => void;
   private keyboardWillHideHandler?: () => void;
 
-  private hostHeight = 0;
-  private hostResizeObserver!: ResizeObserver;
-
   @Element() el!: HTMLElement;
 
-  /**
-   * TODO
-   */
-  @Event() medResize!: EventEmitter<TabBarResizeEventDetail>;
-
-  @State() gap!: string;
-
   @State() keyboardVisible = false;
-
-  /**
-    * Define a cor do componente.
-    */
-  @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
    * The color to use from your application's color palette.
@@ -70,12 +55,9 @@ export class TabBar implements ComponentInterface {
 
   componentWillLoad() {
     this.selectedTabChanged();
-    this.setSize();
   }
 
   connectedCallback() {
-    this.updateGap();
-
     if (typeof (window as any) !== 'undefined') {
       this.keyboardWillShowHandler = () => {
         if (this.el.getAttribute('slot') !== 'top') {
@@ -101,50 +83,15 @@ export class TabBar implements ComponentInterface {
     }
   }
 
-  /**
-  * Med Resize
-  */
-  private updateGap() {
-    let gap = '2px';
-
-    if(this.el.children.length <= 3) {
-      gap = '8px';
-    }
-
-    if(this.el.children.length === 4) {
-      gap = '4px';
-    }
-
-    this.gap = gap;
-  }
-
-  private setSize() {
-    this.medResize.emit({height:1})
-    this.hostResizeObserver = new ResizeObserver(() => {
-      let newHostHeight = Number(this.el.getBoundingClientRect().height);
-
-      if (newHostHeight !== this.hostHeight) {
-        this.medResize.emit({ height: newHostHeight });
-        this.hostHeight = newHostHeight;
-      }
-    });
-
-    this.hostResizeObserver.observe(this.el);
-  }
-
   render() {
-    const { dsColor, translucent, keyboardVisible } = this;
+    const { color, translucent, keyboardVisible } = this;
     const mode = getIonMode(this);
-
-    this.medResize.emit({height:1});
 
     return (
       <Host
-        from-stencil
         role="tablist"
         aria-hidden={keyboardVisible ? 'true' : null}
-        style={{ '--gap': `${this.gap}` }}
-        class={generateMedColor(dsColor, {
+        class={createColorClasses(color, {
           [mode]: true,
           'tab-bar-translucent': translucent,
           'tab-bar-hidden': keyboardVisible,

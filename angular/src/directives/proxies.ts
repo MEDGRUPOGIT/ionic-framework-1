@@ -423,8 +423,8 @@ export class IonItemSliding {
 }
 export declare interface IonLabel extends Components.IonLabel {
 }
-@ProxyCmp({ inputs: ["color", "dsName", "mode", "position"] })
-@Component({ selector: "ion-label", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "dsName", "mode", "position"] })
+@ProxyCmp({ inputs: ["color", "mode", "position"] })
+@Component({ selector: "ion-label", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "mode", "position"] })
 export class IonLabel {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -568,8 +568,8 @@ export class IonRadioGroup {
 }
 export declare interface IonRange extends Components.IonRange {
 }
-@ProxyCmp({ inputs: ["color", "debounce", "disabled", "dsColor", "dualKnobs", "max", "min", "mode", "name", "pin", "snaps", "step", "ticks", "value"] })
-@Component({ selector: "ion-range", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "debounce", "disabled", "dsColor", "dualKnobs", "max", "min", "mode", "name", "pin", "snaps", "step", "ticks", "value"] })
+@ProxyCmp({ inputs: ["color", "debounce", "disabled", "dualKnobs", "max", "min", "mode", "name", "pin", "snaps", "step", "ticks", "value"] })
+@Component({ selector: "ion-range", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "debounce", "disabled", "dualKnobs", "max", "min", "mode", "name", "pin", "snaps", "step", "ticks", "value"] })
 export class IonRange {
   ionChange!: EventEmitter<CustomEvent>;
   ionFocus!: EventEmitter<CustomEvent>;
@@ -671,8 +671,8 @@ export class IonSearchbar {
 }
 export declare interface IonSegment extends Components.IonSegment {
 }
-@ProxyCmp({ inputs: ["color", "disabled", "dsColor", "mode", "scrollable", "swipeGesture", "value"] })
-@Component({ selector: "ion-segment", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "disabled", "dsColor", "mode", "scrollable", "swipeGesture", "value"] })
+@ProxyCmp({ inputs: ["color", "disabled", "mode", "scrollable", "swipeGesture", "value"] })
+@Component({ selector: "ion-segment", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "disabled", "mode", "scrollable", "swipeGesture", "value"] })
 export class IonSegment {
   ionChange!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
@@ -684,8 +684,8 @@ export class IonSegment {
 }
 export declare interface IonSegmentButton extends Components.IonSegmentButton {
 }
-@ProxyCmp({ inputs: ["disabled", "dsColor", "layout", "mode", "type", "value"] })
-@Component({ selector: "ion-segment-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled", "dsColor", "layout", "mode", "type", "value"] })
+@ProxyCmp({ inputs: ["disabled", "layout", "mode", "type", "value"] })
+@Component({ selector: "ion-segment-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled", "layout", "mode", "type", "value"] })
 export class IonSegmentButton {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -795,21 +795,19 @@ export class IonSplitPane {
 }
 export declare interface IonTabBar extends Components.IonTabBar {
 }
-@ProxyCmp({ inputs: ["color", "dsColor", "mode", "selectedTab", "translucent"] })
-@Component({ selector: "ion-tab-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "dsColor", "mode", "selectedTab", "translucent"] })
+@ProxyCmp({ inputs: ["color", "mode", "selectedTab", "translucent"] })
+@Component({ selector: "ion-tab-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["color", "mode", "selectedTab", "translucent"] })
 export class IonTabBar {
-  medResize!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ["medResize"]);
   }
 }
 export declare interface IonTabButton extends Components.IonTabButton {
 }
-@ProxyCmp({ inputs: ["disabled", "download", "dsColor", "href", "layout", "mode", "rel", "selected", "tab", "target"] })
-@Component({ selector: "ion-tab-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled", "download", "dsColor", "href", "layout", "mode", "rel", "selected", "tab", "target"] })
+@ProxyCmp({ inputs: ["disabled", "download", "href", "layout", "mode", "rel", "selected", "tab", "target"] })
+@Component({ selector: "ion-tab-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled", "download", "href", "layout", "mode", "rel", "selected", "tab", "target"] })
 export class IonTabButton {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1403,16 +1401,18 @@ export declare interface MedNav extends Components.MedNav {
 @ProxyCmp({ inputs: ["active", "dsColor"] })
 @Component({ selector: "med-nav", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["active", "dsColor"] })
 export class MedNav {
+  clicked!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ["clicked"]);
   }
 }
 export declare interface MedNavAccordion extends Components.MedNavAccordion {
 }
-@ProxyCmp({ inputs: ["dsColor"] })
-@Component({ selector: "med-nav-accordion", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor"] })
+@ProxyCmp({ inputs: ["dsColor", "titulo"] })
+@Component({ selector: "med-nav-accordion", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "titulo"] })
 export class MedNavAccordion {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

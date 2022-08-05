@@ -30,7 +30,7 @@
   }
 
   &__icon {
-    font-size: 24px;
+    min-width: 24px;
     stroke: var(--stroke);
     transition: stroke 300ms ease-out;
   }

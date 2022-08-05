@@ -5,7 +5,7 @@ import { RangeValue } from "../../../range/range-interface";
 @Component({
   tag: "med-font-zoom",
   styleUrl: "med-font-zoom.scss",
-  shadow: true,
+  scoped: true,
 })
 export class MedFontZoom {
 

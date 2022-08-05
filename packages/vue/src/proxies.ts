@@ -364,7 +364,6 @@ export const IonItemSliding = /*@__PURE__*/ defineContainer<JSX.IonItemSliding>(
 
 
 export const IonLabel = /*@__PURE__*/ defineContainer<JSX.IonLabel>('ion-label', [
-  'dsName',
   'color',
   'position',
   'ionColor',
@@ -487,7 +486,6 @@ export const IonRadioGroup = /*@__PURE__*/ defineContainer<JSX.IonRadioGroup>('i
 
 
 export const IonRange = /*@__PURE__*/ defineContainer<JSX.IonRange>('ion-range', [
-  'dsColor',
   'color',
   'debounce',
   'name',
@@ -591,7 +589,6 @@ export const IonSearchbar = /*@__PURE__*/ defineContainer<JSX.IonSearchbar>('ion
 
 
 export const IonSegment = /*@__PURE__*/ defineContainer<JSX.IonSegment>('ion-segment', [
-  'dsColor',
   'color',
   'disabled',
   'scrollable',
@@ -612,7 +609,6 @@ export const IonSegment = /*@__PURE__*/ defineContainer<JSX.IonSegment>('ion-seg
 
 
 export const IonSegmentButton = /*@__PURE__*/ defineContainer<JSX.IonSegmentButton>('ion-segment-button', [
-  'dsColor',
   'disabled',
   'layout',
   'type',
@@ -1197,12 +1193,14 @@ export const MedLista = /*@__PURE__*/ defineContainer<JSX.MedLista>('med-lista')
 
 export const MedNav = /*@__PURE__*/ defineContainer<JSX.MedNav>('med-nav', [
   'dsColor',
-  'active'
+  'active',
+  'clicked'
 ]);
 
 
 export const MedNavAccordion = /*@__PURE__*/ defineContainer<JSX.MedNavAccordion>('med-nav-accordion', [
-  'dsColor'
+  'dsColor',
+  'titulo'
 ]);
 
 

@@ -11,7 +11,7 @@ const Template = ({ 'ds-color': dsColor, token, slot }) => {
   return html`
     <ion-app>
       <ion-content>
-        <ion-label ds-color=${dsColor} token=${token}> ${slot} </ion-lab>
+        <ion-label ds-color=${dsColor} token=${token}> ${slot} </ion-label>
       </ion-content>
     </ion-app>
   `;
