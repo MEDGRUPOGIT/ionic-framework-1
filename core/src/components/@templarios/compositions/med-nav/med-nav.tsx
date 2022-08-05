@@ -1,4 +1,4 @@
-import { Component, h, Host, Listen, Prop } from '@stencil/core';
+import { Component, EventEmitter, h, Host, Event, Listen, Prop } from '@stencil/core';
 import { MedColor } from '../../../../@templarios/types/color.type';
 import { generateMedColor } from '../../../../@templarios/utilities/color';
 
@@ -19,6 +19,11 @@ export class MedNav {
    */
   @Prop({ reflect: true }) active = false;
 
+  /**
+   * todo
+   */
+  @Event() clicked!: EventEmitter;
+
   @Listen('close')
   async watchClick() {
     this.active = !this.active;
@@ -26,6 +31,7 @@ export class MedNav {
 
   private clickHandle() {
     this.active = !this.active;
+    this.clicked.emit(this.active);
   }
 
   render() {

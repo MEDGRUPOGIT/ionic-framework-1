@@ -10,6 +10,7 @@
 | Property  | Attribute  | Description | Type                  | Default     |
 | --------- | ---------- | ----------- | --------------------- | ----------- |
 | `dsColor` | `ds-color` | todo        | `string \| undefined` | `undefined` |
+| `titulo`  | `titulo`   |             | `string \| undefined` | `undefined` |
 
 
 ## Dependencies
@@ -20,7 +21,6 @@
 - [med-accordion-item](../med-accordion-item)
 - [med-type](../../core/med-type)
 - ion-icon
-- [med-nav-item](../../core/med-nav-item)
 
 ### Graph
 ```mermaid
@@ -29,9 +29,6 @@ graph TD;
   med-nav-accordion --> med-accordion-item
   med-nav-accordion --> med-type
   med-nav-accordion --> ion-icon
-  med-nav-accordion --> med-nav-item
-  med-nav-item --> ion-icon
-  med-nav-item --> med-type
   style med-nav-accordion fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

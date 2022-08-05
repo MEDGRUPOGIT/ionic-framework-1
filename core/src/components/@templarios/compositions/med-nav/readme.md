@@ -13,6 +13,13 @@
 | `dsColor` | `ds-color` | todo        | `string \| undefined` | `undefined` |
 
 
+## Events
+
+| Event     | Description | Type               |
+| --------- | ----------- | ------------------ |
+| `clicked` | todo        | `CustomEvent<any>` |
+
+
 ## Dependencies
 
 ### Depends on
@@ -31,10 +38,7 @@ graph TD;
   med-nav --> med-nav-simple
   ion-button --> ion-ripple-effect
   med-nav-simple --> ion-icon
-  med-nav-simple --> med-nav-item
   med-nav-simple --> ion-button
-  med-nav-item --> ion-icon
-  med-nav-item --> med-type
   style med-nav fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -1,8 +1,6 @@
 import { Animation } from '../../../interface';
 import { createAnimation } from '../../../utils/animation/animation';
 
-const medInitial = 0;
-
 /**
  * MD Toast Enter Animation
  */
@@ -13,8 +11,8 @@ export const mdEnterAnimation = (baseEl: ShadowRoot, position: string): Animatio
   const hostEl = baseEl.host || baseEl;
   const wrapperEl = baseEl.querySelector('.toast-wrapper') as HTMLElement;
 
-  const bottom = `calc(${medInitial}px + var(--ion-safe-area-bottom, 0px))`;
-  const top = `calc(${medInitial}px + var(--ion-safe-area-top, 0px))`;
+  const bottom = `calc(8px + var(--ion-safe-area-bottom, 0px))`;
+  const top = `calc(8px + var(--ion-safe-area-top, 0px))`;
 
   wrapperAnimation.addElement(wrapperEl);
 

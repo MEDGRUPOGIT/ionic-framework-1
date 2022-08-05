@@ -30,7 +30,11 @@ const Template = ({ dsColor }) => {
             <med-nav-item .dsColor=${dsColor} icon="med-apostila" text="Materiais"></med-nav-item>
             <med-nav-item .dsColor=${dsColor} icon="med-concursos" text="Questões"></med-nav-item>
 
-            <med-nav-accordion .dsColor=${dsColor}></med-nav-accordion>
+            <med-nav-accordion titulo="aeeee" .dsColor=${dsColor}>
+              <med-nav-item .dsColor=${dsColor} icon="med-play" text="Aulas" active></med-nav-item>
+              <med-nav-item .dsColor=${dsColor} icon="med-apostila" text="Materiais"></med-nav-item>
+              <med-nav-item .dsColor=${dsColor} icon="med-concursos" text="Questões"></med-nav-item>
+            </med-nav-accordion>
           </med-nav>
           <!-- component -->
         </div>
@@ -68,4 +72,5 @@ Default.argTypes = {
       defaultValue: { summary: 'undefined' },
     },
   },
+
 }

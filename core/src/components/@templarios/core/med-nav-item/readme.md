@@ -30,11 +30,6 @@
 
 ## Dependencies
 
-### Used by
-
- - [med-nav-accordion](../../compositions/med-nav-accordion)
- - [med-nav-simple](../../compositions/med-nav-simple)
-
 ### Depends on
 
 - ion-icon
@@ -45,8 +40,6 @@
 graph TD;
   med-nav-item --> ion-icon
   med-nav-item --> med-type
-  med-nav-accordion --> med-nav-item
-  med-nav-simple --> med-nav-item
   style med-nav-item fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

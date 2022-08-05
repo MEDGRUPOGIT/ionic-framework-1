@@ -1,12 +1,11 @@
-import { Component, ComponentInterface, Element, Event, EventEmitter, h, Host, Prop, State, Watch, writeTask } from '@stencil/core';
-import { MedColor } from '../../@templarios/types/color.type';
+import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Prop, State, Watch, h, writeTask } from '@stencil/core';
+
 import { config } from '../../global/config';
 import { getIonMode } from '../../global/ionic-global';
 import { Color, SegmentChangeEventDetail, StyleEventDetail } from '../../interface';
 import { Gesture, GestureDetail } from '../../utils/gesture';
 import { pointerCoord } from '../../utils/helpers';
-import { generateMedColor } from '../../@templarios/utilities/color';
-import { hostContext } from '../../utils/theme';
+import { createColorClasses, hostContext } from '../../utils/theme';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
@@ -14,7 +13,7 @@ import { hostContext } from '../../utils/theme';
 @Component({
   tag: 'ion-segment',
   styleUrls: {
-    ios: 'segment.md.scss',
+    ios: 'segment.ios.scss',
     md: 'segment.md.scss'
   },
   shadow: true
@@ -23,11 +22,6 @@ export class Segment implements ComponentInterface {
   private gesture?: Gesture;
   private didInit = false;
   private checked?: HTMLIonSegmentButtonElement;
-
-  /**
-    * Define a cor do componente.
-    */
-  @Prop({ reflect: true }) dsColor?: MedColor;
 
   // Value to be emitted when gesture ends
   private valueAfterGesture?: any;
@@ -428,14 +422,12 @@ export class Segment implements ComponentInterface {
   }
 
   render() {
-    const {dsColor} = this;
     const mode = getIonMode(this);
     return (
       <Host
         onClick={this.onClick}
-        class={generateMedColor(dsColor, {
+        class={createColorClasses(this.color, {
           [mode]: true,
-          'med-segment': true,
           'in-toolbar': hostContext('ion-toolbar', this.el),
           'in-toolbar-color': hostContext('ion-toolbar[color]', this.el),
           'segment-activated': this.activated,

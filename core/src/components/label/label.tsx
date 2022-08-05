@@ -10,7 +10,7 @@ import { createColorClasses } from '../../utils/theme';
 @Component({
   tag: 'ion-label',
   styleUrls: {
-    ios: 'label.md.scss',
+    ios: 'label.ios.scss',
     md: 'label.md.scss'
   },
   scoped: true
@@ -19,11 +19,6 @@ export class Label implements ComponentInterface {
   private inRange = false;
 
   @Element() el!: HTMLElement;
-
-  /**
-   * TODO
-   */
-  @Prop() dsName?: 'stacked' | 'helper' | undefined;
 
   /**
    * The color to use from your application's color palette.

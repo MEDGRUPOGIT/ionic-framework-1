@@ -1,12 +1,11 @@
-import { Component, ComponentInterface, Element, Event, EventEmitter, h, Host, Method, Prop } from '@stencil/core';
+import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, Prop, h } from '@stencil/core';
 
-import { MedColor } from '../../@templarios/types/color.type';
 import { getIonMode } from '../../global/ionic-global';
-import { AnimationBuilder, CssClassMap, OverlayEventDetail, OverlayInterface, ToastButton } from '../../interface';
-import { generateMedColor } from '../../@templarios/utilities/color';
+import { AnimationBuilder, Color, CssClassMap, OverlayEventDetail, OverlayInterface, ToastButton } from '../../interface';
 import { dismiss, eventMethod, isCancel, prepareOverlay, present, safeCall } from '../../utils/overlays';
 import { IonicSafeString, sanitizeDOMString } from '../../utils/sanitization';
-import { getClassMap } from '../../utils/theme';
+import { createColorClasses, getClassMap } from '../../utils/theme';
+
 import { iosEnterAnimation } from './animations/ios.enter';
 import { iosLeaveAnimation } from './animations/ios.leave';
 import { mdEnterAnimation } from './animations/md.enter';
@@ -23,10 +22,10 @@ import { mdLeaveAnimation } from './animations/md.leave';
 @Component({
   tag: 'ion-toast',
   styleUrls: {
-    ios: 'toast.md.scss',
+    ios: 'toast.ios.scss',
     md: 'toast.md.scss'
   },
-  shadow: true
+  scoped: true // templarios
 })
 export class Toast implements ComponentInterface, OverlayInterface {
 
@@ -42,9 +41,11 @@ export class Toast implements ComponentInterface, OverlayInterface {
   @Prop() overlayIndex!: number;
 
   /**
-    * Define a cor do componente.
-    */
-  @Prop({ reflect: true }) dsColor?: MedColor;
+   * The color to use from your application's color palette.
+   * Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`.
+   * For more information on colors, see [theming](/docs/theming/basics).
+   */
+  @Prop() color?: Color;
 
   /**
    * Animation to use when the toast is presented.
@@ -234,22 +235,22 @@ export class Toast implements ComponentInterface, OverlayInterface {
       [`toast-button-group-${side}`]: true
     };
     return (
-        <div class={buttonGroupsClasses}>
-          {buttons.map(b =>
-            <button type="button" class={buttonClass(b)} tabIndex={0} onClick={() => this.buttonClick(b)} part="button">
-              <div class="toast-button-inner">
-                {b.icon &&
-                  <ion-icon
-                    icon={b.icon}
-                    slot={b.text === undefined ? 'icon-only' : undefined}
-                    class="med-icon toast-icon"
-                  />}
-                {b.text}
-              </div>
-              {mode === 'md' && <ion-ripple-effect type={b.icon !== undefined && b.text === undefined ? 'unbounded' : 'bounded'}></ion-ripple-effect>}
-            </button>
-          )}
-        </div>
+      <div class={buttonGroupsClasses}>
+        {buttons.map(b =>
+          <button type="button" class={buttonClass(b)} tabIndex={0} onClick={() => this.buttonClick(b)} part="button">
+            <div class="toast-button-inner">
+              {b.icon &&
+                <ion-icon
+                  icon={b.icon}
+                  slot={b.text === undefined ? 'icon-only' : undefined}
+                  class="med-icon toast-icon" // templarios
+                />}
+              {b.text}
+            </div>
+            {mode === 'md' && <ion-ripple-effect type={b.icon !== undefined && b.text === undefined ? 'unbounded' : 'bounded'}></ion-ripple-effect>}
+          </button>
+        )}
+      </div>
     );
   }
 
@@ -264,11 +265,11 @@ export class Toast implements ComponentInterface, OverlayInterface {
     };
 
     return (
-      <Host from-stencil
+      <Host
         style={{
           zIndex: `${60000 + this.overlayIndex}`,
         }}
-        class={generateMedColor(this.dsColor, {
+        class={createColorClasses(this.color, {
           [mode]: true,
           ...getClassMap(this.cssClass),
           'toast-translucent': this.translucent

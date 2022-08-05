@@ -19,7 +19,7 @@ import { mdLeaveAnimation } from './animations/md.leave';
   tag: 'ion-popover',
   styleUrls: {
     ios: 'popover.ios.scss',
-    md: 'popover.ios.scss'
+    md: 'popover.md.scss'
   },
   scoped: true
 })
@@ -31,11 +31,6 @@ export class Popover implements ComponentInterface, OverlayInterface {
   lastFocus?: HTMLElement;
 
   @Element() el!: HTMLIonPopoverElement;
-
-  /**
-   * TODO
-   */
-  @Prop() dsName!: 'tooltip';
 
   /** @internal */
   @Prop() delegate?: FrameworkDelegate;
