@@ -16,5 +16,5 @@ jobs:
         with:
           source_repo: "https://github.com/ionic-team/ionic-framework"
           source_branch: "main"
-          destination_branch: "test"
+          destination_branch: "sync-new"
           github_token: ${{ secrets.GITHUB_TOKEN }}
