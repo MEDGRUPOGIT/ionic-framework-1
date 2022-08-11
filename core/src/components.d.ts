@@ -3627,6 +3627,10 @@ export namespace Components {
           * todo
          */
         "dsColor"?: MedColor;
+        /**
+          * todo
+         */
+        "titulo": string;
     }
     interface MedNavAccordion {
         /**
@@ -8882,6 +8886,10 @@ declare namespace LocalJSX {
           * todo
          */
         "onClicked"?: (event: CustomEvent<any>) => void;
+        /**
+          * todo
+         */
+        "titulo"?: string;
     }
     interface MedNavAccordion {
         /**

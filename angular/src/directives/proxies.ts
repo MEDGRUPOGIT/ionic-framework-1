@@ -1398,8 +1398,8 @@ export class MedLista {
 }
 export declare interface MedNav extends Components.MedNav {
 }
-@ProxyCmp({ inputs: ["active", "dsColor"] })
-@Component({ selector: "med-nav", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["active", "dsColor"] })
+@ProxyCmp({ inputs: ["active", "dsColor", "titulo"] })
+@Component({ selector: "med-nav", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["active", "dsColor", "titulo"] })
 export class MedNav {
   clicked!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;

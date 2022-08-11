@@ -9,6 +9,11 @@ import { generateMedColor } from '../../../../@templarios/utilities/color';
 })
 export class MedNav {
 
+   /**
+   * todo
+   */
+  @Prop({ reflect: true }) titulo = 'MEDSoft';
+
   /**
    * todo
    */
@@ -48,7 +53,7 @@ export class MedNav {
             <div class="med-nav__icon-wrapper">
               <ion-icon class="med-nav__icon med-icon med-icon--sm" name="med-logo"></ion-icon>
             </div>
-            <med-type token="h24" ds-color="neutral-10">MEDSoft</med-type>
+            <med-type token="h24" ds-color="neutral-10">{this.titulo}</med-type>
           </div>
 
           <slot></slot>

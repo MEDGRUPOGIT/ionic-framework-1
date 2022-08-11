@@ -13,27 +13,27 @@ const Template = ({ 'ds-color': dsColor }) => {
       <ion-content>
 
         <ion-segment value="tab-1" scrollable>
-          <ion-segment-button ds-color=${dsColor} value="tab-1">
+          <ion-segment-button mode="md" ds-color=${dsColor} value="tab-1">
             <ion-label>TABS 1</ion-label>
           </ion-segment-button>
 
-          <ion-segment-button ds-color=${dsColor} value="tab-2">
+          <ion-segment-button mode="md" ds-color=${dsColor} value="tab-2">
             <ion-label>TABS 2</ion-label>
           </ion-segment-button>
 
-          <ion-segment-button ds-color=${dsColor} value="tab-3">
+          <ion-segment-button mode="md" ds-color=${dsColor} value="tab-3">
             <ion-label>TABS 3</ion-label>
           </ion-segment-button>
 
-          <ion-segment-button ds-color=${dsColor} value="tab-4">
+          <ion-segment-button mode="md" ds-color=${dsColor} value="tab-4">
             <ion-label>TABS 4</ion-label>
           </ion-segment-button>
 
-          <ion-segment-button ds-color=${dsColor} value="tab-5">
+          <ion-segment-button mode="md" ds-color=${dsColor} value="tab-5">
             <ion-label>TABS 5</ion-label>
           </ion-segment-button>
 
-          <ion-segment-button ds-color=${dsColor} value="tab-6">
+          <ion-segment-button mode="md" ds-color=${dsColor} value="tab-6">
             <ion-label>TABS 6</ion-label>
           </ion-segment-button>
         </ion-segment>

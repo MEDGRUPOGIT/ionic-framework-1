@@ -4,9 +4,12 @@ ion-label {
   font-size: 16px;
   line-height: 20px;
 
-  @each $type-value, $type in $tp-type {
+  @each $type-value,
+  $type in $tp-type {
     &[token='#{$type-value}'] {
-      @each $property, $value in $type {
+
+      @each $property,
+      $value in $type {
         #{$property}: #{$value};
       }
     }
@@ -16,10 +19,10 @@ ion-label {
 //
 // ion-textarea, ion-input, ion-select, tp-input-container
 //
-ion-label ~ ion-textarea.sc-ion-textarea-md-h,
-ion-label ~ ion-input.sc-ion-input-md-h,
-ion-label ~ ion-select,
-ion-label ~ .sc-tp-input-container-h {
+ion-label~ion-textarea.sc-ion-textarea-md-h,
+ion-label~ion-input.sc-ion-input-md-h,
+ion-label~ion-select,
+ion-label~.sc-tp-input-container-h {
   margin-top: 8px;
 }
 
@@ -29,7 +32,7 @@ ion-label ~ .sc-tp-input-container-h {
 @each $color in $tp-color {
   @for $i from 1 through 5 {
     @include generate-component-color(ion-label, $color, $i) {
-      color: #{tp-color($color, $i)};
+      color: #{tp-color($color, $i)} !important;
     }
   }
 }
@@ -39,12 +42,13 @@ ion-label ~ .sc-tp-input-container-h {
 //
 @for $i from 1 through 10 {
   @include generate-component-neutral(ion-label, neutral-#{$i}, $i) {
-    color: #{tp-neutral($i)};
+    color: #{tp-neutral($i)} !important;
   }
 }
+
 @for $i from 1 through 9 {
   @include generate-component-neutral(ion-label, neutral-#{$i}#{5}, $i) {
-    color: #{tp-neutral($i, 5)};
+    color: #{tp-neutral($i, 5)} !important;
   }
 }
 
@@ -53,6 +57,6 @@ ion-label ~ .sc-tp-input-container-h {
 //
 @each $color in $tp-feedback {
   @include generate-component-feedback(ion-label, fb-#{$color}, $color) {
-    color: #{tp-feedback($color)};
+    color: #{tp-feedback($color)} !important;
   }
 }

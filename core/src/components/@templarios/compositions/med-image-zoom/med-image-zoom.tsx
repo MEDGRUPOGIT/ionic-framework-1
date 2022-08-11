@@ -41,7 +41,7 @@ export class MedImageZoom {
    */
   @State() slider!: any;
 
-  defaultMaxRatio = 8;
+  defaultMaxRatio = 2;
   aplicandoZoom = false;
 
   /**
