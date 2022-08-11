@@ -1192,6 +1192,7 @@ export const MedLista = /*@__PURE__*/ defineContainer<JSX.MedLista>('med-lista')
 
 
 export const MedNav = /*@__PURE__*/ defineContainer<JSX.MedNav>('med-nav', [
+  'titulo',
   'dsColor',
   'active',
   'clicked'

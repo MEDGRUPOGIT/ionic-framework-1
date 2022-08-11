@@ -1681,6 +1681,7 @@ med-lista,method,closeSlidingItems,closeSlidingItems() => Promise<boolean>
 med-nav,scoped
 med-nav,prop,active,boolean,false,false,true
 med-nav,prop,dsColor,string | undefined,undefined,false,true
+med-nav,prop,titulo,string,'MEDSoft',false,true
 med-nav,event,clicked,any,true
 
 med-nav-accordion,shadow

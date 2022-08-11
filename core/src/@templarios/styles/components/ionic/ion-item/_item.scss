@@ -6,7 +6,7 @@ ion-item {
   --background-activated-opacity: 1;
   --background-focused-opacity: 1;
   --background-hover-opacity: 1;
-  --border-color: transparent;
+  --border-color: hsl(var(--med-color-neutral-3));
   --padding-top: 16px;
   --padding-end: 16px;
   --padding-bottom: 16px;
@@ -18,7 +18,8 @@ ion-item {
 // radius
 //
 // $tp-base-radius in src/@templarios/styles/variables/_components.scss
-@each $radius-value, $radius in $tp-base-radius {
+@each $radius-value,
+$radius in $tp-base-radius {
   ion-item[radius='#{$radius-value}'] {
     border-radius: #{$radius};
   }
@@ -28,7 +29,8 @@ ion-item {
 // spacing
 //
 // $tp-base-spacing in src/@templarios/styles/variables/_components.scss
-@each $spacing-value, $spacing in $tp-base-spacing {
+@each $spacing-value,
+$spacing in $tp-base-spacing {
   ion-item[spacing-v='#{$spacing-value}'] {
     --padding-bottom: #{$spacing};
     --padding-top: #{$spacing};
@@ -50,6 +52,9 @@ ion-item {
       font-size: 14px;
       line-height: 14px;
       margin: 0;
+      text-overflow: initial;
+      white-space: normal;
+      overflow: unset;
     }
   }
 }
@@ -64,6 +69,7 @@ ion-item {
 
 // slotted checkbox/radio/toggle
 ion-item {
+
   ion-checkbox[slot="start"],
   ion-radio[slot="start"],
   ion-toggle[slot="start"],
@@ -85,9 +91,12 @@ ion-item {
 // gap
 //
 // $tp-base-gap in src/@templarios/styles/variables/_components.scss
-@each $gap-value, $gap in $tp-base-gap {
+@each $gap-value,
+$gap in $tp-base-gap {
+
   // slotted checkbox/radio/toggle
   ion-item[gap='#{$gap-value}'] {
+
     ion-checkbox[slot="start"],
     ion-radio[slot="start"],
     ion-toggle[slot="start"],
@@ -145,6 +154,7 @@ ion-item {
     }
   }
 }
+
 @for $i from 1 through 9 {
   @include generate-component-neutral(ion-item, neutral-#{$i}#{5}, $i) {
     --background: #{tp-neutral($i, 5)};

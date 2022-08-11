@@ -11,6 +11,7 @@
 | --------- | ---------- | ----------- | --------------------- | ----------- |
 | `active`  | `active`   | todo        | `boolean`             | `false`     |
 | `dsColor` | `ds-color` | todo        | `string \| undefined` | `undefined` |
+| `titulo`  | `titulo`   | todo        | `string`              | `'MEDSoft'` |
 
 
 ## Events

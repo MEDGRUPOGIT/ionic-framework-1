@@ -17,15 +17,15 @@ const Template = ({ 'ds-color': dsColor }) => {
             <ion-label>TABS 1</ion-label>
           </ion-segment-button>
 
-          <ion-segment-button value="tab-2">
+          <ion-segment-button mode="md" value="tab-2">
             <ion-label>TABS 2</ion-label>
           </ion-segment-button>
 
-          <ion-segment-button value="tab-3">
+          <ion-segment-button mode="md" value="tab-3">
             <ion-label>TABS 3</ion-label>
           </ion-segment-button>
 
-          <ion-segment-button value="tab-4">
+          <ion-segment-button mode="md" value="tab-4">
             <ion-label>TABS 4</ion-label>
           </ion-segment-button>
 
@@ -33,7 +33,7 @@ const Template = ({ 'ds-color': dsColor }) => {
             <ion-label>TABS 5</ion-label>
           </ion-segment-button>
 
-          <ion-segment-button value="tab-6">
+          <ion-segment-button mode="md" value="tab-6">
             <ion-label>TABS 6</ion-label>
           </ion-segment-button>
         </ion-segment>

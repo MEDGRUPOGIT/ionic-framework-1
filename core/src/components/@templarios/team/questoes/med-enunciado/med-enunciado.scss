@@ -37,6 +37,7 @@
       cursor: pointer;
       position: relative;
       max-height: 250px;
+      margin-bottom: 15px;
 
       @include media-breakpoint-up('md', $med-grid-breakpoints) {
         max-width: 50%;
