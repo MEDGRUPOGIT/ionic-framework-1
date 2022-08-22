@@ -1,30 +1,31 @@
 // ionic
-import { defineCustomElements} from '../loader/index.js';
-import '../css/core.css';
-import '../css/display.css';
-import '../css/flex-utils.css';
-import '../css/float-elements.css';
-import '../css/global.bundle.css';
-import '../css/ionic.bundle.css';
-import '../css/normalize.css';
-import '../css/padding.css';
-import '../css/structure.css';
-import '../css/text-alignment.css';
-import '../css/text-transformation.css';
-import '../css/typography.css';
+import { defineCustomElements } from "../loader/index.js";
+import "../css/core.css";
+import "../css/display.css";
+import "../css/flex-utils.css";
+import "../css/float-elements.css";
+import "../css/global.bundle.css";
+import "../css/ionic.bundle.css";
+import "../css/normalize.css";
+import "../css/padding.css";
+import "../css/structure.css";
+import "../css/text-alignment.css";
+import "../css/text-transformation.css";
+import "../css/typography.css";
 
 defineCustomElements();
 
 // storybook
-import './assets/fsemeric.css';
-import './themes/templarios.css';
-import './assets/color-system.stories.css';
+import "./assets/fsemeric.css";
+import "./themes/templarios.css";
+import "./assets/color-system.stories.css";
 
 // templarios
-import '../templarios/css/themes/default.css';
-import '../templarios/css/themes/medsoft.css';
-import '../templarios/css/schemes/light.css';
-import '../templarios/css/templarios.css';
+import "../templarios/css/themes/default.css";
+import "../templarios/css/themes/medsoft.css";
+import "../templarios/css/schemes/light.css";
+import "../templarios/css/templarios.css";
+import "../templarios/css/templarios-css-framework.css";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -36,78 +37,88 @@ export const parameters = {
     },
   },
   themes: {
-    target: 'root',
+    target: "root",
     list: [
       {
-        name: 'Theme Medsoft',
-        class: ['theme-medsoft', 'scheme-dark'],
-        color: '#3aa8b9',
-        default: true
+        name: "Theme Medsoft",
+        class: ["theme-medsoft", "scheme-dark"],
+        color: "#3aa8b9",
+        default: true,
       },
       {
-        name: 'Theme Medsoft / Scheme Light',
-        class: ['theme-medsoft', 'scheme-light'],
-        color: '#3aa8b9'
+        name: "Theme Medsoft / Scheme Light",
+        class: ["theme-medsoft", "scheme-light"],
+        color: "#3aa8b9",
       },
     ],
   },
   viewport: {
     viewports: {
       xxs: {
-        name: 'xxs',
+        name: "xxs",
         styles: {
-          width: '340px',
-          height: '100%'
+          width: "340px",
+          height: "100%",
         },
       },
       xs: {
-        name: 'xs',
+        name: "xs",
         styles: {
-          width: '380px',
-          height: '100%'
+          width: "380px",
+          height: "100%",
         },
       },
       sm: {
-        name: 'sm',
+        name: "sm",
         styles: {
-          width: '576px',
-          height: '100%'
+          width: "576px",
+          height: "100%",
         },
       },
       md: {
-        name: 'md',
+        name: "md",
         styles: {
-          width: '768px',
-          height: '100%'
+          width: "768px",
+          height: "100%",
         },
       },
       lg: {
-        name: 'lg',
+        name: "lg",
         styles: {
-          width: '992px',
-          height: '100%'
+          width: "992px",
+          height: "100%",
         },
       },
       xl: {
-        name: 'xl',
+        name: "xl",
         styles: {
-          width: '1200px',
-          height: '100%'
+          width: "1200px",
+          height: "100%",
         },
       },
     },
   },
   options: {
     storySort: {
-      method: 'alphabetical',
+      method: "alphabetical",
       order: [
-        'General', ['Welcome', 'Biblioteca', 'Styleguide'],
-        'Conhecimento', ['Metodologia BEM'],
-        'Foundation',
-        'Components', ['Ionic', 'Core', 'Compositions', 'Team', 'Compositions-scss', 'Legado'],
-        'Utilities',
-        'Sass',
+        "General",
+        ["Welcome", "Biblioteca", "Styleguide"],
+        "Conhecimento",
+        ["Metodologia BEM"],
+        "Foundation",
+        "Components",
+        [
+          "Ionic",
+          "Core",
+          "Compositions",
+          "Team",
+          "Compositions-scss",
+          "Legado",
+        ],
+        "Utilities",
+        "Sass",
       ],
     },
   },
-}
+};

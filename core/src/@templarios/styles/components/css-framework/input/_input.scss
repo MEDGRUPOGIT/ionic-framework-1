@@ -1,0 +1,84 @@
+[tp-input] {
+  --background: hsl(var(--med-color-neutral-2));
+  --color: hsl(var(--med-color-neutral-10));
+  --padding-end: 16px;
+  --padding-start: 16px;
+  --padding-bottom: 12px;
+  --padding-top: 12px;
+  --placeholder-color: hsl(var(--med-color-neutral-6));
+
+  border: none;
+  padding-top: var(--padding-top);
+  padding-bottom: var(--padding-bottom);
+  padding-left: var(--padding-start);
+  padding-right: var(--padding-end);
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 8px;
+  height: 40px;
+  width: 100%;
+  background: var(--background);
+  color: var(--color);
+
+  &::placeholder {
+    color: var(--placeholder-color);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+[tp-label] ~ [tp-input] {
+  margin-top: 8px;
+}
+
+//
+// name
+//
+[tp-input][ds-name="secondary"] {
+  --background: hsl(var(--med-color-neutral-3));
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color([tp-input], $color, $i) {
+      --background: #{tp-color($color, $i)};
+      --color: #{tp-contrast-color($i)};
+      --placeholder-color: #{tp-contrast-color($i)};
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral([tp-input], neutral-#{$i}, $i) {
+    --background: #{tp-neutral($i)};
+    --color: #{tp-contrast-neutral($i)};
+    --placeholder-color: #{tp-contrast-neutral($i)};
+  }
+}
+
+@for $i from 1 through 9 {
+  @include generate-component-neutral([tp-input], neutral-#{$i}#{5}, $i) {
+    --background: #{tp-neutral($i, 5)};
+    --color: #{tp-contrast-neutral($i)};
+    --placeholder-color: #{tp-contrast-neutral($i)};
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback([tp-input], fb-#{$color}, $color) {
+    --background: #{tp-feedback($color)};
+    --color: hsl(var(--med-color-neutral-1));
+    --placeholder-color: hsl(var(--med-color-neutral-1));
+  }
+}

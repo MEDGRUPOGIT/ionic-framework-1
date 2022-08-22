@@ -1,0 +1,40 @@
+[tp-select] {
+  --placeholder-color: hsl(var(--med-color-neutral-6));
+  --placeholder-opacity: 1;
+
+  width: 100%;
+  border: none;
+  margin-top: 0px;
+  color: hsl(var(--med-color-neutral-10));
+  font-size: 14px;
+  line-height: 16px;
+  background: hsl(var(--med-color-neutral-2));
+  border-radius: 8px;
+  height: 40px;
+
+  &:focus {
+    outline: none;
+  }
+
+  & ~ .med-icon {
+    height: 24px;
+    width: 24px;
+    stroke: hsl(var(--med-color-neutral-6));
+  }
+}
+
+.sc-tp-input-container-h {
+  --padding-end: 8px;
+  --padding-start: 16px;
+  --padding-bottom: 12px;
+  --padding-top: 12px;
+
+  padding-top: var(--padding-top);
+  padding-bottom: var(--padding-bottom);
+  padding-left: var(--padding-start);
+  padding-right: var(--padding-end);
+}
+
+[tp-label] ~ .sc-tp-input-container-h {
+  margin-top: 8px;
+}
