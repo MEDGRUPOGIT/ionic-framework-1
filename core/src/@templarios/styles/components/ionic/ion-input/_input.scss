@@ -19,7 +19,7 @@ ion-input {
 //
 // name
 //
-ion-input[ds-name='secondary'] {
+ion-input[ds-name="secondary"] {
   &.sc-ion-input-md-h {
     --background: hsl(var(--med-color-neutral-3));
   }
@@ -44,20 +44,24 @@ ion-input[ds-name='secondary'] {
 // neutral
 //
 @for $i from 1 through 10 {
-  @include generate-component-neutral(ion-input, neutral-#{$i}, $i) {
-    &.sc-ion-input-md-h {
-      --background: #{tp-neutral($i)};
-      --color: #{tp-contrast-neutral($i)};
-      --placeholder-color: #{tp-contrast-neutral($i)};
+  @include generate-component-neutral(tp-input-container, neutral-#{$i}, $i) {
+    --color: #{tp-contrast-neutral($i)};
+
+    ion-button:hover .med-icon {
+      stroke: var(--color);
     }
   }
 }
 @for $i from 1 through 9 {
-  @include generate-component-neutral(ion-input, neutral-#{$i}#{5}, $i) {
-    &.sc-ion-input-md-h {
-      --background: #{tp-neutral($i, 5)};
-      --color: #{tp-contrast-neutral($i)};
-      --placeholder-color: #{tp-contrast-neutral($i)};
+  @include generate-component-neutral(
+    tp-input-container,
+    neutral-#{$i}#{5},
+    $i
+  ) {
+    --color: #{tp-contrast-neutral($i)};
+
+    ion-button:hover .med-icon {
+      stroke: var(--color);
     }
   }
 }
@@ -66,11 +70,15 @@ ion-input[ds-name='secondary'] {
 // feedback
 //
 @each $color in $tp-feedback {
-  @include generate-component-feedback(ion-input, fb-#{$color}, $color) {
-    &.sc-ion-input-md-h {
-      --background: #{tp-feedback($color)};
-      --color: hsl(var(--med-color-neutral-1));
-      --placeholder-color: hsl(var(--med-color-neutral-1));
+  @include generate-component-feedback(
+    tp-input-container,
+    fb-#{$color},
+    $color
+  ) {
+    --color: hsl(var(--med-color-neutral-1));
+
+    ion-button:hover .med-icon {
+      stroke: var(--color);
     }
   }
 }

@@ -1,0 +1,144 @@
+[tp-button][fill="clear"] {
+  --background: transparent;
+  --background-hover: transparent;
+  --color: hsl(var(--med-color-neutral-10));
+  --color-hover: hsl(var(--med-color-brand-3));
+  --padding: 16px;
+  --border-radius: 0;
+
+  .med-icon:first-child {
+    margin-left: 0;
+  }
+
+  .med-icon:last-child {
+    margin-right: 0;
+  }
+
+  &[icon-only] {
+    --border-radius: 100px;
+    --background-active: hsla(var(--med-color-neutral-10), 0.16);
+    --background-hover: hsla(var(--med-color-neutral-10), 0.08);
+  }
+}
+
+//
+// states
+//
+[tp-button][fill="clear"]:hover {
+  --background: var(--background-hover);
+  --color: var(--color-hover);
+
+  &[icon-only] .med-icon {
+    stroke: hsl(var(--med-color-neutral-10));
+  }
+}
+
+[tp-button][fill="clear"]:active {
+  --background: var(--background-active);
+
+  &[icon-only] .med-icon {
+    stroke: hsl(var(--med-color-neutral-10));
+  }
+}
+
+[tp-button][fill="clear"]:disabled {
+  --background: transparent;
+  --color: hsl(var(--med-color-neutral-5));
+
+  pointer-events: none;
+}
+
+//
+// size
+//
+[tp-button][fill="clear"] {
+  &[ds-size="sm"] {
+    --padding: 12px 16px;
+  }
+
+  &[ds-size="xs"] {
+    --padding: 8px 12px;
+  }
+
+  &[ds-size="xxs"] {
+    --padding: 4px 12px;
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color([tp-button], $color, $i) {
+      &[fill="clear"] {
+        --color-hover: #{tp-color($color, 3)};
+
+        &[disabled] {
+          --background: transparent;
+          --color: hsl(var(--med-color-neutral-5));
+        }
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral([tp-button], neutral-#{$i}, $i) {
+    &[fill="clear"] {
+      --color: #{tp-neutral($i)};
+      --color-hover: #{tp-neutral($i)};
+
+      &[disabled] {
+        --background: transparent;
+        --color: hsl(var(--med-color-neutral-5));
+      }
+
+      &[icon-only] .med-icon {
+        stroke: #{tp-neutral($i)};
+      }
+    }
+  }
+}
+
+@for $i from 1 through 9 {
+  @include generate-component-neutral([tp-button], neutral-#{$i}#{5}, $i) {
+    &[fill="clear"] {
+      --color: #{tp-neutral($i, 5)};
+      --color-hover: #{tp-neutral($i, 5)};
+
+      &[disabled] {
+        --background: transparent;
+        --color: hsl(var(--med-color-neutral-5));
+      }
+
+      &[icon-only] .med-icon {
+        stroke: #{tp-neutral($i, 5)};
+      }
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback([tp-button], fb-#{$color}, $color) {
+    &[fill="clear"] {
+      --color: #{tp-feedback($color)};
+      --color-hover: #{tp-feedback($color)};
+
+      &[disabled] {
+        --background: transparent;
+        --color: hsl(var(--med-color-neutral-5));
+      }
+
+      &[icon-only] .med-icon {
+        stroke: #{tp-feedback($color)};
+      }
+    }
+  }
+}

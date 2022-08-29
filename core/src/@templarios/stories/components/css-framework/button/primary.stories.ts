@@ -13,6 +13,17 @@ const Template = ({
   expand,
 }) => {
   return `
+  <style>
+  section {
+    display: flex;
+  }
+
+  section > * {
+    margin: 10px;
+  }
+  </style>
+  
+    <section>
       <button
           tp-button
           ${dsColor ? `ds-color=${dsColor}` : ""}
@@ -20,8 +31,42 @@ const Template = ({
           ${disabled ? `disabled=${disabled}` : ""}
           ${expand !== "none" ? `expand=${expand}` : ""}
           >
-          Button ${dsSize}
+          <span>Button ${dsSize}</span>
        </button>
+
+       <button
+          tp-button
+          ${dsColor ? `ds-color=${dsColor}` : ""}
+          ${dsSize ? `ds-size=${dsSize}` : ""}
+          ${disabled ? `disabled=${disabled}` : ""}
+          ${expand !== "none" ? `expand=${expand}` : ""}
+          >
+          <ion-icon class="med-icon" name="med-esquerda"></ion-icon>
+          <span>Button ${dsSize}</span>
+       </button>
+
+       <button
+          tp-button
+          ${dsColor ? `ds-color=${dsColor}` : ""}
+          ${dsSize ? `ds-size=${dsSize}` : ""}
+          ${disabled ? `disabled=${disabled}` : ""}
+          ${expand !== "none" ? `expand=${expand}` : ""}
+          >
+          <span>Button ${dsSize}</span>
+          <ion-icon class="med-icon" name="med-direita"></ion-icon>
+        </button>
+
+        <button
+          tp-button
+          icon-only
+          ${dsColor ? `ds-color=${dsColor}` : ""}
+          ${dsSize ? `ds-size=${dsSize}` : ""}
+          ${disabled ? `disabled=${disabled}` : ""}
+          ${expand !== "none" ? `expand=${expand}` : ""}
+          >
+          <ion-icon class="med-icon" name="med-star-filled"></ion-icon>
+        </button>
+    </section>
   `;
 };
 

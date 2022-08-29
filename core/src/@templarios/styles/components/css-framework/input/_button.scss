@@ -1,0 +1,79 @@
+[tp-container-input] {
+  [tp-input]:not(:first-child) {
+    margin: 0;
+  }
+
+  [tp-button] {
+    margin: 0 8px;
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral([tp-container-input], neutral-#{$i}, $i) {
+    [tp-button] {
+      --color: #{tp-contrast-neutral($i)};
+
+      .med-icon {
+        stroke: var(--color);
+      }
+
+      &:hover,
+      &:focus {
+        .med-icon {
+          stroke: var(--color);
+        }
+      }
+    }
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(
+    [tp-container-input],
+    neutral-#{$i}#{5},
+    $i
+  ) {
+    [tp-button] {
+      --color: #{tp-contrast-neutral($i)};
+
+      .med-icon {
+        stroke: var(--color);
+      }
+
+      &:hover,
+      &:focus {
+        .med-icon {
+          stroke: var(--color);
+        }
+      }
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(
+    [tp-container-input],
+    fb-#{$color},
+    $color
+  ) {
+    [tp-button] {
+      --color: hsl(var(--med-color-neutral-1));
+
+      .med-icon {
+        stroke: var(--color);
+      }
+
+      &:hover,
+      &:focus {
+        .med-icon {
+          stroke: var(--color);
+        }
+      }
+    }
+  }
+}

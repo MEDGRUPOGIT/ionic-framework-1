@@ -1,0 +1,127 @@
+[tp-container-toggle] {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  & label:last-child {
+    margin-left: 10px;
+    width: 100%;
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+  }
+
+  &[inverted] {
+    position: relative;
+
+    & label:last-child {
+      margin-left: 0px;
+    }
+  }
+}
+
+[tp-toggle] {
+  position: relative;
+  display: inline-block;
+  min-width: 34px;
+  height: 22px;
+
+  & input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  &[inverted] {
+    position: absolute;
+    right: 0;
+  }
+}
+
+[tp-toggle-slider] {
+  --background-slider: hsl(var(--med-color-neutral-4));
+  --background-round: hsl(var(--med-color-neutral-10));
+  --background-checked: hsl(var(--med-color-brand-3));
+
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--background-slider);
+  -webkit-transition: .4s;
+  transition: .4s;
+
+  &:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 2px;
+    background: var(--background-round);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+}
+
+input {
+  &:checked+[tp-toggle-slider] {
+    background: var(--background-checked);
+  }
+
+  &:focus+[tp-toggle-slider] {
+    box-shadow: 0 0 1px var(--background-checked);
+  }
+
+  &:checked+[tp-toggle-slider]:before {
+    -webkit-transform: translateX(10.5px);
+    -ms-transform: translateX(10.5px);
+    transform: translateX(10.5px);
+  }
+}
+
+[tp-toggle-slider][tp-toggle-round] {
+  border-radius: 34px;
+
+  &:before {
+    border-radius: 50%;
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color([tp-toggle-slider], $color, $i) {
+      --background-checked: #{tp-color($color, $i)};
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral([tp-toggle-slider], neutral-#{$i}, $i) {
+    --background-checked: #{tp-neutral($i)};
+  }
+}
+
+@for $i from 1 through 9 {
+  @include generate-component-neutral([tp-toggle-slider], neutral-#{$i}#{5}, $i) {
+    --background-checked: #{tp-neutral($i, 5)};
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback([tp-toggle-slider], fb-#{$color}, $color) {
+    --background-checked: #{tp-feedback($color)};
+  }
+}

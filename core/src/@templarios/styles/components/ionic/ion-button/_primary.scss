@@ -25,16 +25,16 @@ ion-button {
   text-transform: none;
   opacity: 1;
 
-  ion-icon {
+  .med-icon {
     font-size: 24px;
     stroke: var(--color);
   }
 
-  ion-icon[slot='start'] {
+  ion-icon[slot="start"] {
     margin-right: 8px;
   }
 
-  ion-icon[slot='end'] {
+  ion-icon[slot="end"] {
     margin-left: 8px;
   }
 
@@ -61,7 +61,7 @@ ion-button.button {
 // size
 //
 ion-button {
-  &[ds-size='sm'] {
+  &[ds-size="sm"] {
     --padding-top: 12px;
     --padding-bottom: 12px;
 
@@ -72,7 +72,7 @@ ion-button {
     }
   }
 
-  &[ds-size='xs'] {
+  &[ds-size="xs"] {
     --padding-top: 8px;
     --padding-bottom: 8px;
     --padding-start: 24px;
@@ -83,10 +83,19 @@ ion-button {
 
     ion-icon {
       font-size: 16px;
+      height: 16px;
+      width: 16px;
+    }
+
+    &[icon-only] {
+      ion-icon {
+        height: 24px;
+        width: 24px;
+      }
     }
   }
 
-  &[ds-size='xxs'] {
+  &[ds-size="xxs"] {
     --padding-top: 6px;
     --padding-bottom: 6px;
     --padding-start: 16px;
@@ -98,6 +107,8 @@ ion-button {
 
     ion-icon {
       font-size: 16px;
+      height: 16px;
+      width: 16px;
     }
   }
 }
@@ -113,7 +124,7 @@ ion-button[icon-only] {
 
   width: 48px;
 
-  &[ds-size='sm'] {
+  &[ds-size="sm"] {
     --padding-top: 0;
     --padding-bottom: 0;
     --padding-start: 0;
@@ -122,7 +133,7 @@ ion-button[icon-only] {
     width: 40px;
   }
 
-  &[ds-size='xs'] {
+  &[ds-size="xs"] {
     --padding-top: 0;
     --padding-bottom: 0;
     --padding-start: 0;
@@ -131,7 +142,7 @@ ion-button[icon-only] {
     width: 32px;
   }
 
-  &[ds-size='xxs'] {
+  &[ds-size="xxs"] {
     --padding-top: 0;
     --padding-bottom: 0;
     --padding-start: 0;
@@ -232,6 +243,7 @@ ion-button[icon-only] {
     }
   }
 }
+
 @for $i from 1 through 9 {
   @include generate-component-neutral(ion-button, neutral-#{$i}#{5}, $i) {
     --background: #{tp-neutral($i, 5)};

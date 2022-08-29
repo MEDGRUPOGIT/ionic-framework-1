@@ -5,7 +5,7 @@
   --padding-start: 16px;
   --padding-bottom: 12px;
   --padding-top: 12px;
-  --placeholder-color: hsl(var(--med-color-neutral-6));
+  --placeholder-color: hsl(var(--med-color-neutral-5));
 
   border: none;
   padding-top: var(--padding-top);
@@ -41,6 +41,13 @@
 }
 
 //
+// disabled
+//
+[tp-input][disabled] {
+  opacity: 0.4;
+}
+
+//
 // color
 //
 @each $color in $tp-color {
@@ -49,6 +56,10 @@
       --background: #{tp-color($color, $i)};
       --color: #{tp-contrast-color($i)};
       --placeholder-color: #{tp-contrast-color($i)};
+
+      [tp-input]::placeholder {
+        --placeholder-color: #{tp-contrast-color($i)};
+      }
     }
   }
 }
@@ -61,6 +72,10 @@
     --background: #{tp-neutral($i)};
     --color: #{tp-contrast-neutral($i)};
     --placeholder-color: #{tp-contrast-neutral($i)};
+
+    [tp-input]::placeholder {
+      --placeholder-color: #{tp-contrast-neutral($i)};
+    }
   }
 }
 
@@ -69,6 +84,10 @@
     --background: #{tp-neutral($i, 5)};
     --color: #{tp-contrast-neutral($i)};
     --placeholder-color: #{tp-contrast-neutral($i)};
+
+    [tp-input]::placeholder {
+      --placeholder-color: #{tp-contrast-neutral($i)};
+    }
   }
 }
 
@@ -80,5 +99,9 @@
     --background: #{tp-feedback($color)};
     --color: hsl(var(--med-color-neutral-1));
     --placeholder-color: hsl(var(--med-color-neutral-1));
+
+    [tp-input]::placeholder {
+      --placeholder-color: hsl(var(--med-color-neutral-1));
+    }
   }
 }

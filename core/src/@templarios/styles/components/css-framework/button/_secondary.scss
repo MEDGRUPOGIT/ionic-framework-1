@@ -1,0 +1,130 @@
+[tp-button][fill="outline"] {
+  --background: transparent;
+  --color: hsl(var(--med-color-brand-3));
+  --border-color: hsl(var(--med-color-brand-3));
+  --border-color-hover: hsl(var(--med-color-brand-2));
+
+  border-color: var(--border-color);
+
+  &[icon-only] {
+    --border: 2px solid var(--border-color);
+  }
+}
+
+//
+// states
+//
+[tp-button][fill="outline"]:hover {
+  --border-color: var(--border-color-hover);
+}
+
+//
+// disabled
+//
+[tp-button][fill="outline"]:disabled {
+  --border-color: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color([tp-button], $color, $i) {
+      &[fill="outline"] {
+        --background: transparent;
+        --border-color: #{tp-color($color, $i)};
+        --border-color-hover: #{tp-color($color, 2)};
+        --color: #{tp-color($color, $i)};
+
+        &:hover {
+          --border-color: var(--border-color-hover);
+        }
+
+        &[disabled] {
+          --border-color: hsl(var(--med-color-neutral-3));
+          --color: hsl(var(--med-color-neutral-5));
+        }
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral([tp-button], neutral-#{$i}, $i) {
+    &[fill="outline"] {
+      --background: transparent;
+      --border-color: #{tp-neutral($i)};
+      --border-color-hover: #{tp-neutral($i)};
+      --color: #{tp-neutral($i)};
+
+      &:hover {
+        --border-color: var(--border-color-hover);
+
+        &::after {
+          background: transparent;
+        }
+      }
+
+      &[disabled] {
+        --border-color: hsl(var(--med-color-neutral-3));
+        --color: hsl(var(--med-color-neutral-5));
+      }
+    }
+  }
+}
+
+@for $i from 1 through 9 {
+  @include generate-component-neutral([tp-button], neutral-#{$i}#{5}, $i) {
+    &[fill="outline"] {
+      --background: transparent;
+      --border-color: #{tp-neutral($i, 5)};
+      --border-color-hover: #{tp-neutral($i, 5)};
+      --color: #{tp-neutral($i, 5)};
+
+      &:hover {
+        --border-color: var(--border-color-hover);
+
+        &::after {
+          background: transparent;
+        }
+      }
+
+      &[disabled] {
+        --border-color: hsl(var(--med-color-neutral-3));
+        --color: hsl(var(--med-color-neutral-5));
+      }
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback([tp-button], fb-#{$color}, $color) {
+    &[fill="outline"] {
+      --background: transparent;
+      --border-color: #{tp-feedback($color)};
+      --border-color-hover: #{tp-feedback($color)};
+      --color: #{tp-feedback($color)};
+
+      &:hover {
+        --border-color: var(--border-color-hover);
+
+        &::after {
+          background: transparent;
+        }
+      }
+
+      &[disabled] {
+        --border-color: hsl(var(--med-color-neutral-3));
+        --color: hsl(var(--med-color-neutral-5));
+      }
+    }
+  }
+}

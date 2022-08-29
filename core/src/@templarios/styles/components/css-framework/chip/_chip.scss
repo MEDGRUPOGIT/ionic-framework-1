@@ -1,0 +1,303 @@
+[tp-chip] {
+  --background: transparent;
+  --color: hsl(var(--med-color-brand-3));
+  --width: fit-content;
+  --border-color: hsl(var(--med-color-brand-3));
+  --icon-color: hsl(var(--med-color-neutral-1));
+  --icon-background: hsl(var(--med-color-brand-3));
+
+  display: flex;
+  align-items: center;
+  background: var(--background);
+  color: var(--color);
+  width: var(--width);
+  border: 1px solid var(--border-color);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 12px;
+  height: 28px;
+  padding: 7px;
+  border-radius: 16px;
+
+  & ion-icon:first-child {
+    margin-inline: -2px 8px;
+  }
+
+  & ion-icon:last-child {
+    margin-inline: 8px -2px;
+  }
+
+  label {
+    color: var(--color);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .med-icon {
+    stroke: var(--icon-color);
+    background-color: var(--icon-background);
+    border-radius: 50%;
+    font-size: 16px;
+    padding: 2px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+//
+// ds-name
+//
+[tp-chip] {
+  &[ds-name="secondary"] {
+    --icon-color: hsl(var(--med-color-neutral-2));
+  }
+}
+
+// ds-size
+[tp-chip] {
+  &[ds-size="md"] {
+    height: 32px;
+
+    label {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    .med-icon {
+      padding: 4px;
+    }
+  }
+}
+
+// states
+[tp-chip] {
+  &[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+[tp-chip] {
+
+  &[active],
+  &.ion-focused,
+  &.ion-activated {
+    --background: hsl(var(--med-color-brand-3));
+    --color: hsl(var(--med-color-neutral-10));
+    --border-color: hsl(var(--med-color-brand-3));
+    --icon-color: hsl(var(--med-color-brand-3));
+    --icon-background: hsl(var(--med-color-neutral-10));
+  }
+}
+
+@media (any-hover: hover) {
+  [tp-chip]:hover {
+    --background: hsl(var(--med-color-brand-3));
+    --color: hsl(var(--med-color-neutral-10));
+    --border-color: hsl(var(--med-color-brand-3));
+    --icon-color: hsl(var(--med-color-brand-3));
+    --icon-background: hsl(var(--med-color-neutral-10));
+  }
+}
+
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color([tp-chip], $color, $i) {
+      --color: #{tp-color($color, $i)};
+
+      --border-color: #{tp-color($color, $i)};
+      --background-hover: #{tp-color($color, $i)};
+      --background-active: #{tp-color($color, $i)};
+      --icon-background: #{tp-color($color, $i)};
+
+      &[active],
+      &.ion-focused,
+      &.ion-activated {
+        --background: #{tp-color($color, $i)};
+        --color: #{tp-contrast-color($i)};
+        --border-color: #{tp-color($color, $i)};
+        --icon-color: #{tp-color($color, $i)};
+        --icon-background: hsl(var(--med-color-neutral-10));
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          --background: #{tp-color($color, $i)};
+          --color: #{tp-contrast-color($i)};
+          --border-color: #{tp-color($color, $i)};
+          --icon-color: #{tp-color($color, $i)};
+          --icon-background: hsl(var(--med-color-neutral-10));
+        }
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral([tp-chip], neutral-#{$i}, $i) {
+    --color: #{tp-neutral($i)};
+
+    --border-color: #{tp-neutral($i)};
+    --background-hover: #{tp-neutral($i)};
+    --background-active: #{tp-neutral($i)};
+    --icon-background: #{tp-neutral($i)};
+
+    &[active],
+    &.ion-focused,
+    &.ion-activated {
+      --background: #{tp-neutral($i)};
+      --color: #{tp-contrast-neutral($i)};
+      --border-color: #{tp-neutral($i)};
+
+      --icon-color: #{tp-neutral($i)};
+      --icon-background: #{tp-contrast-neutral($i)};
+    }
+
+    &[active][ds-name="secondary"],
+    &.ion-focused[ds-name="secondary"],
+    &.ion-activated[ds-name="secondary"] {
+      --icon-color: #{tp-neutral($i)};
+      --icon-background: hsl(var(--med-color-neutral-2));
+    }
+
+    @media (any-hover: hover) {
+
+      &:hover,
+      &[active]:hover,
+      &.ion-focused:hover,
+      &.ion-activated:hover {
+        --background: #{tp-neutral($i)};
+        --color: #{tp-contrast-neutral($i)};
+        --border-color: #{tp-neutral($i)};
+
+        --icon-color: #{tp-neutral($i)};
+        --icon-background: #{tp-contrast-neutral($i)};
+      }
+
+      &[ds-name="secondary"]:hover,
+      &[active][ds-name="secondary"]:hover,
+      &.ion-focused[ds-name="secondary"]:hover,
+      &.ion-activated[ds-name="secondary"]:hover {
+        --icon-color: #{tp-neutral($i)};
+        --icon-background: hsl(var(--med-color-neutral-2));
+      }
+    }
+  }
+}
+
+@for $i from 1 through 9 {
+  @include generate-component-neutral([tp-chip], neutral-#{$i}#{5}, $i) {
+    --color: #{tp-neutral($i, 5)};
+
+    --border-color: #{tp-neutral($i, 5)};
+    --background-hover: #{tp-neutral($i, 5)};
+    --background-active: #{tp-neutral($i, 5)};
+    --icon-background: #{tp-neutral($i)};
+
+
+    &[active],
+    &.ion-focused,
+    &.ion-activated {
+      --background: #{tp-neutral($i)};
+      --color: #{tp-contrast-neutral($i)};
+      --border-color: #{tp-neutral($i)};
+
+      --icon-color: #{tp-neutral($i)};
+      --icon-background: #{tp-contrast-neutral($i)};
+    }
+
+    &[active][ds-name="secondary"],
+    &.ion-focused[ds-name="secondary"],
+    &.ion-activated[ds-name="secondary"] {
+      --icon-color: #{tp-neutral($i)};
+      --icon-background: hsl(var(--med-color-neutral-2));
+    }
+
+    @media (any-hover: hover) {
+
+      &:hover,
+      &[active]:hover,
+      &.ion-focused:hover,
+      &.ion-activated:hover {
+        --background: #{tp-neutral($i)};
+        --color: #{tp-contrast-neutral($i)};
+        --border-color: #{tp-neutral($i)};
+
+        --icon-color: #{tp-neutral($i)};
+        --icon-background: #{tp-contrast-neutral($i)};
+      }
+
+      &[ds-name="secondary"]:hover,
+      &[active][ds-name="secondary"]:hover,
+      &.ion-focused[ds-name="secondary"]:hover,
+      &.ion-activated[ds-name="secondary"]:hover {
+        --icon-color: #{tp-neutral($i)};
+        --icon-background: hsl(var(--med-color-neutral-2));
+      }
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback([tp-chip], fb-#{$color}, $color) {
+    --color: #{tp-feedback($color)};
+
+    --border-color: #{tp-feedback($color)};
+    --background-hover: #{tp-feedback($color)};
+    --background-active: #{tp-feedback($color)};
+    --icon-background: #{tp-feedback($color)};
+
+    &[active],
+    &.ion-focused,
+    &.ion-activated {
+      --background: #{tp-feedback($color)};
+      --color: hsl(var(--med-color-neutral-1));
+      --border-color: #{tp-feedback($color)};
+
+      --icon-color: #{tp-feedback($color)};
+      --icon-background: hsl(var(--med-color-neutral-1));
+    }
+
+    &[active][ds-name="secondary"],
+    &.ion-focused[ds-name="secondary"],
+    &.ion-activated[ds-name="secondary"] {
+      --icon-color: #{tp-feedback($color)};
+      --icon-background: hsl(var(--med-color-neutral-2));
+    }
+
+    @media (any-hover: hover) {
+
+      &:hover,
+      &[active]:hover,
+      &.ion-focused:hover,
+      &.ion-activated:hover {
+        --background: #{tp-feedback($color)};
+        --color: hsl(var(--med-color-neutral-1));
+        --border-color: #{tp-feedback($color)};
+
+        --icon-color: #{tp-feedback($color)};
+        --icon-background: hsl(var(--med-color-neutral-1));
+      }
+
+      &[ds-name="secondary"]:hover,
+      &[active][ds-name="secondary"]:hover,
+      &.ion-focused[ds-name="secondary"]:hover,
+      &.ion-activated[ds-name="secondary"]:hover {
+        --icon-color: #{tp-feedback($color)};
+        --icon-background: hsl(var(--med-color-neutral-2));
+      }
+    }
+  }
+}
