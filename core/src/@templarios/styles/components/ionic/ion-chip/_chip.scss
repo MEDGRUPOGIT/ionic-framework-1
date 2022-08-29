@@ -20,11 +20,12 @@ ion-chip {
     line-height: 12px;
   }
 
-  ion-icon {
+  .med-icon {
     stroke: var(--icon-color);
     background-color: var(--icon-background);
     border-radius: 50%;
-    font-size: 16px;
+    height: 16px;
+    width: 16px;
     padding: 2px;
   }
 }
@@ -64,6 +65,7 @@ ion-chip {
 }
 
 ion-chip {
+
   &[active],
   &.ion-focused,
   &.ion-activated {
@@ -106,7 +108,7 @@ ion-chip {
         --color: #{tp-contrast-color($i)};
         --border-color: #{tp-color($color, $i)};
         --icon-color: #{tp-color($color, $i)};
-        --icon-background: hsl(var(--med-color-neutral-10));
+        --icon-background: #{tp-contrast-color($i)};
       }
 
       @media (any-hover: hover) {
@@ -115,7 +117,7 @@ ion-chip {
           --color: #{tp-contrast-color($i)};
           --border-color: #{tp-color($color, $i)};
           --icon-color: #{tp-color($color, $i)};
-          --icon-background: hsl(var(--med-color-neutral-10));
+          --icon-background: #{tp-contrast-color($i)};
         }
       }
     }
@@ -142,7 +144,7 @@ ion-chip {
       --border-color: #{tp-neutral($i)};
 
       --icon-color: #{tp-neutral($i)};
-      --icon-background: hsl(var(--med-color-neutral-1));
+      --icon-background: #{tp-contrast-neutral($i)};
     }
 
     &[active][ds-name="secondary"],
@@ -153,6 +155,7 @@ ion-chip {
     }
 
     @media (any-hover: hover) {
+
       &:hover,
       &[active]:hover,
       &.ion-focused:hover,
@@ -162,7 +165,7 @@ ion-chip {
         --border-color: #{tp-neutral($i)};
 
         --icon-color: #{tp-neutral($i)};
-        --icon-background: hsl(var(--med-color-neutral-1));
+        --icon-background: #{tp-contrast-neutral($i)};
       }
 
       &[ds-name="secondary"]:hover,
@@ -175,6 +178,7 @@ ion-chip {
     }
   }
 }
+
 @for $i from 1 through 9 {
   @include generate-component-neutral(ion-chip, neutral-#{$i}#{5}, $i) {
     --color: #{tp-neutral($i, 5)};
@@ -193,7 +197,7 @@ ion-chip {
       --border-color: #{tp-neutral($i)};
 
       --icon-color: #{tp-neutral($i)};
-      --icon-background: hsl(var(--med-color-neutral-1));
+      --icon-background: #{tp-contrast-neutral($i)};
     }
 
     &[active][ds-name="secondary"],
@@ -204,6 +208,7 @@ ion-chip {
     }
 
     @media (any-hover: hover) {
+
       &:hover,
       &[active]:hover,
       &.ion-focused:hover,
@@ -213,7 +218,7 @@ ion-chip {
         --border-color: #{tp-neutral($i)};
 
         --icon-color: #{tp-neutral($i)};
-        --icon-background: hsl(var(--med-color-neutral-1));
+        --icon-background: #{tp-contrast-neutral($i)};
       }
 
       &[ds-name="secondary"]:hover,
@@ -258,6 +263,7 @@ ion-chip {
     }
 
     @media (any-hover: hover) {
+
       &:hover,
       &[active]:hover,
       &.ion-focused:hover,

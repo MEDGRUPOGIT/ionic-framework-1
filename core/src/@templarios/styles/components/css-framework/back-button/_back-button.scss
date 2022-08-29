@@ -1,0 +1,79 @@
+[tp-back-button] {
+  --background: transparent;
+  --background-hover: hsla(var(--med-color-neutral-10), 0.08);
+  --color: hsl(var(--med-color-neutral-6));
+  --border-radius: 50%;
+
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+
+  --width: 32px;
+  --height: 32px;
+
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  width: var(--width);
+  height: var(--height);
+  background: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .med-icon {
+    stroke: var(--color);
+    min-width: 24px;
+    min-height: 24px;
+  }
+}
+
+//
+// states
+//
+[tp-back-button] {
+  &:hover {
+    background: var(--background-hover);
+  }
+}
+
+//
+// disabled
+//
+[tp-back-button][disabled] {
+  --color: hsl(var(--med-color-neutral-5));
+
+  &:hover {
+    background: transparent;
+  }
+}
+
+//
+// size
+//
+[tp-back-button] {
+  &[ds-size="lg"] {
+    --width: 64px;
+    --height: 64px;
+  }
+
+  &[ds-size="md"] {
+    --width: 48px;
+    --height: 48px;
+  }
+
+  &[ds-size="sm"] {
+    --width: 40px;
+    --height: 40px;
+  }
+
+  &[ds-size="xxs"] {
+    --width: 24px;
+    --height: 24px;
+  }
+
+  &[ds-size="xxxs"] {
+    --width: 24px;
+    --height: 24px;
+  }
+}

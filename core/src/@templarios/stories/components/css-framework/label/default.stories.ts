@@ -3,12 +3,15 @@ import { withDesign } from "storybook-addon-designs";
 import { MedColors, MedType } from "../../../../templarios";
 
 export default {
-  title: "Components/CSS Framework/label",
+  title: "Components/CSS Framework/Label",
   decorators: [withDesign],
 };
 
 const Template = ({ "ds-color": dsColor, token, slot }) => {
-  return html` <p tp-label ds-color=${dsColor} token=${token}>${slot}</p> `;
+  return html` 
+  <p tp-label ds-color=${dsColor} token=${token}>
+    Teste Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus atque doloribus consequuntur facere tempore nihil minima vel unde sunt impedit maxime et praesentium excepturi placeat optio illum, officia debitis error.
+  </p> `;
 };
 
 export const Default = Template.bind({});
@@ -39,10 +42,5 @@ Default.argTypes = {
       type: { summary: Object.values(MedType).join(" |") },
       defaultValue: { summary: "undefined" },
     },
-  },
-  slot: {
-    control: { type: "text" },
-    defaultValue:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pellentesque imperdiet luctus.",
-  },
+  }
 };

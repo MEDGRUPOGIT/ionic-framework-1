@@ -9,10 +9,9 @@ export default {
 
 const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled }) => {
   return html`
-      <p tp-label token="p14" for="tp-input"> Description: </p>
+      <p tp-label token="p14"> Description: </p>
       <input
           tp-input
-          id="tp-input"
           ds-color=${dsColor}
           ds-name=${dsName}
           .disabled=${disabled}

@@ -1,0 +1,210 @@
+[tp-container-checkbox] {
+  --border-color-label: hsl(var(--med-color-neutral-3));
+  --checkmark-color: hsl(var(--med-color-neutral-2));
+  --background: transparent;
+  --border-color: hsl(var(--med-color-brand-4));
+  --border-color-checked: hsl(var(--med-color-brand-4));
+  --background-checked: hsl(var(--med-color-brand-4));
+  --checkmark-color: hsl(var(--med-color-neutral-2));
+  --border-radius: 4px;
+  --size: 16px;
+  --transition: background-color 300ms ease-out, border-color 300ms ease-out;
+  --margin: 0 8px 0 0;
+  --top: 50%;
+  --left: 0;
+  --right: 0;
+  --left-icon: 1px;
+  --right-icon: 0;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+
+  [tp-label] {
+    width: 100%;
+  }
+
+  .med-icon {
+    height: 19px;
+    width: 19px;
+    stroke: transparent;
+    position: absolute;
+    top: var(--top);
+    left: var(--left-icon);
+    transform: translate(0, -50%);
+  }
+}
+
+[tp-checkbox] {
+  display: none;
+
+  & + [tp-label] {
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      margin: var(--margin);
+      height: var(--size);
+      width: var(--size);
+      border-radius: var(--border-radius);
+      border: 2px solid var(--border-color);
+      background-color: var(--background);
+      display: inline-block;
+      vertical-align: middle;
+      transition: var(--transition);
+    }
+  }
+
+  &:checked + [tp-label] {
+    &::before {
+      --background: var(--background-checked);
+
+      border: 2px solid var(--border-color-checked);
+    }
+
+    .med-icon {
+      stroke: var(--checkmark-color);
+    }
+  }
+}
+
+//
+// inverted
+//
+[inverted] [tp-checkbox] {
+  & + [tp-label]::before {
+    --margin: 0;
+    position: absolute;
+    top: var(--top);
+    right: var(--right);
+    transform: translate(0, -50%);
+  }
+
+  &:checked + [tp-label] .med-icon {
+    --left-icon: auto;
+    right: var(--right-icon);
+  }
+}
+
+//
+// states
+//
+[tp-checkbox] + [tp-label] {
+  &:hover,
+  &:focus {
+    --border-color: hsl(var(--med-color-brand-5));
+    --border-color-checked: hsl(var(--med-color-brand-5));
+    --background-checked: hsl(var(--med-color-brand-5));
+  }
+}
+
+//
+// disabled
+//
+[tp-container-checkbox][disabled] {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color([tp-container-checkbox], $color, $i) {
+      [tp-label] {
+        --border-color: #{tp-color($color, 4)};
+        --border-color-checked: #{tp-color($color, 4)};
+        --background-checked: #{tp-color($color, 4)};
+
+        &:hover,
+        &:focus {
+          --border-color: #{tp-color($color, 5)};
+          --border-color-checked: #{tp-color($color, 5)};
+          --background-checked: #{tp-color($color, 5)};
+        }
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(
+    [tp-container-checkbox],
+    neutral-#{$i},
+    $i
+  ) {
+    [tp-label] {
+      --border-color: #{tp-neutral($i)};
+      --border-color-checked: #{tp-neutral($i)};
+      --background-checked: #{tp-neutral($i)};
+
+      &:hover,
+      &:focus {
+        --border-color: #{tp-neutral($i)};
+        --border-color-checked: #{tp-neutral($i)};
+        --background-checked: #{tp-neutral($i)};
+      }
+    }
+
+    [tp-checkbox]:checked + [tp-label] {
+      .med-icon {
+        --checkmark-color: #{tp-contrast-neutral($i)};
+      }
+    }
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(
+    [tp-container-checkbox],
+    neutral-#{$i}#{5},
+    $i
+  ) {
+    [tp-label] {
+      --border-color: #{tp-neutral($i, 5)};
+      --border-color-checked: #{tp-neutral($i, 5)};
+      --background-checked: #{tp-neutral($i, 5)};
+
+      &:hover,
+      &:focus {
+        --border-color: #{tp-neutral($i, 5)};
+        --border-color-checked: #{tp-neutral($i, 5)};
+        --background-checked: #{tp-neutral($i, 5)};
+      }
+    }
+
+    [tp-checkbox]:checked + [tp-label] {
+      .med-icon {
+        --checkmark-color: #{tp-contrast-neutral($i)};
+      }
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(
+    [tp-container-checkbox],
+    fb-#{$color},
+    $color
+  ) {
+    [tp-label] {
+      --border-color: #{tp-feedback($color)};
+      --border-color-checked: #{tp-feedback($color)};
+      --background-checked: #{tp-feedback($color)};
+
+      &:hover,
+      &:focus {
+        --border-color: #{tp-feedback($color)};
+        --border-color-checked: #{tp-feedback($color)};
+        --background-checked: #{tp-feedback($color)};
+      }
+    }
+  }
+}

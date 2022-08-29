@@ -1,0 +1,205 @@
+[tp-container-radio] {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+
+  [tp-label] {
+    width: 100%;
+  }
+}
+
+[tp-radio] {
+  display: none;
+
+  & + [tp-label] {
+    --background: transparent;
+    --background-checked: hsl(var(--med-color-brand-4));
+    --border-color: hsl(var(--med-color-brand-4));
+    --border-radius: 50%;
+    --border: 2px solid var(--border-color);
+    --opacity: 1;
+    --size: 16px;
+    --size-checked: 10px;
+    --margin: 0 8px 0 0;
+    --top: 50%;
+    --left-after: 5px;
+    --right-before: 0;
+    --right-after: 5px;
+
+    cursor: pointer;
+    opacity: var(--opacity);
+
+    &::before {
+      content: "";
+      margin: var(--margin);
+      height: var(--size);
+      width: var(--size);
+      border-radius: var(--border-radius);
+      border: var(--border);
+      background-color: var(--background);
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &::after {
+      content: "";
+      height: var(--size-checked);
+      width: var(--size-checked);
+      border-radius: var(--border-radius);
+      background-color: var(--background-checked);
+      display: inline-block;
+      vertical-align: middle;
+      position: absolute;
+      top: var(--top);
+      left: var(--left-after);
+      transform: translate(0, -50%);
+      display: none;
+    }
+  }
+
+  &:checked + [tp-label] {
+    &::after {
+      display: block;
+    }
+  }
+}
+
+//
+// inverted
+//
+[inverted] {
+  [tp-label]::before {
+    --margin: 0;
+    position: absolute;
+    top: var(--top);
+    right: var(--right-before);
+    transform: translate(0, -50%);
+  }
+
+  [tp-radio]:checked + [tp-label]::after {
+    --left-after: auto;
+    top: var(--top);
+    right: var(--right-after);
+    transform: translate(0, -50%);
+  }
+}
+
+//
+// states
+//
+[tp-radio] + [tp-label] {
+  &:hover,
+  &:focus {
+    --background-checked: hsl(var(--med-color-brand-5));
+    --border-color: hsl(var(--med-color-brand-5));
+  }
+}
+
+//
+// disabled
+//
+[tp-container-radio][disabled] [tp-label] {
+  --opacity: 0.5;
+}
+
+//
+// name
+//
+[tp-container-radio][ds-name="secondary"] [tp-label] {
+  --background: hsl(var(--med-color-neutral-10));
+
+  &::before {
+    --border: none;
+  }
+
+  &::after {
+    --left-after: 3px;
+  }
+}
+
+[inverted][ds-name="secondary"] [tp-radio]:checked + [tp-label]::after {
+  top: 50%;
+  left: auto;
+  right: 3.5px;
+  transform: translate(0, -50%);
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color([tp-container-radio], $color, $i) {
+      [tp-label] {
+        --background-checked: #{tp-color($color, 4)};
+        --border-color: #{tp-color($color, 4)};
+
+        &:hover,
+        &:focus {
+          --background-checked: #{tp-color($color, 5)};
+          --border-color: #{tp-color($color, 5)};
+        }
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral([tp-container-radio], neutral-#{$i}, $i) {
+    [tp-label] {
+      --background-checked: #{tp-neutral($i)};
+      --border-color: #{tp-neutral($i)};
+
+      &:hover,
+      &:focus {
+        --background-checked: #{tp-neutral($i)};
+        --border-color: #{tp-neutral($i)};
+      }
+    }
+  }
+}
+
+@for $i from 1 through 9 {
+  @include generate-component-neutral(
+    [tp-container-radio],
+    neutral-#{$i}#{5},
+    $i
+  ) {
+    [tp-label] {
+      --background-checked: #{tp-neutral($i, 5)};
+      --border-color: #{tp-neutral($i, 5)};
+
+      &:hover,
+      &:focus {
+        --background-checked: #{tp-neutral($i, 5)};
+        --border-color: #{tp-neutral($i, 5)};
+      }
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(
+    [tp-container-radio],
+    fb-#{$color},
+    $color
+  ) {
+    [tp-label] {
+      --background-checked: #{tp-feedback($color)};
+      --border-color: #{tp-feedback($color)};
+
+      &:hover,
+      &:focus {
+        --background-checked: #{tp-feedback($color)};
+        --border-color: #{tp-feedback($color)};
+      }
+    }
+  }
+}

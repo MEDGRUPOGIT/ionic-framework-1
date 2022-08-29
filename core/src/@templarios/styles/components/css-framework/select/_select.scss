@@ -1,40 +1,192 @@
-[tp-select] {
-  --placeholder-color: hsl(var(--med-color-neutral-6));
-  --placeholder-opacity: 1;
-
-  width: 100%;
-  border: none;
-  margin-top: 0px;
-  color: hsl(var(--med-color-neutral-10));
-  font-size: 14px;
-  line-height: 16px;
-  background: hsl(var(--med-color-neutral-2));
-  border-radius: 8px;
-  height: 40px;
-
-  &:focus {
-    outline: none;
-  }
-
-  & ~ .med-icon {
-    height: 24px;
-    width: 24px;
-    stroke: hsl(var(--med-color-neutral-6));
-  }
-}
-
-.sc-tp-input-container-h {
+[tp-container-select] {
   --padding-end: 8px;
   --padding-start: 16px;
   --padding-bottom: 12px;
   --padding-top: 12px;
 
+  cursor: pointer;
   padding-top: var(--padding-top);
   padding-bottom: var(--padding-bottom);
   padding-left: var(--padding-start);
   padding-right: var(--padding-end);
+  background: hsl(var(--med-color-neutral-2));
+  color: hsl(var(--med-color-neutral-10));
+  border-radius: 8px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-[tp-label] ~ .sc-tp-input-container-h {
+[tp-select] {
+  --placeholder-color: hsl(var(--med-color-neutral-6));
+
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  margin-top: 0px;
+  opacity: 1;
+
+  font-size: 14px;
+  line-height: 16px;
+  background: hsl(var(--med-color-neutral-2));
+
+  &:focus {
+    outline: none;
+  }
+
+  &[placeholder] {
+    color: var(--placeholder-color);
+  }
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+[tp-label] ~ [tp-container-select] {
   margin-top: 8px;
+}
+
+.med-icon {
+  height: 24px;
+  width: 24px;
+  stroke: hsl(var(--med-color-neutral-6));
+}
+
+//
+// name
+//
+[tp-container-select][ds-name="secondary"],
+[tp-select][ds-name="secondary"] {
+  background: hsl(var(--med-color-neutral-3));
+}
+
+//
+// disabled
+//
+[tp-container-select][disabled],
+[tp-select][disabled] {
+  cursor: default;
+}
+
+[tp-select][disabled] {
+  &[placeholder],
+  & ~ .med-icon {
+    opacity: 0.4;
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color([tp-container-select], $color, $i) {
+      color: #{tp-contrast-color($i)};
+      background: #{tp-color($color, $i)};
+
+      .med-icon {
+        stroke: #{tp-contrast-color($i)};
+      }
+    }
+  }
+}
+
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color([tp-select], $color, $i) {
+      color: #{tp-contrast-color($i)};
+      background: #{tp-color($color, $i)};
+
+      &[placeholder] {
+        --placeholder-color: #{tp-contrast-color($i)};
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(
+    [tp-container-select],
+    neutral-#{$i},
+    $i
+  ) {
+    color: #{tp-contrast-neutral($i)};
+    background: #{tp-neutral($i)};
+
+    .med-icon {
+      stroke: #{tp-contrast-neutral($i)};
+    }
+  }
+}
+
+@for $i from 1 through 9 {
+  @include generate-component-neutral(
+    [tp-container-select],
+    neutral-#{$i}#{5},
+    $i
+  ) {
+    color: #{tp-contrast-neutral($i)};
+    background: #{tp-neutral($i, 5)};
+
+    .med-icon {
+      stroke: #{tp-contrast-neutral($i)};
+    }
+  }
+}
+
+@for $i from 1 through 10 {
+  @include generate-component-neutral([tp-select], neutral-#{$i}, $i) {
+    &[placeholder] {
+      --placeholder-color: #{tp-contrast-neutral($i)};
+    }
+
+    color: #{tp-contrast-neutral($i)};
+    background: #{tp-neutral($i)};
+  }
+}
+
+@for $i from 1 through 9 {
+  @include generate-component-neutral([tp-select], neutral-#{$i}#{5}, $i) {
+    &[placeholder] {
+      --placeholder-color: #{tp-contrast-neutral($i)};
+    }
+
+    color: #{tp-contrast-neutral($i)};
+    background: #{tp-neutral($i, 5)};
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(
+    [tp-container-select],
+    fb-#{$color},
+    $color
+  ) {
+    color: hsl(var(--med-color-neutral-1));
+    background: #{tp-feedback($color)};
+
+    .med-icon {
+      stroke: hsl(var(--med-color-neutral-1));
+    }
+  }
+}
+
+@each $color in $tp-feedback {
+  @include generate-component-feedback([tp-select], fb-#{$color}, $color) {
+    &[placeholder] {
+      --placeholder-color: hsl(var(--med-color-neutral-1));
+    }
+
+    color: hsl(var(--med-color-neutral-1));
+    background: #{tp-feedback($color)};
+  }
 }

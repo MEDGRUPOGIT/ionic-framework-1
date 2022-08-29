@@ -9,22 +9,32 @@ export default {
 
 const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled }) => {
   return html`
-    <p tp-label token="p14" for="tp-input">Description:</p>
-    <tp-input-container
-      .dsColor=${dsColor}
+    <p tp-label token="p14" for="tp-select">Description:</p>
+    <div
+      tp-container-select
+      ds-color=${dsColor}
       ds-name=${dsName}
-      .disabled=${disabled}
-      has-icon="end"
+      ?disabled=${disabled}
     >
       <select
         tp-select
+        id="tp-select"
         ds-color=${dsColor}
         ds-name=${dsName}
         .disabled=${disabled}
         placeholder="Lorem ipsum dolor"
-      ></select>
-      <ion-icon class="med-icon" slot="end" name="med-baixo"></ion-icon>
-    </tp-input-container>
+      >
+        <option placeholder value="" disabled selected>
+          Lorem ipsum dolor
+        </option>
+        <option>Lorem ipsum dolor 1</option>
+        <option>Lorem ipsum dolor 2</option>
+        <option>Lorem ipsum dolor 3</option>
+        <option>Lorem ipsum dolor 4</option>
+        <option>Lorem ipsum dolor 5</option>
+      </select>
+      <ion-icon class="med-icon" name="med-baixo"></ion-icon>
+    </div>
   `;
 };
 

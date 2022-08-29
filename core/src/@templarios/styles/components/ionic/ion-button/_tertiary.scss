@@ -1,4 +1,4 @@
-ion-button[fill='clear'] {
+ion-button[fill="clear"] {
   --background: transparent;
   --background-activated: transparent;
   --background-focused: transparent;
@@ -35,37 +35,49 @@ ion-button[fill='clear'] {
     ion-icon {
       stroke: var(--color-hover);
     }
+
+    &[icon-only] {
+      ion-icon {
+        stroke: hsl(var(--med-color-neutral-10));
+      }
+    }
+  }
+
+  &:active {
+    &[icon-only] {
+      --background: hsla(var(--med-color-neutral-10), 0.16);
+    }
   }
 }
 
 //
 // size
 //
-ion-button[fill='clear'] {
-  &[ds-size='sm'] {
+ion-button[fill="clear"] {
+  &[ds-size="sm"] {
     --padding-top: 12px;
     --padding-bottom: 12px;
   }
 
-  &[ds-size='xs'] {
+  &[ds-size="xs"] {
     --padding-top: 8px;
     --padding-bottom: 8px;
     --padding-start: 12px;
     --padding-end: 12px;
-  }
 
-  &[ds-size='xxs'] {
-    --padding-top: 2px;
-    --padding-bottom: 2px;
-    --padding-start: 12px;
-    --padding-end: 12px;
+    &[ds-size="xxs"] {
+      --padding-top: 2px;
+      --padding-bottom: 2px;
+      --padding-start: 12px;
+      --padding-end: 12px;
+    }
   }
 }
 
 //
 // icon-only
 //
-ion-button[fill='clear'][icon-only] {
+ion-button[fill="clear"][icon-only] {
   --background-activated: hsla(var(--med-color-neutral-10), 0.16);
   --background-focused: hsla(var(--med-color-neutral-10), 0.16);
   --background-hover: hsla(var(--med-color-neutral-10), 0.08);
@@ -85,7 +97,7 @@ ion-button[fill='clear'][icon-only] {
     font-size: 32px;
   }
 
-  &[ds-size='lg'] {
+  &[ds-size="lg"] {
     --padding-top: 0;
     --padding-bottom: 0;
     --padding-start: 0;
@@ -99,7 +111,7 @@ ion-button[fill='clear'][icon-only] {
     }
   }
 
-  &[ds-size='sm'] {
+  &[ds-size="sm"] {
     --padding-top: 0;
     --padding-bottom: 0;
     --padding-start: 0;
@@ -108,7 +120,7 @@ ion-button[fill='clear'][icon-only] {
     width: 40px;
   }
 
-  &[ds-size='xs'] {
+  &[ds-size="xs"] {
     --padding-top: 0;
     --padding-bottom: 0;
     --padding-start: 0;
@@ -121,7 +133,7 @@ ion-button[fill='clear'][icon-only] {
     }
   }
 
-  &[ds-size='xxs'] {
+  &[ds-size="xxs"] {
     --padding-top: 0;
     --padding-bottom: 0;
     --padding-start: 0;
@@ -134,7 +146,7 @@ ion-button[fill='clear'][icon-only] {
     }
   }
 
-  &[ds-size='xxxs'] {
+  &[ds-size="xxxs"] {
     --padding-top: 0;
     --padding-bottom: 0;
     --padding-start: 0;
@@ -154,7 +166,7 @@ ion-button[fill='clear'][icon-only] {
 @each $color in $tp-color {
   @for $i from 1 through 5 {
     @include generate-component-color(ion-button, $color, $i) {
-      &[fill='clear'] {
+      &[fill="clear"] {
         --color-activated: #{tp-color($color, 3)};
         --color-focused: #{tp-color($color, 3)};
         --color-hover: #{tp-color($color, 3)};
@@ -173,7 +185,7 @@ ion-button[fill='clear'][icon-only] {
 //
 @for $i from 1 through 10 {
   @include generate-component-neutral(ion-button, neutral-#{$i}, $i) {
-    &[fill='clear'] {
+    &[fill="clear"] {
       --color: #{tp-neutral($i)};
       --color-activated: #{tp-neutral($i)};
       --color-focused: #{tp-neutral($i)};
@@ -183,12 +195,18 @@ ion-button[fill='clear'][icon-only] {
         --background: transparent;
         --color: hsl(var(--med-color-neutral-5));
       }
+
+      &:hover {
+        ion-icon {
+          stroke: var(--color-hover);
+        }
+      }
     }
   }
 }
 @for $i from 1 through 9 {
   @include generate-component-neutral(ion-button, neutral-#{$i}#{5}, $i) {
-    &[fill='clear'] {
+    &[fill="clear"] {
       --color: #{tp-neutral($i, 5)};
       --color-activated: #{tp-neutral($i, 5)};
       --color-focused: #{tp-neutral($i, 5)};
@@ -197,6 +215,12 @@ ion-button[fill='clear'][icon-only] {
       &[disabled] {
         --background: transparent;
         --color: hsl(var(--med-color-neutral-5));
+      }
+
+      &:hover {
+        ion-icon {
+          stroke: var(--color-hover);
+        }
       }
     }
   }
@@ -207,7 +231,7 @@ ion-button[fill='clear'][icon-only] {
 //
 @each $color in $tp-feedback {
   @include generate-component-feedback(ion-button, fb-#{$color}, $color) {
-    &[fill='clear'] {
+    &[fill="clear"] {
       --color: #{tp-feedback($color)};
       --color-activated: #{tp-feedback($color)};
       --color-focused: #{tp-feedback($color)};
@@ -216,6 +240,12 @@ ion-button[fill='clear'][icon-only] {
       &[disabled] {
         --background: transparent;
         --color: hsl(var(--med-color-neutral-5));
+      }
+
+      &:hover {
+        ion-icon {
+          stroke: var(--color-hover);
+        }
       }
     }
   }
