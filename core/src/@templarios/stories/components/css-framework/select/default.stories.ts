@@ -10,20 +10,15 @@ export default {
 const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled }) => {
   return html`
     <p tp-label token="p14" for="tp-select">Description:</p>
+
     <div
       tp-container-select
       ds-color=${dsColor}
       ds-name=${dsName}
       ?disabled=${disabled}
+    
     >
-      <select
-        tp-select
-        id="tp-select"
-        ds-color=${dsColor}
-        ds-name=${dsName}
-        .disabled=${disabled}
-        placeholder="Lorem ipsum dolor"
-      >
+      <select tp-select id="tp-select" placeholder="Lorem ipsum dolor">
         <option placeholder value="" disabled selected>
           Lorem ipsum dolor
         </option>
@@ -33,7 +28,101 @@ const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled }) => {
         <option>Lorem ipsum dolor 4</option>
         <option>Lorem ipsum dolor 5</option>
       </select>
-      <ion-icon class="med-icon" name="med-baixo"></ion-icon>
+      <div tp-select-header>
+        <p tp-label token="p14">Lorem ipsum dolor</p>
+        <ion-icon class="med-icon" name="med-baixo"></ion-icon>
+      </div>
+      <div tp-select-content>
+        <ul tp-select-list>
+          <li tp-select-item>
+            <p tp-label token="p14">Lorem ipsum dolor 1</p>
+          </li>
+          <li tp-select-item>
+            <p tp-label token="p14">Lorem ipsum dolor 2</p>
+          </li>
+          <li tp-select-item>
+            <p tp-label token="p14">Lorem ipsum dolor 3</p>
+          </li>
+          <li tp-select-item>
+            <p tp-label token="p14">Lorem ipsum dolor 4</p>
+          </li>
+          <li tp-select-item>
+            <p tp-label token="p14">Lorem ipsum dolor 5</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <p tp-label token="p14" for="tp-select">Description:</p>
+
+    <div
+      tp-container-select
+      ds-color=${dsColor}
+      ds-name=${dsName}
+      ?disabled=${disabled}
+      class="open"
+    >
+      <select tp-select id="tp-select" placeholder="Lorem ipsum dolor">
+        <option placeholder value="" disabled selected>
+          Lorem ipsum dolor
+        </option>
+        <option>Lorem ipsum dolor 1</option>
+        <option>Lorem ipsum dolor 2</option>
+        <option>Lorem ipsum dolor 3</option>
+        <option>Lorem ipsum dolor 4</option>
+        <option>Lorem ipsum dolor 5</option>
+      </select>
+      <div tp-select-header>
+        <p tp-label token="p14">Lorem ipsum dolor</p>
+        <ion-icon class="med-icon" name="med-baixo"></ion-icon>
+      </div>
+      <div tp-select-content>
+        <ul tp-select-list>
+          <li tp-select-item>
+            <p tp-label token="p14">Lorem ipsum dolor 1</p>
+          </li>
+          <li tp-select-item>
+            <p tp-label token="p14">Lorem ipsum dolor 2</p>
+          </li>
+          <li tp-select-item>
+            <p tp-label token="p14">Lorem ipsum dolor 3</p>
+          </li>
+          <li tp-select-item>
+            <p tp-label token="p14">Lorem ipsum dolor 4</p>
+          </li>
+          <li tp-select-item>
+            <p tp-label token="p14">Lorem ipsum dolor 5</p>
+          </li>
+          <li tp-select-item>
+          <p tp-label token="p14">Lorem ipsum dolor 6</p>
+          </li>
+          <li tp-select-item>
+            <p tp-label token="p14">Lorem ipsum dolor 7</p>
+          </li>
+          <li tp-select-item>
+            <p tp-label token="p14">Lorem ipsum dolor 8</p>
+          </li>
+          <li tp-select-item>
+            <p tp-label token="p14">Lorem ipsum dolor 9</p>
+          </li>
+          <li tp-select-item>
+            <p tp-label token="p14">Lorem ipsum dolor 10</p>
+          </li>
+          <li tp-select-item>
+            <p tp-label token="p14">Lorem ipsum dolor 11</p>
+          </li>
+          <li tp-select-item>
+          <p tp-label token="p14">Lorem ipsum dolor 12</p>
+          </li>
+        </ul>
+      </div>
     </div>
   `;
 };

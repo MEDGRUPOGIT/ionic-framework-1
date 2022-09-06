@@ -22,20 +22,26 @@ const Template = ({ "ds-color": dsColor, disabled }) => {
 
     <section>
       <div tp-container-checkbox ?disabled=${disabled} ds-color=${dsColor}>
-        <input type="checkbox" tp-checkbox id="tp-checkbox-value-1">  </input>
+        <input tp-checkbox type="checkbox" id="tp-checkbox-value-1">
+        </input>
         <label tp-label token="p14" for="tp-checkbox-value-1">
-          Value 1
-          <ion-icon class="med-icon" name="med-check"></ion-icon>
+          <div tp-checkbox-frame>
+            <ion-icon class="med-icon" name="med-check"></ion-icon>  
+          </div>            
+          Value 1          
         </label>
       </div>
 
-      <div tp-container-checkbox inverted ?disabled=${disabled} ds-color=${dsColor}>
-        <input type="checkbox" tp-checkbox id="tp-checkbox-value-2">  </input>
+      <div tp-container-checkbox ?disabled=${disabled} ds-color=${dsColor} inverted>
+        <input tp-checkbox type="checkbox" id="tp-checkbox-value-2">
+        </input>
         <label tp-label token="p14" for="tp-checkbox-value-2">
-          Value 2
-          <ion-icon class="med-icon" name="med-check"></ion-icon>
+          <div tp-checkbox-frame>
+            <ion-icon class="med-icon" name="med-check"></ion-icon>  
+          </div>            
+          Value 2          
         </label>
-      </div>
+      </div>     
     </section>
   `;
 };

@@ -1,80 +1,112 @@
 [tp-container-select] {
-  --padding-end: 8px;
-  --padding-start: 16px;
-  --padding-bottom: 12px;
-  --padding-top: 12px;
+  --padding: 12px 8px 12px 16px;
+  --background: hsl(var(--med-color-neutral-2));
+  --color: hsl(var(--med-color-neutral-10));
+  --border-radius: 8px;
+  --height: 40px;
+  --padding-item: 12px 16px;
+  --border-color: hsl(var(--med-color-neutral-4));
+  --background-list: hsl(var(--med-color-neutral-3));
+  --border-radius-list: 0 0 8px 8px;
+  --display-content: none;
+  --stroke: hsl(var(--med-color-neutral-6));
 
+  position: relative;
+
+  [tp-select] {
+    display: none;
+  }
+
+  .med-icon {
+    height: 24px;
+    width: 24px;
+    stroke: var(--stroke);
+  }
+}
+
+[tp-label] {
+  color: var(--color);
+
+  &+[tp-container-select] {
+    margin-top: 8px;
+  }
+}
+
+[tp-select-header] {
   cursor: pointer;
-  padding-top: var(--padding-top);
-  padding-bottom: var(--padding-bottom);
-  padding-left: var(--padding-start);
-  padding-right: var(--padding-end);
-  background: hsl(var(--med-color-neutral-2));
-  color: hsl(var(--med-color-neutral-10));
-  border-radius: 8px;
-  height: 40px;
+  padding: var(--padding);
+  background: var(--background);
+  color: var(--color);
+  border-radius: var(--border-radius);
+  height: var(--height);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-[tp-select] {
-  --placeholder-color: hsl(var(--med-color-neutral-6));
-
-  cursor: pointer;
+[tp-select-content] {
+  display: var(--display-content);
+  position: absolute;
+  left: 0;
+  top: 40px;
   width: 100%;
-  border: none;
-  margin-top: 0px;
-  opacity: 1;
+  z-index: 10;
 
-  font-size: 14px;
-  line-height: 16px;
-  background: hsl(var(--med-color-neutral-2));
-
-  &:focus {
-    outline: none;
+  [tp-select-list] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: var(--background-list);
+    border-radius: var(--border-radius-list);
+    max-height: 224px;
+    overflow: auto;
   }
 
-  &[placeholder] {
-    color: var(--placeholder-color);
+  [tp-select-item] {
+    padding: var(--padding-item);
+    cursor: pointer;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--border-color);
+    }
   }
 }
 
-select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-}
+//
+// open
+//
+[tp-container-select].open {
+  [tp-select-header] {
+    --border-radius: 8px 8px 0 0;
+  }
 
-[tp-label] ~ [tp-container-select] {
-  margin-top: 8px;
-}
+  .med-icon {
+    transform: rotate(180deg);
+  }
 
-.med-icon {
-  height: 24px;
-  width: 24px;
-  stroke: hsl(var(--med-color-neutral-6));
+  [tp-select-content] {
+    --display-content: block;
+  }
 }
 
 //
 // name
 //
-[tp-container-select][ds-name="secondary"],
-[tp-select][ds-name="secondary"] {
-  background: hsl(var(--med-color-neutral-3));
+[tp-container-select][ds-name="secondary"] {
+  --background: hsl(var(--med-color-neutral-3));
+  --background-list: hsl(var(--med-color-neutral-4));
+  --border-color: hsl(var(--med-color-neutral-5));
 }
 
 //
 // disabled
 //
-[tp-container-select][disabled],
-[tp-select][disabled] {
-  cursor: default;
-}
+[tp-container-select][disabled] {
+  opacity: 0.4;
 
-[tp-select][disabled] {
-  &[placeholder],
-  & ~ .med-icon {
-    opacity: 0.4;
+  [tp-select-header],
+  [tp-select-item] {
+    cursor: default;
   }
 }
 
@@ -84,25 +116,11 @@ select {
 @each $color in $tp-color {
   @for $i from 1 through 5 {
     @include generate-component-color([tp-container-select], $color, $i) {
-      color: #{tp-contrast-color($i)};
-      background: #{tp-color($color, $i)};
-
-      .med-icon {
-        stroke: #{tp-contrast-color($i)};
-      }
-    }
-  }
-}
-
-@each $color in $tp-color {
-  @for $i from 1 through 5 {
-    @include generate-component-color([tp-select], $color, $i) {
-      color: #{tp-contrast-color($i)};
-      background: #{tp-color($color, $i)};
-
-      &[placeholder] {
-        --placeholder-color: #{tp-contrast-color($i)};
-      }
+      --background: #{tp-color($color, $i)};
+      --color: #{tp-contrast-color($i)};
+      --border-color: #{tp-contrast-color($i)};
+      --background-list: #{tp-color($color, 4)};
+      --stroke: #{tp-contrast-color($i)};
     }
   }
 }
@@ -111,54 +129,28 @@ select {
 // neutral
 //
 @for $i from 1 through 10 {
-  @include generate-component-neutral(
-    [tp-container-select],
+
+  @include generate-component-neutral([tp-container-select],
     neutral-#{$i},
-    $i
-  ) {
-    color: #{tp-contrast-neutral($i)};
-    background: #{tp-neutral($i)};
-
-    .med-icon {
-      stroke: #{tp-contrast-neutral($i)};
-    }
+    $i ) {
+    --background: #{tp-neutral($i)};
+    --color: #{tp-contrast-neutral($i)};
+    --border-color: #{tp-contrast-neutral($i)};
+    --background-list: #{tp-neutral($i + 1)};
+    --stroke: #{tp-contrast-neutral($i)};
   }
 }
 
 @for $i from 1 through 9 {
-  @include generate-component-neutral(
-    [tp-container-select],
+
+  @include generate-component-neutral([tp-container-select],
     neutral-#{$i}#{5},
-    $i
-  ) {
-    color: #{tp-contrast-neutral($i)};
-    background: #{tp-neutral($i, 5)};
-
-    .med-icon {
-      stroke: #{tp-contrast-neutral($i)};
-    }
-  }
-}
-
-@for $i from 1 through 10 {
-  @include generate-component-neutral([tp-select], neutral-#{$i}, $i) {
-    &[placeholder] {
-      --placeholder-color: #{tp-contrast-neutral($i)};
-    }
-
-    color: #{tp-contrast-neutral($i)};
-    background: #{tp-neutral($i)};
-  }
-}
-
-@for $i from 1 through 9 {
-  @include generate-component-neutral([tp-select], neutral-#{$i}#{5}, $i) {
-    &[placeholder] {
-      --placeholder-color: #{tp-contrast-neutral($i)};
-    }
-
-    color: #{tp-contrast-neutral($i)};
-    background: #{tp-neutral($i, 5)};
+    $i ) {
+    --background: #{tp-neutral($i)};
+    --color: #{tp-contrast-neutral($i)};
+    --border-color: #{tp-contrast-neutral($i)};
+    --background-list: #{tp-neutral($i + 1)};
+    --stroke: #{tp-contrast-neutral($i)};
   }
 }
 
@@ -166,27 +158,14 @@ select {
 // feedback
 //
 @each $color in $tp-feedback {
-  @include generate-component-feedback(
-    [tp-container-select],
+
+  @include generate-component-feedback([tp-container-select],
     fb-#{$color},
-    $color
-  ) {
-    color: hsl(var(--med-color-neutral-1));
-    background: #{tp-feedback($color)};
-
-    .med-icon {
-      stroke: hsl(var(--med-color-neutral-1));
-    }
-  }
-}
-
-@each $color in $tp-feedback {
-  @include generate-component-feedback([tp-select], fb-#{$color}, $color) {
-    &[placeholder] {
-      --placeholder-color: hsl(var(--med-color-neutral-1));
-    }
-
-    color: hsl(var(--med-color-neutral-1));
-    background: #{tp-feedback($color)};
+    $color ) {
+    --background: #{tp-feedback($color)};
+    --color: hsl(var(--med-color-neutral-1));
+    --border-color: hsl(var(--med-color-neutral-1));
+    --background-list: #{tp-feedback($color)};
+    --stroke: hsl(var(--med-color-neutral-1));
   }
 }

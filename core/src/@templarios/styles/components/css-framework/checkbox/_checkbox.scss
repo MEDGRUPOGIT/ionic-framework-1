@@ -7,32 +7,42 @@
   --background-checked: hsl(var(--med-color-brand-4));
   --checkmark-color: hsl(var(--med-color-neutral-2));
   --border-radius: 4px;
-  --size: 16px;
+  --size: 20px;
+  --size-icon: 16px;
   --transition: background-color 300ms ease-out, border-color 300ms ease-out;
+  --transition-icon: opacity 300ms ease-out;
   --margin: 0 8px 0 0;
-  --top: 50%;
-  --left: 0;
-  --right: 0;
-  --left-icon: 1px;
-  --right-icon: 0;
+  --opacity-icon: 0;
 
   display: flex;
   align-items: center;
-  position: relative;
-  width: 100%;
 
   [tp-label] {
+    display: flex;
+    align-items: center;
     width: 100%;
   }
 
-  .med-icon {
-    height: 19px;
-    width: 19px;
-    stroke: transparent;
-    position: absolute;
-    top: var(--top);
-    left: var(--left-icon);
-    transform: translate(0, -50%);
+  [tp-checkbox-frame] {
+    height: var(--size);
+    width: var(--size);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--border-color);
+    background: var(--background);
+    margin: var(--margin);
+    transition: var(--transition);
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .med-icon {
+      height: var(--size-icon);
+      width: var(--size-icon);
+      stroke: var(--checkmark-color);
+      opacity: var(--opacity-icon);
+      transition: var(--transition-icon);
+    }
   }
 }
 
@@ -41,30 +51,15 @@
 
   & + [tp-label] {
     cursor: pointer;
-
-    &::before {
-      content: "";
-      margin: var(--margin);
-      height: var(--size);
-      width: var(--size);
-      border-radius: var(--border-radius);
-      border: 2px solid var(--border-color);
-      background-color: var(--background);
-      display: inline-block;
-      vertical-align: middle;
-      transition: var(--transition);
-    }
   }
 
   &:checked + [tp-label] {
-    &::before {
+    [tp-checkbox-frame] {
       --background: var(--background-checked);
 
-      border: 2px solid var(--border-color-checked);
-    }
-
-    .med-icon {
-      stroke: var(--checkmark-color);
+      .med-icon {
+        --opacity-icon: 1;
+      }
     }
   }
 }
@@ -72,19 +67,10 @@
 //
 // inverted
 //
-[inverted] [tp-checkbox] {
-  & + [tp-label]::before {
-    --margin: 0;
-    position: absolute;
-    top: var(--top);
-    right: var(--right);
-    transform: translate(0, -50%);
-  }
+[inverted] [tp-checkbox] + [tp-label] [tp-checkbox-frame] {
+  --margin: 0 0 0 auto;
 
-  &:checked + [tp-label] .med-icon {
-    --left-icon: auto;
-    right: var(--right-icon);
-  }
+  order: 1;
 }
 
 //
