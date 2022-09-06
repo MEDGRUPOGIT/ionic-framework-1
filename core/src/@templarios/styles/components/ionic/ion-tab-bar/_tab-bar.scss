@@ -1,5 +1,6 @@
 ion-tab-bar {
   --background: hsl(var(--med-color-neutral-1));
+  padding: 8px 12px;
 }
 
 //
@@ -33,6 +34,7 @@ ion-tab-bar {
     }
   }
 }
+
 @for $i from 1 through 9 {
   @include generate-component-neutral(ion-tab-bar, neutral-#{$i}#{5}, $i) {
     --background: #{tp-neutral($i, 5)};

@@ -108,6 +108,24 @@ ion-button[fill="clear"][icon-only] {
 
     ion-icon {
       font-size: 48px;
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &[ds-size="md"] {
+    --padding-top: 0;
+    --padding-bottom: 0;
+    --padding-start: 0;
+    --padding-end: 0;
+
+    width: 48px;
+    height: 48px;
+
+    ion-icon {
+      font-size: 32px;
+      width: 32px;
+      height: 32px;
     }
   }
 
@@ -118,6 +136,13 @@ ion-button[fill="clear"][icon-only] {
     --padding-end: 0;
 
     width: 40px;
+    height: 40px;
+
+    ion-icon {
+      font-size: 24px;
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &[ds-size="xs"] {
@@ -127,9 +152,12 @@ ion-button[fill="clear"][icon-only] {
     --padding-end: 0;
 
     width: 32px;
+    height: 32px;
 
     ion-icon {
       font-size: 24px;
+      width: 24px;
+      height: 24px;
     }
   }
 
@@ -140,9 +168,12 @@ ion-button[fill="clear"][icon-only] {
     --padding-end: 0;
 
     width: 24px;
+    height: 24px;
 
     ion-icon {
       font-size: 24px;
+      width: 24px;
+      height: 24px;
     }
   }
 
@@ -153,9 +184,12 @@ ion-button[fill="clear"][icon-only] {
     --padding-end: 0;
 
     width: 16px;
+    height: 16px;
 
     ion-icon {
       font-size: 16px;
+      width: 16px;
+      height: 16px;
     }
   }
 }
@@ -204,6 +238,7 @@ ion-button[fill="clear"][icon-only] {
     }
   }
 }
+
 @for $i from 1 through 9 {
   @include generate-component-neutral(ion-button, neutral-#{$i}#{5}, $i) {
     &[fill="clear"] {

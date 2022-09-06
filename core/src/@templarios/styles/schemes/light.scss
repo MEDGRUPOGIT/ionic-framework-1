@@ -26,3 +26,20 @@
   --color-luminosity-mutable-1: var(--luminosity-fator-2, 0%);
   --color-luminosity-mutable-2: var(--luminosity-fator-1, 0%);
 }
+
+//
+// extensivo
+//
+.scheme-light,
+[color-scheme="light"] {
+  &.theme-extensivo {
+    --brand-hue: 128;
+    --neutral-hue: 188;
+    --color-saturation: 45%;
+    --color-luminosity-1: 45%;
+    --color-luminosity-2: 45%;
+    --color-luminosity-3: 45%;
+    --color-luminosity-4: 45%;
+    --color-luminosity-5: 45%;
+  }
+}

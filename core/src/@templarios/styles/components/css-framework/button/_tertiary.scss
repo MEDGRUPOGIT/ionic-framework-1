@@ -66,6 +66,42 @@
 }
 
 //
+// icon-only tertiary
+//
+[tp-button][fill="clear"][icon-only] {
+  &[ds-size="lg"] {
+    --height: 64px;
+    --width: 64px;
+    --height-icon: 48px;
+    --width-icon: 48px;
+  }
+
+  &[ds-size="md"] {
+    --height-icon: 32px;
+    --width-icon: 32px;
+  }
+
+  &[ds-size="xxs"] {
+    --height: 24px;
+    --width: 24px;
+    --padding: 0;
+
+    .med-icon {
+      --height-icon: 24px;
+      --width-icon: 24px;
+    }
+  }
+
+  &[ds-size="xxxs"] {
+    --height: 16px;
+    --width: 16px;
+    --height-icon: 16px;
+    --width-icon: 16px;
+    --padding: 0;
+  }
+}
+
+//
 // color
 //
 @each $color in $tp-color {
