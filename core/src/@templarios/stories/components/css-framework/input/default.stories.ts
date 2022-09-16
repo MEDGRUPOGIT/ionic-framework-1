@@ -7,7 +7,7 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled }) => {
+const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled, state }) => {
   return html`
       <p tp-label token="p14"> Description: </p>
       <input
@@ -15,6 +15,7 @@ const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled }) => {
           ds-color=${dsColor}
           ds-name=${dsName}
           .disabled=${disabled}
+          state=${state}
           placeholder="Lorem ipsum dolor"
       ></input>
     `;
@@ -55,6 +56,16 @@ Default.argTypes = {
     description: "Define o estado disabled do componente.",
     table: {
       type: { summary: "boolean" },
+      defaultValue: { summary: "undefined" },
+    },
+  },
+  "state": {
+    options: [undefined, "attention", "caution", "warning", "success"],
+    control: { type: "select" },
+    description: "Define o estado de feedback do componente.",
+    defaultValue: undefined,
+    table: {
+      type: { summary: "attention | caution | warning | success | undefined" },
       defaultValue: { summary: "undefined" },
     },
   },

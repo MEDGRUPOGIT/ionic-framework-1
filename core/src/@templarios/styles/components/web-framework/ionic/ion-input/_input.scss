@@ -1,0 +1,12 @@
+.templarios-web {
+  ion-input {
+    &.sc-ion-input-md-h {
+      height: 48px;
+
+      + ion-label {
+        display: block;
+        margin-top: 8px;
+      }
+    }
+  }
+}

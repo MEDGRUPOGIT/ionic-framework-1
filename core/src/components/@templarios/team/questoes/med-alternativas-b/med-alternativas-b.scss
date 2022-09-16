@@ -114,6 +114,8 @@
 :host(.med-alternativas) .med-alternativas__progress-bar--toggle {
   opacity: 1;
   transform: translateX(0);
+  display: flex;
+  justify-content: space-between;
 }
 
 :host(.med-alternativas) .med-alternativas__item--selecionada {
@@ -165,6 +167,7 @@
 // ////////////////////
 
 :host(.med-alternativas) .med-alternativas__item--riscado {
+
   .med-alternativas__left,
   .med-alternativas__right {
     opacity: 0.5;

@@ -14,7 +14,7 @@
 .med-chart-bar-horizontal {
   &__container {
     position: relative;
-    width: 100%;
+    width: calc(100% - 62px);
     border-radius: var(--border-radius);
     overflow: hidden;
   }
@@ -48,6 +48,7 @@
     --line-height: 12px;
     min-width: 40px;
     text-align: right;
+    white-space: nowrap;
   }
 }
 
@@ -95,13 +96,13 @@
 :host(.med-chart-bar-horizontal--spill) .med-chart-bar-horizontal {
   &__progress {
     background-image: linear-gradient(-45deg,
-    color('brand', '4') 50%,
-    color('neutral', '2', null, 0.2) 50%,
-    color('neutral', '2', null, 0.2) 75%,
-    color('brand', '4') 75%,
-    color('brand', '4') 100%,
-    color('neutral', '2', null, 0.2) 100%,
-    color('neutral', '2', null, 0.2) 100%);
+        color('brand', '4') 50%,
+        color('neutral', '2', null, 0.2) 50%,
+        color('neutral', '2', null, 0.2) 75%,
+        color('brand', '4') 75%,
+        color('brand', '4') 100%,
+        color('neutral', '2', null, 0.2) 100%,
+        color('neutral', '2', null, 0.2) 100%);
     background-size: 24.04px 24.04px;
   }
 }
@@ -114,13 +115,13 @@
   &__progress {
     --label-color: #{curr-color('color', '4')};
     background-image: linear-gradient(-45deg,
-      curr-color('color', '4') 50%,
-      color('neutral', '2', null, 0.2) 50%,
-      color('neutral', '2', null, 0.2) 75%,
-      curr-color('color', '4') 75%,
-      curr-color('color', '4') 100%,
-      color('neutral', '2', null, 0.2) 100%,
-      color('neutral', '2', null, 0.2) 100%);
+        curr-color('color', '4') 50%,
+        color('neutral', '2', null, 0.2) 50%,
+        color('neutral', '2', null, 0.2) 75%,
+        curr-color('color', '4') 75%,
+        curr-color('color', '4') 100%,
+        color('neutral', '2', null, 0.2) 100%,
+        color('neutral', '2', null, 0.2) 100%);
   }
 }
 
@@ -128,13 +129,13 @@
   &__progress {
     --label-color: #{curr-color('neutral')};
     background-image: linear-gradient(-45deg,
-      curr-color('neutral') 50%,
-      color('neutral', '2', null, 0.2) 50%,
-      color('neutral', '2', null, 0.2) 75%,
-      curr-color('neutral') 75%,
-      curr-color('neutral') 100%,
-      color('neutral', '2', null, 0.2) 100%,
-      color('neutral', '2', null, 0.2) 100%);
+        curr-color('neutral') 50%,
+        color('neutral', '2', null, 0.2) 50%,
+        color('neutral', '2', null, 0.2) 75%,
+        curr-color('neutral') 75%,
+        curr-color('neutral') 100%,
+        color('neutral', '2', null, 0.2) 100%,
+        color('neutral', '2', null, 0.2) 100%);
   }
 }
 
@@ -142,13 +143,13 @@
   &__progress {
     --label-color: #{curr-color('feedback')};
     background-image: linear-gradient(-45deg,
-      curr-color('feedback') 50%,
-      color('neutral', '2', null, 0.2) 50%,
-      color('neutral', '2', null, 0.2) 75%,
-      curr-color('feedback') 75%,
-      curr-color('feedback') 100%,
-      color('neutral', '2', null, 0.2) 100%,
-      color('neutral', '2', null, 0.2) 100%);
+        curr-color('feedback') 50%,
+        color('neutral', '2', null, 0.2) 50%,
+        color('neutral', '2', null, 0.2) 75%,
+        curr-color('feedback') 75%,
+        curr-color('feedback') 100%,
+        color('neutral', '2', null, 0.2) 100%,
+        color('neutral', '2', null, 0.2) 100%);
   }
 }
 

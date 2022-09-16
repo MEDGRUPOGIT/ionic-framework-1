@@ -77,8 +77,8 @@
 }
 
 :host(.med-alternativas) .med-alternativas__riscar-icon {
-    stroke: #{color('neutral', '10')};
-    --ionicon-stroke-width: 1px;
+  stroke: #{color('neutral', '10')};
+  --ionicon-stroke-width: 1px;
 }
 
 :host(.med-alternativas) .med-alternativas__list--has-image {
@@ -117,6 +117,8 @@
 :host(.med-alternativas) .med-alternativas__progress-bar--toggle {
   opacity: 1;
   transform: translateX(0);
+  display: flex;
+  justify-content: space-between;
 }
 
 :host(.med-alternativas) .med-alternativas__item--selecionada .option {
@@ -171,6 +173,7 @@
 }
 
 :host(.med-alternativas) .med-alternativas__item--riscado {
+
   .med-alternativas__left,
   .med-alternativas__right,
   .med-alternativas__progress-bar {

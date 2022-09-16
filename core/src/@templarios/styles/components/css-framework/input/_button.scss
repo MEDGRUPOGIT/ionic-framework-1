@@ -1,4 +1,7 @@
 [tp-container-input] {
+    --border-container: 1px solid transparent;
+    border: var(--border-container);
+
   [tp-input]:not(:first-child) {
     margin: 0;
   }
@@ -6,6 +9,25 @@
   [tp-button] {
     margin: 0 8px;
   }
+}
+
+//
+// state
+//
+[tp-container-input][state="attention"] {
+  --border-container: 1px solid hsl(var(--med-color-fb-attention));  
+}
+
+[tp-container-input][state="caution"] {
+  --border-container: 1px solid hsl(var(--med-color-fb-caution));  
+}
+
+[tp-container-input][state="warning"] {
+  --border-container: 1px solid hsl(var(--med-color-fb-warning));  
+}
+
+[tp-container-input][state="success"] {
+  --border-container: 1px solid hsl(var(--med-color-fb-success));  
 }
 
 //

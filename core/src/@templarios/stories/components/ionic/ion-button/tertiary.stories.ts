@@ -6,7 +6,7 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ 'ds-color': dsColor, 'ds-size': dsSize, disabled, expand }) => {
+const Template = ({ 'ds-color': dsColor, 'ds-size': dsSize, disabled, expand, noPadding }) => {
   return `
     <ion-app>
       <ion-content>
@@ -17,6 +17,7 @@ const Template = ({ 'ds-color': dsColor, 'ds-size': dsSize, disabled, expand }) 
           ${dsSize ? `ds-size=${dsSize}` : ''}
           ${disabled ? `disabled=${disabled}` : ''}
           ${expand !== 'none' ? `expand=${expand}` : ''}
+          no-padding=${noPadding}
           >
           Button ${dsSize}
         </ion-button>
@@ -28,6 +29,7 @@ const Template = ({ 'ds-color': dsColor, 'ds-size': dsSize, disabled, expand }) 
           ${dsSize ? `ds-size=${dsSize}` : ''}
           ${disabled ? `disabled=${disabled}` : ''}
           ${expand !== 'none' ? `expand=${expand}` : ''}
+          no-padding=${noPadding}
           >
           <ion-icon slot="start" class="med-icon" name="med-esquerda"></ion-icon>
           Button ${dsSize}
@@ -40,6 +42,7 @@ const Template = ({ 'ds-color': dsColor, 'ds-size': dsSize, disabled, expand }) 
           ${dsSize ? `ds-size=${dsSize}` : ''}
           ${disabled ? `disabled=${disabled}` : ''}
           ${expand !== 'none' ? `expand=${expand}` : ''}
+          no-padding=${noPadding} 
           >
           Button ${dsSize}
           <ion-icon slot="end" class="med-icon" name="med-direita"></ion-icon>
@@ -106,6 +109,15 @@ Tertiary.argTypes = {
     table: {
       type: { summary: ['block'] },
       defaultValue: { summary: 'undefined' },
+    },
+  },
+  noPadding: {
+    noPadding: false,
+    control: { type: "boolean" },
+    description: "Remove o padding lateral do componente.",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "undefined" },
     },
   },
 };

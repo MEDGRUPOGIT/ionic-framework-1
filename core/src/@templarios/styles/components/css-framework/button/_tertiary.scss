@@ -102,6 +102,14 @@
 }
 
 //
+// tertiary padding lateral off
+//
+[tp-button][fill="clear"][no-padding="true"] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+//
 // color
 //
 @each $color in $tp-color {
