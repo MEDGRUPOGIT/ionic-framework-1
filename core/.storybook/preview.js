@@ -27,6 +27,7 @@ import "../templarios/css/themes/extensivo.css";
 import "../templarios/css/schemes/light.css";
 import "../templarios/css/templarios.css";
 import "../templarios/css/templarios-css-framework.css";
+import "../templarios/css/templarios-web.css";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -40,6 +41,11 @@ export const parameters = {
   themes: {
     target: "root",
     list: [
+      {
+        name: "Web Framework",
+        class: ["theme-medsoft", "templarios-web"],
+        color: "#000",
+      },
       {
         name: "Theme Medsoft",
         class: ["theme-medsoft", "scheme-dark"],

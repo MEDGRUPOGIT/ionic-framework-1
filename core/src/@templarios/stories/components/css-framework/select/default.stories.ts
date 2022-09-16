@@ -7,7 +7,7 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled }) => {
+const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled, state }) => {
   return html`
     <p tp-label token="p14" for="tp-select">Description:</p>
 
@@ -16,7 +16,7 @@ const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled }) => {
       ds-color=${dsColor}
       ds-name=${dsName}
       ?disabled=${disabled}
-    
+      state=${state}
     >
       <select tp-select id="tp-select" placeholder="Lorem ipsum dolor">
         <option placeholder value="" disabled selected>
@@ -53,13 +53,6 @@ const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled }) => {
       </div>
     </div>
 
-
-
-
-
-
-
-
     <p tp-label token="p14" for="tp-select">Description:</p>
 
     <div
@@ -67,6 +60,7 @@ const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled }) => {
       ds-color=${dsColor}
       ds-name=${dsName}
       ?disabled=${disabled}
+      state=${state}
       class="open"
     >
       <select tp-select id="tp-select" placeholder="Lorem ipsum dolor">
@@ -162,6 +156,16 @@ Default.argTypes = {
     description: "Define o estado disabled do componente.",
     table: {
       type: { summary: "boolean" },
+      defaultValue: { summary: "undefined" },
+    },
+  },
+  "state": {
+    options: [undefined, "attention", "caution", "warning", "success"],
+    control: { type: "select" },
+    description: "Define o estado de feedback do componente.",
+    defaultValue: undefined,
+    table: {
+      type: { summary: "attention | caution | warning | success | undefined" },
       defaultValue: { summary: "undefined" },
     },
   },

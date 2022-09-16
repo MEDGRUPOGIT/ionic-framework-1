@@ -18,6 +18,8 @@ export enum MedType {
   H24 = "h24",
   H20 = "h20",
   H20X = "h20x",
+  P18XB = "p18xb",
+  P18X = "p18x",
   P16 = "p16",
   P16B = "p16b",
   P16X = "p16x",

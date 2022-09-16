@@ -6,8 +6,9 @@
   --padding-bottom: 12px;
   --padding-top: 12px;
   --placeholder-color: hsl(var(--med-color-neutral-5));
+  --border: 1px solid transparent;
 
-  border: none;
+  border: var(--border);
   padding-top: var(--padding-top);
   padding-bottom: var(--padding-bottom);
   padding-left: var(--padding-start);
@@ -45,6 +46,25 @@
 //
 [tp-input][disabled] {
   opacity: 0.4;
+}
+
+//
+// state
+//
+[tp-input][state="attention"] {
+  --border: 1px solid hsl(var(--med-color-fb-attention));  
+}
+
+[tp-input][state="caution"] {
+  --border: 1px solid hsl(var(--med-color-fb-caution));  
+}
+
+[tp-input][state="warning"] {
+  --border: 1px solid hsl(var(--med-color-fb-warning));  
+}
+
+[tp-input][state="success"] {
+  --border: 1px solid hsl(var(--med-color-fb-success));  
 }
 
 //

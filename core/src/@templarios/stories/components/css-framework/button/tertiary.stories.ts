@@ -1,3 +1,4 @@
+import { off } from "process";
 import { withDesign } from "storybook-addon-designs";
 import { TemplariosButtonSize, MedColors } from "../../../../templarios";
 
@@ -11,6 +12,7 @@ const Template = ({
   "ds-size": dsSize,
   disabled,
   expand,
+  noPadding,
 }) => {
   return `
     <style>
@@ -30,7 +32,8 @@ const Template = ({
           ${dsColor ? `ds-color=${dsColor}` : ""}
           ${dsSize ? `ds-size=${dsSize}` : ""}
           ${disabled ? `disabled=${disabled}` : ""}
-          ${expand !== "none" ? `expand=${expand}` : ""}
+          ${expand !== "none" ? `expand=${expand}` : ""} 
+          no-padding=${noPadding}
           >
           <span>Button ${dsSize}</span>
        </button>
@@ -42,6 +45,7 @@ const Template = ({
           ${dsSize ? `ds-size=${dsSize}` : ""}
           ${disabled ? `disabled=${disabled}` : ""}
           ${expand !== "none" ? `expand=${expand}` : ""}
+          no-padding=${noPadding}
           >
           <ion-icon class="med-icon" name="med-esquerda"></ion-icon>
           <span>Button ${dsSize}</span>
@@ -54,6 +58,7 @@ const Template = ({
           ${dsSize ? `ds-size=${dsSize}` : ""}
           ${disabled ? `disabled=${disabled}` : ""}
           ${expand !== "none" ? `expand=${expand}` : ""}
+          no-padding=${noPadding}
           >
           <span>Button ${dsSize}</span>
           <ion-icon class="med-icon" name="med-direita"></ion-icon>
@@ -119,6 +124,15 @@ Tertiary.argTypes = {
     description: "Define a variação de estilo do componente.",
     table: {
       type: { summary: ["block"] },
+      defaultValue: { summary: "undefined" },
+    },
+  },
+  noPadding: {
+    noPadding: false,
+    control: { type: "boolean" },
+    description: "Remove o padding lateral do componente.",
+    table: {
+      type: { summary: "boolean" },
       defaultValue: { summary: "undefined" },
     },
   },

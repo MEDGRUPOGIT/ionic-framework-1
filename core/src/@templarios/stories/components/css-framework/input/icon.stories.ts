@@ -7,10 +7,10 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled }) => {
+const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled, state }) => {
   return html`
     <p tp-label token="p14" for="tp-input"> Description: </p>
-    <div tp-container-input ds-color=${dsColor} ds-name=${dsName} ?disabled=${disabled}>
+    <div tp-container-input ds-color=${dsColor} ds-name=${dsName} ?disabled=${disabled} state=${state}>
       <ion-icon class="med-icon" name="med-direita"></ion-icon>
       <input
         tp-input
@@ -21,7 +21,7 @@ const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled }) => {
     </div>
 
     <p tp-label token="p14" for="tp-input"> Description: </p>
-    <div tp-container-input ds-color=${dsColor} ds-name=${dsName} ?disabled=${disabled}>
+    <div tp-container-input ds-color=${dsColor} ds-name=${dsName} ?disabled=${disabled} state=${state}>
       <input
         tp-input
         id="tp-input"
@@ -32,7 +32,7 @@ const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled }) => {
     </div>
 
     <p tp-label token="p14" for="tp-input"> Description: </p>
-    <div tp-container-input ds-color=${dsColor} ds-name=${dsName} ?disabled=${disabled}>
+    <div tp-container-input ds-color=${dsColor} ds-name=${dsName} ?disabled=${disabled} state=${state}>
       <ion-icon class="med-icon" name="med-direita"></ion-icon>
       <input
         tp-input
@@ -80,6 +80,16 @@ Icon.argTypes = {
     description: "Define o estado disabled do componente.",
     table: {
       type: { summary: "boolean" },
+      defaultValue: { summary: "undefined" },
+    },
+  },
+  "state": {
+    options: [undefined, "attention", "caution", "warning", "success"],
+    control: { type: "select" },
+    description: "Define o estado de feedback do componente.",
+    defaultValue: undefined,
+    table: {
+      type: { summary: "attention | caution | warning | success | undefined" },
       defaultValue: { summary: "undefined" },
     },
   },

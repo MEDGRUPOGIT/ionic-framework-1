@@ -195,6 +195,14 @@ ion-button[fill="clear"][icon-only] {
 }
 
 //
+// tertiary padding lateral off
+//
+ion-button[fill="clear"][no-padding="true"] {
+  --padding-start: 0;
+  --padding-end: 0;
+}
+
+//
 // color
 //
 @each $color in $tp-color {

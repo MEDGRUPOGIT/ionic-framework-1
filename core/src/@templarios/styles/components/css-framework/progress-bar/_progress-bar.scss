@@ -1,0 +1,87 @@
+[tp-progress] {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+[tp-progress-bar] {
+  flex: 1;
+  height: 8px;
+  border-radius: 100px;
+  background: hsl(var(--med-color-neutral-3));
+}
+
+[tp-progress-fill] {
+  height: 100%;
+  border-radius: 100px;
+  width: calc(var(--porcentagem) * 1%);
+  background: hsl(var(--med-color-brand-3));
+}
+
+[tp-progress-text] {
+  width: 40px;
+  text-align: right;
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color([tp-progress], $color, $i) {
+
+      [tp-progress-fill] {
+        background: #{tp-color($color, $i)};
+      }
+
+      [tp-progress-bar] {
+        background: #{tp-color($color, 1)};
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral([tp-progress], neutral-#{$i}, $i) {
+
+    [tp-progress-fill] {
+      background: #{tp-neutral($i)};
+    }
+
+    [tp-progress-bar] {
+      background: #{tp-contrast-neutral($i)};
+    }
+  }
+}
+
+@for $i from 1 through 9 {
+  @include generate-component-neutral([tp-progress], neutral-#{$i}#{5}, $i) {
+
+    [tp-progress-fill] {
+      background: #{tp-neutral($i, 5)};
+    }
+
+    [tp-progress-bar] {
+      background: #{tp-contrast-neutral($i)};
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback([tp-progress], fb-#{$color}, $color) {
+
+    [tp-progress-fill] {
+      background: #{tp-feedback($color)};
+    }
+
+    [tp-progress-bar] {
+      background: hsl(var(--med-color-neutral-1));
+    }
+  }
+}
