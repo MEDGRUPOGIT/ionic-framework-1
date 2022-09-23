@@ -1,0 +1,68 @@
+.templarios-web {
+  ion-item ion-checkbox[slot=start] {
+    margin: 0 16px 0 0;
+  }
+
+  ion-checkbox {
+    --border-color: hsl(var(--med-color-neutral-4));
+
+    &:hover,
+    &:focus {
+      --border-color: hsl(var(--med-color-brand-5));
+    }
+  }
+
+  //
+  // color
+  //
+  @each $color in $tp-color {
+    @for $i from 1 through 5 {
+      @include generate-component-color(ion-checkbox, $color, $i) {
+        --border-color: #{tp-color($color, 5)};
+
+        &:hover,
+        &:focus {
+          --border-color: #{tp-color($color, 5)};
+        }
+      }
+    }
+  }
+
+  //
+  // neutral
+  //
+  @for $i from 1 through 10 {
+    @include generate-component-neutral(ion-checkbox, neutral-#{$i}, $i) {
+      --border-color: #{tp-neutral($i)};
+
+      &:hover,
+      &:focus {
+        --border-color: #{tp-neutral($i)};
+      }
+    }
+  }
+  @for $i from 1 through 9 {
+    @include generate-component-neutral(ion-checkbox, neutral-#{$i}#{5}, $i) {
+      --border-color: #{tp-neutral($i, 5)};
+
+      &:hover,
+      &:focus {
+        --border-color: #{tp-neutral($i, 5)};
+      }
+    }
+  }
+
+  //
+  // feedback
+  //
+  @each $color in $tp-feedback {
+    @include generate-component-feedback(ion-checkbox, fb-#{$color}, $color) {
+      --border-color: #{tp-feedback($color)};
+      
+      &:hover,
+      &:focus {
+        --border-color: #{tp-feedback($color)};
+      }
+    }
+  }
+}

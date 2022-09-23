@@ -41,6 +41,9 @@
 @import "./components/css-framework/input/icon";
 @import "./components/css-framework/input/input";
 
+// input-helper
+@import "./components/css-framework/input-helper/input-helper";
+
 // item
 @import "./components/css-framework/item/item";
 
@@ -49,6 +52,7 @@
 
 // loader
 @import "./components/css-framework/loader/loader";
+@import "./components/css-framework/loader/secondary";
 
 // progress-bar
 @import "./components/css-framework/progress-bar/progress-bar";
