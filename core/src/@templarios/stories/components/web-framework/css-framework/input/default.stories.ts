@@ -17,7 +17,6 @@ const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled }) => {
           .disabled=${disabled}
           placeholder="Lorem ipsum dolor"
       ></input>
-      <p tp-label tp-input-help token="p12x"> Help text </p>
     `;
 };
 

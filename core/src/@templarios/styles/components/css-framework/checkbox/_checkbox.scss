@@ -37,6 +37,7 @@
     justify-content: center;
 
     .med-icon {
+      --ionicon-stroke-width: 3px;
       height: var(--size-icon);
       width: var(--size-icon);
       stroke: var(--checkmark-color);

@@ -19,7 +19,6 @@ const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled, state }) =
         placeholder="Lorem ipsum dolor"
       ></input>
     </div>
-    <p tp-label tp-input-help token="p12x"> Help text </p>
 
     <p tp-label token="p14" for="tp-input"> Description: </p>
     <div tp-container-input ds-color=${dsColor} ds-name=${dsName} ?disabled=${disabled} state=${state}>
@@ -31,7 +30,6 @@ const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled, state }) =
       ></input>
       <ion-icon class="med-icon" name="med-direita"></ion-icon>
     </div>
-    <p tp-label tp-input-help token="p12x"> Help text </p>
 
     <p tp-label token="p14" for="tp-input"> Description: </p>
     <div tp-container-input ds-color=${dsColor} ds-name=${dsName} ?disabled=${disabled} state=${state}>
@@ -44,7 +42,6 @@ const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled, state }) =
       ></input>
       <ion-icon class="med-icon" name="med-direita"></ion-icon>
     </div>
-    <p tp-label tp-input-help token="p12x"> Help text </p>
     `;
 };
 
