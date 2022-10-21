@@ -4,7 +4,7 @@ import { generateMedColor } from '../../../../@templarios/utilities/color';
 @Component({
   tag: 'med-add-card',
   styleUrl: 'med-add-card.scss',
-  shadow: true,
+  scoped: true,
 })
 export class MedAddCard {
 

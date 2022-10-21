@@ -8,12 +8,30 @@ ion-input {
     --padding-top: 12px;
     --placeholder-color: hsl(var(--med-color-neutral-5));
     --placeholder-opacity: 1;
-
+   
     margin-top: 0px;
     font-size: 14px;
     border-radius: 8px;
-    height: 40px;
+    height: 40px;     
   }
+}
+
+tp-input-container {
+  ion-icon.med-icon--alerta {
+    &[slot="start"] {
+      margin: 0 0 0 8px;
+    }
+
+    &[slot="end"] {
+      margin: 0 8px 0 0;
+    }
+  }
+}
+
+ion-input.sc-ion-input-md-h,
+tp-input-container {
+  --border: 1px solid transparent;
+  border: var(--border);
 }
 
 //
@@ -22,6 +40,82 @@ ion-input {
 ion-input[ds-name="secondary"] {
   &.sc-ion-input-md-h {
     --background: hsl(var(--med-color-neutral-3));
+  }
+}
+
+//
+// state
+//
+ion-input[state="attention"] {
+  &.sc-ion-input-md-h {
+  --border: 1px solid hsl(var(--med-color-fb-attention));  
+  }
+}
+
+tp-input-container[state="attention"] {
+  --border: 1px solid hsl(var(--med-color-fb-attention));  
+
+  ion-input.sc-ion-input-md-h {
+    height: 38px;  
+  }  
+
+  ion-icon.med-icon--alerta {
+    stroke: hsl(var(--med-color-fb-attention));
+  }
+}
+
+
+ion-input[state="caution"] {
+  &.sc-ion-input-md-h {
+    --border: 1px solid hsl(var(--med-color-fb-caution));  
+  }
+}
+
+tp-input-container[state="caution"] {
+  --border: 1px solid hsl(var(--med-color-fb-caution));  
+
+  ion-input.sc-ion-input-md-h {
+    height: 38px;  
+  }  
+
+  ion-icon.med-icon--alerta {
+    stroke: hsl(var(--med-color-fb-caution));
+  }
+}
+
+ion-input[state="warning"] {
+  &.sc-ion-input-md-h {
+    --border: 1px solid hsl(var(--med-color-fb-warning));  
+  }
+}
+
+tp-input-container[state="warning"] {
+  --border: 1px solid hsl(var(--med-color-fb-warning));  
+
+  ion-input.sc-ion-input-md-h {
+    height: 38px;  
+  }  
+
+  ion-icon.med-icon--alerta {
+    stroke: hsl(var(--med-color-fb-warning));
+  }
+}
+
+ion-input[state="success"] {
+  &.sc-ion-input-md-h {
+    --border: 1px solid hsl(var(--med-color-fb-success));  
+  }
+}
+
+tp-input-container[state="success"] {
+  --border: 1px solid hsl(var(--med-color-fb-success));  
+
+  ion-input.sc-ion-input-md-h {
+    height: 38px;  
+  }  
+
+  ion-icon.med-icon--alerta {
+    stroke: hsl(var(--med-color-fb-success));
   }
 }
 

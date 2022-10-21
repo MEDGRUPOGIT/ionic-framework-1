@@ -1,4 +1,4 @@
-import { Component, Event, EventEmitter, h, Host, Listen, Method, Prop } from '@stencil/core';
+import { Component, Event, EventEmitter, h, Host, Listen, Method, Prop} from '@stencil/core';
 import { MedColor } from '../../../../@templarios/types/color.type';
 import { generateMedColor } from '../../../../@templarios/utilities/color';
 
@@ -8,6 +8,8 @@ import { generateMedColor } from '../../../../@templarios/utilities/color';
   scoped: true,
 })
 export class MedTooltip {
+  
+  @Prop() enableHover?: boolean;
 
   /**
    * todo
@@ -64,8 +66,18 @@ export class MedTooltip {
    */
   @Method()
   async toggle(event?: any) {
-    event?.stopPropagation();
-    this.collapsed = !this.collapsed;
+    if(!this.enableHover) {
+      event?.stopPropagation();
+      this.collapsed = !this.collapsed;
+    }
+  }
+
+  @Method()
+  async toggleOnHover(event?: any) {
+    if(this.enableHover) {
+      event?.stopPropagation();
+      this.collapsed = !this.collapsed;
+    }
   }
 
   @Listen('click', { target: 'window' })
@@ -83,6 +95,11 @@ export class MedTooltip {
     }
   }
 
+  // @Listen('mouseover', { target: '' })
+  // handleScroll(ev) {
+  //   console.log('the body was scrolled', ev);
+  // }
+
   private onBtnLeftClick = () => {
     this.btnLeftClick.emit();
   }
@@ -97,6 +114,8 @@ export class MedTooltip {
     return (
       <Host
         from-stencil
+        onMouseenter={(event: any) => {this.toggleOnHover(event)}}
+        onMouseleave={(event: any) => {this.toggleOnHover(event)}}
         class={generateMedColor(dsColor, {
           'med-tooltip': true,
           [`med-tooltip--${placement}`]: placement !== undefined,

@@ -1,0 +1,41 @@
+[tp-container-input] {
+  .med-icon--alerta {
+    min-height: 24px;
+    min-width: 24px;
+    
+    &.med-icon--start {
+      margin: 0 0 0 8px;
+    }
+    
+    &.med-icon--end {
+      margin: 0 8px 0 0;
+    }
+  }
+}
+
+//
+// state
+//
+[tp-container-input][state="attention"] {
+  .med-icon--alerta {
+    stroke: hsl(var(--med-color-fb-attention));  
+  }
+}
+
+[tp-container-input][state="caution"] {
+  .med-icon--alerta {
+    stroke: hsl(var(--med-color-fb-caution));  
+  }  
+}
+
+[tp-container-input][state="warning"] {
+  .med-icon--alerta {
+    stroke: hsl(var(--med-color-fb-warning));  
+  } 
+}
+
+[tp-container-input][state="success"] {
+  .med-icon--alerta {
+    stroke: hsl(var(--med-color-fb-success));  
+  } 
+}

@@ -5,7 +5,7 @@ import { generateMedColor } from '../../../../@templarios/utilities/color';
 @Component({
   tag: 'med-video-thumbnail',
   styleUrl: 'med-video-thumbnail.scss',
-  shadow: true,
+  scoped: true,
 })
 export class MedVideoThumbnail {
 

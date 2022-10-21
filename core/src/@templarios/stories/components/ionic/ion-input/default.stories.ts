@@ -7,12 +7,12 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ 'ds-color': dsColor, 'ds-name': dsName, disabled }) => {
+const Template = ({ 'ds-color': dsColor, 'ds-name': dsName, disabled, state }) => {
   return html`
     <ion-app>
       <ion-content>
         <ion-label token="p14">Description</ion-label>
-        <ion-input mode="md" ds-color=${dsColor} ds-name=${dsName} .disabled=${disabled} placeholder="Lorem ipsum dolor"></ion-input>
+        <ion-input mode="md" ds-color=${dsColor} ds-name=${dsName} .disabled=${disabled} state=${state} placeholder="Lorem ipsum dolor"></ion-input>
       </ion-content>
     </ion-app>
   `;
@@ -53,6 +53,16 @@ Default.argTypes = {
     table: {
       type: { summary: 'boolean' },
       defaultValue: { summary: 'undefined' },
+    },
+  },
+  "state": {
+    options: [undefined, "attention", "caution", "warning", "success"],
+    control: { type: "select" },
+    description: "Define o estado de feedback do componente.",
+    defaultValue: undefined,
+    table: {
+      type: { summary: "attention | caution | warning | success | undefined" },
+      defaultValue: { summary: "undefined" },
     },
   },
 };

@@ -23,6 +23,41 @@ ion-select[ds-name='secondary'] {
 }
 
 //
+// state
+//
+tp-input-container[state="attention"] {
+  --border: 1px solid hsl(var(--med-color-fb-attention));  
+
+  ion-select {
+    height: 38px;  
+  }  
+}
+
+tp-input-container[state="caution"] {
+  --border: 1px solid hsl(var(--med-color-fb-caution));  
+
+  ion-select {
+    height: 38px;  
+  }  
+}
+
+tp-input-container[state="warning"] {
+  --border: 1px solid hsl(var(--med-color-fb-warning));  
+
+  ion-select {
+    height: 38px;  
+  }   
+}
+
+tp-input-container[state="success"] {
+  --border: 1px solid hsl(var(--med-color-fb-success));  
+
+  ion-select {
+    height: 38px;  
+  }  
+}
+
+//
 // color
 //
 @each $color in $tp-color {
