@@ -7,16 +7,17 @@
 
 ## Properties
 
-| Property    | Attribute   | Description | Type                                                  | Default     |
-| ----------- | ----------- | ----------- | ----------------------------------------------------- | ----------- |
-| `btnLeft`   | `btn-left`  | todo        | `string \| undefined`                                 | `undefined` |
-| `btnRight`  | `btn-right` | todo        | `string \| undefined`                                 | `undefined` |
-| `collapsed` | `collapsed` | todo        | `boolean`                                             | `true`      |
-| `content`   | `content`   | todo        | `string \| undefined`                                 | `undefined` |
-| `dsColor`   | `ds-color`  | todo        | `string \| undefined`                                 | `undefined` |
-| `placement` | `placement` | todo        | `"bottom" \| "left" \| "right" \| "top" \| undefined` | `undefined` |
-| `position`  | `position`  | todo        | `"center" \| "end" \| "start" \| undefined`           | `undefined` |
-| `titulo`    | `titulo`    | todo        | `string \| undefined`                                 | `undefined` |
+| Property      | Attribute      | Description | Type                                                  | Default     |
+| ------------- | -------------- | ----------- | ----------------------------------------------------- | ----------- |
+| `btnLeft`     | `btn-left`     | todo        | `string \| undefined`                                 | `undefined` |
+| `btnRight`    | `btn-right`    | todo        | `string \| undefined`                                 | `undefined` |
+| `collapsed`   | `collapsed`    | todo        | `boolean`                                             | `true`      |
+| `content`     | `content`      | todo        | `string \| undefined`                                 | `undefined` |
+| `dsColor`     | `ds-color`     | todo        | `string \| undefined`                                 | `undefined` |
+| `enableHover` | `enable-hover` |             | `boolean \| undefined`                                | `undefined` |
+| `placement`   | `placement`    | todo        | `"bottom" \| "left" \| "right" \| "top" \| undefined` | `undefined` |
+| `position`    | `position`     | todo        | `"center" \| "end" \| "start" \| undefined`           | `undefined` |
+| `titulo`      | `titulo`       | todo        | `string \| undefined`                                 | `undefined` |
 
 
 ## Events
@@ -32,6 +33,16 @@
 ### `toggle(event?: any) => Promise<void>`
 
 todo
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+### `toggleOnHover(event?: any) => Promise<void>`
+
+
 
 #### Returns
 

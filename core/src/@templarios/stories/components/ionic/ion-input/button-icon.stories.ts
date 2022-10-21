@@ -19,6 +19,7 @@ const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled, state }) =
           state=${state}
           has-button="start"
         >
+          <ion-icon class="med-icon med-icon--alerta" name="med-alerta" slot="start"></ion-icon>
           <ion-button
             slot="start"
             .disabled=${disabled}
@@ -69,6 +70,7 @@ const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled, state }) =
               name="med-direita"
             ></ion-icon>
           </ion-button>
+          <ion-icon class="med-icon med-icon--alerta" name="med-alerta" slot="end"></ion-icon>
         </tp-input-container>
 
         <ion-label token="p14">Description</ion-label>
@@ -79,6 +81,7 @@ const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled, state }) =
           state=${state}
           has-button="both"
         >
+          <ion-icon class="med-icon med-icon--alerta" name="med-alerta" slot="start"></ion-icon>
           <ion-button
             slot="start"
             .disabled=${disabled}
@@ -113,21 +116,22 @@ const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled, state }) =
               name="med-direita"
             ></ion-icon>
           </ion-button>
+          <ion-icon class="med-icon med-icon--alerta" name="med-alerta" slot="end"></ion-icon>
         </tp-input-container>
       </ion-content>
     </ion-app>
   `;
 };
 
-export const Button = Template.bind({});
-Button.parameters = {
+export const ButtonIcon = Template.bind({});
+ButtonIcon.parameters = {
   design: {
     type: "figma",
     url:
       "https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/01.-Componentes?node-id=9341%3A58123",
   },
 };
-Button.argTypes = {
+ButtonIcon.argTypes = {
   "ds-color": {
     options: [undefined, ...Object.values(MedColors)],
     control: { type: "select" },

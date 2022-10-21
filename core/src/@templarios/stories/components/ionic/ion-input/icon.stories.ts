@@ -7,24 +7,24 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ 'ds-color': dsColor, 'ds-name': dsName, disabled }) => {
+const Template = ({ 'ds-color': dsColor, 'ds-name': dsName, disabled, state }) => {
   return html`
     <ion-app>
       <ion-content>
         <ion-label token="p14">Description</ion-label>
-        <tp-input-container .dsColor=${dsColor} ds-name=${dsName} .disabled=${disabled} has-icon="start">
+        <tp-input-container .dsColor=${dsColor} ds-name=${dsName} .disabled=${disabled} state=${state} has-icon="start">
           <ion-icon class="med-icon" slot="start" name="med-direita"></ion-icon>
           <ion-input mode="md" .dsColor=${dsColor} .disabled=${disabled} placeholder="Lorem ipsum dolor"></ion-input>
         </tp-input-container>
 
         <ion-label token="p14">Description</ion-label>
-        <tp-input-container .dsColor=${dsColor} ds-name=${dsName} .disabled=${disabled} has-icon="end">
+        <tp-input-container .dsColor=${dsColor} ds-name=${dsName} .disabled=${disabled} state=${state} has-icon="end">
           <ion-icon class="med-icon" slot="end" name="med-direita"></ion-icon>
           <ion-input mode="md" .dsColor=${dsColor} .disabled=${disabled} placeholder="Lorem ipsum dolor"></ion-input>
         </tp-input-container>
 
         <ion-label token="p14">Description</ion-label>
-        <tp-input-container .dsColor=${dsColor} ds-name=${dsName} .disabled=${disabled} has-icon="both">
+        <tp-input-container .dsColor=${dsColor} ds-name=${dsName} .disabled=${disabled} state=${state} has-icon="both">
           <ion-icon class="med-icon" slot="start" name="med-direita"></ion-icon>
           <ion-icon class="med-icon" slot="end" name="med-direita"></ion-icon>
           <ion-input mode="md" .dsColor=${dsColor} .disabled=${disabled} placeholder="Lorem ipsum dolor"></ion-input>
@@ -69,6 +69,16 @@ Icon.argTypes = {
     table: {
       type: { summary: 'boolean' },
       defaultValue: { summary: 'undefined' },
+    },
+  },
+  "state": {
+    options: [undefined, "attention", "caution", "warning", "success"],
+    control: { type: "select" },
+    description: "Define o estado de feedback do componente.",
+    defaultValue: undefined,
+    table: {
+      type: { summary: "attention | caution | warning | success | undefined" },
+      defaultValue: { summary: "undefined" },
     },
   },
 };

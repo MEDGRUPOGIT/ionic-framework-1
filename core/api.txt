@@ -1379,7 +1379,7 @@ med-accordion-list,prop,noAnimation,boolean,false,false,true
 med-accordion-list,prop,noBorder,boolean,false,false,true
 med-accordion-list,prop,singleOpen,boolean,true,false,true
 
-med-add-card,shadow
+med-add-card,scoped
 med-add-card,prop,iconName,string | undefined,undefined,false,true
 med-add-card,prop,titulo,string | undefined,undefined,false,true
 
@@ -1801,10 +1801,12 @@ med-tooltip,prop,btnRight,string | undefined,undefined,false,false
 med-tooltip,prop,collapsed,boolean,true,false,true
 med-tooltip,prop,content,string | undefined,undefined,false,true
 med-tooltip,prop,dsColor,string | undefined,undefined,false,true
+med-tooltip,prop,enableHover,boolean | undefined,undefined,false,false
 med-tooltip,prop,placement,"bottom" | "left" | "right" | "top" | undefined,undefined,false,true
 med-tooltip,prop,position,"center" | "end" | "start" | undefined,undefined,false,true
 med-tooltip,prop,titulo,string | undefined,undefined,false,true
 med-tooltip,method,toggle,toggle(event?: any) => Promise<void>
+med-tooltip,method,toggleOnHover,toggleOnHover(event?: any) => Promise<void>
 med-tooltip,event,btnLeftClick,void,true
 med-tooltip,event,btnRightClick,void,true
 
@@ -1813,7 +1815,7 @@ med-type,prop,dsColor,string | undefined,undefined,false,true
 med-type,prop,tag,string | undefined,'span',false,true
 med-type,prop,token,string | undefined,undefined,false,true
 
-med-video-thumbnail,shadow
+med-video-thumbnail,scoped
 med-video-thumbnail,prop,dsColor,string | undefined,undefined,false,true
 med-video-thumbnail,prop,url,string | undefined,undefined,false,true
 med-video-thumbnail,prop,value,number,0,false,true

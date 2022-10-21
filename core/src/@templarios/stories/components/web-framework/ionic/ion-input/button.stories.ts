@@ -7,7 +7,7 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled }) => {
+const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled, state }) => {
   return html`
     <ion-app>
       <ion-content>
@@ -16,6 +16,7 @@ const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled }) => {
           .dsColor=${dsColor}
           ds-name=${dsName}
           .disabled=${disabled}
+          state=${state} 
           has-button="start"
         >
           <ion-button
@@ -39,13 +40,13 @@ const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled }) => {
             placeholder="Lorem ipsum dolor"
           ></ion-input>
         </tp-input-container>
-        <ion-label token="p12x">Help text</ion-label>
 
         <ion-label token="p14">Description</ion-label>
         <tp-input-container
           .dsColor=${dsColor}
           ds-name=${dsName}
           .disabled=${disabled}
+          state=${state} 
           has-button="end"
         >
           <ion-input
@@ -69,13 +70,13 @@ const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled }) => {
             ></ion-icon>
           </ion-button>
         </tp-input-container>
-        <ion-label token="p12x">Help text</ion-label>
 
         <ion-label token="p14">Description</ion-label>
         <tp-input-container
           .dsColor=${dsColor}
           ds-name=${dsName}
           .disabled=${disabled}
+          state=${state} 
           has-button="both"
         >
           <ion-button
@@ -113,7 +114,6 @@ const Template = ({ "ds-color": dsColor, "ds-name": dsName, disabled }) => {
             ></ion-icon>
           </ion-button>
         </tp-input-container>
-        <ion-label token="p12x">Help text</ion-label>
       </ion-content>
     </ion-app>
   `;
@@ -154,6 +154,16 @@ Button.argTypes = {
     description: "Define o estado disabled do componente.",
     table: {
       type: { summary: "boolean" },
+      defaultValue: { summary: "undefined" },
+    },
+  },
+  "state": {
+    options: [undefined, "attention", "caution", "warning", "success"],
+    control: { type: "select" },
+    description: "Define o estado de feedback do componente.",
+    defaultValue: undefined,
+    table: {
+      type: { summary: "attention | caution | warning | success | undefined" },
       defaultValue: { summary: "undefined" },
     },
   },

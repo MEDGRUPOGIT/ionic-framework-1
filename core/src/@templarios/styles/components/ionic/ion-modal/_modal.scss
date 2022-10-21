@@ -1,0 +1,38 @@
+.tp-modal {
+  --background: hsl(var(--med-color-neutral-1)) !important;
+  --height: 100% !important;
+  --min-height: 50px !important;
+  --width: 100% !important;
+  --max-width: 640px !important;
+  backdrop-filter: blur(10px);
+
+  ion-backdrop {
+    --ion-backdrop-color: hsl(var(--med-color-neutral-1)) !important;
+    --backdrop-opacity: 0.8 !important;
+  }
+}
+
+@include breakpoint-up('sm') {
+  .tp-modal {
+    --max-width: 880px !important;
+    --max-height: 600px !important;
+
+    .ion-page {
+      left: unset;
+      bottom: unset;
+      top: unset;
+      right: unset;
+      position: initial;
+      display: block;
+      contain: unset;
+      height: 100%;
+    }
+  }
+}
+
+@include breakpoint-down('sm') {
+  .tp-modal {
+    --max-width: 100% !important;
+    --min-height: 100% !important;
+  }
+}

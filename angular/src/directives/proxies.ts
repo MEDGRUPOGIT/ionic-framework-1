@@ -1643,8 +1643,8 @@ export class MedToolbar {
 }
 export declare interface MedTooltip extends Components.MedTooltip {
 }
-@ProxyCmp({ inputs: ["btnLeft", "btnRight", "collapsed", "content", "dsColor", "placement", "position", "titulo"], "methods": ["toggle"] })
-@Component({ selector: "med-tooltip", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["btnLeft", "btnRight", "collapsed", "content", "dsColor", "placement", "position", "titulo"] })
+@ProxyCmp({ inputs: ["btnLeft", "btnRight", "collapsed", "content", "dsColor", "enableHover", "placement", "position", "titulo"], "methods": ["toggle", "toggleOnHover"] })
+@Component({ selector: "med-tooltip", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["btnLeft", "btnRight", "collapsed", "content", "dsColor", "enableHover", "placement", "position", "titulo"] })
 export class MedTooltip {
   btnLeftClick!: EventEmitter<CustomEvent>;
   btnRightClick!: EventEmitter<CustomEvent>;
