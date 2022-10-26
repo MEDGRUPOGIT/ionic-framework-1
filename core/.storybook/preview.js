@@ -28,6 +28,7 @@ import "../templarios/css/schemes/light.css";
 import "../templarios/css/templarios.css";
 import "../templarios/css/templarios-css-framework.css";
 import "../templarios/css/templarios-web.css";
+import "../templarios/css/templarios-medsoft.css";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

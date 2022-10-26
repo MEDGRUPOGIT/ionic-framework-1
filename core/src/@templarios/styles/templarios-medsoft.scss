@@ -1,0 +1,23 @@
+//
+// abstracts
+//
+@import "./variables/breakpoints";
+@import "./variables/color-ionic";
+@import "./variables/components";
+
+@import "./functions/breakpoints";
+@import "./functions/color-ionic";
+
+@import "./mixins/breakpoints";
+@import "./mixins/color-ionic";
+@import "./mixins/devices";
+
+//
+// medsoft
+//
+@import "./pages/medsoft/global";
+
+// medcode
+@import "./pages/medsoft/medcode/page";
+@import "./pages/medsoft/medcode/component-a";
+@import "./pages/medsoft/medcode/component-b";
