@@ -1,0 +1,47 @@
+.container {
+  height: calc(100vh - 82px);
+}
+
+.header {
+  background: hsl(var(--med-color-neutral-15));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 50px;
+  padding: 5px 20px;
+
+  &__back-button {
+    display: flex;
+  }
+}
+
+.content-medcode {
+  background: hsl(var(--med-color-neutral-2));
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__button {
+    width: 130px !important;
+    height: 130px;
+
+    .med-icon {
+      width: 90px;
+      height: 90px;
+    }
+  }
+}
