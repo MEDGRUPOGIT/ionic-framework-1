@@ -42,10 +42,47 @@
 }
 
 .content-slide {
-  padding-top: 10px;
+  padding-top: 8px;
 }
-.content-slide__clinica {
+.content-slide__item {
+  --inner-padding-end: 0px;
+  --min-height: 32px;
   margin-bottom: 8px;
+}
+.content-slide__text {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 24px !important;
+  text-transform: uppercase;
+}
+
+.accordion__header {
+  --align-items: center;
+}
+.accordion__title {
+  text-transform: uppercase;
+}
+.materia__ano {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: hsl(var(--med-color-neutral-25));
+}
+.materia__list-container {
+  display: flex;
+  align-items: center;
+}
+.materia__list-container:not(:last-child) {
+  border-bottom: 1px solid hsl(var(--med-color-neutral-3));
+}
+.materia__item-left {
+  flex: 0 25%;
+  text-align: right;
+  border-right: 1px solid hsl(var(--med-color-neutral-3));
+}
+.materia__item-right {
+  flex: 0 75%;
 }
 
 /*# sourceMappingURL=templarios-medsoft.css.map */
