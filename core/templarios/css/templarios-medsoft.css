@@ -2,6 +2,11 @@
   height: calc(100vh - 82px);
 }
 
+.button-qrcode {
+  width: 32px !important;
+  height: 32px !important;
+}
+
 .content-medcode {
   background: hsl(var(--med-color-neutral-2));
   width: 100%;
@@ -56,12 +61,14 @@
   text-transform: uppercase;
 }
 
-.accordion__header {
+.accordion {
   --align-items: center;
+  overflow: hidden;
 }
 .accordion__title {
   text-transform: uppercase;
 }
+
 .materia__ano {
   display: flex;
   align-items: center;
@@ -76,6 +83,10 @@
 .materia__list-container:not(:last-child) {
   border-bottom: 1px solid hsl(var(--med-color-neutral-3));
 }
+.materia__list-container:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
 .materia__item-left {
   flex: 0 25%;
   text-align: right;
@@ -83,6 +94,16 @@
 }
 .materia__item-right {
   flex: 0 75%;
+}
+.materia__codigo {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 24px !important;
+}
+.materia__descricao {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 16px !important;
 }
 
 /*# sourceMappingURL=templarios-medsoft.css.map */

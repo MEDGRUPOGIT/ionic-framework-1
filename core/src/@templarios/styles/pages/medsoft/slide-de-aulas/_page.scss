@@ -30,18 +30,14 @@
 }
 
 .accordion {
-  &__header {
-    --align-items: center;
-  }
+  --align-items: center;
+  overflow: hidden;
 
   &__title {
     text-transform: uppercase;
   }
-
-  &__content {
-
-  }
 }
+
 
 .materia {
   &__ano {
@@ -52,19 +48,17 @@
     background: hsl(var(--med-color-neutral-25));
   }
 
-  &__text {
-
-  }
-
-  &__list {
-  }
-
   &__list-container {
     display: flex;
     align-items: center;
 
     &:not(:last-child) {
       border-bottom: 1px solid hsl(var(--med-color-neutral-3));
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
     }
   }
 
@@ -76,6 +70,18 @@
 
   &__item-right {
     flex: 0 75%;
+  }
+
+  &__codigo {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 24px !important;
+  }
+
+  &__descricao {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 16px !important;
   }
 }
 

@@ -17,8 +17,8 @@ const Template = () => {
 
         <med-type slot="title">MEDCODE</med-type>
 
-        <ion-button mode="ios" icon-only fill="clear" slot="right" ds-size="xxs">
-          <ion-icon slot="icon-only" class="med-icon" name="med-star-filled"></ion-icon>
+        <ion-button class="button-qrcode" mode="ios" icon-only fill="clear" slot="right" ds-size="xxs">
+          <ion-icon slot="icon-only" class="med-icon" name="med-qrcode"></ion-icon>
         </ion-button>
       </med-navbar>
     </med-header>
