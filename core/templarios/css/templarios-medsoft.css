@@ -2,17 +2,6 @@
   height: calc(100vh - 82px);
 }
 
-.header {
-  background: hsl(var(--med-color-neutral-15));
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-height: 50px;
-  padding: 5px 20px;
-}
-.header__back-button {
-  display: flex;
-}
 .content-medcode {
   background: hsl(var(--med-color-neutral-2));
   width: 100%;
@@ -40,8 +29,23 @@
   height: 90px;
 }
 
-h1 {
-  color: red;
+.container {
+  height: calc(100vh - 82px);
+}
+
+.product-select-button__text {
+  text-transform: uppercase;
+}
+
+.subheader {
+  --justify-content: center;
+}
+
+.content-slide {
+  padding-top: 10px;
+}
+.content-slide__clinica {
+  margin-bottom: 8px;
 }
 
 /*# sourceMappingURL=templarios-medsoft.css.map */

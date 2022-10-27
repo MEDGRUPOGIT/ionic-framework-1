@@ -1,0 +1,21 @@
+.container {
+  height: calc(100vh - 82px);
+}
+
+.product-select-button {
+  &__text {
+    text-transform: uppercase;
+  }
+}
+
+.subheader {
+  --justify-content: center;
+}
+
+.content-slide {
+  padding-top: 10px;
+
+  &__clinica {
+    margin-bottom: 8px;
+  }
+}

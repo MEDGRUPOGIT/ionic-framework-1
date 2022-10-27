@@ -9,21 +9,19 @@ export default {
 const Template = () => {
   return html`
     <div class="container">
-      <header class="header">
-        <div class="header__left">
-        <ion-back-button class="header__back-button" mode="ios" text="" ds-size="sm">
+    <med-header>
+      <med-navbar slot="navbar" >
+        <ion-back-button slot="left" mode="ios" text="" ds-size="xxs">
           <ion-icon class="med-icon" name="med-esquerda"></ion-icon>
         </ion-back-button>
-        </div>
-        <div class="header__middle">
-          <ion-label class="header__title" ds-color="neutral-10" token="p16xb">MEDCODE</ion-label>
-        </div>
-        <div class="header__right">
-        <ion-button fill="clear" mode="ios" icon-only ds-size="sm">
-          <ion-icon class="med-icon" slot="icon-only" name="med-qrcode"></ion-icon>
+
+        <med-type slot="title">MEDCODE</med-type>
+
+        <ion-button mode="ios" icon-only fill="clear" slot="right" ds-size="xxs">
+          <ion-icon slot="icon-only" class="med-icon" name="med-star-filled"></ion-icon>
         </ion-button>
-        </div>
-      </header>
+      </med-navbar>
+    </med-header>
 
       <main class="content-medcode">
         <div class="content-medcode__container">

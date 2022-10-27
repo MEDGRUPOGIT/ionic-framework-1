@@ -2,19 +2,6 @@
   height: calc(100vh - 82px);
 }
 
-.header {
-  background: hsl(var(--med-color-neutral-15));
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-height: 50px;
-  padding: 5px 20px;
-
-  &__back-button {
-    display: flex;
-  }
-}
-
 .content-medcode {
   background: hsl(var(--med-color-neutral-2));
   width: 100%;
