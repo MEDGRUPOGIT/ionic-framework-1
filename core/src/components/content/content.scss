@@ -65,7 +65,7 @@
 }
 
 #background-content {
-  @include position(calc(var(--offset-top) * -1), 0px,calc(var(--offset-bottom) * -1), 0px);
+  @include position(calc(var(--offset-top) * -1), 0px, calc(var(--offset-bottom) * -1), 0px);
 
   position: absolute;
 
@@ -73,7 +73,7 @@
 }
 
 .inner-scroll {
-  @include position(calc(var(--offset-top) * -1), 0px,calc(var(--offset-bottom) * -1), 0px);
+  @include position(calc(var(--offset-top) * -1), 0px, calc(var(--offset-bottom) * -1), 0px);
   @include padding(calc(var(--padding-top) + var(--offset-top)), var(--padding-end), calc(var(--padding-bottom) + var(--keyboard-offset) + var(--offset-bottom)), var(--padding-start));
 
   position: absolute;
@@ -147,6 +147,7 @@
 :host(.content-sizing) {
   contain: none;
 }
+
 :host(.content-sizing) .inner-scroll {
   position: relative;
 }
@@ -214,7 +215,7 @@
 }
 
 ::-webkit-scrollbar {
-	width: 9px;
+  width: 0px;
   height: 9px;
 }
 
@@ -231,23 +232,22 @@
 }
 
 ::-webkit-scrollbar-thumb {
-	background-clip: content-box;
-	border: 4px solid transparent;
-	border-radius: 7px;
-	box-shadow: inset 0 0 0 10px;
+  background-clip: content-box;
+  border: 4px solid transparent;
+  border-radius: 7px;
+  box-shadow: inset 0 0 0 10px;
 }
 
 ::-webkit-scrollbar-button {
-	width: 0;
-	height: 0;
-	display: none;
+  width: 0;
+  height: 0;
+  display: none;
 }
 
 ::-webkit-scrollbar-corner {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 .inner-scroll:hover::-webkit-scrollbar-thumb {
   color: var(--tp-scroll-color-content);
 }
-
