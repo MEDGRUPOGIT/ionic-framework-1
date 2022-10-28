@@ -1,18 +1,30 @@
-.container {
-  height: calc(100vh - 82px);
-}
+.product-select {
+  display: flex;
+  align-items: center;
 
-.product-select-button {
+  &__logo-container {
+    background: hsl(var(--med-color-neutral-2));
+    border-radius: 8px;
+    padding: 4px;
+    max-width: 40px;
+    max-height: 40px;
+    margin-right: 16px;
+  }
+
+  &__logo {
+    min-height: 32px;
+    min-width: 32px;
+  }
+
+  &__button {
+  }
+
   &__text {
     text-transform: uppercase;
   }
 }
 
-.subheader {
-  --justify-content: center;
-}
-
-.content-slide {
+.slide {
   padding-top: 8px;
 
   &__item {
@@ -37,7 +49,6 @@
     text-transform: uppercase;
   }
 }
-
 
 .materia {
   &__ano {

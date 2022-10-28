@@ -10,26 +10,31 @@ const Template = () => {
   return html`
     <div class="container">
       <med-header>
-        <med-navbar slot="navbar" >
+        <med-navbar class="header" slot="navbar">
           <ion-back-button slot="left" mode="ios" text="" ds-size="xxs">
             <ion-icon class="med-icon" name="med-esquerda"></ion-icon>
           </ion-back-button>
 
-          <ion-button class="product-select-button" slot="title" mode="ios" fill="clear">
-            <ion-label class="product-select-button__text">medcurso</ion-label>
-            <ion-icon class="med-icon" name="med-baixo" slot="end"></ion-icon>
-          </ion-button>
+          <div class="product-select" slot="title">
+            <ion-button class="product-select__button" mode="ios" fill="clear">
+              <div class="product-select__logo-container" slot="start">
+                <ion-icon class="product-select__logo med-color-neutral-10" name="med-logo"></ion-icon>
+              </div>
+              <ion-label class="product-select__text" token="p16xb">medcurso</ion-label>
+              <ion-icon class="med-icon" name="med-baixo" slot="end"></ion-icon>
+            </ion-button>
+          </div>
         </med-navbar>
 
         <med-toolbar class="subheader" slot="toolbar">
-          <ion-label ds-color="neutral-10" token="p16">SLIDE DE AULA</ion-label>
+          <ion-label class="subheader__title" ds-color="neutral-10" token="p16xb">Slide de aula</ion-label>
         </med-toolbar>
       </med-header>
 
 
-      <main class="content-slide">
-        <ion-item class="content-slide__item" ds-color="neutral-2" radius="s08" spacing-v="s16" spacing-h="s16" mode="ios" lines="none">
-          <ion-label class="content-slide__text" token="p16xb">Clínica médica</ion-label>
+      <main class="content slide">
+        <ion-item class="slide__item" ds-color="neutral-2" radius="s08" spacing-v="s16" spacing-h="s16" mode="ios" lines="none">
+          <ion-label class="slide__text" token="p16xb">Clínica médica</ion-label>
           <ion-button slot="end" ds-size="xxs" mode="ios" fill="clear" icon-only>
             <ion-icon class="med-icon" slot="icon-only" name="med-direita"></ion-icon>
           </ion-button>
