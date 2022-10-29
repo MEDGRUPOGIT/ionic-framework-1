@@ -9,22 +9,34 @@
     }
 
     &--avaliando {
-      .aulas__button {
-        display: none;
+      .aulas {
+        &__observacao-container {
+          display: block;
+        }
 
-        &--avaliar {
-          display: inline-block;
+        &__button {
+          display: none;
+
+          &--avaliar {
+            display: inline-block;
+          }
         }
       }
     }
 
     &--avaliada {
-      .aulas__middle {
-        display: none;
-      }
+      .aulas {
+        &__middle {
+          display: none;
+        }
 
-      .aulas__image {
-        display: block;
+        &__button {
+          display: none;
+        }
+
+        &__image {
+          display: block;
+        }
       }
     }
   }
@@ -67,6 +79,20 @@
     &:not(:last-child) {
       margin-right: 8px;
     }
+  }
+
+  &__observacao-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    display: none;
+  }
+
+  &__observacao {
+  }
+
+  &__erro {
+    margin-top: 8px;
   }
 
   &__bottom {
