@@ -74,15 +74,15 @@
   text-transform: uppercase;
 }
 
-.slide {
+.slide-de-aula {
   padding-top: 8px;
 }
-.slide__item {
+.slide-de-aula__item {
   --inner-padding-end: 0px;
   --min-height: 32px;
   margin-bottom: 8px;
 }
-.slide__text {
+.slide-de-aula__text {
   font-size: 16px !important;
   font-weight: 600 !important;
   line-height: 24px !important;
@@ -207,6 +207,14 @@
   max-height: 100px;
   display: none;
   margin-left: auto;
+}
+
+.slides {
+  height: calc(100% - 56px);
+  padding: 16px;
+}
+.slides__content {
+  height: 100%;
 }
 
 /*# sourceMappingURL=templarios-medsoft.css.map */

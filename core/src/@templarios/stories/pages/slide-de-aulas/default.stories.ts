@@ -32,9 +32,9 @@ const Template = () => {
       </med-header>
 
 
-      <main class="content slide">
-        <ion-item class="slide__item" ds-color="neutral-2" radius="s08" spacing-v="s16" spacing-h="s16" mode="ios" lines="none">
-          <ion-label class="slide__text" token="p16xb">Clínica médica</ion-label>
+      <main class="slide-de-aula">
+        <ion-item class="slide-de-aula__item" ds-color="neutral-2" radius="s08" spacing-v="s16" spacing-h="s16" mode="ios" lines="none">
+          <ion-label class="slide-de-aula__text" token="p16xb">Clínica médica</ion-label>
           <ion-button slot="end" ds-size="xxs" mode="ios" fill="clear" icon-only>
             <ion-icon class="med-icon" slot="icon-only" name="med-direita"></ion-icon>
           </ion-button>

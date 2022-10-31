@@ -26,7 +26,7 @@ const Template = () => {
         </med-toolbar>
       </med-header>
 
-      <main class="content aulas">
+      <main class="aulas">
         <med-base class="aulas__item" ds-color="neutral-25">
           <div class="aulas__top" slot="start">
             <ion-avatar class="aulas__avatar" ds-size="sm">
