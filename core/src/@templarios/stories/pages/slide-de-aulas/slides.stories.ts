@@ -18,9 +18,6 @@ const createModal = async () => {
           legenda: ""
         },
       ],
-      // marcaAguaSuperior: '1234567890',
-      // marcaAguaInferior: '1234567890',
-      // titulo:'Alternativa A',
     }
   }).then((modal)=>{
     modal.present()
