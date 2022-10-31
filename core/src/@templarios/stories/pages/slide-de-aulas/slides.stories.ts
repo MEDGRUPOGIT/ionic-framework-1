@@ -61,7 +61,12 @@ const Template = () => {
             <img class="slides__image" src="https://via.placeholder.com/500" @click="${createModal}">
           </ion-slide>
 
-        </ion-slides>
+          </ion-slides>
+
+          <div class="slides__contador">
+            <ion-label token="p14x">1 de 15</ion-label>
+          </div>
+
       </main>
     </div>
   `;
