@@ -1,5 +1,5 @@
 ion-badge {
-  --background: hsl(var(--med-color-brand-3));
+  --background: hsl(var(--med-color-brand-2));
   --padding-top: 6px;
   --padding-bottom: 6px;
   --padding-start: 8px;
@@ -8,6 +8,7 @@ ion-badge {
   font-weight: 600;
   font-size: 10px;
   line-height: 12px;
+  border-radius: 4px;
 }
 
 //
@@ -33,9 +34,9 @@ ion-badge {
 ion-badge {
   &[fill='outline'] {
     --background: transparent;
-    --color: hsl(var(--med-color-brand-3));
+    --color: hsl(var(--med-color-brand-2));
 
-    border: 1px solid hsl(var(--med-color-brand-3));
+    border: 1px solid hsl(var(--med-color-brand-2));
   }
 }
 
@@ -45,14 +46,14 @@ ion-badge {
 @each $color in $tp-color {
   @for $i from 1 through 5 {
     @include generate-component-color(ion-badge, $color, $i) {
-      --background: #{tp-color($color, $i)};
+      --background: #{tp-color($color, 2)};
       --color: #{tp-contrast-color($i)};
 
       &[fill='outline'] {
         --background: transparent;
-        --color: #{tp-color($color, $i)};
+        --color: #{tp-color($color, 2)};
 
-        border: 1px solid #{tp-color($color, $i)};
+        border: 1px solid #{tp-color($color, 2)};
       }
     }
   }
