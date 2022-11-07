@@ -1,5 +1,7 @@
 .container {
-  height: calc(100vh - 82px);
+  height: calc(100vh - 136px);
+  // height: calc(100vh - 104px);
+  // 104px é a altura do header, 136 é somando 2 * 16px do body que tem no storybook
 }
 
 .header {

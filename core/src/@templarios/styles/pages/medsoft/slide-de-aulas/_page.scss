@@ -26,6 +26,8 @@
 
 .slide-de-aula {
   padding-top: 8px;
+  height: 100%;
+  overflow: scroll;
 
   &__item {
     --inner-padding-end: 0px;
