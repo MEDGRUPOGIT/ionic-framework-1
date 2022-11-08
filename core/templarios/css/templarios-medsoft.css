@@ -374,6 +374,8 @@
   justify-content: center;
 }
 .resumo__modo-container {
+  display: flex;
+  align-items: center;
   margin: 0 auto;
 }
 .resumo__modo:not(:last-child) {
@@ -381,8 +383,17 @@
 }
 
 @media (max-width: 575.98px) {
+  .resumo__middle {
+    height: calc(100% - 208px);
+  }
   .resumo__classificacao {
     flex-direction: column;
+  }
+  .resumo__modo-container {
+    flex-direction: column;
+  }
+  .resumo__modo:not(:last-child) {
+    margin-right: 0;
   }
 }
 .concursos__content {

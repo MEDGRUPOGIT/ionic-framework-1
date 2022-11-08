@@ -93,6 +93,8 @@
   }
 
   &__modo-container {
+    display: flex;
+    align-items: center;
     margin: 0 auto;
   }
 
@@ -106,8 +108,22 @@
 // Responsividade //
 @include breakpoint-down('sm') {
   .resumo {
+    &__middle {
+      height: calc(100% - 208px);
+    }
+
     &__classificacao {
       flex-direction: column;
+    }
+
+    &__modo-container {
+      flex-direction: column;
+    }
+
+    &__modo {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
     }
   }
 }
