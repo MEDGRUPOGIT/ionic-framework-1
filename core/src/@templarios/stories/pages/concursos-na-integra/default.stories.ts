@@ -8,7 +8,7 @@ export default {
 
 const Template = () => {
   return html`
-    <div class="container">
+    <div class="container container--concursos">
       <med-header>
         <med-navbar class="header" slot="navbar">
           <ion-back-button slot="left" mode="ios" text="" ds-size="xxs">

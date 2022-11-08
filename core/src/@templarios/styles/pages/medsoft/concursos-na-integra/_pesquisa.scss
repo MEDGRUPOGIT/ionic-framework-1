@@ -1,11 +1,11 @@
 .concursos {
-  &__content {
-    padding: 16px;
-  }
-
   &__tiles {
     &:not(:last-child) {
       margin-bottom: 8px;
     }
+  }
+
+  &__container {
+    padding: 16px;
   }
 }
