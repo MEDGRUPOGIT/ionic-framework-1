@@ -1,17 +1,14 @@
 .container {
-  //height: calc(100vh - 136px);
-  // height: calc(100vh - 104px);
-  // 104px é a altura do header, 136 é somando 2 * 16px do body que tem no storybook
   overflow: hidden;
   height: 100%;
 
-  &--concursos {
+  &--height-100vh {
     height: 100vh;
   }
 }
 
 .header {
-  min-height: 56px;
+  --height: 56px;
 
   &__title {
     text-transform: uppercase;

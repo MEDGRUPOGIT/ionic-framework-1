@@ -8,7 +8,7 @@ export default {
 
 const Template = () => {
   return html`
-    <div class="container container--concursos">
+    <div class="container container--height-100vh">
       <med-header>
         <med-navbar class="header" slot="navbar">
           <ion-back-button slot="left" mode="ios" text="" ds-size="xxs">
@@ -32,7 +32,7 @@ const Template = () => {
             <med-tiles class="concursos__tiles" titulo="USP - RP" label="Hospital Das Clinicas Da Faculdade De medicina De Rp Da Usp"></med-tiles>
             <med-tiles class="concursos__tiles" titulo="USP - SP" label="Universidade De São Paulo - Sp"></med-tiles>
           </div>
-         
+
         </div>
       </main>
     </div>

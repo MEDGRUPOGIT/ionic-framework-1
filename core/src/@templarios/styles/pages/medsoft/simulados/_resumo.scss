@@ -1,8 +1,14 @@
 .resumo {
   background: hsl(var(--med-color-neutral-15));
+  height: 100%;
 
   &__button {
     margin: 0 auto;
+  }
+
+  &__middle {
+    height: calc(100% - 152px);
+    overflow: auto;
   }
 
   &__classificacao {
@@ -18,9 +24,7 @@
   }
 
   &__opcoes {
-    --padding-top: 0;
-    --padding-bottom: 0;
-    height: 16px;
+    height: 16px !important;
     margin: 0;
   }
 
@@ -86,6 +90,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  &__modo-container {
+    margin: 0 auto;
+  }
+
+  &__modo {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
   }
 }
 

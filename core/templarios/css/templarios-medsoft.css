@@ -2,12 +2,12 @@
   overflow: hidden;
   height: 100%;
 }
-.container--concursos {
+.container--height-100vh {
   height: 100vh;
 }
 
 .header {
-  min-height: 56px;
+  --height: 56px;
 }
 .header__title {
   text-transform: uppercase;
@@ -297,9 +297,14 @@
 
 .resumo {
   background: hsl(var(--med-color-neutral-15));
+  height: 100%;
 }
 .resumo__button {
   margin: 0 auto;
+}
+.resumo__middle {
+  height: calc(100% - 152px);
+  overflow: auto;
 }
 .resumo__classificacao {
   display: flex;
@@ -312,9 +317,7 @@
   align-items: center;
 }
 .resumo__opcoes {
-  --padding-top: 0;
-  --padding-bottom: 0;
-  height: 16px;
+  height: 16px !important;
   margin: 0;
 }
 .resumo__range-container {
@@ -369,6 +372,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.resumo__modo-container {
+  margin: 0 auto;
+}
+.resumo__modo:not(:last-child) {
+  margin-right: 16px;
 }
 
 @media (max-width: 575.98px) {
