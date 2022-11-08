@@ -40,7 +40,7 @@ ion-button {
 
   &[disabled] {
     --background: hsl(var(--med-color-neutral-3));
-    --color: hsl(var(--med-color-neutral-5));
+    --color: hsl(var(--med-color-neutral-5)) !important;
 
     opacity: 1;
 
