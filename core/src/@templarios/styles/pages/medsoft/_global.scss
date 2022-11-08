@@ -1,7 +1,13 @@
 .container {
-  height: calc(100vh - 136px);
+  //height: calc(100vh - 136px);
   // height: calc(100vh - 104px);
   // 104px é a altura do header, 136 é somando 2 * 16px do body que tem no storybook
+  overflow: hidden;
+  height: 100%;
+
+  &--concursos {
+    height: 100vh;
+  }
 }
 
 .header {
@@ -27,3 +33,17 @@
   }
 }
 
+.ano {
+  background: hsl(var(--med-color-neutral-25));
+  display: block;
+  text-align: center;
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  &--concursos {
+    top: -16px;
+  }
+}
