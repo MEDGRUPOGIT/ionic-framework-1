@@ -124,7 +124,7 @@ const Template = ( {valoresChart, valoresLabel} ) => {
               <ion-range class="resumo__range" min="20" max="80" step="2" ds-color="fb-warning">
               </ion-range>
               <div class="resumo__posicao-container" style="--porcentagem: 50">
-              <ion-label class="resumo__posicao" token="p14xx"> 100° </ion-label>
+              <ion-label class="resumo__posicao" token="p14xb"> 100° </ion-label>
               <ion-label class="resumo__sua-nota" token="p10"> Sua nota </ion-label>
               <ion-label class="resumo__nota" token="p12xb"> 5.0 </ion-label>
             </div>

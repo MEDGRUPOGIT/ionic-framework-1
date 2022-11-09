@@ -485,4 +485,134 @@
   padding: 16px;
 }
 
+.duvidas__tab {
+  max-width: initial;
+}
+.duvidas__wrap {
+  padding: 16px;
+}
+.duvidas__item {
+  --inner-padding-end: 0;
+  background: hsl(var(--med-color-neutral-2));
+  border-radius: 8px;
+  overflow: hidden;
+}
+.duvidas__item:not(:last-child) {
+  margin-bottom: 16px;
+  border-bottom: 1px solid hsl(var(--med-color-neutral-3));
+}
+.duvidas__card {
+  width: 100%;
+}
+.duvidas__top {
+  padding: 16px;
+  position: relative;
+}
+.duvidas__questao {
+  color: hsl(var(--med-color-brand-4));
+  margin-bottom: 16px;
+  display: block;
+}
+.duvidas__informacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.duvidas__identificacao {
+  display: flex;
+  align-items: center;
+}
+.duvidas__avatar {
+  margin-right: 16px;
+}
+.duvidas__dados {
+  display: flex;
+  flex-direction: column;
+}
+.duvidas__badge {
+  margin-bottom: 4px;
+}
+.duvidas__numero {
+  margin-top: 4px;
+  display: block;
+}
+.duvidas__tolltip-imagem {
+  position: absolute;
+  top: -16px;
+  right: -8px;
+  width: 75px;
+  height: 75px;
+}
+.duvidas__tolltip-imagem .med-tooltip__content {
+  top: 70% !important;
+}
+.duvidas__imagem {
+  width: 100%;
+  height: 100%;
+}
+.duvidas__middle {
+  padding: 0 16px 16px 16px;
+  max-height: 100px;
+  overflow: hidden;
+}
+.duvidas__bottom {
+  background: hsl(var(--med-color-neutral-15));
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 -16px 24px hsl(var(--med-color-neutral-5));
+}
+.duvidas__bottom-left {
+  display: flex;
+  align-items: center;
+}
+.duvidas__favorito {
+  margin-right: 8px;
+}
+.duvidas__like-container {
+  margin-right: 8px;
+  position: relative;
+}
+.duvidas__like {
+  position: absolute;
+  top: 4px;
+  right: 2px;
+}
+.duvidas__quantidade {
+  background: hsl(var(--med-color-neutral-10));
+  color: hsl(var(--med-color-neutral-1));
+  margin-left: 8px;
+  margin-right: -4px;
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+
+.med-context-menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.med-context-menu__item {
+  padding-right: 16px;
+  display: flex;
+  align-items: center;
+  transition: color 300ms ease-out;
+  cursor: pointer;
+}
+.med-context-menu__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.med-context-menu__item:hover {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+.med-context-menu__icon {
+  width: 24px;
+  margin-right: 8px;
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
 /*# sourceMappingURL=templarios-medsoft.css.map */
