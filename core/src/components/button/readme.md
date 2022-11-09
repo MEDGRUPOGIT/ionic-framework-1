@@ -368,6 +368,8 @@ export default defineComponent({
 ### Used by
 
  - [dialog-test](../@templarios/testes/dialog-test)
+ - [especialidade-modal](../@templarios/ionic-1-migracao/simulados/especialidade-modal)
+ - [local-modal](../@templarios/ionic-1-migracao/simulados/local-modal)
  - [med-alert](../@templarios/core/med-alert)
  - [med-banner](../@templarios/compositions/med-banner)
  - [med-calendar](../@templarios/compositions/med-calendar)
@@ -380,8 +382,10 @@ export default defineComponent({
  - [med-offline](../@templarios/compositions/med-offline)
  - [med-rate-aula](../@templarios/compositions/med-rate-aula)
  - [med-tooltip](../@templarios/compositions/med-tooltip)
+ - [realizacoes-modal](../@templarios/ionic-1-migracao/simulados/realizacoes-modal)
  - [sheet-content-test](../@templarios/testes/sheet-content-test)
  - [sheet-test](../@templarios/testes/sheet-test)
+ - [unidades-modal](../@templarios/ionic-1-migracao/simulados/unidades-modal)
 
 ### Depends on
 
@@ -392,6 +396,8 @@ export default defineComponent({
 graph TD;
   ion-button --> ion-ripple-effect
   dialog-test --> ion-button
+  especialidade-modal --> ion-button
+  local-modal --> ion-button
   med-alert --> ion-button
   med-banner --> ion-button
   med-calendar --> ion-button
@@ -404,8 +410,10 @@ graph TD;
   med-offline --> ion-button
   med-rate-aula --> ion-button
   med-tooltip --> ion-button
+  realizacoes-modal --> ion-button
   sheet-content-test --> ion-button
   sheet-test --> ion-button
+  unidades-modal --> ion-button
   style ion-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

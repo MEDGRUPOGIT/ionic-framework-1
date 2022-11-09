@@ -1,19 +1,72 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
+import { modalController } from '../../../../../dist/ionic/index.esm';
 
 export default {
   title: 'Pages/Medsoft/Simulados',
   decorators: [withDesign],
 };
 
+const createModalRealizacoes = async () => {
+  modalController.create({
+    component: 'realizacoes-modal',
+    cssClass: 'tp-modal',
+  }).then((modal)=>{
+    modal.present()
+  });
+}
+
+const createModalLocal = async () => {
+  modalController.create({
+    component: 'local-modal',
+    cssClass: 'tp-modal',
+  }).then((modal)=>{
+    modal.present()
+  });
+}
+
+const createModalUnidades = async () => {
+  modalController.create({
+    component: 'unidades-modal',
+    cssClass: 'tp-modal',
+  }).then((modal)=>{
+    modal.present()
+  });
+}
+
+const createModalEspecialidade = async () => {
+  modalController.create({
+    component: 'especialidade-modal',
+    cssClass: 'tp-modal',
+  }).then((modal)=>{
+    modal.present()
+  });
+}
+
 const Template = ( {valoresChart, valoresLabel} ) => {
 
   setTimeout(() => {
-    document.querySelector('med-chart-radial').valores = valoresChart.valoresChart;
+    document.querySelector('#chart-geral').valores = valoresChart.valoresChart;
   }, 1000);
 
   setTimeout(() => {
-    document.querySelector('med-chart-radial-label').valores = valoresLabel.valoresLabel;
+    document.querySelector('#label-geral').valores = valoresLabel.valoresLabel;
+  }, 1000);
+
+  setTimeout(() => {
+    document.querySelector('#chart-prova').valores = valoresChart.valoresChart;
+  }, 1000);
+
+  setTimeout(() => {
+    document.querySelector('#label-prova').valores = valoresLabel.valoresLabel;
+  }, 1000);
+
+  setTimeout(() => {
+    document.querySelector('#chart-estudo').valores = valoresChart.valoresChart;
+  }, 1000);
+
+  setTimeout(() => {
+    document.querySelector('#label-estudo').valores = valoresLabel.valoresLabel;
   }, 1000);
 
   return html`
@@ -32,8 +85,8 @@ const Template = ( {valoresChart, valoresLabel} ) => {
 
       <main class="resumo">
         <div class="resumo__top">
-          <ion-item ds-color="brand" spacing-v="s00" spacing-h="s04"     mode="ios" lines="none">
-            <ion-button class="resumo__button" mode="ios" fill="clear" ds-color="neutral-10" ds-size="xxs">
+          <ion-item ds-color="brand" spacing-v="s08" spacing-h="s04" mode="ios" lines="none">
+            <ion-button class="resumo__button" mode="ios" fill="clear" ds-color="neutral-10" ds-size="xxs" @click="${createModalRealizacoes}">
               <ion-icon slot="start" class="med-icon" name="med-trofeu"></ion-icon>
                 REALIZADO MODO PROVA (EM 20/10/2022)
               <ion-icon slot="end" class="med-icon" name="med-baixo"></ion-icon>
@@ -45,21 +98,21 @@ const Template = ( {valoresChart, valoresLabel} ) => {
           <div class="resumo__classificacao">
             <div class="resumo__linha">
               <ion-label token="p12x">Qual seria sua classificação &nbsp;</ion-label>
-              <ion-button class="resumo__opcoes" mode="ios" fill="clear" ds-size="xxs" no-padding="true">
+              <ion-button class="resumo__opcoes" mode="ios" fill="clear" ds-size="xxs" no-padding="true" @click="${createModalLocal}">
                 no Brasil
               </ion-button>
             </div>
 
             <div class="resumo__linha">
               <ion-label token="p12x">&nbsp; em &nbsp;</ion-label>
-              <ion-button class="resumo__opcoes" mode="ios" fill="clear" ds-size="xxs" no-padding="true">
+              <ion-button class="resumo__opcoes" mode="ios" fill="clear" ds-size="xxs" no-padding="true" @click="${createModalUnidades}">
                 Todas as Unidades
               </ion-button>
             </div>
 
             <div class="resumo__linha">
               <ion-label token="p12x">&nbsp; em &nbsp;</ion-label>
-              <ion-button class="resumo__opcoes" mode="ios" fill="clear" ds-size="xxs" no-padding="true">
+              <ion-button class="resumo__opcoes" mode="ios" fill="clear" ds-size="xxs" no-padding="true" @click="${createModalEspecialidade}">
                 Todas as Especialidades
               </ion-button>
             </div>
@@ -86,11 +139,11 @@ const Template = ( {valoresChart, valoresLabel} ) => {
           </div>
 
           <div class="resumo__questoes">
-            <med-chart-radial titulo="100" subtitulo="Questoes" ds-size="lg"></med-chart-radial>
-            <med-chart-radial-label></med-chart-radial-label>
+            <med-chart-radial id="chart-geral" titulo="100" subtitulo="Questoes" ds-size="lg"></med-chart-radial>
+            <med-chart-radial-label id="label-geral"></med-chart-radial-label>
           </div>
 
-          <ion-item ds-color="brand" spacing-v="s00" spacing-h="s04"     mode="ios" lines="none">
+          <ion-item ds-color="brand" spacing-v="s08" spacing-h="s04"     mode="ios" lines="none">
           <ion-button class="resumo__button" mode="ios" fill="clear" ds-color="neutral-10" ds-size="xxs">
             <ion-icon slot="start" class="med-icon" name="med-apostila"></ion-icon>
               MODO PROVA
@@ -98,11 +151,11 @@ const Template = ( {valoresChart, valoresLabel} ) => {
           </ion-item>
 
           <div class="resumo__questoes">
-            <med-chart-radial titulo="100" subtitulo="Questoes" ds-size="lg"></med-chart-radial>
-            <med-chart-radial-label></med-chart-radial-label>
+            <med-chart-radial id="chart-prova" titulo="100" subtitulo="Questoes" ds-size="lg"></med-chart-radial>
+            <med-chart-radial-label id="label-prova"></med-chart-radial-label>
           </div>
 
-          <ion-item ds-color="brand" spacing-v="s00" spacing-h="s04"     mode="ios" lines="none">
+          <ion-item ds-color="brand" spacing-v="s08" spacing-h="s04"     mode="ios" lines="none">
           <ion-button class="resumo__button" mode="ios" fill="clear" ds-color="neutral-10" ds-size="xxs">
             <ion-icon slot="start" class="med-icon" name="med-apostila"></ion-icon>
               MODO ESTUDO
@@ -110,8 +163,8 @@ const Template = ( {valoresChart, valoresLabel} ) => {
           </ion-item>
 
           <div class="resumo__questoes">
-            <med-chart-radial titulo="100" subtitulo="Questoes" ds-size="lg"></med-chart-radial>
-            <med-chart-radial-label></med-chart-radial-label>
+            <med-chart-radial id="chart-estudo" titulo="100" subtitulo="Questoes" ds-size="lg"></med-chart-radial>
+            <med-chart-radial-label id="label-estudo"></med-chart-radial-label>
           </div>
         </div>
 

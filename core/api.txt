@@ -1,6 +1,8 @@
 
 dialog-test,scoped
 
+especialidade-modal,scoped
+
 ion-action-sheet,scoped
 ion-action-sheet,prop,animated,boolean,true,false,false
 ion-action-sheet,prop,backdropDismiss,boolean,true,false,false
@@ -1362,6 +1364,8 @@ ion-virtual-scroll,method,checkEnd,checkEnd() => Promise<void>
 ion-virtual-scroll,method,checkRange,checkRange(offset: number, len?: number) => Promise<void>
 ion-virtual-scroll,method,positionForItem,positionForItem(index: number) => Promise<number>
 
+local-modal,scoped
+
 med-accordion-item,shadow
 med-accordion-item,prop,background,boolean,false,false,true
 med-accordion-item,prop,canCollapse,boolean,true,false,true
@@ -1825,6 +1829,8 @@ med-vote,prop,like,number,0,false,false
 med-vote,prop,titulo,string | undefined,'Cabe recurso?',false,false
 med-vote,prop,unlike,number,0,false,false
 
+realizacoes-modal,scoped
+
 select-test,shadow
 
 sheet-content-test,scoped
@@ -1838,3 +1844,5 @@ tp-input-container,prop,dsName,"secondary" | undefined,undefined,false,true
 tp-input-container,prop,feedback,boolean,false,false,true
 tp-input-container,prop,hasButton,"both" | "end" | "start" | undefined,undefined,false,true
 tp-input-container,prop,hasIcon,"both" | "end" | "start" | undefined,undefined,false,true
+
+unidades-modal,scoped

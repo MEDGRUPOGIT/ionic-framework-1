@@ -33,6 +33,7 @@ import "../templarios/css/templarios-medsoft.css";
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   backgrounds: { disable: true },
+  layout: "fullscreen",
   controls: {
     matchers: {
       color: /(background|color)$/i,

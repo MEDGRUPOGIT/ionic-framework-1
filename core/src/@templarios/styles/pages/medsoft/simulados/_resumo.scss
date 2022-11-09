@@ -7,7 +7,7 @@
   }
 
   &__middle {
-    height: calc(100% - 152px);
+    height: calc(100% - 168px);
     overflow: auto;
   }
 
@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 8px;
+    margin-top: 16px;
   }
 
   &__linha {
@@ -29,7 +29,7 @@
   }
 
   &__range-container {
-    padding: 4px;
+    padding: 4px 16px;
     margin: 16px 0 48px 0;
     position: relative;
     display: flex;
@@ -52,11 +52,11 @@
     fill: transparent;
 
     &--start {
-      margin-right: 8px;
+      margin-right: 16px;
     }
 
     &--end {
-      margin-left: 8px;
+      margin-left: 16px;
     }
   }
 
@@ -86,7 +86,7 @@
   }
 
   &__questoes {
-    padding: 8px 0 24px 0;
+    padding: 24px 0;
     display: flex;
     align-items: center;
     justify-content: center;

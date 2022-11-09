@@ -32,6 +32,8 @@ ion-button[fill="clear"] {
   }
 
   &:hover {
+    color: var(--color-hover);
+
     ion-icon {
       stroke: var(--color-hover);
     }

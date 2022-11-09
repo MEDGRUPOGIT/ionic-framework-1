@@ -24,6 +24,8 @@ import { MedTypeTag, MedTypeToken } from "@templarios/types/type.type";
 export namespace Components {
     interface DialogTest {
     }
+    interface EspecialidadeModal {
+    }
     interface IonActionSheet {
         /**
           * If `true`, the action sheet will animate.
@@ -2724,6 +2726,8 @@ export namespace Components {
          */
         "renderItem"?: (item: any, index: number) => any;
     }
+    interface LocalModal {
+    }
     interface MedAccordionItem {
         /**
           * todo
@@ -4003,6 +4007,8 @@ export namespace Components {
          */
         "unlike": number;
     }
+    interface RealizacoesModal {
+    }
     interface SelectTest {
     }
     interface SheetContentTest {
@@ -4035,6 +4041,8 @@ export namespace Components {
          */
         "hasIcon"?: 'start' | 'end' | 'both';
     }
+    interface UnidadesModal {
+    }
 }
 declare global {
     interface HTMLDialogTestElement extends Components.DialogTest, HTMLStencilElement {
@@ -4042,6 +4050,12 @@ declare global {
     var HTMLDialogTestElement: {
         prototype: HTMLDialogTestElement;
         new (): HTMLDialogTestElement;
+    };
+    interface HTMLEspecialidadeModalElement extends Components.EspecialidadeModal, HTMLStencilElement {
+    }
+    var HTMLEspecialidadeModalElement: {
+        prototype: HTMLEspecialidadeModalElement;
+        new (): HTMLEspecialidadeModalElement;
     };
     interface HTMLIonActionSheetElement extends Components.IonActionSheet, HTMLStencilElement {
     }
@@ -4565,6 +4579,12 @@ declare global {
         prototype: HTMLIonVirtualScrollElement;
         new (): HTMLIonVirtualScrollElement;
     };
+    interface HTMLLocalModalElement extends Components.LocalModal, HTMLStencilElement {
+    }
+    var HTMLLocalModalElement: {
+        prototype: HTMLLocalModalElement;
+        new (): HTMLLocalModalElement;
+    };
     interface HTMLMedAccordionItemElement extends Components.MedAccordionItem, HTMLStencilElement {
     }
     var HTMLMedAccordionItemElement: {
@@ -4973,6 +4993,12 @@ declare global {
         prototype: HTMLMedVoteElement;
         new (): HTMLMedVoteElement;
     };
+    interface HTMLRealizacoesModalElement extends Components.RealizacoesModal, HTMLStencilElement {
+    }
+    var HTMLRealizacoesModalElement: {
+        prototype: HTMLRealizacoesModalElement;
+        new (): HTMLRealizacoesModalElement;
+    };
     interface HTMLSelectTestElement extends Components.SelectTest, HTMLStencilElement {
     }
     var HTMLSelectTestElement: {
@@ -4997,8 +5023,15 @@ declare global {
         prototype: HTMLTpInputContainerElement;
         new (): HTMLTpInputContainerElement;
     };
+    interface HTMLUnidadesModalElement extends Components.UnidadesModal, HTMLStencilElement {
+    }
+    var HTMLUnidadesModalElement: {
+        prototype: HTMLUnidadesModalElement;
+        new (): HTMLUnidadesModalElement;
+    };
     interface HTMLElementTagNameMap {
         "dialog-test": HTMLDialogTestElement;
+        "especialidade-modal": HTMLEspecialidadeModalElement;
         "ion-action-sheet": HTMLIonActionSheetElement;
         "ion-alert": HTMLIonAlertElement;
         "ion-app": HTMLIonAppElement;
@@ -5086,6 +5119,7 @@ declare global {
         "ion-toggle": HTMLIonToggleElement;
         "ion-toolbar": HTMLIonToolbarElement;
         "ion-virtual-scroll": HTMLIonVirtualScrollElement;
+        "local-modal": HTMLLocalModalElement;
         "med-accordion-item": HTMLMedAccordionItemElement;
         "med-accordion-list": HTMLMedAccordionListElement;
         "med-add-card": HTMLMedAddCardElement;
@@ -5154,14 +5188,18 @@ declare global {
         "med-type": HTMLMedTypeElement;
         "med-video-thumbnail": HTMLMedVideoThumbnailElement;
         "med-vote": HTMLMedVoteElement;
+        "realizacoes-modal": HTMLRealizacoesModalElement;
         "select-test": HTMLSelectTestElement;
         "sheet-content-test": HTMLSheetContentTestElement;
         "sheet-test": HTMLSheetTestElement;
         "tp-input-container": HTMLTpInputContainerElement;
+        "unidades-modal": HTMLUnidadesModalElement;
     }
 }
 declare namespace LocalJSX {
     interface DialogTest {
+    }
+    interface EspecialidadeModal {
     }
     interface IonActionSheet {
         /**
@@ -7889,6 +7927,8 @@ declare namespace LocalJSX {
          */
         "renderItem"?: (item: any, index: number) => any;
     }
+    interface LocalModal {
+    }
     interface MedAccordionItem {
         /**
           * todo
@@ -9287,6 +9327,8 @@ declare namespace LocalJSX {
          */
         "unlike"?: number;
     }
+    interface RealizacoesModal {
+    }
     interface SelectTest {
     }
     interface SheetContentTest {
@@ -9319,8 +9361,11 @@ declare namespace LocalJSX {
          */
         "hasIcon"?: 'start' | 'end' | 'both';
     }
+    interface UnidadesModal {
+    }
     interface IntrinsicElements {
         "dialog-test": DialogTest;
+        "especialidade-modal": EspecialidadeModal;
         "ion-action-sheet": IonActionSheet;
         "ion-alert": IonAlert;
         "ion-app": IonApp;
@@ -9408,6 +9453,7 @@ declare namespace LocalJSX {
         "ion-toggle": IonToggle;
         "ion-toolbar": IonToolbar;
         "ion-virtual-scroll": IonVirtualScroll;
+        "local-modal": LocalModal;
         "med-accordion-item": MedAccordionItem;
         "med-accordion-list": MedAccordionList;
         "med-add-card": MedAddCard;
@@ -9476,10 +9522,12 @@ declare namespace LocalJSX {
         "med-type": MedType;
         "med-video-thumbnail": MedVideoThumbnail;
         "med-vote": MedVote;
+        "realizacoes-modal": RealizacoesModal;
         "select-test": SelectTest;
         "sheet-content-test": SheetContentTest;
         "sheet-test": SheetTest;
         "tp-input-container": TpInputContainer;
+        "unidades-modal": UnidadesModal;
     }
 }
 export { LocalJSX as JSX };
@@ -9487,6 +9535,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "dialog-test": LocalJSX.DialogTest & JSXBase.HTMLAttributes<HTMLDialogTestElement>;
+            "especialidade-modal": LocalJSX.EspecialidadeModal & JSXBase.HTMLAttributes<HTMLEspecialidadeModalElement>;
             "ion-action-sheet": LocalJSX.IonActionSheet & JSXBase.HTMLAttributes<HTMLIonActionSheetElement>;
             "ion-alert": LocalJSX.IonAlert & JSXBase.HTMLAttributes<HTMLIonAlertElement>;
             "ion-app": LocalJSX.IonApp & JSXBase.HTMLAttributes<HTMLIonAppElement>;
@@ -9574,6 +9623,7 @@ declare module "@stencil/core" {
             "ion-toggle": LocalJSX.IonToggle & JSXBase.HTMLAttributes<HTMLIonToggleElement>;
             "ion-toolbar": LocalJSX.IonToolbar & JSXBase.HTMLAttributes<HTMLIonToolbarElement>;
             "ion-virtual-scroll": LocalJSX.IonVirtualScroll & JSXBase.HTMLAttributes<HTMLIonVirtualScrollElement>;
+            "local-modal": LocalJSX.LocalModal & JSXBase.HTMLAttributes<HTMLLocalModalElement>;
             "med-accordion-item": LocalJSX.MedAccordionItem & JSXBase.HTMLAttributes<HTMLMedAccordionItemElement>;
             "med-accordion-list": LocalJSX.MedAccordionList & JSXBase.HTMLAttributes<HTMLMedAccordionListElement>;
             "med-add-card": LocalJSX.MedAddCard & JSXBase.HTMLAttributes<HTMLMedAddCardElement>;
@@ -9642,10 +9692,12 @@ declare module "@stencil/core" {
             "med-type": LocalJSX.MedType & JSXBase.HTMLAttributes<HTMLMedTypeElement>;
             "med-video-thumbnail": LocalJSX.MedVideoThumbnail & JSXBase.HTMLAttributes<HTMLMedVideoThumbnailElement>;
             "med-vote": LocalJSX.MedVote & JSXBase.HTMLAttributes<HTMLMedVoteElement>;
+            "realizacoes-modal": LocalJSX.RealizacoesModal & JSXBase.HTMLAttributes<HTMLRealizacoesModalElement>;
             "select-test": LocalJSX.SelectTest & JSXBase.HTMLAttributes<HTMLSelectTestElement>;
             "sheet-content-test": LocalJSX.SheetContentTest & JSXBase.HTMLAttributes<HTMLSheetContentTestElement>;
             "sheet-test": LocalJSX.SheetTest & JSXBase.HTMLAttributes<HTMLSheetTestElement>;
             "tp-input-container": LocalJSX.TpInputContainer & JSXBase.HTMLAttributes<HTMLTpInputContainerElement>;
+            "unidades-modal": LocalJSX.UnidadesModal & JSXBase.HTMLAttributes<HTMLUnidadesModalElement>;
         }
     }
 }

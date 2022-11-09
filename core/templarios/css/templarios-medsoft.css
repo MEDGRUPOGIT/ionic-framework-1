@@ -303,14 +303,14 @@
   margin: 0 auto;
 }
 .resumo__middle {
-  height: calc(100% - 152px);
+  height: calc(100% - 168px);
   overflow: auto;
 }
 .resumo__classificacao {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 8px;
+  margin-top: 16px;
 }
 .resumo__linha {
   display: flex;
@@ -321,7 +321,7 @@
   margin: 0;
 }
 .resumo__range-container {
-  padding: 4px;
+  padding: 4px 16px;
   margin: 16px 0 48px 0;
   position: relative;
   display: flex;
@@ -341,10 +341,10 @@
   fill: transparent;
 }
 .resumo__icon--start {
-  margin-right: 8px;
+  margin-right: 16px;
 }
 .resumo__icon--end {
-  margin-left: 8px;
+  margin-left: 16px;
 }
 .resumo__posicao-container {
   position: absolute;
@@ -368,7 +368,7 @@
   justify-content: center;
 }
 .resumo__questoes {
-  padding: 8px 0 24px 0;
+  padding: 24px 0;
   display: flex;
   align-items: center;
   justify-content: center;

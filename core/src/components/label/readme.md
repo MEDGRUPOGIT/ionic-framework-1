@@ -303,14 +303,22 @@ export default defineComponent({
 
 ### Used by
 
+ - [especialidade-modal](../@templarios/ionic-1-migracao/simulados/especialidade-modal)
  - ion-select-popover
+ - [local-modal](../@templarios/ionic-1-migracao/simulados/local-modal)
  - [med-config](../@templarios/legacy/med-config)
+ - [realizacoes-modal](../@templarios/ionic-1-migracao/simulados/realizacoes-modal)
+ - [unidades-modal](../@templarios/ionic-1-migracao/simulados/unidades-modal)
 
 ### Graph
 ```mermaid
 graph TD;
+  especialidade-modal --> ion-label
   ion-select-popover --> ion-label
+  local-modal --> ion-label
   med-config --> ion-label
+  realizacoes-modal --> ion-label
+  unidades-modal --> ion-label
   style ion-label fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

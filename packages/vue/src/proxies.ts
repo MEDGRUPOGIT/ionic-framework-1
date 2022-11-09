@@ -11,6 +11,9 @@ import type { JSX } from '@ionic/core';
 export const DialogTest = /*@__PURE__*/ defineContainer<JSX.DialogTest>('dialog-test');
 
 
+export const EspecialidadeModal = /*@__PURE__*/ defineContainer<JSX.EspecialidadeModal>('especialidade-modal');
+
+
 export const IonAvatar = /*@__PURE__*/ defineContainer<JSX.IonAvatar>('ion-avatar');
 
 
@@ -802,6 +805,9 @@ export const IonVirtualScroll = /*@__PURE__*/ defineContainer<JSX.IonVirtualScro
 ]);
 
 
+export const LocalModal = /*@__PURE__*/ defineContainer<JSX.LocalModal>('local-modal');
+
+
 export const MedAccordionItem = /*@__PURE__*/ defineContainer<JSX.MedAccordionItem>('med-accordion-item', [
   'dsColor',
   'noBorder',
@@ -1382,6 +1388,9 @@ export const MedVote = /*@__PURE__*/ defineContainer<JSX.MedVote>('med-vote', [
 ]);
 
 
+export const RealizacoesModal = /*@__PURE__*/ defineContainer<JSX.RealizacoesModal>('realizacoes-modal');
+
+
 export const SelectTest = /*@__PURE__*/ defineContainer<JSX.SelectTest>('select-test');
 
 
@@ -1399,4 +1408,7 @@ export const TpInputContainer = /*@__PURE__*/ defineContainer<JSX.TpInputContain
   'hasButton',
   'hasIcon'
 ]);
+
+
+export const UnidadesModal = /*@__PURE__*/ defineContainer<JSX.UnidadesModal>('unidades-modal');
 

@@ -2680,6 +2680,9 @@ ion-button[fill=clear].ion-activated ion-icon {
 ion-button[fill=clear].ion-focused ion-icon {
   stroke: var(--color-focused);
 }
+ion-button[fill=clear]:hover {
+  color: var(--color-hover);
+}
 ion-button[fill=clear]:hover ion-icon {
   stroke: var(--color-hover);
 }

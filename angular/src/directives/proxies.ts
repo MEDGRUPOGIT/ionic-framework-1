@@ -14,6 +14,16 @@ export class DialogTest {
     this.el = r.nativeElement;
   }
 }
+export declare interface EspecialidadeModal extends Components.EspecialidadeModal {
+}
+@Component({ selector: "especialidade-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class EspecialidadeModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface IonApp extends Components.IonApp {
 }
 @Component({ selector: "ion-app", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
@@ -889,6 +899,16 @@ export class IonToolbar {
     this.el = r.nativeElement;
   }
 }
+export declare interface LocalModal extends Components.LocalModal {
+}
+@Component({ selector: "local-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class LocalModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedAccordionItem extends Components.MedAccordionItem {
 }
 @ProxyCmp({ inputs: ["background", "canCollapse", "dsColor", "isOpened", "noBorder", "slotsToggle"] })
@@ -1688,6 +1708,16 @@ export class MedVote {
     this.el = r.nativeElement;
   }
 }
+export declare interface RealizacoesModal extends Components.RealizacoesModal {
+}
+@Component({ selector: "realizacoes-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class RealizacoesModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface SelectTest extends Components.SelectTest {
 }
 @Component({ selector: "select-test", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
@@ -1723,6 +1753,16 @@ export declare interface TpInputContainer extends Components.TpInputContainer {
 @ProxyCmp({ inputs: ["disabled", "dsColor", "dsName", "feedback", "hasButton", "hasIcon"] })
 @Component({ selector: "tp-input-container", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled", "dsColor", "dsName", "feedback", "hasButton", "hasIcon"] })
 export class TpInputContainer {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface UnidadesModal extends Components.UnidadesModal {
+}
+@Component({ selector: "unidades-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class UnidadesModal {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
