@@ -1,4 +1,6 @@
 
+ajuda-modal,scoped
+
 dialog-test,scoped
 
 especialidade-modal,scoped

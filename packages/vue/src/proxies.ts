@@ -8,6 +8,9 @@ import type { JSX } from '@ionic/core';
 
 
 
+export const AjudaModal = /*@__PURE__*/ defineContainer<JSX.AjudaModal>('ajuda-modal');
+
+
 export const DialogTest = /*@__PURE__*/ defineContainer<JSX.DialogTest>('dialog-test');
 
 

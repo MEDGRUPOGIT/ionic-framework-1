@@ -17,6 +17,7 @@
 
 ### Used by
 
+ - [ajuda-modal](../../ionic-1-migracao/simulados/ajuda-modal)
  - [especialidade-modal](../../ionic-1-migracao/simulados/especialidade-modal)
  - [local-modal](../../ionic-1-migracao/simulados/local-modal)
  - [med-config](../../legacy/med-config)
@@ -28,6 +29,7 @@
 ### Graph
 ```mermaid
 graph TD;
+  ajuda-modal --> med-navbar
   especialidade-modal --> med-navbar
   local-modal --> med-navbar
   med-config --> med-navbar

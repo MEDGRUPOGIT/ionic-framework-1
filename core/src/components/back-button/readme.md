@@ -371,6 +371,10 @@ export default defineComponent({
 
 ## Dependencies
 
+### Used by
+
+ - [ajuda-modal](../@templarios/ionic-1-migracao/simulados/ajuda-modal)
+
 ### Depends on
 
 - [ion-ripple-effect](../ripple-effect)
@@ -379,6 +383,7 @@ export default defineComponent({
 ```mermaid
 graph TD;
   ion-back-button --> ion-ripple-effect
+  ajuda-modal --> ion-back-button
   style ion-back-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

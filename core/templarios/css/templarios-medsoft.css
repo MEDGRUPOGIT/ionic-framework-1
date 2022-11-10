@@ -246,27 +246,6 @@
   margin-top: 8px;
 }
 
-.ajuda {
-  height: 100%;
-}
-.ajuda__slides {
-  height: 100%;
-}
-.ajuda__slide {
-  display: flex;
-  flex-direction: column;
-}
-.ajuda__icon {
-  min-width: 100px;
-  min-height: 100px;
-  stroke: hsl(var(--med-color-neutral-10));
-  fill: transparent;
-  margin-bottom: 24px;
-}
-.ajuda__subtitle {
-  margin-bottom: 16px;
-}
-
 .simulados {
   background: hsl(var(--med-color-neutral-15));
   min-height: 100%;

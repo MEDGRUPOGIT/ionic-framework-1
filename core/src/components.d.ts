@@ -22,6 +22,8 @@ import { MedSemanaInterface } from "@templarios/interfaces/semana.interface";
 import { MedTema } from "@templarios/interfaces/themes.interface";
 import { MedTypeTag, MedTypeToken } from "@templarios/types/type.type";
 export namespace Components {
+    interface AjudaModal {
+    }
     interface DialogTest {
     }
     interface EspecialidadeModal {
@@ -4045,6 +4047,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLAjudaModalElement extends Components.AjudaModal, HTMLStencilElement {
+    }
+    var HTMLAjudaModalElement: {
+        prototype: HTMLAjudaModalElement;
+        new (): HTMLAjudaModalElement;
+    };
     interface HTMLDialogTestElement extends Components.DialogTest, HTMLStencilElement {
     }
     var HTMLDialogTestElement: {
@@ -5030,6 +5038,7 @@ declare global {
         new (): HTMLUnidadesModalElement;
     };
     interface HTMLElementTagNameMap {
+        "ajuda-modal": HTMLAjudaModalElement;
         "dialog-test": HTMLDialogTestElement;
         "especialidade-modal": HTMLEspecialidadeModalElement;
         "ion-action-sheet": HTMLIonActionSheetElement;
@@ -5197,6 +5206,8 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface AjudaModal {
+    }
     interface DialogTest {
     }
     interface EspecialidadeModal {
@@ -9364,6 +9375,7 @@ declare namespace LocalJSX {
     interface UnidadesModal {
     }
     interface IntrinsicElements {
+        "ajuda-modal": AjudaModal;
         "dialog-test": DialogTest;
         "especialidade-modal": EspecialidadeModal;
         "ion-action-sheet": IonActionSheet;
@@ -9534,6 +9546,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "ajuda-modal": LocalJSX.AjudaModal & JSXBase.HTMLAttributes<HTMLAjudaModalElement>;
             "dialog-test": LocalJSX.DialogTest & JSXBase.HTMLAttributes<HTMLDialogTestElement>;
             "especialidade-modal": LocalJSX.EspecialidadeModal & JSXBase.HTMLAttributes<HTMLEspecialidadeModalElement>;
             "ion-action-sheet": LocalJSX.IonActionSheet & JSXBase.HTMLAttributes<HTMLIonActionSheetElement>;

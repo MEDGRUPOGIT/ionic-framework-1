@@ -262,6 +262,7 @@ Type: `Promise<void>`
 
 ### Used by
 
+ - [ajuda-modal](../@templarios/ionic-1-migracao/simulados/ajuda-modal)
  - [especialidade-modal](../@templarios/ionic-1-migracao/simulados/especialidade-modal)
  - [local-modal](../@templarios/ionic-1-migracao/simulados/local-modal)
  - [med-config](../@templarios/legacy/med-config)
@@ -273,6 +274,7 @@ Type: `Promise<void>`
 ### Graph
 ```mermaid
 graph TD;
+  ajuda-modal --> ion-content
   especialidade-modal --> ion-content
   local-modal --> ion-content
   med-config --> ion-content

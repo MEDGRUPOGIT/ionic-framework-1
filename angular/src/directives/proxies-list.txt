@@ -2,6 +2,7 @@
 import type * as d from './proxies';
 
 export const DIRECTIVES = [
+  d.AjudaModal,
   d.DialogTest,
   d.EspecialidadeModal,
   d.IonApp,
