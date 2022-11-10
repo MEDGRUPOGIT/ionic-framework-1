@@ -1,26 +1,79 @@
+.filter-container {
+  position: relative;
+
+  &--aplicado {
+    .filter-container {
+      &__circle {
+        display: block;
+      }
+    }
+  }
+
+  &__circle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: hsl(var(--med-color-brand-3));
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    display: none;
+  }
+}
+
 .duvidas {
+  height: 100%;
+  position: relative;
+
   &__tab {
     max-width: initial;
   }
 
   &__wrap {
     padding: 16px;
+    height: calc(100% - 104px);
+    overflow: auto;
   }
 
-  &__item {
-    --inner-padding-end: 0;
-    background: hsl(var(--med-color-neutral-2));
-    border-radius: 8px;
-    overflow: hidden;
+  &__button {
+    --background: hsl(var(--med-color-brand-1));
+    position: absolute;
+    bottom: 75px;
+    right: 25px;
+  }
+}
 
-    &:not(:last-child) {
-      margin-bottom: 16px;
-      border-bottom: 1px solid hsl(var(--med-color-neutral-3));
+.card-duvidas {
+  background: hsl(var(--med-color-neutral-2));
+  border-radius: 8px;
+  overflow: hidden;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &--minha {
+    .card-duvidas__badge {
+      display: block;
     }
   }
 
-  &__card {
-    width: 100%;
+  &--mostra-pergunta {
+    .card-duvidas {
+      &__middle {
+        height: auto;
+        min-height: 90px;
+      }
+    }
+  }
+
+  &--menos-informacao {
+    .card-duvidas {
+      &__questao,
+      &__numero {
+        display: none;
+      }
+    }
   }
 
   &__top {
@@ -38,6 +91,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-height: 85px;
+  }
+
+  &__context {
+    align-self: flex-end;
   }
 
   &__identificacao {
@@ -56,6 +114,7 @@
 
   &__badge {
     margin-bottom: 4px;
+    display: none;
   }
 
   &__numero {
@@ -65,13 +124,13 @@
 
   &__tolltip-imagem {
     position: absolute;
-    top: -16px;
+    top: -20px;
     right: -8px;
     width: 75px;
     height: 75px;
 
     .med-tooltip__content {
-      top: 70% !important;
+      top: 75% !important;
     }
   }
 
@@ -82,7 +141,7 @@
 
   &__middle {
     padding: 0 16px 16px 16px;
-    max-height: 100px;
+    height: 90px;
     overflow: hidden;
   }
 
@@ -92,7 +151,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 -16px 24px hsl(var(--med-color-neutral-5));
   }
 
   &__bottom-left {
@@ -113,6 +171,14 @@
     position: absolute;
     top: 4px;
     right: 2px;
+  }
+
+  &__responder  {
+    &--sem-resposta {
+      .card-duvidas__quantidade {
+        display: none;
+      }
+    }
   }
 
   &__quantidade {

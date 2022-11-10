@@ -2,7 +2,7 @@
   overflow: hidden;
   height: 100%;
 }
-.container--height-100vh {
+.container--height-vh {
   height: 100vh;
 }
 
@@ -485,101 +485,143 @@
   padding: 16px;
 }
 
+.filter-container {
+  position: relative;
+}
+.filter-container--aplicado .filter-container__circle {
+  display: block;
+}
+.filter-container__circle {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: hsl(var(--med-color-brand-3));
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  display: none;
+}
+
+.duvidas {
+  height: 100%;
+  position: relative;
+}
 .duvidas__tab {
   max-width: initial;
 }
 .duvidas__wrap {
   padding: 16px;
+  height: calc(100% - 104px);
+  overflow: auto;
 }
-.duvidas__item {
-  --inner-padding-end: 0;
+.duvidas__button {
+  --background: hsl(var(--med-color-brand-1));
+  position: absolute;
+  bottom: 75px;
+  right: 25px;
+}
+
+.card-duvidas {
   background: hsl(var(--med-color-neutral-2));
   border-radius: 8px;
   overflow: hidden;
 }
-.duvidas__item:not(:last-child) {
+.card-duvidas:not(:last-child) {
   margin-bottom: 16px;
-  border-bottom: 1px solid hsl(var(--med-color-neutral-3));
 }
-.duvidas__card {
-  width: 100%;
+.card-duvidas--minha .card-duvidas__badge {
+  display: block;
 }
-.duvidas__top {
+.card-duvidas--mostra-pergunta .card-duvidas__middle {
+  height: auto;
+  min-height: 90px;
+}
+.card-duvidas--menos-informacao .card-duvidas__questao, .card-duvidas--menos-informacao .card-duvidas__numero {
+  display: none;
+}
+.card-duvidas__top {
   padding: 16px;
   position: relative;
 }
-.duvidas__questao {
+.card-duvidas__questao {
   color: hsl(var(--med-color-brand-4));
   margin-bottom: 16px;
   display: block;
 }
-.duvidas__informacao {
+.card-duvidas__informacao {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-height: 85px;
 }
-.duvidas__identificacao {
+.card-duvidas__context {
+  align-self: flex-end;
+}
+.card-duvidas__identificacao {
   display: flex;
   align-items: center;
 }
-.duvidas__avatar {
+.card-duvidas__avatar {
   margin-right: 16px;
 }
-.duvidas__dados {
+.card-duvidas__dados {
   display: flex;
   flex-direction: column;
 }
-.duvidas__badge {
+.card-duvidas__badge {
   margin-bottom: 4px;
+  display: none;
 }
-.duvidas__numero {
+.card-duvidas__numero {
   margin-top: 4px;
   display: block;
 }
-.duvidas__tolltip-imagem {
+.card-duvidas__tolltip-imagem {
   position: absolute;
-  top: -16px;
+  top: -20px;
   right: -8px;
   width: 75px;
   height: 75px;
 }
-.duvidas__tolltip-imagem .med-tooltip__content {
-  top: 70% !important;
+.card-duvidas__tolltip-imagem .med-tooltip__content {
+  top: 75% !important;
 }
-.duvidas__imagem {
+.card-duvidas__imagem {
   width: 100%;
   height: 100%;
 }
-.duvidas__middle {
+.card-duvidas__middle {
   padding: 0 16px 16px 16px;
-  max-height: 100px;
+  height: 90px;
   overflow: hidden;
 }
-.duvidas__bottom {
+.card-duvidas__bottom {
   background: hsl(var(--med-color-neutral-15));
   padding: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 -16px 24px hsl(var(--med-color-neutral-5));
 }
-.duvidas__bottom-left {
+.card-duvidas__bottom-left {
   display: flex;
   align-items: center;
 }
-.duvidas__favorito {
+.card-duvidas__favorito {
   margin-right: 8px;
 }
-.duvidas__like-container {
+.card-duvidas__like-container {
   margin-right: 8px;
   position: relative;
 }
-.duvidas__like {
+.card-duvidas__like {
   position: absolute;
   top: 4px;
   right: 2px;
 }
-.duvidas__quantidade {
+.card-duvidas__responder--sem-resposta .card-duvidas__quantidade {
+  display: none;
+}
+.card-duvidas__quantidade {
   background: hsl(var(--med-color-neutral-10));
   color: hsl(var(--med-color-neutral-1));
   margin-left: 8px;
