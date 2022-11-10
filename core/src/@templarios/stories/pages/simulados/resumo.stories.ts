@@ -70,7 +70,7 @@ const Template = ( {valoresChart, valoresLabel} ) => {
   }, 1000);
 
   return html`
-    <div class="container container--height-100vh">
+    <div class="container container--height-vh">
       <med-header>
         <med-navbar class="header" slot="navbar">
           <ion-back-button slot="left" mode="ios" text="" ds-size="xxs">
