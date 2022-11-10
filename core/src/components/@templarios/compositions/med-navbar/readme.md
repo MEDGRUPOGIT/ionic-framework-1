@@ -24,6 +24,7 @@
  - [med-image-zoom](../med-image-zoom)
  - [med-offline](../med-offline)
  - [realizacoes-modal](../../ionic-1-migracao/simulados/realizacoes-modal)
+ - [tutorial-modal](../../ionic-1-migracao/simulados/tutorial-modal)
  - [unidades-modal](../../ionic-1-migracao/simulados/unidades-modal)
 
 ### Graph
@@ -36,6 +37,7 @@ graph TD;
   med-image-zoom --> med-navbar
   med-offline --> med-navbar
   realizacoes-modal --> med-navbar
+  tutorial-modal --> med-navbar
   unidades-modal --> med-navbar
   style med-navbar fill:#f9f,stroke:#333,stroke-width:4px
 ```

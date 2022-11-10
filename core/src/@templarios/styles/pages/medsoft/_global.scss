@@ -10,6 +10,15 @@
 .header {
   --height: 56px;
 
+  &__title-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__subheading {
+    text-transform: uppercase;
+  }
+
   &__title {
     text-transform: uppercase;
   }

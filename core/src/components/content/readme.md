@@ -263,24 +263,28 @@ Type: `Promise<void>`
 ### Used by
 
  - [ajuda-modal](../@templarios/ionic-1-migracao/simulados/ajuda-modal)
+ - [aviso-modal](../@templarios/ionic-1-migracao/simulados/aviso-modal)
  - [especialidade-modal](../@templarios/ionic-1-migracao/simulados/especialidade-modal)
  - [local-modal](../@templarios/ionic-1-migracao/simulados/local-modal)
  - [med-config](../@templarios/legacy/med-config)
  - [med-image-zoom](../@templarios/compositions/med-image-zoom)
  - [realizacoes-modal](../@templarios/ionic-1-migracao/simulados/realizacoes-modal)
  - [sheet-content-test](../@templarios/testes/sheet-content-test)
+ - [tutorial-modal](../@templarios/ionic-1-migracao/simulados/tutorial-modal)
  - [unidades-modal](../@templarios/ionic-1-migracao/simulados/unidades-modal)
 
 ### Graph
 ```mermaid
 graph TD;
   ajuda-modal --> ion-content
+  aviso-modal --> ion-content
   especialidade-modal --> ion-content
   local-modal --> ion-content
   med-config --> ion-content
   med-image-zoom --> ion-content
   realizacoes-modal --> ion-content
   sheet-content-test --> ion-content
+  tutorial-modal --> ion-content
   unidades-modal --> ion-content
   style ion-content fill:#f9f,stroke:#333,stroke-width:4px
 ```

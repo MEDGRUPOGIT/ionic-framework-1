@@ -304,22 +304,26 @@ export default defineComponent({
 ### Used by
 
  - [ajuda-modal](../@templarios/ionic-1-migracao/simulados/ajuda-modal)
+ - [aviso-modal](../@templarios/ionic-1-migracao/simulados/aviso-modal)
  - [especialidade-modal](../@templarios/ionic-1-migracao/simulados/especialidade-modal)
  - ion-select-popover
  - [local-modal](../@templarios/ionic-1-migracao/simulados/local-modal)
  - [med-config](../@templarios/legacy/med-config)
  - [realizacoes-modal](../@templarios/ionic-1-migracao/simulados/realizacoes-modal)
+ - [tutorial-modal](../@templarios/ionic-1-migracao/simulados/tutorial-modal)
  - [unidades-modal](../@templarios/ionic-1-migracao/simulados/unidades-modal)
 
 ### Graph
 ```mermaid
 graph TD;
   ajuda-modal --> ion-label
+  aviso-modal --> ion-label
   especialidade-modal --> ion-label
   ion-select-popover --> ion-label
   local-modal --> ion-label
   med-config --> ion-label
   realizacoes-modal --> ion-label
+  tutorial-modal --> ion-label
   unidades-modal --> ion-label
   style ion-label fill:#f9f,stroke:#333,stroke-width:4px
 ```

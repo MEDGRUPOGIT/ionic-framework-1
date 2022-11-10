@@ -219,3 +219,30 @@
   margin-right: 8px;
   stroke: hsl(var(--med-color-neutral-10));
 }
+
+// Responsividade //
+
+@include breakpoint-down('sm') {
+  .card-duvidas {
+    .med-tooltip__content {
+      --min-width: 200px;
+      --max-width: 200px;
+    }
+
+    &__bottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__responder {
+      align-self: flex-end;
+    }
+
+    &__tolltip-imagem {
+      .med-tooltip__content {
+        top: 85% !important;
+      }
+    }
+  }
+}
+

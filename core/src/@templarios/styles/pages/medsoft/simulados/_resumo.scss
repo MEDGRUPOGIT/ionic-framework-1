@@ -106,6 +106,7 @@
 }
 
 // Responsividade //
+
 @include breakpoint-down('sm') {
   .resumo {
     &__middle {

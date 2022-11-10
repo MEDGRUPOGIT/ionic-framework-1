@@ -24,6 +24,8 @@ import { MedTypeTag, MedTypeToken } from "@templarios/types/type.type";
 export namespace Components {
     interface AjudaModal {
     }
+    interface AvisoModal {
+    }
     interface DialogTest {
     }
     interface EspecialidadeModal {
@@ -4043,6 +4045,8 @@ export namespace Components {
          */
         "hasIcon"?: 'start' | 'end' | 'both';
     }
+    interface TutorialModal {
+    }
     interface UnidadesModal {
     }
 }
@@ -4052,6 +4056,12 @@ declare global {
     var HTMLAjudaModalElement: {
         prototype: HTMLAjudaModalElement;
         new (): HTMLAjudaModalElement;
+    };
+    interface HTMLAvisoModalElement extends Components.AvisoModal, HTMLStencilElement {
+    }
+    var HTMLAvisoModalElement: {
+        prototype: HTMLAvisoModalElement;
+        new (): HTMLAvisoModalElement;
     };
     interface HTMLDialogTestElement extends Components.DialogTest, HTMLStencilElement {
     }
@@ -5031,6 +5041,12 @@ declare global {
         prototype: HTMLTpInputContainerElement;
         new (): HTMLTpInputContainerElement;
     };
+    interface HTMLTutorialModalElement extends Components.TutorialModal, HTMLStencilElement {
+    }
+    var HTMLTutorialModalElement: {
+        prototype: HTMLTutorialModalElement;
+        new (): HTMLTutorialModalElement;
+    };
     interface HTMLUnidadesModalElement extends Components.UnidadesModal, HTMLStencilElement {
     }
     var HTMLUnidadesModalElement: {
@@ -5039,6 +5055,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "ajuda-modal": HTMLAjudaModalElement;
+        "aviso-modal": HTMLAvisoModalElement;
         "dialog-test": HTMLDialogTestElement;
         "especialidade-modal": HTMLEspecialidadeModalElement;
         "ion-action-sheet": HTMLIonActionSheetElement;
@@ -5202,11 +5219,14 @@ declare global {
         "sheet-content-test": HTMLSheetContentTestElement;
         "sheet-test": HTMLSheetTestElement;
         "tp-input-container": HTMLTpInputContainerElement;
+        "tutorial-modal": HTMLTutorialModalElement;
         "unidades-modal": HTMLUnidadesModalElement;
     }
 }
 declare namespace LocalJSX {
     interface AjudaModal {
+    }
+    interface AvisoModal {
     }
     interface DialogTest {
     }
@@ -9372,10 +9392,13 @@ declare namespace LocalJSX {
          */
         "hasIcon"?: 'start' | 'end' | 'both';
     }
+    interface TutorialModal {
+    }
     interface UnidadesModal {
     }
     interface IntrinsicElements {
         "ajuda-modal": AjudaModal;
+        "aviso-modal": AvisoModal;
         "dialog-test": DialogTest;
         "especialidade-modal": EspecialidadeModal;
         "ion-action-sheet": IonActionSheet;
@@ -9539,6 +9562,7 @@ declare namespace LocalJSX {
         "sheet-content-test": SheetContentTest;
         "sheet-test": SheetTest;
         "tp-input-container": TpInputContainer;
+        "tutorial-modal": TutorialModal;
         "unidades-modal": UnidadesModal;
     }
 }
@@ -9547,6 +9571,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "ajuda-modal": LocalJSX.AjudaModal & JSXBase.HTMLAttributes<HTMLAjudaModalElement>;
+            "aviso-modal": LocalJSX.AvisoModal & JSXBase.HTMLAttributes<HTMLAvisoModalElement>;
             "dialog-test": LocalJSX.DialogTest & JSXBase.HTMLAttributes<HTMLDialogTestElement>;
             "especialidade-modal": LocalJSX.EspecialidadeModal & JSXBase.HTMLAttributes<HTMLEspecialidadeModalElement>;
             "ion-action-sheet": LocalJSX.IonActionSheet & JSXBase.HTMLAttributes<HTMLIonActionSheetElement>;
@@ -9710,6 +9735,7 @@ declare module "@stencil/core" {
             "sheet-content-test": LocalJSX.SheetContentTest & JSXBase.HTMLAttributes<HTMLSheetContentTestElement>;
             "sheet-test": LocalJSX.SheetTest & JSXBase.HTMLAttributes<HTMLSheetTestElement>;
             "tp-input-container": LocalJSX.TpInputContainer & JSXBase.HTMLAttributes<HTMLTpInputContainerElement>;
+            "tutorial-modal": LocalJSX.TutorialModal & JSXBase.HTMLAttributes<HTMLTutorialModalElement>;
             "unidades-modal": LocalJSX.UnidadesModal & JSXBase.HTMLAttributes<HTMLUnidadesModalElement>;
         }
     }

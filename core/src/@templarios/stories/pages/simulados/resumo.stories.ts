@@ -52,6 +52,24 @@ const createModalAjuda = async () => {
   });
 }
 
+const createModalTutorial = async () => {
+  modalController.create({
+    component: 'tutorial-modal',
+    cssClass: 'tp-modal',
+  }).then((modal)=>{
+    modal.present()
+  });
+}
+
+const createModalAviso = async () => {
+  modalController.create({
+    component: 'aviso-modal',
+    cssClass: 'tp-modal',
+  }).then((modal)=>{
+    modal.present()
+  });
+}
+
 const Template = ( {valoresChart, valoresLabel} ) => {
 
   setTimeout(() => {
@@ -184,10 +202,10 @@ const Template = ( {valoresChart, valoresLabel} ) => {
             </ion-button>
 
             <div class="resumo__modo-container">
-              <ion-button class="resumo__modo" mode="ios">
+              <ion-button class="resumo__modo" mode="ios" @click="${createModalTutorial}">
                 MODO PROVA
               </ion-button>
-              <ion-button class="resumo__modo" mode="ios">
+              <ion-button class="resumo__modo" mode="ios" @click="${createModalAviso}">
                 MODO ESTUDO
               </ion-button>
             </div>

@@ -367,6 +367,7 @@ export default defineComponent({
 
 ### Used by
 
+ - [aviso-modal](../@templarios/ionic-1-migracao/simulados/aviso-modal)
  - [dialog-test](../@templarios/testes/dialog-test)
  - [especialidade-modal](../@templarios/ionic-1-migracao/simulados/especialidade-modal)
  - [local-modal](../@templarios/ionic-1-migracao/simulados/local-modal)
@@ -385,6 +386,7 @@ export default defineComponent({
  - [realizacoes-modal](../@templarios/ionic-1-migracao/simulados/realizacoes-modal)
  - [sheet-content-test](../@templarios/testes/sheet-content-test)
  - [sheet-test](../@templarios/testes/sheet-test)
+ - [tutorial-modal](../@templarios/ionic-1-migracao/simulados/tutorial-modal)
  - [unidades-modal](../@templarios/ionic-1-migracao/simulados/unidades-modal)
 
 ### Depends on
@@ -395,6 +397,7 @@ export default defineComponent({
 ```mermaid
 graph TD;
   ion-button --> ion-ripple-effect
+  aviso-modal --> ion-button
   dialog-test --> ion-button
   especialidade-modal --> ion-button
   local-modal --> ion-button
@@ -413,6 +416,7 @@ graph TD;
   realizacoes-modal --> ion-button
   sheet-content-test --> ion-button
   sheet-test --> ion-button
+  tutorial-modal --> ion-button
   unidades-modal --> ion-button
   style ion-button fill:#f9f,stroke:#333,stroke-width:4px
 ```

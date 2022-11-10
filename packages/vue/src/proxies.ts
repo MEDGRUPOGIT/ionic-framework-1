@@ -11,6 +11,9 @@ import type { JSX } from '@ionic/core';
 export const AjudaModal = /*@__PURE__*/ defineContainer<JSX.AjudaModal>('ajuda-modal');
 
 
+export const AvisoModal = /*@__PURE__*/ defineContainer<JSX.AvisoModal>('aviso-modal');
+
+
 export const DialogTest = /*@__PURE__*/ defineContainer<JSX.DialogTest>('dialog-test');
 
 
@@ -1411,6 +1414,9 @@ export const TpInputContainer = /*@__PURE__*/ defineContainer<JSX.TpInputContain
   'hasButton',
   'hasIcon'
 ]);
+
+
+export const TutorialModal = /*@__PURE__*/ defineContainer<JSX.TutorialModal>('tutorial-modal');
 
 
 export const UnidadesModal = /*@__PURE__*/ defineContainer<JSX.UnidadesModal>('unidades-modal');

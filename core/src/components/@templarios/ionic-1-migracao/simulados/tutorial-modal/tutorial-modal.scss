@@ -4,10 +4,11 @@
 }
 
 .modal-content {
-  height: calc(100% - 56px);;
+  height: calc(100% - 136px);
+  padding: 16px;
 }
 
-.ajuda {
+.tutorial {
   height: 100%;
   padding: 16px;
 
@@ -20,35 +21,34 @@
     flex-direction: column;
   }
 
-  &__icon {
-    min-width: 100px;
-    min-height: 100px;
-    stroke: hsl(var(--med-color-neutral-10));
-    fill: transparent;
-    margin-bottom: 24px;
-  }
-
-  &__subtitle {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 32px;
+  &__image {
     margin-bottom: 16px;
   }
 
   &__text {
-    font-weight: 400;
-    font-size: 14px;
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
     line-height: 20px;
+    text-align: center;
   }
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
 }
 
 // Responsividade //
 
 @media only screen and (max-height: 500px) {
-  .ajuda {
+  .tutorial {
     &__slides {
       height: auto;
       overflow: auto;
     }
   }
 }
+

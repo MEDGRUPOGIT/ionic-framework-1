@@ -9,6 +9,13 @@
 .header {
   --height: 56px;
 }
+.header__title-container {
+  display: flex;
+  flex-direction: column;
+}
+.header__subheading {
+  text-transform: uppercase;
+}
 .header__title {
   text-transform: uppercase;
 }
@@ -634,6 +641,114 @@
   width: 24px;
   margin-right: 8px;
   stroke: hsl(var(--med-color-neutral-10));
+}
+
+@media (max-width: 575.98px) {
+  .card-duvidas .med-tooltip__content {
+    --min-width: 200px;
+    --max-width: 200px;
+  }
+  .card-duvidas__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .card-duvidas__responder {
+    align-self: flex-end;
+  }
+  .card-duvidas__tolltip-imagem .med-tooltip__content {
+    top: 85% !important;
+  }
+}
+.questao {
+  padding: 16px;
+}
+
+.user-selector__title {
+  --background: hsl(var(--med-color-brand-2)) !important;
+  --padding-end: 0;
+  --inner-padding-end: 0;
+  --padding-top: 0;
+  --padding-bottom: 0;
+}
+.user-selector__container-text {
+  display: flex;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+.user-selector__text {
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 16px !important;
+}
+.user-selector__text--underline {
+  font-weight: 600 !important;
+  text-decoration: underline;
+}
+.user-selector__button {
+  --border-radius: 0;
+  --background: hsl(var(--med-color-brand-1));
+  height: 100% !important;
+  --background-hover: hsl(var(--med-color-brand-1));
+}
+.user-selector__button-cancel {
+  display: none;
+}
+.user-selector__bottom {
+  background: hsl(var(--med-color-brand-1));
+  display: none;
+  flex-direction: column;
+  padding-bottom: 32px;
+}
+.user-selector__subtitle {
+  padding: 16px 0;
+  text-align: center;
+}
+.user-selector__container-buttons {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 16px;
+}
+.user-selector__button-teacher {
+  color: hsl(var(--med-color-brand-1));
+}
+.user-selector__button-student {
+  margin-left: 16px;
+  min-width: 154.5px;
+}
+.user-selector__inputs {
+  padding: 16px;
+}
+.user-selector__student {
+  margin-bottom: 16px;
+}
+.user-selector__button-bottom {
+  width: fit-content;
+  margin: 0 auto;
+}
+.user-selector--open .user-selector__bottom {
+  display: flex;
+}
+.user-selector--open .user-selector__button {
+  display: none;
+}
+.user-selector--open .user-selector__button-cancel {
+  display: block;
+}
+
+@media (min-width: 576px) {
+  .user-selector__inputs {
+    display: flex;
+  }
+  .user-selector__student {
+    width: 100%;
+    flex: 1 50%;
+    margin-right: 16px;
+    margin-bottom: 0;
+  }
+  .user-selector__state {
+    width: 100%;
+    flex: 1 50%;
+  }
 }
 
 /*# sourceMappingURL=templarios-medsoft.css.map */

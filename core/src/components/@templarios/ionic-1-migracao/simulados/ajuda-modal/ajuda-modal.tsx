@@ -21,7 +21,7 @@ export class AjudaModal {
 
         <ion-content class="modal-content">
           <div class="ajuda">
-            <ion-slides class="ajuda__slides">
+            <ion-slides class="ajuda__slides" pager>
               <ion-slide class="ajuda__slide">
                 <ion-icon class="ajuda__icon" name="med-montaprovas"></ion-icon>
                 <ion-label class="ajuda__subtitle" ds-color="neutral-10">Modo Prova</ion-label>

@@ -14,6 +14,16 @@ export class AjudaModal {
     this.el = r.nativeElement;
   }
 }
+export declare interface AvisoModal extends Components.AvisoModal {
+}
+@Component({ selector: "aviso-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class AvisoModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface DialogTest extends Components.DialogTest {
 }
 @Component({ selector: "dialog-test", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
@@ -1763,6 +1773,16 @@ export declare interface TpInputContainer extends Components.TpInputContainer {
 @ProxyCmp({ inputs: ["disabled", "dsColor", "dsName", "feedback", "hasButton", "hasIcon"] })
 @Component({ selector: "tp-input-container", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled", "dsColor", "dsName", "feedback", "hasButton", "hasIcon"] })
 export class TpInputContainer {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface TutorialModal extends Components.TutorialModal {
+}
+@Component({ selector: "tutorial-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class TutorialModal {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
