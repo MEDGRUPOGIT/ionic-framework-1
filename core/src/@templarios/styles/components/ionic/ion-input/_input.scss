@@ -8,11 +8,11 @@ ion-input {
     --padding-top: 12px;
     --placeholder-color: hsl(var(--med-color-neutral-5));
     --placeholder-opacity: 1;
-   
+
     margin-top: 0px;
     font-size: 14px;
     border-radius: 8px;
-    height: 40px;     
+    height: 40px;
   }
 }
 
@@ -48,16 +48,16 @@ ion-input[ds-name="secondary"] {
 //
 ion-input[state="attention"] {
   &.sc-ion-input-md-h {
-  --border: 1px solid hsl(var(--med-color-fb-attention));  
+    --border: 1px solid hsl(var(--med-color-fb-attention));
   }
 }
 
 tp-input-container[state="attention"] {
-  --border: 1px solid hsl(var(--med-color-fb-attention));  
+  --border: 1px solid hsl(var(--med-color-fb-attention));
 
   ion-input.sc-ion-input-md-h {
-    height: 38px;  
-  }  
+    height: 38px;
+  }
 
   ion-icon.med-icon--alerta {
     stroke: hsl(var(--med-color-fb-attention));
@@ -67,16 +67,16 @@ tp-input-container[state="attention"] {
 
 ion-input[state="caution"] {
   &.sc-ion-input-md-h {
-    --border: 1px solid hsl(var(--med-color-fb-caution));  
+    --border: 1px solid hsl(var(--med-color-fb-caution));
   }
 }
 
 tp-input-container[state="caution"] {
-  --border: 1px solid hsl(var(--med-color-fb-caution));  
+  --border: 1px solid hsl(var(--med-color-fb-caution));
 
   ion-input.sc-ion-input-md-h {
-    height: 38px;  
-  }  
+    height: 38px;
+  }
 
   ion-icon.med-icon--alerta {
     stroke: hsl(var(--med-color-fb-caution));
@@ -85,16 +85,16 @@ tp-input-container[state="caution"] {
 
 ion-input[state="warning"] {
   &.sc-ion-input-md-h {
-    --border: 1px solid hsl(var(--med-color-fb-warning));  
+    --border: 1px solid hsl(var(--med-color-fb-warning));
   }
 }
 
 tp-input-container[state="warning"] {
-  --border: 1px solid hsl(var(--med-color-fb-warning));  
+  --border: 1px solid hsl(var(--med-color-fb-warning));
 
   ion-input.sc-ion-input-md-h {
-    height: 38px;  
-  }  
+    height: 38px;
+  }
 
   ion-icon.med-icon--alerta {
     stroke: hsl(var(--med-color-fb-warning));
@@ -103,16 +103,16 @@ tp-input-container[state="warning"] {
 
 ion-input[state="success"] {
   &.sc-ion-input-md-h {
-    --border: 1px solid hsl(var(--med-color-fb-success));  
+    --border: 1px solid hsl(var(--med-color-fb-success));
   }
 }
 
 tp-input-container[state="success"] {
-  --border: 1px solid hsl(var(--med-color-fb-success));  
+  --border: 1px solid hsl(var(--med-color-fb-success));
 
   ion-input.sc-ion-input-md-h {
-    height: 38px;  
-  }  
+    height: 38px;
+  }
 
   ion-icon.med-icon--alerta {
     stroke: hsl(var(--med-color-fb-success));
@@ -146,12 +146,12 @@ tp-input-container[state="success"] {
     }
   }
 }
+
 @for $i from 1 through 9 {
-  @include generate-component-neutral(
-    tp-input-container,
+
+  @include generate-component-neutral(tp-input-container,
     neutral-#{$i}#{5},
-    $i
-  ) {
+    $i ) {
     --color: #{tp-contrast-neutral($i)};
 
     ion-button:hover .med-icon {
@@ -160,19 +160,45 @@ tp-input-container[state="success"] {
   }
 }
 
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-input, neutral-#{$i}, $i) {
+    --color: #{tp-contrast-neutral($i)};
+    --background: #{tp-neutral($i)};
+    --placeholder-color: #{tp-contrast-neutral($i)};
+  }
+}
+
+@for $i from 1 through 9 {
+
+  @include generate-component-neutral(ion-input,
+    neutral-#{$i}#{5},
+    $i ) {
+    --color: #{tp-contrast-neutral($i)};
+    --background: #{tp-neutral($i)};
+    --placeholder-color: #{tp-contrast-neutral($i)};
+  }
+}
+
 //
 // feedback
 //
 @each $color in $tp-feedback {
-  @include generate-component-feedback(
-    tp-input-container,
+
+  @include generate-component-feedback(tp-input-container,
     fb-#{$color},
-    $color
-  ) {
+    $color ) {
     --color: hsl(var(--med-color-neutral-1));
 
     ion-button:hover .med-icon {
       stroke: var(--color);
     }
+  }
+
+  @include generate-component-feedback(ion-input,
+    fb-#{$color},
+    $color ) {
+    --color: hsl(var(--med-color-neutral-1));
+    --placeholder-color: hsl(var(--med-color-neutral-1));
+    --background: #{tp-feedback($color)};
   }
 }
