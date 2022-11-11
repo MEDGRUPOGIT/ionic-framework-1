@@ -79,9 +79,9 @@
 }
 
 .aulas {
-  padding: 8px 16px 24px 16px;
-  height: 100%;
+  height: calc(100% - 104px);
   overflow: scroll;
+  padding: 16px;
 }
 .aulas__item {
   flex-direction: column;
