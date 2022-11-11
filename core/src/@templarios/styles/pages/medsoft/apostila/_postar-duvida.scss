@@ -1,0 +1,21 @@
+.segment-text {
+  &__top {
+    background: hsl(var(--med-color-brand-1));
+    text-align: center;
+    padding: 24px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+  }
+
+  &__bottom {
+    position: fixed;
+    bottom: 64px;
+    left: calc(50% - 32px);
+  }
+
+  &__button {
+    --background: hsl(var(--med-color-neutral-55)) !important;
+  }
+}

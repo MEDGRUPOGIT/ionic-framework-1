@@ -1,0 +1,15 @@
+.busca-apostila {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  background: hsl(var(--med-color-neutral-10));
+  ;
+
+  &__icon {
+    stroke: hsl(var(--med-color-brand-2));
+  }
+
+  &__input {
+    margin: 0 16px;
+  }
+}

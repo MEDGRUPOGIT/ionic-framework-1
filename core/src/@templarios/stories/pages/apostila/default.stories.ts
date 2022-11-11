@@ -23,7 +23,7 @@ const Template = () => {
         </med-navbar>
       </med-header>
 
-      <div class="user-selector">
+      <div class="user-selector" style="display: none;">
         <ion-item class="user-selector__title" ds-color="brand" mode="ios" lines="none">
           <div class="user-selector__container-text">
             <ion-label class="user-selector__text">Você fará postagens como &nbsp;</ion-label>
@@ -72,7 +72,7 @@ const Template = () => {
         </div>
       </div>
 
-      <med-toolbar ds-color="neutral-10">
+      <med-toolbar ds-color="neutral-10" style="display: none;">
         <div class="med-toolbar__left" slot="start">
           <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" ds-size="xxs">
             <ion-icon class="med-icon" slot="icon-only" name="med-anotacao"></ion-icon>
@@ -113,6 +113,34 @@ const Template = () => {
           <ion-label class="bottom__text" token="p14" ds-color="brand">3h e 26m</ion-label>
         </div>
       </div>
+
+      <div class="segment-text" style="display: none;">
+        <div class="segment-text__top">
+          <ion-label token="h20x">Selecione o segmento do texto para postar a sua dúvida</ion-label>
+        </div>
+
+        <div class="segment-text__bottom">
+          <ion-button class="segment-text__button" mode="ios" ds-color="neutral-10" icon-only fill="clear" ds-size="lg">
+            <ion-icon class="med-icon" slot="icon-only" name="med-fechar"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+
+      <div class="busca-apostila">
+        <div class="busca-apostila__icon">
+          <ion-icon class="med-icon" name="med-busca"></ion-icon>
+        </div>
+
+        <ion-input class="busca-apostila__input" ds-color="neutral-8" mode="md" placeholder="Digite o que deseja buscar..."></ion-input>
+
+        <ion-button mode="ios" ds-color="neutral-5" icon-only fill="clear" ds-size="xxs">
+          <ion-icon class="med-icon" slot="icon-only" name="med-fechar"></ion-icon>
+        </ion-button>
+      </div>
+
+      <div class="font-zoom-apostila">
+      </div>
+    
     </div>
   `;
 };
