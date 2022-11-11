@@ -8,7 +8,7 @@ export default {
 
 const Template = () => {
   return html`
-    <div class="container">
+    <div class="container container--height-vh">
       <med-header>
         <med-navbar class="header" slot="navbar">
           <ion-back-button slot="left" mode="ios" text="" ds-size="xxs">
@@ -73,25 +73,28 @@ const Template = () => {
       </div>
 
       <med-toolbar ds-color="neutral-10">
-        <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" slot="start" ds-size="xxs">
-          <ion-icon class="med-icon" slot="icon-only" name="med-anotacao"></ion-icon>
-        </ion-button>
+        <div class="med-toolbar__left" slot="start">
+          <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" ds-size="xxs">
+            <ion-icon class="med-icon" slot="icon-only" name="med-anotacao"></ion-icon>
+          </ion-button>
+          <div class="med-toolbar__line"></div>
+        </div>
+
         <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" slot="start" ds-size="xxs">
           <ion-icon class="med-icon" slot="icon-only" name="med-esquerda"></ion-icon>
         </ion-button>
 
-        <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs">
-          <ion-icon class="med-icon" slot="icon-only" color="brand" name="med-editar"></ion-icon>
-        </ion-button>
-        <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xxs">
-          <ion-icon class="med-icon" slot="icon-only" name="med-estrela"></ion-icon>
-        </ion-button>
-        <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xxs">
-          <ion-icon class="med-icon" slot="icon-only" name="med-visivel"></ion-icon>
-        </ion-button>
-        <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs">
-          <ion-icon class="med-icon" slot="icon-only" name="med-busca"></ion-icon>
-        </ion-button>
+        <div class="med-toolbar__middle">
+          <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xxs">
+            <ion-icon class="med-icon" slot="icon-only" name="med-duvidas"></ion-icon>
+          </ion-button>
+          <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xxs">
+            <ion-icon class="med-icon" slot="icon-only" name="med-textoselecionar"></ion-icon>
+          </ion-button>
+          <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs">
+            <ion-icon class="med-icon" slot="icon-only" name="med-busca"></ion-icon>
+          </ion-button>
+        </div>
 
         <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" slot="end" ds-size="xxs">
           <ion-icon class="med-icon" slot="icon-only" name="med-direita"></ion-icon>

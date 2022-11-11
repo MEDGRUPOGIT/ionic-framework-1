@@ -1,0 +1,96 @@
+.user-selector {
+  position: relative;
+
+  &__title {
+    --background: hsl(var(--med-color-brand-2)) !important;
+    --padding-end: 0;
+    --inner-padding-end: 0;
+    --padding-top: 0;
+    --padding-bottom: 0;
+  }
+
+  &__container-text {
+    display: flex;
+    margin: 0 auto;
+    padding: 16px 0;
+  }
+
+  &__text {
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 16px !important;
+
+    &--underline {
+      font-weight: 600 !important;
+      text-decoration: underline;
+    }
+  }
+
+  &__button {
+    --border-radius: 0;
+    --background: hsl(var(--med-color-brand-1));
+    height: 100% !important;
+    --background-hover: hsl(var(--med-color-brand-1));
+  }
+
+  &__button-cancel {
+    display: none;
+  }
+
+  &__bottom {
+    background: hsl(var(--med-color-brand-1));
+    display: none;
+    flex-direction: column;
+    padding-bottom: 32px;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+  }
+
+  &__subtitle {
+    padding: 16px 0;
+    text-align: center;
+  }
+
+  &__container-buttons {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 16px;
+  }
+
+  &__button-teacher {
+    color: hsl(var(--med-color-brand-1));
+  }
+
+  &__button-student {
+    margin-left: 16px;
+    min-width: 154.5px;
+  }
+
+  &__inputs {
+    padding: 16px;
+  }
+
+  &__student {
+    margin-bottom: 16px;
+  }
+
+  &__button-bottom {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  &--open {
+    .user-selector__bottom {
+      display: flex;
+    }
+
+    .user-selector__button {
+      display: none;
+    }
+
+    .user-selector__button-cancel {
+      display: block;
+    }
+  }
+}
