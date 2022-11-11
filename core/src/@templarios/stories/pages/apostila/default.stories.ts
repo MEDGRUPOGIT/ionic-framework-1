@@ -23,7 +23,7 @@ const Template = () => {
         </med-navbar>
       </med-header>
 
-      <div class="user-selector user-selector--open">
+      <div class="user-selector">
         <ion-item class="user-selector__title" ds-color="brand" mode="ios" lines="none">
           <div class="user-selector__container-text">
             <ion-label class="user-selector__text">Você fará postagens como &nbsp;</ion-label>
@@ -69,6 +69,45 @@ const Template = () => {
           <ion-button class="user-selector__button-bottom" ds-size="xs" mode="ios">
             <ion-label token="p14">APLICAR</ion-label>
           </ion-button>
+        </div>
+      </div>
+
+      <med-toolbar ds-color="neutral-10">
+        <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" slot="start" ds-size="xxs">
+          <ion-icon class="med-icon" slot="icon-only" name="med-anotacao"></ion-icon>
+        </ion-button>
+        <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" slot="start" ds-size="xxs">
+          <ion-icon class="med-icon" slot="icon-only" name="med-esquerda"></ion-icon>
+        </ion-button>
+
+        <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs">
+          <ion-icon class="med-icon" slot="icon-only" color="brand" name="med-editar"></ion-icon>
+        </ion-button>
+        <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xxs">
+          <ion-icon class="med-icon" slot="icon-only" name="med-estrela"></ion-icon>
+        </ion-button>
+        <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xxs">
+          <ion-icon class="med-icon" slot="icon-only" name="med-visivel"></ion-icon>
+        </ion-button>
+        <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs">
+          <ion-icon class="med-icon" slot="icon-only" name="med-busca"></ion-icon>
+        </ion-button>
+
+        <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" slot="end" ds-size="xxs">
+          <ion-icon class="med-icon" slot="icon-only" name="med-direita"></ion-icon>
+        </ion-button>
+      </med-toolbar>
+
+      <div class="bottom">
+        <div class="bottom__range">
+          <ion-range min="20" max="80" step="2">
+            <ion-label slot="end" token="p14">0%</ion-label>
+          </ion-range>
+        </div>
+
+        <div class="bottom__estimativa">
+          <ion-label token="p14">Estimativa para terminar</ion-label>
+          <ion-label class="bottom__text" token="p14" ds-color="brand">3h e 26m</ion-label>
         </div>
       </div>
     </div>
