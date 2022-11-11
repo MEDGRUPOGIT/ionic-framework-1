@@ -20,7 +20,7 @@ export class TutorialModal {
 
         <ion-content class="modal-content">
           <div class="tutorial">
-            <ion-slides class="tutorial">
+            <ion-slides class="tutorial" pager>
               <ion-slide class="tutorial__slide">
                 <img class="tutorial__image" src="https://via.placeholder.com/500"/>
                 <ion-label class="tutorial__text" ds-color="neutral-10">
