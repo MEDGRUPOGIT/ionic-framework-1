@@ -370,6 +370,7 @@ export default defineComponent({
  - [aviso-modal](../@templarios/ionic-1-migracao/simulados/aviso-modal)
  - [dialog-test](../@templarios/testes/dialog-test)
  - [especialidade-modal](../@templarios/ionic-1-migracao/simulados/especialidade-modal)
+ - [excluir-modal](../@templarios/ionic-1-migracao/duvidas-academicas/excluir-modal)
  - [local-modal](../@templarios/ionic-1-migracao/simulados/local-modal)
  - [med-alert](../@templarios/core/med-alert)
  - [med-banner](../@templarios/compositions/med-banner)
@@ -400,6 +401,7 @@ graph TD;
   aviso-modal --> ion-button
   dialog-test --> ion-button
   especialidade-modal --> ion-button
+  excluir-modal --> ion-button
   local-modal --> ion-button
   med-alert --> ion-button
   med-banner --> ion-button

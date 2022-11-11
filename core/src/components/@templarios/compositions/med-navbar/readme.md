@@ -19,6 +19,7 @@
 
  - [ajuda-modal](../../ionic-1-migracao/simulados/ajuda-modal)
  - [especialidade-modal](../../ionic-1-migracao/simulados/especialidade-modal)
+ - [excluir-modal](../../ionic-1-migracao/duvidas-academicas/excluir-modal)
  - [local-modal](../../ionic-1-migracao/simulados/local-modal)
  - [med-config](../../legacy/med-config)
  - [med-image-zoom](../med-image-zoom)
@@ -32,6 +33,7 @@
 graph TD;
   ajuda-modal --> med-navbar
   especialidade-modal --> med-navbar
+  excluir-modal --> med-navbar
   local-modal --> med-navbar
   med-config --> med-navbar
   med-image-zoom --> med-navbar

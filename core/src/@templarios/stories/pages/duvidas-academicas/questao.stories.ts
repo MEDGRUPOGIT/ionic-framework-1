@@ -152,15 +152,15 @@ const Template = ({alternativas}) => {
                   <ul class="med-context-menu__list">
                     <li class="med-context-menu__item">
                       <ion-icon class="med-icon med-context-menu__icon" name="med-cadeado"></ion-icon>
-                      <med-type token="p16">Tornar privado</med-type>
+                      <ion-label token="p16">Tornar privado</ion-label>
                     </li>
                     <li class="med-context-menu__item">
                       <ion-icon class="med-icon med-context-menu__icon" name="med-lixeira"></ion-icon>
-                      <med-type token="p16">Deletar</med-type>
+                      <ion-label token="p16">Deletar</ion-label>
                     </li>
                     <li class="med-context-menu__item">
                       <ion-icon class="med-icon med-context-menu__icon" name="med-editar"></ion-icon>
-                      <med-type token="p16">Editar</med-type>
+                      <ion-label token="p16">Editar</ion-label>
                     </li>
                   </ul>
                 </med-context-menu>
@@ -219,11 +219,11 @@ const Template = ({alternativas}) => {
                     <ul class="med-context-menu__list">
                       <li class="med-context-menu__item">
                         <ion-icon class="med-icon med-context-menu__icon" name="med-lixeira"></ion-icon>
-                        <med-type token="p16">Deletar</med-type>
+                        <ion-label token="p16">Deletar</ion-label>
                       </li>
                       <li class="med-context-menu__item">
                         <ion-icon class="med-icon med-context-menu__icon" name="med-editar"></ion-icon>
-                        <med-type token="p16">Editar</med-type>
+                        <ion-label token="p16">Editar</ion-label>
                       </li>
                     </ul>
                   </med-context-menu>
@@ -264,11 +264,11 @@ const Template = ({alternativas}) => {
                     <ul class="med-context-menu__list">
                       <li class="med-context-menu__item">
                         <ion-icon class="med-icon med-context-menu__icon" name="med-lixeira"></ion-icon>
-                        <med-type token="p16">Deletar</med-type>
+                        <ion-label token="p16">Deletar</ion-label>
                       </li>
                       <li class="med-context-menu__item">
                         <ion-icon class="med-icon med-context-menu__icon" name="med-editar"></ion-icon>
-                        <med-type token="p16">Editar</med-type>
+                        <ion-label token="p16">Editar</ion-label>
                       </li>
                     </ul>
                   </med-context-menu>
@@ -309,11 +309,11 @@ const Template = ({alternativas}) => {
                     <ul class="med-context-menu__list">
                       <li class="med-context-menu__item">
                         <ion-icon class="med-icon med-context-menu__icon" name="med-lixeira"></ion-icon>
-                        <med-type token="p16">Deletar</med-type>
+                        <ion-label token="p16">Deletar</ion-label>
                       </li>
                       <li class="med-context-menu__item">
                         <ion-icon class="med-icon med-context-menu__icon" name="med-editar"></ion-icon>
-                        <med-type token="p16">Editar</med-type>
+                        <ion-label token="p16">Editar</ion-label>
                       </li>
                     </ul>
                   </med-context-menu>
@@ -354,11 +354,11 @@ const Template = ({alternativas}) => {
                     <ul class="med-context-menu__list">
                       <li class="med-context-menu__item">
                         <ion-icon class="med-icon med-context-menu__icon" name="med-lixeira"></ion-icon>
-                        <med-type token="p16">Deletar</med-type>
+                        <ion-label token="p16">Deletar</ion-label>
                       </li>
                       <li class="med-context-menu__item">
                         <ion-icon class="med-icon med-context-menu__icon" name="med-editar"></ion-icon>
-                        <med-type token="p16">Editar</med-type>
+                        <ion-label token="p16">Editar</ion-label>
                       </li>
                     </ul>
                   </med-context-menu>

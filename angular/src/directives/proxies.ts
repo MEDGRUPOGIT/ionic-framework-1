@@ -44,6 +44,16 @@ export class EspecialidadeModal {
     this.el = r.nativeElement;
   }
 }
+export declare interface ExcluirModal extends Components.ExcluirModal {
+}
+@Component({ selector: "excluir-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class ExcluirModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface IonApp extends Components.IonApp {
 }
 @Component({ selector: "ion-app", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })

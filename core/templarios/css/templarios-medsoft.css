@@ -819,6 +819,73 @@
   margin-right: 8px;
 }
 
+.text-area {
+  height: calc(100vh - 56px);
+  padding: 16px;
+}
+.text-area__campo {
+  height: 100%;
+}
+.text-area .native-textarea {
+  height: calc(100vh - 88px);
+}
+
+.med-toolbar {
+  --center-width: 100%;
+}
+.med-toolbar__left {
+  display: flex;
+  align-items: center;
+}
+.med-toolbar__line {
+  margin: 0 8px;
+  border-left: 1px solid hsl(var(--med-color-neutral-2));
+  height: 40px;
+}
+.med-toolbar__middle {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: hsl(var(--med-color-neutral-1));
+  z-index: 10;
+}
+.bottom__range {
+  padding: 0 8px 0 8px;
+}
+.bottom__estimativa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bottom__text {
+  margin-bottom: 8px;
+}
+
+@media (min-width: 576px) {
+  .user-selector__inputs {
+    display: flex;
+  }
+  .user-selector__student {
+    width: 100%;
+    flex: 1 50%;
+    margin-right: 16px;
+    margin-bottom: 0;
+  }
+  .user-selector__state {
+    width: 100%;
+    flex: 1 50%;
+  }
+}
+.user-selector {
+  position: relative;
+}
 .user-selector__title {
   --background: hsl(var(--med-color-brand-2)) !important;
   --padding-end: 0;
@@ -854,6 +921,9 @@
   display: none;
   flex-direction: column;
   padding-bottom: 32px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
 }
 .user-selector__subtitle {
   padding: 16px 0;
@@ -889,22 +959,6 @@
 }
 .user-selector--open .user-selector__button-cancel {
   display: block;
-}
-
-@media (min-width: 576px) {
-  .user-selector__inputs {
-    display: flex;
-  }
-  .user-selector__student {
-    width: 100%;
-    flex: 1 50%;
-    margin-right: 16px;
-    margin-bottom: 0;
-  }
-  .user-selector__state {
-    width: 100%;
-    flex: 1 50%;
-  }
 }
 
 /*# sourceMappingURL=templarios-medsoft.css.map */

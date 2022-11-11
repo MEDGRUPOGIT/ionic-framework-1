@@ -30,6 +30,8 @@ export namespace Components {
     }
     interface EspecialidadeModal {
     }
+    interface ExcluirModal {
+    }
     interface IonActionSheet {
         /**
           * If `true`, the action sheet will animate.
@@ -4075,6 +4077,12 @@ declare global {
         prototype: HTMLEspecialidadeModalElement;
         new (): HTMLEspecialidadeModalElement;
     };
+    interface HTMLExcluirModalElement extends Components.ExcluirModal, HTMLStencilElement {
+    }
+    var HTMLExcluirModalElement: {
+        prototype: HTMLExcluirModalElement;
+        new (): HTMLExcluirModalElement;
+    };
     interface HTMLIonActionSheetElement extends Components.IonActionSheet, HTMLStencilElement {
     }
     var HTMLIonActionSheetElement: {
@@ -5058,6 +5066,7 @@ declare global {
         "aviso-modal": HTMLAvisoModalElement;
         "dialog-test": HTMLDialogTestElement;
         "especialidade-modal": HTMLEspecialidadeModalElement;
+        "excluir-modal": HTMLExcluirModalElement;
         "ion-action-sheet": HTMLIonActionSheetElement;
         "ion-alert": HTMLIonAlertElement;
         "ion-app": HTMLIonAppElement;
@@ -5231,6 +5240,8 @@ declare namespace LocalJSX {
     interface DialogTest {
     }
     interface EspecialidadeModal {
+    }
+    interface ExcluirModal {
     }
     interface IonActionSheet {
         /**
@@ -9401,6 +9412,7 @@ declare namespace LocalJSX {
         "aviso-modal": AvisoModal;
         "dialog-test": DialogTest;
         "especialidade-modal": EspecialidadeModal;
+        "excluir-modal": ExcluirModal;
         "ion-action-sheet": IonActionSheet;
         "ion-alert": IonAlert;
         "ion-app": IonApp;
@@ -9574,6 +9586,7 @@ declare module "@stencil/core" {
             "aviso-modal": LocalJSX.AvisoModal & JSXBase.HTMLAttributes<HTMLAvisoModalElement>;
             "dialog-test": LocalJSX.DialogTest & JSXBase.HTMLAttributes<HTMLDialogTestElement>;
             "especialidade-modal": LocalJSX.EspecialidadeModal & JSXBase.HTMLAttributes<HTMLEspecialidadeModalElement>;
+            "excluir-modal": LocalJSX.ExcluirModal & JSXBase.HTMLAttributes<HTMLExcluirModalElement>;
             "ion-action-sheet": LocalJSX.IonActionSheet & JSXBase.HTMLAttributes<HTMLIonActionSheetElement>;
             "ion-alert": LocalJSX.IonAlert & JSXBase.HTMLAttributes<HTMLIonAlertElement>;
             "ion-app": LocalJSX.IonApp & JSXBase.HTMLAttributes<HTMLIonAppElement>;
