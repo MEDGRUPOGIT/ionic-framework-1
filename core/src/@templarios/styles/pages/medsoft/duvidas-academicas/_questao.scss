@@ -1,3 +1,74 @@
 .questao {
-  padding: 16px;
+  height: 100%;
+
+  &__container {
+    height: calc(100% - 104px);
+    overflow: scroll;
+    padding: 16px;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  &__subtitle {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  &__question {
+    margin-bottom: 16px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  &__card-duvidas {
+    margin-bottom: 16px;
+  }
+
+  &__card-resposta-container {
+    padding: 0 16px;
+  }
+
+  &__card-resposta {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+// med-context-menu //
+
+.med-context-menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.med-context-menu__item {
+  padding-right: 16px;
+  display: flex;
+  align-items: center;
+  transition: color 300ms ease-out;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.med-context-menu__item:hover {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+.med-context-menu__icon {
+  width: 24px;
+  margin-right: 8px;
+  stroke: hsl(var(--med-color-neutral-10));
 }

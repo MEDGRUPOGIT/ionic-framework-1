@@ -1,0 +1,16 @@
+.button-quantidade {
+  &--zero {
+    .button-quantidade__span {
+      display: none;
+    }
+  }
+
+  &__span {
+    background: hsl(var(--med-color-neutral-10));
+    color: hsl(var(--med-color-neutral-1));
+    margin-left: 8px;
+    margin-right: -4px;
+    padding: 2px 8px;
+    border-radius: 100px;
+  }
+}

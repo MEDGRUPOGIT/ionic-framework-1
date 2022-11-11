@@ -1,0 +1,74 @@
+.card-resposta {
+  background: hsl(var(--med-color-neutral-25));
+  border-radius: 8px;
+  padding: 16px;
+
+  &--resposta-oficial {
+    background: hsl(var(--med-color-brand-2));
+    .card-resposta {
+      &__badge {
+        display: block;
+      }
+    }
+  }
+
+  &--check {
+    .card-resposta {
+      &__imagem {
+        display: block;
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    position: relative;
+  }
+
+  &__identificacao {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__imagem {
+    width: 70px;
+    height: 70px;
+    display: none;
+    position: absolute;
+    top: -16px;
+    right: 40%;
+  }
+
+  &__top-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__badge {
+    display: none;
+    margin-left: 16px;
+  }
+
+  &__context {
+    // align-self: flex-end;
+  }
+
+  &__middle {
+    margin-bottom: 8px;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+  }
+
+  &__like {
+    margin-right: 8px;
+  }
+}

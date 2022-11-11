@@ -1,0 +1,158 @@
+.card-duvidas {
+  background: hsl(var(--med-color-neutral-2));
+  border-radius: 8px;
+  overflow: hidden;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &--minha {
+    .card-duvidas__badge {
+      display: block;
+    }
+  }
+
+  &--mostra-pergunta {
+    .card-duvidas {
+      &__middle {
+        height: auto;
+        min-height: 90px;
+      }
+    }
+  }
+
+  &--menos-informacao {
+    .card-duvidas {
+      &__questao,
+      &__numero {
+        display: none;
+      }
+    }
+  }
+
+  &--resposta-oficial {
+    .card-duvidas {
+      &__tolltip-imagem {
+        display: block;
+      }
+    }
+  }
+
+  &__top {
+    padding: 16px;
+    position: relative;
+  }
+
+  &__questao {
+    color: hsl(var(--med-color-brand-4));
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  &__informacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 85px;
+  }
+
+  &__context {
+    align-self: flex-end;
+  }
+
+  &__identificacao {
+    display: flex;
+    align-items: center;
+  }
+
+  &__avatar {
+    margin-right: 16px;
+  }
+
+  &__dados {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__badge {
+    margin-bottom: 4px;
+    display: none;
+  }
+
+  &__numero {
+    margin-top: 4px;
+    display: block;
+  }
+
+  &__tolltip-imagem {
+    position: absolute;
+    top: -20px;
+    right: -8px;
+    width: 75px;
+    height: 75px;
+    display: none;
+
+    .med-tooltip__content {
+      top: 75% !important;
+    }
+  }
+
+  &__imagem {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__middle {
+    padding: 0 16px 16px 16px;
+    height: 90px;
+    overflow: hidden;
+  }
+
+  &__bottom {
+    background: hsl(var(--med-color-neutral-15));
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__bottom-left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__favorito {
+    margin-right: 8px;
+  }
+
+  &__like {
+    margin-right: 8px;
+  }
+}
+
+// Responsividade //
+
+@include breakpoint-down('sm') {
+  .card-duvidas {
+    .med-tooltip__content {
+      --min-width: 200px;
+      --max-width: 200px;
+    }
+
+    &__bottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__quantidade {
+      align-self: flex-end;
+    }
+
+    &__tolltip-imagem {
+      .med-tooltip__content {
+        top: 85% !important;
+      }
+    }
+  }
+}

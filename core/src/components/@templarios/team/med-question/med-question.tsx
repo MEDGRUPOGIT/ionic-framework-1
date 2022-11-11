@@ -44,7 +44,9 @@ export class MedQuestion {
         },)}
         onClick={(event: any) => {this.toggle(event)}}>
           {texto && <div class="med-question__text" innerHTML={texto}></div>}
-          <slot></slot>
+          <div class="med-question__text">
+            <slot></slot>
+          </div>
           <ion-icon class="med-icon med-question__icon" name="med-baixo"></ion-icon>
       </Host>
     );

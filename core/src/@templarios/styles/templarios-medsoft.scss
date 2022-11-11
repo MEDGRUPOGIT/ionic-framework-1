@@ -36,8 +36,14 @@
 @import "./pages/medsoft/concursos-na-integra/pesquisa";
 
 // dúvidas acadêmicas
+@import "./pages/medsoft/duvidas-academicas/button-filter";
+@import "./pages/medsoft/duvidas-academicas/button-like";
+@import "./pages/medsoft/duvidas-academicas/button-quantidade";
+@import "./pages/medsoft/duvidas-academicas/card-duvidas";
 @import "./pages/medsoft/duvidas-academicas/page";
 @import "./pages/medsoft/duvidas-academicas/questao";
+@import "./pages/medsoft/duvidas-academicas/question";
+@import "./pages/medsoft/duvidas-academicas/card-resposta";
 
 // apostila
 @import "./pages/medsoft/apostila/page";
