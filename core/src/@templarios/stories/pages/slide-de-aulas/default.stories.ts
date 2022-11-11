@@ -8,7 +8,7 @@ export default {
 
 const Template = () => {
   return html`
-    <div class="container">
+    <div class="container container--height-vh">
       <med-header>
         <med-navbar class="header" slot="navbar">
           <ion-back-button slot="left" mode="ios" text="" ds-size="xxs">
@@ -31,174 +31,175 @@ const Template = () => {
         </med-toolbar>
       </med-header>
 
+      <ion-content>
+        <main class="slide-de-aula">
+          <ion-item class="slide-de-aula__item" ds-color="neutral-2" radius="s08" spacing-v="s16" spacing-h="s16" mode="ios" lines="none">
+            <ion-label class="slide-de-aula__text" token="p16xb">Clínica médica</ion-label>
+            <ion-button slot="end" ds-size="xxs" mode="ios" fill="clear" icon-only>
+              <ion-icon class="med-icon" slot="icon-only" name="med-direita"></ion-icon>
+            </ion-button>
+          </ion-item>
 
-      <main class="slide-de-aula">
-        <ion-item class="slide-de-aula__item" ds-color="neutral-2" radius="s08" spacing-v="s16" spacing-h="s16" mode="ios" lines="none">
-          <ion-label class="slide-de-aula__text" token="p16xb">Clínica médica</ion-label>
-          <ion-button slot="end" ds-size="xxs" mode="ios" fill="clear" icon-only>
-            <ion-icon class="med-icon" slot="icon-only" name="med-direita"></ion-icon>
-          </ion-button>
-        </ion-item>
-
-        <med-accordion-list class="accordion-container" single-open>
-          <med-accordion-item class="accordion">
-            <div slot="middle">
-              <ion-label class="accordion__title" ds-color="neutral-10" token="p16xb">Cirurgia</ion-label>
-            </div>
-
-            <div slot="end">
-              <ion-button mode="ios" icon-only fill="clear" ds-size="xxs">
-                <ion-icon class="med-rotate med-icon" slot="icon-only" name="med-baixo"></ion-icon>
-              </ion-button>
-            </div>
-
-            <div class="accordion__content" slot="content">
-              <div class="materia">
-                <div class="materia__ano">
-                  <ion-label class="materia__text" ds-color="neutral-10" token="p14xb">2021</ion-label>
-                </div>
-                <div class="materia__list">
-                  <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
-                    <ion-item class="materia__item-left" mode="ios" lines="none">
-                      <ion-label class="materia__codigo" token="p16xb">0CIR 01</ion-label>
-                    </ion-item>
-                    <ion-item class="materia__item-right" mode="ios" lines="none">
-                      <ion-label class="materia__descricao" token="p14">Trauma</ion-label>
-                    </ion-item>
-                  </ion-list>
-                  <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
-                    <ion-item class="materia__item-left" mode="ios" lines="none">
-                      <ion-label class="materia__codigo" token="p16xb">0CIR 02</ion-label>
-                    </ion-item>
-                    <ion-item class="materia__item-right" mode="ios" lines="none">
-                      <ion-label class="materia__descricao" token="p14">Preparo Pré-Operatório e Avaliação do Risco Cirúrgico, (...)</ion-label>
-                    </ion-item>
-                  </ion-list>
-                  <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
-                    <ion-item class="materia__item-left" mode="ios" lines="none">
-                      <ion-label class="materia__codigo" token="p16xb">0CIR 03</ion-label>
-                    </ion-item>
-                    <ion-item class="materia__item-right" mode="ios" lines="none">
-                      <ion-label class="materia__descricao" token="p14">Resposta Endócrina e Imunológica ao Trauma, Queimaduras, (...)</ion-label>
-                    </ion-item>
-                  </ion-list>
-                </div>
+          <med-accordion-list class="accordion-container" single-open>
+            <med-accordion-item class="accordion">
+              <div slot="middle">
+                <ion-label class="accordion__title" ds-color="neutral-10" token="p16xb">Cirurgia</ion-label>
               </div>
 
-              <div class="materia">
-                <div class="materia__ano">
-                  <ion-label class="materia__text" ds-color="neutral-10" token="p14xb">2020</ion-label>
-                </div>
-                <div class="materia__list">
-                  <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
-                    <ion-item class="materia__item-left" mode="ios" lines="none">
-                      <ion-label class="materia__codigo" token="p16xb">0CIR 01</ion-label>
-                    </ion-item>
-                    <ion-item class="materia__item-right" mode="ios" lines="none">
-                      <ion-label class="materia__descricao" token="p14">Trauma</ion-label>
-                    </ion-item>
-                  </ion-list>
-                  <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
-                    <ion-item class="materia__item-left" mode="ios" lines="none">
-                      <ion-label class="materia__codigo" token="p16xb">0CIR 02</ion-label>
-                    </ion-item>
-                    <ion-item class="materia__item-right" mode="ios" lines="none">
-                      <ion-label class="materia__descricao" token="p14">Preparo Pré-Operatório e Avaliação do Risco Cirúrgico, (...)</ion-label>
-                    </ion-item>
-                  </ion-list>
-                  <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
-                    <ion-item class="materia__item-left" mode="ios" lines="none">
-                      <ion-label class="materia__codigo" token="p16xb">0CIR 03</ion-label>
-                    </ion-item>
-                    <ion-item class="materia__item-right" mode="ios" lines="none">
-                      <ion-label class="materia__descricao" token="p14">Resposta Endócrina e Imunológica ao Trauma, Queimaduras, (...)</ion-label>
-                    </ion-item>
-                  </ion-list>
-                </div>
-              </div>
-            </div>
-          </med-accordion-item>
-
-          <med-accordion-item class="accordion">
-            <div slot="middle">
-              <ion-label class="accordion__title" ds-color="neutral-10" token="p16xb">Pediatria</ion-label>
-            </div>
-
-            <div slot="end">
-              <ion-button mode="ios" icon-only fill="clear" ds-size="xxs">
-                <ion-icon class="med-rotate med-icon" slot="icon-only" name="med-baixo"></ion-icon>
-              </ion-button>
-            </div>
-
-            <div class="accordion__content" slot="content">
-              <div class="materia">
-                <div class="materia__ano">
-                  <ion-label class="materia__text" ds-color="neutral-10" token="p14xb">2021</ion-label>
-                </div>
-                <div class="materia__list">
-                  <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
-                    <ion-item class="materia__item-left" mode="ios" lines="none">
-                      <ion-label class="materia__codigo" token="p16xb">0CIR 01</ion-label>
-                    </ion-item>
-                    <ion-item class="materia__item-right" mode="ios" lines="none">
-                      <ion-label class="materia__descricao" token="p14">Trauma</ion-label>
-                    </ion-item>
-                  </ion-list>
-                  <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
-                    <ion-item class="materia__item-left" mode="ios" lines="none">
-                      <ion-label class="materia__codigo" token="p16xb">0CIR 02</ion-label>
-                    </ion-item>
-                    <ion-item class="materia__item-right" mode="ios" lines="none">
-                      <ion-label class="materia__descricao" token="p14">Preparo Pré-Operatório e Avaliação do Risco Cirúrgico, (...)</ion-label>
-                    </ion-item>
-                  </ion-list>
-                  <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
-                    <ion-item class="materia__item-left" mode="ios" lines="none">
-                      <ion-label class="materia__codigo" token="p16xb">0CIR 03</ion-label>
-                    </ion-item>
-                    <ion-item class="materia__item-right" mode="ios" lines="none">
-                      <ion-label class="materia__descricao" token="p14">Resposta Endócrina e Imunológica ao Trauma, Queimaduras, (...)</ion-label>
-                    </ion-item>
-                  </ion-list>
-                </div>
+              <div slot="end">
+                <ion-button mode="ios" icon-only fill="clear" ds-size="xxs">
+                  <ion-icon class="med-rotate med-icon" slot="icon-only" name="med-baixo"></ion-icon>
+                </ion-button>
               </div>
 
-              <div class="materia">
-                <div class="materia__ano">
-                  <ion-label class="materia__text" ds-color="neutral-10" token="p14xb">2020</ion-label>
+              <div class="accordion__content" slot="content">
+                <div class="materia">
+                  <div class="materia__ano">
+                    <ion-label class="materia__text" ds-color="neutral-10" token="p14xb">2021</ion-label>
+                  </div>
+                  <div class="materia__list">
+                    <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
+                      <ion-item class="materia__item-left" mode="ios" lines="none">
+                        <ion-label class="materia__codigo" token="p16xb">0CIR 01</ion-label>
+                      </ion-item>
+                      <ion-item class="materia__item-right" mode="ios" lines="none">
+                        <ion-label class="materia__descricao" token="p14">Trauma</ion-label>
+                      </ion-item>
+                    </ion-list>
+                    <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
+                      <ion-item class="materia__item-left" mode="ios" lines="none">
+                        <ion-label class="materia__codigo" token="p16xb">0CIR 02</ion-label>
+                      </ion-item>
+                      <ion-item class="materia__item-right" mode="ios" lines="none">
+                        <ion-label class="materia__descricao" token="p14">Preparo Pré-Operatório e Avaliação do Risco Cirúrgico, (...)</ion-label>
+                      </ion-item>
+                    </ion-list>
+                    <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
+                      <ion-item class="materia__item-left" mode="ios" lines="none">
+                        <ion-label class="materia__codigo" token="p16xb">0CIR 03</ion-label>
+                      </ion-item>
+                      <ion-item class="materia__item-right" mode="ios" lines="none">
+                        <ion-label class="materia__descricao" token="p14">Resposta Endócrina e Imunológica ao Trauma, Queimaduras, (...)</ion-label>
+                      </ion-item>
+                    </ion-list>
+                  </div>
                 </div>
-                <div class="materia__list">
-                  <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
-                    <ion-item class="materia__item-left" mode="ios" lines="none">
-                      <ion-label class="materia__codigo" token="p16xb">0CIR 01</ion-label>
-                    </ion-item>
-                    <ion-item class="materia__item-right" mode="ios" lines="none">
-                      <ion-label class="materia__descricao" token="p14">Trauma</ion-label>
-                    </ion-item>
-                  </ion-list>
-                  <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
-                    <ion-item class="materia__item-left" mode="ios" lines="none">
-                      <ion-label class="materia__codigo" token="p16xb">0CIR 02</ion-label>
-                    </ion-item>
-                    <ion-item class="materia__item-right" mode="ios" lines="none">
-                      <ion-label class="materia__descricao" token="p14">Preparo Pré-Operatório e Avaliação do Risco Cirúrgico, (...)</ion-label>
-                    </ion-item>
-                  </ion-list>
-                  <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
-                    <ion-item class="materia__item-left" mode="ios" lines="none">
-                      <ion-label class="materia__codigo" token="p16xb">0CIR 03</ion-label>
-                    </ion-item>
-                    <ion-item class="materia__item-right" mode="ios" lines="none">
-                      <ion-label class="materia__descricao" token="p14">Resposta Endócrina e Imunológica ao Trauma, Queimaduras, (...)</ion-label>
-                    </ion-item>
-                  </ion-list>
+
+                <div class="materia">
+                  <div class="materia__ano">
+                    <ion-label class="materia__text" ds-color="neutral-10" token="p14xb">2020</ion-label>
+                  </div>
+                  <div class="materia__list">
+                    <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
+                      <ion-item class="materia__item-left" mode="ios" lines="none">
+                        <ion-label class="materia__codigo" token="p16xb">0CIR 01</ion-label>
+                      </ion-item>
+                      <ion-item class="materia__item-right" mode="ios" lines="none">
+                        <ion-label class="materia__descricao" token="p14">Trauma</ion-label>
+                      </ion-item>
+                    </ion-list>
+                    <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
+                      <ion-item class="materia__item-left" mode="ios" lines="none">
+                        <ion-label class="materia__codigo" token="p16xb">0CIR 02</ion-label>
+                      </ion-item>
+                      <ion-item class="materia__item-right" mode="ios" lines="none">
+                        <ion-label class="materia__descricao" token="p14">Preparo Pré-Operatório e Avaliação do Risco Cirúrgico, (...)</ion-label>
+                      </ion-item>
+                    </ion-list>
+                    <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
+                      <ion-item class="materia__item-left" mode="ios" lines="none">
+                        <ion-label class="materia__codigo" token="p16xb">0CIR 03</ion-label>
+                      </ion-item>
+                      <ion-item class="materia__item-right" mode="ios" lines="none">
+                        <ion-label class="materia__descricao" token="p14">Resposta Endócrina e Imunológica ao Trauma, Queimaduras, (...)</ion-label>
+                      </ion-item>
+                    </ion-list>
+                  </div>
                 </div>
               </div>
-            </div>
-          </med-accordion-item>
+            </med-accordion-item>
 
-        </med-accordion-list>
-      </main>
+            <med-accordion-item class="accordion">
+              <div slot="middle">
+                <ion-label class="accordion__title" ds-color="neutral-10" token="p16xb">Pediatria</ion-label>
+              </div>
+
+              <div slot="end">
+                <ion-button mode="ios" icon-only fill="clear" ds-size="xxs">
+                  <ion-icon class="med-rotate med-icon" slot="icon-only" name="med-baixo"></ion-icon>
+                </ion-button>
+              </div>
+
+              <div class="accordion__content" slot="content">
+                <div class="materia">
+                  <div class="materia__ano">
+                    <ion-label class="materia__text" ds-color="neutral-10" token="p14xb">2021</ion-label>
+                  </div>
+                  <div class="materia__list">
+                    <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
+                      <ion-item class="materia__item-left" mode="ios" lines="none">
+                        <ion-label class="materia__codigo" token="p16xb">0CIR 01</ion-label>
+                      </ion-item>
+                      <ion-item class="materia__item-right" mode="ios" lines="none">
+                        <ion-label class="materia__descricao" token="p14">Trauma</ion-label>
+                      </ion-item>
+                    </ion-list>
+                    <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
+                      <ion-item class="materia__item-left" mode="ios" lines="none">
+                        <ion-label class="materia__codigo" token="p16xb">0CIR 02</ion-label>
+                      </ion-item>
+                      <ion-item class="materia__item-right" mode="ios" lines="none">
+                        <ion-label class="materia__descricao" token="p14">Preparo Pré-Operatório e Avaliação do Risco Cirúrgico, (...)</ion-label>
+                      </ion-item>
+                    </ion-list>
+                    <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
+                      <ion-item class="materia__item-left" mode="ios" lines="none">
+                        <ion-label class="materia__codigo" token="p16xb">0CIR 03</ion-label>
+                      </ion-item>
+                      <ion-item class="materia__item-right" mode="ios" lines="none">
+                        <ion-label class="materia__descricao" token="p14">Resposta Endócrina e Imunológica ao Trauma, Queimaduras, (...)</ion-label>
+                      </ion-item>
+                    </ion-list>
+                  </div>
+                </div>
+
+                <div class="materia">
+                  <div class="materia__ano">
+                    <ion-label class="materia__text" ds-color="neutral-10" token="p14xb">2020</ion-label>
+                  </div>
+                  <div class="materia__list">
+                    <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
+                      <ion-item class="materia__item-left" mode="ios" lines="none">
+                        <ion-label class="materia__codigo" token="p16xb">0CIR 01</ion-label>
+                      </ion-item>
+                      <ion-item class="materia__item-right" mode="ios" lines="none">
+                        <ion-label class="materia__descricao" token="p14">Trauma</ion-label>
+                      </ion-item>
+                    </ion-list>
+                    <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
+                      <ion-item class="materia__item-left" mode="ios" lines="none">
+                        <ion-label class="materia__codigo" token="p16xb">0CIR 02</ion-label>
+                      </ion-item>
+                      <ion-item class="materia__item-right" mode="ios" lines="none">
+                        <ion-label class="materia__descricao" token="p14">Preparo Pré-Operatório e Avaliação do Risco Cirúrgico, (...)</ion-label>
+                      </ion-item>
+                    </ion-list>
+                    <ion-list class="materia__list-container" ds-color="neutral-15" radius="s00">
+                      <ion-item class="materia__item-left" mode="ios" lines="none">
+                        <ion-label class="materia__codigo" token="p16xb">0CIR 03</ion-label>
+                      </ion-item>
+                      <ion-item class="materia__item-right" mode="ios" lines="none">
+                        <ion-label class="materia__descricao" token="p14">Resposta Endócrina e Imunológica ao Trauma, Queimaduras, (...)</ion-label>
+                      </ion-item>
+                    </ion-list>
+                  </div>
+                </div>
+              </div>
+            </med-accordion-item>
+
+          </med-accordion-list>
+        </main>
+      </ion-content>
     </div>
   `;
 };

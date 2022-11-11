@@ -155,29 +155,9 @@
   margin-left: auto;
 }
 
-.product-select {
-  display: flex;
-  align-items: center;
-}
-.product-select__logo-container {
-  background: hsl(var(--med-color-neutral-2));
-  border-radius: 8px;
-  padding: 4px;
-  max-width: 40px;
-  max-height: 40px;
-  margin-right: 16px;
-}
-.product-select__logo {
-  min-height: 32px;
-  min-width: 32px;
-}
-.product-select__text {
-  text-transform: uppercase;
-}
-
 .slide-de-aula {
   padding-top: 8px;
-  height: 100%;
+  height: calc(100% - 104px);
   overflow: scroll;
 }
 .slide-de-aula__item {
@@ -235,6 +215,26 @@
   font-size: 14px !important;
   font-weight: 400 !important;
   line-height: 16px !important;
+}
+
+.product-select {
+  display: flex;
+  align-items: center;
+}
+.product-select__logo-container {
+  background: hsl(var(--med-color-neutral-2));
+  border-radius: 8px;
+  padding: 4px;
+  max-width: 40px;
+  max-height: 40px;
+  margin-right: 16px;
+}
+.product-select__logo {
+  min-height: 32px;
+  min-width: 32px;
+}
+.product-select__text {
+  text-transform: uppercase;
 }
 
 .slides {

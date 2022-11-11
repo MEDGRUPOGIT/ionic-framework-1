@@ -1,32 +1,6 @@
-.product-select {
-  display: flex;
-  align-items: center;
-
-  &__logo-container {
-    background: hsl(var(--med-color-neutral-2));
-    border-radius: 8px;
-    padding: 4px;
-    max-width: 40px;
-    max-height: 40px;
-    margin-right: 16px;
-  }
-
-  &__logo {
-    min-height: 32px;
-    min-width: 32px;
-  }
-
-  &__button {
-  }
-
-  &__text {
-    text-transform: uppercase;
-  }
-}
-
 .slide-de-aula {
   padding-top: 8px;
-  height: 100%;
+  height: calc(100% - 104px);
   overflow: scroll;
 
   &__item {
