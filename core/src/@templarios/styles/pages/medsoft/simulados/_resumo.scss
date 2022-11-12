@@ -1,13 +1,13 @@
 .resumo {
   background: hsl(var(--med-color-neutral-15));
-  height: 100%;
+  height: calc(100% - 128px);
 
   &__button {
     margin: 0 auto;
   }
 
   &__middle {
-    height: calc(100% - 168px);
+    height: calc(100% - 40px);
     overflow: auto;
   }
 
@@ -109,9 +109,7 @@
 
 @include breakpoint-down('sm') {
   .resumo {
-    &__middle {
-      height: calc(100% - 208px);
-    }
+    height: calc(100% - 184px);
 
     &__classificacao {
       flex-direction: column;

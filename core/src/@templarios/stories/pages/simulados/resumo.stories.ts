@@ -97,7 +97,7 @@ const Template = ( {valoresChart, valoresLabel} ) => {
   }, 1000);
 
   return html`
-    <div class="container container--height-vh">
+    <div class="container">
       <med-header>
         <med-navbar class="header" slot="navbar">
           <ion-back-button slot="left" mode="ios" text="" ds-size="xxs">
@@ -110,92 +110,94 @@ const Template = ( {valoresChart, valoresLabel} ) => {
         </med-navbar>
       </med-header>
 
-      <main class="resumo">
-        <div class="resumo__top">
-          <ion-item ds-color="brand" spacing-v="s08" spacing-h="s04" mode="ios" lines="none">
-            <ion-button class="resumo__button" mode="ios" fill="clear" ds-color="neutral-10" ds-size="xxs" @click="${createModalRealizacoes}">
-              <ion-icon slot="start" class="med-icon" name="med-trofeu"></ion-icon>
-                REALIZADO MODO PROVA (EM 20/10/2022)
-              <ion-icon slot="end" class="med-icon" name="med-baixo"></ion-icon>
+      <ion-content>
+        <main class="resumo">
+          <div class="resumo__top">
+            <ion-item ds-color="brand" spacing-v="s08" spacing-h="s04" mode="ios" lines="none">
+              <ion-button class="resumo__button" mode="ios" fill="clear" ds-color="neutral-10" ds-size="xxs" @click="${createModalRealizacoes}">
+                <ion-icon slot="start" class="med-icon" name="med-trofeu"></ion-icon>
+                  REALIZADO MODO PROVA (EM 20/10/2022)
+                <ion-icon slot="end" class="med-icon" name="med-baixo"></ion-icon>
+              </ion-button>
+            </ion-item>
+          </div>
+
+          <div class="resumo__middle">
+            <div class="resumo__classificacao">
+              <div class="resumo__linha">
+                <ion-label token="p12x">Qual seria sua classificação &nbsp;</ion-label>
+                <ion-button class="resumo__opcoes" mode="ios" fill="clear" ds-size="xxs" no-padding="true" @click="${createModalLocal}">
+                  no Brasil
+                </ion-button>
+              </div>
+
+              <div class="resumo__linha">
+                <ion-label token="p12x">&nbsp; em &nbsp;</ion-label>
+                <ion-button class="resumo__opcoes" mode="ios" fill="clear" ds-size="xxs" no-padding="true" @click="${createModalUnidades}">
+                  Todas as Unidades
+                </ion-button>
+              </div>
+
+              <div class="resumo__linha">
+                <ion-label token="p12x">&nbsp; em &nbsp;</ion-label>
+                <ion-button class="resumo__opcoes" mode="ios" fill="clear" ds-size="xxs" no-padding="true" @click="${createModalEspecialidade}">
+                  Todas as Especialidades
+                </ion-button>
+              </div>
+            </div>
+
+            <div class="resumo__range-container">
+              <ion-icon class="med-icon resumo__icon resumo__icon--start" name="med-usuario"></ion-icon>
+              <div class="resumo__progress">
+                <ion-range class="resumo__range" min="20" max="80" step="2" ds-color="fb-warning">
+                </ion-range>
+                <div class="resumo__posicao-container" style="--porcentagem: 50">
+                <ion-label class="resumo__posicao" token="p14xb"> 100° </ion-label>
+                <ion-label class="resumo__sua-nota" token="p10"> Sua nota </ion-label>
+                <ion-label class="resumo__nota" token="p12xb"> 5.0 </ion-label>
+              </div>
+              </div>
+              <ion-icon class="med-icon resumo__icon resumo__icon--end" name="med-acertou"></ion-icon>
+            </div>
+
+            <div class="resumo__participantes">
+              <ion-label token="p14x" ds-color="neutral-8">Total de</ion-label>
+              <ion-label token="p14xb" ds-color="neutral-8">&nbsp; 15000 &nbsp;</ion-label>
+              <ion-label token="p14x" ds-color="neutral-8">participantes</ion-label>
+            </div>
+
+            <div class="resumo__questoes">
+              <med-chart-radial id="chart-geral" titulo="100" subtitulo="Questoes" ds-size="lg"></med-chart-radial>
+              <med-chart-radial-label id="label-geral"></med-chart-radial-label>
+            </div>
+
+            <ion-item ds-color="brand" spacing-v="s08" spacing-h="s04"     mode="ios" lines="none">
+            <ion-button class="resumo__button" mode="ios" fill="clear" ds-color="neutral-10" ds-size="xxs">
+              <ion-icon slot="start" class="med-icon" name="med-apostila"></ion-icon>
+                MODO PROVA
+              </ion-button>
+            </ion-item>
+
+            <div class="resumo__questoes">
+              <med-chart-radial id="chart-prova" titulo="100" subtitulo="Questoes" ds-size="lg"></med-chart-radial>
+              <med-chart-radial-label id="label-prova"></med-chart-radial-label>
+            </div>
+
+            <ion-item ds-color="brand" spacing-v="s08" spacing-h="s04"     mode="ios" lines="none">
+            <ion-button class="resumo__button" mode="ios" fill="clear" ds-color="neutral-10" ds-size="xxs">
+              <ion-icon slot="start" class="med-icon" name="med-apostila"></ion-icon>
+                MODO ESTUDO
             </ion-button>
-          </ion-item>
-        </div>
+            </ion-item>
 
-        <div class="resumo__middle">
-          <div class="resumo__classificacao">
-            <div class="resumo__linha">
-              <ion-label token="p12x">Qual seria sua classificação &nbsp;</ion-label>
-              <ion-button class="resumo__opcoes" mode="ios" fill="clear" ds-size="xxs" no-padding="true" @click="${createModalLocal}">
-                no Brasil
-              </ion-button>
-            </div>
-
-            <div class="resumo__linha">
-              <ion-label token="p12x">&nbsp; em &nbsp;</ion-label>
-              <ion-button class="resumo__opcoes" mode="ios" fill="clear" ds-size="xxs" no-padding="true" @click="${createModalUnidades}">
-                Todas as Unidades
-              </ion-button>
-            </div>
-
-            <div class="resumo__linha">
-              <ion-label token="p12x">&nbsp; em &nbsp;</ion-label>
-              <ion-button class="resumo__opcoes" mode="ios" fill="clear" ds-size="xxs" no-padding="true" @click="${createModalEspecialidade}">
-                Todas as Especialidades
-              </ion-button>
+            <div class="resumo__questoes">
+              <med-chart-radial id="chart-estudo" titulo="100" subtitulo="Questoes" ds-size="lg"></med-chart-radial>
+              <med-chart-radial-label id="label-estudo"></med-chart-radial-label>
             </div>
           </div>
+        </main>
 
-          <div class="resumo__range-container">
-            <ion-icon class="med-icon resumo__icon resumo__icon--start" name="med-usuario"></ion-icon>
-            <div class="resumo__progress">
-              <ion-range class="resumo__range" min="20" max="80" step="2" ds-color="fb-warning">
-              </ion-range>
-              <div class="resumo__posicao-container" style="--porcentagem: 50">
-              <ion-label class="resumo__posicao" token="p14xb"> 100° </ion-label>
-              <ion-label class="resumo__sua-nota" token="p10"> Sua nota </ion-label>
-              <ion-label class="resumo__nota" token="p12xb"> 5.0 </ion-label>
-            </div>
-            </div>
-            <ion-icon class="med-icon resumo__icon resumo__icon--end" name="med-acertou"></ion-icon>
-          </div>
-
-          <div class="resumo__participantes">
-            <ion-label token="p14x" ds-color="neutral-8">Total de</ion-label>
-            <ion-label token="p14xb" ds-color="neutral-8">&nbsp; 15000 &nbsp;</ion-label>
-            <ion-label token="p14x" ds-color="neutral-8">participantes</ion-label>
-          </div>
-
-          <div class="resumo__questoes">
-            <med-chart-radial id="chart-geral" titulo="100" subtitulo="Questoes" ds-size="lg"></med-chart-radial>
-            <med-chart-radial-label id="label-geral"></med-chart-radial-label>
-          </div>
-
-          <ion-item ds-color="brand" spacing-v="s08" spacing-h="s04"     mode="ios" lines="none">
-          <ion-button class="resumo__button" mode="ios" fill="clear" ds-color="neutral-10" ds-size="xxs">
-            <ion-icon slot="start" class="med-icon" name="med-apostila"></ion-icon>
-              MODO PROVA
-            </ion-button>
-          </ion-item>
-
-          <div class="resumo__questoes">
-            <med-chart-radial id="chart-prova" titulo="100" subtitulo="Questoes" ds-size="lg"></med-chart-radial>
-            <med-chart-radial-label id="label-prova"></med-chart-radial-label>
-          </div>
-
-          <ion-item ds-color="brand" spacing-v="s08" spacing-h="s04"     mode="ios" lines="none">
-          <ion-button class="resumo__button" mode="ios" fill="clear" ds-color="neutral-10" ds-size="xxs">
-            <ion-icon slot="start" class="med-icon" name="med-apostila"></ion-icon>
-              MODO ESTUDO
-          </ion-button>
-          </ion-item>
-
-          <div class="resumo__questoes">
-            <med-chart-radial id="chart-estudo" titulo="100" subtitulo="Questoes" ds-size="lg"></med-chart-radial>
-            <med-chart-radial-label id="label-estudo"></med-chart-radial-label>
-          </div>
-        </div>
-
-        <div class="resumo__bottom">
+        <footer class="resumo__bottom">
           <ion-item ds-color="neutral-2" gap="s08" spacing-v="s08" spacing-h="s16" mode="ios" lines="none" detail="false">
             <ion-button slot="start" mode="ios" fill="clear" icon-only ds-size="xxs" @click="${createModalAjuda}">
               <ion-icon slot="icon-only" class="med-icon" name="med-duvidas"></ion-icon>
@@ -209,10 +211,9 @@ const Template = ( {valoresChart, valoresLabel} ) => {
                 MODO ESTUDO
               </ion-button>
             </div>
-
           </ion-item>
-        </div>
-      </main>
+        </footer>
+      </ion-content>
     </div>
   `;
 };

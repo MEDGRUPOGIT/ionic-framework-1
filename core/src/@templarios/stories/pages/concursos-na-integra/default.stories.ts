@@ -8,7 +8,7 @@ export default {
 
 const Template = () => {
   return html`
-    <div class="container container--height-vh">
+    <div class="container">
       <med-header>
         <med-navbar class="header" slot="navbar">
           <ion-back-button slot="left" mode="ios" text="" ds-size="xxs">
@@ -19,18 +19,20 @@ const Template = () => {
         </med-navbar>
       </med-header>
 
-      <main class="concursos">
-        <div class="concursos__input">
-          <ion-icon class="med-icon" name="med-busca"></ion-icon>
-          <ion-input mode="md" ds-color="neutral-2" placeholder="Digite o nome de um concurso..."></ion-input>
-        </div>
+      <ion-content>
+        <main class="concursos">
+          <div class="concursos__input">
+            <ion-icon class="med-icon" name="med-busca"></ion-icon>
+            <ion-input mode="md" ds-color="neutral-2" placeholder="Digite o nome de um concurso..."></ion-input>
+          </div>
 
-        <div class="concursos__middle">
-          <ion-icon class="med-icon" name="med-concursos"></ion-icon>
-          <ion-label class="concursos__text" token="h20x">Buscar Concurso</ion-label>
-          <ion-label class="concursos__text" token="p16x">Procure por qualquer concurso dentro do nosso branco de dados digitando o nome ou sigla da Instituição</ion-label>
-        </div>
-      </main>
+          <div class="concursos__middle">
+            <ion-icon class="med-icon" name="med-concursos"></ion-icon>
+            <ion-label class="concursos__text" token="h20x">Buscar Concurso</ion-label>
+            <ion-label class="concursos__text" token="p16x">Procure por qualquer concurso dentro do nosso branco de dados digitando o nome ou sigla da Instituição</ion-label>
+          </div>
+        </main>
+      </ion-content>
     </div>
   `;
 };

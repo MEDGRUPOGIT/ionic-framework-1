@@ -8,7 +8,7 @@ export default {
 
 const Template = () => {
   return html`
-    <div class="container container--height-vh">
+    <div class="container">
       <med-header>
         <med-navbar class="header" slot="navbar">
           <ion-back-button slot="left" mode="ios" text="" ds-size="xxs">
@@ -23,9 +23,11 @@ const Template = () => {
         </med-navbar>
       </med-header>
 
-      <main class="text-area">
-        <ion-textarea class="text-area__campo" mode="md" placeholder="Escreva a sua dúvida"></ion-textarea>
-      </main>
+      <ion-content>
+        <main class="text-area">
+          <ion-textarea class="text-area__campo" mode="md" placeholder="Escreva a sua dúvida"></ion-textarea>
+        </main>
+      </ion-content>
     </div>
   `;
 };

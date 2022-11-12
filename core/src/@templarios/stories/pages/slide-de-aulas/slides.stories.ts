@@ -44,27 +44,27 @@ const Template = () => {
         </med-toolbar>
       </med-header>
 
-      <main class="slides">
-        <ion-slides class="slides__content" pager="true">
-          <ion-slide>
-            <img class="slides__image" src="https://via.placeholder.com/500" @click="${createModal}" />
-          </ion-slide>
+      <ion-content>
+        <main class="slides">
+          <ion-slides class="slides__content" pager="true">
+            <ion-slide>
+              <img class="slides__image" src="https://via.placeholder.com/500" @click="${createModal}" />
+            </ion-slide>
 
-          <ion-slide>
-            <img class="slides__image" src="https://via.placeholder.com/500" @click="${createModal}" />
-          </ion-slide>
+            <ion-slide>
+              <img class="slides__image" src="https://via.placeholder.com/500" @click="${createModal}" />
+            </ion-slide>
 
-          <ion-slide>
-            <img class="slides__image" src="https://via.placeholder.com/500" @click="${createModal}" />
-          </ion-slide>
-
+            <ion-slide>
+              <img class="slides__image" src="https://via.placeholder.com/500" @click="${createModal}" />
+            </ion-slide>
           </ion-slides>
 
           <div class="slides__contador">
             <ion-label token="p14x">1 de 15</ion-label>
           </div>
-
-      </main>
+        </main>
+      </ion-content>
     </div>
   `;
 };
