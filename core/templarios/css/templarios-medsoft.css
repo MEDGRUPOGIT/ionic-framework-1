@@ -604,6 +604,61 @@
     top: 85% !important;
   }
 }
+.card-resposta {
+  background: hsl(var(--med-color-neutral-25));
+  border-radius: 8px;
+  padding: 16px;
+}
+.card-resposta--resposta-oficial {
+  background: hsl(var(--med-color-brand-2));
+}
+.card-resposta--resposta-oficial .card-resposta__badge {
+  display: block;
+}
+.card-resposta--check .card-resposta__imagem {
+  display: block;
+}
+.card-resposta__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  position: relative;
+}
+.card-resposta__identificacao {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+.card-resposta__imagem {
+  width: 70px;
+  height: 70px;
+  display: none;
+  position: absolute;
+  top: -16px;
+  right: 40%;
+}
+.card-resposta__top-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.card-resposta__badge {
+  display: none;
+  margin-left: 16px;
+}
+.card-resposta__middle {
+  margin-bottom: 8px;
+}
+.card-resposta__bottom {
+  display: flex;
+  align-items: center;
+}
+.card-resposta__like {
+  margin-right: 8px;
+}
+
 .duvidas {
   height: 100%;
   position: relative;
@@ -747,59 +802,21 @@
   align-self: center;
 }
 
-.card-resposta {
-  background: hsl(var(--med-color-neutral-25));
-  border-radius: 8px;
-  padding: 16px;
-}
-.card-resposta--resposta-oficial {
-  background: hsl(var(--med-color-brand-2));
-}
-.card-resposta--resposta-oficial .card-resposta__badge {
-  display: block;
-}
-.card-resposta--check .card-resposta__imagem {
-  display: block;
-}
-.card-resposta__top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: 8px;
-  position: relative;
-}
-.card-resposta__identificacao {
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-}
-.card-resposta__imagem {
-  width: 70px;
-  height: 70px;
-  display: none;
-  position: absolute;
-  top: -16px;
-  right: 40%;
-}
-.card-resposta__top-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-.card-resposta__badge {
-  display: none;
-  margin-left: 16px;
-}
-.card-resposta__middle {
-  margin-bottom: 8px;
-}
-.card-resposta__bottom {
+.sem-duvidas {
+  height: calc(100% - 152px);
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-.card-resposta__like {
-  margin-right: 8px;
+.sem-duvidas .med-icon {
+  min-width: 100px;
+  min-height: 100px;
+  stroke: hsl(var(--med-color-neutral-10));
+  margin-bottom: 24px;
+}
+.sem-duvidas__text {
+  text-align: center;
 }
 
 .text-area {

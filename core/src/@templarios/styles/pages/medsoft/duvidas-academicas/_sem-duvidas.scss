@@ -1,0 +1,18 @@
+.sem-duvidas {
+  height: calc(100% - 152px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .med-icon {
+    min-width: 100px;
+    min-height: 100px;
+    stroke: hsl(var(--med-color-neutral-10));
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    text-align: center;
+  }
+}
