@@ -1,12 +1,43 @@
+import { action } from '@storybook/addon-actions';
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
+import { popoverController } from '../../../../../dist/ionic/index.esm';
+import { MedFontSize } from '../../../enums/font-size.enum';
+
 
 export default {
   title: 'Pages/Medsoft/Apostila',
   decorators: [withDesign],
 };
 
-const Template = () => {
+let call = false;
+let currentPopover = null;
+
+const createPopover = async (ev, value) => {
+  popoverController
+    .create({
+      component: "med-font-zoom",
+      cssClass: "med-popover med-popover--font-zoom",
+      componentProps: {
+        value,
+        emitter: {
+          emit: (values) => {
+            action("emitter")(values);
+          },
+        },
+      },
+      mode: "ios",
+      showBackdrop: true,
+      event: ev,
+    })
+    .then((popover) => {
+      currentPopover = popover;
+      call = true;
+      popover.present();
+    });
+};
+
+const Template = ({ value }) => {
   return html`
     <div class="container">
       <med-header>
@@ -23,7 +54,7 @@ const Template = () => {
         </med-navbar>
       </med-header>
 
-      <div class="user-selector" style="display: none;">
+      <div class="user-selector">
         <ion-item class="user-selector__title" ds-color="brand" mode="ios" lines="none">
           <div class="user-selector__container-text">
             <ion-label class="user-selector__text">Você fará postagens como &nbsp;</ion-label>
@@ -72,7 +103,7 @@ const Template = () => {
         </div>
       </div>
 
-      <med-toolbar ds-color="neutral-10" style="display: none;">
+      <med-toolbar ds-color="neutral-10">
         <div class="med-toolbar__left" slot="start">
           <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" ds-size="xxs">
             <ion-icon class="med-icon" slot="icon-only" name="med-anotacao"></ion-icon>
@@ -85,14 +116,23 @@ const Template = () => {
         </ion-button>
 
         <div class="med-toolbar__middle">
-          <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xxs">
+          <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs">
             <ion-icon class="med-icon" slot="icon-only" name="med-duvidas"></ion-icon>
           </ion-button>
-          <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xxs">
+          <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs">
             <ion-icon class="med-icon" slot="icon-only" name="med-textoselecionar"></ion-icon>
           </ion-button>
           <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs">
             <ion-icon class="med-icon" slot="icon-only" name="med-busca"></ion-icon>
+          </ion-button>
+           <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs">
+            <ion-icon class="med-icon" slot="icon-only" name="med-informacao"></ion-icon>
+          </ion-button>
+          <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs">
+            <ion-icon class="med-icon" slot="icon-only" name="med-editar"></ion-icon>
+          </ion-button>
+          <ion-button class="med-toolbar__font-zoom" mode="ios" icon-only fill="clear" ds-size="xs" @click="${(e) => createPopover(e, value)}">
+            <ion-icon class="med-icon" slot="icon-only" name="med-fontemaior"></ion-icon>
           </ion-button>
         </div>
 
@@ -126,7 +166,7 @@ const Template = () => {
         </div>
       </div>
 
-      <div class="busca-apostila">
+      <div class="busca-apostila" style="display: none;">
         <div class="busca-apostila__icon">
           <ion-icon class="med-icon" name="med-busca"></ion-icon>
         </div>
@@ -138,9 +178,6 @@ const Template = () => {
         </ion-button>
       </div>
 
-      <div class="font-zoom-apostila">
-      </div>
-
     </div>
   `;
 };
@@ -150,5 +187,18 @@ Default.parameters = {
   design: {
     type: 'figma',
     url: '',
+  },
+};
+
+Default.argTypes = {
+  value: {
+    options: Object.values(MedFontSize),
+    control: { type: "select" },
+    description: "Define o tamanho da fonte.",
+    defaultValue: "16px",
+    table: {
+      type: { summary: Object.values(MedFontSize).join(' |') },
+      defaultValue: { summary: "MedFontSize.XS" },
+    },
   },
 };

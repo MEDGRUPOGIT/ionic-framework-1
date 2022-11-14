@@ -17,6 +17,12 @@
     justify-content: space-evenly;
     align-items: center;
   }
+
+  &__font-zoom {
+    .med-icon {
+      stroke: hsl(var(--med-color-neutral-1));
+    }
+  }
 }
 
 .bottom {
