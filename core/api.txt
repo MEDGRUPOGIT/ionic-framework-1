@@ -1,13 +1,19 @@
 
 ajuda-modal,scoped
 
+apostila-modal,scoped
+
 aviso-modal,scoped
+
+concurso-modal,scoped
 
 dialog-test,scoped
 
 especialidade-modal,scoped
 
 excluir-modal,scoped
+
+filtro-modal,scoped
 
 ion-action-sheet,scoped
 ion-action-sheet,prop,animated,boolean,true,false,false
@@ -1842,6 +1848,8 @@ select-test,shadow
 sheet-content-test,scoped
 
 sheet-test,scoped
+
+simulado-modal,scoped
 
 tp-input-container,scoped
 tp-input-container,prop,disabled,boolean,false,false,true

@@ -11,7 +11,13 @@ import type { JSX } from '@ionic/core';
 export const AjudaModal = /*@__PURE__*/ defineContainer<JSX.AjudaModal>('ajuda-modal');
 
 
+export const ApostilaModal = /*@__PURE__*/ defineContainer<JSX.ApostilaModal>('apostila-modal');
+
+
 export const AvisoModal = /*@__PURE__*/ defineContainer<JSX.AvisoModal>('aviso-modal');
+
+
+export const ConcursoModal = /*@__PURE__*/ defineContainer<JSX.ConcursoModal>('concurso-modal');
 
 
 export const DialogTest = /*@__PURE__*/ defineContainer<JSX.DialogTest>('dialog-test');
@@ -21,6 +27,9 @@ export const EspecialidadeModal = /*@__PURE__*/ defineContainer<JSX.Especialidad
 
 
 export const ExcluirModal = /*@__PURE__*/ defineContainer<JSX.ExcluirModal>('excluir-modal');
+
+
+export const FiltroModal = /*@__PURE__*/ defineContainer<JSX.FiltroModal>('filtro-modal');
 
 
 export const IonAvatar = /*@__PURE__*/ defineContainer<JSX.IonAvatar>('ion-avatar');
@@ -1407,6 +1416,9 @@ export const SheetContentTest = /*@__PURE__*/ defineContainer<JSX.SheetContentTe
 
 
 export const SheetTest = /*@__PURE__*/ defineContainer<JSX.SheetTest>('sheet-test');
+
+
+export const SimuladoModal = /*@__PURE__*/ defineContainer<JSX.SimuladoModal>('simulado-modal');
 
 
 export const TpInputContainer = /*@__PURE__*/ defineContainer<JSX.TpInputContainer>('tp-input-container', [

@@ -21,80 +21,80 @@ const Template = () => {
 
       <ion-content>
         <main class="simulados">
-          <ion-label class="simulados__ano" ds-color="neutral-10" token="p16xb">2022</ion-label>
-          <div class="simulados__grid">
-            <med-tiles class="simulados__tiles" titulo="R01 SIM 01" label="Geral 01">
+          <ion-label class="ano" ds-color="neutral-10" token="p16xb">2022</ion-label>
+          <div class="grid">
+            <med-tiles class="grid__tiles" titulo="R01 SIM 01" label="Geral 01">
               <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
             </med-tiles>
-            <med-tiles class="simulados__tiles" titulo="R01 SIM 02" label="Geral 02">
+            <med-tiles class="grid__tiles" titulo="R01 SIM 02" label="Geral 02">
               <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
             </med-tiles>
-            <med-tiles class="simulados__tiles" titulo="R01 SIM 03" label="Geral 03">
+            <med-tiles class="grid__tiles" titulo="R01 SIM 03" label="Geral 03">
               <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
             </med-tiles>
-            <med-tiles class="simulados__tiles" titulo="R01 SIM 04" label="Geral 04">
+            <med-tiles class="grid__tiles" titulo="R01 SIM 04" label="Geral 04">
               <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
             </med-tiles>
-            <med-tiles class="simulados__tiles" titulo="R01 SIM 05" label="Geral 05">
+            <med-tiles class="grid__tiles" titulo="R01 SIM 05" label="Geral 05">
               <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
             </med-tiles>
-            <med-tiles class="simulados__tiles" titulo="R01 SIM 06" label="Geral 06">
+            <med-tiles class="grid__tiles" titulo="R01 SIM 06" label="Geral 06">
               <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
             </med-tiles>
-            <med-tiles class="simulados__tiles" titulo="R01 SIM 07" label="Geral 07">
-              <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
-            </med-tiles>
-          </div>
-
-          <ion-label class="simulados__ano" ds-color="neutral-10" token="p16xb">2021</ion-label>
-          <div class="simulados__grid">
-            <med-tiles class="simulados__tiles" titulo="R01 SIM 01" label="Geral 01">
-              <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
-            </med-tiles>
-            <med-tiles class="simulados__tiles" titulo="R01 SIM 02" label="Geral 02">
-              <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
-            </med-tiles>
-            <med-tiles class="simulados__tiles" titulo="R01 SIM 03" label="Geral 03">
-              <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
-            </med-tiles>
-            <med-tiles class="simulados__tiles" titulo="R01 SIM 04" label="Geral 04">
-              <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
-            </med-tiles>
-            <med-tiles class="simulados__tiles" titulo="R01 SIM 05" label="Geral 05">
-              <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
-            </med-tiles>
-            <med-tiles class="simulados__tiles" titulo="R01 SIM 06" label="Geral 06">
-              <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
-            </med-tiles>
-            <med-tiles class="simulados__tiles" titulo="R01 SIM 07" label="Geral 07">
-              <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
-            </med-tiles>
-            <med-tiles class="simulados__tiles" titulo="SIM EXTRA" label="QUESTÕES COVID">
+            <med-tiles class="grid__tiles" titulo="R01 SIM 07" label="Geral 07">
               <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
             </med-tiles>
           </div>
 
-          <ion-label class="simulados__ano" ds-color="neutral-10" token="p16xb">2020</ion-label>
-          <div class="simulados__grid">
-            <med-tiles class="simulados__tiles" titulo="R01 SIM 01" label="Geral 01">
+          <ion-label class="ano" ds-color="neutral-10" token="p16xb">2021</ion-label>
+          <div class="grid">
+            <med-tiles class="grid__tiles" titulo="R01 SIM 01" label="Geral 01">
               <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
             </med-tiles>
-            <med-tiles class="simulados__tiles" titulo="R01 SIM 02" label="Geral 02">
+            <med-tiles class="grid__tiles" titulo="R01 SIM 02" label="Geral 02">
               <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
             </med-tiles>
-            <med-tiles class="simulados__tiles" titulo="R01 SIM 03" label="Geral 03">
+            <med-tiles class="grid__tiles" titulo="R01 SIM 03" label="Geral 03">
               <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
             </med-tiles>
-            <med-tiles class="simulados__tiles" titulo="R01 SIM 04" label="Geral 04">
+            <med-tiles class="grid__tiles" titulo="R01 SIM 04" label="Geral 04">
               <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
             </med-tiles>
-            <med-tiles class="simulados__tiles" titulo="R01 SIM 05" label="Geral 05">
+            <med-tiles class="grid__tiles" titulo="R01 SIM 05" label="Geral 05">
               <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
             </med-tiles>
-            <med-tiles class="simulados__tiles" titulo="R01 SIM 06" label="Geral 06">
+            <med-tiles class="grid__tiles" titulo="R01 SIM 06" label="Geral 06">
               <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
             </med-tiles>
-            <med-tiles class="simulados__tiles" titulo="R01 SIM 07" label="Geral 07">
+            <med-tiles class="grid__tiles" titulo="R01 SIM 07" label="Geral 07">
+              <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
+            </med-tiles>
+            <med-tiles class="grid__tiles" titulo="SIM EXTRA" label="QUESTÕES COVID">
+              <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
+            </med-tiles>
+          </div>
+
+          <ion-label class="ano" ds-color="neutral-10" token="p16xb">2020</ion-label>
+          <div class="grid">
+            <med-tiles class="grid__tiles" titulo="R01 SIM 01" label="Geral 01">
+              <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
+            </med-tiles>
+            <med-tiles class="grid__tiles" titulo="R01 SIM 02" label="Geral 02">
+              <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
+            </med-tiles>
+            <med-tiles class="grid__tiles" titulo="R01 SIM 03" label="Geral 03">
+              <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
+            </med-tiles>
+            <med-tiles class="grid__tiles" titulo="R01 SIM 04" label="Geral 04">
+              <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
+            </med-tiles>
+            <med-tiles class="grid__tiles" titulo="R01 SIM 05" label="Geral 05">
+              <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
+            </med-tiles>
+            <med-tiles class="grid__tiles" titulo="R01 SIM 06" label="Geral 06">
+              <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
+            </med-tiles>
+            <med-tiles class="grid__tiles" titulo="R01 SIM 07" label="Geral 07">
               <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
             </med-tiles>
           </div>

@@ -380,6 +380,23 @@ Type: `Promise<void>`
 | `--placeholder-opacity`     | Opacity of the input placeholder text                                                                    |
 
 
+## Dependencies
+
+### Used by
+
+ - [apostila-modal](../@templarios/ionic-1-migracao/duvidas-academicas/apostila-modal)
+ - [concurso-modal](../@templarios/ionic-1-migracao/duvidas-academicas/concurso-modal)
+ - [filtro-modal](../@templarios/ionic-1-migracao/duvidas-academicas/filtro-modal)
+
+### Graph
+```mermaid
+graph TD;
+  apostila-modal --> ion-input
+  concurso-modal --> ion-input
+  filtro-modal --> ion-input
+  style ion-input fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

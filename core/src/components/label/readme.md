@@ -304,13 +304,17 @@ export default defineComponent({
 ### Used by
 
  - [ajuda-modal](../@templarios/ionic-1-migracao/simulados/ajuda-modal)
+ - [apostila-modal](../@templarios/ionic-1-migracao/duvidas-academicas/apostila-modal)
  - [aviso-modal](../@templarios/ionic-1-migracao/simulados/aviso-modal)
+ - [concurso-modal](../@templarios/ionic-1-migracao/duvidas-academicas/concurso-modal)
  - [especialidade-modal](../@templarios/ionic-1-migracao/simulados/especialidade-modal)
  - [excluir-modal](../@templarios/ionic-1-migracao/duvidas-academicas/excluir-modal)
+ - [filtro-modal](../@templarios/ionic-1-migracao/duvidas-academicas/filtro-modal)
  - ion-select-popover
  - [local-modal](../@templarios/ionic-1-migracao/simulados/local-modal)
  - [med-config](../@templarios/legacy/med-config)
  - [realizacoes-modal](../@templarios/ionic-1-migracao/simulados/realizacoes-modal)
+ - [simulado-modal](../@templarios/ionic-1-migracao/duvidas-academicas/simulado-modal)
  - [tutorial-modal](../@templarios/ionic-1-migracao/simulados/tutorial-modal)
  - [unidades-modal](../@templarios/ionic-1-migracao/simulados/unidades-modal)
 
@@ -318,13 +322,17 @@ export default defineComponent({
 ```mermaid
 graph TD;
   ajuda-modal --> ion-label
+  apostila-modal --> ion-label
   aviso-modal --> ion-label
+  concurso-modal --> ion-label
   especialidade-modal --> ion-label
   excluir-modal --> ion-label
+  filtro-modal --> ion-label
   ion-select-popover --> ion-label
   local-modal --> ion-label
   med-config --> ion-label
   realizacoes-modal --> ion-label
+  simulado-modal --> ion-label
   tutorial-modal --> ion-label
   unidades-modal --> ion-label
   style ion-label fill:#f9f,stroke:#333,stroke-width:4px

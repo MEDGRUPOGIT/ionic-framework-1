@@ -3,10 +3,13 @@ import type * as d from './proxies';
 
 export const DIRECTIVES = [
   d.AjudaModal,
+  d.ApostilaModal,
   d.AvisoModal,
+  d.ConcursoModal,
   d.DialogTest,
   d.EspecialidadeModal,
   d.ExcluirModal,
+  d.FiltroModal,
   d.IonApp,
   d.IonAvatar,
   d.IonBackButton,
@@ -151,6 +154,7 @@ export const DIRECTIVES = [
   d.SelectTest,
   d.SheetContentTest,
   d.SheetTest,
+  d.SimuladoModal,
   d.TpInputContainer,
   d.TutorialModal,
   d.UnidadesModal

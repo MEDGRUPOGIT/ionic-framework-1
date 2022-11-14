@@ -3,26 +3,4 @@
   height: calc(100% - 56px);
   overflow: scroll;
   position: relative;
-
-  &__ano {
-    background: hsl(var(--med-color-neutral-25));
-    display: block;
-    text-align: center;
-    padding: 16px 0;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 10;
-  }
-
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 24px;
-    padding: 16px;
-  }
-
-  &__tiles {
-    cursor: pointer;
-  }
 }

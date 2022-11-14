@@ -1407,6 +1407,19 @@ Type: `Promise<any>`
 | `--placeholder-opacity` | Opacity of the select placeholder text                                                                    |
 
 
+## Dependencies
+
+### Used by
+
+ - [filtro-modal](../@templarios/ionic-1-migracao/duvidas-academicas/filtro-modal)
+
+### Graph
+```mermaid
+graph TD;
+  filtro-modal --> ion-select
+  style ion-select fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

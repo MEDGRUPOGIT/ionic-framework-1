@@ -24,13 +24,19 @@ import { MedTypeTag, MedTypeToken } from "@templarios/types/type.type";
 export namespace Components {
     interface AjudaModal {
     }
+    interface ApostilaModal {
+    }
     interface AvisoModal {
+    }
+    interface ConcursoModal {
     }
     interface DialogTest {
     }
     interface EspecialidadeModal {
     }
     interface ExcluirModal {
+    }
+    interface FiltroModal {
     }
     interface IonActionSheet {
         /**
@@ -4021,6 +4027,8 @@ export namespace Components {
     }
     interface SheetTest {
     }
+    interface SimuladoModal {
+    }
     interface TpInputContainer {
         /**
           * todo
@@ -4059,11 +4067,23 @@ declare global {
         prototype: HTMLAjudaModalElement;
         new (): HTMLAjudaModalElement;
     };
+    interface HTMLApostilaModalElement extends Components.ApostilaModal, HTMLStencilElement {
+    }
+    var HTMLApostilaModalElement: {
+        prototype: HTMLApostilaModalElement;
+        new (): HTMLApostilaModalElement;
+    };
     interface HTMLAvisoModalElement extends Components.AvisoModal, HTMLStencilElement {
     }
     var HTMLAvisoModalElement: {
         prototype: HTMLAvisoModalElement;
         new (): HTMLAvisoModalElement;
+    };
+    interface HTMLConcursoModalElement extends Components.ConcursoModal, HTMLStencilElement {
+    }
+    var HTMLConcursoModalElement: {
+        prototype: HTMLConcursoModalElement;
+        new (): HTMLConcursoModalElement;
     };
     interface HTMLDialogTestElement extends Components.DialogTest, HTMLStencilElement {
     }
@@ -4082,6 +4102,12 @@ declare global {
     var HTMLExcluirModalElement: {
         prototype: HTMLExcluirModalElement;
         new (): HTMLExcluirModalElement;
+    };
+    interface HTMLFiltroModalElement extends Components.FiltroModal, HTMLStencilElement {
+    }
+    var HTMLFiltroModalElement: {
+        prototype: HTMLFiltroModalElement;
+        new (): HTMLFiltroModalElement;
     };
     interface HTMLIonActionSheetElement extends Components.IonActionSheet, HTMLStencilElement {
     }
@@ -5043,6 +5069,12 @@ declare global {
         prototype: HTMLSheetTestElement;
         new (): HTMLSheetTestElement;
     };
+    interface HTMLSimuladoModalElement extends Components.SimuladoModal, HTMLStencilElement {
+    }
+    var HTMLSimuladoModalElement: {
+        prototype: HTMLSimuladoModalElement;
+        new (): HTMLSimuladoModalElement;
+    };
     interface HTMLTpInputContainerElement extends Components.TpInputContainer, HTMLStencilElement {
     }
     var HTMLTpInputContainerElement: {
@@ -5063,10 +5095,13 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "ajuda-modal": HTMLAjudaModalElement;
+        "apostila-modal": HTMLApostilaModalElement;
         "aviso-modal": HTMLAvisoModalElement;
+        "concurso-modal": HTMLConcursoModalElement;
         "dialog-test": HTMLDialogTestElement;
         "especialidade-modal": HTMLEspecialidadeModalElement;
         "excluir-modal": HTMLExcluirModalElement;
+        "filtro-modal": HTMLFiltroModalElement;
         "ion-action-sheet": HTMLIonActionSheetElement;
         "ion-alert": HTMLIonAlertElement;
         "ion-app": HTMLIonAppElement;
@@ -5227,6 +5262,7 @@ declare global {
         "select-test": HTMLSelectTestElement;
         "sheet-content-test": HTMLSheetContentTestElement;
         "sheet-test": HTMLSheetTestElement;
+        "simulado-modal": HTMLSimuladoModalElement;
         "tp-input-container": HTMLTpInputContainerElement;
         "tutorial-modal": HTMLTutorialModalElement;
         "unidades-modal": HTMLUnidadesModalElement;
@@ -5235,13 +5271,19 @@ declare global {
 declare namespace LocalJSX {
     interface AjudaModal {
     }
+    interface ApostilaModal {
+    }
     interface AvisoModal {
+    }
+    interface ConcursoModal {
     }
     interface DialogTest {
     }
     interface EspecialidadeModal {
     }
     interface ExcluirModal {
+    }
+    interface FiltroModal {
     }
     interface IonActionSheet {
         /**
@@ -9377,6 +9419,8 @@ declare namespace LocalJSX {
     }
     interface SheetTest {
     }
+    interface SimuladoModal {
+    }
     interface TpInputContainer {
         /**
           * todo
@@ -9409,10 +9453,13 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "ajuda-modal": AjudaModal;
+        "apostila-modal": ApostilaModal;
         "aviso-modal": AvisoModal;
+        "concurso-modal": ConcursoModal;
         "dialog-test": DialogTest;
         "especialidade-modal": EspecialidadeModal;
         "excluir-modal": ExcluirModal;
+        "filtro-modal": FiltroModal;
         "ion-action-sheet": IonActionSheet;
         "ion-alert": IonAlert;
         "ion-app": IonApp;
@@ -9573,6 +9620,7 @@ declare namespace LocalJSX {
         "select-test": SelectTest;
         "sheet-content-test": SheetContentTest;
         "sheet-test": SheetTest;
+        "simulado-modal": SimuladoModal;
         "tp-input-container": TpInputContainer;
         "tutorial-modal": TutorialModal;
         "unidades-modal": UnidadesModal;
@@ -9583,10 +9631,13 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "ajuda-modal": LocalJSX.AjudaModal & JSXBase.HTMLAttributes<HTMLAjudaModalElement>;
+            "apostila-modal": LocalJSX.ApostilaModal & JSXBase.HTMLAttributes<HTMLApostilaModalElement>;
             "aviso-modal": LocalJSX.AvisoModal & JSXBase.HTMLAttributes<HTMLAvisoModalElement>;
+            "concurso-modal": LocalJSX.ConcursoModal & JSXBase.HTMLAttributes<HTMLConcursoModalElement>;
             "dialog-test": LocalJSX.DialogTest & JSXBase.HTMLAttributes<HTMLDialogTestElement>;
             "especialidade-modal": LocalJSX.EspecialidadeModal & JSXBase.HTMLAttributes<HTMLEspecialidadeModalElement>;
             "excluir-modal": LocalJSX.ExcluirModal & JSXBase.HTMLAttributes<HTMLExcluirModalElement>;
+            "filtro-modal": LocalJSX.FiltroModal & JSXBase.HTMLAttributes<HTMLFiltroModalElement>;
             "ion-action-sheet": LocalJSX.IonActionSheet & JSXBase.HTMLAttributes<HTMLIonActionSheetElement>;
             "ion-alert": LocalJSX.IonAlert & JSXBase.HTMLAttributes<HTMLIonAlertElement>;
             "ion-app": LocalJSX.IonApp & JSXBase.HTMLAttributes<HTMLIonAppElement>;
@@ -9747,6 +9798,7 @@ declare module "@stencil/core" {
             "select-test": LocalJSX.SelectTest & JSXBase.HTMLAttributes<HTMLSelectTestElement>;
             "sheet-content-test": LocalJSX.SheetContentTest & JSXBase.HTMLAttributes<HTMLSheetContentTestElement>;
             "sheet-test": LocalJSX.SheetTest & JSXBase.HTMLAttributes<HTMLSheetTestElement>;
+            "simulado-modal": LocalJSX.SimuladoModal & JSXBase.HTMLAttributes<HTMLSimuladoModalElement>;
             "tp-input-container": LocalJSX.TpInputContainer & JSXBase.HTMLAttributes<HTMLTpInputContainerElement>;
             "tutorial-modal": LocalJSX.TutorialModal & JSXBase.HTMLAttributes<HTMLTutorialModalElement>;
             "unidades-modal": LocalJSX.UnidadesModal & JSXBase.HTMLAttributes<HTMLUnidadesModalElement>;

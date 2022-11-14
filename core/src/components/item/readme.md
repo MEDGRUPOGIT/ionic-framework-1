@@ -1922,11 +1922,15 @@ export default defineComponent({
 
 ### Used by
 
+ - [apostila-modal](../@templarios/ionic-1-migracao/duvidas-academicas/apostila-modal)
+ - [concurso-modal](../@templarios/ionic-1-migracao/duvidas-academicas/concurso-modal)
  - [especialidade-modal](../@templarios/ionic-1-migracao/simulados/especialidade-modal)
+ - [filtro-modal](../@templarios/ionic-1-migracao/duvidas-academicas/filtro-modal)
  - ion-select-popover
  - [local-modal](../@templarios/ionic-1-migracao/simulados/local-modal)
  - [med-config](../@templarios/legacy/med-config)
  - [realizacoes-modal](../@templarios/ionic-1-migracao/simulados/realizacoes-modal)
+ - [simulado-modal](../@templarios/ionic-1-migracao/duvidas-academicas/simulado-modal)
  - [unidades-modal](../@templarios/ionic-1-migracao/simulados/unidades-modal)
 
 ### Depends on
@@ -1939,11 +1943,15 @@ export default defineComponent({
 graph TD;
   ion-item --> ion-icon
   ion-item --> ion-ripple-effect
+  apostila-modal --> ion-item
+  concurso-modal --> ion-item
   especialidade-modal --> ion-item
+  filtro-modal --> ion-item
   ion-select-popover --> ion-item
   local-modal --> ion-item
   med-config --> ion-item
   realizacoes-modal --> ion-item
+  simulado-modal --> ion-item
   unidades-modal --> ion-item
   style ion-item fill:#f9f,stroke:#333,stroke-width:4px
 ```

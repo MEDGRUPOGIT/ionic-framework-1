@@ -49,3 +49,14 @@
     top: -16px;
   }
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
+  padding: 16px;
+
+  &__tiles {
+    cursor: pointer;
+  }
+}

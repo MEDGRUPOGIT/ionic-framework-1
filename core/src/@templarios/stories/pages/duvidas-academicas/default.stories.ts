@@ -7,9 +7,45 @@ export default {
   decorators: [withDesign],
 };
 
+const createModalFiltro = async () => {
+  modalController.create({
+    component: 'filtro-modal',
+    cssClass: 'tp-modal',
+  }).then((modal)=>{
+    modal.present()
+  });
+}
+
 const createModalExcluir = async () => {
   modalController.create({
     component: 'excluir-modal',
+    cssClass: 'tp-modal',
+  }).then((modal)=>{
+    modal.present()
+  });
+}
+
+const createModalApostila = async () => {
+  modalController.create({
+    component: 'apostila-modal',
+    cssClass: 'tp-modal',
+  }).then((modal)=>{
+    modal.present()
+  });
+}
+
+const createModalConcurso = async () => {
+  modalController.create({
+    component: 'concurso-modal',
+    cssClass: 'tp-modal',
+  }).then((modal)=>{
+    modal.present()
+  });
+}
+
+const createModalSimulado = async () => {
+  modalController.create({
+    component: 'simulado-modal',
     cssClass: 'tp-modal',
   }).then((modal)=>{
     modal.present()
@@ -28,7 +64,7 @@ const Template = () => {
           <ion-label class="header__title" slot="title" token="p16xb">Dúvidas Acadêmicas</ion-label>
 
           <div class="button-filter button-filter--aplicado" slot="right">
-            <ion-button mode="ios" fill="clear" icon-only ds-size="xxs">
+            <ion-button mode="ios" fill="clear" icon-only ds-size="xxs" @click="${createModalFiltro}">
               <ion-icon slot="icon-only" class="med-icon" name="med-filtro"></ion-icon>
             </ion-button>
             <div class="button-filter__circle">
@@ -146,17 +182,17 @@ const Template = () => {
               </div>
               <div class="card-duvidas__bottom">
                 <div class="card-duvidas__bottom-left">
-                  <ion-button class="card-duvidas__favorito" mode="ios" fill="clear" icon-only ds-size="xs" ds-color="fb-attention">
+                  <ion-button class="card-duvidas__favorito" mode="ios" fill="clear" icon-only ds-size="xs" ds-color="fb-attention" @click="${createModalApostila}">
                     <ion-icon slot="icon-only" class="med-icon" name="med-estrela"></ion-icon>
                   </ion-button>
                   <div class="button-like card-duvidas__like">
-                    <ion-button mode="ios" fill="clear" icon-only ds-size="xs">
+                    <ion-button mode="ios" fill="clear" icon-only ds-size="xs" @click="${createModalConcurso}">
                       <ion-icon slot="icon-only" class="med-icon" name="med-positivo"></ion-icon>
                       </ion-button>
                     <ion-label class="button-like__span" ds-color="neutral-10" token="p12"> 5 </ion-label>
                   </div>
                   <med-tooltip content="Toque novamente para denunciar" placement="top" position="start">
-                    <ion-button slot="input" mode="ios" fill="clear" icon-only ds-size="xs" ds-color="fb-warning">
+                    <ion-button slot="input" mode="ios" fill="clear" icon-only ds-size="xs" ds-color="fb-warning" @click="${createModalSimulado}">
                       <ion-icon slot="icon-only" class="med-icon" name="med-alerta"></ion-icon>
                     </ion-button>
                   </med-tooltip>

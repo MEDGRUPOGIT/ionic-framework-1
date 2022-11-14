@@ -367,10 +367,13 @@ export default defineComponent({
 
 ### Used by
 
+ - [apostila-modal](../@templarios/ionic-1-migracao/duvidas-academicas/apostila-modal)
  - [aviso-modal](../@templarios/ionic-1-migracao/simulados/aviso-modal)
+ - [concurso-modal](../@templarios/ionic-1-migracao/duvidas-academicas/concurso-modal)
  - [dialog-test](../@templarios/testes/dialog-test)
  - [especialidade-modal](../@templarios/ionic-1-migracao/simulados/especialidade-modal)
  - [excluir-modal](../@templarios/ionic-1-migracao/duvidas-academicas/excluir-modal)
+ - [filtro-modal](../@templarios/ionic-1-migracao/duvidas-academicas/filtro-modal)
  - [local-modal](../@templarios/ionic-1-migracao/simulados/local-modal)
  - [med-alert](../@templarios/core/med-alert)
  - [med-banner](../@templarios/compositions/med-banner)
@@ -387,6 +390,7 @@ export default defineComponent({
  - [realizacoes-modal](../@templarios/ionic-1-migracao/simulados/realizacoes-modal)
  - [sheet-content-test](../@templarios/testes/sheet-content-test)
  - [sheet-test](../@templarios/testes/sheet-test)
+ - [simulado-modal](../@templarios/ionic-1-migracao/duvidas-academicas/simulado-modal)
  - [tutorial-modal](../@templarios/ionic-1-migracao/simulados/tutorial-modal)
  - [unidades-modal](../@templarios/ionic-1-migracao/simulados/unidades-modal)
 
@@ -398,10 +402,13 @@ export default defineComponent({
 ```mermaid
 graph TD;
   ion-button --> ion-ripple-effect
+  apostila-modal --> ion-button
   aviso-modal --> ion-button
+  concurso-modal --> ion-button
   dialog-test --> ion-button
   especialidade-modal --> ion-button
   excluir-modal --> ion-button
+  filtro-modal --> ion-button
   local-modal --> ion-button
   med-alert --> ion-button
   med-banner --> ion-button
@@ -418,6 +425,7 @@ graph TD;
   realizacoes-modal --> ion-button
   sheet-content-test --> ion-button
   sheet-test --> ion-button
+  simulado-modal --> ion-button
   tutorial-modal --> ion-button
   unidades-modal --> ion-button
   style ion-button fill:#f9f,stroke:#333,stroke-width:4px
