@@ -19,6 +19,7 @@
  - [ajuda-modal](../../ionic-1-migracao/simulados/ajuda-modal)
  - [apostila-modal](../../ionic-1-migracao/duvidas-academicas/apostila-modal)
  - [concurso-modal](../../ionic-1-migracao/duvidas-academicas/concurso-modal)
+ - [denunciar-modal](../../ionic-1-migracao/duvidas-academicas/denunciar-modal)
  - [especialidade-modal](../../ionic-1-migracao/simulados/especialidade-modal)
  - [excluir-modal](../../ionic-1-migracao/duvidas-academicas/excluir-modal)
  - [filtro-modal](../../ionic-1-migracao/duvidas-academicas/filtro-modal)
@@ -37,6 +38,7 @@ graph TD;
   ajuda-modal --> med-header
   apostila-modal --> med-header
   concurso-modal --> med-header
+  denunciar-modal --> med-header
   especialidade-modal --> med-header
   excluir-modal --> med-header
   filtro-modal --> med-header

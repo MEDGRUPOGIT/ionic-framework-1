@@ -44,6 +44,16 @@ export class ConcursoModal {
     this.el = r.nativeElement;
   }
 }
+export declare interface DenunciarModal extends Components.DenunciarModal {
+}
+@Component({ selector: "denunciar-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class DenunciarModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface DialogTest extends Components.DialogTest {
 }
 @Component({ selector: "dialog-test", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })

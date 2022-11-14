@@ -342,6 +342,19 @@ Type: `Promise<void>`
 | `--placeholder-opacity`     | Opacity of the placeholder text                                                                             |
 
 
+## Dependencies
+
+### Used by
+
+ - [denunciar-modal](../@templarios/ionic-1-migracao/duvidas-academicas/denunciar-modal)
+
+### Graph
+```mermaid
+graph TD;
+  denunciar-modal --> ion-textarea
+  style ion-textarea fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

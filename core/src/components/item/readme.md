@@ -1924,6 +1924,7 @@ export default defineComponent({
 
  - [apostila-modal](../@templarios/ionic-1-migracao/duvidas-academicas/apostila-modal)
  - [concurso-modal](../@templarios/ionic-1-migracao/duvidas-academicas/concurso-modal)
+ - [denunciar-modal](../@templarios/ionic-1-migracao/duvidas-academicas/denunciar-modal)
  - [especialidade-modal](../@templarios/ionic-1-migracao/simulados/especialidade-modal)
  - [filtro-modal](../@templarios/ionic-1-migracao/duvidas-academicas/filtro-modal)
  - ion-select-popover
@@ -1945,6 +1946,7 @@ graph TD;
   ion-item --> ion-ripple-effect
   apostila-modal --> ion-item
   concurso-modal --> ion-item
+  denunciar-modal --> ion-item
   especialidade-modal --> ion-item
   filtro-modal --> ion-item
   ion-select-popover --> ion-item

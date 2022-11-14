@@ -370,6 +370,7 @@ export default defineComponent({
  - [apostila-modal](../@templarios/ionic-1-migracao/duvidas-academicas/apostila-modal)
  - [aviso-modal](../@templarios/ionic-1-migracao/simulados/aviso-modal)
  - [concurso-modal](../@templarios/ionic-1-migracao/duvidas-academicas/concurso-modal)
+ - [denunciar-modal](../@templarios/ionic-1-migracao/duvidas-academicas/denunciar-modal)
  - [dialog-test](../@templarios/testes/dialog-test)
  - [especialidade-modal](../@templarios/ionic-1-migracao/simulados/especialidade-modal)
  - [excluir-modal](../@templarios/ionic-1-migracao/duvidas-academicas/excluir-modal)
@@ -405,6 +406,7 @@ graph TD;
   apostila-modal --> ion-button
   aviso-modal --> ion-button
   concurso-modal --> ion-button
+  denunciar-modal --> ion-button
   dialog-test --> ion-button
   especialidade-modal --> ion-button
   excluir-modal --> ion-button

@@ -30,6 +30,8 @@ export namespace Components {
     }
     interface ConcursoModal {
     }
+    interface DenunciarModal {
+    }
     interface DialogTest {
     }
     interface EspecialidadeModal {
@@ -4085,6 +4087,12 @@ declare global {
         prototype: HTMLConcursoModalElement;
         new (): HTMLConcursoModalElement;
     };
+    interface HTMLDenunciarModalElement extends Components.DenunciarModal, HTMLStencilElement {
+    }
+    var HTMLDenunciarModalElement: {
+        prototype: HTMLDenunciarModalElement;
+        new (): HTMLDenunciarModalElement;
+    };
     interface HTMLDialogTestElement extends Components.DialogTest, HTMLStencilElement {
     }
     var HTMLDialogTestElement: {
@@ -5098,6 +5106,7 @@ declare global {
         "apostila-modal": HTMLApostilaModalElement;
         "aviso-modal": HTMLAvisoModalElement;
         "concurso-modal": HTMLConcursoModalElement;
+        "denunciar-modal": HTMLDenunciarModalElement;
         "dialog-test": HTMLDialogTestElement;
         "especialidade-modal": HTMLEspecialidadeModalElement;
         "excluir-modal": HTMLExcluirModalElement;
@@ -5276,6 +5285,8 @@ declare namespace LocalJSX {
     interface AvisoModal {
     }
     interface ConcursoModal {
+    }
+    interface DenunciarModal {
     }
     interface DialogTest {
     }
@@ -9456,6 +9467,7 @@ declare namespace LocalJSX {
         "apostila-modal": ApostilaModal;
         "aviso-modal": AvisoModal;
         "concurso-modal": ConcursoModal;
+        "denunciar-modal": DenunciarModal;
         "dialog-test": DialogTest;
         "especialidade-modal": EspecialidadeModal;
         "excluir-modal": ExcluirModal;
@@ -9634,6 +9646,7 @@ declare module "@stencil/core" {
             "apostila-modal": LocalJSX.ApostilaModal & JSXBase.HTMLAttributes<HTMLApostilaModalElement>;
             "aviso-modal": LocalJSX.AvisoModal & JSXBase.HTMLAttributes<HTMLAvisoModalElement>;
             "concurso-modal": LocalJSX.ConcursoModal & JSXBase.HTMLAttributes<HTMLConcursoModalElement>;
+            "denunciar-modal": LocalJSX.DenunciarModal & JSXBase.HTMLAttributes<HTMLDenunciarModalElement>;
             "dialog-test": LocalJSX.DialogTest & JSXBase.HTMLAttributes<HTMLDialogTestElement>;
             "especialidade-modal": LocalJSX.EspecialidadeModal & JSXBase.HTMLAttributes<HTMLEspecialidadeModalElement>;
             "excluir-modal": LocalJSX.ExcluirModal & JSXBase.HTMLAttributes<HTMLExcluirModalElement>;

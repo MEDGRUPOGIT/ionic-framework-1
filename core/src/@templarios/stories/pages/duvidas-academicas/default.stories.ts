@@ -52,6 +52,15 @@ const createModalSimulado = async () => {
   });
 }
 
+const createModalDenunciar = async () => {
+  modalController.create({
+    component: 'denunciar-modal',
+    cssClass: 'tp-modal',
+  }).then((modal)=>{
+    modal.present()
+  });
+}
+
 const Template = () => {
   return html`
     <div class="container">
@@ -192,13 +201,13 @@ const Template = () => {
                     <ion-label class="button-like__span" ds-color="neutral-10" token="p12"> 5 </ion-label>
                   </div>
                   <med-tooltip content="Toque novamente para denunciar" placement="top" position="start">
-                    <ion-button slot="input" mode="ios" fill="clear" icon-only ds-size="xs" ds-color="fb-warning" @click="${createModalSimulado}">
+                    <ion-button slot="input" mode="ios" fill="clear" icon-only ds-size="xs" ds-color="fb-warning" @click="${createModalDenunciar}">
                       <ion-icon slot="icon-only" class="med-icon" name="med-alerta"></ion-icon>
                     </ion-button>
                   </med-tooltip>
                 </div>
 
-                <ion-button class="button-quantidade card-duvidas__quantidade" mode="ios" ds-size="xs">
+                <ion-button class="button-quantidade card-duvidas__quantidade" mode="ios" ds-size="xs" @click="${createModalSimulado}">
                   RESPONDER AO JOÃO
                   <span class="button-quantidade__span">5</span>
                 </ion-button>

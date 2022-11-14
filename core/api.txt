@@ -7,6 +7,8 @@ aviso-modal,scoped
 
 concurso-modal,scoped
 
+denunciar-modal,scoped
+
 dialog-test,scoped
 
 especialidade-modal,scoped

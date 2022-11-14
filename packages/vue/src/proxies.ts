@@ -20,6 +20,9 @@ export const AvisoModal = /*@__PURE__*/ defineContainer<JSX.AvisoModal>('aviso-m
 export const ConcursoModal = /*@__PURE__*/ defineContainer<JSX.ConcursoModal>('concurso-modal');
 
 
+export const DenunciarModal = /*@__PURE__*/ defineContainer<JSX.DenunciarModal>('denunciar-modal');
+
+
 export const DialogTest = /*@__PURE__*/ defineContainer<JSX.DialogTest>('dialog-test');
 
 

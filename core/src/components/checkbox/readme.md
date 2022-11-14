@@ -303,6 +303,19 @@ export default defineComponent({
 | `--transition`           | Transition of the checkbox icon                |
 
 
+## Dependencies
+
+### Used by
+
+ - [denunciar-modal](../@templarios/ionic-1-migracao/duvidas-academicas/denunciar-modal)
+
+### Graph
+```mermaid
+graph TD;
+  denunciar-modal --> ion-checkbox
+  style ion-checkbox fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
