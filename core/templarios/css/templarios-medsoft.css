@@ -372,9 +372,12 @@
   }
 }
 .concursos__content {
-  height: calc(100% - 182px);
+  height: calc(100% - 128px);
   overflow: auto;
   padding-bottom: 42px;
+}
+.concursos__content--desempenho {
+  height: calc(100% - 168px);
 }
 
 .concursos__title {

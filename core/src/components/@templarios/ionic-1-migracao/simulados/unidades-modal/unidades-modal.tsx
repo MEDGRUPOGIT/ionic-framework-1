@@ -55,11 +55,11 @@ export class UnidadesModal {
           </ion-item>
         </ion-content>
 
-        <div class="modal-footer">
+        <ion-footer class="modal-footer">
           <ion-button class="modal-footer__button" mode="ios" ds-size="sm">
             FECHAR
           </ion-button>
-        </div>
+        </ion-footer>
       </Host>
     );
   }

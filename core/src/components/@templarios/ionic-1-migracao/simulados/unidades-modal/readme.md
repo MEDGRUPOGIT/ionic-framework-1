@@ -14,6 +14,7 @@
 - [ion-label](../../../../label)
 - [ion-content](../../../../content)
 - [ion-item](../../../../item)
+- [ion-footer](../../../../footer)
 - [ion-button](../../../../button)
 
 ### Graph
@@ -24,6 +25,7 @@ graph TD;
   unidades-modal --> ion-label
   unidades-modal --> ion-content
   unidades-modal --> ion-item
+  unidades-modal --> ion-footer
   unidades-modal --> ion-button
   ion-item --> ion-icon
   ion-item --> ion-ripple-effect

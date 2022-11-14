@@ -11,6 +11,7 @@
 
 - [ion-content](../../../../content)
 - [ion-label](../../../../label)
+- [ion-footer](../../../../footer)
 - [ion-button](../../../../button)
 
 ### Graph
@@ -18,6 +19,7 @@
 graph TD;
   aviso-modal --> ion-content
   aviso-modal --> ion-label
+  aviso-modal --> ion-footer
   aviso-modal --> ion-button
   ion-button --> ion-ripple-effect
   style aviso-modal fill:#f9f,stroke:#333,stroke-width:4px

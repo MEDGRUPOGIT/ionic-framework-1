@@ -16,6 +16,7 @@
 - [ion-slides](../../../../slides)
 - [ion-slide](../../../../slide)
 - [ion-label](../../../../label)
+- [ion-footer](../../../../footer)
 
 ### Graph
 ```mermaid
@@ -27,6 +28,7 @@ graph TD;
   tutorial-modal --> ion-slides
   tutorial-modal --> ion-slide
   tutorial-modal --> ion-label
+  tutorial-modal --> ion-footer
   ion-button --> ion-ripple-effect
   style tutorial-modal fill:#f9f,stroke:#333,stroke-width:4px
 ```

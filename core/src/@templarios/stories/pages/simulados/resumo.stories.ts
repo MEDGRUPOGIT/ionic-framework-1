@@ -197,7 +197,7 @@ const Template = ( {valoresChart, valoresLabel} ) => {
           </div>
         </main>
 
-        <footer class="resumo__bottom">
+        <ion-footer class="resumo__bottom">
           <ion-item ds-color="neutral-2" gap="s08" spacing-v="s08" spacing-h="s16" mode="ios" lines="none" detail="false">
             <ion-button slot="start" mode="ios" fill="clear" icon-only ds-size="xxs" @click="${createModalAjuda}">
               <ion-icon slot="icon-only" class="med-icon" name="med-duvidas"></ion-icon>
@@ -212,7 +212,7 @@ const Template = ( {valoresChart, valoresLabel} ) => {
               </ion-button>
             </div>
           </ion-item>
-        </footer>
+        </ion-footer>
       </ion-content>
     </div>
   `;

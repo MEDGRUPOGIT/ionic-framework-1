@@ -25,7 +25,7 @@ const Template = () => {
             <ion-label token="p16x">SUA NOTA: <ion-label token="p16xb">1</ion-label></ion-label>
           </div>
 
-          <div class="concursos__content">
+          <div class="concursos__content concursos__content--desempenho">
             <div class="concursos__questoes">
               <med-chart-radial titulo="100" subtitulo="Questoes" ds-size="lg"></med-chart-radial>
               <med-chart-radial-label></med-chart-radial-label>
@@ -69,11 +69,11 @@ const Template = () => {
             </div>
           </div>
 
-          <div class="concursos__button-bottom">
+          <ion-footer class="concursos__button-bottom">
             <ion-button mode="ios" ds-size="md">
               <ion-label token="p16xb">ESTUDAR CONCURSO</ion-label>
             </ion-button>
-          </div>
+          </ion-footer>
 
         </main>
       </ion-content>
