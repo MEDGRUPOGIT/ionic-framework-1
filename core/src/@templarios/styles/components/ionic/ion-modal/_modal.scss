@@ -12,6 +12,22 @@
   }
 }
 
+@include platform('mac') {
+  .tp-modal {
+    ion-backdrop {
+      background: rgba(0, 0, 0, 0.8)
+    }
+  }
+}
+
+@include platform('windows') {
+  .tp-modal {
+    ion-backdrop {
+      background: rgba(0, 0, 0, 0.8)
+    }
+  }
+}
+
 @include breakpoint-up('sm') {
   .tp-modal {
     --max-width: 880px !important;
