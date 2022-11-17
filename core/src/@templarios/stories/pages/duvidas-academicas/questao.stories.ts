@@ -204,7 +204,7 @@ const Template = ({alternativas}) => {
             </div>
 
             <div class="questao__card-resposta-container">
-              <div class="card-resposta questao__card-resposta">
+              <div class="card-resposta card-resposta--comentar questao__card-resposta">
                 <div class="card-resposta__top">
                   <div class="card-resposta__identificacao">
                     <ion-label ds-color="neutral-10" token="p14x"> Valdir - SP </ion-label>
@@ -237,15 +237,27 @@ const Template = ({alternativas}) => {
                 </div>
 
                 <div class="card-resposta__bottom">
-                  <div class="button-like card-resposta__like">
-                    <ion-button mode="ios" fill="clear" icon-only ds-size="xs">
-                      <ion-icon slot="icon-only" class="med-icon" name="med-positivo"></ion-icon>
-                      </ion-button>
-                    <ion-label class="button-like__span" ds-color="neutral-10" token="p12"> 5 </ion-label>
+                  <div class="card-resposta__button-container">
+                    <div class="button-like card-resposta__like">
+                      <ion-button mode="ios" fill="clear" icon-only ds-size="xs">
+                        <ion-icon slot="icon-only" class="med-icon" name="med-positivo"></ion-icon>
+                        </ion-button>
+                      <ion-label class="button-like__span" ds-color="neutral-10" token="p12"> 5 </ion-label>
+                    </div>
+                    <ion-button mode="ios" fill="clear" ds-size="xs">
+                      COMENTAR
+                    </ion-button>
+                    <ion-button mode="ios" fill="clear" ds-size="xs">
+                      DENUNCIAR
+                    </ion-button>
                   </div>
-                  <ion-button mode="ios" fill="clear" ds-size="xs">
-                    COMENTAR
-                  </ion-button>
+
+                  <div class="card-resposta__comentar">
+                    <ion-textarea mode="md" placeholder="Digite aqui sua réplica"></ion-textarea>
+                    <ion-button mode="ios" fill="clear" ds-size="xs">
+                      ENVIAR
+                    </ion-button>
+                  </div>
                 </div>
               </div>
 
@@ -282,15 +294,27 @@ const Template = ({alternativas}) => {
                 </div>
 
                 <div class="card-resposta__bottom">
-                  <div class="button-like card-resposta__like">
-                    <ion-button mode="ios" fill="clear" icon-only ds-size="xs">
-                      <ion-icon slot="icon-only" class="med-icon" name="med-positivo"></ion-icon>
-                      </ion-button>
-                    <ion-label class="button-like__span" ds-color="neutral-10" token="p12"> 5 </ion-label>
+                  <div class="card-resposta__button-container">
+                    <div class="button-like card-resposta__like">
+                      <ion-button mode="ios" fill="clear" icon-only ds-size="xs">
+                        <ion-icon slot="icon-only" class="med-icon" name="med-positivo"></ion-icon>
+                        </ion-button>
+                      <ion-label class="button-like__span" ds-color="neutral-10" token="p12"> 5 </ion-label>
+                    </div>
+                    <ion-button mode="ios" fill="clear" ds-size="xs">
+                      COMENTAR
+                    </ion-button>
+                    <ion-button mode="ios" fill="clear" ds-size="xs">
+                      DENUNCIAR
+                    </ion-button>
                   </div>
-                  <ion-button mode="ios" fill="clear" ds-size="xs">
-                    COMENTAR
-                  </ion-button>
+
+                  <div class="card-resposta__comentar">
+                    <ion-textarea mode="md" placeholder="Digite aqui sua réplica"></ion-textarea>
+                    <ion-button mode="ios" fill="clear" ds-size="xs">
+                      ENVIAR
+                    </ion-button>
+                  </div>
                 </div>
               </div>
 
@@ -327,15 +351,27 @@ const Template = ({alternativas}) => {
                 </div>
 
                 <div class="card-resposta__bottom">
-                  <div class="button-like card-resposta__like">
-                    <ion-button mode="ios" fill="clear" icon-only ds-size="xs">
-                      <ion-icon slot="icon-only" class="med-icon" name="med-positivo"></ion-icon>
-                      </ion-button>
-                    <ion-label class="button-like__span" ds-color="neutral-10" token="p12"> 5 </ion-label>
+                  <div class="card-resposta__button-container">
+                    <div class="button-like card-resposta__like">
+                      <ion-button mode="ios" fill="clear" icon-only ds-size="xs">
+                        <ion-icon slot="icon-only" class="med-icon" name="med-positivo"></ion-icon>
+                        </ion-button>
+                      <ion-label class="button-like__span" ds-color="neutral-10" token="p12"> 5 </ion-label>
+                    </div>
+                    <ion-button mode="ios" fill="clear" ds-size="xs">
+                      COMENTAR
+                    </ion-button>
+                    <ion-button mode="ios" fill="clear" ds-size="xs">
+                      DENUNCIAR
+                    </ion-button>
                   </div>
-                  <ion-button mode="ios" fill="clear" ds-size="xs">
-                    COMENTAR
-                  </ion-button>
+
+                  <div class="card-resposta__comentar">
+                    <ion-textarea mode="md" placeholder="Digite aqui sua réplica"></ion-textarea>
+                    <ion-button mode="ios" fill="clear" ds-size="xs">
+                      ENVIAR
+                    </ion-button>
+                  </div>
                 </div>
               </div>
 
@@ -372,21 +408,40 @@ const Template = ({alternativas}) => {
                 </div>
 
                 <div class="card-resposta__bottom">
-                  <div class="button-like card-resposta__like">
-                    <ion-button mode="ios" fill="clear" icon-only ds-size="xs">
-                      <ion-icon slot="icon-only" class="med-icon" name="med-positivo"></ion-icon>
-                      </ion-button>
-                    <ion-label class="button-like__span" ds-color="neutral-10" token="p12"> 5 </ion-label>
+                  <div class="card-resposta__button-container">
+                    <div class="button-like card-resposta__like">
+                      <ion-button mode="ios" fill="clear" icon-only ds-size="xs">
+                        <ion-icon slot="icon-only" class="med-icon" name="med-positivo"></ion-icon>
+                        </ion-button>
+                      <ion-label class="button-like__span" ds-color="neutral-10" token="p12"> 5 </ion-label>
+                    </div>
+                    <ion-button mode="ios" fill="clear" ds-size="xs">
+                      COMENTAR
+                    </ion-button>
+                    <ion-button mode="ios" fill="clear" ds-size="xs">
+                      DENUNCIAR
+                    </ion-button>
                   </div>
-                  <ion-button mode="ios" fill="clear" ds-size="xs">
-                    COMENTAR
-                  </ion-button>
+
+                  <div class="card-resposta__comentar">
+                    <ion-textarea mode="md" placeholder="Digite aqui sua réplica"></ion-textarea>
+                    <ion-button mode="ios" fill="clear" ds-size="xs">
+                      ENVIAR
+                    </ion-button>
+                  </div>
                 </div>
               </div>
-
             </div>
           </div>
         </main>
+
+        <ion-footer class="questao-footer">
+          <ion-item ds-color="neutral-2" gap="s08" spacing-v="s08" spacing-h="s16" mode="ios" lines="none" detail="false">
+            <ion-button class="questao-footer__button" mode="ios">
+              ENCAMINHAR
+            </ion-button>
+          </ion-item>
+        </ion-footer>
       </ion-content>
     </div>
   `;

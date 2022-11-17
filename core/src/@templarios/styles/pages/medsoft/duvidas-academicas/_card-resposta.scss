@@ -20,6 +20,14 @@
     }
   }
 
+  &--comentar {
+    .card-resposta {
+      &__comentar {
+        display: flex;
+      }
+    }
+  }
+
   &__top {
     display: flex;
     align-items: flex-start;
@@ -65,10 +73,22 @@
 
   &__bottom {
     display: flex;
+    flex-direction: column;
+  }
+
+  &__button-container {
+    display: flex;
     align-items: center;
   }
 
   &__like {
     margin-right: 8px;
+  }
+
+  &__comentar {
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+    margin-top: 8px;
   }
 }

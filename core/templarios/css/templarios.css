@@ -7414,6 +7414,14 @@ ion-list[ds-color=fb-success] ion-item ion-icon {
   --backdrop-opacity: 0.8 !important;
 }
 
+.plt-desktop .platform-macintel .tp-modal ion-backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.plt-electron.plt-desktop .tp-modal ion-backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+
 @media (min-width: 576px) {
   .tp-modal {
     --max-width: 880px !important;
