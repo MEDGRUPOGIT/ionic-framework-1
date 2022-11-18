@@ -17,6 +17,8 @@ excluir-modal,scoped
 
 filtro-modal,scoped
 
+informativo-modal,scoped
+
 ion-action-sheet,scoped
 ion-action-sheet,prop,animated,boolean,true,false,false
 ion-action-sheet,prop,backdropDismiss,boolean,true,false,false

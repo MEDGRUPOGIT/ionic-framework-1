@@ -138,6 +138,7 @@ export default defineComponent({
  - [especialidade-modal](../@templarios/ionic-1-migracao/simulados/especialidade-modal)
  - [excluir-modal](../@templarios/ionic-1-migracao/duvidas-academicas/excluir-modal)
  - [filtro-modal](../@templarios/ionic-1-migracao/duvidas-academicas/filtro-modal)
+ - [informativo-modal](../@templarios/ionic-1-migracao/apostila/informativo-modal)
  - [local-modal](../@templarios/ionic-1-migracao/simulados/local-modal)
  - [realizacoes-modal](../@templarios/ionic-1-migracao/simulados/realizacoes-modal)
  - [sheet-content-test](../@templarios/testes/sheet-content-test)
@@ -156,6 +157,7 @@ graph TD;
   especialidade-modal --> ion-footer
   excluir-modal --> ion-footer
   filtro-modal --> ion-footer
+  informativo-modal --> ion-footer
   local-modal --> ion-footer
   realizacoes-modal --> ion-footer
   sheet-content-test --> ion-footer

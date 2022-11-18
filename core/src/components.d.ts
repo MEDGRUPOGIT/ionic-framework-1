@@ -40,6 +40,8 @@ export namespace Components {
     }
     interface FiltroModal {
     }
+    interface InformativoModal {
+    }
     interface IonActionSheet {
         /**
           * If `true`, the action sheet will animate.
@@ -4117,6 +4119,12 @@ declare global {
         prototype: HTMLFiltroModalElement;
         new (): HTMLFiltroModalElement;
     };
+    interface HTMLInformativoModalElement extends Components.InformativoModal, HTMLStencilElement {
+    }
+    var HTMLInformativoModalElement: {
+        prototype: HTMLInformativoModalElement;
+        new (): HTMLInformativoModalElement;
+    };
     interface HTMLIonActionSheetElement extends Components.IonActionSheet, HTMLStencilElement {
     }
     var HTMLIonActionSheetElement: {
@@ -5111,6 +5119,7 @@ declare global {
         "especialidade-modal": HTMLEspecialidadeModalElement;
         "excluir-modal": HTMLExcluirModalElement;
         "filtro-modal": HTMLFiltroModalElement;
+        "informativo-modal": HTMLInformativoModalElement;
         "ion-action-sheet": HTMLIonActionSheetElement;
         "ion-alert": HTMLIonAlertElement;
         "ion-app": HTMLIonAppElement;
@@ -5295,6 +5304,8 @@ declare namespace LocalJSX {
     interface ExcluirModal {
     }
     interface FiltroModal {
+    }
+    interface InformativoModal {
     }
     interface IonActionSheet {
         /**
@@ -9472,6 +9483,7 @@ declare namespace LocalJSX {
         "especialidade-modal": EspecialidadeModal;
         "excluir-modal": ExcluirModal;
         "filtro-modal": FiltroModal;
+        "informativo-modal": InformativoModal;
         "ion-action-sheet": IonActionSheet;
         "ion-alert": IonAlert;
         "ion-app": IonApp;
@@ -9651,6 +9663,7 @@ declare module "@stencil/core" {
             "especialidade-modal": LocalJSX.EspecialidadeModal & JSXBase.HTMLAttributes<HTMLEspecialidadeModalElement>;
             "excluir-modal": LocalJSX.ExcluirModal & JSXBase.HTMLAttributes<HTMLExcluirModalElement>;
             "filtro-modal": LocalJSX.FiltroModal & JSXBase.HTMLAttributes<HTMLFiltroModalElement>;
+            "informativo-modal": LocalJSX.InformativoModal & JSXBase.HTMLAttributes<HTMLInformativoModalElement>;
             "ion-action-sheet": LocalJSX.IonActionSheet & JSXBase.HTMLAttributes<HTMLIonActionSheetElement>;
             "ion-alert": LocalJSX.IonAlert & JSXBase.HTMLAttributes<HTMLIonAlertElement>;
             "ion-app": LocalJSX.IonApp & JSXBase.HTMLAttributes<HTMLIonAppElement>;

@@ -35,6 +35,9 @@ export const ExcluirModal = /*@__PURE__*/ defineContainer<JSX.ExcluirModal>('exc
 export const FiltroModal = /*@__PURE__*/ defineContainer<JSX.FiltroModal>('filtro-modal');
 
 
+export const InformativoModal = /*@__PURE__*/ defineContainer<JSX.InformativoModal>('informativo-modal');
+
+
 export const IonAvatar = /*@__PURE__*/ defineContainer<JSX.IonAvatar>('ion-avatar');
 
 

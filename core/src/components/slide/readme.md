@@ -15,6 +15,7 @@ See the [Slides API Docs](../slides) for more usage information.
 ### Used by
 
  - [ajuda-modal](../@templarios/ionic-1-migracao/simulados/ajuda-modal)
+ - [informativo-modal](../@templarios/ionic-1-migracao/apostila/informativo-modal)
  - [med-image-zoom](../@templarios/compositions/med-image-zoom)
  - [tutorial-modal](../@templarios/ionic-1-migracao/simulados/tutorial-modal)
 
@@ -22,6 +23,7 @@ See the [Slides API Docs](../slides) for more usage information.
 ```mermaid
 graph TD;
   ajuda-modal --> ion-slide
+  informativo-modal --> ion-slide
   med-image-zoom --> ion-slide
   tutorial-modal --> ion-slide
   style ion-slide fill:#f9f,stroke:#333,stroke-width:4px

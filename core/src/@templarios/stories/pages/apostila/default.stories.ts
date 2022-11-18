@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions';
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
-import { popoverController } from '../../../../../dist/ionic/index.esm';
+import { modalController, popoverController } from '../../../../../dist/ionic/index.esm';
 import { MedFontSize } from '../../../enums/font-size.enum';
 
 
@@ -9,6 +9,15 @@ export default {
   title: 'Pages/Medsoft/Apostila',
   decorators: [withDesign],
 };
+
+const createModalInformativo = async () => {
+  modalController.create({
+    component: 'informativo-modal',
+    cssClass: 'tp-modal',
+  }).then((modal)=>{
+    modal.present()
+  });
+}
 
 let call = false;
 let currentPopover = null;
@@ -125,7 +134,7 @@ const Template = ({ value }) => {
           <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs">
             <ion-icon class="med-icon" slot="icon-only" name="med-busca"></ion-icon>
           </ion-button>
-           <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs">
+           <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs" @click="${createModalInformativo}">
             <ion-icon class="med-icon" slot="icon-only" name="med-informacao"></ion-icon>
           </ion-button>
           <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs">
