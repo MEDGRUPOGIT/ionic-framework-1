@@ -347,11 +347,13 @@ Type: `Promise<void>`
 ### Used by
 
  - [denunciar-modal](../@templarios/ionic-1-migracao/duvidas-academicas/denunciar-modal)
+ - [text-area-modal](../@templarios/ionic-1-migracao/duvidas-academicas/text-area-modal)
 
 ### Graph
 ```mermaid
 graph TD;
   denunciar-modal --> ion-textarea
+  text-area-modal --> ion-textarea
   style ion-textarea fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

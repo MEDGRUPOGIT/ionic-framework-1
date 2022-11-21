@@ -21,7 +21,7 @@ export class DenunciarModal {
         </med-header>
 
         <ion-content class="modal-content">
-          <main class="denunciar">
+          <div class="denunciar">
             <div class="denunciar__list">
               <ion-item mode="ios" lines="none">
                 <ion-label ds-color="neutral-10">Crítica sobre conteúdo</ion-label>
@@ -44,7 +44,7 @@ export class DenunciarModal {
               <ion-label class="denunciar__text" ds-color="neutral-8">Descreva sua denúncia (opcional)</ion-label>
               <ion-textarea class="denunciar__campo" mode="md" placeholder="Digite aqui"></ion-textarea>
             </div>
-          </main>
+          </div>
         </ion-content>
 
         <ion-footer class="modal-footer">

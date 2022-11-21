@@ -837,17 +837,6 @@
   text-align: center;
 }
 
-.text-area {
-  height: calc(100vh - 56px);
-  padding: 16px;
-}
-.text-area__campo {
-  height: 100%;
-}
-.text-area .native-textarea {
-  height: calc(100vh - 88px);
-}
-
 .busca-apostila {
   padding: 16px;
   display: flex;

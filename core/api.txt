@@ -1855,6 +1855,8 @@ sheet-test,scoped
 
 simulado-modal,scoped
 
+text-area-modal,scoped
+
 tp-input-container,scoped
 tp-input-container,prop,disabled,boolean,false,false,true
 tp-input-container,prop,dsColor,string | undefined,undefined,false,true

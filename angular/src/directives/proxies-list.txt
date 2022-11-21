@@ -157,6 +157,7 @@ export const DIRECTIVES = [
   d.SheetContentTest,
   d.SheetTest,
   d.SimuladoModal,
+  d.TextAreaModal,
   d.TpInputContainer,
   d.TutorialModal,
   d.UnidadesModal

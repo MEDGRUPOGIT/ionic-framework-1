@@ -277,6 +277,7 @@ Type: `Promise<void>`
  - [realizacoes-modal](../@templarios/ionic-1-migracao/simulados/realizacoes-modal)
  - [sheet-content-test](../@templarios/testes/sheet-content-test)
  - [simulado-modal](../@templarios/ionic-1-migracao/duvidas-academicas/simulado-modal)
+ - [text-area-modal](../@templarios/ionic-1-migracao/duvidas-academicas/text-area-modal)
  - [tutorial-modal](../@templarios/ionic-1-migracao/simulados/tutorial-modal)
  - [unidades-modal](../@templarios/ionic-1-migracao/simulados/unidades-modal)
 
@@ -298,6 +299,7 @@ graph TD;
   realizacoes-modal --> ion-content
   sheet-content-test --> ion-content
   simulado-modal --> ion-content
+  text-area-modal --> ion-content
   tutorial-modal --> ion-content
   unidades-modal --> ion-content
   style ion-content fill:#f9f,stroke:#333,stroke-width:4px

@@ -27,7 +27,7 @@ export class FiltroModal {
         </med-header>
 
         <ion-content class="modal-content">
-          <main class="filtros">
+          <div class="filtros">
             <div class="filtros__top">
               <ion-label class="filtros__title">Exibição das dúvidas</ion-label>
               <div class="filtros__button-container">
@@ -158,7 +158,7 @@ export class FiltroModal {
                 </div>
               </div>
             </div>
-          </main>
+          </div>
         </ion-content>
 
         <ion-footer class="modal-footer">

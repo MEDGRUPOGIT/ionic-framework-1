@@ -31,6 +31,7 @@
  - [med-offline](../med-offline)
  - [realizacoes-modal](../../ionic-1-migracao/simulados/realizacoes-modal)
  - [simulado-modal](../../ionic-1-migracao/duvidas-academicas/simulado-modal)
+ - [text-area-modal](../../ionic-1-migracao/duvidas-academicas/text-area-modal)
  - [tutorial-modal](../../ionic-1-migracao/simulados/tutorial-modal)
  - [unidades-modal](../../ionic-1-migracao/simulados/unidades-modal)
 
@@ -51,6 +52,7 @@ graph TD;
   med-offline --> med-navbar
   realizacoes-modal --> med-navbar
   simulado-modal --> med-navbar
+  text-area-modal --> med-navbar
   tutorial-modal --> med-navbar
   unidades-modal --> med-navbar
   style med-navbar fill:#f9f,stroke:#333,stroke-width:4px

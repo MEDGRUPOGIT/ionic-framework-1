@@ -1838,6 +1838,16 @@ export class SimuladoModal {
     this.el = r.nativeElement;
   }
 }
+export declare interface TextAreaModal extends Components.TextAreaModal {
+}
+@Component({ selector: "text-area-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class TextAreaModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface TpInputContainer extends Components.TpInputContainer {
 }
 @ProxyCmp({ inputs: ["disabled", "dsColor", "dsName", "feedback", "hasButton", "hasIcon"] })

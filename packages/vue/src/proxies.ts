@@ -1427,6 +1427,9 @@ export const SheetTest = /*@__PURE__*/ defineContainer<JSX.SheetTest>('sheet-tes
 export const SimuladoModal = /*@__PURE__*/ defineContainer<JSX.SimuladoModal>('simulado-modal');
 
 
+export const TextAreaModal = /*@__PURE__*/ defineContainer<JSX.TextAreaModal>('text-area-modal');
+
+
 export const TpInputContainer = /*@__PURE__*/ defineContainer<JSX.TpInputContainer>('tp-input-container', [
   'dsColor',
   'dsName',

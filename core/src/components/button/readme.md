@@ -393,6 +393,7 @@ export default defineComponent({
  - [sheet-content-test](../@templarios/testes/sheet-content-test)
  - [sheet-test](../@templarios/testes/sheet-test)
  - [simulado-modal](../@templarios/ionic-1-migracao/duvidas-academicas/simulado-modal)
+ - [text-area-modal](../@templarios/ionic-1-migracao/duvidas-academicas/text-area-modal)
  - [tutorial-modal](../@templarios/ionic-1-migracao/simulados/tutorial-modal)
  - [unidades-modal](../@templarios/ionic-1-migracao/simulados/unidades-modal)
 
@@ -430,6 +431,7 @@ graph TD;
   sheet-content-test --> ion-button
   sheet-test --> ion-button
   simulado-modal --> ion-button
+  text-area-modal --> ion-button
   tutorial-modal --> ion-button
   unidades-modal --> ion-button
   style ion-button fill:#f9f,stroke:#333,stroke-width:4px

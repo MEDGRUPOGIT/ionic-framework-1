@@ -317,6 +317,7 @@ export default defineComponent({
  - [med-config](../@templarios/legacy/med-config)
  - [realizacoes-modal](../@templarios/ionic-1-migracao/simulados/realizacoes-modal)
  - [simulado-modal](../@templarios/ionic-1-migracao/duvidas-academicas/simulado-modal)
+ - [text-area-modal](../@templarios/ionic-1-migracao/duvidas-academicas/text-area-modal)
  - [tutorial-modal](../@templarios/ionic-1-migracao/simulados/tutorial-modal)
  - [unidades-modal](../@templarios/ionic-1-migracao/simulados/unidades-modal)
 
@@ -337,6 +338,7 @@ graph TD;
   med-config --> ion-label
   realizacoes-modal --> ion-label
   simulado-modal --> ion-label
+  text-area-modal --> ion-label
   tutorial-modal --> ion-label
   unidades-modal --> ion-label
   style ion-label fill:#f9f,stroke:#333,stroke-width:4px

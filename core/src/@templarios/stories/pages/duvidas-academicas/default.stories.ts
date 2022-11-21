@@ -61,6 +61,15 @@ const createModalDenunciar = async () => {
   });
 }
 
+const createModalTextArea = async () => {
+  modalController.create({
+    component: 'text-area-modal',
+    cssClass: 'tp-modal',
+  }).then((modal)=>{
+    modal.present()
+  });
+}
+
 const Template = () => {
   return html`
     <div class="container">
@@ -277,7 +286,7 @@ const Template = () => {
                   </med-tooltip>
                 </div>
 
-                <ion-button class="button-quantidade card-duvidas__quantidade" mode="ios" ds-size="xs">
+                <ion-button class="button-quantidade card-duvidas__quantidade" mode="ios" ds-size="xs" @click="${createModalTextArea}">
                   RESPONDER AO JOÃO
                   <span class="button-quantidade__span">5</span>
                 </ion-button>
