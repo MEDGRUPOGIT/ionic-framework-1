@@ -20,7 +20,7 @@ const Template = () => {
       </med-header>
 
       <ion-content>
-        <main class="concursos">
+        <div class="concursos">
           <div class="concursos__input">
             <ion-icon class="med-icon" name="med-busca"></ion-icon>
             <ion-input mode="md" ds-color="neutral-2" placeholder="Digite o nome de um concurso..."></ion-input>
@@ -35,7 +35,7 @@ const Template = () => {
             </div>
 
           </div>
-        </main>
+        </div>
       </ion-content>
     </div>
   `;

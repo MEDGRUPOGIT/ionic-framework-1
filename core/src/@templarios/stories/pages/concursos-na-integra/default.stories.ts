@@ -20,7 +20,7 @@ const Template = () => {
       </med-header>
 
       <ion-content>
-        <main class="concursos">
+        <div class="concursos">
           <div class="concursos__input">
             <ion-icon class="med-icon" name="med-busca"></ion-icon>
             <ion-input mode="md" ds-color="neutral-2" placeholder="Digite o nome de um concurso..."></ion-input>
@@ -31,7 +31,7 @@ const Template = () => {
             <ion-label class="concursos__text" token="h20x">Buscar Concurso</ion-label>
             <ion-label class="concursos__text" token="p16x">Procure por qualquer concurso dentro do nosso branco de dados digitando o nome ou sigla da Instituição</ion-label>
           </div>
-        </main>
+        </div>
       </ion-content>
     </div>
   `;

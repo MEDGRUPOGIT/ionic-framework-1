@@ -36,7 +36,7 @@ const Template = ({alternativas}) => {
       </med-header>
 
       <ion-content>
-        <main class="questao">
+        <div class="questao">
           <div class="user-selector">
             <ion-item class="user-selector__title" ds-color="brand" mode="ios" lines="none">
               <div class="user-selector__container-text">
@@ -433,7 +433,7 @@ const Template = ({alternativas}) => {
               </div>
             </div>
           </div>
-        </main>
+        </div>
 
         <ion-footer class="questao-footer">
           <ion-item ds-color="neutral-2" gap="s08" spacing-v="s08" spacing-h="s16" mode="ios" lines="none" detail="false">

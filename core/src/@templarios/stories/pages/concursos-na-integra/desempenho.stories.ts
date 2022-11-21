@@ -20,7 +20,7 @@ const Template = () => {
       </med-header>
 
       <ion-content>
-        <main class="concursos">
+        <div class="concursos">
           <div class="concursos__title">
             <ion-label token="p16x">SUA NOTA: <ion-label token="p16xb">1</ion-label></ion-label>
           </div>
@@ -75,7 +75,7 @@ const Template = () => {
             </ion-button>
           </ion-footer>
 
-        </main>
+        </div>
       </ion-content>
     </div>
   `;

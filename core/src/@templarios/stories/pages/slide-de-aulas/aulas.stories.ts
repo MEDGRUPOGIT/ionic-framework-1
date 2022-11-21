@@ -27,7 +27,7 @@ const Template = () => {
       </med-header>
 
       <ion-content>
-        <main class="aulas">
+        <div class="aulas">
           <med-base class="aulas__item" ds-color="neutral-25">
             <div class="aulas__top" slot="start">
               <ion-avatar class="aulas__avatar" ds-size="sm">
@@ -174,7 +174,7 @@ const Template = () => {
               <img class="aulas__image" src="https://via.placeholder.com/500">
             </div>
           </med-base>
-        </main>
+        </div>
       </ion-content>
     </div>
   `;

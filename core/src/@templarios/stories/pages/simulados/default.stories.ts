@@ -20,7 +20,7 @@ const Template = () => {
       </med-header>
 
       <ion-content>
-        <main class="simulados">
+        <div class="simulados">
           <ion-label class="ano" ds-color="neutral-10" token="p16xb">2022</ion-label>
           <div class="grid">
             <med-tiles class="grid__tiles" titulo="R01 SIM 01" label="Geral 01">
@@ -98,7 +98,7 @@ const Template = () => {
               <ion-badge ds-size="xs" ds-color="fb-attention">Estude</ion-button>
             </med-tiles>
           </div>
-        </main>
+        </div>
       </ion-content>
     </div>
   `;

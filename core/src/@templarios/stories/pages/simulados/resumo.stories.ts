@@ -111,7 +111,7 @@ const Template = ( {valoresChart, valoresLabel} ) => {
       </med-header>
 
       <ion-content>
-        <main class="resumo">
+        <div class="resumo">
           <div class="resumo__top">
             <ion-item ds-color="brand" spacing-v="s08" spacing-h="s04" mode="ios" lines="none">
               <ion-button class="resumo__button" mode="ios" fill="clear" ds-color="neutral-10" ds-size="xxs" @click="${createModalRealizacoes}">
@@ -195,7 +195,7 @@ const Template = ( {valoresChart, valoresLabel} ) => {
               <med-chart-radial-label id="label-estudo"></med-chart-radial-label>
             </div>
           </div>
-        </main>
+        </div>
 
         <ion-footer class="resumo__bottom">
           <ion-item ds-color="neutral-2" gap="s08" spacing-v="s08" spacing-h="s16" mode="ios" lines="none" detail="false">

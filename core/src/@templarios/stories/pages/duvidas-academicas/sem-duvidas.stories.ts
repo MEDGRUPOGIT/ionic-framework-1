@@ -28,7 +28,7 @@ const Template = () => {
       </med-header>
 
       <ion-content>
-        <main class="duvidas">
+        <div class="duvidas">
           <ion-segment value="tab-1" scrollable>
             <ion-segment-button class="duvidas__tab" mode="md" value="tab-1">
               <ion-label>Todas</ion-label>
@@ -93,7 +93,7 @@ const Template = () => {
            <ion-label class="sem-duvidas__text" token="h20x">AINDA NÃO HÁ DÚVIDAS POSTADAS</ion-label>
           </div>
 
-        </main>
+        </div>
       </ion-content>
     </div>
   `;

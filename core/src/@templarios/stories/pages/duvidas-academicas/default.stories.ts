@@ -92,7 +92,7 @@ const Template = () => {
       </med-header>
 
       <ion-content>
-        <main class="duvidas">
+        <div class="duvidas">
           <ion-segment value="tab-1" scrollable>
             <ion-segment-button class="duvidas__tab" mode="md" value="tab-1">
               <ion-label>Todas</ion-label>
@@ -507,7 +507,7 @@ const Template = () => {
           <ion-button class="duvidas__button" mode="ios" icon-only>
             <ion-icon slot="icon-only" class="med-icon" name="med-duvidas"></ion-icon>
           </ion-button>
-        </main>
+        </div>
       </ion-content>
     </div>
   `;

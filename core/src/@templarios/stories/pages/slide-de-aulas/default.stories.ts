@@ -32,7 +32,7 @@ const Template = () => {
       </med-header>
 
       <ion-content>
-        <main class="slide-de-aula">
+        <div class="slide-de-aula">
           <ion-item class="slide-de-aula__item" ds-color="neutral-2" radius="s08" spacing-v="s16" spacing-h="s16" mode="ios" lines="none">
             <ion-label class="slide-de-aula__text" token="p16xb">Clínica médica</ion-label>
             <ion-button slot="end" ds-size="xxs" mode="ios" fill="clear" icon-only>
@@ -198,7 +198,7 @@ const Template = () => {
             </med-accordion-item>
 
           </med-accordion-list>
-        </main>
+        </div>
       </ion-content>
     </div>
   `;

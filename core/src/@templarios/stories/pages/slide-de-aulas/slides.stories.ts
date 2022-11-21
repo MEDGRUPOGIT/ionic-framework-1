@@ -45,7 +45,7 @@ const Template = () => {
       </med-header>
 
       <ion-content>
-        <main class="slides">
+        <div class="slides">
           <ion-slides class="slides__content" pager="true">
             <ion-slide>
               <img class="slides__image" src="https://via.placeholder.com/500" @click="${createModal}" />
@@ -63,7 +63,7 @@ const Template = () => {
           <div class="slides__contador">
             <ion-label token="p14x">1 de 15</ion-label>
           </div>
-        </main>
+        </div>
       </ion-content>
     </div>
   `;
