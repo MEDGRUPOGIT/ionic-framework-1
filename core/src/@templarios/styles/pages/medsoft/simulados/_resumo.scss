@@ -1,6 +1,6 @@
 .resumo {
   background: hsl(var(--med-color-neutral-15));
-  height: calc(100% - 128px);
+  height: calc(100% - 56px);
 
   &__button {
     margin: 0 auto;
@@ -109,8 +109,6 @@
 
 @include breakpoint-down('sm') {
   .resumo {
-    height: calc(100% - 184px);
-
     &__classificacao {
       flex-direction: column;
     }

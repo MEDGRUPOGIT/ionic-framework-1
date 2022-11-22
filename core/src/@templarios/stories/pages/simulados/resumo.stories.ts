@@ -97,7 +97,7 @@ const Template = ( {valoresChart, valoresLabel} ) => {
   }, 1000);
 
   return html`
-    <div class="container">
+    <div class="container container--resumo-simulado">
       <med-header>
         <med-navbar class="header" slot="navbar">
           <ion-back-button slot="left" mode="ios" text="" ds-size="xxs">
@@ -196,25 +196,25 @@ const Template = ( {valoresChart, valoresLabel} ) => {
             </div>
           </div>
         </div>
-
-        <ion-footer class="resumo__bottom">
-          <ion-item ds-color="neutral-2" gap="s08" spacing-v="s08" spacing-h="s16" mode="ios" lines="none" detail="false">
-            <ion-button slot="start" mode="ios" fill="clear" icon-only ds-size="xxs" @click="${createModalAjuda}">
-              <ion-icon slot="icon-only" class="med-icon" name="med-duvidas"></ion-icon>
-            </ion-button>
-
-            <div class="resumo__modo-container">
-              <ion-button class="resumo__modo" mode="ios" @click="${createModalTutorial}">
-                MODO PROVA
-              </ion-button>
-              <ion-button class="resumo__modo" mode="ios" @click="${createModalAviso}">
-                MODO ESTUDO
-              </ion-button>
-            </div>
-          </ion-item>
-        </ion-footer>
       </ion-content>
     </div>
+
+    <ion-footer class="resumo__bottom">
+      <ion-item ds-color="neutral-2" gap="s08" spacing-v="s08" spacing-h="s16" mode="ios" lines="none" detail="false">
+        <ion-button slot="start" mode="ios" fill="clear" icon-only ds-size="xxs" @click="${createModalAjuda}">
+          <ion-icon slot="icon-only" class="med-icon" name="med-duvidas"></ion-icon>
+        </ion-button>
+
+        <div class="resumo__modo-container">
+          <ion-button class="resumo__modo" mode="ios" @click="${createModalTutorial}">
+            MODO PROVA
+          </ion-button>
+          <ion-button class="resumo__modo" mode="ios" @click="${createModalAviso}">
+            MODO ESTUDO
+          </ion-button>
+        </div>
+      </ion-item>
+    </ion-footer>
   `;
 };
 

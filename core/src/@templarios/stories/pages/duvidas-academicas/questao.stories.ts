@@ -86,7 +86,7 @@ const Template = ({alternativas}) => {
             </div>
           </div>
 
-          <div class="questao__container">
+          <div class="questao__container questao__container--user-select">
             <ion-label class="questao__title" token="h20x">Dúvida referente à:</ion-label>
             <ion-label class="questao__subtitle" token="p16xb">Questão 02 - 2018 UERJ</ion-label>
 
@@ -214,7 +214,7 @@ const Template = ({alternativas}) => {
                   <img class="card-resposta__imagem" slot="input" src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"/>
 
                   <div class="card-resposta__top-right">
-                    <ion-badge class="card-resposta__badge" ds-color="neutral-10" ds-size="sm"> RESPOSTA DA EQUIPE </br> ACADÊMICA </ion-badge>
+                    <ion-badge class="card-resposta__badge" ds-size="sm"> RESPOSTA DA EQUIPE </br> ACADÊMICA </ion-badge>
                     <med-context-menu class="med-context-menu card-resposta__context">
                       <ul class="med-context-menu__list">
                         <li class="med-context-menu__item">
@@ -271,7 +271,7 @@ const Template = ({alternativas}) => {
                   <img class="card-resposta__imagem" slot="input" src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"/>
 
                   <div class="card-resposta__top-right">
-                    <ion-badge class="card-resposta__badge" ds-color="neutral-10" ds-size="sm"> RESPOSTA DA EQUIPE </br> ACADÊMICA </ion-badge>
+                    <ion-badge class="card-resposta__badge" ds-size="sm"> RESPOSTA DA EQUIPE </br> ACADÊMICA </ion-badge>
                     <med-context-menu class="med-context-menu card-resposta__context">
                       <ul class="med-context-menu__list">
                         <li class="med-context-menu__item">
@@ -328,7 +328,7 @@ const Template = ({alternativas}) => {
                   <img class="card-resposta__imagem" slot="input" src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"/>
 
                   <div class="card-resposta__top-right">
-                    <ion-badge class="card-resposta__badge" ds-color="neutral-10" ds-size="sm"> RESPOSTA DA EQUIPE </br> ACADÊMICA </ion-badge>
+                    <ion-badge class="card-resposta__badge" ds-size="sm"> RESPOSTA DA EQUIPE </br> ACADÊMICA </ion-badge>
                     <med-context-menu class="med-context-menu card-resposta__context">
                       <ul class="med-context-menu__list">
                         <li class="med-context-menu__item">
@@ -385,7 +385,7 @@ const Template = ({alternativas}) => {
                   <img class="card-resposta__imagem" slot="input" src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"/>
 
                   <div class="card-resposta__top-right">
-                    <ion-badge class="card-resposta__badge" ds-color="neutral-10" ds-size="sm"> RESPOSTA DA EQUIPE </br> ACADÊMICA </ion-badge>
+                    <ion-badge class="card-resposta__badge" ds-size="sm"> RESPOSTA DA EQUIPE </br> ACADÊMICA </ion-badge>
                     <med-context-menu class="med-context-menu card-resposta__context">
                       <ul class="med-context-menu__list">
                         <li class="med-context-menu__item">
@@ -433,15 +433,11 @@ const Template = ({alternativas}) => {
               </div>
             </div>
           </div>
-        </div>
 
-        <ion-footer class="questao-footer">
-          <ion-item ds-color="neutral-2" gap="s08" spacing-v="s08" spacing-h="s16" mode="ios" lines="none" detail="false">
-            <ion-button class="questao-footer__button" mode="ios">
-              ENCAMINHAR
-            </ion-button>
-          </ion-item>
-        </ion-footer>
+          <ion-button class="questao__encaminhar" mode="ios">
+            ENCAMINHAR
+          </ion-button>
+        </div>
       </ion-content>
     </div>
   `;

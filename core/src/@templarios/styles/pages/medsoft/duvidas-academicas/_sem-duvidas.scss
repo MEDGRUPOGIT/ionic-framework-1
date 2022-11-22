@@ -1,9 +1,13 @@
 .sem-duvidas {
-  height: calc(100% - 152px);
+  height: calc(100% - 104px);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  &--user-select {
+    height: calc(100% - 152px);
+  }
 
   .med-icon {
     min-width: 100px;

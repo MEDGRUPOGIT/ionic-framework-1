@@ -152,7 +152,7 @@ const Template = () => {
             </div>
           </div>
 
-          <div class="duvidas__container">
+          <div class="duvidas__container duvidas__container--user-select">
             <div class="card-duvidas">
               <div class="card-duvidas__top">
                 <ion-label class="card-duvidas__questao" token="p14x"> Em Questão 02 - 2018 UERJ </ion-label>

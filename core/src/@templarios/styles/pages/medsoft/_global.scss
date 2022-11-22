@@ -1,6 +1,10 @@
 .container {
   overflow: hidden;
   height: 100vh;
+
+  &--resumo-simulado{
+    height: calc(100vh - 72px);
+  }
 }
 
 .header {
@@ -58,5 +62,15 @@
 
   &__tiles {
     cursor: pointer;
+  }
+}
+
+// Responsividade //
+
+@include breakpoint-down('sm') {
+  .container {
+    &--resumo-simulado{
+      height: calc(100vh - 128px);
+    }
   }
 }

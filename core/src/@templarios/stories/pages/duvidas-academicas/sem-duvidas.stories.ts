@@ -88,7 +88,7 @@ const Template = () => {
             </div>
           </div>
 
-          <div class="sem-duvidas">
+          <div class="sem-duvidas sem-duvidas--user-select">
            <ion-icon class="med-icon" name="med-inbox"></ion-icon>
            <ion-label class="sem-duvidas__text" token="h20x">AINDA NÃO HÁ DÚVIDAS POSTADAS</ion-label>
           </div>
