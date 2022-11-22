@@ -18,3 +18,16 @@
     margin-bottom: 8px;
   }
 }
+
+.historico-footer {
+
+  .med-icon {
+    width: 24px;
+    height: 24px;
+    stroke: hsl(var(--med-color-neutral-10));
+  }
+
+  &__marcador-rotate {
+    transform: rotate(90deg);
+  }
+}

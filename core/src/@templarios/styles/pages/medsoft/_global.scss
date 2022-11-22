@@ -2,7 +2,7 @@
   overflow: hidden;
   height: 100vh;
 
-  &--resumo-simulado{
+  &--resumo-simulado {
     height: calc(100vh - 72px);
   }
 }
@@ -69,7 +69,7 @@
 
 @include breakpoint-down('sm') {
   .container {
-    &--resumo-simulado{
+    &--resumo-simulado {
       height: calc(100vh - 128px);
     }
   }

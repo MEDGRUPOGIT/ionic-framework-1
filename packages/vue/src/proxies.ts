@@ -1412,6 +1412,9 @@ export const MedVote = /*@__PURE__*/ defineContainer<JSX.MedVote>('med-vote', [
 ]);
 
 
+export const MedreaderProModal = /*@__PURE__*/ defineContainer<JSX.MedreaderProModal>('medreader-pro-modal');
+
+
 export const RealizacoesModal = /*@__PURE__*/ defineContainer<JSX.RealizacoesModal>('realizacoes-modal');
 
 

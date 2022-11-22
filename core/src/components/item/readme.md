@@ -1930,6 +1930,7 @@ export default defineComponent({
  - ion-select-popover
  - [local-modal](../@templarios/ionic-1-migracao/simulados/local-modal)
  - [med-config](../@templarios/legacy/med-config)
+ - [medreader-pro-modal](../@templarios/ionic-1-migracao/apostila/medreader-pro-modal)
  - [realizacoes-modal](../@templarios/ionic-1-migracao/simulados/realizacoes-modal)
  - [simulado-modal](../@templarios/ionic-1-migracao/duvidas-academicas/simulado-modal)
  - [unidades-modal](../@templarios/ionic-1-migracao/simulados/unidades-modal)
@@ -1952,6 +1953,7 @@ graph TD;
   ion-select-popover --> ion-item
   local-modal --> ion-item
   med-config --> ion-item
+  medreader-pro-modal --> ion-item
   realizacoes-modal --> ion-item
   simulado-modal --> ion-item
   unidades-modal --> ion-item

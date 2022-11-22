@@ -19,6 +19,15 @@ const createModalInformativo = async () => {
   });
 }
 
+const createModalMedreader = async () => {
+  modalController.create({
+    component: 'medreader-pro-modal',
+    cssClass: 'tp-modal',
+  }).then((modal)=>{
+    modal.present()
+  });
+}
+
 let call = false;
 let currentPopover = null;
 
@@ -137,7 +146,7 @@ const Template = ({ value }) => {
            <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs" @click="${createModalInformativo}">
             <ion-icon class="med-icon" slot="icon-only" name="med-informacao"></ion-icon>
           </ion-button>
-          <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs">
+          <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs" @click="${createModalMedreader}">
             <ion-icon class="med-icon" slot="icon-only" name="med-editar"></ion-icon>
           </ion-button>
           <ion-button class="med-toolbar__font-zoom" mode="ios" icon-only fill="clear" ds-size="xs" @click="${(e) => createPopover(e, value)}">

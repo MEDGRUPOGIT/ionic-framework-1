@@ -152,6 +152,7 @@ export const DIRECTIVES = [
   d.MedType,
   d.MedVideoThumbnail,
   d.MedVote,
+  d.MedreaderProModal,
   d.RealizacoesModal,
   d.SelectTest,
   d.SheetContentTest,

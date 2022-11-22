@@ -879,6 +879,15 @@
   margin-bottom: 8px;
 }
 
+.historico-footer .med-icon {
+  width: 24px;
+  height: 24px;
+  stroke: hsl(var(--med-color-neutral-10));
+}
+.historico-footer__marcador-rotate {
+  transform: rotate(90deg);
+}
+
 .indice {
   background: hsl(var(--med-color-neutral-10));
   height: calc(100% - 56px);

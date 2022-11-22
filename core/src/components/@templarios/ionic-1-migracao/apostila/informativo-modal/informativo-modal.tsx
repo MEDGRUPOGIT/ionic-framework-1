@@ -19,18 +19,24 @@ export class InformativoModal {
         </med-header>
 
         <ion-content class="modal-content">
-          <div class="tutorial">
-            <ion-slides class="tutorial" pager>
-              <ion-slide class="tutorial__slide">
-                <img class="tutorial__image" src="https://via.placeholder.com/500"/>
-                <ion-label class="tutorial__text" ds-color="neutral-10">
-                  Como e onde postar sua dúvida em uma QUESTÃO.
+          <div class="informativo">
+            <ion-slides class="informativo__slides" pager>
+              <ion-slide class="informativo__slide">
+                <img class="informativo__image" src="https://via.placeholder.com/500"/>
+                <ion-label class="informativo__title" ds-color="brand">
+                  Marcações
+                </ion-label>
+                <ion-label class="informativo__text" ds-color="neutral-10">
+                  Para marcar ou interagir com sua apostila, selecione o texto e utilize o menu +
                 </ion-label>
               </ion-slide>
 
-              <ion-slide class="tutorial__slide">
-                <img class="tutorial__image" src="https://via.placeholder.com/500"/>
-                <ion-label class="tutorial__text" ds-color="neutral-10">Como ver as dúvidas de uma QUESTÃO.</ion-label>
+              <ion-slide class="informativo__slide">
+                <img class="informativo__image" src="https://via.placeholder.com/500"/>
+                <ion-label class="informativo__title" ds-color="brand">
+                  Histórico de Marcações
+                </ion-label>
+                <ion-label class="informativo__text" ds-color="neutral-10">Como ver as dúvidas de uma QUESTÃO.</ion-label>
               </ion-slide>
             </ion-slides>
           </div>

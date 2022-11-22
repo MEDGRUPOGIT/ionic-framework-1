@@ -274,6 +274,7 @@ Type: `Promise<void>`
  - [local-modal](../@templarios/ionic-1-migracao/simulados/local-modal)
  - [med-config](../@templarios/legacy/med-config)
  - [med-image-zoom](../@templarios/compositions/med-image-zoom)
+ - [medreader-pro-modal](../@templarios/ionic-1-migracao/apostila/medreader-pro-modal)
  - [realizacoes-modal](../@templarios/ionic-1-migracao/simulados/realizacoes-modal)
  - [sheet-content-test](../@templarios/testes/sheet-content-test)
  - [simulado-modal](../@templarios/ionic-1-migracao/duvidas-academicas/simulado-modal)
@@ -296,6 +297,7 @@ graph TD;
   local-modal --> ion-content
   med-config --> ion-content
   med-image-zoom --> ion-content
+  medreader-pro-modal --> ion-content
   realizacoes-modal --> ion-content
   sheet-content-test --> ion-content
   simulado-modal --> ion-content

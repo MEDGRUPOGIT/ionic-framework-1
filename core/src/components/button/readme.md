@@ -389,6 +389,7 @@ export default defineComponent({
  - [med-offline](../@templarios/compositions/med-offline)
  - [med-rate-aula](../@templarios/compositions/med-rate-aula)
  - [med-tooltip](../@templarios/compositions/med-tooltip)
+ - [medreader-pro-modal](../@templarios/ionic-1-migracao/apostila/medreader-pro-modal)
  - [realizacoes-modal](../@templarios/ionic-1-migracao/simulados/realizacoes-modal)
  - [sheet-content-test](../@templarios/testes/sheet-content-test)
  - [sheet-test](../@templarios/testes/sheet-test)
@@ -427,6 +428,7 @@ graph TD;
   med-offline --> ion-button
   med-rate-aula --> ion-button
   med-tooltip --> ion-button
+  medreader-pro-modal --> ion-button
   realizacoes-modal --> ion-button
   sheet-content-test --> ion-button
   sheet-test --> ion-button

@@ -1788,6 +1788,16 @@ export class MedVote {
     this.el = r.nativeElement;
   }
 }
+export declare interface MedreaderProModal extends Components.MedreaderProModal {
+}
+@Component({ selector: "medreader-pro-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class MedreaderProModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface RealizacoesModal extends Components.RealizacoesModal {
 }
 @Component({ selector: "realizacoes-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })

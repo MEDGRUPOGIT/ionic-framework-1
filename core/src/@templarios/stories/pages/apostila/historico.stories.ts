@@ -8,7 +8,7 @@ export default {
 
 const Template = () => {
   return html`
-    <div class="container">
+    <div class="container container--historico">
       <med-header>
         <med-navbar class="header" slot="navbar">
           <ion-back-button slot="left" mode="ios" text="" ds-size="xxs">
@@ -24,18 +24,52 @@ const Template = () => {
         </med-navbar>
       </med-header>
 
-      <ion-content class="">
+      <ion-content>
         <div class="filtro-limpo">
           <div class="filtro-limpo__container">
             <ion-icon class="med-icon" name="med-limparfiltro"></ion-icon>
             <ion-label token="p16xb">Ainda não há marcações para esse filtro.</ion-label>
           </div>
         </div>
-
       </ion-content>
-
-      
     </div>
+
+    <ion-footer>
+      <ion-segment class="historico-footer" value="tab-1" scrollable>
+        <ion-segment-button value="tab-1">
+          <ion-label token="p14b">TODOS</ion-label>
+        </ion-segment-button>
+
+        <ion-segment-button mode="md" value="tab-2">
+          <ion-icon class="med-icon" name="med-textoselecionar"></ion-icon>
+        </ion-segment-button>
+
+        <ion-segment-button mode="md" value="tab-3">
+          <ion-icon class="med-icon" name="med-textosublinhar"></ion-icon>
+        </ion-segment-button>
+
+        <ion-segment-button mode="md" value="tab-4">
+          <ion-icon class="med-icon" name="med-nopapo"></ion-icon>
+        </ion-segment-button>
+
+        <ion-segment-button value="tab-5">
+          <ion-icon class="med-icon historico-footer__marcador-rotate" name="med-marcar"></ion-icon>
+        </ion-segment-button>
+
+        <ion-segment-button mode="md" value="tab-6">
+          <ion-icon class="med-icon" name="med-duvidas"></ion-icon>
+        </ion-segment-button>
+
+        <ion-segment-button mode="md" value="tab-7">
+          <med-tooltip collapsed enableHover="false" placement="top" position="center">
+            <ion-icon class="med-icon" name="med-fechar" slot="input"></ion-icon>
+            <div slot="content">
+              <span>teste</span>
+            </div>
+          </med-tooltip>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-footer>
   `;
 };
 
