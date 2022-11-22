@@ -4,26 +4,27 @@
 }
 
 .modal-content {
-  height: calc(100% - 136px);
+  height: calc(100% - 120px);
   padding: 16px;
 }
 
 .tutorial {
   height: 100%;
-  padding: 16px;
+  padding: 8px;
 
   &__slides {
     height: 100%;
   }
 
   &__slide {
-    height: 90%;
+    height: calc(100% - 20px);
     display: flex;
     flex-direction: column;
   }
 
   &__image {
     margin-bottom: 8px;
+    max-height: calc(100% - 28px);
   }
 
   &__text {
@@ -39,17 +40,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px;
-}
-
-// Responsividade //
-
-@media only screen and (max-height: 500px) {
-  .tutorial {
-    &__slides {
-      height: auto;
-      overflow: auto;
-    }
-  }
+  padding: 8px;
 }
 

@@ -5,6 +5,9 @@
 .container--resumo-simulado {
   height: calc(100vh - 72px);
 }
+.container--historico {
+  height: calc(100vh - 48px);
+}
 
 .header {
   --height: 56px;
