@@ -170,7 +170,7 @@ export class MedCalendar {
           </div>
 
           <div class="header__right">
-            <ion-button mode="ios" ds-size="sm" fill="clear" onClick={() => this.onChoiceClick()}>
+            <ion-button mode="ios" ds-size="xxs" fill="clear" onClick={() => this.onChoiceClick()}>
               <med-type class="choice__type">{this.choice}</med-type>
               <ion-icon class="med-icon header__icon" name="med-baixo"></ion-icon>
             </ion-button>
