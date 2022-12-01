@@ -7411,7 +7411,7 @@ ion-list[ds-color=fb-success] ion-item ion-icon {
 }
 .tp-modal ion-backdrop {
   --ion-backdrop-color: hsl(var(--med-color-neutral-1)) !important;
-  --backdrop-opacity: 0.8 !important;
+  --backdrop-opacity: 0.9 !important;
 }
 
 .plt-desktop .platform-macintel .tp-modal ion-backdrop {
@@ -9200,6 +9200,12 @@ ion-select[ds-color=fb-success][ds-name=secondary] {
   --placeholder-color: hsl(var(--med-color-neutral-1));
   color: hsl(var(--med-color-neutral-1));
   background: hsl(var(--med-color-fb-success));
+}
+
+ion-skeleton-text {
+  --border-radius: 4px;
+  margin: 0;
+  background-image: linear-gradient(to right, hsl(var(--med-color-neutral-15)) 8%, hsl(var(--med-color-neutral-2)) 18%, hsl(var(--med-color-neutral-15)) 33%);
 }
 
 ion-tab-bar {
