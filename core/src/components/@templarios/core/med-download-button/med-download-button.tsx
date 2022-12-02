@@ -64,7 +64,7 @@ export class MedDownloadButton {
    */
   @Event() medDownloading!:EventEmitter;
 
-  @Watch('downloaded')
+  /* @Watch('downloaded')
   downloadedChanged() {
     this.medDownloaded.emit(
       {
@@ -73,16 +73,18 @@ export class MedDownloadButton {
         index: this.index
       }
       );
-  }
+  } */
 
-  @Watch('downloading')
+  /* @Watch('downloading')
   downloadingChange(){
+    console.log('fuck');
+
     this.medDownloading.emit({
       downloading: this.downloading,
       id: this.identification,
       index: this.index
     });
-  }
+  } */
 
   @Watch('value')
   valueChanged() {
@@ -90,6 +92,12 @@ export class MedDownloadButton {
       this.initial = false;
       this.downloaded = false;
       this.downloading = true;
+
+      this.medDownloading.emit({
+        downloading: this.downloading,
+        id: this.identification,
+        index: this.index
+      });
     }
 
     if (this.value === 0) {
@@ -101,28 +109,42 @@ export class MedDownloadButton {
     if (this.value === 100) {
       this.downloaded = true;
       this.downloading = false;
+
+      this.medDownloaded.emit(
+        {
+          downloaded: this.downloaded,
+          id: this.identification,
+          index: this.index
+        }
+      );
     }
   }
 
   toggle(event?: Event) {
     event?.stopPropagation();
-    if(this.downloaded){
-      this.medDownloaded.emit({
-        downloaded: this.downloaded,
-        id: this.identification,
-        index: this.index
-      })
 
+    if(this.downloaded){
+      console.log('1');
+      this.initial = true;
+      this.downloaded = false;
+      this.downloading = false;
     } else if (this.initial) {
+      console.log('2');
       this.initial = false;
 
       if (this.value !== 100) {
         this.downloaded = false;
         this.downloading = true;
-      }
-      else if (this.value === 100) {
+
+        this.medDownloading.emit({
+        downloading: this.downloading,
+        id: this.identification,
+        index: this.index
+      });
+      } else if (this.value === 100) {
         this.downloaded = true;
         this.downloading = false;
+
         this.medDownloaded.emit({
           downloaded:this.downloaded,
           id: this.identification,
@@ -130,6 +152,7 @@ export class MedDownloadButton {
         });
       }
     }  else {
+      console.log('3');
       this.medCancelar.emit({
         id: this.identification,
         index: this.index
