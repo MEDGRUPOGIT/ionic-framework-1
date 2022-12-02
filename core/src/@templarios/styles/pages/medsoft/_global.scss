@@ -60,21 +60,37 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 24px;
+  margin: 0 auto;
   padding: 16px;
+  max-width: 1096px;
 
   &__tiles {
     cursor: pointer;
   }
 }
 
-// Responsividade //
+// REPONSIVIDADE //
+
+@include breakpoint-down('lg') {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@include breakpoint-down('md') {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 @include breakpoint-down('sm') {
-  .container {
-    &--resumo-simulado {
-      height: calc(100vh - 128px);
-    }
+  .container--resumo-simulado {
+    height: calc(100vh - 128px);
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -1,11 +1,15 @@
 .concursos {
-  &__tiles {
-    &:not(:last-child) {
-      margin-bottom: 8px;
-    }
-  }
-
   &__container {
     padding: 16px;
+    margin: 0 auto;
+    max-width: 1096px;
+  }
+
+  &__tiles {
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
   }
 }
