@@ -1119,6 +1119,7 @@ export const MedDownloadButton = /*@__PURE__*/ defineContainer<JSX.MedDownloadBu
   'index',
   'identification',
   'disabled',
+  'dsSize',
   'medDownloaded',
   'medCancelar',
   'medDownloading'

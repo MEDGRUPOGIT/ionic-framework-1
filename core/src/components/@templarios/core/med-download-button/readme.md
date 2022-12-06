@@ -13,6 +13,7 @@
 | `downloaded`     | `downloaded`     | todo        | `boolean`                       | `false`     |
 | `downloading`    | `downloading`    | todo        | `boolean`                       | `false`     |
 | `dsColor`        | `ds-color`       | todo        | `string \| undefined`           | `undefined` |
+| `dsSize`         | `ds-size`        | todo        | `"lg" \| undefined`             | `undefined` |
 | `identification` | `identification` | todo        | `number \| string \| undefined` | `undefined` |
 | `index`          | `index`          | todo        | `number \| undefined`           | `undefined` |
 | `initial`        | `initial`        | todo        | `boolean`                       | `true`      |

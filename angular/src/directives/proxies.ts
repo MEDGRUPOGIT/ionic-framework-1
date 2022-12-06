@@ -1337,8 +1337,8 @@ export class MedContextMenu {
 }
 export declare interface MedDownloadButton extends Components.MedDownloadButton {
 }
-@ProxyCmp({ inputs: ["disabled", "downloaded", "downloading", "dsColor", "identification", "index", "initial", "value"] })
-@Component({ selector: "med-download-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled", "downloaded", "downloading", "dsColor", "identification", "index", "initial", "value"] })
+@ProxyCmp({ inputs: ["disabled", "downloaded", "downloading", "dsColor", "dsSize", "identification", "index", "initial", "value"] })
+@Component({ selector: "med-download-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled", "downloaded", "downloading", "dsColor", "dsSize", "identification", "index", "initial", "value"] })
 export class MedDownloadButton {
   medDownloaded!: EventEmitter<CustomEvent>;
   medCancelar!: EventEmitter<CustomEvent>;

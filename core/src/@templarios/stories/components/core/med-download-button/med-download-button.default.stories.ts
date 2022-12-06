@@ -7,7 +7,7 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({dsColor, value, initial, downloading, downloaded, identification, index}) => {
+const Template = ({dsColor, dsSize, value, initial, downloading, downloaded, identification, index}) => {
   return html`
     <ion-app>
       <ion-content>
@@ -22,6 +22,7 @@ const Template = ({dsColor, value, initial, downloading, downloaded, identificat
             ?downloaded=${downloaded}
             .index=${index}
             identification=${identification}
+            .dsSize=${dsSize}
             >
           </med-download-button>
           <!-- component markdown -->
@@ -98,6 +99,16 @@ Default.argTypes = {
     table: {
       type:  { summary: 'number | string | undefined' },
       defaultValue: { summary: 'undefined' },
+    },
+  },
+  dsSize: {
+    options: [undefined, 'lg'],
+    control: { type: 'radio'},
+    defaultValue: undefined,
+    description: "Define a variação de tamanho.",
+    table: {
+      type:  { summary: 'lg' },
+      defaultValue: { summary: undefined },
     },
   },
 };

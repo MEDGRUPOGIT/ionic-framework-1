@@ -52,6 +52,11 @@ export class MedDownloadButton {
   /**
    * todo
    */
+   @Prop({ reflect: true }) dsSize?: 'lg';
+
+  /**
+   * todo
+   */
   @Event() medDownloaded!: EventEmitter;
 
   /**
@@ -165,7 +170,7 @@ export class MedDownloadButton {
   }
 
   render() {
-    const { dsColor, value, initial, downloading, downloaded } = this;
+    const { dsColor, value, initial, downloading, downloaded, dsSize } = this;
 
     return (
       <Host
@@ -173,7 +178,8 @@ export class MedDownloadButton {
         class={generateMedColor(dsColor, {
           'med-download-button': true,
           'med-download-button--downloading': downloading && !initial,
-          'med-download-button--downloaded': downloaded
+          'med-download-button--downloaded': downloaded,
+          [`med-download-button--${dsSize}`]: dsSize !== undefined,
         })}>
         <div class="med-download-button__icon">
           <svg viewBox="0 0 36 36" class="med-download-button__svg">

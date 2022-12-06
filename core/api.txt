@@ -1611,6 +1611,7 @@ med-download-button,prop,disabled,boolean,false,false,true
 med-download-button,prop,downloaded,boolean,false,false,true
 med-download-button,prop,downloading,boolean,false,false,true
 med-download-button,prop,dsColor,string | undefined,undefined,false,true
+med-download-button,prop,dsSize,"lg" | undefined,undefined,false,true
 med-download-button,prop,identification,number | string | undefined,undefined,false,true
 med-download-button,prop,index,number | undefined,undefined,false,true
 med-download-button,prop,initial,boolean,true,false,true

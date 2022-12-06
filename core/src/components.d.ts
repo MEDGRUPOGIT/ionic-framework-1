@@ -3405,6 +3405,10 @@ export namespace Components {
         /**
           * todo
          */
+        "dsSize"?: 'lg';
+        /**
+          * todo
+         */
         "identification"?: string|number|undefined;
         /**
           * todo
@@ -8787,6 +8791,10 @@ declare namespace LocalJSX {
           * todo
          */
         "dsColor"?: MedColor;
+        /**
+          * todo
+         */
+        "dsSize"?: 'lg';
         /**
           * todo
          */
