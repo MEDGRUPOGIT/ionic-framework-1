@@ -1614,11 +1614,8 @@ med-download-button,prop,dsColor,string | undefined,undefined,false,true
 med-download-button,prop,dsSize,"lg" | undefined,undefined,false,true
 med-download-button,prop,identification,number | string | undefined,undefined,false,true
 med-download-button,prop,index,number | undefined,undefined,false,true
-med-download-button,prop,initial,boolean,true,false,true
 med-download-button,prop,value,number,0,false,true
-med-download-button,event,medCancelar,any,true
-med-download-button,event,medDownloaded,any,true
-med-download-button,event,medDownloading,any,true
+med-download-button,event,medDownloadRequested,any,true
 
 med-dropdown,shadow
 med-dropdown,prop,dsName,"secondary" | undefined,undefined,false,true

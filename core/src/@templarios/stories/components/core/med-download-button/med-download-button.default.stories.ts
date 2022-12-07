@@ -40,7 +40,7 @@ Default.parameters = {
     url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/Componentes?node-id=6861%3A53548',
   },
   actions: {
-    handles: ['medDownloaded', 'medCancelar', 'medDownloading'],
+    handles: ['medDownloadRequested'],
   },
 }
 Default.argTypes = {
@@ -57,15 +57,6 @@ Default.argTypes = {
     defaultValue: '50',
     control: { type: 'range', min: 0, max: 100, step: 1 },
     description: 'Define o valor da progress bar do componente.'
-  },
-  initial: {
-    initial: false,
-    control: { type: 'boolean' },
-    description: 'Define o estado inicial do componente.',
-    table: {
-      type:  { summary: 'boolean' },
-      defaultValue: { summary: 'undefined' },
-    },
   },
   downloading: {
     downloading: false,

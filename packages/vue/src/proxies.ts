@@ -1113,16 +1113,13 @@ export const MedContextMenu = /*@__PURE__*/ defineContainer<JSX.MedContextMenu>(
 export const MedDownloadButton = /*@__PURE__*/ defineContainer<JSX.MedDownloadButton>('med-download-button', [
   'dsColor',
   'value',
-  'initial',
   'downloading',
   'downloaded',
   'index',
   'identification',
   'disabled',
   'dsSize',
-  'medDownloaded',
-  'medCancelar',
-  'medDownloading'
+  'medDownloadRequested'
 ]);
 
 

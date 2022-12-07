@@ -14,19 +14,16 @@
 | `downloading`    | `downloading`    | todo        | `boolean`                       | `false`     |
 | `dsColor`        | `ds-color`       | todo        | `string \| undefined`           | `undefined` |
 | `dsSize`         | `ds-size`        | todo        | `"lg" \| undefined`             | `undefined` |
-| `identification` | `identification` | todo        | `number \| string \| undefined` | `undefined` |
-| `index`          | `index`          | todo        | `number \| undefined`           | `undefined` |
-| `initial`        | `initial`        | todo        | `boolean`                       | `true`      |
+| `identification` | `identification` | remover     | `number \| string \| undefined` | `undefined` |
+| `index`          | `index`          | remover     | `number \| undefined`           | `undefined` |
 | `value`          | `value`          | todo        | `number`                        | `0`         |
 
 
 ## Events
 
-| Event            | Description | Type               |
-| ---------------- | ----------- | ------------------ |
-| `medCancelar`    | todo        | `CustomEvent<any>` |
-| `medDownloaded`  | todo        | `CustomEvent<any>` |
-| `medDownloading` | todo        | `CustomEvent<any>` |
+| Event                  | Description | Type               |
+| ---------------------- | ----------- | ------------------ |
+| `medDownloadRequested` | todo        | `CustomEvent<any>` |
 
 
 ## Dependencies
