@@ -52,128 +52,13 @@ export class MedDownloadButton {
   /**
    * todo
    */
-  //@Event() medDownloaded!: EventEmitter;
-
-  /**
-   * todo
-   */
-  //@Event() medCancelar!: EventEmitter;
-
-  /**
-   * todo
-   */
-  //@Event() medDownloading!:EventEmitter;
-
-  /**
-   * todo
-   */
   @Event() medDownloadRequested!:EventEmitter;
-
-  /* @Watch('downloaded')
-  downloadedChanged() {
-    this.medDownloaded.emit(
-      {
-        downloaded: this.downloaded,
-        id: this.identification,
-        index: this.index
-      }
-      );
-  } */
-
-  /* @Watch('downloading')
-  downloadingChange(){
-    console.log('fuck');
-
-    this.medDownloading.emit({
-      downloading: this.downloading,
-      id: this.identification,
-      index: this.index
-    });
-  } */
-
-  /* @Watch('value')
-  valueChanged() {
-    if (this.value !== 0 && this.value !== 100) {
-      this.initial = false;
-      this.downloaded = false;
-      this.downloading = true;
-
-      this.medDownloading.emit({
-        downloading: this.downloading,
-        id: this.identification,
-        index: this.index
-      });
-    }
-
-    if (this.value === 0) {
-      this.initial = true;
-      this.downloaded = false;
-      this.downloading = false;
-    }
-
-    if (this.value === 100) {
-      this.downloaded = true;
-      this.downloading = false;
-
-      this.medDownloaded.emit(
-        {
-          downloaded: this.downloaded,
-          id: this.identification,
-          index: this.index
-        }
-      );
-    }
-  } */
-
-  toggle(event?: Event) {
-    event?.stopPropagation();
-    this.medDownloadRequested.emit()
-
-    /* if(this.downloaded){
-      this.initial = true;
-      this.downloaded = false;
-      this.downloading = false;
-    } else if (this.initial) {
-      this.initial = false;
-
-      if (this.value !== 100) {
-        this.downloaded = false;
-        this.downloading = true;
-
-        this.medDownloading.emit({
-          downloading: this.downloading,
-          id: this.identification,
-          index: this.index
-        });
-      } else if (this.value === 100) {
-        this.downloaded = true;
-        this.downloading = false;
-
-        this.medDownloaded.emit({
-          downloaded:this.downloaded,
-          id: this.identification,
-          index: this.index
-        });
-      }
-    }  else {
-      this.medCancelar.emit({
-        id: this.identification,
-        index: this.index
-      });
-
-      this.initial = true;
-      this.downloaded = false;
-      this.downloading = false;
-      this.value = 0
-    } */
-  }
 
   render() {
     const { dsColor, value, downloading, downloaded, dsSize } = this;
 
     return (
       <Host
-        onClick={(event: any) => { this.toggle(event)} }
         class={generateMedColor(dsColor, {
           'med-download-button': true,
           'med-download-button--downloading': downloading && !downloaded,
