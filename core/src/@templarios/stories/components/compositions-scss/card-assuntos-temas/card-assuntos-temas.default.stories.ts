@@ -17,13 +17,175 @@ const Template = () => {
     </style>
 
     <ion-app>
-      <ion-content>
+      <ion-content class="tp-scroll">
         <div class="flex-center flex-center--xs flex-center--column">
 
           <!-- component -->
           <med-base class="cp-card-assuntos-temas">
             <div class="cp-card-assuntos-temas__column" slot="start">
               <div class="cp-card-assuntos-temas__icon-background cp-card-assuntos-temas__icon-background--positivo">
+                <ion-icon class="med-icon cp-card-assuntos-temas__icon" name="med-setacima"></ion-icon>
+              </div>
+            </div>
+
+            <div class="cp-card-assuntos-temas__column" slot="middle">
+              <med-type token="p16b">Distúrbio do equilíbrio eletrolítico e acido básico do equilíbrio</med-type>
+            </div>
+
+            <div class="cp-card-assuntos-temas__column" slot="end">
+              <med-type token="p16b">81%</med-type>
+            </div>
+          </med-base>
+          <!-- component -->
+
+          <!-- component -->
+          <med-base class="cp-card-assuntos-temas">
+            <div class="cp-card-assuntos-temas__column" slot="start">
+              <div class="cp-card-assuntos-temas__icon-background cp-card-assuntos-temas__icon-background--negativo">
+                <ion-icon class="med-icon cp-card-assuntos-temas__icon" name="med-setacima"></ion-icon>
+              </div>
+            </div>
+
+            <div class="cp-card-assuntos-temas__column" slot="middle">
+              <med-type token="p16b">Distúrbio do equilíbrio eletrolítico e acido básico do equilíbrio</med-type>
+            </div>
+
+            <div class="cp-card-assuntos-temas__column" slot="end">
+              <med-type token="p16b">81%</med-type>
+            </div>
+          </med-base>
+          <!-- component -->
+
+          <!-- component -->
+          <med-base class="cp-card-assuntos-temas">
+            <div class="cp-card-assuntos-temas__column" slot="start">
+              <div class="cp-card-assuntos-temas__icon-background cp-card-assuntos-temas__icon-background--negativo">
+                <ion-icon class="med-icon cp-card-assuntos-temas__icon" name="med-setacima"></ion-icon>
+              </div>
+            </div>
+
+            <div class="cp-card-assuntos-temas__column" slot="middle">
+              <med-type token="p16b">Distúrbio do equilíbrio eletrolítico e acido básico do equilíbrio</med-type>
+            </div>
+
+            <div class="cp-card-assuntos-temas__column" slot="end">
+              <med-type token="p16b">81%</med-type>
+            </div>
+          </med-base>
+          <!-- component -->
+
+          <!-- component -->
+          <med-base class="cp-card-assuntos-temas">
+            <div class="cp-card-assuntos-temas__column" slot="start">
+              <div class="cp-card-assuntos-temas__icon-background cp-card-assuntos-temas__icon-background--negativo">
+                <ion-icon class="med-icon cp-card-assuntos-temas__icon" name="med-setacima"></ion-icon>
+              </div>
+            </div>
+
+            <div class="cp-card-assuntos-temas__column" slot="middle">
+              <med-type token="p16b">Distúrbio do equilíbrio eletrolítico e acido básico do equilíbrio</med-type>
+            </div>
+
+            <div class="cp-card-assuntos-temas__column" slot="end">
+              <med-type token="p16b">81%</med-type>
+            </div>
+          </med-base>
+          <!-- component -->
+
+          <!-- component -->
+          <med-base class="cp-card-assuntos-temas">
+            <div class="cp-card-assuntos-temas__column" slot="start">
+              <div class="cp-card-assuntos-temas__icon-background cp-card-assuntos-temas__icon-background--negativo">
+                <ion-icon class="med-icon cp-card-assuntos-temas__icon" name="med-setacima"></ion-icon>
+              </div>
+            </div>
+
+            <div class="cp-card-assuntos-temas__column" slot="middle">
+              <med-type token="p16b">Distúrbio do equilíbrio eletrolítico e acido básico do equilíbrio</med-type>
+            </div>
+
+            <div class="cp-card-assuntos-temas__column" slot="end">
+              <med-type token="p16b">81%</med-type>
+            </div>
+          </med-base>
+          <!-- component -->
+
+          <!-- component -->
+          <med-base class="cp-card-assuntos-temas">
+            <div class="cp-card-assuntos-temas__column" slot="start">
+              <div class="cp-card-assuntos-temas__icon-background cp-card-assuntos-temas__icon-background--negativo">
+                <ion-icon class="med-icon cp-card-assuntos-temas__icon" name="med-setacima"></ion-icon>
+              </div>
+            </div>
+
+            <div class="cp-card-assuntos-temas__column" slot="middle">
+              <med-type token="p16b">Distúrbio do equilíbrio eletrolítico e acido básico do equilíbrio</med-type>
+            </div>
+
+            <div class="cp-card-assuntos-temas__column" slot="end">
+              <med-type token="p16b">81%</med-type>
+            </div>
+          </med-base>
+          <!-- component -->
+
+          <!-- component -->
+          <med-base class="cp-card-assuntos-temas">
+            <div class="cp-card-assuntos-temas__column" slot="start">
+              <div class="cp-card-assuntos-temas__icon-background cp-card-assuntos-temas__icon-background--negativo">
+                <ion-icon class="med-icon cp-card-assuntos-temas__icon" name="med-setacima"></ion-icon>
+              </div>
+            </div>
+
+            <div class="cp-card-assuntos-temas__column" slot="middle">
+              <med-type token="p16b">Distúrbio do equilíbrio eletrolítico e acido básico do equilíbrio</med-type>
+            </div>
+
+            <div class="cp-card-assuntos-temas__column" slot="end">
+              <med-type token="p16b">81%</med-type>
+            </div>
+          </med-base>
+          <!-- component -->
+
+          <!-- component -->
+          <med-base class="cp-card-assuntos-temas">
+            <div class="cp-card-assuntos-temas__column" slot="start">
+              <div class="cp-card-assuntos-temas__icon-background cp-card-assuntos-temas__icon-background--negativo">
+                <ion-icon class="med-icon cp-card-assuntos-temas__icon" name="med-setacima"></ion-icon>
+              </div>
+            </div>
+
+            <div class="cp-card-assuntos-temas__column" slot="middle">
+              <med-type token="p16b">Distúrbio do equilíbrio eletrolítico e acido básico do equilíbrio</med-type>
+            </div>
+
+            <div class="cp-card-assuntos-temas__column" slot="end">
+              <med-type token="p16b">81%</med-type>
+            </div>
+          </med-base>
+          <!-- component -->
+
+          <!-- component -->
+          <med-base class="cp-card-assuntos-temas">
+            <div class="cp-card-assuntos-temas__column" slot="start">
+              <div class="cp-card-assuntos-temas__icon-background cp-card-assuntos-temas__icon-background--negativo">
+                <ion-icon class="med-icon cp-card-assuntos-temas__icon" name="med-setacima"></ion-icon>
+              </div>
+            </div>
+
+            <div class="cp-card-assuntos-temas__column" slot="middle">
+              <med-type token="p16b">Distúrbio do equilíbrio eletrolítico e acido básico do equilíbrio</med-type>
+            </div>
+
+            <div class="cp-card-assuntos-temas__column" slot="end">
+              <med-type token="p16b">81%</med-type>
+            </div>
+          </med-base>
+          <!-- component -->
+
+          <!-- component -->
+          <med-base class="cp-card-assuntos-temas">
+            <div class="cp-card-assuntos-temas__column" slot="start">
+              <div class="cp-card-assuntos-temas__icon-background cp-card-assuntos-temas__icon-background--negativo">
                 <ion-icon class="med-icon cp-card-assuntos-temas__icon" name="med-setacima"></ion-icon>
               </div>
             </div>

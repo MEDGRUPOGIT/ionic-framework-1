@@ -7,7 +7,7 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({dsColor, dsSize, value, initial, downloading, downloaded, identification, index}) => {
+const Template = ({dsColor, dsSize, value, downloading, downloaded, identification, index}) => {
   return html`
     <ion-app>
       <ion-content>
@@ -17,7 +17,6 @@ const Template = ({dsColor, dsSize, value, initial, downloading, downloaded, ide
           <med-download-button
             .dsColor=${dsColor}
             value=${value}
-            ?initial=${initial}
             ?downloading=${downloading}
             ?downloaded=${downloaded}
             .index=${index}
@@ -38,9 +37,6 @@ Default.parameters = {
   design: {
     type: 'figma',
     url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/Componentes?node-id=6861%3A53548',
-  },
-  actions: {
-    handles: ['medDownloadRequested'],
   },
 }
 Default.argTypes = {

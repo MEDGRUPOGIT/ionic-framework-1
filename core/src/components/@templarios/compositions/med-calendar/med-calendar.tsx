@@ -80,7 +80,7 @@ export class MedCalendar {
   }
 
   init() {
-    if(this.container) {
+    /* if(this.container) {
       const container = document.querySelector(`.${this.container}`);
       const containerWidth: any = container?.clientWidth;
 
@@ -93,7 +93,7 @@ export class MedCalendar {
       if(windowWidth < 1200) {
         this.width = windowWidth / 7;
       }
-    }
+    } */
   }
 
   @Watch('container')
@@ -140,10 +140,6 @@ export class MedCalendar {
     this.medClick.emit(type);
   }
 
-  /* private onGraficoClick() {
-    this.medClick.emit('graph');
-  } */
-
   render() {
     const { dsColor, mes, ano, disable } = this;
 
@@ -174,10 +170,6 @@ export class MedCalendar {
               <med-type class="choice__type">{this.choice}</med-type>
               <ion-icon class="med-icon header__icon" name="med-baixo"></ion-icon>
             </ion-button>
-
-            {/* <ion-button fill="clear" onClick={() => this.onGraficoClick()}>
-              <ion-icon class="med-icon header__icon" name="med-grafico"></ion-icon>
-            </ion-button> */}
           </div>
         </div>
 
