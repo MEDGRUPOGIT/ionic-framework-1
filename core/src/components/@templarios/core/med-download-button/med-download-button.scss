@@ -1,6 +1,6 @@
 :host {
-  --color-1: #{color('brand', '4')};
-  --color-2: #{color('neutral', '2')};
+  --color-1: #{color('neutral', '10')};
+  --color-2: #{color('neutral', '10')};
   --padding: 5px;
 }
 
@@ -71,16 +71,29 @@
 // dsColor
 //////////////////////////////
 
-:host(.med-color) {
+:host(.med-color.med-download-button--downloading) {
   --color-1: #{curr-color('color', '4')};
   --color-2: #{curr-color('color', '2')};
 }
 
-:host(.med-color-neutral) {
+:host(.med-color.med-download-button--downloaded) {
+  --color-1: #{curr-color('color', '4')};
+  --color-2: #{curr-color('color', '2')};
+}
+
+:host(.med-color-neutral.med-download-button--downloading) {
   --color-1: #{curr-color('neutral')};
 }
 
-:host(.med-color-feedback) {
+:host(.med-color-neutral.med-download-button--downloaded) {
+  --color-1: #{curr-color('neutral')};
+}
+
+:host(.med-color-feedback.med-download-button--downloading) {
+  --color-1: #{curr-color('feedback')};
+}
+
+:host(.med-color-feedback.med-download-button--downloaded) {
   --color-1: #{curr-color('feedback')};
 }
 
@@ -88,46 +101,56 @@
 // state
 //////////////////////////////
 
-:host(.med-download-button--downloading) .med-download-button {
-  &__icon {
-    &::after {
-      background: transparent;
+:host(.med-download-button--downloading)  {
+  --color-1: #{color('brand', '4')};
+  --color-2: #{color('neutral', '2')};
+
+  .med-download-button {
+    &__icon {
+      &::after {
+        background: transparent;
+      }
+
+      &::before {
+        transform: rotate(0deg);
+        transform-origin: center;
+        width: 5px;
+        height: 5px;
+        border: 0;
+        background: var(--color-1);
+        border-bottom: 0;
+        border-right: 0;
+      }
     }
 
-    &::before {
-      transform: rotate(0deg);
-      transform-origin: center;
-      width: 5px;
-      height: 5px;
-      border: 0;
-      background: var(--color-1);
-      border-bottom: 0;
-      border-right: 0;
-    }
-  }
-
-  &__circle {
-    &--value {
-      stroke-dasharray: var(--value) 100;
+    &__circle {
+      &--value {
+        stroke-dasharray: var(--value) 100;
+      }
     }
   }
 }
 
-:host(.med-download-button--downloaded) .med-download-button {
-  &__icon {
-    background: var(--color-1);
+:host(.med-download-button--downloaded) {
+  --color-1: #{color('brand', '4')};
+  --color-2: #{color('neutral', '2')};
 
-    &::after {
-      background: var(--color-2);
-    }
+  .med-download-button {
+    &__icon {
+      background: var(--color-1);
 
-    &::before {
-      border-bottom: 1px solid var(--color-2);
-      border-right: 1px solid var(--color-2);
-    }
+      &::after {
+        background: var(--color-2);
+      }
 
-    &__circle {
-      transform-origin: revert;
+      &::before {
+        border-bottom: 1px solid var(--color-2);
+        border-right: 1px solid var(--color-2);
+      }
+
+      &__circle {
+        transform-origin: revert;
+      }
     }
   }
 }
