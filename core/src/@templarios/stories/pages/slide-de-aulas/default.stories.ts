@@ -27,7 +27,9 @@ const Template = () => {
         </med-navbar>
 
         <med-toolbar class="subheader" slot="toolbar">
-          <ion-label class="subheader__title" ds-color="neutral-10" token="p16xb">Slide de aula</ion-label>
+          <div class="subheader__container">
+            <ion-label class="subheader__title" ds-color="neutral-10" token="p16xb">Slide de aula</ion-label>
+          </div>
         </med-toolbar>
       </med-header>
 
