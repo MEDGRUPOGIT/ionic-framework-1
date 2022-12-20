@@ -11,11 +11,25 @@
     overflow: auto;
   }
 
+  &__container {
+    margin: 0 auto;
+    padding: 32px 40px;
+    width: 100%;
+    max-width: 1096px;
+
+    @include breakpoint-down('sm') {
+      padding: 24px;
+    }
+  }
+
   &__classificacao {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 16px;
+
+    @include breakpoint-down('sm') {
+      flex-direction: column;
+    }
   }
 
   &__linha {
@@ -24,16 +38,16 @@
   }
 
   &__opcoes {
-    height: 16px !important;
     margin: 0;
+    height: 16px;
   }
 
   &__range-container {
-    padding: 4px 16px;
-    margin: 16px 0 48px 0;
-    position: relative;
     display: flex;
+    position: relative;
     align-items: center;
+    margin: 40px 0 48px;
+    padding: 4px 0;
 
     .med-icon {
       stroke: hsl(var(--med-color-neutral-10));
@@ -41,8 +55,8 @@
   }
 
   &__progress {
-    flex: 1;
     position: relative;
+    flex: 1;
   }
 
   &__icon {
@@ -61,12 +75,12 @@
   }
 
   &__posicao-container {
-    position: absolute;
     display: flex;
+    position: absolute;
+    top: -20px;
+    left: calc(var(--porcentagem) * 1%);
     flex-direction: column;
     align-items: center;
-    top: -12px;
-    left: calc(var(--porcentagem) * 1%);
     transform: translateX(-50%);
     min-width: 80px;
   }
@@ -83,10 +97,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 24px;
   }
 
   &__questoes {
-    padding: 24px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,31 +110,20 @@
     display: flex;
     align-items: center;
     margin: 0 auto;
+
+    @include breakpoint-down('sm') {
+      flex-direction: column;
+    }
   }
 
   &__modo {
     &:not(:last-child) {
       margin-right: 16px;
-    }
-  }
-}
 
-// Responsividade //
-
-@include breakpoint-down('sm') {
-  .resumo {
-    &__classificacao {
-      flex-direction: column;
-    }
-
-    &__modo-container {
-      flex-direction: column;
-    }
-
-    &__modo {
-      &:not(:last-child) {
+      @include breakpoint-down('sm') {
         margin-right: 0;
       }
     }
   }
 }
+

@@ -123,53 +123,55 @@ const Template = ( {valoresChart, valoresLabel} ) => {
           </div>
 
           <div class="resumo__middle">
-            <div class="resumo__classificacao">
-              <div class="resumo__linha">
-                <ion-label token="p12x">Qual seria sua classificação &nbsp;</ion-label>
-                <ion-button class="resumo__opcoes" mode="ios" fill="clear" ds-size="xxs" no-padding="true" @click="${createModalLocal}">
-                  no Brasil
-                </ion-button>
+            <div class="resumo__container">
+              <div class="resumo__classificacao">
+                <div class="resumo__linha">
+                  <ion-label token="p12x">Qual seria sua classificação &nbsp;</ion-label>
+                  <ion-button class="resumo__opcoes" mode="ios" fill="clear" ds-size="xxs" no-padding="true" @click="${createModalLocal}">
+                    no Brasil
+                  </ion-button>
+                </div>
+
+                <div class="resumo__linha">
+                  <ion-label token="p12x">&nbsp; em &nbsp;</ion-label>
+                  <ion-button class="resumo__opcoes" mode="ios" fill="clear" ds-size="xxs" no-padding="true" @click="${createModalUnidades}">
+                    Todas as Unidades
+                  </ion-button>
+                </div>
+
+                <div class="resumo__linha">
+                  <ion-label token="p12x">&nbsp; em &nbsp;</ion-label>
+                  <ion-button class="resumo__opcoes" mode="ios" fill="clear" ds-size="xxs" no-padding="true" @click="${createModalEspecialidade}">
+                    Todas as Especialidades
+                  </ion-button>
+                </div>
               </div>
 
-              <div class="resumo__linha">
-                <ion-label token="p12x">&nbsp; em &nbsp;</ion-label>
-                <ion-button class="resumo__opcoes" mode="ios" fill="clear" ds-size="xxs" no-padding="true" @click="${createModalUnidades}">
-                  Todas as Unidades
-                </ion-button>
-              </div>
+              <div class="resumo__range-container">
+                <ion-icon class="med-icon resumo__icon resumo__icon--start" name="med-usuario"></ion-icon>
+                <div class="resumo__progress">
+                  <med-chart-bar-horizontal class="resumo__range" ds-color="fb-warning" hide-value label="false">
+                  </med-chart-bar-horizontal>
+                    <div class="resumo__posicao-container" style="--porcentagem: 50">
+                    <ion-label class="resumo__posicao" token="p14xb"> 100° </ion-label>
+                    <ion-label class="resumo__sua-nota" token="p10"> Sua nota </ion-label>
+                    <ion-label class="resumo__nota" token="p12xb"> 5.0 </ion-label>
+                  </div>
+                  </div>
+                  <ion-icon class="med-icon resumo__icon resumo__icon--end" name="med-acertou"></ion-icon>
+                </div>
 
-              <div class="resumo__linha">
-                <ion-label token="p12x">&nbsp; em &nbsp;</ion-label>
-                <ion-button class="resumo__opcoes" mode="ios" fill="clear" ds-size="xxs" no-padding="true" @click="${createModalEspecialidade}">
-                  Todas as Especialidades
-                </ion-button>
-              </div>
-            </div>
+                <div class="resumo__participantes">
+                  <ion-label token="p14x" ds-color="neutral-8">Total de</ion-label>
+                  <ion-label token="p14xb" ds-color="neutral-8">&nbsp; 15000 &nbsp;</ion-label>
+                  <ion-label token="p14x" ds-color="neutral-8">participantes</ion-label>
+                </div>
 
-            <div class="resumo__range-container">
-              <ion-icon class="med-icon resumo__icon resumo__icon--start" name="med-usuario"></ion-icon>
-              <div class="resumo__progress">
-                <ion-range class="resumo__range" min="20" max="80" step="2" ds-color="fb-warning">
-                </ion-range>
-                <div class="resumo__posicao-container" style="--porcentagem: 50">
-                <ion-label class="resumo__posicao" token="p14xb"> 100° </ion-label>
-                <ion-label class="resumo__sua-nota" token="p10"> Sua nota </ion-label>
-                <ion-label class="resumo__nota" token="p12xb"> 5.0 </ion-label>
+                <div class="resumo__questoes">
+                  <med-chart-radial id="chart-geral" titulo="100" subtitulo="Questoes" ds-size="lg"></med-chart-radial>
+                  <med-chart-radial-label id="label-geral"></med-chart-radial-label>
+                </div>
               </div>
-              </div>
-              <ion-icon class="med-icon resumo__icon resumo__icon--end" name="med-acertou"></ion-icon>
-            </div>
-
-            <div class="resumo__participantes">
-              <ion-label token="p14x" ds-color="neutral-8">Total de</ion-label>
-              <ion-label token="p14xb" ds-color="neutral-8">&nbsp; 15000 &nbsp;</ion-label>
-              <ion-label token="p14x" ds-color="neutral-8">participantes</ion-label>
-            </div>
-
-            <div class="resumo__questoes">
-              <med-chart-radial id="chart-geral" titulo="100" subtitulo="Questoes" ds-size="lg"></med-chart-radial>
-              <med-chart-radial-label id="label-geral"></med-chart-radial-label>
-            </div>
 
             <ion-item ds-color="brand" spacing-v="s08" spacing-h="s04"     mode="ios" lines="none">
             <ion-button class="resumo__button" mode="ios" fill="clear" ds-color="neutral-10" ds-size="xxs">
@@ -178,9 +180,11 @@ const Template = ( {valoresChart, valoresLabel} ) => {
               </ion-button>
             </ion-item>
 
-            <div class="resumo__questoes">
-              <med-chart-radial id="chart-prova" titulo="100" subtitulo="Questoes" ds-size="lg"></med-chart-radial>
-              <med-chart-radial-label id="label-prova"></med-chart-radial-label>
+            <div class="resumo__container">
+              <div class="resumo__questoes">
+                <med-chart-radial id="chart-prova" titulo="100" subtitulo="Questoes" ds-size="lg"></med-chart-radial>
+                <med-chart-radial-label id="label-prova"></med-chart-radial-label>
+              </div>
             </div>
 
             <ion-item ds-color="brand" spacing-v="s08" spacing-h="s04"     mode="ios" lines="none">
@@ -190,10 +194,13 @@ const Template = ( {valoresChart, valoresLabel} ) => {
             </ion-button>
             </ion-item>
 
-            <div class="resumo__questoes">
-              <med-chart-radial id="chart-estudo" titulo="100" subtitulo="Questoes" ds-size="lg"></med-chart-radial>
-              <med-chart-radial-label id="label-estudo"></med-chart-radial-label>
+            <div class="resumo__container">
+              <div class="resumo__questoes">
+                <med-chart-radial id="chart-estudo" titulo="100" subtitulo="Questoes" ds-size="lg"></med-chart-radial>
+                <med-chart-radial-label id="label-estudo"></med-chart-radial-label>
+              </div>
             </div>
+
           </div>
         </div>
       </ion-content>
