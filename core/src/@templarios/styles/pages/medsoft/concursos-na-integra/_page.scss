@@ -3,9 +3,24 @@
   height: 100%;
 
   &__input {
-    padding: 16px;
+    padding: 32px 40px;
     display: flex;
     align-items: center;
+    max-width: 1096px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include breakpoint-down('sm') {
+      padding: 24px;
+    }
+
+    &--desempenho {
+      padding: 32px 0;
+
+      @include breakpoint-down('sm') {
+        padding: 24px 0;
+      }
+    }
 
     .med-icon {
       width: 24px;

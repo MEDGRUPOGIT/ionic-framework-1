@@ -35,7 +35,7 @@ const Template = () => {
               <ion-label token="p16x">Veja como você se sairia, considerando as especialidades oferecidas pelo concurso.</ion-label>
             </div>
 
-            <div class="concursos__input">
+            <div class="concursos__input concursos__input--desempenho">
               <ion-icon class="med-icon" name="med-busca"></ion-icon>
               <ion-input mode="md" ds-color="neutral-2" placeholder="Digite o nome de um concurso..."></ion-input>
             </div>
