@@ -211,6 +211,7 @@ export default defineComponent({
  - [local-modal](../@templarios/ionic-1-migracao/simulados/local-modal)
  - [med-alert](../@templarios/core/med-alert)
  - [medreader-pro-modal](../@templarios/ionic-1-migracao/apostila/medreader-pro-modal)
+ - [realizacoes-modal](../@templarios/ionic-1-migracao/simulados/realizacoes-modal)
  - [sheet-content-test](../@templarios/testes/sheet-content-test)
  - [sheet-test](../@templarios/testes/sheet-test)
  - [simulado-modal](../@templarios/ionic-1-migracao/duvidas-academicas/simulado-modal)
@@ -231,6 +232,7 @@ graph TD;
   local-modal --> ion-header
   med-alert --> ion-header
   medreader-pro-modal --> ion-header
+  realizacoes-modal --> ion-header
   sheet-content-test --> ion-header
   sheet-test --> ion-header
   simulado-modal --> ion-header

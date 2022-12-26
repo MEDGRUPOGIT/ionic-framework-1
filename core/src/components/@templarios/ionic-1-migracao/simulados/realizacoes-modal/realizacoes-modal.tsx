@@ -10,43 +10,52 @@ export class RealizacoesModal {
   render() {
     return (
       <Host>
-        <med-header>
-          <med-navbar class="header" slot="navbar">
-            <ion-label class="header__title" slot="title">Realizações</ion-label>
-          </med-navbar>
-        </med-header>
+         <ion-header class="header">
+          <div class="header__left">
+            <div>
+              <ion-button mode="ios" icon-only fill="clear" ds-size="xxs">
+                <ion-icon class="med-icon" name="med-fechar"></ion-icon>
+              </ion-button>
+            </div>
+          </div>
+        </ion-header>
 
         <ion-content class="modal-content">
-          <ion-item class="modal-content__item modal-content__item--agendado" spacing-v="s16" spacing-h="s16" mode="ios" lines="none">
-            <div class="modal-content__text-container">
-              <ion-label class="modal-content__data">Em 10/06/22 18:15:00</ion-label>
-              <ion-label class="modal-content__modo">(Simulado Agendado)</ion-label>
-            </div>
-          </ion-item>
-          <ion-item class="modal-content__item modal-content__item--aviso" spacing-v="s16" spacing-h="s16" mode="ios" lines="none">
-            <div class="modal-content__text-container">
-              <ion-label class="modal-content__data">Você não realizou o simulado agendado.</ion-label>
-              <ion-label class="modal-content__modo">(Modo Prova)</ion-label>
-            </div>
-          </ion-item>
-          <ion-item class="modal-content__item" spacing-v="s16" spacing-h="s16" mode="ios" lines="none">
-            <div class="modal-content__text-container">
-              <ion-label class="modal-content__data">Em 10/06/22 18:15:00</ion-label>
-              <ion-label class="modal-content__modo">(Modo Prova)</ion-label>
-            </div>
-          </ion-item>
-          <ion-item class="modal-content__item" spacing-v="s16" spacing-h="s16" mode="ios" lines="none">
-            <div class="modal-content__text-container">
-              <ion-label class="modal-content__data">Em 10/06/22 18:15:00</ion-label>
-              <ion-label class="modal-content__modo">(Modo Prova)</ion-label>
-            </div>
-          </ion-item>
-          <ion-item class="modal-content__item" spacing-v="s16" spacing-h="s16" mode="ios" lines="none">
-            <div class="modal-content__text-container">
-              <ion-label class="modal-content__data">Em 10/06/22 18:15:00</ion-label>
-              <ion-label class="modal-content__modo">(Modo Prova)</ion-label>
-            </div>
-          </ion-item>
+          <div class="modal-realizacoes">
+            <ion-label class="modal-realizacoes__title">
+            Realizações
+            </ion-label>
+            <ion-item class="modal-realizacoes__item modal-realizacoes__item--agendado" spacing-v="s16" spacing-h="s16" mode="ios" lines="none" ds-color="neutral-15">
+              <div class="modal-realizacoes__text-container">
+                <ion-label class="modal-realizacoes__data">Em 10/06/22 18:15:00</ion-label>
+                <ion-label class="modal-realizacoes__modo">(Simulado Agendado)</ion-label>
+              </div>
+            </ion-item>
+            <ion-item class="modal-realizacoes__item modal-realizacoes__item--aviso" spacing-v="s16" spacing-h="s16" mode="ios" lines="none" ds-color="neutral-15">
+              <div class="modal-realizacoes__text-container">
+                <ion-label class="modal-realizacoes__data">Você não realizou o simulado agendado.</ion-label>
+                <ion-label class="modal-realizacoes__modo">(Modo Prova)</ion-label>
+              </div>
+            </ion-item>
+            <ion-item class="modal-realizacoes__item" spacing-v="s16" spacing-h="s16" mode="ios" lines="none" ds-color="neutral-15">
+              <div class="modal-realizacoes__text-container">
+                <ion-label class="modal-realizacoes__data">Em 10/06/22 18:15:00</ion-label>
+                <ion-label class="modal-realizacoes__modo">(Modo Prova)</ion-label>
+              </div>
+            </ion-item>
+            <ion-item class="modal-realizacoes__item" spacing-v="s16" spacing-h="s16" mode="ios" lines="none" ds-color="neutral-15">
+              <div class="modal-realizacoes__text-container">
+                <ion-label class="modal-realizacoes__data">Em 10/06/22 18:15:00</ion-label>
+                <ion-label class="modal-realizacoes__modo">(Modo Prova)</ion-label>
+              </div>
+            </ion-item>
+            <ion-item class="modal-realizacoes__item" spacing-v="s16" spacing-h="s16" mode="ios" lines="none" ds-color="neutral-15">
+              <div class="modal-realizacoes__text-container">
+                <ion-label class="modal-realizacoes__data">Em 10/06/22 18:15:00</ion-label>
+                <ion-label class="modal-realizacoes__modo">(Modo Prova)</ion-label>
+              </div>
+            </ion-item>
+          </div>
         </ion-content>
 
         <ion-footer class="modal-footer">
