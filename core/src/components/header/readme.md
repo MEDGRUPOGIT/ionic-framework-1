@@ -200,6 +200,7 @@ export default defineComponent({
 
 ### Used by
 
+ - [ajuda-modal](../@templarios/ionic-1-migracao/simulados/ajuda-modal)
  - [apostila-modal](../@templarios/ionic-1-migracao/duvidas-academicas/apostila-modal)
  - [concurso-modal](../@templarios/ionic-1-migracao/duvidas-academicas/concurso-modal)
  - [denunciar-modal](../@templarios/ionic-1-migracao/duvidas-academicas/denunciar-modal)
@@ -221,6 +222,7 @@ export default defineComponent({
 ### Graph
 ```mermaid
 graph TD;
+  ajuda-modal --> ion-header
   apostila-modal --> ion-header
   concurso-modal --> ion-header
   denunciar-modal --> ion-header

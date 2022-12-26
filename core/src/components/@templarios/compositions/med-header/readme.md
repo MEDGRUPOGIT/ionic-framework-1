@@ -16,7 +16,6 @@
 
 ### Used by
 
- - [ajuda-modal](../../ionic-1-migracao/simulados/ajuda-modal)
  - [med-config](../../legacy/med-config)
  - [med-image-zoom](../med-image-zoom)
  - [med-offline](../med-offline)
@@ -25,7 +24,6 @@
 ### Graph
 ```mermaid
 graph TD;
-  ajuda-modal --> med-header
   med-config --> med-header
   med-image-zoom --> med-header
   med-offline --> med-header

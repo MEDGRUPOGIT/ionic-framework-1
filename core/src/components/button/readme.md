@@ -367,6 +367,7 @@ export default defineComponent({
 
 ### Used by
 
+ - [ajuda-modal](../@templarios/ionic-1-migracao/simulados/ajuda-modal)
  - [apostila-modal](../@templarios/ionic-1-migracao/duvidas-academicas/apostila-modal)
  - [aviso-modal](../@templarios/ionic-1-migracao/simulados/aviso-modal)
  - [concurso-modal](../@templarios/ionic-1-migracao/duvidas-academicas/concurso-modal)
@@ -406,6 +407,7 @@ export default defineComponent({
 ```mermaid
 graph TD;
   ion-button --> ion-ripple-effect
+  ajuda-modal --> ion-button
   apostila-modal --> ion-button
   aviso-modal --> ion-button
   concurso-modal --> ion-button
