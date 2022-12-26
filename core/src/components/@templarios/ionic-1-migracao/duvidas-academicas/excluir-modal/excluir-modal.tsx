@@ -38,8 +38,6 @@ export class ExcluirModal {
             </div>
           </div>
         </ion-content>
-
-
       </Host>
     );
   }
