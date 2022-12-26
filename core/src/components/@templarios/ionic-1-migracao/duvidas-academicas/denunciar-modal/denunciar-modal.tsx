@@ -48,14 +48,14 @@ export class DenunciarModal {
               <ion-label class="modal-denunciar__text" ds-color="neutral-8">Descreva sua denúncia (opcional)</ion-label>
               <ion-textarea class="modal-denunciar__campo" mode="md" placeholder="Digite aqui"></ion-textarea>
             </div>
+
+            <div class="modal-denunciar__button-container">
+              <ion-button class="modal-denunciar__button" mode="ios" ds-size="sm">
+                CONFIRMAR
+              </ion-button>
+            </div>
           </div>
         </ion-content>
-
-        <ion-footer class="modal-footer">
-          <ion-button class="modal-footer__button" mode="ios" ds-size="sm">
-            CONFIRMAR
-          </ion-button>
-        </ion-footer>
       </Host>
     );
   }
