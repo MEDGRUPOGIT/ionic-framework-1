@@ -52,6 +52,10 @@
     }
   }
 
+  &__campo {
+    --height: 100%;
+  }
+
   &__button-container {
     display: flex;
     align-items: center;
