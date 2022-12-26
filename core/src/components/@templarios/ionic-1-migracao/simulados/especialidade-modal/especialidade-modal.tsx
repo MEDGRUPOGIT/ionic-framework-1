@@ -10,52 +10,61 @@ export class EspecialidadeModal {
   render() {
     return (
       <Host>
-        <med-header>
-          <med-navbar class="header" slot="navbar">
-            <ion-label class="header__title" slot="title">Especialidade</ion-label>
-          </med-navbar>
-        </med-header>
+         <ion-header class="header">
+          <div class="header__left">
+            <div>
+              <ion-button mode="ios" icon-only fill="clear" ds-size="xxs">
+                <ion-icon class="med-icon" name="med-fechar"></ion-icon>
+              </ion-button>
+            </div>
+          </div>
+        </ion-header>
 
         <ion-content class="modal-content">
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>Acupuntura</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>Alergia e imunologia</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>Anestesiologia</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>Aperfeiçoamento</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>Cardiologia</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>Especialidade</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>Especialidade</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>Especialidade</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>Especialidade</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>Especialidade</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>Especialidade</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>Especialidade</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>Especialidade</ion-label>
-          </ion-item>
+          <div class="modal-especialidade">
+            <ion-label class="modal-especialidade__title">
+              Especialidade
+            </ion-label>
+            <ion-item class="modal-especialidade__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>Acupuntura</ion-label>
+            </ion-item>
+            <ion-item class="modal-especialidade__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>Alergia e imunologia</ion-label>
+            </ion-item>
+            <ion-item class="modal-especialidade__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>Anestesiologia</ion-label>
+            </ion-item>
+            <ion-item class="modal-especialidade__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>Aperfeiçoamento</ion-label>
+            </ion-item>
+            <ion-item class="modal-especialidade__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>Cardiologia</ion-label>
+            </ion-item>
+            <ion-item class="modal-especialidade__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>Especialidade</ion-label>
+            </ion-item>
+            <ion-item class="modal-especialidade__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>Especialidade</ion-label>
+            </ion-item>
+            <ion-item class="modal-especialidade__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>Especialidade</ion-label>
+            </ion-item>
+            <ion-item class="modal-especialidade__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>Especialidade</ion-label>
+            </ion-item>
+            <ion-item class="modal-especialidade__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>Especialidade</ion-label>
+            </ion-item>
+            <ion-item class="modal-especialidade__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>Especialidade</ion-label>
+            </ion-item>
+            <ion-item class="modal-especialidade__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>Especialidade</ion-label>
+            </ion-item>
+            <ion-item class="modal-especialidade__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>Especialidade</ion-label>
+            </ion-item>
+          </div>
         </ion-content>
 
         <ion-footer class="modal-footer">
