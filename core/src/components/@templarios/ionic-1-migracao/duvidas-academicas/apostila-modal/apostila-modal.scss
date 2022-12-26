@@ -54,6 +54,7 @@
   }
 
   &__opcoes {
+    // retirar custom property e colocar radius="s08" na tag html
     --border-radius: 8px;
     cursor: pointer;
 

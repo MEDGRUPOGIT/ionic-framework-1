@@ -10,68 +10,73 @@ export class ConcursoModal {
   render() {
     return (
       <Host>
-        <med-header>
-          <med-navbar class="header" slot="navbar">
-            <ion-button slot="left" mode="ios" fill="clear" icon-only ds-size="xxs">
-              <ion-icon class="med-icon" slot="icon-only" name="med-fechar"></ion-icon>
-            </ion-button>
-
-            <ion-label class="header__title" slot="title">Concursos</ion-label>
-          </med-navbar>
-        </med-header>
+      <ion-header class="header">
+          <div class="header__left">
+            <div>
+              <ion-button mode="ios" icon-only fill="clear" ds-size="xxs">
+                <ion-icon class="med-icon" name="med-fechar"></ion-icon>
+              </ion-button>
+            </div>
+          </div>
+        </ion-header>
 
         <ion-content class="modal-content">
-          <div class="modal-content__input">
-            <tp-input-container has-icon="start">
-              <ion-icon class="med-icon" slot="start" name="med-busca"></ion-icon>
-              <ion-input mode="md" placeholder="Procurar o termo ou palavra-chave"></ion-input>
-            </tp-input-container>
-          </div>
+          <div class="modal-concursos">
+            <ion-label class="modal-concursos__title">
+              Concursos
+            </ion-label>
 
-            <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-              <ion-label>PUC - PR - ALIANÇA SAÚDE</ion-label>
-            </ion-item>
-            <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-              <ion-label>SCO - ASSOCIAÇÃO DA SANTA CASA</ion-label>
-            </ion-item>
-            <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-              <ion-label>AMS - APUCARANA - AUTARQUIA MUNICIPAL</ion-label>
-            </ion-item>
-            <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-              <ion-label>CCANSPS - CASA DE CARIDADE</ion-label>
-            </ion-item>
-            <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-              <ion-label>PUC - PR - ALIANÇA SAÚDE</ion-label>
-            </ion-item>
-            <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-              <ion-label>PUC - PR - ALIANÇA SAÚDE</ion-label>
-            </ion-item>
-            <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-              <ion-label>PUC - PR - ALIANÇA SAÚDE</ion-label>
-            </ion-item>
-            <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-              <ion-label>PUC - PR - ALIANÇA SAÚDE</ion-label>
-            </ion-item>
-            <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-              <ion-label>PUC - PR - ALIANÇA SAÚDE</ion-label>
-            </ion-item>
-            <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-              <ion-label>PUC - PR - ALIANÇA SAÚDE</ion-label>
-            </ion-item>
-            <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-              <ion-label>PUC - PR - ALIANÇA SAÚDE</ion-label>
-            </ion-item>
-            <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-              <ion-label>PUC - PR - ALIANÇA SAÚDE</ion-label>
-            </ion-item>
+            <div class="modal-concursos__input">
+              <tp-input-container has-icon="start">
+                <ion-icon class="med-icon" slot="start" name="med-busca"></ion-icon>
+                <ion-input mode="md" placeholder="Procurar o termo ou palavra-chave"></ion-input>
+              </tp-input-container>
+            </div>
 
+              <ion-item class="modal-concursos__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+                <ion-label>PUC - PR - ALIANÇA SAÚDE</ion-label>
+              </ion-item>
+              <ion-item class="modal-concursos__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+                <ion-label>SCO - ASSOCIAÇÃO DA SANTA CASA</ion-label>
+              </ion-item>
+              <ion-item class="modal-concursos__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+                <ion-label>AMS - APUCARANA - AUTARQUIA MUNICIPAL</ion-label>
+              </ion-item>
+              <ion-item class="modal-concursos__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+                <ion-label>CCANSPS - CASA DE CARIDADE</ion-label>
+              </ion-item>
+              <ion-item class="modal-concursos__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+                <ion-label>PUC - PR - ALIANÇA SAÚDE</ion-label>
+              </ion-item>
+              <ion-item class="modal-concursos__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+                <ion-label>PUC - PR - ALIANÇA SAÚDE</ion-label>
+              </ion-item>
+              <ion-item class="modal-concursos__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+                <ion-label>PUC - PR - ALIANÇA SAÚDE</ion-label>
+              </ion-item>
+              <ion-item class="modal-concursos__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+                <ion-label>PUC - PR - ALIANÇA SAÚDE</ion-label>
+              </ion-item>
+              <ion-item class="modal-concursos__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+                <ion-label>PUC - PR - ALIANÇA SAÚDE</ion-label>
+              </ion-item>
+              <ion-item class="modal-concursos__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+                <ion-label>PUC - PR - ALIANÇA SAÚDE</ion-label>
+              </ion-item>
+              <ion-item class="modal-concursos__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+                <ion-label>PUC - PR - ALIANÇA SAÚDE</ion-label>
+              </ion-item>
+              <ion-item class="modal-concursos__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+                <ion-label>PUC - PR - ALIANÇA SAÚDE</ion-label>
+              </ion-item>
+
+              <div class="modal-concursos__button-container">
+                <ion-button class="modal-concursos__button" mode="ios" ds-size="sm">
+                  APLICAR
+                </ion-button>
+              </div>
+            </div>
         </ion-content>
-
-        <ion-footer class="modal-footer">
-          <ion-button class="modal-footer__button" mode="ios" ds-size="sm">
-            APLICAR
-          </ion-button>
-        </ion-footer>
       </Host>
     );
   }
