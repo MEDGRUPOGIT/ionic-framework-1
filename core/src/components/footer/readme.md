@@ -132,7 +132,6 @@ export default defineComponent({
 ### Used by
 
  - [apostila-modal](../@templarios/ionic-1-migracao/duvidas-academicas/apostila-modal)
- - [aviso-modal](../@templarios/ionic-1-migracao/simulados/aviso-modal)
  - [concurso-modal](../@templarios/ionic-1-migracao/duvidas-academicas/concurso-modal)
  - [especialidade-modal](../@templarios/ionic-1-migracao/simulados/especialidade-modal)
  - [filtro-modal](../@templarios/ionic-1-migracao/duvidas-academicas/filtro-modal)
@@ -149,7 +148,6 @@ export default defineComponent({
 ```mermaid
 graph TD;
   apostila-modal --> ion-footer
-  aviso-modal --> ion-footer
   concurso-modal --> ion-footer
   especialidade-modal --> ion-footer
   filtro-modal --> ion-footer

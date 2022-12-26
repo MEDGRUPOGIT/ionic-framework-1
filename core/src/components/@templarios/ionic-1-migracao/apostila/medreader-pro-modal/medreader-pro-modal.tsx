@@ -47,7 +47,7 @@ export class MedreaderProModal {
           </div>
 
           <div class="modal-medreader__button-container">
-            <ion-button class="modal-medreaderr__button" mode="ios" ds-size="sm">
+            <ion-button class="modal-medreader__button" mode="ios" ds-size="sm">
               ENTENDI E CONCORDO!
             </ion-button>
           </div>

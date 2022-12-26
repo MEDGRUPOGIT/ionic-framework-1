@@ -3,17 +3,49 @@
   border-radius: 0;
 }
 
-.modal-content {
-  height: calc(100% - 80px);;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: hsl(var(--med-color-neutral-1));
+  padding-top: calc(28px + var(--ion-safe-area-top));
+  padding-right: 40px;
+  padding-bottom: 28px;
+  padding-left: 40px;
+  max-height: 80px;
+
+  @include breakpoint-down('sm') {
+    padding-top: calc(24px + var(--ion-safe-area-top));
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    max-height: 72px;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
 }
 
-.aviso {
-  height: 100%;
-  padding: 16px;
+.modal-content {
+  height: calc(100% - 80px);
+
+  @include breakpoint-down('sm') {
+    height: calc(100% - 72px);
+  }
+}
+
+.modal-aviso {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  padding: 40px 64px;
+
+  @include breakpoint-down('sm') {
+    height: 100%;
+    padding: 24px;
+  }
 
   &__subheading {
     display: block;
@@ -52,20 +84,21 @@
     margin-top: 48px;
     text-align: center;
   }
-}
 
-.modal-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-}
+  &__button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
 
-// Responsividade //
+    @include breakpoint-down('sm') {
+      margin-top: auto;
+    }
+  }
 
-@media only screen and (max-height: 500px) {
-  .aviso {
-    height: auto;
-    overflow: auto;
+  &__button {
+    @include breakpoint-down('sm') {
+      flex: 1;
+    }
   }
 }

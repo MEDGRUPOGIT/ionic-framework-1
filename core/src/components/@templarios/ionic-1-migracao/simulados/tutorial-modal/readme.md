@@ -9,9 +9,9 @@
 
 ### Depends on
 
-- [med-header](../../../compositions/med-header)
-- [med-navbar](../../../compositions/med-navbar)
+- [ion-header](../../../../header)
 - [ion-button](../../../../button)
+- ion-icon
 - [ion-content](../../../../content)
 - [ion-slides](../../../../slides)
 - [ion-slide](../../../../slide)
@@ -21,9 +21,9 @@
 ### Graph
 ```mermaid
 graph TD;
-  tutorial-modal --> med-header
-  tutorial-modal --> med-navbar
+  tutorial-modal --> ion-header
   tutorial-modal --> ion-button
+  tutorial-modal --> ion-icon
   tutorial-modal --> ion-content
   tutorial-modal --> ion-slides
   tutorial-modal --> ion-slide

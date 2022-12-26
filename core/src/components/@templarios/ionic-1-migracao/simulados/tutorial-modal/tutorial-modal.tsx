@@ -10,27 +10,36 @@ export class TutorialModal {
   render() {
     return (
       <Host>
-        <med-header>
-          <med-navbar class="header" slot="navbar">
+        <ion-header class="header">
+          <div class="header__left">
+            <div>
+              <ion-button mode="ios" icon-only fill="clear" ds-size="xxs">
+                <ion-icon class="med-icon" name="med-fechar"></ion-icon>
+              </ion-button>
+            </div>
+          </div>
+          <div class="header__right">
+            <div>
             <ion-button slot="right" mode="ios" fill="clear" ds-size="xs" no-padding="true">
               Pular tutorial
             </ion-button>
-          </med-navbar>
-        </med-header>
+            </div>
+          </div>
+        </ion-header>
 
         <ion-content class="modal-content">
-          <div class="tutorial">
-            <ion-slides class="tutorial__slides" pager>
-              <ion-slide class="tutorial__slide">
-                <img class="tutorial__image" src="https://via.placeholder.com/500"/>
-                <ion-label class="tutorial__text" ds-color="neutral-10">
+          <div class="modal-tutorial">
+            <ion-slides class="modal-tutorial__slides" pager>
+              <ion-slide class="modal-tutorial__slide">
+                <img class="modal-tutorial__image" src="https://via.placeholder.com/500"/>
+                <ion-label class="modal-tutorial__text" ds-color="neutral-10">
                   Como e onde postar sua dúvida em uma QUESTÃO.
                 </ion-label>
               </ion-slide>
 
-              <ion-slide class="tutorial__slide">
-                <img class="tutorial__image" src="https://via.placeholder.com/500"/>
-                <ion-label class="tutorial__text" ds-color="neutral-10">Como ver as dúvidas de uma QUESTÃO.</ion-label>
+              <ion-slide class="modal-tutorial__slide">
+                <img class="modal-tutorial__image" src="https://via.placeholder.com/500"/>
+                <ion-label class="modal-tutorial__text" ds-color="neutral-10">Como ver as dúvidas de uma QUESTÃO.</ion-label>
               </ion-slide>
             </ion-slides>
           </div>

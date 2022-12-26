@@ -202,6 +202,7 @@ export default defineComponent({
 
  - [ajuda-modal](../@templarios/ionic-1-migracao/simulados/ajuda-modal)
  - [apostila-modal](../@templarios/ionic-1-migracao/duvidas-academicas/apostila-modal)
+ - [aviso-modal](../@templarios/ionic-1-migracao/simulados/aviso-modal)
  - [concurso-modal](../@templarios/ionic-1-migracao/duvidas-academicas/concurso-modal)
  - [denunciar-modal](../@templarios/ionic-1-migracao/duvidas-academicas/denunciar-modal)
  - [dialog-test](../@templarios/testes/dialog-test)
@@ -217,6 +218,7 @@ export default defineComponent({
  - [sheet-test](../@templarios/testes/sheet-test)
  - [simulado-modal](../@templarios/ionic-1-migracao/duvidas-academicas/simulado-modal)
  - [text-area-modal](../@templarios/ionic-1-migracao/duvidas-academicas/text-area-modal)
+ - [tutorial-modal](../@templarios/ionic-1-migracao/simulados/tutorial-modal)
  - [unidades-modal](../@templarios/ionic-1-migracao/simulados/unidades-modal)
 
 ### Graph
@@ -224,6 +226,7 @@ export default defineComponent({
 graph TD;
   ajuda-modal --> ion-header
   apostila-modal --> ion-header
+  aviso-modal --> ion-header
   concurso-modal --> ion-header
   denunciar-modal --> ion-header
   dialog-test --> ion-header
@@ -239,6 +242,7 @@ graph TD;
   sheet-test --> ion-header
   simulado-modal --> ion-header
   text-area-modal --> ion-header
+  tutorial-modal --> ion-header
   unidades-modal --> ion-header
   style ion-header fill:#f9f,stroke:#333,stroke-width:4px
 ```
