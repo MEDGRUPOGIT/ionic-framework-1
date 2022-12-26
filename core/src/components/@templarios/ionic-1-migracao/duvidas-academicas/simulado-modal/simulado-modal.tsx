@@ -69,8 +69,6 @@ export class SimuladoModal {
             APLICAR
           </ion-button>
         </ion-footer>
-
-
       </Host>
     );
   }

@@ -3,29 +3,83 @@
   border-radius: 0;
 }
 
-.modal-content {
-  height: calc(100% - 136px);;
-  overflow: auto;
-  border-top: 1px solid hsl(var(--med-color-neutral-4));
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: hsl(var(--med-color-neutral-1));
+  padding-top: calc(28px + var(--ion-safe-area-top));
+  padding-right: 40px;
+  padding-bottom: 28px;
+  padding-left: 40px;
+  max-height: 80px;
+
+  @include breakpoint-down('sm') {
+    padding-top: calc(24px + var(--ion-safe-area-top));
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    max-height: 72px;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
 }
 
-.filtros {
+.modal-content {
+  height: calc(100% - 176px);
+
+  @include breakpoint-down('sm') {
+    height: calc(100% - 168px);
+  }
+}
+
+.modal-filtros {
   height: 100%;
+  padding: 40px 64px;
+
+  @include breakpoint-down('sm') {
+    padding: 24px;
+  }
 
   &__top {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 16px;
+    margin-bottom: 24px;
   }
 
   &__title {
+    margin-bottom: 40px;
+    display: block;
+    // retirar e colocar token="h24x" no html
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+
+    @include breakpoint-down('sm') {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__subtitle {
     display: block;
     margin-bottom: 16px;
   }
 
   &__button-container {
     display: flex;
+
+    @include breakpoint-down('sm') {
+      flex-direction: column;
+    }
 
     &--margin-bottom {
       margin-bottom: 16px;
@@ -36,10 +90,17 @@
     &:not(:last-child) {
       margin-right: 16px;
     }
+
+    @include breakpoint-down('sm') {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 8px;
+      }
+    }
   }
 
   &__middle {
-    padding: 16px;
+    margin-bottom: 24px;
   }
 
   &__ordenacao {
@@ -56,7 +117,7 @@
   }
 
   &__input-container {
-    padding: 16px;
+    margin-bottom: 24px;
   }
 
   &__input-label {
@@ -77,14 +138,14 @@
   &__carregando {
     font-size: 14px;
     display: block;
-    margin-top: 24px;
+    margin: 24px 0;
   }
 
   &__filtrar-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 16px;
+    margin-bottom: 24px;
   }
 
   &__filtrar {
@@ -102,23 +163,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px;
-  border-top: 1px solid hsl(var(--med-color-neutral-4));
-}
-
-// Responsividade //
-
-@include breakpoint-down('sm') {
-  .filtros {
-    &__button-container {
-      flex-direction: column;
-    }
-
-    &__button {
-      &:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 8px;
-      }
-    }
-  }
+  padding: 24px;
 }
