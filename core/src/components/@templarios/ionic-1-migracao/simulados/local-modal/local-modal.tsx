@@ -10,46 +10,55 @@ export class LocalModal {
   render() {
     return (
       <Host>
-        <med-header>
-          <med-navbar class="header" slot="navbar">
-            <ion-label class="header__title" slot="title">Selecione os estados</ion-label>
-          </med-navbar>
-        </med-header>
+        <ion-header class="header">
+          <div class="header__left">
+            <div>
+              <ion-button mode="ios" icon-only fill="clear" ds-size="xxs">
+                <ion-icon class="med-icon" name="med-fechar"></ion-icon>
+              </ion-button>
+            </div>
+          </div>
+        </ion-header>
 
         <ion-content class="modal-content">
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>AL</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>AL</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>AM</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>BA</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>CE</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>DF</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>EAD</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>GO</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>MA</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>MG</ion-label>
-          </ion-item>
-          <ion-item class="modal-content__opcoes" mode="ios" lines="none">
-            <ion-label>MS</ion-label>
-          </ion-item>
+          <div class="modal-local">
+            <ion-label class="modal-local__title">
+              Selecione os estados
+            </ion-label>
+            <ion-item class="modal-local__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>AL</ion-label>
+            </ion-item>
+            <ion-item class="modal-local__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>AL</ion-label>
+            </ion-item>
+            <ion-item class="modal-local__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>AM</ion-label>
+            </ion-item>
+            <ion-item class="modal-local__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>BA</ion-label>
+            </ion-item>
+            <ion-item class="modal-local__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>CE</ion-label>
+            </ion-item>
+            <ion-item class="modal-local__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>DF</ion-label>
+            </ion-item>
+            <ion-item class="modal-local__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>EAD</ion-label>
+            </ion-item>
+            <ion-item class="modal-local__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>GO</ion-label>
+            </ion-item>
+            <ion-item class="modal-local__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>MA</ion-label>
+            </ion-item>
+            <ion-item class="modal-local__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>MG</ion-label>
+            </ion-item>
+            <ion-item class="modal-local__opcoes" mode="ios" lines="none" ds-color="neutral-15">
+              <ion-label>MS</ion-label>
+            </ion-item>
+          </div>
         </ion-content>
 
         <ion-footer class="modal-footer">

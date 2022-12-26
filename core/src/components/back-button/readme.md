@@ -374,7 +374,6 @@ export default defineComponent({
 ### Used by
 
  - [ajuda-modal](../@templarios/ionic-1-migracao/simulados/ajuda-modal)
- - [text-area-modal](../@templarios/ionic-1-migracao/duvidas-academicas/text-area-modal)
 
 ### Depends on
 
@@ -385,7 +384,6 @@ export default defineComponent({
 graph TD;
   ion-back-button --> ion-ripple-effect
   ajuda-modal --> ion-back-button
-  text-area-modal --> ion-back-button
   style ion-back-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

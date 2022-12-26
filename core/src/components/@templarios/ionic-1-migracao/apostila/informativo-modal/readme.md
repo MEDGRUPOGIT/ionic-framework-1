@@ -9,9 +9,10 @@
 
 ### Depends on
 
-- [med-header](../../../compositions/med-header)
-- [med-navbar](../../../compositions/med-navbar)
+- [ion-header](../../../../header)
 - [ion-button](../../../../button)
+- ion-icon
+- [ion-content](../../../../content)
 - [ion-slides](../../../../slides)
 - [ion-slide](../../../../slide)
 - [ion-label](../../../../label)
@@ -20,9 +21,10 @@
 ### Graph
 ```mermaid
 graph TD;
-  informativo-modal --> med-header
-  informativo-modal --> med-navbar
+  informativo-modal --> ion-header
   informativo-modal --> ion-button
+  informativo-modal --> ion-icon
+  informativo-modal --> ion-content
   informativo-modal --> ion-slides
   informativo-modal --> ion-slide
   informativo-modal --> ion-label

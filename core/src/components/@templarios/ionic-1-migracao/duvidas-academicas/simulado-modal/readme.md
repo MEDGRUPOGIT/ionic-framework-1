@@ -9,24 +9,22 @@
 
 ### Depends on
 
-- [med-header](../../../compositions/med-header)
-- [med-navbar](../../../compositions/med-navbar)
+- [ion-header](../../../../header)
 - [ion-button](../../../../button)
 - ion-icon
-- [ion-label](../../../../label)
 - [ion-content](../../../../content)
+- [ion-label](../../../../label)
 - [ion-item](../../../../item)
 - [ion-footer](../../../../footer)
 
 ### Graph
 ```mermaid
 graph TD;
-  simulado-modal --> med-header
-  simulado-modal --> med-navbar
+  simulado-modal --> ion-header
   simulado-modal --> ion-button
   simulado-modal --> ion-icon
-  simulado-modal --> ion-label
   simulado-modal --> ion-content
+  simulado-modal --> ion-label
   simulado-modal --> ion-item
   simulado-modal --> ion-footer
   ion-button --> ion-ripple-effect

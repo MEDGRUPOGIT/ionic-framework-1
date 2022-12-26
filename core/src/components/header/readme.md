@@ -200,18 +200,38 @@ export default defineComponent({
 
 ### Used by
 
+ - [apostila-modal](../@templarios/ionic-1-migracao/duvidas-academicas/apostila-modal)
+ - [concurso-modal](../@templarios/ionic-1-migracao/duvidas-academicas/concurso-modal)
+ - [denunciar-modal](../@templarios/ionic-1-migracao/duvidas-academicas/denunciar-modal)
  - [dialog-test](../@templarios/testes/dialog-test)
+ - [excluir-modal](../@templarios/ionic-1-migracao/duvidas-academicas/excluir-modal)
+ - [filtro-modal](../@templarios/ionic-1-migracao/duvidas-academicas/filtro-modal)
+ - [informativo-modal](../@templarios/ionic-1-migracao/apostila/informativo-modal)
+ - [local-modal](../@templarios/ionic-1-migracao/simulados/local-modal)
  - [med-alert](../@templarios/core/med-alert)
+ - [medreader-pro-modal](../@templarios/ionic-1-migracao/apostila/medreader-pro-modal)
  - [sheet-content-test](../@templarios/testes/sheet-content-test)
  - [sheet-test](../@templarios/testes/sheet-test)
+ - [simulado-modal](../@templarios/ionic-1-migracao/duvidas-academicas/simulado-modal)
+ - [text-area-modal](../@templarios/ionic-1-migracao/duvidas-academicas/text-area-modal)
 
 ### Graph
 ```mermaid
 graph TD;
+  apostila-modal --> ion-header
+  concurso-modal --> ion-header
+  denunciar-modal --> ion-header
   dialog-test --> ion-header
+  excluir-modal --> ion-header
+  filtro-modal --> ion-header
+  informativo-modal --> ion-header
+  local-modal --> ion-header
   med-alert --> ion-header
+  medreader-pro-modal --> ion-header
   sheet-content-test --> ion-header
   sheet-test --> ion-header
+  simulado-modal --> ion-header
+  text-area-modal --> ion-header
   style ion-header fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

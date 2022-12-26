@@ -9,27 +9,27 @@
 
 ### Depends on
 
-- [med-header](../../../compositions/med-header)
-- [med-navbar](../../../compositions/med-navbar)
-- [ion-label](../../../../label)
+- [ion-header](../../../../header)
+- [ion-button](../../../../button)
+- ion-icon
 - [ion-content](../../../../content)
+- [ion-label](../../../../label)
 - [ion-item](../../../../item)
 - [ion-footer](../../../../footer)
-- [ion-button](../../../../button)
 
 ### Graph
 ```mermaid
 graph TD;
-  local-modal --> med-header
-  local-modal --> med-navbar
-  local-modal --> ion-label
+  local-modal --> ion-header
+  local-modal --> ion-button
+  local-modal --> ion-icon
   local-modal --> ion-content
+  local-modal --> ion-label
   local-modal --> ion-item
   local-modal --> ion-footer
-  local-modal --> ion-button
+  ion-button --> ion-ripple-effect
   ion-item --> ion-icon
   ion-item --> ion-ripple-effect
-  ion-button --> ion-ripple-effect
   style local-modal fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

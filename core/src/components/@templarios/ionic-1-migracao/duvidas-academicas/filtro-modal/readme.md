@@ -9,12 +9,11 @@
 
 ### Depends on
 
-- [med-header](../../../compositions/med-header)
-- [med-navbar](../../../compositions/med-navbar)
+- [ion-header](../../../../header)
 - [ion-button](../../../../button)
 - ion-icon
-- [ion-label](../../../../label)
 - [ion-content](../../../../content)
+- [ion-label](../../../../label)
 - [tp-input-container](../../../core/tp-input-container)
 - [ion-select](../../../../select)
 - [ion-input](../../../../input)
@@ -25,12 +24,11 @@
 ### Graph
 ```mermaid
 graph TD;
-  filtro-modal --> med-header
-  filtro-modal --> med-navbar
+  filtro-modal --> ion-header
   filtro-modal --> ion-button
   filtro-modal --> ion-icon
-  filtro-modal --> ion-label
   filtro-modal --> ion-content
+  filtro-modal --> ion-label
   filtro-modal --> tp-input-container
   filtro-modal --> ion-select
   filtro-modal --> ion-input

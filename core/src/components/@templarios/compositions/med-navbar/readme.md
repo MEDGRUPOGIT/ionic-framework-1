@@ -18,20 +18,11 @@
 ### Used by
 
  - [ajuda-modal](../../ionic-1-migracao/simulados/ajuda-modal)
- - [apostila-modal](../../ionic-1-migracao/duvidas-academicas/apostila-modal)
- - [concurso-modal](../../ionic-1-migracao/duvidas-academicas/concurso-modal)
- - [denunciar-modal](../../ionic-1-migracao/duvidas-academicas/denunciar-modal)
  - [especialidade-modal](../../ionic-1-migracao/simulados/especialidade-modal)
- - [excluir-modal](../../ionic-1-migracao/duvidas-academicas/excluir-modal)
- - [filtro-modal](../../ionic-1-migracao/duvidas-academicas/filtro-modal)
- - [informativo-modal](../../ionic-1-migracao/apostila/informativo-modal)
- - [local-modal](../../ionic-1-migracao/simulados/local-modal)
  - [med-config](../../legacy/med-config)
  - [med-image-zoom](../med-image-zoom)
  - [med-offline](../med-offline)
  - [realizacoes-modal](../../ionic-1-migracao/simulados/realizacoes-modal)
- - [simulado-modal](../../ionic-1-migracao/duvidas-academicas/simulado-modal)
- - [text-area-modal](../../ionic-1-migracao/duvidas-academicas/text-area-modal)
  - [tutorial-modal](../../ionic-1-migracao/simulados/tutorial-modal)
  - [unidades-modal](../../ionic-1-migracao/simulados/unidades-modal)
 
@@ -39,20 +30,11 @@
 ```mermaid
 graph TD;
   ajuda-modal --> med-navbar
-  apostila-modal --> med-navbar
-  concurso-modal --> med-navbar
-  denunciar-modal --> med-navbar
   especialidade-modal --> med-navbar
-  excluir-modal --> med-navbar
-  filtro-modal --> med-navbar
-  informativo-modal --> med-navbar
-  local-modal --> med-navbar
   med-config --> med-navbar
   med-image-zoom --> med-navbar
   med-offline --> med-navbar
   realizacoes-modal --> med-navbar
-  simulado-modal --> med-navbar
-  text-area-modal --> med-navbar
   tutorial-modal --> med-navbar
   unidades-modal --> med-navbar
   style med-navbar fill:#f9f,stroke:#333,stroke-width:4px
