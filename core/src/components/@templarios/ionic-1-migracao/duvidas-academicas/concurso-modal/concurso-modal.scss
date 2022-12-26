@@ -28,9 +28,12 @@
   }
 }
 
+.modal-content {
+  height: calc(100% - 176px);
+}
+
 .modal-concursos {
   padding: 40px 64px;
-  margin-bottom: 80px;
 
   @include breakpoint-down('sm') {
     padding: 24px;
@@ -62,12 +65,12 @@
       margin-bottom: 8px;
     }
   }
+}
 
-  &__button-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-  }
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
 }
 

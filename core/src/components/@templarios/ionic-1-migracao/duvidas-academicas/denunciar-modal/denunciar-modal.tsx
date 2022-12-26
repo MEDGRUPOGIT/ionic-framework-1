@@ -10,19 +10,23 @@ export class DenunciarModal {
   render() {
     return (
       <Host>
-        <med-header>
-          <med-navbar class="header" slot="navbar">
-            <ion-button slot="left" mode="ios" fill="clear" icon-only ds-size="xxs">
-              <ion-icon class="med-icon" slot="icon-only" name="med-fechar"></ion-icon>
-            </ion-button>
-
-            <ion-label class="header__title" slot="title">Denuciar dúvida</ion-label>
-          </med-navbar>
-        </med-header>
+        <ion-header class="header">
+          <div class="header__left">
+            <div>
+              <ion-button mode="ios" icon-only fill="clear" ds-size="xxs">
+                <ion-icon class="med-icon" name="med-fechar"></ion-icon>
+              </ion-button>
+            </div>
+          </div>
+        </ion-header>
 
         <ion-content class="modal-content">
-          <div class="denunciar">
-            <div class="denunciar__list">
+          <div class="modal-denunciar">
+            <ion-label class="modal-denunciar__title">
+              Denuciar dúvida
+            </ion-label>
+
+            <div class="modal-denunciar__list">
               <ion-item mode="ios" lines="none">
                 <ion-label ds-color="neutral-10">Crítica sobre conteúdo</ion-label>
                 <ion-checkbox slot="start" value="value-1" mode="md"
@@ -40,9 +44,9 @@ export class DenunciarModal {
               </ion-item>
             </div>
 
-            <div class="denunciar__text-container">
-              <ion-label class="denunciar__text" ds-color="neutral-8">Descreva sua denúncia (opcional)</ion-label>
-              <ion-textarea class="denunciar__campo" mode="md" placeholder="Digite aqui"></ion-textarea>
+            <div class="modal-denunciar__text-container">
+              <ion-label class="modal-denunciar__text" ds-color="neutral-8">Descreva sua denúncia (opcional)</ion-label>
+              <ion-textarea class="modal-denunciar__campo" mode="md" placeholder="Digite aqui"></ion-textarea>
             </div>
           </div>
         </ion-content>

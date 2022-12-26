@@ -61,14 +61,14 @@ export class SimuladoModal {
             <ion-item class="modal-simulados__opcoes" mode="ios" lines="none" ds-color="neutral-15">
               <ion-label>2021 R1 SIM 01 - UNIFESP</ion-label>
             </ion-item>
-
-            <div class="modal-simulados__button-container">
-              <ion-button class="modal-simulados__button" mode="ios" ds-size="sm">
-                APLICAR
-              </ion-button>
-            </div>
           </div>
         </ion-content>
+
+        <ion-footer class="modal-footer">
+          <ion-button class="modal-footer__button" mode="ios" ds-size="sm">
+            APLICAR
+          </ion-button>
+        </ion-footer>
 
 
       </Host>

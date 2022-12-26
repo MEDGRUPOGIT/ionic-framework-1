@@ -10,7 +10,7 @@ export class ConcursoModal {
   render() {
     return (
       <Host>
-      <ion-header class="header">
+        <ion-header class="header">
           <div class="header__left">
             <div>
               <ion-button mode="ios" icon-only fill="clear" ds-size="xxs">
@@ -69,14 +69,14 @@ export class ConcursoModal {
               <ion-item class="modal-concursos__opcoes" mode="ios" lines="none" ds-color="neutral-15">
                 <ion-label>PUC - PR - ALIANÇA SAÚDE</ion-label>
               </ion-item>
-
-              <div class="modal-concursos__button-container">
-                <ion-button class="modal-concursos__button" mode="ios" ds-size="sm">
-                  APLICAR
-                </ion-button>
-              </div>
             </div>
         </ion-content>
+
+        <ion-footer class="modal-footer">
+          <ion-button class="modal-footer__button" mode="ios" ds-size="sm">
+            APLICAR
+          </ion-button>
+        </ion-footer>
       </Host>
     );
   }

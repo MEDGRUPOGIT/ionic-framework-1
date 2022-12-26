@@ -10,7 +10,7 @@ export class ApostilaModal {
   render() {
     return (
       <Host>
-         <ion-header class="header">
+        <ion-header class="header">
           <div class="header__left">
             <div>
               <ion-button mode="ios" icon-only fill="clear" ds-size="xxs">
@@ -69,16 +69,14 @@ export class ApostilaModal {
             <ion-item class="modal-apostilas__opcoes" mode="ios" lines="none" ds-color="neutral-15">
               <ion-label>PED 03</ion-label>
             </ion-item>
-
-            <div class="modal-apostilas__button-container">
-              <ion-button class="modal-apostilas__button" mode="ios" ds-size="sm">
-                APLICAR
-              </ion-button>
-            </div>
           </div>
         </ion-content>
 
-
+        <ion-footer class="modal-footer">
+          <ion-button class="modal-footer__button" mode="ios" ds-size="sm">
+            APLICAR
+          </ion-button>
+        </ion-footer>
       </Host>
     );
   }
