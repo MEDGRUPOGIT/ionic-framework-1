@@ -95,6 +95,17 @@
 
     .med-tooltip__content {
       top: 75% !important;
+
+      @include breakpoint-down('sm') {
+        top: 85% !important;
+      }
+    }
+  }
+
+  .med-tooltip__content {
+    @include breakpoint-down('sm') {
+      --min-width: 200px;
+      --max-width: 200px;
     }
   }
 
@@ -115,6 +126,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include breakpoint-down('sm') {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__bottom-left {
@@ -129,30 +145,11 @@
   &__like {
     margin-right: 8px;
   }
-}
 
-// Responsividade //
-
-@include breakpoint-down('sm') {
-  .card-duvidas {
-    .med-tooltip__content {
-      --min-width: 200px;
-      --max-width: 200px;
-    }
-
-    &__bottom {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    &__quantidade {
+  &__quantidade {
+    @include breakpoint-down('sm') {
       align-self: flex-end;
-    }
-
-    &__tolltip-imagem {
-      .med-tooltip__content {
-        top: 85% !important;
-      }
     }
   }
 }
+

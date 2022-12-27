@@ -201,11 +201,11 @@ const Template = () => {
               <div class="card-duvidas__bottom">
                 <div class="card-duvidas__bottom-left">
                   <ion-button class="card-duvidas__favorito" mode="ios" fill="clear" icon-only ds-size="xs" ds-color="fb-attention" @click="${createModalApostila}">
-                    <ion-icon slot="icon-only" class="med-icon" name="med-estrela"></ion-icon>
+                    <ion-icon slot="icon-only" class="med-icon med-color-feedback med-color-fb-attention fill" name="med-estrela"></ion-icon>
                   </ion-button>
                   <div class="button-like card-duvidas__like">
                     <ion-button mode="ios" fill="clear" icon-only ds-size="xs" @click="${createModalConcurso}">
-                      <ion-icon slot="icon-only" class="med-icon" name="med-positivo"></ion-icon>
+                      <ion-icon slot="icon-only" class="med-icon med-color-neutral med-color-neutral-10 fill" name="med-positivo"></ion-icon>
                       </ion-button>
                     <ion-label class="button-like__span" ds-color="neutral-10" token="p12"> 5 </ion-label>
                   </div>
@@ -271,11 +271,11 @@ const Template = () => {
               <div class="card-duvidas__bottom">
                 <div class="card-duvidas__bottom-left">
                   <ion-button class="card-duvidas__favorito" mode="ios" fill="clear" icon-only ds-size="xs" ds-color="fb-attention">
-                    <ion-icon slot="icon-only" class="med-icon" name="med-estrela"></ion-icon>
+                    <ion-icon slot="icon-only" class="med-icon med-color-feedback med-color-fb-attention" name="med-estrela"></ion-icon>
                   </ion-button>
                   <div class="button-like card-duvidas__like">
                     <ion-button mode="ios" fill="clear" icon-only ds-size="xs">
-                      <ion-icon slot="icon-only" class="med-icon" name="med-positivo"></ion-icon>
+                      <ion-icon slot="icon-only" class="med-icon med-color-neutral med-color-neutral-10" name="med-positivo"></ion-icon>
                       </ion-button>
                     <ion-label class="button-like__span" ds-color="neutral-10" token="p12"> 5 </ion-label>
                   </div>
@@ -341,11 +341,11 @@ const Template = () => {
               <div class="card-duvidas__bottom">
                 <div class="card-duvidas__bottom-left">
                   <ion-button class="card-duvidas__favorito" mode="ios" fill="clear" icon-only ds-size="xs" ds-color="fb-attention">
-                    <ion-icon slot="icon-only" class="med-icon" name="med-estrela"></ion-icon>
+                    <ion-icon slot="icon-only" class="med-icon med-color-feedback med-color-fb-attention" name="med-estrela"></ion-icon>
                   </ion-button>
                   <div class="button-like card-duvidas__like">
                     <ion-button mode="ios" fill="clear" icon-only ds-size="xs">
-                      <ion-icon slot="icon-only" class="med-icon" name="med-positivo"></ion-icon>
+                      <ion-icon slot="icon-only" class="med-icon med-color-neutral med-color-neutral-10" name="med-positivo"></ion-icon>
                       </ion-button>
                     <ion-label class="button-like__span" ds-color="neutral-10" token="p12"> 5 </ion-label>
                   </div>
@@ -411,11 +411,11 @@ const Template = () => {
               <div class="card-duvidas__bottom">
                 <div class="card-duvidas__bottom-left">
                   <ion-button class="card-duvidas__favorito" mode="ios" fill="clear" icon-only ds-size="xs" ds-color="fb-attention">
-                    <ion-icon slot="icon-only" class="med-icon" name="med-estrela"></ion-icon>
+                    <ion-icon slot="icon-only" class="med-icon med-color-feedback med-color-fb-attention" name="med-estrela"></ion-icon>
                   </ion-button>
                   <div class="button-like card-duvidas__like">
                     <ion-button mode="ios" fill="clear" icon-only ds-size="xs">
-                      <ion-icon slot="icon-only" class="med-icon" name="med-positivo"></ion-icon>
+                      <ion-icon slot="icon-only" class="med-icon med-color-neutral med-color-neutral-10" name="med-positivo"></ion-icon>
                       </ion-button>
                     <ion-label class="button-like__span" ds-color="neutral-10" token="p12"> 5 </ion-label>
                   </div>
@@ -481,11 +481,11 @@ const Template = () => {
               <div class="card-duvidas__bottom">
                 <div class="card-duvidas__bottom-left">
                   <ion-button class="card-duvidas__favorito" mode="ios" fill="clear" icon-only ds-size="xs" ds-color="fb-attention">
-                    <ion-icon slot="icon-only" class="med-icon" name="med-estrela"></ion-icon>
+                    <ion-icon slot="icon-only" class="med-icon med-color-feedback med-color-fb-attention" name="med-estrela"></ion-icon>
                   </ion-button>
                   <div class="button-like card-duvidas__like">
                     <ion-button mode="ios" fill="clear" icon-only ds-size="xs">
-                      <ion-icon slot="icon-only" class="med-icon" name="med-positivo"></ion-icon>
+                      <ion-icon slot="icon-only" class="med-icon med-color-neutral med-color-neutral-10" name="med-positivo"></ion-icon>
                       </ion-button>
                     <ion-label class="button-like__span" ds-color="neutral-10" token="p12"> 5 </ion-label>
                   </div>
