@@ -1,5 +1,5 @@
 .duvidas {
-  height: 100%;
+  height: calc(100% - 56px);
   position: relative;
 
   &__tab {
@@ -7,19 +7,19 @@
   }
 
   &__container {
-    height: calc(100% - 104px);
+    height: calc(100% - 48px);
     margin: 0 auto;
     padding: 32px 40px;
     width: 100%;
     max-width: 1096px;
-
+    overflow: scroll;
 
     @include breakpoint-down('sm') {
       padding: 24px;
     }
 
     &--user-select {
-      height: calc(100% - 152px);
+      height: calc(100% - 96px);
     }
   }
 
