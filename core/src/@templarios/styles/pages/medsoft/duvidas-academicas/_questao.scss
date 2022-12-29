@@ -4,7 +4,14 @@
   &__container {
     height: 100%;
     overflow: scroll;
-    padding: 16px 16px 75px 16px;
+    margin: 0 auto;
+    padding: 32px 40px 75px;
+    width: 100%;
+    max-width: 1096px;
+
+    @include breakpoint-down('sm') {
+      padding: 24px 24px 75px;
+    }
 
     &--user-select {
       height: calc(100% - 48px);
