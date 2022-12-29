@@ -3,10 +3,6 @@
   border-radius: 8px;
   overflow: hidden;
 
-  &:not(:last-child) {
-    margin-bottom: 16px;
-  }
-
   &--minha {
     .card-duvidas__badge {
       display: block;

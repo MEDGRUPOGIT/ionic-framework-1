@@ -153,7 +153,7 @@ const Template = () => {
           </div>
 
           <div class="duvidas__container duvidas__container--user-select">
-            <div class="card-duvidas">
+            <div class="card-duvidas duvidas__card">
               <div class="card-duvidas__top">
                 <ion-label class="card-duvidas__questao" token="p14x"> Em Questão 02 - 2018 UERJ </ion-label>
 
@@ -223,7 +223,7 @@ const Template = () => {
               </div>
             </div>
 
-            <div class="card-duvidas card-duvidas--mostra-pergunta card-duvidas--resposta-oficial">
+            <div class="card-duvidas card-duvidas--mostra-pergunta card-duvidas--resposta-oficial class="card-duvidas duvidas__card"">
               <div class="card-duvidas__top">
                 <ion-label class="card-duvidas__questao" token="p14x"> Em Questão 02 - 2018 UERJ </ion-label>
 
@@ -293,7 +293,7 @@ const Template = () => {
               </div>
             </div>
 
-            <div class="card-duvidas card-duvidas--menos-informacao">
+            <div class="card-duvidas card-duvidas--menos-informacao class="card-duvidas duvidas__card"">
               <div class="card-duvidas__top">
                 <ion-label class="card-duvidas__questao" token="p14x"> Em Questão 02 - 2018 UERJ </ion-label>
 
@@ -363,7 +363,7 @@ const Template = () => {
               </div>
             </div>
 
-            <div class="card-duvidas card-duvidas--minha">
+            <div class="card-duvidas card-duvidas--minha class="card-duvidas duvidas__card"">
               <div class="card-duvidas__top">
                 <ion-label class="card-duvidas__questao" token="p14x"> Em Questão 02 - 2018 UERJ </ion-label>
 
@@ -433,7 +433,7 @@ const Template = () => {
               </div>
             </div>
 
-            <div class="card-duvidas card-duvidas--minha card-duvidas--mostra-pergunta card-duvidas--resposta-oficial">
+            <div class="card-duvidas card-duvidas--minha card-duvidas--mostra-pergunta card-duvidas--resposta-oficial class="card-duvidas duvidas__card"">
               <div class="card-duvidas__top">
                 <ion-label class="card-duvidas__questao" token="p14x"> Em Questão 02 - 2018 UERJ </ion-label>
 

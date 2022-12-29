@@ -23,6 +23,12 @@
     }
   }
 
+  &__card {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
   &__button {
     --background: hsl(var(--med-color-brand-1));
     position: fixed;
