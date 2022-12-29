@@ -23,7 +23,7 @@ export class DenunciarModal {
         <ion-content class="modal-content">
           <div class="modal-denunciar">
             <ion-label class="modal-denunciar__title">
-              Denuciar dúvida
+              Denunciar dúvida
             </ion-label>
 
             <div class="modal-denunciar__list">
