@@ -78,6 +78,7 @@
     @include breakpoint-down('sm') {
       display: block;
       margin-top: auto;
+      padding-top: 40px;
     }
   }
 
