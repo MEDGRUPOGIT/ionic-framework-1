@@ -1021,7 +1021,8 @@ export const MedChartBar = /*@__PURE__*/ defineContainer<JSX.MedChartBar>('med-c
   'dsColor',
   'value',
   'height',
-  'width'
+  'width',
+  'noLabel'
 ]);
 
 
@@ -1324,6 +1325,11 @@ export const MedRating = /*@__PURE__*/ defineContainer<JSX.MedRating>('med-ratin
   'concurso',
   'texto',
   'cabe'
+]);
+
+
+export const MedSearchBar = /*@__PURE__*/ defineContainer<JSX.MedSearchBar>('med-search-bar', [
+  'dsColor'
 ]);
 
 

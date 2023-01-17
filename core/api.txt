@@ -1535,6 +1535,7 @@ med-cartao-resposta-lista,shadow
 med-chart-bar,shadow
 med-chart-bar,prop,dsColor,string | undefined,undefined,false,true
 med-chart-bar,prop,height,number,50,false,true
+med-chart-bar,prop,noLabel,boolean,false,false,true
 med-chart-bar,prop,value,number,0,false,true
 med-chart-bar,prop,width,number,32,false,true
 
@@ -1778,6 +1779,9 @@ med-rating,prop,dsColor,string | undefined,undefined,false,true
 med-rating,prop,dsName,"banca" | "medgrupo" | undefined,undefined,false,false
 med-rating,prop,nome,string | undefined,undefined,false,false
 med-rating,prop,texto,string | undefined,undefined,false,false
+
+med-search-bar,scoped
+med-search-bar,prop,dsColor,string | undefined,undefined,false,true
 
 med-segment,shadow
 

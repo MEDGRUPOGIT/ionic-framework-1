@@ -36,6 +36,8 @@ export class MedChartBar {
    */
   @Prop({ reflect: true }) width = 32;
 
+  @Prop({ reflect: true }) noLabel = false;
+
   componentDidLoad() {
     this.setSize();
   }
@@ -61,7 +63,7 @@ export class MedChartBar {
   render() {
     const { dsColor, value, height, width } = this;
 
-    const percentage = value === 0 ? height - 1 : height - ((height * value) / 100);
+    const percentage = value === 0 ? height : height - ((height * value) / 100);
 
     return (
       <Host
@@ -69,9 +71,11 @@ export class MedChartBar {
         style={{ '--value': `${percentage}`, '--height': `${height}`, '--width': `${width}` }}
       >
         <div class="med-chart-bar__container">
-          <div class="med-chart-bar__label">
-            <slot></slot>
-          </div>
+          {!this.noLabel && (
+            <div class="med-chart-bar__label">
+              <slot></slot>
+            </div>
+          )}
           <div class="med-chart-bar__progress"></div>
         </div>
       </Host>

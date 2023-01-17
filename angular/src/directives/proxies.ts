@@ -1220,8 +1220,8 @@ export class MedCartaoRespostaLista {
 }
 export declare interface MedChartBar extends Components.MedChartBar {
 }
-@ProxyCmp({ inputs: ["dsColor", "height", "value", "width"] })
-@Component({ selector: "med-chart-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "height", "value", "width"] })
+@ProxyCmp({ inputs: ["dsColor", "height", "noLabel", "value", "width"] })
+@Component({ selector: "med-chart-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "height", "noLabel", "value", "width"] })
 export class MedChartBar {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1655,6 +1655,17 @@ export declare interface MedRating extends Components.MedRating {
 @ProxyCmp({ inputs: ["cabe", "concurso", "data", "dsColor", "dsName", "nome", "texto"] })
 @Component({ selector: "med-rating", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["cabe", "concurso", "data", "dsColor", "dsName", "nome", "texto"] })
 export class MedRating {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface MedSearchBar extends Components.MedSearchBar {
+}
+@ProxyCmp({ inputs: ["dsColor"] })
+@Component({ selector: "med-search-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor"] })
+export class MedSearchBar {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();

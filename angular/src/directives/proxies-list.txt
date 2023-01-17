@@ -141,6 +141,7 @@ export const DIRECTIVES = [
   d.MedRateBar,
   d.MedRateLike,
   d.MedRating,
+  d.MedSearchBar,
   d.MedSegment,
   d.MedSemana,
   d.MedSemanas,
