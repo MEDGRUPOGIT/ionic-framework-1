@@ -262,16 +262,48 @@ Type: `Promise<void>`
 
 ### Used by
 
+ - [ajuda-modal](../@templarios/ionic-1-migracao/simulados/ajuda-modal)
+ - [apostila-modal](../@templarios/ionic-1-migracao/duvidas-academicas/apostila-modal)
+ - [aviso-modal](../@templarios/ionic-1-migracao/simulados/aviso-modal)
+ - [concurso-modal](../@templarios/ionic-1-migracao/duvidas-academicas/concurso-modal)
+ - [denunciar-modal](../@templarios/ionic-1-migracao/duvidas-academicas/denunciar-modal)
+ - [especialidade-modal](../@templarios/ionic-1-migracao/simulados/especialidade-modal)
+ - [excluir-modal](../@templarios/ionic-1-migracao/duvidas-academicas/excluir-modal)
+ - [filtro-modal](../@templarios/ionic-1-migracao/duvidas-academicas/filtro-modal)
+ - [informativo-modal](../@templarios/ionic-1-migracao/apostila/informativo-modal)
+ - [local-modal](../@templarios/ionic-1-migracao/simulados/local-modal)
  - [med-config](../@templarios/legacy/med-config)
  - [med-image-zoom](../@templarios/compositions/med-image-zoom)
+ - [medreader-pro-modal](../@templarios/ionic-1-migracao/apostila/medreader-pro-modal)
+ - [realizacoes-modal](../@templarios/ionic-1-migracao/simulados/realizacoes-modal)
  - [sheet-content-test](../@templarios/testes/sheet-content-test)
+ - [simulado-modal](../@templarios/ionic-1-migracao/duvidas-academicas/simulado-modal)
+ - [text-area-modal](../@templarios/ionic-1-migracao/duvidas-academicas/text-area-modal)
+ - [tutorial-modal](../@templarios/ionic-1-migracao/simulados/tutorial-modal)
+ - [unidades-modal](../@templarios/ionic-1-migracao/simulados/unidades-modal)
 
 ### Graph
 ```mermaid
 graph TD;
+  ajuda-modal --> ion-content
+  apostila-modal --> ion-content
+  aviso-modal --> ion-content
+  concurso-modal --> ion-content
+  denunciar-modal --> ion-content
+  especialidade-modal --> ion-content
+  excluir-modal --> ion-content
+  filtro-modal --> ion-content
+  informativo-modal --> ion-content
+  local-modal --> ion-content
   med-config --> ion-content
   med-image-zoom --> ion-content
+  medreader-pro-modal --> ion-content
+  realizacoes-modal --> ion-content
   sheet-content-test --> ion-content
+  simulado-modal --> ion-content
+  text-area-modal --> ion-content
+  tutorial-modal --> ion-content
+  unidades-modal --> ion-content
   style ion-content fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

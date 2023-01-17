@@ -1,0 +1,28 @@
+.button-qrcode {
+  width: 32px !important;
+  height: 32px !important;
+}
+
+.medcode {
+  background: hsl(var(--med-color-neutral-2));
+  height: calc(100% - 56px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__text {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__button {
+    width: 130px !important;
+    height: 130px;
+
+    .med-icon {
+      width: 90px;
+      height: 90px;
+    }
+  }
+}

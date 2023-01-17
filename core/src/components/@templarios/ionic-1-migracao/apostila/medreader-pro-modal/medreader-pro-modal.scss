@@ -1,0 +1,110 @@
+:host {
+  display: block;
+  border-radius: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: hsl(var(--med-color-neutral-1));
+  padding-top: calc(28px + var(--ion-safe-area-top));
+  padding-right: 40px;
+  padding-bottom: 28px;
+  padding-left: 40px;
+  max-height: 80px;
+
+  @include breakpoint-down('sm') {
+    padding-top: calc(24px + var(--ion-safe-area-top));
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    max-height: 72px;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.modal-content {
+  height: calc(100% - 80px);
+
+  @include breakpoint-down('sm') {
+    height: calc(100% - 72px);
+  }
+}
+
+.modal-medreader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 64px;
+
+  @include breakpoint-down('sm') {
+    height: 100%;
+    padding: 24px;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+
+  &__text-destaque {
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 600;
+  }
+
+  &__text-no-destaque {
+    font-size: 14px;
+    line-height: 28px;
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  &__middle {
+    margin-top: 24px;
+    padding: 16px;
+  }
+
+  &__item {
+    // retirar custom property e colocar radius="s08" na tag html
+    --border-radius: 8px;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    .med-icon {
+      // retirar. colocar gap="s16" na tag html do ion-item
+      margin-right: 16px;
+    }
+  }
+
+  &__button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+
+    @include breakpoint-down('sm') {
+      margin-top: auto;
+    }
+  }
+
+  &__button {
+    @include breakpoint-down('sm') {
+      flex: 1;
+    }
+  }
+}

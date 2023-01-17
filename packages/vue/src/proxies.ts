@@ -8,7 +8,34 @@ import type { JSX } from '@ionic/core';
 
 
 
+export const AjudaModal = /*@__PURE__*/ defineContainer<JSX.AjudaModal>('ajuda-modal');
+
+
+export const ApostilaModal = /*@__PURE__*/ defineContainer<JSX.ApostilaModal>('apostila-modal');
+
+
+export const AvisoModal = /*@__PURE__*/ defineContainer<JSX.AvisoModal>('aviso-modal');
+
+
+export const ConcursoModal = /*@__PURE__*/ defineContainer<JSX.ConcursoModal>('concurso-modal');
+
+
+export const DenunciarModal = /*@__PURE__*/ defineContainer<JSX.DenunciarModal>('denunciar-modal');
+
+
 export const DialogTest = /*@__PURE__*/ defineContainer<JSX.DialogTest>('dialog-test');
+
+
+export const EspecialidadeModal = /*@__PURE__*/ defineContainer<JSX.EspecialidadeModal>('especialidade-modal');
+
+
+export const ExcluirModal = /*@__PURE__*/ defineContainer<JSX.ExcluirModal>('excluir-modal');
+
+
+export const FiltroModal = /*@__PURE__*/ defineContainer<JSX.FiltroModal>('filtro-modal');
+
+
+export const InformativoModal = /*@__PURE__*/ defineContainer<JSX.InformativoModal>('informativo-modal');
 
 
 export const IonAvatar = /*@__PURE__*/ defineContainer<JSX.IonAvatar>('ion-avatar');
@@ -802,6 +829,9 @@ export const IonVirtualScroll = /*@__PURE__*/ defineContainer<JSX.IonVirtualScro
 ]);
 
 
+export const LocalModal = /*@__PURE__*/ defineContainer<JSX.LocalModal>('local-modal');
+
+
 export const MedAccordionItem = /*@__PURE__*/ defineContainer<JSX.MedAccordionItem>('med-accordion-item', [
   'dsColor',
   'noBorder',
@@ -991,7 +1021,8 @@ export const MedChartBar = /*@__PURE__*/ defineContainer<JSX.MedChartBar>('med-c
   'dsColor',
   'value',
   'height',
-  'width'
+  'width',
+  'noLabel'
 ]);
 
 
@@ -1083,15 +1114,13 @@ export const MedContextMenu = /*@__PURE__*/ defineContainer<JSX.MedContextMenu>(
 export const MedDownloadButton = /*@__PURE__*/ defineContainer<JSX.MedDownloadButton>('med-download-button', [
   'dsColor',
   'value',
-  'initial',
   'downloading',
   'downloaded',
   'index',
   'identification',
   'disabled',
-  'medDownloaded',
-  'medCancelar',
-  'medDownloading'
+  'dsSize',
+  'medDownloadRequested'
 ]);
 
 
@@ -1299,6 +1328,11 @@ export const MedRating = /*@__PURE__*/ defineContainer<JSX.MedRating>('med-ratin
 ]);
 
 
+export const MedSearchBar = /*@__PURE__*/ defineContainer<JSX.MedSearchBar>('med-search-bar', [
+  'dsColor'
+]);
+
+
 export const MedSegment = /*@__PURE__*/ defineContainer<JSX.MedSegment>('med-segment');
 
 
@@ -1382,6 +1416,12 @@ export const MedVote = /*@__PURE__*/ defineContainer<JSX.MedVote>('med-vote', [
 ]);
 
 
+export const MedreaderProModal = /*@__PURE__*/ defineContainer<JSX.MedreaderProModal>('medreader-pro-modal');
+
+
+export const RealizacoesModal = /*@__PURE__*/ defineContainer<JSX.RealizacoesModal>('realizacoes-modal');
+
+
 export const SelectTest = /*@__PURE__*/ defineContainer<JSX.SelectTest>('select-test');
 
 
@@ -1389,6 +1429,12 @@ export const SheetContentTest = /*@__PURE__*/ defineContainer<JSX.SheetContentTe
 
 
 export const SheetTest = /*@__PURE__*/ defineContainer<JSX.SheetTest>('sheet-test');
+
+
+export const SimuladoModal = /*@__PURE__*/ defineContainer<JSX.SimuladoModal>('simulado-modal');
+
+
+export const TextAreaModal = /*@__PURE__*/ defineContainer<JSX.TextAreaModal>('text-area-modal');
 
 
 export const TpInputContainer = /*@__PURE__*/ defineContainer<JSX.TpInputContainer>('tp-input-container', [
@@ -1399,4 +1445,10 @@ export const TpInputContainer = /*@__PURE__*/ defineContainer<JSX.TpInputContain
   'hasButton',
   'hasIcon'
 ]);
+
+
+export const TutorialModal = /*@__PURE__*/ defineContainer<JSX.TutorialModal>('tutorial-modal');
+
+
+export const UnidadesModal = /*@__PURE__*/ defineContainer<JSX.UnidadesModal>('unidades-modal');
 

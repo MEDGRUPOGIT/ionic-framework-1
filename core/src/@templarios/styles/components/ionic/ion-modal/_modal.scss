@@ -8,7 +8,23 @@
 
   ion-backdrop {
     --ion-backdrop-color: hsl(var(--med-color-neutral-1)) !important;
-    --backdrop-opacity: 0.8 !important;
+    --backdrop-opacity: 0.9 !important;
+  }
+}
+
+@include platform('mac') {
+  .tp-modal {
+    ion-backdrop {
+      background: rgba(0, 0, 0, 0.8)
+    }
+  }
+}
+
+@include platform('windows') {
+  .tp-modal {
+    ion-backdrop {
+      background: rgba(0, 0, 0, 0.8)
+    }
   }
 }
 

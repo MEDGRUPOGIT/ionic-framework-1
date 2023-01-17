@@ -484,6 +484,19 @@ export default defineComponent({
 | `--handle-width`              | Width of the toggle handle                   |
 
 
+## Dependencies
+
+### Used by
+
+ - [filtro-modal](../@templarios/ionic-1-migracao/duvidas-academicas/filtro-modal)
+
+### Graph
+```mermaid
+graph TD;
+  filtro-modal --> ion-toggle
+  style ion-toggle fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

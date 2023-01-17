@@ -1,0 +1,89 @@
+.questao {
+  height: calc(100% - 56px);
+
+  &__container {
+    height: 100%;
+    overflow: scroll;
+    margin: 0 auto;
+    padding: 32px 40px 75px;
+    width: 100%;
+    max-width: 1096px;
+
+    @include breakpoint-down('sm') {
+      padding: 24px 24px 75px;
+    }
+
+    &--user-select {
+      height: calc(100% - 48px);
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  &__subtitle {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  &__question {
+    margin-bottom: 16px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  &__card-duvidas {
+    margin-bottom: 24px;
+  }
+
+  &__card-resposta {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__encaminhar {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+}
+
+// med-context-menu //
+
+.med-context-menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.med-context-menu__item {
+  padding-right: 16px;
+  display: flex;
+  align-items: center;
+  transition: color 300ms ease-out;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.med-context-menu__item:hover {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+.med-context-menu__icon {
+  width: 24px;
+  margin-right: 8px;
+  stroke: hsl(var(--med-color-neutral-10));
+}

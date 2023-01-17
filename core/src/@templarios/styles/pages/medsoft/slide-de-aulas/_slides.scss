@@ -1,0 +1,17 @@
+.slides {
+  height: calc(100% - 104px);
+  padding: 16px;
+
+  &__content {
+    height: 95%;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  &__contador {
+    text-align: center;
+    margin-top: 8px;
+  }
+}

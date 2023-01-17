@@ -75,6 +75,7 @@ export const MedIcons = [
   'med-busca',
   'med-cadeado',
 
+  'med-cards',
   'med-cartao-resposta',
   'med-cartao',
   'med-chart3',
@@ -83,6 +84,8 @@ export const MedIcons = [
 
   'med-checkcirculo',
   'med-chevron-left',
+  'med-chevronx2-left',
+  'med-chevronx2-right',
   'med-cima',
   'med-close',
 
@@ -93,6 +96,7 @@ export const MedIcons = [
 
   'med-contribuicao',
   'med-covid',
+  'med-customize',
   'med-cronograma',
   'med-direita',
 
@@ -156,6 +160,7 @@ export const MedIcons = [
 
   'med-linkexterno',
   'med-lixeira',
+  'med-logincode',
   'med-logo',
   'med-main',
 
@@ -240,8 +245,10 @@ export const MedIcons = [
 
   'med-top-temas',
   'med-trabalho',
+  'med-trendingup',
   'med-trofeu',
   'med-usuario',
+  'med-viagens',
   'med-video',
   'med-visivel',
 ];

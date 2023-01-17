@@ -1,0 +1,9 @@
+.button-like {
+  position: relative;
+
+  &__span {
+    position: absolute;
+    top: 4px;
+    right: 2px;
+  }
+}

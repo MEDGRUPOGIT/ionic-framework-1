@@ -630,7 +630,7 @@ ion-back-button[ds-color=fb-success][fill=clear][disabled] {
 }
 
 ion-badge {
-  --background: hsl(var(--med-color-brand-3));
+  --background: hsl(var(--med-color-brand-2));
   --padding-top: 6px;
   --padding-bottom: 6px;
   --padding-start: 8px;
@@ -638,6 +638,7 @@ ion-badge {
   font-weight: 600;
   font-size: 10px;
   line-height: 12px;
+  border-radius: 4px;
 }
 
 ion-badge[ds-size=md] {
@@ -653,68 +654,68 @@ ion-badge[ds-size=md] {
 
 ion-badge[fill=outline] {
   --background: transparent;
-  --color: hsl(var(--med-color-brand-3));
-  border: 1px solid hsl(var(--med-color-brand-3));
+  --color: hsl(var(--med-color-brand-2));
+  border: 1px solid hsl(var(--med-color-brand-2));
 }
 
 ion-badge[ds-color=brand] {
-  --background: hsl(var(--med-color-brand-3));
+  --background: hsl(var(--med-color-brand-2));
   --color: hsl(var(--med-color-neutral-10));
 }
 ion-badge[ds-color=brand][fill=outline] {
   --background: transparent;
-  --color: hsl(var(--med-color-brand-3));
-  border: 1px solid hsl(var(--med-color-brand-3));
+  --color: hsl(var(--med-color-brand-2));
+  border: 1px solid hsl(var(--med-color-brand-2));
 }
 
 ion-badge[ds-color=aula] {
-  --background: hsl(var(--med-color-aula-3));
+  --background: hsl(var(--med-color-aula-2));
   --color: hsl(var(--med-color-neutral-10));
 }
 ion-badge[ds-color=aula][fill=outline] {
   --background: transparent;
-  --color: hsl(var(--med-color-aula-3));
-  border: 1px solid hsl(var(--med-color-aula-3));
+  --color: hsl(var(--med-color-aula-2));
+  border: 1px solid hsl(var(--med-color-aula-2));
 }
 
 ion-badge[ds-color=material] {
-  --background: hsl(var(--med-color-material-3));
+  --background: hsl(var(--med-color-material-2));
   --color: hsl(var(--med-color-neutral-10));
 }
 ion-badge[ds-color=material][fill=outline] {
   --background: transparent;
-  --color: hsl(var(--med-color-material-3));
-  border: 1px solid hsl(var(--med-color-material-3));
+  --color: hsl(var(--med-color-material-2));
+  border: 1px solid hsl(var(--med-color-material-2));
 }
 
 ion-badge[ds-color=questoes] {
-  --background: hsl(var(--med-color-questoes-3));
+  --background: hsl(var(--med-color-questoes-2));
   --color: hsl(var(--med-color-neutral-10));
 }
 ion-badge[ds-color=questoes][fill=outline] {
   --background: transparent;
-  --color: hsl(var(--med-color-questoes-3));
-  border: 1px solid hsl(var(--med-color-questoes-3));
+  --color: hsl(var(--med-color-questoes-2));
+  border: 1px solid hsl(var(--med-color-questoes-2));
 }
 
 ion-badge[ds-color=revalida] {
-  --background: hsl(var(--med-color-revalida-3));
+  --background: hsl(var(--med-color-revalida-2));
   --color: hsl(var(--med-color-neutral-10));
 }
 ion-badge[ds-color=revalida][fill=outline] {
   --background: transparent;
-  --color: hsl(var(--med-color-revalida-3));
-  border: 1px solid hsl(var(--med-color-revalida-3));
+  --color: hsl(var(--med-color-revalida-2));
+  border: 1px solid hsl(var(--med-color-revalida-2));
 }
 
 ion-badge[ds-color=provas] {
-  --background: hsl(var(--med-color-provas-3));
+  --background: hsl(var(--med-color-provas-2));
   --color: hsl(var(--med-color-neutral-10));
 }
 ion-badge[ds-color=provas][fill=outline] {
   --background: transparent;
-  --color: hsl(var(--med-color-provas-3));
-  border: 1px solid hsl(var(--med-color-provas-3));
+  --color: hsl(var(--med-color-provas-2));
+  border: 1px solid hsl(var(--med-color-provas-2));
 }
 
 ion-badge[ds-color=neutral-1] {
@@ -984,7 +985,7 @@ ion-button ion-icon[slot=end] {
 }
 ion-button[disabled] {
   --background: hsl(var(--med-color-neutral-3));
-  --color: hsl(var(--med-color-neutral-5));
+  --color: hsl(var(--med-color-neutral-5)) !important;
   opacity: 1;
 }
 ion-button[disabled] ion-icon {
@@ -993,6 +994,7 @@ ion-button[disabled] ion-icon {
 
 ion-button.button {
   background-color: transparent !important;
+  color: var(--color);
 }
 
 ion-button[ds-size=sm] {
@@ -2677,6 +2679,9 @@ ion-button[fill=clear].ion-activated ion-icon {
 }
 ion-button[fill=clear].ion-focused ion-icon {
   stroke: var(--color-focused);
+}
+ion-button[fill=clear]:hover {
+  color: var(--color-hover);
 }
 ion-button[fill=clear]:hover ion-icon {
   stroke: var(--color-hover);
@@ -5841,11 +5846,131 @@ tp-input-container[ds-color=neutral-95] ion-button:hover .med-icon {
   stroke: var(--color);
 }
 
+ion-input[ds-color=neutral-1] {
+  --color: hsl(var(--med-color-neutral-10));
+  --background: hsl(var(--med-color-neutral-1));
+  --placeholder-color: hsl(var(--med-color-neutral-10));
+}
+
+ion-input[ds-color=neutral-2] {
+  --color: hsl(var(--med-color-neutral-10));
+  --background: hsl(var(--med-color-neutral-2));
+  --placeholder-color: hsl(var(--med-color-neutral-10));
+}
+
+ion-input[ds-color=neutral-3] {
+  --color: hsl(var(--med-color-neutral-10));
+  --background: hsl(var(--med-color-neutral-3));
+  --placeholder-color: hsl(var(--med-color-neutral-10));
+}
+
+ion-input[ds-color=neutral-4] {
+  --color: hsl(var(--med-color-neutral-10));
+  --background: hsl(var(--med-color-neutral-4));
+  --placeholder-color: hsl(var(--med-color-neutral-10));
+}
+
+ion-input[ds-color=neutral-5] {
+  --color: hsl(var(--med-color-neutral-10));
+  --background: hsl(var(--med-color-neutral-5));
+  --placeholder-color: hsl(var(--med-color-neutral-10));
+}
+
+ion-input[ds-color=neutral-6] {
+  --color: hsl(var(--med-color-neutral-1));
+  --background: hsl(var(--med-color-neutral-6));
+  --placeholder-color: hsl(var(--med-color-neutral-1));
+}
+
+ion-input[ds-color=neutral-7] {
+  --color: hsl(var(--med-color-neutral-1));
+  --background: hsl(var(--med-color-neutral-7));
+  --placeholder-color: hsl(var(--med-color-neutral-1));
+}
+
+ion-input[ds-color=neutral-8] {
+  --color: hsl(var(--med-color-neutral-1));
+  --background: hsl(var(--med-color-neutral-8));
+  --placeholder-color: hsl(var(--med-color-neutral-1));
+}
+
+ion-input[ds-color=neutral-9] {
+  --color: hsl(var(--med-color-neutral-1));
+  --background: hsl(var(--med-color-neutral-9));
+  --placeholder-color: hsl(var(--med-color-neutral-1));
+}
+
+ion-input[ds-color=neutral-10] {
+  --color: hsl(var(--med-color-neutral-1));
+  --background: hsl(var(--med-color-neutral-10));
+  --placeholder-color: hsl(var(--med-color-neutral-1));
+}
+
+ion-input[ds-color=neutral-15] {
+  --color: hsl(var(--med-color-neutral-10));
+  --background: hsl(var(--med-color-neutral-1));
+  --placeholder-color: hsl(var(--med-color-neutral-10));
+}
+
+ion-input[ds-color=neutral-25] {
+  --color: hsl(var(--med-color-neutral-10));
+  --background: hsl(var(--med-color-neutral-2));
+  --placeholder-color: hsl(var(--med-color-neutral-10));
+}
+
+ion-input[ds-color=neutral-35] {
+  --color: hsl(var(--med-color-neutral-10));
+  --background: hsl(var(--med-color-neutral-3));
+  --placeholder-color: hsl(var(--med-color-neutral-10));
+}
+
+ion-input[ds-color=neutral-45] {
+  --color: hsl(var(--med-color-neutral-10));
+  --background: hsl(var(--med-color-neutral-4));
+  --placeholder-color: hsl(var(--med-color-neutral-10));
+}
+
+ion-input[ds-color=neutral-55] {
+  --color: hsl(var(--med-color-neutral-10));
+  --background: hsl(var(--med-color-neutral-5));
+  --placeholder-color: hsl(var(--med-color-neutral-10));
+}
+
+ion-input[ds-color=neutral-65] {
+  --color: hsl(var(--med-color-neutral-1));
+  --background: hsl(var(--med-color-neutral-6));
+  --placeholder-color: hsl(var(--med-color-neutral-1));
+}
+
+ion-input[ds-color=neutral-75] {
+  --color: hsl(var(--med-color-neutral-1));
+  --background: hsl(var(--med-color-neutral-7));
+  --placeholder-color: hsl(var(--med-color-neutral-1));
+}
+
+ion-input[ds-color=neutral-85] {
+  --color: hsl(var(--med-color-neutral-1));
+  --background: hsl(var(--med-color-neutral-8));
+  --placeholder-color: hsl(var(--med-color-neutral-1));
+}
+
+ion-input[ds-color=neutral-95] {
+  --color: hsl(var(--med-color-neutral-1));
+  --background: hsl(var(--med-color-neutral-9));
+  --placeholder-color: hsl(var(--med-color-neutral-1));
+}
+
 tp-input-container[ds-color=fb-attention] {
   --color: hsl(var(--med-color-neutral-1));
 }
 tp-input-container[ds-color=fb-attention] ion-button:hover .med-icon {
   stroke: var(--color);
+}
+
+ion-input[ds-color=fb-attention] {
+  --color: hsl(var(--med-color-neutral-1));
+  --placeholder-color: hsl(var(--med-color-neutral-1));
+  --background: hsl(var(--med-color-fb-attention));
 }
 
 tp-input-container[ds-color=fb-caution] {
@@ -5855,6 +5980,12 @@ tp-input-container[ds-color=fb-caution] ion-button:hover .med-icon {
   stroke: var(--color);
 }
 
+ion-input[ds-color=fb-caution] {
+  --color: hsl(var(--med-color-neutral-1));
+  --placeholder-color: hsl(var(--med-color-neutral-1));
+  --background: hsl(var(--med-color-fb-caution));
+}
+
 tp-input-container[ds-color=fb-warning] {
   --color: hsl(var(--med-color-neutral-1));
 }
@@ -5862,11 +5993,23 @@ tp-input-container[ds-color=fb-warning] ion-button:hover .med-icon {
   stroke: var(--color);
 }
 
+ion-input[ds-color=fb-warning] {
+  --color: hsl(var(--med-color-neutral-1));
+  --placeholder-color: hsl(var(--med-color-neutral-1));
+  --background: hsl(var(--med-color-fb-warning));
+}
+
 tp-input-container[ds-color=fb-success] {
   --color: hsl(var(--med-color-neutral-1));
 }
 tp-input-container[ds-color=fb-success] ion-button:hover .med-icon {
   stroke: var(--color);
+}
+
+ion-input[ds-color=fb-success] {
+  --color: hsl(var(--med-color-neutral-1));
+  --placeholder-color: hsl(var(--med-color-neutral-1));
+  --background: hsl(var(--med-color-fb-success));
 }
 
 ion-item {
@@ -7268,7 +7411,15 @@ ion-list[ds-color=fb-success] ion-item ion-icon {
 }
 .tp-modal ion-backdrop {
   --ion-backdrop-color: hsl(var(--med-color-neutral-1)) !important;
-  --backdrop-opacity: 0.8 !important;
+  --backdrop-opacity: 0.9 !important;
+}
+
+.plt-desktop .platform-macintel .tp-modal ion-backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.plt-electron.plt-desktop .tp-modal ion-backdrop {
+  background: rgba(0, 0, 0, 0.8);
 }
 
 @media (min-width: 576px) {
@@ -9051,6 +9202,12 @@ ion-select[ds-color=fb-success][ds-name=secondary] {
   background: hsl(var(--med-color-fb-success));
 }
 
+ion-skeleton-text {
+  --border-radius: 4px;
+  margin: 0;
+  background-image: linear-gradient(to right, hsl(var(--med-color-neutral-15)) 8%, hsl(var(--med-color-neutral-2)) 18%, hsl(var(--med-color-neutral-15)) 33%);
+}
+
 ion-tab-bar {
   --background: hsl(var(--med-color-neutral-1));
   padding: 8px 12px;
@@ -9505,11 +9662,14 @@ ion-textarea.sc-ion-textarea-md-h {
   --padding-top: 12px;
   --placeholder-color: hsl(var(--med-color-neutral-5));
   --placeholder-opacity: 1;
+  --height: auto;
   margin-top: 0px;
   font-size: 14px;
   border-radius: 8px;
+  height: var(--height);
 }
 ion-textarea.sc-ion-textarea-md-h .sc-ion-textarea-md {
+  height: var(--height);
   min-height: 80px;
 }
 
@@ -10242,11 +10402,12 @@ ion-toggle[ds-color=fb-success] {
 }
 
 .tp-scroll {
-  --tp-scroll-color: hsl(var(--med-color-brand-3));
+  --tp-scroll-color: hsl(var(--med-color-neutral-3));
   scroll-snap-type: both mandatory;
   scroll-padding-top: 30px;
   scroll-behavior: smooth;
   color: inherit;
+  overflow: auto;
 }
 .tp-scroll:hover::-webkit-scrollbar-thumb {
   color: var(--tp-scroll-color);
@@ -10286,6 +10447,40 @@ ion-toggle[ds-color=fb-success] {
   background-color: transparent;
 }
 
+[tp-search-bar].sc-ion-searchbar-md-h {
+  --background: transparent !important;
+  --color: hsl(var(--med-color-neutral-10)) !important;
+  --placeholder-color: hsl(var(--med-color-neutral-3)) !important;
+  --placeholder-opacity: 1 !important;
+  height: 72px;
+  padding: 0px !important;
+}
+
+[tp-search-bar] .searchbar-input.sc-ion-searchbar-md {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  height: 72px;
+  padding-inline-start: 0 !important;
+  padding-inline-end: 0 !important;
+}
+
+[tp-search-bar] .searchbar-input-container.sc-ion-searchbar-md {
+  height: 72px;
+}
+
+[tp-search-bar] .searchbar-search-icon.sc-ion-searchbar-md {
+  display: none !important;
+}
+
+[tp-search-bar] .searchbar-clear-button.sc-ion-searchbar-md {
+  display: none !important;
+}
+
+[tp-search-bar] .searchbar-clear-icon.sc-ion-searchbar-md {
+  display: none !important;
+}
+
 .tp-sheet {
   --background: hsl(var(--med-color-neutral-2)) !important;
   --border-radius: 15px 15px 0 0 !important;
@@ -10294,7 +10489,7 @@ ion-toggle[ds-color=fb-success] {
   padding-bottom: var(--ion-safe-area-bottom) !important;
 }
 .tp-sheet .modal-wrapper {
-  position: fixed !important;
+  position: absolute !important;
   bottom: 0 !important;
   max-height: 90vh !important;
   overflow: auto !important;

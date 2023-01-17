@@ -1,9 +1,12 @@
 .tp-scroll {
-  --tp-scroll-color: hsl(var(--med-color-brand-3));
+  --tp-scroll-color: hsl(var(--med-color-neutral-3));
+
   scroll-snap-type: both mandatory;
   scroll-padding-top: 30px;
   scroll-behavior: smooth;
   color: inherit;
+  overflow: auto;
+
   &:hover::-webkit-scrollbar-thumb {
     color: var(--tp-scroll-color);
   }

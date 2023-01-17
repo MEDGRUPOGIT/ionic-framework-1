@@ -6,12 +6,12 @@
 
 .swiper-pagination-bullet {
   background: transparent;
-  border: 1px solid color('neutral','10');
+  border: 1px solid color('neutral', '10');
 }
 
 .swiper-pagination-bullet-active {
   border: none;
-  background: color('neutral','10');
+  background: color('neutral', '10') !important;
 }
 
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {

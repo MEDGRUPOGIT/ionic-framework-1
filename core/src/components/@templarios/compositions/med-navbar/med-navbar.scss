@@ -2,6 +2,7 @@
   --background: #{color('neutral', '1')};
   --main-color: #{color('neutral', '1', 'contrast')};
   --subtitle-color: #{color('brand', '4')};
+  --height: 48px;
 }
 
 :host(.med-navbar) {
@@ -19,7 +20,7 @@
       align-items: center;
       justify-content: space-between;
       box-sizing: border-box;
-      min-height: 48px;
+      min-height: var(--height);
     }
 
     &__left,

@@ -1,0 +1,15 @@
+.video {
+  background: hsl(var(--med-color-neutral-1));
+  height: calc(100% - 104px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+
+  &__player {
+    width: 100%;
+    // height: auto;
+    height: 70%;
+    background: hsl(var(--med-color-neutral-3));
+  }
+}

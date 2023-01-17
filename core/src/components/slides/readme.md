@@ -853,12 +853,18 @@ Type: `Promise<void>`
 
 ### Used by
 
+ - [ajuda-modal](../@templarios/ionic-1-migracao/simulados/ajuda-modal)
+ - [informativo-modal](../@templarios/ionic-1-migracao/apostila/informativo-modal)
  - [med-image-zoom](../@templarios/compositions/med-image-zoom)
+ - [tutorial-modal](../@templarios/ionic-1-migracao/simulados/tutorial-modal)
 
 ### Graph
 ```mermaid
 graph TD;
+  ajuda-modal --> ion-slides
+  informativo-modal --> ion-slides
   med-image-zoom --> ion-slides
+  tutorial-modal --> ion-slides
   style ion-slides fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

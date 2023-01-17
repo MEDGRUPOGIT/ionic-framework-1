@@ -1,6 +1,6 @@
 :host {
-  --color-1: #{color('brand', '4')};
-  --color-2: #{color('neutral', '2')};
+  --color-1: #{color('neutral', '10')};
+  --color-2: #{color('neutral', '10')};
   --padding: 5px;
 }
 
@@ -71,16 +71,29 @@
 // dsColor
 //////////////////////////////
 
-:host(.med-color) {
+:host(.med-color.med-download-button--downloading) {
   --color-1: #{curr-color('color', '4')};
   --color-2: #{curr-color('color', '2')};
 }
 
-:host(.med-color-neutral) {
+:host(.med-color.med-download-button--downloaded) {
+  --color-1: #{curr-color('color', '4')};
+  --color-2: #{curr-color('color', '2')};
+}
+
+:host(.med-color-neutral.med-download-button--downloading) {
   --color-1: #{curr-color('neutral')};
 }
 
-:host(.med-color-feedback) {
+:host(.med-color-neutral.med-download-button--downloaded) {
+  --color-1: #{curr-color('neutral')};
+}
+
+:host(.med-color-feedback.med-download-button--downloading) {
+  --color-1: #{curr-color('feedback')};
+}
+
+:host(.med-color-feedback.med-download-button--downloaded) {
   --color-1: #{curr-color('feedback')};
 }
 
@@ -88,46 +101,103 @@
 // state
 //////////////////////////////
 
-:host(.med-download-button--downloading) .med-download-button {
-  &__icon {
-    &::after {
-      background: transparent;
+:host(.med-download-button--downloading)  {
+  --color-1: #{color('brand', '4')};
+  --color-2: #{color('neutral', '2')};
+
+  .med-download-button {
+    &__icon {
+      &::after {
+        background: transparent;
+      }
+
+      &::before {
+        transform: rotate(0deg);
+        transform-origin: center;
+        width: 5px;
+        height: 5px;
+        border: 0;
+        background: var(--color-1);
+        border-bottom: 0;
+        border-right: 0;
+      }
     }
 
-    &::before {
-      transform: rotate(0deg);
-      transform-origin: center;
-      width: 5px;
-      height: 5px;
-      border: 0;
-      background: var(--color-1);
-      border-bottom: 0;
-      border-right: 0;
-    }
-  }
-
-  &__circle {
-    &--value {
-      stroke-dasharray: var(--value) 100;
+    &__circle {
+      &--value {
+        stroke-dasharray: var(--value) 100;
+      }
     }
   }
 }
 
-:host(.med-download-button--downloaded) .med-download-button {
-  &__icon {
-    background: var(--color-1);
+:host(.med-download-button--downloaded) {
+  --color-1: #{color('brand', '4')};
+  --color-2: #{color('neutral', '2')};
+
+  .med-download-button {
+    &__icon {
+      background: var(--color-1);
+
+      &::after {
+        background: var(--color-2);
+      }
+
+      &::before {
+        border-bottom: 1px solid var(--color-2);
+        border-right: 1px solid var(--color-2);
+      }
+
+      &__circle {
+        transform-origin: revert;
+      }
+    }
+  }
+}
+
+//////////////////////////////
+// dsSize
+//////////////////////////////
+
+:host(.med-download-button--lg) {
+  .med-download-button__icon {
+    position: relative;
+    width: 24px;
+    height: 24px;
 
     &::after {
-      background: var(--color-2);
+      width: 2px;
+      height: 9px;
     }
 
     &::before {
-      border-bottom: 1px solid var(--color-2);
-      border-right: 1px solid var(--color-2);
+      width: 6px;
+      height: 6px;
+      left: 8px;
+      border-bottom: 2px solid var(--color-1);
+      border-right: 2px solid var(--color-1);
     }
+  }
+}
 
-    &__circle {
-      transform-origin: revert;
+///////////////////
+// state
+///////////////////
+
+:host(.med-download-button--downloading.med-download-button--lg) {
+  .med-download-button__icon {
+    &::before {
+      width: 6px;
+      height: 6px;
+    }
+  }
+}
+
+:host(.med-download-button--downloaded.med-download-button--lg) {
+  .med-download-button__icon {
+    &::before {
+      border-bottom: 2px solid var(--color-2);
+      border-right: 2px solid var(--color-2);
     }
   }
 }

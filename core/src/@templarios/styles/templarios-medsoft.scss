@@ -1,0 +1,64 @@
+//
+// utuilizado apenas nas estórias
+//
+
+
+//
+// abstracts
+//
+@import "./variables/breakpoints";
+@import "./variables/color-ionic";
+@import "./variables/components";
+
+@import "./functions/breakpoints";
+@import "./functions/color-ionic";
+
+@import "./mixins/breakpoints";
+@import "./mixins/color-ionic";
+@import "./mixins/devices";
+
+//
+// medsoft
+//
+@import "./pages/medsoft/global";
+
+// medcode
+@import "./pages/medsoft/medcode/erratas";
+@import "./pages/medsoft/medcode/page";
+@import "./pages/medsoft/medcode/video";
+
+// slide de aulas
+@import "./pages/medsoft/slide-de-aulas/aulas";
+@import "./pages/medsoft/slide-de-aulas/page";
+@import "./pages/medsoft/slide-de-aulas/product-select";
+@import "./pages/medsoft/slide-de-aulas/slides";
+
+// simulados
+@import "./pages/medsoft/simulados/page";
+@import "./pages/medsoft/simulados/resumo";
+
+// concursos na integra
+@import "./pages/medsoft/concursos-na-integra/concurso";
+@import "./pages/medsoft/concursos-na-integra/desempenho";
+@import "./pages/medsoft/concursos-na-integra/page";
+@import "./pages/medsoft/concursos-na-integra/pesquisa";
+
+// dúvidas acadêmicas
+@import "./pages/medsoft/duvidas-academicas/button-filter";
+@import "./pages/medsoft/duvidas-academicas/button-like";
+@import "./pages/medsoft/duvidas-academicas/button-quantidade";
+@import "./pages/medsoft/duvidas-academicas/card-duvidas";
+@import "./pages/medsoft/duvidas-academicas/card-resposta";
+@import "./pages/medsoft/duvidas-academicas/page";
+@import "./pages/medsoft/duvidas-academicas/questao";
+@import "./pages/medsoft/duvidas-academicas/question";
+@import "./pages/medsoft/duvidas-academicas/sem-duvidas";
+
+// apostila
+@import "./pages/medsoft/apostila/busca-apostila";
+@import "./pages/medsoft/apostila/historico";
+@import "./pages/medsoft/apostila/indice";
+@import "./pages/medsoft/apostila/page";
+@import "./pages/medsoft/apostila/user-selector";
+@import "./pages/medsoft/apostila/postar-duvida";
+@import "./pages/medsoft/apostila/user-selector";

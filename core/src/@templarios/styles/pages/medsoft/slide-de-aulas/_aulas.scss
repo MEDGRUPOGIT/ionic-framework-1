@@ -1,0 +1,106 @@
+.aulas {
+  height: calc(100% - 104px);
+  overflow: scroll;
+  padding: 16px;
+
+  &__item {
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &--avaliando {
+      .aulas {
+        &__observacao-container {
+          display: block;
+        }
+
+        &__button {
+          display: none;
+
+          &--avaliar {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    &--avaliada {
+      .aulas {
+        &__middle {
+          display: none;
+        }
+
+        &__button {
+          display: none;
+        }
+
+        &__image {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    margin-bottom: 16px;
+  }
+
+  &__avatar {
+    margin-right: 16px;
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__middle {
+    margin-bottom: 16px;
+    padding: 0 !important;
+  }
+
+  &__avaliar-container {
+    display: flex;
+  }
+
+  &__button-avaliar {
+    flex: 1;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__observacao-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    display: none;
+  }
+
+  &__erro {
+    margin-top: 8px;
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button {
+    &--avaliar {
+      display: none;
+    }
+  }
+
+  &__image {
+    max-width: 100px;
+    max-height: 100px;
+    display: none;
+    margin-left: auto;
+  }
+}

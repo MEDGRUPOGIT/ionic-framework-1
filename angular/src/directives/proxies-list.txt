@@ -2,7 +2,16 @@
 import type * as d from './proxies';
 
 export const DIRECTIVES = [
+  d.AjudaModal,
+  d.ApostilaModal,
+  d.AvisoModal,
+  d.ConcursoModal,
+  d.DenunciarModal,
   d.DialogTest,
+  d.EspecialidadeModal,
+  d.ExcluirModal,
+  d.FiltroModal,
+  d.InformativoModal,
   d.IonApp,
   d.IonAvatar,
   d.IonBackButton,
@@ -74,6 +83,7 @@ export const DIRECTIVES = [
   d.IonTitle,
   d.IonToggle,
   d.IonToolbar,
+  d.LocalModal,
   d.MedAccordionItem,
   d.MedAccordionList,
   d.MedAddCard,
@@ -131,6 +141,7 @@ export const DIRECTIVES = [
   d.MedRateBar,
   d.MedRateLike,
   d.MedRating,
+  d.MedSearchBar,
   d.MedSegment,
   d.MedSemana,
   d.MedSemanas,
@@ -142,8 +153,14 @@ export const DIRECTIVES = [
   d.MedType,
   d.MedVideoThumbnail,
   d.MedVote,
+  d.MedreaderProModal,
+  d.RealizacoesModal,
   d.SelectTest,
   d.SheetContentTest,
   d.SheetTest,
-  d.TpInputContainer
+  d.SimuladoModal,
+  d.TextAreaModal,
+  d.TpInputContainer,
+  d.TutorialModal,
+  d.UnidadesModal
 ];

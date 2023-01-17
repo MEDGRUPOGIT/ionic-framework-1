@@ -43,7 +43,10 @@ export class MedQuestion {
           'med-question--collapsed': collapsed
         },)}
         onClick={(event: any) => {this.toggle(event)}}>
-          <div class="med-question__text" innerHTML={texto}></div>
+          {texto && <div class="med-question__text" innerHTML={texto}></div>}
+          <div class="med-question__text">
+            <slot></slot>
+          </div>
           <ion-icon class="med-icon med-question__icon" name="med-baixo"></ion-icon>
       </Host>
     );

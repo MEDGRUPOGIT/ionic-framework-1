@@ -1,4 +1,4 @@
-import { Component, Event, EventEmitter, h, Host, Prop, Watch } from '@stencil/core';
+import { Component, Event, EventEmitter, h, Host, Prop } from '@stencil/core';
 import { MedColor } from '../../../../@templarios/types/color.type';
 import { generateMedColor } from '../../../../@templarios/utilities/color';
 
@@ -17,30 +17,25 @@ export class MedDownloadButton {
   /**
    * todo
    */
-  @Prop({ reflect: true }) value = 0;
+  @Prop({ reflect: true, mutable: true }) value = 0;
 
   /**
    * todo
    */
-  @Prop({ reflect: true, mutable: true }) initial = true;
+  @Prop({ reflect: true, mutable: true }) downloading = false;
 
   /**
    * todo
    */
-  @Prop({ reflect: true }) downloading = false;
+  @Prop({ reflect: true, mutable: true }) downloaded = false;
 
   /**
-   * todo
-   */
-  @Prop({ reflect: true }) downloaded = false;
-
-  /**
-   * todo
+   * remover
    */
   @Prop({ reflect: true }) index?: number;
 
   /**
-   * todo
+   * remover
    */
   @Prop({ reflect: true }) identification?: string|number|undefined;
 
@@ -52,105 +47,23 @@ export class MedDownloadButton {
   /**
    * todo
    */
-  @Event() medDownloaded!: EventEmitter;
+   @Prop({ reflect: true }) dsSize?: 'lg';
 
   /**
    * todo
    */
-  @Event() medCancelar!: EventEmitter;
-
-  /**
-   * todo
-   */
-  @Event() medDownloading!:EventEmitter;
-
-  @Watch('downloaded')
-  downloadedChanged() {
-    this.medDownloaded.emit(
-      {
-        downloaded: this.downloaded,
-        id: this.identification,
-        index: this.index
-      }
-      );
-  }
-
-  @Watch('downloading')
-  downloadingChange(){
-    this.medDownloading.emit({
-      downloading: this.downloading,
-      id: this.identification,
-      index: this.index
-    });
-  }
-
-  @Watch('value')
-  valueChanged() {
-    if (this.value !== 0 && this.value !== 100) {
-      this.initial = false;
-      this.downloaded = false;
-      this.downloading = true;
-    }
-
-    if (this.value === 0) {
-      this.initial = true;
-      this.downloaded = false;
-      this.downloading = false;
-    }
-
-    if (this.value === 100) {
-      this.downloaded = true;
-      this.downloading = false;
-    }
-  }
-
-  toggle(event?: Event) {
-    event?.stopPropagation();
-    if(this.downloaded){
-      this.medDownloaded.emit({
-        downloaded: this.downloaded,
-        id: this.identification,
-        index: this.index
-      })
-
-    } else if (this.initial) {
-      this.initial = false;
-
-      if (this.value !== 100) {
-        this.downloaded = false;
-        this.downloading = true;
-      }
-      else if (this.value === 100) {
-        this.downloaded = true;
-        this.downloading = false;
-        this.medDownloaded.emit({
-          downloaded:this.downloaded,
-          id: this.identification,
-          index: this.index
-        });
-      }
-    }  else {
-      this.medCancelar.emit({
-        id: this.identification,
-        index: this.index
-      });
-      this.initial = true;
-      this.downloaded = false;
-      this.downloading = false;
-      this.value = 0
-    }
-  }
+  @Event() medDownloadRequested!:EventEmitter;
 
   render() {
-    const { dsColor, value, initial, downloading, downloaded } = this;
+    const { dsColor, value, downloading, downloaded, dsSize } = this;
 
     return (
       <Host
-        onClick={(event: any) => { this.toggle(event)} }
         class={generateMedColor(dsColor, {
           'med-download-button': true,
-          'med-download-button--downloading': downloading && !initial,
-          'med-download-button--downloaded': downloaded
+          'med-download-button--downloading': downloading && !downloaded,
+          'med-download-button--downloaded': downloaded,
+          [`med-download-button--${dsSize}`]: dsSize !== undefined,
         })}>
         <div class="med-download-button__icon">
           <svg viewBox="0 0 36 36" class="med-download-button__svg">

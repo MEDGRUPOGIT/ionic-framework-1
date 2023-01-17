@@ -1,0 +1,22 @@
+.button-filter {
+  position: relative;
+
+  &--aplicado {
+    .button-filter {
+      &__circle {
+        display: block;
+      }
+    }
+  }
+
+  &__circle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: hsl(var(--med-color-brand-3));
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    display: none;
+  }
+}

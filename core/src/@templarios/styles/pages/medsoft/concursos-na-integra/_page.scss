@@ -1,0 +1,50 @@
+.concursos {
+  background: hsl(var(--med-color-neutral-15));
+  height: 100%;
+
+  &__input {
+    padding: 32px 40px;
+    display: flex;
+    align-items: center;
+    max-width: 1096px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include breakpoint-down('sm') {
+      padding: 24px;
+    }
+
+    &--desempenho {
+      padding: 32px 0;
+
+      @include breakpoint-down('sm') {
+        padding: 24px 0;
+      }
+    }
+
+    .med-icon {
+      width: 24px;
+      height: 24px;
+      stroke: hsl(var(--med-color-neutral-10));
+      margin-right: 16px;
+    }
+  }
+
+  &__middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+
+    .med-icon {
+      width: 64px;
+      height: 64px;
+      stroke: hsl(var(--med-color-neutral-10));
+    }
+  }
+
+  &__text {
+    margin-top: 8px;
+    text-align: center;
+  }
+}

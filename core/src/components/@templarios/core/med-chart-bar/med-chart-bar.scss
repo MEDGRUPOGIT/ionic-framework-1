@@ -1,6 +1,7 @@
 :host {
   --height-label: 18;
   --background: #{color('brand', '3')};
+  --background-track: #{color('neutral', '2')};
   --padding-label: 6px;
 }
 
@@ -29,6 +30,13 @@
     height: calc(var(--height) * 1px);
     border-radius: 2px;
   }
+}
+
+//////////////////////////////
+// no-label
+//////////////////////////////
+:host(.med-chart-bar[no-label]) {
+  background: var(--background-track);
 }
 
 //////////////////////////////

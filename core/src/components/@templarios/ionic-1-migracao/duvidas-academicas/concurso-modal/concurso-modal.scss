@@ -1,0 +1,80 @@
+:host {
+  display: block;
+  border-radius: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: hsl(var(--med-color-neutral-1));
+  padding-top: calc(28px + var(--ion-safe-area-top));
+  padding-right: 40px;
+  padding-bottom: 28px;
+  padding-left: 40px;
+  max-height: 80px;
+
+  @include breakpoint-down('sm') {
+    padding-top: calc(24px + var(--ion-safe-area-top));
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    max-height: 72px;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.modal-content {
+  height: calc(100% - 176px);
+
+  @include breakpoint-down('sm') {
+    height: calc(100% - 168px);
+  }
+}
+
+.modal-concursos {
+  padding: 40px 64px;
+
+  @include breakpoint-down('sm') {
+    padding: 24px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    display: block;
+    // retirar e colocar token="h24x" no html
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+
+    @include breakpoint-down('sm') {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__input {
+    margin-bottom: 24px;
+  }
+
+  &__opcoes {
+    // retirar custom property e colocar radius="s08" na tag html
+    --border-radius: 8px;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+

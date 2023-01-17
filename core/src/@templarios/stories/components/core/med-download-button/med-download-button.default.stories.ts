@@ -7,7 +7,7 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({dsColor, value, initial, downloading, downloaded, identification, index}) => {
+const Template = ({dsColor, dsSize, value, downloading, downloaded, identification, index}) => {
   return html`
     <ion-app>
       <ion-content>
@@ -17,11 +17,11 @@ const Template = ({dsColor, value, initial, downloading, downloaded, identificat
           <med-download-button
             .dsColor=${dsColor}
             value=${value}
-            ?initial=${initial}
             ?downloading=${downloading}
             ?downloaded=${downloaded}
             .index=${index}
             identification=${identification}
+            .dsSize=${dsSize}
             >
           </med-download-button>
           <!-- component markdown -->
@@ -38,9 +38,6 @@ Default.parameters = {
     type: 'figma',
     url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/Componentes?node-id=6861%3A53548',
   },
-  actions: {
-    handles: ['medDownloaded', 'medCancelar', 'medDownloading'],
-  },
 }
 Default.argTypes = {
   dsColor: {
@@ -56,15 +53,6 @@ Default.argTypes = {
     defaultValue: '50',
     control: { type: 'range', min: 0, max: 100, step: 1 },
     description: 'Define o valor da progress bar do componente.'
-  },
-  initial: {
-    initial: false,
-    control: { type: 'boolean' },
-    description: 'Define o estado inicial do componente.',
-    table: {
-      type:  { summary: 'boolean' },
-      defaultValue: { summary: 'undefined' },
-    },
   },
   downloading: {
     downloading: false,
@@ -98,6 +86,16 @@ Default.argTypes = {
     table: {
       type:  { summary: 'number | string | undefined' },
       defaultValue: { summary: 'undefined' },
+    },
+  },
+  dsSize: {
+    options: [undefined, 'lg'],
+    control: { type: 'radio'},
+    defaultValue: undefined,
+    description: "Define a variação de tamanho.",
+    table: {
+      type:  { summary: 'lg' },
+      defaultValue: { summary: undefined },
     },
   },
 };

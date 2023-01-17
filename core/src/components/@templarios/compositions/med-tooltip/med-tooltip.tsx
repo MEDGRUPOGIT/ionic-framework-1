@@ -8,7 +8,7 @@ import { generateMedColor } from '../../../../@templarios/utilities/color';
   scoped: true,
 })
 export class MedTooltip {
-  
+
   @Prop() enableHover?: boolean;
 
   /**
@@ -82,8 +82,6 @@ export class MedTooltip {
 
   @Listen('click', { target: 'window' })
   handleClick(event?: any) {
-    console.log(event);
-
     if(event?.target.localName !== 'med-tooltip' && this.titulo) {
       if (!this.collapsed) {
         this.toggle(event);
@@ -94,11 +92,6 @@ export class MedTooltip {
       }
     }
   }
-
-  // @Listen('mouseover', { target: '' })
-  // handleScroll(ev) {
-  //   console.log('the body was scrolled', ev);
-  // }
 
   private onBtnLeftClick = () => {
     this.btnLeftClick.emit();

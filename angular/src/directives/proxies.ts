@@ -4,10 +4,100 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, EventEmitter, NgZone } from "@angular/core";
 import { ProxyCmp, proxyOutputs } from "./proxies-utils";
 import { Components } from "@ionic/core";
+export declare interface AjudaModal extends Components.AjudaModal {
+}
+@Component({ selector: "ajuda-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class AjudaModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface ApostilaModal extends Components.ApostilaModal {
+}
+@Component({ selector: "apostila-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class ApostilaModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface AvisoModal extends Components.AvisoModal {
+}
+@Component({ selector: "aviso-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class AvisoModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface ConcursoModal extends Components.ConcursoModal {
+}
+@Component({ selector: "concurso-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class ConcursoModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface DenunciarModal extends Components.DenunciarModal {
+}
+@Component({ selector: "denunciar-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class DenunciarModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface DialogTest extends Components.DialogTest {
 }
 @Component({ selector: "dialog-test", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
 export class DialogTest {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface EspecialidadeModal extends Components.EspecialidadeModal {
+}
+@Component({ selector: "especialidade-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class EspecialidadeModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface ExcluirModal extends Components.ExcluirModal {
+}
+@Component({ selector: "excluir-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class ExcluirModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface FiltroModal extends Components.FiltroModal {
+}
+@Component({ selector: "filtro-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class FiltroModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface InformativoModal extends Components.InformativoModal {
+}
+@Component({ selector: "informativo-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class InformativoModal {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -889,6 +979,16 @@ export class IonToolbar {
     this.el = r.nativeElement;
   }
 }
+export declare interface LocalModal extends Components.LocalModal {
+}
+@Component({ selector: "local-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class LocalModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedAccordionItem extends Components.MedAccordionItem {
 }
 @ProxyCmp({ inputs: ["background", "canCollapse", "dsColor", "isOpened", "noBorder", "slotsToggle"] })
@@ -1120,8 +1220,8 @@ export class MedCartaoRespostaLista {
 }
 export declare interface MedChartBar extends Components.MedChartBar {
 }
-@ProxyCmp({ inputs: ["dsColor", "height", "value", "width"] })
-@Component({ selector: "med-chart-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "height", "value", "width"] })
+@ProxyCmp({ inputs: ["dsColor", "height", "noLabel", "value", "width"] })
+@Component({ selector: "med-chart-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "height", "noLabel", "value", "width"] })
 export class MedChartBar {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1237,17 +1337,15 @@ export class MedContextMenu {
 }
 export declare interface MedDownloadButton extends Components.MedDownloadButton {
 }
-@ProxyCmp({ inputs: ["disabled", "downloaded", "downloading", "dsColor", "identification", "index", "initial", "value"] })
-@Component({ selector: "med-download-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled", "downloaded", "downloading", "dsColor", "identification", "index", "initial", "value"] })
+@ProxyCmp({ inputs: ["disabled", "downloaded", "downloading", "dsColor", "dsSize", "identification", "index", "value"] })
+@Component({ selector: "med-download-button", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled", "downloaded", "downloading", "dsColor", "dsSize", "identification", "index", "value"] })
 export class MedDownloadButton {
-  medDownloaded!: EventEmitter<CustomEvent>;
-  medCancelar!: EventEmitter<CustomEvent>;
-  medDownloading!: EventEmitter<CustomEvent>;
+  medDownloadRequested!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ["medDownloaded", "medCancelar", "medDownloading"]);
+    proxyOutputs(this, this.el, ["medDownloadRequested"]);
   }
 }
 export declare interface MedDropdown extends Components.MedDropdown {
@@ -1563,6 +1661,17 @@ export class MedRating {
     this.el = r.nativeElement;
   }
 }
+export declare interface MedSearchBar extends Components.MedSearchBar {
+}
+@ProxyCmp({ inputs: ["dsColor"] })
+@Component({ selector: "med-search-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor"] })
+export class MedSearchBar {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedSegment extends Components.MedSegment {
 }
 @Component({ selector: "med-segment", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
@@ -1688,6 +1797,26 @@ export class MedVote {
     this.el = r.nativeElement;
   }
 }
+export declare interface MedreaderProModal extends Components.MedreaderProModal {
+}
+@Component({ selector: "medreader-pro-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class MedreaderProModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface RealizacoesModal extends Components.RealizacoesModal {
+}
+@Component({ selector: "realizacoes-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class RealizacoesModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface SelectTest extends Components.SelectTest {
 }
 @Component({ selector: "select-test", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
@@ -1718,11 +1847,51 @@ export class SheetTest {
     this.el = r.nativeElement;
   }
 }
+export declare interface SimuladoModal extends Components.SimuladoModal {
+}
+@Component({ selector: "simulado-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class SimuladoModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface TextAreaModal extends Components.TextAreaModal {
+}
+@Component({ selector: "text-area-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class TextAreaModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface TpInputContainer extends Components.TpInputContainer {
 }
 @ProxyCmp({ inputs: ["disabled", "dsColor", "dsName", "feedback", "hasButton", "hasIcon"] })
 @Component({ selector: "tp-input-container", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled", "dsColor", "dsName", "feedback", "hasButton", "hasIcon"] })
 export class TpInputContainer {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface TutorialModal extends Components.TutorialModal {
+}
+@Component({ selector: "tutorial-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class TutorialModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface UnidadesModal extends Components.UnidadesModal {
+}
+@Component({ selector: "unidades-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class UnidadesModal {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
