@@ -1606,7 +1606,7 @@ export class MedPlusminus {
 }
 export declare interface MedQuestion extends Components.MedQuestion {
 }
-@ProxyCmp({ inputs: ["collapsed", "dsColor", "texto"], "methods": ["toggle"] })
+@ProxyCmp({ inputs: ["collapsed", "dsColor", "texto"] })
 @Component({ selector: "med-question", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "dsColor", "texto"] })
 export class MedQuestion {
   protected el: HTMLElement;

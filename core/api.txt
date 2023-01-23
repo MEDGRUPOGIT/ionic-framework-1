@@ -1758,7 +1758,6 @@ med-question,shadow
 med-question,prop,collapsed,boolean,false,false,true
 med-question,prop,dsColor,string | undefined,undefined,false,true
 med-question,prop,texto,string | undefined,undefined,false,false
-med-question,method,toggle,toggle(event?: Event | undefined) => Promise<void>
 
 med-rate-aula,scoped
 med-rate-aula,prop,collapsed,boolean,false,false,true

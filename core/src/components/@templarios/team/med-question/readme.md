@@ -14,19 +14,6 @@
 | `texto`     | `texto`     | todo        | `string \| undefined` | `undefined` |
 
 
-## Methods
-
-### `toggle(event?: Event | undefined) => Promise<void>`
-
-todo
-
-#### Returns
-
-Type: `Promise<void>`
-
-
-
-
 ## Dependencies
 
 ### Depends on

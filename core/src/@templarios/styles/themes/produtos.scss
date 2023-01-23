@@ -1,0 +1,36 @@
+@import '../functions/color-stencil';
+@import '../mixins/color';
+
+.theme {
+  &-extensivo-rmais {
+    --brand-hue: 300;
+  }
+
+  &-medmaster {
+    --brand-hue: 56;
+  }
+
+  &-cpmed {
+    --brand-hue: 12;
+  }
+
+  &-no-papo {
+    --brand-hue: 230;
+  }
+
+  &-medeletro {
+    --brand-hue: 180;
+  }
+
+  &-cpvent {
+    --brand-hue: 72;
+  }
+
+  &-ventilamed {
+    --brand-hue: 29;
+  }
+
+  &-intensivao {
+    --brand-hue: 344;
+  }
+}

@@ -1,4 +1,4 @@
-import { Component, h, Host, Method, Prop } from '@stencil/core';
+import { Component, h, Host, Prop } from '@stencil/core';
 import { MedColor } from '../../../../@templarios/types/color.type';
 import { generateMedColor } from '../../../../@templarios/utilities/color';
 
@@ -27,9 +27,7 @@ export class MedQuestion {
   /**
    * todo
    */
-  @Method()
-  async toggle(event?: Event) {
-    event?.stopPropagation();
+  toggle() {
     this.collapsed = !this.collapsed;
   }
 
@@ -37,12 +35,12 @@ export class MedQuestion {
     const { collapsed, texto, dsColor } = this;
 
     return (
-      <Host from-stencil
+      <Host
         class={generateMedColor(dsColor, {
           'med-question': true,
           'med-question--collapsed': collapsed
         },)}
-        onClick={(event: any) => {this.toggle(event)}}>
+        onClick={() => {this.toggle()}}>
           {texto && <div class="med-question__text" innerHTML={texto}></div>}
           <div class="med-question__text">
             <slot></slot>
