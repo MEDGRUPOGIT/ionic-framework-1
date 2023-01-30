@@ -1,0 +1,28 @@
+.color-select {
+  display: flex;
+  align-items: center;
+
+  &__cor {
+    height: 48px;
+    width: 48px;
+    border-radius: 100px;
+    margin-right: 8px;
+    cursor: pointer;
+
+    &--warning {
+      background: hsl(var(--med-color-fb-warning));
+    }
+
+    &--attention {
+      background: hsl(var(--med-color-fb-attention));
+    }
+
+    &--success {
+      background: hsl(var(--med-color-fb-success));
+    }
+
+    &--brand {
+      background: hsl(var(--med-color-brand-4));
+    }
+  }
+}

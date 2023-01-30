@@ -31,7 +31,7 @@ const Template = () => {
 
       <ion-content>
         <div class="erratas">
-          <ion-icon class="erratas__icon" name="med-acerto"></ion-icon>
+          <ion-icon class="med-icon erratas__icon" name="med-acerto"></ion-icon>
           <ion-label class="erratas__text" ds-color="neutral-10" token="p18x">NÃO EXISTEM ATUALIZAÇÕES E ERRATAS PARA ESTA APOSTILA.</ion-label>
         </div>
       </ion-content>

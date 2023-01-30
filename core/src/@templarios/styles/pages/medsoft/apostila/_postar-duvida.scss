@@ -7,15 +7,91 @@
     top: 0;
     z-index: 100;
     width: 100%;
+
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease-out;
   }
 
   &__bottom {
     position: fixed;
     bottom: 64px;
-    left: calc(50% - 32px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease-out;
   }
 
-  &__button {
+  &__cores-container {
+    display: none;
+  }
+
+  &__close {
     --background: hsl(var(--med-color-neutral-55)) !important;
+    pointer-events: none;
+  }
+
+  &__duvida {
+    display: none;
+  }
+
+  &--open {
+    .segment-text {
+      &__top {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &__bottom {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &__close {
+        cursor: pointer;
+        pointer-events: initial;
+      }
+    }
+  }
+
+  &--duvida {
+    .segment-text {
+      &__bottom {
+        justify-content: flex-end;
+      }
+
+      &__close {
+        display: none;
+      }
+
+      &__duvida {
+        display: block;
+        margin-right: 24px;
+      }
+    }
+  }
+
+  &--cores {
+    .segment-text {
+      &__bottom {
+        justify-content: flex-end;
+      }
+
+      &__cores-container {
+        display: flex;
+      }
+
+      &__close {
+        margin-right: 24px;
+      }
+    }
   }
 }

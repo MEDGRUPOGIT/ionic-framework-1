@@ -1,9 +1,39 @@
 .busca-apostila {
-  padding: 16px;
+  height: calc(100% - 176px);
   display: flex;
-  align-items: center;
-  background: hsl(var(--med-color-neutral-10));
-  ;
+  flex-direction: column;
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s ease-out;
+
+  &--open {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+
+    .busca-apostila__close {
+      cursor: pointer;
+      pointer-events: initial;
+    }
+  }
+
+  &--historico {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &--dark {
+    background: hsl(var(--med-color-neutral-15));
+  }
+
+  &__search {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    background: hsl(var(--med-color-neutral-10));
+  }
 
   &__icon {
     stroke: hsl(var(--med-color-brand-2));
@@ -11,5 +41,89 @@
 
   &__input {
     margin: 0 16px;
+  }
+
+  &__close {
+    pointer-events: none;
+  }
+
+  &__resultados {
+    height: 100%;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease-out;
+
+    &--open {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__nao-encontrado {
+    // display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__icon-erro {
+    height: 48px;
+    width: 48px;
+    margin-bottom: 24px;
+  }
+
+  &__encontrado {
+    // display: none;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px 40px 124px;
+    max-width: 1096px;
+    overflow: scroll;
+
+    @include breakpoint-down('sm') {
+      padding: 24px 24px 124px;
+    }
+  }
+
+  &__item {
+    // retirar custom property e colocar radius="s08" na tag html
+    --border-radius: 8px;
+    --inner-padding-end: 0;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__container-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__capitulo {
+    // retirar - colocar token="p16xb" na tag html
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 24px !important;
+    margin-bottom: 8px !important;
+  }
+
+  &__text {
+    // retirar - colocar token="p16x" na tag html
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 24px !important;
+    display: -webkit-box !important;
+    max-width: inherit;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
 }

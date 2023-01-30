@@ -66,9 +66,10 @@ const Template = ({ value }) => {
 
           <ion-label class="header__title" slot="title" token="p16xb">NEF 1</ion-label>
 
-          <ion-button mode="ios" icon-only fill="clear" slot="right" ds-size="xs">
-            <ion-icon slot="icon-only" class="med-icon" name="med-moon"></ion-icon>
-          </ion-button>
+          <med-tooltip class="header__tooltip" slot="right" placement="bottom" position="end" content="Suas anotações foram enviadas com SUCESSO para os servidores do MEDGRUPO.">
+            <ion-icon class="med-icon med-color-neutral med-color-neutral-10 header__nuvem-on" name="med-nuvem-on" slot="input"></ion-icon>
+            <ion-icon class="med-icon med-color-neutral med-color-neutral-10 header__nuvem-off" name="med-nuvem-off" slot="input"></ion-icon>
+          </med-tooltip>
         </med-navbar>
       </med-header>
 
@@ -121,7 +122,7 @@ const Template = ({ value }) => {
         </div>
       </div>
 
-      <med-toolbar ds-color="neutral-10">
+      <med-toolbar class="med-toolbar" ds-color="neutral-10">
         <div class="med-toolbar__left" slot="start">
           <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" ds-size="xxs">
             <ion-icon class="med-icon" slot="icon-only" name="med-anotacao"></ion-icon>
@@ -129,32 +130,40 @@ const Template = ({ value }) => {
           <div class="med-toolbar__line"></div>
         </div>
 
-        <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" slot="start" ds-size="xxs">
+        <ion-button class="med-toolbar__esquerda" mode="ios" ds-color="neutral-1" icon-only fill="clear" slot="start" ds-size="xxs">
           <ion-icon class="med-icon" slot="icon-only" name="med-esquerda"></ion-icon>
         </ion-button>
 
         <div class="med-toolbar__middle">
-          <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs">
-            <ion-icon class="med-icon" slot="icon-only" name="med-duvidas"></ion-icon>
-          </ion-button>
-          <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs">
-            <ion-icon class="med-icon" slot="icon-only" name="med-textoselecionar"></ion-icon>
-          </ion-button>
-          <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs">
-            <ion-icon class="med-icon" slot="icon-only" name="med-busca"></ion-icon>
-          </ion-button>
-           <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs" @click="${createModalInformativo}">
-            <ion-icon class="med-icon" slot="icon-only" name="med-informacao"></ion-icon>
-          </ion-button>
-          <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs" @click="${createModalMedreader}">
-            <ion-icon class="med-icon" slot="icon-only" name="med-editar"></ion-icon>
-          </ion-button>
-          <ion-button class="med-toolbar__font-zoom" mode="ios" icon-only fill="clear" ds-size="xs" @click="${(e) => createPopover(e, value)}">
-            <ion-icon class="med-icon" slot="icon-only" name="med-fontemaior"></ion-icon>
-          </ion-button>
+
+          <div class="med-toolbar__first">
+            <ion-button class="med-toolbar__button" mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs">
+              <ion-icon class="med-icon" slot="icon-only" name="med-duvidas"></ion-icon>
+            </ion-button>
+            <ion-button class="med-toolbar__button" mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs">
+              <ion-icon class="med-icon" slot="icon-only" name="med-textoselecionar"></ion-icon>
+            </ion-button>
+            <ion-button class="med-toolbar__button" mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs">
+              <ion-icon class="med-icon" slot="icon-only" name="med-busca"></ion-icon>
+            </ion-button>
+          </div>
+
+          <div class="med-toolbar__second">
+            <ion-button class="med-toolbar__button" mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs" @click="${createModalInformativo}">
+              <ion-icon class="med-icon" slot="icon-only" name="med-informacao"></ion-icon>
+            </ion-button>
+            <ion-button class="med-toolbar__button" mode="ios" ds-color="neutral-1" icon-only fill="clear" class="med-tollbar__button" ds-size="xs" @click="${createModalMedreader}">
+              <ion-icon class="med-icon" slot="icon-only" name="med-editar"></ion-icon>
+            </ion-button>
+            <ion-button class="med-toolbar__button" class="med-toolbar__font-zoom" ds-color="neutral-1" mode="ios" icon-only fill="clear" ds-size="xs" @click="${(e) => createPopover(e, value)}">
+              <ion-icon class="med-icon" slot="icon-only" name="med-fontemaior"></ion-icon>
+            </ion-button>
+          </div>
         </div>
 
-        <ion-button mode="ios" ds-color="neutral-1" icon-only fill="clear" slot="end" ds-size="xxs">
+        <div class="med-toolbar__fake-element" slot="end">
+        </div>
+        <ion-button class="med-toolbar__direita" mode="ios" ds-color="neutral-1" icon-only fill="clear" slot="end" ds-size="xxs">
           <ion-icon class="med-icon" slot="icon-only" name="med-direita"></ion-icon>
         </ion-button>
       </med-toolbar>
@@ -172,28 +181,211 @@ const Template = ({ value }) => {
         </div>
       </div>
 
-      <div class="segment-text" style="display: none;">
+      <div class="segment-text">
         <div class="segment-text__top">
-          <ion-label token="h20x">Selecione o segmento do texto para postar a sua dúvida</ion-label>
+          <ion-label token="p18x">Selecione o segmento do texto para postar a sua dúvida</ion-label>
         </div>
 
         <div class="segment-text__bottom">
-          <ion-button class="segment-text__button" mode="ios" ds-color="neutral-10" icon-only fill="clear" ds-size="lg">
+          <div class="color-select segment-text__cores-container">
+            <div class="color-select__cor color-select__cor--warning">
+            </div>
+            <div class="color-select__cor color-select__cor--attention">
+            </div>
+            <div class="color-select__cor color-select__cor--success">
+            </div>
+            <div class="color-select__cor color-select__cor--brand">
+            </div>
+          </div>
+          <ion-button class="segment-text__close" mode="ios" ds-color="neutral-10" icon-only fill="clear" ds-size="md">
             <ion-icon class="med-icon" slot="icon-only" name="med-fechar"></ion-icon>
+          </ion-button>
+          <ion-button class="segment-text__duvida" mode="ios" icon-only ds-size="md">
+            <ion-icon class="med-icon" slot="icon-only" name="med-enviar"></ion-icon>
           </ion-button>
         </div>
       </div>
 
-      <div class="busca-apostila" style="display: none;">
-        <div class="busca-apostila__icon">
-          <ion-icon class="med-icon" name="med-busca"></ion-icon>
+      <div class="busca-apostila">
+        <div class="busca-apostila__search">
+          <div class="busca-apostila__icon">
+            <ion-icon class="med-icon" name="med-busca"></ion-icon>
+          </div>
+
+          <ion-input class="busca-apostila__input" ds-color="neutral-8" mode="md" placeholder="Digite o que deseja buscar..."></ion-input>
+
+          <ion-button class="busca-apostila__close" mode="ios" ds-color="neutral-5" icon-only fill="clear" ds-size="xxs">
+            <ion-icon class="med-icon" slot="icon-only" name="med-fechar"></ion-icon>
+          </ion-button>
         </div>
 
-        <ion-input class="busca-apostila__input" ds-color="neutral-8" mode="md" placeholder="Digite o que deseja buscar..."></ion-input>
+        <div class="busca-apostila__resultados">
+          <div class="busca-apostila__nao-encontrado">
+            <ion-icon class="med-icon busca-apostila__icon-erro med-color-neutral med-color-neutral-10" name="med-busca-erro"></ion-icon>
+            <ion-label token="p18x">Sua busca não obteve resultados.</ion-label>
+            <ion-label token="p18x">Por favor, utilize outros termos.</ion-label>
+          </div>
 
-        <ion-button mode="ios" ds-color="neutral-5" icon-only fill="clear" ds-size="xxs">
-          <ion-icon class="med-icon" slot="icon-only" name="med-fechar"></ion-icon>
-        </ion-button>
+          <div class="busca-apostila__encontrado">
+            <ion-item
+              class="busca-apostila__item"
+              ds-color="neutral-15"
+              mode="ios"
+              lines="none">
+              <div class="busca-apostila__container-text">
+                <ion-label class="busca-apostila__capitulo">Capitulo 2</ion-label>
+                <ion-label class="busca-apostila__text" ds-color="neutral-8">Texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado</ion-label>
+              </div>
+              <ion-icon class="med-icon" slot="end" name="med-direita"></ion-icon>
+            </ion-item>
+            <ion-item
+              class="busca-apostila__item"
+              ds-color="neutral-15"
+              mode="ios"
+              lines="none">
+              <div class="busca-apostila__container-text">
+                <ion-label class="busca-apostila__capitulo">Capitulo 2</ion-label>
+                <ion-label class="busca-apostila__text" ds-color="neutral-8">Texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado</ion-label>
+              </div>
+              <ion-icon class="med-icon" slot="end" name="med-direita"></ion-icon>
+            </ion-item>
+            <ion-item
+              class="busca-apostila__item"
+              ds-color="neutral-15"
+              mode="ios"
+              lines="none">
+              <div class="busca-apostila__container-text">
+                <ion-label class="busca-apostila__capitulo">Capitulo 2</ion-label>
+                <ion-label class="busca-apostila__text" ds-color="neutral-8">Texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado</ion-label>
+              </div>
+              <ion-icon class="med-icon" slot="end" name="med-direita"></ion-icon>
+            </ion-item>
+            <ion-item
+              class="busca-apostila__item"
+              ds-color="neutral-15"
+              mode="ios"
+              lines="none">
+              <div class="busca-apostila__container-text">
+                <ion-label class="busca-apostila__capitulo">Capitulo 2</ion-label>
+                <ion-label class="busca-apostila__text" ds-color="neutral-8">Texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado</ion-label>
+              </div>
+              <ion-icon class="med-icon" slot="end" name="med-direita"></ion-icon>
+            </ion-item>
+            <ion-item
+              class="busca-apostila__item"
+              ds-color="neutral-15"
+              mode="ios"
+              lines="none">
+              <div class="busca-apostila__container-text">
+                <ion-label class="busca-apostila__capitulo">Capitulo 2</ion-label>
+                <ion-label class="busca-apostila__text" ds-color="neutral-8">Texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado</ion-label>
+              </div>
+              <ion-icon class="med-icon" slot="end" name="med-direita"></ion-icon>
+            </ion-item>
+            <ion-item
+              class="busca-apostila__item"
+              ds-color="neutral-15"
+              mode="ios"
+              lines="none">
+              <div class="busca-apostila__container-text">
+                <ion-label class="busca-apostila__capitulo">Capitulo 2</ion-label>
+                <ion-label class="busca-apostila__text" ds-color="neutral-8">Texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado</ion-label>
+              </div>
+              <ion-icon class="med-icon" slot="end" name="med-direita"></ion-icon>
+            </ion-item>
+            <ion-item
+              class="busca-apostila__item"
+              ds-color="neutral-15"
+              mode="ios"
+              lines="none">
+              <div class="busca-apostila__container-text">
+                <ion-label class="busca-apostila__capitulo">Capitulo 2</ion-label>
+                <ion-label class="busca-apostila__text" ds-color="neutral-8">Texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado</ion-label>
+              </div>
+              <ion-icon class="med-icon" slot="end" name="med-direita"></ion-icon>
+            </ion-item>
+            <ion-item
+              class="busca-apostila__item"
+              ds-color="neutral-15"
+              mode="ios"
+              lines="none">
+              <div class="busca-apostila__container-text">
+                <ion-label class="busca-apostila__capitulo">Capitulo 2</ion-label>
+                <ion-label class="busca-apostila__text" ds-color="neutral-8">Texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado</ion-label>
+              </div>
+              <ion-icon class="med-icon" slot="end" name="med-direita"></ion-icon>
+            </ion-item>
+            <ion-item
+              class="busca-apostila__item"
+              ds-color="neutral-15"
+              mode="ios"
+              lines="none">
+              <div class="busca-apostila__container-text">
+                <ion-label class="busca-apostila__capitulo">Capitulo 2</ion-label>
+                <ion-label class="busca-apostila__text" ds-color="neutral-8">Texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado texto encontrado</ion-label>
+              </div>
+              <ion-icon class="med-icon" slot="end" name="med-direita"></ion-icon>
+            </ion-item>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-bottom">
+        <div class="menu-bottom__row">
+          <div class="color-select">
+            <div class="color-select__cor color-select__cor--warning">
+            </div>
+            <div class="color-select__cor color-select__cor--attention">
+            </div>
+            <div class="color-select__cor color-select__cor--success">
+            </div>
+            <div class="color-select__cor color-select__cor--brand">
+            </div>
+          </div>
+          <ion-button class="menu-bottom__notes" mode="ios" icon-only ds-size="md">
+            <ion-icon class="med-icon menu-bottom__icon-notes" slot="icon-only" name="med-notes"></ion-icon>
+            <ion-icon class="med-icon menu-bottom__icon-fechar" slot="icon-only" name="med-fechar"></ion-icon>
+          </ion-button>
+
+          <div class="menu-bottom__column">
+            <div class="menu-bottom__marcadores">
+              <ion-label class="menu-bottom__text">Sublinhar</ion-label>
+              <ion-button class="menu-bottom__button" mode="ios" icon-only ds-size="md">
+                <ion-icon class="med-icon" slot="icon-only" name="med-textosublinhar"></ion-icon>
+              </ion-button>
+            </div>
+            <div class="menu-bottom__marcadores">
+              <ion-label class="menu-bottom__text">Marcar</ion-label>
+              <ion-button class="menu-bottom__button" mode="ios" icon-only ds-size="md">
+                <ion-icon class="med-icon" slot="icon-only" name="med-textoselecionar"></ion-icon>
+              </ion-button>
+            </div>
+            <div class="menu-bottom__marcadores">
+              <ion-label class="menu-bottom__text">Bookmark</ion-label>
+              <ion-button class="menu-bottom__button" mode="ios" icon-only ds-size="md">
+                <ion-icon class="med-icon" slot="icon-only" name="med-marcar"></ion-icon>
+              </ion-button>
+            </div>
+            <div class="menu-bottom__marcadores">
+              <ion-label class="menu-bottom__text">Anotar em texto</ion-label>
+              <ion-button class="menu-bottom__button" mode="ios" icon-only ds-size="md">
+                <ion-icon class="med-icon" slot="icon-only" name="med-duvidasacademicas"></ion-icon>
+              </ion-button>
+            </div>
+            <div class="menu-bottom__marcadores">
+              <ion-label class="menu-bottom__text">Buscar a seleção</ion-label>
+              <ion-button class="menu-bottom__button" mode="ios" icon-only ds-size="md">
+                <ion-icon class="med-icon" slot="icon-only" name="med-busca"></ion-icon>
+              </ion-button>
+            </div>
+            <div class="menu-bottom__marcadores">
+              <ion-label class="menu-bottom__text">Depositar dúvida</ion-label>
+              <ion-button class="menu-bottom__button" mode="ios" icon-only ds-size="md">
+                <ion-icon class="med-icon" slot="icon-only" name="med-ajuda"></ion-icon>
+              </ion-button>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>

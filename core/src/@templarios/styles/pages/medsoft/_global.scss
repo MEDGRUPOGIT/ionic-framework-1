@@ -26,6 +26,30 @@
   &__title {
     text-transform: uppercase;
   }
+
+  &__tooltip {
+    --z-index: 10 !important;
+
+    &--off {
+      .header {
+        &__nuvem-on {
+          display: none;
+        }
+
+        &__nuvem-off {
+          display: block;
+        }
+      }
+    }
+
+    .med-tooltip__content {
+      right: -12px !important;
+    }
+  }
+
+  &__nuvem-off {
+    display: none;
+  }
 }
 
 .subheader {
