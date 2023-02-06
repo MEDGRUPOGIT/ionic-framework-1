@@ -1,7 +1,32 @@
-.concursos {
+.concursos-desempenho {
+  // altera a configuração geral do background do ion-content
+  --background: hsl(var(--med-color-neutral-15)) !important;
+
+  &__content {
+    padding: 32px 40px;
+    max-width: 1096px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include breakpoint-down('sm') {
+      padding: 24px;
+    }
+  }
+
   &__title {
     padding: 16px;
     text-align: center;
+  }
+
+  &__questoes {
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint-down('sm') {
+      margin-bottom: 24px;
+    }
   }
 
   &__subheader {
@@ -14,17 +39,6 @@
   &__button-bottom {
     text-align: center;
   }
-
-  &__questoes {
-    margin: 32px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @include breakpoint-down('sm') {
-      margin: 24px 0;
-    }
-  }
 }
 
 .list-concursos {
@@ -35,31 +49,32 @@
   &__text-left {
     max-width: 64px;
     text-align: center;
+
+    &--especialidade {
+      font-weight: 600 !important;
+      font-size: 16px !important;
+      line-height: 16px !important;
+    }
   }
 
   &__text-middle {
     padding: 0 16px;
     min-width: 170px;
     width: 100%;
+
+    &--especialidade {
+      font-weight: 400 !important;
+      font-size: 14px !important;
+      line-height: 24px !important;
+    }
   }
 
-  &__especialidade {
-    &:not(:last-child) {
+  &__especialidade:not(:last-child) {
       margin-bottom: 8px;
-    }
-
-    .list-concursos {
-      &__text-left {
-        font-weight: 600 !important;
-        font-size: 16px !important;
-        line-height: 16px !important;
-      }
-
-      &__text-middle {
-        font-weight: 400 !important;
-        font-size: 14px !important;
-        line-height: 24px !important;
-      }
-    }
   }
+}
+
+.concursos-desempenho-bottom {
+  background: hsl(var(--med-color-neutral-15));
+  text-align: center;
 }

@@ -1,11 +1,14 @@
 .busca-apostila {
-  height: calc(100% - 176px);
   display: flex;
   flex-direction: column;
   transform: translateX(100%);
   opacity: 0;
   visibility: hidden;
   transition: all .5s ease-out;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
 
   &--open {
     transform: translateX(0);
@@ -21,11 +24,14 @@
   &--historico {
     position: absolute;
     top: 0;
-    width: 100%;
+    height: initial;
+    z-index: 10;
   }
 
   &--dark {
-    background: hsl(var(--med-color-neutral-15));
+    .busca-apostila__search {
+      background: hsl(var(--med-color-neutral-15));
+    }
   }
 
   &__search {
@@ -82,12 +88,12 @@
     height: 100%;
     width: 100%;
     margin: 0 auto;
-    padding: 32px 40px 124px;
+    padding: 32px 40px;
     max-width: 1096px;
     overflow: scroll;
 
     @include breakpoint-down('sm') {
-      padding: 24px 24px 124px;
+      padding: 24px;
     }
   }
 

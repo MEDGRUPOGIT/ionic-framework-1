@@ -8,14 +8,14 @@ export default {
 
 const Template = () => {
   return html`
-    <div class="container">
+    <ion-app>
       <med-header>
-        <med-navbar class="header" slot="navbar">
+        <med-navbar slot="navbar">
           <ion-back-button slot="left" mode="ios" text="" ds-size="xxs">
             <ion-icon class="med-icon" name="med-esquerda"></ion-icon>
           </ion-back-button>
 
-          <ion-label class="header__title" slot="title" token="p16xb">Dúvidas Acadêmicas</ion-label>
+          <ion-label slot="title" token="p16b">DÚVIDAS ACADÊMICAS</ion-label>
 
           <div class="button-filter button-filter--aplicado" slot="right">
             <ion-button mode="ios" fill="clear" icon-only ds-size="xxs">
@@ -27,19 +27,17 @@ const Template = () => {
         </med-navbar>
       </med-header>
 
-      <ion-content>
-        <div class="duvidas">
-          <ion-segment value="tab-1" scrollable>
-            <ion-segment-button class="duvidas__tab" mode="md" value="tab-1">
-              <ion-label>Todas</ion-label>
-            </ion-segment-button>
+      <ion-segment value="tab-1" scrollable>
+        <ion-segment-button class="duvidas-tab" mode="md" value="tab-1">
+          <ion-label>Todas</ion-label>
+        </ion-segment-button>
 
-            <ion-segment-button class="duvidas__tab" mode="md" value="tab-2">
-              <ion-label>Minhas</ion-label>
-            </ion-segment-button>
-          </ion-segment>
+        <ion-segment-button class="duvidas-tab" mode="md" value="tab-2">
+          <ion-label>Minhas</ion-label>
+        </ion-segment-button>
+      </ion-segment>
 
-          <div class="user-selector">
+      <div class="user-selector">
             <ion-item class="user-selector__title" ds-color="brand" mode="ios" lines="none">
               <div class="user-selector__container-text">
                 <ion-label class="user-selector__text">Você fará postagens como &nbsp;</ion-label>
@@ -88,14 +86,13 @@ const Template = () => {
             </div>
           </div>
 
-          <div class="sem-duvidas sem-duvidas--user-select">
-           <ion-icon class="med-icon" name="med-inbox"></ion-icon>
-           <ion-label class="sem-duvidas__text" token="h20x">AINDA NÃO HÁ DÚVIDAS POSTADAS</ion-label>
-          </div>
-
+      <ion-content class="sem-duvidas">
+        <div class="sem-duvidas__content">
+          <ion-icon class="med-icon" name="med-inbox"></ion-icon>
+          <ion-label class="sem-duvidas__text" token="p18x">AINDA NÃO HÁ DÚVIDAS POSTADAS</ion-label>
         </div>
       </ion-content>
-    </div>
+    </ion-app>
   `;
 };
 

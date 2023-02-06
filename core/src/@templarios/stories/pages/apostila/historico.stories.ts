@@ -8,15 +8,15 @@ export default {
 
 const Template = () => {
   return html`
-    <div class="container container--historico">
+    <ion-app>
       <med-header>
-        <med-navbar class="header" slot="navbar">
+        <med-navbar slot="navbar">
           <ion-back-button slot="left" mode="ios" text="" ds-size="xxs">
             <ion-icon class="med-icon" name="med-esquerda"></ion-icon>
           </ion-back-button>
 
-          <ion-label class="header__title" slot="title" token="p16xb">HISTÓRICO</ion-label>
-          <ion-label slot="subtitle" ds-color="brand" token="p12">NEF 1</ion-label>
+          <ion-label slot="title" token="p16b">HISTÓRICO</ion-label>
+          <ion-label slot="subtitle" ds-color="brand" token="p12xb">NEF 1</ion-label>
 
           <ion-button mode="ios" icon-only fill="clear" slot="right" ds-size="xs">
             <ion-icon slot="icon-only" class="med-icon" name="med-busca"></ion-icon>
@@ -26,15 +26,17 @@ const Template = () => {
 
       <ion-content class="historico">
         <div class="busca-apostila busca-apostila--historico busca-apostila--dark">
-          <div class="busca-apostila__icon">
-            <ion-icon class="med-icon" name="med-busca"></ion-icon>
+          <div class="busca-apostila__search">
+            <div class="busca-apostila__icon">
+              <ion-icon class="med-icon" name="med-busca"></ion-icon>
+            </div>
+
+            <ion-input class="busca-apostila__input" ds-color="neutral-25" mode="md" placeholder="Digite o que deseja buscar..."></ion-input>
+
+            <ion-button class="busca-apostila__close" mode="ios" ds-color="neutral-5" icon-only fill="clear" ds-size="xxs">
+              <ion-icon class="med-icon" slot="icon-only" name="med-fechar"></ion-icon>
+            </ion-button>
           </div>
-
-          <ion-input class="busca-apostila__input" ds-color="neutral-25" mode="md" placeholder="Digite o que deseja buscar..."></ion-input>
-
-          <ion-button class="busca-apostila__close" mode="ios" ds-color="neutral-5" icon-only fill="clear" ds-size="xxs">
-            <ion-icon class="med-icon" slot="icon-only" name="med-fechar"></ion-icon>
-          </ion-button>
         </div>
 
         <div class="filtro-limpo">
@@ -149,72 +151,67 @@ const Template = () => {
               <ion-icon class="med-icon" slot="icon-only" name="med-lixeira"></ion-icon>
             </ion-button>
           </ion-item>
-
-
-
-
-
         </div>
       </ion-content>
-    </div>
 
-    <div class="marcador marcador--open">
-      <div class="marcador__item marcador__item--warning">&nbsp;</div>
-      <div class="marcador__item marcador__item--attention">&nbsp;</div>
-      <div class="marcador__item marcador__item--success">&nbsp;</div>
-      <div class="marcador__item marcador__item--brand">&nbsp;</div>
-      <div class="seletor-marcadores">
-      <div class="seletor-marcadores__container">
-        <div class="seletor-marcadores__item seletor-marcadores__item--warning">&nbsp;</div>
-        <div class="seletor-marcadores__item seletor-marcadores__item--attention">&nbsp;</div>
-      </div>
-      <div class="seletor-marcadores__container">
-        <div class="seletor-marcadores__item seletor-marcadores__item--success">&nbsp;</div>
-        <div class="seletor-marcadores__item seletor-marcadores__item--brand">&nbsp;</div>
-      </div>
-    </div>
-    </div>
-
-    <ion-footer>
-      <ion-segment class="historico-footer" value="tab-1" scrollable>
-        <ion-segment-button class="historico-footer__item" value="tab-1">
-          <ion-label token="p14b">TODOS</ion-label>
-        </ion-segment-button>
-
-        <ion-segment-button class="historico-footer__item" mode="md" value="tab-2">
-          <ion-icon class="med-icon" name="med-textoselecionar"></ion-icon>
-        </ion-segment-button>
-
-        <ion-segment-button class="historico-footer__item" mode="md" value="tab-3">
-          <ion-icon class="med-icon" name="med-textosublinhar"></ion-icon>
-        </ion-segment-button>
-
-        <ion-segment-button class="historico-footer__item" mode="md" value="tab-4">
-          <ion-icon class="med-icon" name="med-nopapo"></ion-icon>
-        </ion-segment-button>
-
-        <ion-segment-button class="historico-footer__item" value="tab-5">
-          <ion-icon class="med-icon historico-footer__marcador-rotate" name="med-marcar"></ion-icon>
-        </ion-segment-button>
-
-        <ion-segment-button class="historico-footer__item" mode="md" value="tab-6">
-          <ion-icon class="med-icon" name="med-duvidas"></ion-icon>
-        </ion-segment-button>
-
-        <ion-segment-button class="historico-footer__item" mode="md" value="tab-7">
-          <div class="seletor-marcadores">
-            <div class="seletor-marcadores__container">
-              <div class="seletor-marcadores__item seletor-marcadores__item--warning">&nbsp;</div>
-              <div class="seletor-marcadores__item seletor-marcadores__item--attention">&nbsp;</div>
-            </div>
-            <div class="seletor-marcadores__container">
-              <div class="seletor-marcadores__item seletor-marcadores__item--success">&nbsp;</div>
-              <div class="seletor-marcadores__item seletor-marcadores__item--brand">&nbsp;</div>
-            </div>
+      <div class="marcador marcador--open">
+        <div class="marcador__item marcador__item--warning">&nbsp;</div>
+        <div class="marcador__item marcador__item--attention">&nbsp;</div>
+        <div class="marcador__item marcador__item--success">&nbsp;</div>
+        <div class="marcador__item marcador__item--brand">&nbsp;</div>
+        <div class="seletor-marcadores">
+          <div class="seletor-marcadores__container">
+            <div class="seletor-marcadores__item seletor-marcadores__item--warning">&nbsp;</div>
+            <div class="seletor-marcadores__item seletor-marcadores__item--attention">&nbsp;</div>
           </div>
-        </ion-segment-button>
-      </ion-segment>
-    </ion-footer>
+          <div class="seletor-marcadores__container">
+            <div class="seletor-marcadores__item seletor-marcadores__item--success">&nbsp;</div>
+            <div class="seletor-marcadores__item seletor-marcadores__item--brand">&nbsp;</div>
+          </div>
+        </div>
+      </div>
+
+      <ion-footer>
+        <ion-segment class="historico-footer" value="tab-1" scrollable>
+          <ion-segment-button class="historico-footer__item" value="tab-1">
+            <ion-label token="p14b">TODOS</ion-label>
+          </ion-segment-button>
+
+          <ion-segment-button class="historico-footer__item" mode="md" value="tab-2">
+            <ion-icon class="med-icon" name="med-textoselecionar"></ion-icon>
+          </ion-segment-button>
+
+          <ion-segment-button class="historico-footer__item" mode="md" value="tab-3">
+            <ion-icon class="med-icon" name="med-textosublinhar"></ion-icon>
+          </ion-segment-button>
+
+          <ion-segment-button class="historico-footer__item" mode="md" value="tab-4">
+            <ion-icon class="med-icon" name="med-nopapo"></ion-icon>
+          </ion-segment-button>
+
+          <ion-segment-button class="historico-footer__item" value="tab-5">
+            <ion-icon class="med-icon historico-footer__marcador-rotate" name="med-marcar"></ion-icon>
+          </ion-segment-button>
+
+          <ion-segment-button class="historico-footer__item" mode="md" value="tab-6">
+            <ion-icon class="med-icon" name="med-duvidas"></ion-icon>
+          </ion-segment-button>
+
+          <ion-segment-button class="historico-footer__item" mode="md" value="tab-7">
+            <div class="seletor-marcadores">
+              <div class="seletor-marcadores__container">
+                <div class="seletor-marcadores__item seletor-marcadores__item--warning">&nbsp;</div>
+                <div class="seletor-marcadores__item seletor-marcadores__item--attention">&nbsp;</div>
+              </div>
+              <div class="seletor-marcadores__container">
+                <div class="seletor-marcadores__item seletor-marcadores__item--success">&nbsp;</div>
+                <div class="seletor-marcadores__item seletor-marcadores__item--brand">&nbsp;</div>
+              </div>
+            </div>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-footer>
+    </ion-app>
   `;
 };
 

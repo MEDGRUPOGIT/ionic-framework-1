@@ -1,5 +1,6 @@
 .historico {
-  height: calc(100% - 56px);
+  // altera a configuração geral do background do ion-content
+  --background: hsl(var(--med-color-neutral-15)) !important;
 }
 
 .filtro-limpo {
@@ -26,12 +27,12 @@
 
 .resultados {
   margin: 0 auto;
-  padding: 32px 40px;
+  padding: 32px 40px 64px;
   width: 100%;
   max-width: 1096px;
 
   @include breakpoint-down('sm') {
-    padding: 24px;
+    padding: 24px 24px 40px;
   }
 
   &__item {

@@ -8,26 +8,26 @@ export default {
 
 const Template = () => {
   return html`
-    <div class="container">
+    <ion-app>
       <med-header>
-        <med-navbar class="header" slot="navbar">
+        <med-navbar slot="navbar">
           <ion-back-button slot="left" mode="ios" text="" ds-size="xxs">
             <ion-icon class="med-icon" name="med-esquerda"></ion-icon>
           </ion-back-button>
 
-          <ion-label class="header__title" slot="title" token="p16xb">medcode</ion-label>
+          <ion-label slot="title" token="p16b">SLIDES DE RESUMO</ion-label>
         </med-navbar>
 
-        <med-toolbar class="subheader" slot="toolbar">
-          <div class="subheader__container">
-            <ion-label class="subheader__title" ds-color="neutral-10" token="p16xb">Slide de aula</ion-label>
+        <div class="subheader subheader--subtitle" slot="toolbar">
+          <div class="subheader__content">
+            <ion-label ds-color="neutral-10" token="p16b">Slide de aula</ion-label>
             <ion-label ds-color="brand" token="p12xb">TRAUMA</ion-label>
           </div>
-        </med-toolbar>
+        </div>
       </med-header>
 
-      <ion-content>
-        <div class="aulas">
+      <ion-content class="aulas">
+        <div class="aulas__content">
           <med-base class="aulas__item" ds-color="neutral-25">
             <div class="aulas__top" slot="start">
               <ion-avatar class="aulas__avatar" ds-size="sm">

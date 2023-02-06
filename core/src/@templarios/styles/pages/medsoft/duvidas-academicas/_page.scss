@@ -1,25 +1,20 @@
+.duvidas-tab {
+  max-width: initial;
+}
+
 .duvidas {
-  height: calc(100% - 56px);
-  position: relative;
+  // altera a configuração geral do background do ion-content
+  --background: hsl(var(--med-color-neutral-15)) !important;
 
-  &__tab {
-    max-width: initial;
-  }
-
-  &__container {
-    height: calc(100% - 48px);
-    margin: 0 auto;
+  &__content {
     padding: 32px 40px 64px;
-    width: 100%;
     max-width: 1096px;
-    overflow: scroll;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
 
     @include breakpoint-down('sm') {
-      padding: 24px 24px 64px;
-    }
-
-    &--user-select {
-      height: calc(100% - 96px);
+      padding: 24px 24px 40px;
     }
   }
 

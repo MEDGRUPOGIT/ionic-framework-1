@@ -1,4 +1,28 @@
-.med-toolbar {
+.header-tooltip {
+  --z-index: 10 !important;
+
+  &--off {
+    .header-tooltip {
+      &__nuvem-on {
+        display: none;
+      }
+
+      &__nuvem-off {
+        display: block;
+      }
+    }
+  }
+
+  .med-tooltip__content {
+    right: -12px !important;
+  }
+
+  &__nuvem-off {
+    display: none;
+  }
+}
+
+.toolbar-apostila {
   --center-width: 100%;
 
   &__left {
@@ -63,7 +87,7 @@
   }
 
   &--second {
-    .med-toolbar {
+    .toolbar-apostila {
       &__first {
         transform: translateX(-50%);
         pointer-events: none;
@@ -93,9 +117,15 @@
   }
 }
 
+.apostila {
+  // altera a configuração geral do background do ion-content
+  --background: hsl(var(--med-color-neutral-15)) !important;
+  position: relative;
+}
+
 .bottom {
-  position: fixed;
-  bottom: 0;
+  // position: fixed;
+  // bottom: 0;
   width: 100%;
   background: hsl(var(--med-color-neutral-1));
   z-index: 10;
