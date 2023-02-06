@@ -148,6 +148,7 @@ export const DIRECTIVES = [
   d.MedTabButton,
   d.MedThemes,
   d.MedTiles,
+  d.MedToggle,
   d.MedToolbar,
   d.MedTooltip,
   d.MedType,

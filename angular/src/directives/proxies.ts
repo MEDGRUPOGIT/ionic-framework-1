@@ -1739,6 +1739,17 @@ export class MedTiles {
     this.el = r.nativeElement;
   }
 }
+export declare interface MedToggle extends Components.MedToggle {
+}
+@ProxyCmp({ inputs: ["collapsed", "dsColor"] })
+@Component({ selector: "med-toggle", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "dsColor"] })
+export class MedToggle {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface MedToolbar extends Components.MedToolbar {
 }
 @ProxyCmp({ inputs: ["dsColor"] })
