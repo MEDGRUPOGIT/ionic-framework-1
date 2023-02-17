@@ -156,7 +156,9 @@ export class MedAlternativasA implements MedAlternativasInternoInterface {
                     </div>
 
                   </div>
-                  <div class="med-alternativas__right" innerHTML={alternativa[this.keyEnunciado]}>
+                  <div class="med-alternativas__right">
+                    <span class="med-alternativas__span" innerHTML={alternativa[this.keyEnunciado]}>
+                    </span>
 
                     {alternativa[this.keyImagem] &&
                       <div class={`image-container ${alternativa[this.keyEnunciado] ? 'image-container--margin' : ''}`} onClick={(event) => this.baseClass.imageRequest(event, alternativa)}>

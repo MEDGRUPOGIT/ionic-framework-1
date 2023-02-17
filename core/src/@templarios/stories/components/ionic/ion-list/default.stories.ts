@@ -24,6 +24,7 @@ const Template = ({
               <ion-label token="h24">Default</ion-label>
 
               <ion-list
+                mode="md"
                 ds-color=${dsColor}
                 radius=${radius}
                 gap=${gap}
@@ -55,6 +56,7 @@ const Template = ({
               <ion-label token="h24">Icon</ion-label>
 
               <ion-list
+                mode="md"
                 ds-color=${dsColor}
                 radius=${radius}
                 gap=${gap}
@@ -98,6 +100,7 @@ const Template = ({
               <ion-label token="h24">Button</ion-label>
 
               <ion-list
+                mode="md"
                 ds-color=${dsColor}
                 radius=${radius}
                 gap=${gap}
@@ -143,6 +146,7 @@ const Template = ({
               <ion-label token="h24">Radio</ion-label>
 
               <ion-list
+                mode="md"
                 ds-color=${dsColor}
                 radius=${radius}
                 gap=${gap}
@@ -184,6 +188,7 @@ const Template = ({
               <ion-label token="h24">Checkbox</ion-label>
 
               <ion-list
+                mode="md"
                 ds-color=${dsColor}
                 radius=${radius}
                 gap=${gap}
@@ -213,6 +218,7 @@ const Template = ({
               <ion-label token="h24">Toogle</ion-label>
 
               <ion-list
+                mode="md"
                 ds-color=${dsColor}
                 radius=${radius}
                 gap=${gap}
