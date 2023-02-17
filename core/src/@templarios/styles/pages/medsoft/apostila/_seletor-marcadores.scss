@@ -1,0 +1,32 @@
+.seletor-marcadores {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+  &__container {
+    display: flex;
+    width: 24px;
+  }
+
+  &__item {
+    width: 12px;
+    height: 12px;
+
+    &--warning {
+      background: hsl(var(--med-color-fb-warning));
+    }
+
+    &--attention {
+      background: hsl(var(--med-color-fb-attention));
+    }
+
+    &--success {
+      background: hsl(var(--med-color-fb-success));
+    }
+
+    &--brand {
+      background: hsl(var(--med-color-brand-4));
+    }
+  }
+
+}

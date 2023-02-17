@@ -8,19 +8,19 @@ export default {
 
 const Template = () => {
   return html`
-    <div class="container">
+    <ion-app>
       <med-header>
-        <med-navbar class="header" slot="navbar">
+        <med-navbar slot="navbar">
           <ion-back-button slot="left" mode="ios" text="" ds-size="xxs">
             <ion-icon class="med-icon" name="med-esquerda"></ion-icon>
           </ion-back-button>
 
-          <ion-label class="header__title" slot="title" token="p16xb">Simulados</ion-label>
+          <ion-label slot="title" token="p16b">SIMULADOS</ion-label>
         </med-navbar>
       </med-header>
 
-      <ion-content>
-        <div class="simulados">
+      <ion-content class="simulados">
+        <div class="simulados__content">
           <ion-label class="ano" ds-color="neutral-10" token="p16xb">2022</ion-label>
           <div class="grid">
             <med-tiles class="grid__tiles" titulo="R01 SIM 01" label="Geral 01">
@@ -100,7 +100,7 @@ const Template = () => {
           </div>
         </div>
       </ion-content>
-    </div>
+    </ion-app>
   `;
 };
 

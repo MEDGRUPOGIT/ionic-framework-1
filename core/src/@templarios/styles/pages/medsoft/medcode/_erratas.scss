@@ -1,14 +1,26 @@
 .erratas {
-  background: hsl(var(--med-color-neutral-1));
-  height: calc(100% - 104px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  // altera a configuração geral do background do ion-content
+  --background: hsl(var(--med-color-neutral-15)) !important;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 32px 40px;
+    max-width: 1096px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include breakpoint-down('sm') {
+      padding: 24px;
+    }
+  }
 
   &__icon {
-    height: 48px;
-    width: 48px;
+    height: 64px;
+    width: 64px;
     margin-bottom: 24px;
     stroke: hsl(var(--med-color-neutral-10));
     fill: transparent;

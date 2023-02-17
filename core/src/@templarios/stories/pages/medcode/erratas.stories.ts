@@ -8,34 +8,34 @@ export default {
 
 const Template = () => {
   return html`
-    <div class="container">
+    <ion-app>
       <med-header>
-        <med-navbar class="header" slot="navbar">
+        <med-navbar slot="navbar">
           <ion-back-button slot="left" mode="ios" text="" ds-size="xxs">
             <ion-icon class="med-icon" name="med-esquerda"></ion-icon>
           </ion-back-button>
 
-            <ion-label class="header__title" slot="title" token="p16xb">MED GIN  01</ion-label>
+          <ion-label slot="title" token="p16b">MED GIN  01</ion-label>
 
-          <ion-button class="button-qrcode" mode="ios" icon-only fill="clear" slot="right" ds-size="xxs">
+          <ion-button mode="ios" icon-only fill="clear" slot="right" ds-size="xs">
             <ion-icon slot="icon-only" class="med-icon" name="med-qrcode"></ion-icon>
           </ion-button>
         </med-navbar>
 
-        <med-toolbar class="subheader" slot="toolbar">
-          <div class="subheader__container">
-            <ion-label class="subheader__title" ds-color="neutral-10" token="p16xb">Atualizações e Erratas</ion-label>
+        <div class="subheader" slot="toolbar">
+          <div class="subheader__content">
+            <ion-label ds-color="neutral-10" token="p16b">Atualizações e Erratas</ion-label>
           </div>
-        </med-toolbar>
+        </div>
       </med-header>
 
-      <ion-content>
-        <div class="erratas">
-          <ion-icon class="erratas__icon" name="med-acerto"></ion-icon>
+      <ion-content class="erratas">
+        <div class="erratas__content">
+          <ion-icon class="med-icon erratas__icon" name="med-acerto"></ion-icon>
           <ion-label class="erratas__text" ds-color="neutral-10" token="p18x">NÃO EXISTEM ATUALIZAÇÕES E ERRATAS PARA ESTA APOSTILA.</ion-label>
         </div>
       </ion-content>
-    </div>
+    </ion-app>
   `;
 };
 

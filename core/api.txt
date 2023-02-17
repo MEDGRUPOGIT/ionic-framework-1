@@ -1758,7 +1758,6 @@ med-question,shadow
 med-question,prop,collapsed,boolean,false,false,true
 med-question,prop,dsColor,string | undefined,undefined,false,true
 med-question,prop,texto,string | undefined,undefined,false,false
-med-question,method,toggle,toggle(event?: Event | undefined) => Promise<void>
 
 med-rate-aula,scoped
 med-rate-aula,prop,collapsed,boolean,false,false,true
@@ -1813,6 +1812,10 @@ med-tiles,prop,label,string | undefined,undefined,false,false
 med-tiles,prop,selected,boolean,false,false,true
 med-tiles,prop,solid,boolean,false,false,false
 med-tiles,prop,titulo,string | undefined,undefined,false,false
+
+med-toggle,shadow
+med-toggle,prop,collapsed,boolean,true,false,true
+med-toggle,prop,dsColor,string | undefined,undefined,false,true
 
 med-toolbar,shadow
 med-toolbar,prop,dsColor,string | undefined,undefined,false,true

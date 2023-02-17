@@ -1,40 +1,44 @@
-.concursos {
-  background: hsl(var(--med-color-neutral-15));
-  height: 100%;
+.input-concursos {
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  max-width: 1096px;
+  width: 100%;
+  margin: 0 auto;
 
-  &__input {
-    padding: 32px 40px;
-    display: flex;
-    align-items: center;
-    max-width: 1096px;
-    width: 100%;
-    margin: 0 auto;
+  @include breakpoint-down('sm') {
+    padding: 16px 24px;
+  }
+
+  &--desempenho {
+    padding: 32px 0;
 
     @include breakpoint-down('sm') {
-      padding: 24px;
-    }
-
-    &--desempenho {
-      padding: 32px 0;
-
-      @include breakpoint-down('sm') {
-        padding: 24px 0;
-      }
-    }
-
-    .med-icon {
-      width: 24px;
-      height: 24px;
-      stroke: hsl(var(--med-color-neutral-10));
-      margin-right: 16px;
+      padding: 24px 0;
     }
   }
 
+  .med-icon {
+    width: 24px;
+    height: 24px;
+    stroke: hsl(var(--med-color-neutral-10));
+    margin-right: 16px;
+  }
+}
+
+.concursos-buscar {
+  // altera a configuração geral do background do ion-content
+  --background: hsl(var(--med-color-neutral-15)) !important;
+
   &__middle {
+    height: 100%;
+    width: 100%;
+    padding: 32px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 16px;
+    max-width: 1096px;
+    margin: 0 auto;
 
     .med-icon {
       width: 64px;

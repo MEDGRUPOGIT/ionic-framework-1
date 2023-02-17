@@ -1,15 +1,12 @@
-.resumo {
-  background: hsl(var(--med-color-neutral-15));
-  height: calc(100% - 56px);
-
+.resumo-top {
   &__button {
     margin: 0 auto;
   }
+}
 
-  &__middle {
-    height: calc(100% - 40px);
-    overflow: auto;
-  }
+.resumo {
+  // altera a configuração geral do background do ion-content
+  --background: hsl(var(--med-color-neutral-15)) !important;
 
   &__container {
     margin: 0 auto;
@@ -106,6 +103,12 @@
     justify-content: center;
   }
 
+  &__button {
+    margin: 0 auto;
+  }
+}
+
+.resumo-bottom {
   &__modo-container {
     display: flex;
     align-items: center;
@@ -126,4 +129,3 @@
     }
   }
 }
-

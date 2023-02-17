@@ -1606,7 +1606,7 @@ export class MedPlusminus {
 }
 export declare interface MedQuestion extends Components.MedQuestion {
 }
-@ProxyCmp({ inputs: ["collapsed", "dsColor", "texto"], "methods": ["toggle"] })
+@ProxyCmp({ inputs: ["collapsed", "dsColor", "texto"] })
 @Component({ selector: "med-question", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "dsColor", "texto"] })
 export class MedQuestion {
   protected el: HTMLElement;
@@ -1733,6 +1733,17 @@ export declare interface MedTiles extends Components.MedTiles {
 @ProxyCmp({ inputs: ["badge", "dsColor", "label", "selected", "solid", "titulo"] })
 @Component({ selector: "med-tiles", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["badge", "dsColor", "label", "selected", "solid", "titulo"] })
 export class MedTiles {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface MedToggle extends Components.MedToggle {
+}
+@ProxyCmp({ inputs: ["collapsed", "dsColor"] })
+@Component({ selector: "med-toggle", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "dsColor"] })
+export class MedToggle {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();

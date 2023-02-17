@@ -26,27 +26,27 @@ const createModal = async () => {
 
 const Template = () => {
   return html`
-    <div class="container">
+    <ion-app>
       <med-header>
-        <med-navbar class="header" slot="navbar">
+        <med-navbar slot="navbar">
           <ion-back-button slot="left" mode="ios" text="" ds-size="xxs">
             <ion-icon class="med-icon" name="med-esquerda"></ion-icon>
           </ion-back-button>
 
-          <ion-label class="header__title" slot="title" token="p16xb">Slide de aula</ion-label>
+          <ion-label slot="title" token="p16b">SLIDE DE AULA</ion-label>
         </med-navbar>
 
-        <med-toolbar class="subheader" slot="toolbar">
-          <div class="subheader__container">
-            <ion-label class="subheader__title" ds-color="neutral-10" token="p16xb">Nome da aula</ion-label>
+        <div class="subheader subheader--subtitle" slot="toolbar">
+          <div class="subheader__content">
+            <ion-label ds-color="neutral-10" token="p16b">Nome da aula</ion-label>
             <ion-label ds-color="brand" token="p12xb">Professor</ion-label>
           </div>
-        </med-toolbar>
+        </div>
       </med-header>
 
-      <ion-content>
-        <div class="slides">
-          <ion-slides class="slides__content" pager="true">
+      <ion-content class="slides">
+        <div class="slides__content">
+          <ion-slides class="slides__container" pager="true">
             <ion-slide>
               <img class="slides__image" src="https://via.placeholder.com/500" @click="${createModal}" />
             </ion-slide>
@@ -65,7 +65,7 @@ const Template = () => {
           </div>
         </div>
       </ion-content>
-    </div>
+    </ion-app>
   `;
 };
 

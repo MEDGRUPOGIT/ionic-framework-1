@@ -1,8 +1,16 @@
 .indice {
-  background: hsl(var(--med-color-neutral-10));
-  height: calc(100% - 56px);
-  padding: 16px 16px 32px 16px;
-  overflow-y: auto;
+  --background: hsl(var(--med-color-neutral-10)) !important;
+
+  &__content {
+    margin: 0 auto;
+    padding: 32px 40px 64px;
+    width: 100%;
+    max-width: 1096px;
+
+    @include breakpoint-down('sm') {
+      padding: 24px 24px 40px;
+    }
+  }
 
   &__heading {
     border-left: 1px dotted hsl(var(--med-color-neutral-1));
@@ -12,10 +20,11 @@
     }
   }
 
-  &__content {
+  &__section {
     display: flex;
     align-items: center;
     padding: 8px 0;
+    cursor: pointer;
   }
 
   &__dotted {
