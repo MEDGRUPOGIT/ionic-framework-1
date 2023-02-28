@@ -1,21 +1,71 @@
-import { html } from 'lit-html';
-import { withDesign } from 'storybook-addon-designs';
-import { MedColors } from '../../../../templarios';
+import { html } from "lit-html";
+import { withDesign } from "storybook-addon-designs";
+import { MedColors } from "../../../../templarios";
 
 export default {
-  title: 'Components/Ionic/Select',
+  title: "Components/Ionic/Select",
   decorators: [withDesign],
 };
 
-const Template = ({ 'ds-color': dsColor, 'ds-name': dsName, disabled, state }) => {
+const Template = ({
+  "ds-color": dsColor,
+  "ds-name": dsName,
+  disabled,
+  state,
+}) => {
+  const interfaceOpts = { cssClass: "tp-popover" };
+
   return html`
     <ion-app>
       <ion-content>
-        <ion-label token="p14">Description</ion-label>
-        <tp-input-container .dsColor=${dsColor} ds-name=${dsName} .disabled=${disabled} state=${state} has-icon="end">
-          <ion-select mode="md" ds-color=${dsColor} ds-name=${dsName} .disabled=${disabled} placeholder="Lorem ipsum dolor"></ion-select>
-          <ion-icon class="med-icon" slot="end" name="med-baixo"></ion-icon>
-        </tp-input-container>
+        <div class="ion-padding">
+          <ion-label token="p14">Description</ion-label>
+          <tp-input-container
+            .dsColor=${dsColor}
+            ds-name=${dsName}
+            .disabled=${disabled}
+            state=${state}
+            has-icon="end"
+          >
+            <ion-select
+              mode="md"
+              ds-color=${dsColor}
+              ds-name=${dsName}
+              .disabled=${disabled}
+              placeholder="Lorem ipsum dolor"
+              interface="popover"
+              .interfaceOptions=${interfaceOpts}
+            >
+              <ion-select-option> Option 1 </ion-select-option>
+              <ion-select-option> Option 2 </ion-select-option>
+              <ion-select-option> Option 3 </ion-select-option>
+            </ion-select>
+            <ion-icon class="med-icon" slot="end" name="med-baixo"></ion-icon>
+          </tp-input-container>
+          <tp-input-container
+            .dsColor=${dsColor}
+            ds-name=${dsName}
+            .disabled=${disabled}
+            state=${state}
+            has-icon="end"
+            style="width: 50%;"
+          >
+            <ion-select
+              mode="md"
+              ds-color=${dsColor}
+              ds-name=${dsName}
+              .disabled=${disabled}
+              placeholder="Lorem ipsum dolor"
+              interface="popover"
+              .interfaceOptions=${interfaceOpts}
+            >
+              <ion-select-option> Option 1 </ion-select-option>
+              <ion-select-option> Option 2 </ion-select-option>
+              <ion-select-option> Option 3 </ion-select-option>
+            </ion-select>
+            <ion-icon class="med-icon" slot="end" name="med-baixo"></ion-icon>
+          </tp-input-container>
+        </div>
       </ion-content>
     </ion-app>
   `;
@@ -24,41 +74,42 @@ const Template = ({ 'ds-color': dsColor, 'ds-name': dsName, disabled, state }) =
 export const Default = Template.bind({});
 Default.parameters = {
   design: {
-    type: 'figma',
-    url: 'https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/01.-Componentes?node-id=9341%3A58123',
+    type: "figma",
+    url:
+      "https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/01.-Componentes?node-id=9341%3A58123",
   },
 };
 Default.argTypes = {
-  'ds-color': {
+  "ds-color": {
     options: [undefined, ...Object.values(MedColors)],
-    control: { type: 'select' },
-    description: 'Define a cor do componente.',
+    control: { type: "select" },
+    description: "Define a cor do componente.",
     defaultValue: undefined,
     table: {
-      type: { summary: Object.values(MedColors).join(' |') },
-      defaultValue: { summary: 'undefined' },
+      type: { summary: Object.values(MedColors).join(" |") },
+      defaultValue: { summary: "undefined" },
     },
   },
-  'ds-name': {
-    options: [undefined, 'secondary'],
-    control: { type: 'inline-radio' },
-    description: 'Define a variação do componente.',
+  "ds-name": {
+    options: [undefined, "secondary"],
+    control: { type: "inline-radio" },
+    description: "Define a variação do componente.",
     defaultValue: undefined,
     table: {
-      type: { summary: 'secondary | undefined' },
-      defaultValue: { summary: 'undefined' },
+      type: { summary: "secondary | undefined" },
+      defaultValue: { summary: "undefined" },
     },
   },
   disabled: {
     disabled: false,
-    control: { type: 'boolean' },
-    description: 'Define o estado disabled do componente.',
+    control: { type: "boolean" },
+    description: "Define o estado disabled do componente.",
     table: {
-      type: { summary: 'boolean' },
-      defaultValue: { summary: 'undefined' },
+      type: { summary: "boolean" },
+      defaultValue: { summary: "undefined" },
     },
   },
-  "state": {
+  state: {
     options: [undefined, "attention", "caution", "warning", "success"],
     control: { type: "select" },
     description: "Define o estado de feedback do componente.",

@@ -4062,7 +4062,7 @@ export namespace Components {
         /**
           * todo
          */
-        "dsName"?: 'secondary';
+        "dsName"?: "secondary";
         /**
           * todo
          */
@@ -4070,11 +4070,11 @@ export namespace Components {
         /**
           * todo
          */
-        "hasButton"?: 'start' | 'end' | 'both';
+        "hasButton"?: "start" | "end" | "both";
         /**
           * todo
          */
-        "hasIcon"?: 'start' | 'end' | 'both';
+        "hasIcon"?: "start" | "end" | "both";
     }
     interface TutorialModal {
     }
@@ -9513,7 +9513,7 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "dsName"?: 'secondary';
+        "dsName"?: "secondary";
         /**
           * todo
          */
@@ -9521,11 +9521,11 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "hasButton"?: 'start' | 'end' | 'both';
+        "hasButton"?: "start" | "end" | "both";
         /**
           * todo
          */
-        "hasIcon"?: 'start' | 'end' | 'both';
+        "hasIcon"?: "start" | "end" | "both";
     }
     interface TutorialModal {
     }
