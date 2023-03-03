@@ -871,7 +871,8 @@ export const MedAlert = /*@__PURE__*/ defineContainer<JSX.MedAlert>('med-alert',
   'heading',
   'message',
   'cancelText',
-  'confirmText'
+  'confirmText',
+  'disableSanitize'
 ]);
 
 

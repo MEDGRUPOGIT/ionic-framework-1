@@ -65,7 +65,12 @@
 }
 
 #background-content {
-  @include position(calc(var(--offset-top) * -1), 0px, calc(var(--offset-bottom) * -1), 0px);
+  @include position(
+    calc(var(--offset-top) * -1),
+    0px,
+    calc(var(--offset-bottom) * -1),
+    0px
+  );
 
   position: absolute;
 
@@ -73,8 +78,18 @@
 }
 
 .inner-scroll {
-  @include position(calc(var(--offset-top) * -1), 0px, calc(var(--offset-bottom) * -1), 0px);
-  @include padding(calc(var(--padding-top) + var(--offset-top)), var(--padding-end), calc(var(--padding-bottom) + var(--keyboard-offset) + var(--offset-bottom)), var(--padding-start));
+  @include position(
+    calc(var(--offset-top) * -1),
+    0px,
+    calc(var(--offset-bottom) * -1),
+    0px
+  );
+  @include padding(
+    calc(var(--padding-top) + var(--offset-top)),
+    var(--padding-end),
+    calc(var(--padding-bottom) + var(--keyboard-offset) + var(--offset-bottom)),
+    var(--padding-start)
+  );
 
   position: absolute;
 
@@ -199,7 +214,6 @@
   background-size: 10px 16px;
 }
 
-
 // Content: Fixed
 // --------------------------------------------------
 
@@ -207,8 +221,10 @@
   position: absolute;
 }
 
+// templarios
+
 :host {
-  --tp-scroll-color-content:hsl(var(--med-color-neutral-3));
+  --tp-scroll-color-content: hsl(var(--med-color-neutral-3));
   --tp-scroll-width: 9px;
 
   scroll-snap-type: both mandatory;
@@ -259,3 +275,5 @@
 .inner-scroll:hover::-webkit-scrollbar-thumb {
   color: var(--tp-scroll-color-content);
 }
+
+// ! templarios

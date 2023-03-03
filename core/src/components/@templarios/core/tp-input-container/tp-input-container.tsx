@@ -18,7 +18,7 @@ import { generateMedColor } from "../../../../@templarios/utilities/color";
 export class TpInputContainer {
   @Element() host!: HTMLElement;
   hostWidth: number | undefined;
-  @State() clicked: boolean = false;
+  @State() selectClicked: boolean = false;
 
   /**
    * todo
@@ -52,13 +52,15 @@ export class TpInputContainer {
 
   @Listen("click", { target: "body" })
   getTpInputContainerWidth(e: MouseEvent) {
-    this.clicked = this.host.contains(e.target as Node);
+    const target = e.target as Node;
+    this.selectClicked =
+      this.host.contains(target) && target.nodeName === "ION-SELECT";
     this.hostWidth = this.host.clientWidth + 2;
   }
 
   @Listen("resize", { target: "window" })
   setPopoverWidthOnResize() {
-    if (!this.clicked) return;
+    if (!this.selectClicked) return;
 
     const popoverElement = document.querySelector(
       ".select-popover"
@@ -71,19 +73,23 @@ export class TpInputContainer {
 
   @Listen("ionPopoverWillPresent", { target: "body" })
   setPopoverWidth() {
-    if (!this.clicked) return;
+    if (!this.selectClicked) return;
 
     const popoverElement = document.querySelector(
       ".select-popover"
     ) as HTMLElement;
     popoverElement?.style.setProperty("--width", `${this.hostWidth}px`);
+
+    if (this.dsName === "secondary") {
+      popoverElement.classList.add("tp-popover--secondary");
+    }
   }
 
   @Listen("ionPopoverWillDismiss", { target: "body" })
   unsetClikedState() {
-    if (!this.clicked) return;
+    if (!this.selectClicked) return;
 
-    this.clicked = false;
+    this.selectClicked = false;
   }
 
   render() {
@@ -93,7 +99,7 @@ export class TpInputContainer {
       <Host
         class={generateMedColor(dsColor, {
           "tp-input-container": true,
-          [`tp-input-container--clicked`]: this.clicked,
+          [`tp-input-container--select-clicked`]: this.selectClicked,
           "tp-input-container--disabled": disabled,
           "tp-input-container--feedback": feedback,
           [`tp-input-container--${dsName}`]: dsName !== undefined,

@@ -12,6 +12,10 @@ ion-item {
   --padding-bottom: 16px;
   --padding-start: 16px;
   --min-height: auto;
+  --tp-label-font-weight: 400;
+  --tp-label-font-size: 14px;
+  --tp-label-line-height: 14px;
+  --tp-label-margin: 0;
 }
 
 //
@@ -48,10 +52,10 @@ ion-item {
   &.item {
     .sc-ion-label-ios-h {
       --color: hsl(var(--med-color-neutral-10));
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 14px;
-      margin: 0;
+      font-weight: var(--tp-label-font-weight);
+      font-size: var(--tp-label-font-size);
+      line-height: var(--tp-label-line-height);
+      margin: var(--tp-label-margin);
       text-overflow: initial;
       white-space: normal;
       overflow: unset;

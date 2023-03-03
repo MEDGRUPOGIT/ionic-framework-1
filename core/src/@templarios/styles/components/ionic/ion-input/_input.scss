@@ -1,4 +1,6 @@
 ion-input {
+  --tp-placeholder-font-family: inherit;
+
   &.sc-ion-input-md-h {
     --background: hsl(var(--med-color-neutral-2));
     --color: hsl(var(--med-color-neutral-10));
@@ -9,6 +11,7 @@ ion-input {
     --placeholder-color: hsl(var(--med-color-neutral-5));
     --placeholder-opacity: 1;
 
+    font-family: var(--tp-placeholder-font-family);
     margin-top: 0px;
     font-size: 14px;
     border-radius: 8px;
@@ -63,7 +66,6 @@ tp-input-container[state="attention"] {
     stroke: hsl(var(--med-color-fb-attention));
   }
 }
-
 
 ion-input[state="caution"] {
   &.sc-ion-input-md-h {
