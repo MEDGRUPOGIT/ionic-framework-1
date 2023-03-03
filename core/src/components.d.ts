@@ -2832,6 +2832,10 @@ export namespace Components {
         /**
           * todo
          */
+        "disableSanitize": boolean;
+        /**
+          * todo
+         */
         "heading"?: string;
         /**
           * todo
@@ -8173,6 +8177,10 @@ declare namespace LocalJSX {
           * todo
          */
         "confirmText"?: string;
+        /**
+          * todo
+         */
+        "disableSanitize"?: boolean;
         /**
           * todo
          */

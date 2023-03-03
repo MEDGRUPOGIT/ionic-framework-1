@@ -29,12 +29,17 @@ export class MedAlert {
    */
   @Prop({ mutable: true, reflect: true }) confirmText?: string;
 
+  /**
+   * todo
+   */
+  @Prop({ reflect: true }) disableSanitize = false;
+
   dismiss(role: string) {
     modalController.dismiss(null, role);
   }
 
   render() {
-    const { heading, message, cancelText, confirmText } = this;
+    const { heading, message, cancelText, confirmText, disableSanitize } = this;
 
     return (
       <Host>
@@ -44,8 +49,8 @@ export class MedAlert {
             </ion-button>
           </ion-header>
           <div class="tp-dialog-container">
-            <med-type class="tp-dialog-heading" token="h20x" innerHTML={sanitizeDOMString(heading)}></med-type>
-            <med-type ds-color="neutral-8" token="h14x" innerHTML={sanitizeDOMString(message)}></med-type>
+            <med-type class="tp-dialog-heading" token="h20x" innerHTML={!disableSanitize ? sanitizeDOMString(heading) : heading}></med-type>
+            <med-type ds-color="neutral-8" token="h14x" innerHTML={!disableSanitize ? sanitizeDOMString(message) : message}></med-type>
 
             <div class="tp-dialog-footer">
               {cancelText && <ion-button mode="ios" fill="outline" onClick={() => this.dismiss('cancel')}>{cancelText}</ion-button>}

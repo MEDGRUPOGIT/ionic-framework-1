@@ -197,9 +197,9 @@ ion-button[fill="clear"][icon-only] {
 }
 
 //
-// tertiary padding lateral off
+// tertiary no-padding
 //
-ion-button[fill="clear"][no-padding="true"] {
+ion-button[fill="clear"][no-padding] {
   --padding-start: 0;
   --padding-end: 0;
 }

@@ -17,7 +17,7 @@ const Template = ({ 'ds-color': dsColor, 'ds-size': dsSize, disabled, expand, no
           ${dsSize ? `ds-size=${dsSize}` : ''}
           ${disabled ? `disabled=${disabled}` : ''}
           ${expand !== 'none' ? `expand=${expand}` : ''}
-          no-padding=${noPadding}
+          ${noPadding ? `no-padding` : ''}
           >
           Button ${dsSize}
         </ion-button>
@@ -29,7 +29,7 @@ const Template = ({ 'ds-color': dsColor, 'ds-size': dsSize, disabled, expand, no
           ${dsSize ? `ds-size=${dsSize}` : ''}
           ${disabled ? `disabled=${disabled}` : ''}
           ${expand !== 'none' ? `expand=${expand}` : ''}
-          no-padding=${noPadding}
+          ${noPadding ? `no-padding` : ''}
           >
           <ion-icon slot="start" class="med-icon" name="med-esquerda"></ion-icon>
           Button ${dsSize}
@@ -42,7 +42,7 @@ const Template = ({ 'ds-color': dsColor, 'ds-size': dsSize, disabled, expand, no
           ${dsSize ? `ds-size=${dsSize}` : ''}
           ${disabled ? `disabled=${disabled}` : ''}
           ${expand !== 'none' ? `expand=${expand}` : ''}
-          no-padding=${noPadding} 
+          ${noPadding ? `no-padding` : ''}
           >
           Button ${dsSize}
           <ion-icon slot="end" class="med-icon" name="med-direita"></ion-icon>

@@ -7,12 +7,13 @@
 
 ## Properties
 
-| Property      | Attribute      | Description | Type                  | Default     |
-| ------------- | -------------- | ----------- | --------------------- | ----------- |
-| `cancelText`  | `cancel-text`  | todo        | `string \| undefined` | `undefined` |
-| `confirmText` | `confirm-text` | todo        | `string \| undefined` | `undefined` |
-| `heading`     | `heading`      | todo        | `string \| undefined` | `undefined` |
-| `message`     | `message`      | todo        | `string \| undefined` | `undefined` |
+| Property          | Attribute          | Description | Type                  | Default     |
+| ----------------- | ------------------ | ----------- | --------------------- | ----------- |
+| `cancelText`      | `cancel-text`      | todo        | `string \| undefined` | `undefined` |
+| `confirmText`     | `confirm-text`     | todo        | `string \| undefined` | `undefined` |
+| `disableSanitize` | `disable-sanitize` | todo        | `boolean`             | `false`     |
+| `heading`         | `heading`          | todo        | `string \| undefined` | `undefined` |
+| `message`         | `message`          | todo        | `string \| undefined` | `undefined` |
 
 
 ## Dependencies

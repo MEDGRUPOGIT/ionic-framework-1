@@ -1413,6 +1413,7 @@ med-agrupador,method,toggle,toggle(event?: Event | undefined) => Promise<void>
 med-alert,scoped
 med-alert,prop,cancelText,string | undefined,undefined,false,true
 med-alert,prop,confirmText,string | undefined,undefined,false,true
+med-alert,prop,disableSanitize,boolean,false,false,true
 med-alert,prop,heading,string | undefined,undefined,false,true
 med-alert,prop,message,string | undefined,undefined,false,true
 
