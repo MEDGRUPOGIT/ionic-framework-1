@@ -12,6 +12,7 @@ const Template = ({
   "ds-name": dsName,
   disabled,
   state,
+  inverted,
 }) => {
   const interfaceOpts = { cssClass: "tp-popover" };
 
@@ -24,6 +25,7 @@ const Template = ({
             .dsColor=${dsColor}
             ds-name=${dsName}
             .disabled=${disabled}
+            .inverted=${inverted}
             state=${state}
             has-icon="end"
           >
@@ -43,6 +45,56 @@ const Template = ({
               <ion-select-option> Option 5 </ion-select-option>
               <ion-select-option> Option 6 </ion-select-option>
               <ion-select-option> Option 7 </ion-select-option>
+            </ion-select>
+            <ion-icon class="med-icon" slot="end" name="med-baixo"></ion-icon>
+          </tp-input-container>
+
+          <tp-input-container
+            .dsColor=${dsColor}
+            ds-name=${dsName}
+            .disabled=${disabled}
+            .inverted=${inverted}
+            state=${state}
+            has-icon="end"
+            style="width: 50%;"
+          >
+            <ion-select
+              mode="md"
+              ds-color=${dsColor}
+              ds-name=${dsName}
+              .disabled=${disabled}
+              placeholder="Lorem ipsum dolor"
+              interface="popover"
+              .interfaceOptions=${interfaceOpts}
+            >
+              <ion-select-option> Option 1 </ion-select-option>
+              <ion-select-option> Option 2 </ion-select-option>
+              <ion-select-option> Option 3 </ion-select-option>
+            </ion-select>
+            <ion-icon class="med-icon" slot="end" name="med-baixo"></ion-icon>
+          </tp-input-container>
+
+          <tp-input-container
+            .dsColor=${dsColor}
+            ds-name=${dsName}
+            .disabled=${disabled}
+            .inverted=${inverted}
+            state=${state}
+            has-icon="end"
+            style="width: 25%;"
+          >
+            <ion-select
+              mode="md"
+              ds-color=${dsColor}
+              ds-name=${dsName}
+              .disabled=${disabled}
+              placeholder="Lorem ipsum dolor"
+              interface="popover"
+              .interfaceOptions=${interfaceOpts}
+            >
+              <ion-select-option> Option 1 </ion-select-option>
+              <ion-select-option> Option 2 </ion-select-option>
+              <ion-select-option> Option 3 </ion-select-option>
             </ion-select>
             <ion-icon class="med-icon" slot="end" name="med-baixo"></ion-icon>
           </tp-input-container>
@@ -88,6 +140,16 @@ Default.argTypes = {
     table: {
       type: { summary: "boolean" },
       defaultValue: { summary: "undefined" },
+    },
+  },
+  inverted: {
+    control: { type: "boolean" },
+    description:
+      "Define a direção de abertura do popover (acima ou abaixo do select).",
+    defaultValue: false,
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: false },
     },
   },
   state: {

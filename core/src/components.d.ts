@@ -4079,6 +4079,14 @@ export namespace Components {
           * todo
          */
         "hasIcon"?: "start" | "end" | "both";
+        /**
+          * todo
+         */
+        "inverted": boolean;
+    }
+    interface TpLoader {
+        "dsColor"?: MedColor;
+        "dsName"?: MedColor;
     }
     interface TutorialModal {
     }
@@ -5142,6 +5150,12 @@ declare global {
         prototype: HTMLTpInputContainerElement;
         new (): HTMLTpInputContainerElement;
     };
+    interface HTMLTpLoaderElement extends Components.TpLoader, HTMLStencilElement {
+    }
+    var HTMLTpLoaderElement: {
+        prototype: HTMLTpLoaderElement;
+        new (): HTMLTpLoaderElement;
+    };
     interface HTMLTutorialModalElement extends Components.TutorialModal, HTMLStencilElement {
     }
     var HTMLTutorialModalElement: {
@@ -5331,6 +5345,7 @@ declare global {
         "simulado-modal": HTMLSimuladoModalElement;
         "text-area-modal": HTMLTextAreaModalElement;
         "tp-input-container": HTMLTpInputContainerElement;
+        "tp-loader": HTMLTpLoaderElement;
         "tutorial-modal": HTMLTutorialModalElement;
         "unidades-modal": HTMLUnidadesModalElement;
     }
@@ -9534,6 +9549,14 @@ declare namespace LocalJSX {
           * todo
          */
         "hasIcon"?: "start" | "end" | "both";
+        /**
+          * todo
+         */
+        "inverted"?: boolean;
+    }
+    interface TpLoader {
+        "dsColor"?: MedColor;
+        "dsName"?: MedColor;
     }
     interface TutorialModal {
     }
@@ -9716,6 +9739,7 @@ declare namespace LocalJSX {
         "simulado-modal": SimuladoModal;
         "text-area-modal": TextAreaModal;
         "tp-input-container": TpInputContainer;
+        "tp-loader": TpLoader;
         "tutorial-modal": TutorialModal;
         "unidades-modal": UnidadesModal;
     }
@@ -9900,6 +9924,7 @@ declare module "@stencil/core" {
             "simulado-modal": LocalJSX.SimuladoModal & JSXBase.HTMLAttributes<HTMLSimuladoModalElement>;
             "text-area-modal": LocalJSX.TextAreaModal & JSXBase.HTMLAttributes<HTMLTextAreaModalElement>;
             "tp-input-container": LocalJSX.TpInputContainer & JSXBase.HTMLAttributes<HTMLTpInputContainerElement>;
+            "tp-loader": LocalJSX.TpLoader & JSXBase.HTMLAttributes<HTMLTpLoaderElement>;
             "tutorial-modal": LocalJSX.TutorialModal & JSXBase.HTMLAttributes<HTMLTutorialModalElement>;
             "unidades-modal": LocalJSX.UnidadesModal & JSXBase.HTMLAttributes<HTMLUnidadesModalElement>;
         }

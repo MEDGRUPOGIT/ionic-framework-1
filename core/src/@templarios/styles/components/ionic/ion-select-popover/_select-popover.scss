@@ -1,4 +1,9 @@
 ion-popover.tp-popover {
+  --top: auto;
+  --left: auto;
+  --bottom: auto;
+  --right: auto;
+
   .popover-content {
     --background: hsl(var(--med-color-neutral-3));
     --border-radius: 0 0 8px 8px;
@@ -54,6 +59,20 @@ ion-popover.tp-popover {
       &:not(:last-child) {
         border-bottom: 1px solid hsl(var(--med-color-neutral-5));
       }
+    }
+  }
+
+  // validar
+  &--inverted {
+    .popover-content {
+      --border-radius: 8px 8px 0 0;
+
+      top: var(--top) !important;
+      left: var(--left) !important;
+      bottom: var(--bottom) !important;
+      right: var(--right) !important;
+      border-radius: var(--border-radius) !important;
+      transform: none !important;
     }
   }
 }
