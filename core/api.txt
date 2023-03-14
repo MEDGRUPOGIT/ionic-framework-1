@@ -1872,6 +1872,11 @@ tp-input-container,prop,dsName,"secondary" | undefined,undefined,false,true
 tp-input-container,prop,feedback,boolean,false,false,true
 tp-input-container,prop,hasButton,"both" | "end" | "start" | undefined,undefined,false,true
 tp-input-container,prop,hasIcon,"both" | "end" | "start" | undefined,undefined,false,true
+tp-input-container,prop,inverted,boolean,false,false,true
+
+tp-loader,scoped
+tp-loader,prop,dsColor,string | undefined,undefined,false,true
+tp-loader,prop,dsName,string | undefined,undefined,false,true
 
 tutorial-modal,scoped
 

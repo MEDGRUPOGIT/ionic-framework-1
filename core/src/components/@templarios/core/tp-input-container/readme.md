@@ -15,6 +15,7 @@
 | `feedback`  | `feedback`   | todo        | `boolean`                                 | `false`     |
 | `hasButton` | `has-button` | todo        | `"both" \| "end" \| "start" \| undefined` | `undefined` |
 | `hasIcon`   | `has-icon`   | todo        | `"both" \| "end" \| "start" \| undefined` | `undefined` |
+| `inverted`  | `inverted`   | todo        | `boolean`                                 | `false`     |
 
 
 ## Dependencies
