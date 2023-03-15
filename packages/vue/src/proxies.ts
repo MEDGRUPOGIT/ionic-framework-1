@@ -1449,8 +1449,15 @@ export const TpInputContainer = /*@__PURE__*/ defineContainer<JSX.TpInputContain
   'dsName',
   'disabled',
   'feedback',
+  'inverted',
   'hasButton',
   'hasIcon'
+]);
+
+
+export const TpLoader = /*@__PURE__*/ defineContainer<JSX.TpLoader>('tp-loader', [
+  'dsColor',
+  'dsName'
 ]);
 
 
