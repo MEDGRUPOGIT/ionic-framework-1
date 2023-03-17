@@ -11,6 +11,7 @@
 | --------- | ---------- | ----------- | --------------------- | ----------- |
 | `dsColor` | `ds-color` |             | `string \| undefined` | `undefined` |
 | `dsName`  | `ds-name`  |             | `string \| undefined` | `undefined` |
+| `fixed`   | `fixed`    |             | `boolean`             | `false`     |
 
 
 ----------------------------------------------

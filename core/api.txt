@@ -1877,6 +1877,7 @@ tp-input-container,prop,inverted,boolean,false,false,true
 tp-loader,scoped
 tp-loader,prop,dsColor,string | undefined,undefined,false,true
 tp-loader,prop,dsName,string | undefined,undefined,false,true
+tp-loader,prop,fixed,boolean,false,false,true
 
 tutorial-modal,scoped
 
