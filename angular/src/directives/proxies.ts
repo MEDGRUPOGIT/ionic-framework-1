@@ -1891,8 +1891,8 @@ export class TpInputContainer {
 }
 export declare interface TpLoader extends Components.TpLoader {
 }
-@ProxyCmp({ inputs: ["dsColor", "dsName"] })
-@Component({ selector: "tp-loader", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "dsName"] })
+@ProxyCmp({ inputs: ["dsColor", "dsName", "fixed"] })
+@Component({ selector: "tp-loader", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["dsColor", "dsName", "fixed"] })
 export class TpLoader {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

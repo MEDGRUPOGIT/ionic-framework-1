@@ -1457,6 +1457,7 @@ export const TpInputContainer = /*@__PURE__*/ defineContainer<JSX.TpInputContain
 
 export const TpLoader = /*@__PURE__*/ defineContainer<JSX.TpLoader>('tp-loader', [
   'dsColor',
+  'fixed',
   'dsName'
 ]);
 
