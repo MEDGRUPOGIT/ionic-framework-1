@@ -22,10 +22,10 @@ ion-item {
 // radius
 //
 // $tp-base-radius in src/@templarios/styles/variables/_components.scss
-@each $radius-value,
-$radius in $tp-base-radius {
-  ion-item[radius='#{$radius-value}'] {
+@each $radius-value, $radius in $tp-base-radius {
+  ion-item[radius="#{$radius-value}"] {
     border-radius: #{$radius};
+    --border-radius: #{$radius};
   }
 }
 
@@ -33,19 +33,17 @@ $radius in $tp-base-radius {
 // spacing
 //
 // $tp-base-spacing in src/@templarios/styles/variables/_components.scss
-@each $spacing-value,
-$spacing in $tp-base-spacing {
-  ion-item[spacing-v='#{$spacing-value}'] {
+@each $spacing-value, $spacing in $tp-base-spacing {
+  ion-item[spacing-v="#{$spacing-value}"] {
     --padding-bottom: #{$spacing};
     --padding-top: #{$spacing};
   }
 
-  ion-item[spacing-h='#{$spacing-value}'] {
+  ion-item[spacing-h="#{$spacing-value}"] {
     --padding-end: #{$spacing};
     --padding-start: #{$spacing};
   }
 }
-
 
 // slotted label
 ion-item {
@@ -73,7 +71,6 @@ ion-item {
 
 // slotted checkbox/radio/toggle
 ion-item {
-
   ion-checkbox[slot="start"],
   ion-radio[slot="start"],
   ion-toggle[slot="start"],
@@ -95,12 +92,9 @@ ion-item {
 // gap
 //
 // $tp-base-gap in src/@templarios/styles/variables/_components.scss
-@each $gap-value,
-$gap in $tp-base-gap {
-
+@each $gap-value, $gap in $tp-base-gap {
   // slotted checkbox/radio/toggle
-  ion-item[gap='#{$gap-value}'] {
-
+  ion-item[gap="#{$gap-value}"] {
     ion-checkbox[slot="start"],
     ion-radio[slot="start"],
     ion-toggle[slot="start"],

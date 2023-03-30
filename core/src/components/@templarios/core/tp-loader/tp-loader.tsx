@@ -10,7 +10,7 @@ import { MedColor } from "../../../../@templarios/types/color.type";
 export class TpLoader {
   @Prop({ reflect: true }) dsColor?: MedColor;
   @Prop({ reflect: true }) fixed = false;
-  @Prop({ reflect: true }) dsName?: MedColor;
+  @Prop({ reflect: true }) dsName?: "secondary";
 
   render() {
     const { dsColor, fixed, dsName } = this;
@@ -46,7 +46,6 @@ export class TpLoader {
             tp-loader-svg
             viewBox="0 0 100 100"
             xmlns="http://www.w3.org/2000/svg"
-            // xmlns:xlink="http://www.w3.org/1999/xlink"
           >
             <circle tp-loader-circle cx="50" cy="50" r="47" />
 

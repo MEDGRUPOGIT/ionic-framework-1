@@ -20,6 +20,9 @@
   --stroke: #{curr-color("feedback")};
   --background-secondary: #{curr-color("feedback")};
 }
+//
+// # fim ds-color
+//
 
 //
 // default loader
@@ -65,12 +68,27 @@
     animation: loadingline 1s cubic-bezier(0.83, 0, 0.17, 1) infinite alternate;
     stroke-dasharray: 25;
     stroke-dashoffset: 25;
-
-    @for $i from 2 through 8 {
-      &:nth-of-type(#{$i}) {
-        animation-delay: #{$i * 0.1 - 0.1}s;
-      }
-    }
+  }
+  [tp-loader-line]:nth-of-type(2) {
+    animation-delay: 0.1s;
+  }
+  [tp-loader-line]:nth-of-type(3) {
+    animation-delay: 0.2s;
+  }
+  [tp-loader-line]:nth-of-type(4) {
+    animation-delay: 0.3s;
+  }
+  [tp-loader-line]:nth-of-type(5) {
+    animation-delay: 0.4s;
+  }
+  [tp-loader-line]:nth-of-type(6) {
+    animation-delay: 0.5s;
+  }
+  [tp-loader-line]:nth-of-type(7) {
+    animation-delay: 0.6s;
+  }
+  [tp-loader-line]:nth-of-type(8) {
+    animation-delay: 0.7s;
   }
 
   [tp-loader-polyline] {
@@ -78,12 +96,15 @@
       alternate;
     stroke-dasharray: 50;
     stroke-dashoffset: 50;
-
-    @for $i from 2 through 4 {
-      &:nth-of-type(#{$i}) {
-        animation-delay: #{0.2 * ($i - 1)}s;
-      }
-    }
+  }
+  [tp-loader-polyline]:nth-of-type(2) {
+    animation-delay: 0.2s;
+  }
+  [tp-loader-polyline]:nth-of-type(3) {
+    animation-delay: 0.4s;
+  }
+  [tp-loader-polyline]:nth-of-type(4) {
+    animation-delay: 0.6s;
   }
 
   @keyframes loadingline {
@@ -97,7 +118,6 @@
       stroke-dashoffset: 0;
     }
   }
-
   @keyframes loadingpolyline {
     0% {
       stroke-dashoffset: 50;
@@ -109,13 +129,11 @@
       stroke-dashoffset: 0;
     }
   }
-
   @keyframes loadingcircle {
     to {
       stroke-dashoffset: 0;
     }
   }
-
   @keyframes rotate {
     to {
       transform: rotate(1turn);
@@ -155,11 +173,44 @@
       background: var(--background-secondary, hsl(var(--med-color-neutral-10)));
     }
 
-    @for $i from 1 through 8 {
-      &:nth-of-type(#{$i}) {
-        transform: rotate(#{45 * ($i - 1)}deg);
-        animation-delay: #{-0.8 + (0.1 * $i)}s;
-      }
+    &:nth-child(1) {
+      transform: rotate(0deg);
+      animation-delay: -0.7s;
+    }
+
+    &:nth-child(2) {
+      transform: rotate(45deg);
+      animation-delay: -0.6s;
+    }
+
+    &:nth-child(3) {
+      transform: rotate(90deg);
+      animation-delay: -0.5s;
+    }
+
+    &:nth-child(4) {
+      transform: rotate(135deg);
+      animation-delay: -0.4s;
+    }
+
+    &:nth-child(5) {
+      transform: rotate(180deg);
+      animation-delay: -0.3s;
+    }
+
+    &:nth-child(6) {
+      transform: rotate(225deg);
+      animation-delay: -0.2s;
+    }
+
+    &:nth-child(7) {
+      transform: rotate(270deg);
+      animation-delay: -0.1s;
+    }
+
+    &:nth-child(8) {
+      transform: rotate(315deg);
+      animation-delay: 0s;
     }
   }
 

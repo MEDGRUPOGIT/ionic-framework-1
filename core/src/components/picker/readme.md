@@ -125,7 +125,7 @@ const PickerExample: React.FC = () => {
 
 ## Methods
 
-### `dismiss(data?: any, role?: string) => Promise<boolean>`
+### `dismiss(data?: any, role?: string | undefined) => Promise<boolean>`
 
 Dismiss the picker overlay after it has been presented.
 

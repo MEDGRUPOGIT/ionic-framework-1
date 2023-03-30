@@ -11,6 +11,7 @@ export enum MedTypeTag {
 }
 
 export enum MedType {
+  H64 = "h64",
   H48 = "h48",
   H48X = "h48x",
   H32 = "h32",

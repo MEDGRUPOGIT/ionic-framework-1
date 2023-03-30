@@ -45,6 +45,7 @@ const sidebars = {
       label: 'Hotsites',
       items: [
         'hotsites/institucional-combos',
+        'hotsites/simulados',
         'hotsites/medeletro',
         'hotsites/medimagem',
         'hotsites/ventilamed',

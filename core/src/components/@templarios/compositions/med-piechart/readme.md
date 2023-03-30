@@ -24,7 +24,7 @@
 
 ## Methods
 
-### `toggle(event?: Event) => Promise<void>`
+### `toggle(event?: Event | undefined) => Promise<void>`
 
 todo
 
