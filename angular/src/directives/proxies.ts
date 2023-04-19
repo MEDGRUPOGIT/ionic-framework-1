@@ -1741,8 +1741,8 @@ export class MedTiles {
 }
 export declare interface MedToggle extends Components.MedToggle {
 }
-@ProxyCmp({ inputs: ["collapsed", "dsColor"] })
-@Component({ selector: "med-toggle", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "dsColor"] })
+@ProxyCmp({ inputs: ["collapsed", "dsColor", "iconClick"] })
+@Component({ selector: "med-toggle", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["collapsed", "dsColor", "iconClick"] })
 export class MedToggle {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

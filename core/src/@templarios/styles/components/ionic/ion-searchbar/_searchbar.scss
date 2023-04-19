@@ -45,6 +45,15 @@ ion-searchbar {
     height: 24px;
     stroke: var(--clear-button-color);
   }
+
+  //
+  // no-icon
+  //
+  &:not([search-icon]) {
+    .searchbar-input.sc-ion-searchbar-md{
+      padding-inline-start: 16px;
+    }
+  }
 }
 
 //

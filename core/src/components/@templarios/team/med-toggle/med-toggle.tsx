@@ -5,24 +5,29 @@ import { generateMedColor } from '../../../../@templarios/utilities/color';
 @Component({
   tag: 'med-toggle',
   styleUrl: 'med-toggle.scss',
-  shadow: true,
+  scoped: true,
 })
 export class MedToggle {
   @Element() host!: HTMLElement;
   element?: HTMLElement;
 
   /**
- * todo
- */
+  * todo
+  */
   @Prop({ reflect: true }) dsColor?: MedColor;
 
   /**
- * todo
- */
+  * todo
+  */
   @Prop({ reflect: true, mutable: true }) collapsed = true;
 
+  /**
+  * todo
+  */
+  @Prop({ reflect: true, mutable: true }) iconClick = false;
+
   componentDidLoad() {
-    this.element = this.host.shadowRoot?.querySelector('.med-toggle__content')!;
+    (this.element as HTMLElement) = this.host.querySelector('.med-toggle__content')!;
   }
 
   setHeight() {
@@ -53,19 +58,34 @@ export class MedToggle {
     }
   }
 
+  onClickComponent() {
+    if (!this.iconClick) {
+      this.collapsed = !this.collapsed;
+    }
+  }
+
+  onClickIcon() {
+    if (this.iconClick) {
+      this.collapsed = !this.collapsed;
+    }
+  }
+
   render() {
-    const { collapsed, dsColor } = this;
+    const { collapsed, dsColor, iconClick } = this;
 
     return (
       <Host class={generateMedColor(dsColor, {
         'med-toggle': true,
-        'med-toggle--collapsed': collapsed
+        'med-toggle--collapsed': collapsed,
+        'med-toggle--icon-click': iconClick
       })}
-      onClick={() => {this.collapsed = !this.collapsed;}}>
+      onClick={() => {this.onClickComponent()}}>
         <div class="med-toggle__content">
           <slot></slot>
         </div>
-        <ion-icon class="med-icon med-toggle__icon" name="med-cima"></ion-icon>
+        <div class="med-toggle__bottom" onClick={() => {this.onClickIcon()}}>
+          <ion-icon class="med-icon med-toggle__icon" name="med-cima"></ion-icon>
+        </div>
       </Host>
     );
   }

@@ -150,10 +150,7 @@ tp-input-container[state="success"] {
 }
 
 @for $i from 1 through 9 {
-
-  @include generate-component-neutral(tp-input-container,
-    neutral-#{$i}#{5},
-    $i ) {
+  @include generate-component-neutral(tp-input-container, neutral-#{$i}#{5},$i ) {
     --color: #{tp-contrast-neutral($i)};
 
     ion-button:hover .med-icon {
@@ -171,12 +168,9 @@ tp-input-container[state="success"] {
 }
 
 @for $i from 1 through 9 {
-
-  @include generate-component-neutral(ion-input,
-    neutral-#{$i}#{5},
-    $i ) {
+@include generate-component-neutral(ion-input, neutral-#{$i}#{5}, $i ) {
     --color: #{tp-contrast-neutral($i)};
-    --background: #{tp-neutral($i)};
+    --background: #{tp-neutral($i, 5)};
     --placeholder-color: #{tp-contrast-neutral($i)};
   }
 }

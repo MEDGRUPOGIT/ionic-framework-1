@@ -1817,6 +1817,7 @@ med-tiles,prop,titulo,string | undefined,undefined,false,false
 med-toggle,shadow
 med-toggle,prop,collapsed,boolean,true,false,true
 med-toggle,prop,dsColor,string | undefined,undefined,false,true
+med-toggle,prop,iconClick,boolean,false,false,true
 
 med-toolbar,shadow
 med-toolbar,prop,dsColor,string | undefined,undefined,false,true

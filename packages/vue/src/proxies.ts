@@ -1378,7 +1378,8 @@ export const MedTiles = /*@__PURE__*/ defineContainer<JSX.MedTiles>('med-tiles',
 
 export const MedToggle = /*@__PURE__*/ defineContainer<JSX.MedToggle>('med-toggle', [
   'dsColor',
-  'collapsed'
+  'collapsed',
+  'iconClick'
 ]);
 
 

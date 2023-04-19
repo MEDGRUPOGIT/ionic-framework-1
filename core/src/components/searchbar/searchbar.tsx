@@ -521,7 +521,7 @@ export class Searchbar implements ComponentInterface {
           {mode === 'md' && cancelButton}
 
           {/* // templarios */}
-          <ion-icon aria-hidden="true" mode={mode} name={searchIcon} lazy={false} class="med-icon searchbar-search-icon"></ion-icon>
+          {this.searchIcon && <ion-icon aria-hidden="true" mode={mode} name={searchIcon} lazy={false} class="med-icon searchbar-search-icon"></ion-icon>}
           {/* // !templarios */}
 
           <button
