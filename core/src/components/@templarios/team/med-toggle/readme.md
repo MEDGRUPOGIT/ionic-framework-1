@@ -7,10 +7,11 @@
 
 ## Properties
 
-| Property    | Attribute   | Description | Type                  | Default     |
-| ----------- | ----------- | ----------- | --------------------- | ----------- |
-| `collapsed` | `collapsed` | todo        | `boolean`             | `true`      |
-| `dsColor`   | `ds-color`  | todo        | `string \| undefined` | `undefined` |
+| Property    | Attribute    | Description | Type                  | Default     |
+| ----------- | ------------ | ----------- | --------------------- | ----------- |
+| `collapsed` | `collapsed`  | todo        | `boolean`             | `true`      |
+| `dsColor`   | `ds-color`   | todo        | `string \| undefined` | `undefined` |
+| `iconClick` | `icon-click` | todo        | `boolean`             | `false`     |
 
 
 ## Dependencies

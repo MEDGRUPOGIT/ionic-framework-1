@@ -6034,6 +6034,7 @@ ion-item {
   --tp-label-font-size: 14px;
   --tp-label-line-height: 14px;
   --tp-label-margin: 0;
+  contain: content;
 }
 
 ion-item[radius=s00] {
@@ -10397,7 +10398,7 @@ ion-toggle[ds-color=fb-success] {
 
 @supports (backdrop-filter: blur(0)) {
   .med-popover--font-zoom .popover-content,
-.med-popover--font-zoom .popover-arrow::after {
+  .med-popover--font-zoom .popover-arrow::after {
     --background: hsl(var(--med-color-neutral-2));
     background: hsl(var(--med-color-neutral-2)) !important;
   }
