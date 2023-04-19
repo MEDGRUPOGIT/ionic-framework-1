@@ -1445,6 +1445,18 @@ export const SimuladoModal = /*@__PURE__*/ defineContainer<JSX.SimuladoModal>('s
 export const TextAreaModal = /*@__PURE__*/ defineContainer<JSX.TextAreaModal>('text-area-modal');
 
 
+export const TpChartBar = /*@__PURE__*/ defineContainer<JSX.TpChartBar>('tp-chart-bar', [
+  'dsColor',
+  'dsName',
+  'label',
+  'labelSize',
+  'height',
+  'bar',
+  'hasMarker',
+  'marker'
+]);
+
+
 export const TpInputContainer = /*@__PURE__*/ defineContainer<JSX.TpInputContainer>('tp-input-container', [
   'dsColor',
   'dsName',

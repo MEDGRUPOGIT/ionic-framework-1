@@ -1878,6 +1878,17 @@ export class TextAreaModal {
     this.el = r.nativeElement;
   }
 }
+export declare interface TpChartBar extends Components.TpChartBar {
+}
+@ProxyCmp({ inputs: ["bar", "dsColor", "dsName", "hasMarker", "height", "label", "labelSize", "marker"] })
+@Component({ selector: "tp-chart-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["bar", "dsColor", "dsName", "hasMarker", "height", "label", "labelSize", "marker"] })
+export class TpChartBar {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface TpInputContainer extends Components.TpInputContainer {
 }
 @ProxyCmp({ inputs: ["disabled", "dsColor", "dsName", "feedback", "hasButton", "hasIcon", "inverted"] })
