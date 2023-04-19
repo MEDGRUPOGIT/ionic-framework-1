@@ -21,6 +21,7 @@ import { RateStatus } from "@templarios/enums/rate-like.enum";
 import { MedSemanaInterface } from "@templarios/interfaces/semana.interface";
 import { MedTema } from "@templarios/interfaces/themes.interface";
 import { MedTypeTag, MedTypeToken } from "@templarios/types/type.type";
+import { TpChartBarItem } from "@templarios/interfaces/chart-bar.interface";
 export namespace Components {
     interface AjudaModal {
     }
@@ -4058,6 +4059,40 @@ export namespace Components {
     }
     interface TextAreaModal {
     }
+    interface TpChartBar {
+        /**
+          * todo
+         */
+        "bar": TpChartBarItem;
+        /**
+          * todo
+         */
+        "dsColor"?: MedColor;
+        /**
+          * todo
+         */
+        "dsName"?: "secondary";
+        /**
+          * todo
+         */
+        "hasMarker": boolean;
+        /**
+          * todo
+         */
+        "height": number;
+        /**
+          * todo
+         */
+        "label"?: string;
+        /**
+          * todo
+         */
+        "labelSize": number;
+        /**
+          * todo
+         */
+        "marker": TpChartBarItem;
+    }
     interface TpInputContainer {
         /**
           * todo
@@ -5397,6 +5432,12 @@ declare global {
         prototype: HTMLTextAreaModalElement;
         new (): HTMLTextAreaModalElement;
     };
+    interface HTMLTpChartBarElement extends Components.TpChartBar, HTMLStencilElement {
+    }
+    var HTMLTpChartBarElement: {
+        prototype: HTMLTpChartBarElement;
+        new (): HTMLTpChartBarElement;
+    };
     interface HTMLTpInputContainerElement extends Components.TpInputContainer, HTMLStencilElement {
     }
     var HTMLTpInputContainerElement: {
@@ -5597,6 +5638,7 @@ declare global {
         "sheet-test": HTMLSheetTestElement;
         "simulado-modal": HTMLSimuladoModalElement;
         "text-area-modal": HTMLTextAreaModalElement;
+        "tp-chart-bar": HTMLTpChartBarElement;
         "tp-input-container": HTMLTpInputContainerElement;
         "tp-loader": HTMLTpLoaderElement;
         "tutorial-modal": HTMLTutorialModalElement;
@@ -9781,6 +9823,40 @@ declare namespace LocalJSX {
     }
     interface TextAreaModal {
     }
+    interface TpChartBar {
+        /**
+          * todo
+         */
+        "bar"?: TpChartBarItem;
+        /**
+          * todo
+         */
+        "dsColor"?: MedColor;
+        /**
+          * todo
+         */
+        "dsName"?: "secondary";
+        /**
+          * todo
+         */
+        "hasMarker"?: boolean;
+        /**
+          * todo
+         */
+        "height"?: number;
+        /**
+          * todo
+         */
+        "label"?: string;
+        /**
+          * todo
+         */
+        "labelSize"?: number;
+        /**
+          * todo
+         */
+        "marker"?: TpChartBarItem;
+    }
     interface TpInputContainer {
         /**
           * todo
@@ -9996,6 +10072,7 @@ declare namespace LocalJSX {
         "sheet-test": SheetTest;
         "simulado-modal": SimuladoModal;
         "text-area-modal": TextAreaModal;
+        "tp-chart-bar": TpChartBar;
         "tp-input-container": TpInputContainer;
         "tp-loader": TpLoader;
         "tutorial-modal": TutorialModal;
@@ -10181,6 +10258,7 @@ declare module "@stencil/core" {
             "sheet-test": LocalJSX.SheetTest & JSXBase.HTMLAttributes<HTMLSheetTestElement>;
             "simulado-modal": LocalJSX.SimuladoModal & JSXBase.HTMLAttributes<HTMLSimuladoModalElement>;
             "text-area-modal": LocalJSX.TextAreaModal & JSXBase.HTMLAttributes<HTMLTextAreaModalElement>;
+            "tp-chart-bar": LocalJSX.TpChartBar & JSXBase.HTMLAttributes<HTMLTpChartBarElement>;
             "tp-input-container": LocalJSX.TpInputContainer & JSXBase.HTMLAttributes<HTMLTpInputContainerElement>;
             "tp-loader": LocalJSX.TpLoader & JSXBase.HTMLAttributes<HTMLTpLoaderElement>;
             "tutorial-modal": LocalJSX.TutorialModal & JSXBase.HTMLAttributes<HTMLTutorialModalElement>;

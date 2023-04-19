@@ -1814,7 +1814,7 @@ med-tiles,prop,selected,boolean,false,false,true
 med-tiles,prop,solid,boolean,false,false,false
 med-tiles,prop,titulo,string | undefined,undefined,false,false
 
-med-toggle,shadow
+med-toggle,scoped
 med-toggle,prop,collapsed,boolean,true,false,true
 med-toggle,prop,dsColor,string | undefined,undefined,false,true
 med-toggle,prop,iconClick,boolean,false,false,true
@@ -1865,6 +1865,22 @@ sheet-test,scoped
 simulado-modal,scoped
 
 text-area-modal,scoped
+
+tp-chart-bar,scoped
+tp-chart-bar,prop,bar,TpChartBarItem,{
+    color: "med-color-brand-4",
+    value: 0,
+  },false,false
+tp-chart-bar,prop,dsColor,string | undefined,undefined,false,true
+tp-chart-bar,prop,dsName,"secondary" | undefined,undefined,false,true
+tp-chart-bar,prop,hasMarker,boolean,false,false,true
+tp-chart-bar,prop,height,number,200,false,true
+tp-chart-bar,prop,label,string | undefined,undefined,false,true
+tp-chart-bar,prop,labelSize,number,10,false,true
+tp-chart-bar,prop,marker,TpChartBarItem,{
+    color: "med-color-fb-caution",
+    value: 0,
+  },false,false
 
 tp-input-container,scoped
 tp-input-container,prop,disabled,boolean,false,false,true
