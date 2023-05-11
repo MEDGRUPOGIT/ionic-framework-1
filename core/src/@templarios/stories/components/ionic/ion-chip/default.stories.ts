@@ -7,26 +7,26 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ 'ds-color': dsColor, 'ds-name': dsName, 'ds-size': dsSize, active, disabled, slot }) => {
+const Template = ({ 'ds-color': dsColor, 'ds-name': dsName, 'ds-size': dsSize, active, disabled, slot, simple }) => {
   return html`
     <ion-app>
       <ion-content>
 
-        <ion-chip mode="ios" ds-color=${dsColor} ds-name=${dsName} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
+        <ion-chip mode="ios" ds-color=${dsColor} ds-name=${dsName} ds-size=${dsSize} ?active=${active} .disabled=${disabled} ?simple=${simple}>
           <ion-label> ${slot} </ion-label>
         </ion-chip>
 
-        <ion-chip mode="ios" ds-color=${dsColor} ds-name=${dsName} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
+        <ion-chip mode="ios" ds-color=${dsColor} ds-name=${dsName} ds-size=${dsSize} ?active=${active} .disabled=${disabled} ?simple=${simple}>
           <ion-icon class="med-icon" name="med-star-filled"></ion-icon>
           <ion-label> ${slot} </ion-label>
         </ion-chip>
 
-        <ion-chip mode="ios" ds-color=${dsColor} ds-name=${dsName} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
+        <ion-chip mode="ios" ds-color=${dsColor} ds-name=${dsName} ds-size=${dsSize} ?active=${active} .disabled=${disabled} ?simple=${simple}>
           <ion-label> ${slot} </ion-label>
           <ion-icon class="med-icon" name="med-star-filled"></ion-icon>
         </ion-chip>
 
-        <ion-chip mode="ios" ds-color=${dsColor} ds-name=${dsName} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
+        <ion-chip mode="ios" ds-color=${dsColor} ds-name=${dsName} ds-size=${dsSize} ?active=${active} .disabled=${disabled} ?simple=${simple}>
           <ion-icon class="med-icon" name="med-star-filled"></ion-icon>
           <ion-label> ${slot} </ion-label>
           <ion-icon class="med-icon" name="med-star-filled"></ion-icon>
@@ -96,5 +96,14 @@ Default.argTypes = {
   slot: {
     control: { type: 'text' },
     defaultValue: 'Chip',
+  },
+  simple: {
+    simple: false,
+    control: { type: 'boolean' },
+    description: 'Remove o background do ícone.',
+    table: {
+      type: { summary: 'boolean' },
+      defaultValue: { summary: 'undefined' },
+    },
   },
 };

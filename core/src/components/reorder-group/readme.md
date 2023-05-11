@@ -663,7 +663,7 @@ export default defineComponent({
 
 ## Methods
 
-### `complete(listOrReorder?: boolean | any[] | undefined) => Promise<any>`
+### `complete(listOrReorder?: boolean | any[]) => Promise<any>`
 
 Completes the reorder operation. Must be called by the `ionItemReorder` event.
 

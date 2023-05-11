@@ -764,7 +764,7 @@ Type: `Promise<void>`
 
 
 
-### `slideNext(speed?: number | undefined, runCallbacks?: boolean | undefined) => Promise<void>`
+### `slideNext(speed?: number, runCallbacks?: boolean) => Promise<void>`
 
 Transition to the next slide.
 
@@ -774,7 +774,7 @@ Type: `Promise<void>`
 
 
 
-### `slidePrev(speed?: number | undefined, runCallbacks?: boolean | undefined) => Promise<void>`
+### `slidePrev(speed?: number, runCallbacks?: boolean) => Promise<void>`
 
 Transition to the previous slide.
 
@@ -784,7 +784,7 @@ Type: `Promise<void>`
 
 
 
-### `slideTo(index: number, speed?: number | undefined, runCallbacks?: boolean | undefined) => Promise<void>`
+### `slideTo(index: number, speed?: number, runCallbacks?: boolean) => Promise<void>`
 
 Transition to the specified slide.
 
@@ -825,7 +825,7 @@ Type: `Promise<void>`
 
 
 
-### `updateAutoHeight(speed?: number | undefined) => Promise<void>`
+### `updateAutoHeight(speed?: number) => Promise<void>`
 
 Force swiper to update its height (when autoHeight is enabled) for the duration
 equal to 'speed' parameter.

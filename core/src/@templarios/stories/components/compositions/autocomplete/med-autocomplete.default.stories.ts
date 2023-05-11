@@ -14,7 +14,19 @@ const Template = ({ dsName }) => {
 
           <!-- component markdown -->
           <med-autocomplete ds-name=${dsName}>
-            <med-dropdown ds-name=${dsName}>
+            <med-dropdown class="tp-scroll" ds-name=${dsName}>
+              <med-item>
+                <med-type token="p14">Lorem ipsum Dolor</med-type>
+              </med-item>
+              <med-item>
+                <med-type token="p14">Lorem ipsum Dolor</med-type>
+              </med-item>
+              <med-item>
+                <med-type token="p14">Lorem ipsum Dolor</med-type>
+              </med-item>
+              <med-item>
+                <med-type token="p14">Lorem ipsum Dolor</med-type>
+              </med-item>
               <med-item>
                 <med-type token="p14">Lorem ipsum Dolor</med-type>
               </med-item>
@@ -25,7 +37,7 @@ const Template = ({ dsName }) => {
                 <med-type token="p14">Lorem ipsum Dolor</med-type>
               </med-item>
             </med-dropdown>
-            <ion-searchbar ds-name=${dsName} mode="md" search-icon="med-busca" clear-icon="med-fechar" placeholder="Placeholder"></ion-searchbar>
+            <ion-searchbar ds-color="neutral-15" ds-name=${dsName} mode="md" search-icon="med-busca" clear-icon="med-fechar" placeholder="Placeholder"></ion-searchbar>
           </med-autocomplete>
           <!-- component markdown -->
 

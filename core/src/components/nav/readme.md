@@ -29,7 +29,7 @@ Unlike Router Outlet, Nav is not tied to a particular router. This means that if
 
 ## Methods
 
-### `canGoBack(view?: ViewController | undefined) => Promise<boolean>`
+### `canGoBack(view?: ViewController) => Promise<boolean>`
 
 Returns `true` if the current view can go back.
 
@@ -59,7 +59,7 @@ Type: `Promise<ViewController | undefined>`
 
 
 
-### `getPrevious(view?: ViewController | undefined) => Promise<ViewController | undefined>`
+### `getPrevious(view?: ViewController) => Promise<ViewController | undefined>`
 
 Get the previous view.
 
@@ -69,7 +69,7 @@ Type: `Promise<ViewController | undefined>`
 
 
 
-### `insert<T extends NavComponent>(insertIndex: number, component: T, componentProps?: ComponentProps<T> | null | undefined, opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>`
+### `insert<T extends NavComponent>(insertIndex: number, component: T, componentProps?: ComponentProps<T> | null, opts?: NavOptions | null, done?: TransitionDoneFn) => Promise<boolean>`
 
 Inserts a component into the navigation stack at the specified index.
 This is useful to add a component at any point in the navigation stack.
@@ -80,7 +80,7 @@ Type: `Promise<boolean>`
 
 
 
-### `insertPages(insertIndex: number, insertComponents: NavComponent[] | NavComponentWithProps[], opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>`
+### `insertPages(insertIndex: number, insertComponents: NavComponent[] | NavComponentWithProps[], opts?: NavOptions | null, done?: TransitionDoneFn) => Promise<boolean>`
 
 Inserts an array of components into the navigation stack at the specified index.
 The last component in the array will become instantiated as a view, and animate
@@ -92,7 +92,7 @@ Type: `Promise<boolean>`
 
 
 
-### `pop(opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>`
+### `pop(opts?: NavOptions | null, done?: TransitionDoneFn) => Promise<boolean>`
 
 Pop a component off of the navigation stack. Navigates back from the current
 component.
@@ -103,7 +103,7 @@ Type: `Promise<boolean>`
 
 
 
-### `popTo(indexOrViewCtrl: number | ViewController, opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>`
+### `popTo(indexOrViewCtrl: number | ViewController, opts?: NavOptions | null, done?: TransitionDoneFn) => Promise<boolean>`
 
 Pop to a specific index in the navigation stack.
 
@@ -113,7 +113,7 @@ Type: `Promise<boolean>`
 
 
 
-### `popToRoot(opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>`
+### `popToRoot(opts?: NavOptions | null, done?: TransitionDoneFn) => Promise<boolean>`
 
 Navigate back to the root of the stack, no matter how far back that is.
 
@@ -123,7 +123,7 @@ Type: `Promise<boolean>`
 
 
 
-### `push<T extends NavComponent>(component: T, componentProps?: ComponentProps<T> | null | undefined, opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>`
+### `push<T extends NavComponent>(component: T, componentProps?: ComponentProps<T> | null, opts?: NavOptions | null, done?: TransitionDoneFn) => Promise<boolean>`
 
 Push a new component onto the current navigation stack. Pass any additional
 information along as an object. This additional information is accessible
@@ -135,7 +135,7 @@ Type: `Promise<boolean>`
 
 
 
-### `removeIndex(startIndex: number, removeCount?: number, opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>`
+### `removeIndex(startIndex: number, removeCount?: number, opts?: NavOptions | null, done?: TransitionDoneFn) => Promise<boolean>`
 
 Removes a component from the navigation stack at the specified index.
 
@@ -145,7 +145,7 @@ Type: `Promise<boolean>`
 
 
 
-### `setPages(views: NavComponent[] | NavComponentWithProps[], opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>`
+### `setPages(views: NavComponent[] | NavComponentWithProps[], opts?: NavOptions | null, done?: TransitionDoneFn) => Promise<boolean>`
 
 Set the views of the current navigation stack and navigate to the last view.
 By default animations are disabled, but they can be enabled by passing options
@@ -158,7 +158,7 @@ Type: `Promise<boolean>`
 
 
 
-### `setRoot<T extends NavComponent>(component: T, componentProps?: ComponentProps<T> | null | undefined, opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>`
+### `setRoot<T extends NavComponent>(component: T, componentProps?: ComponentProps<T> | null, opts?: NavOptions | null, done?: TransitionDoneFn) => Promise<boolean>`
 
 Set the root for the current navigation stack to a component.
 
