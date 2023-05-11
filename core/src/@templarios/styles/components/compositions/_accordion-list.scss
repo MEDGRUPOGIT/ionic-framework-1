@@ -92,6 +92,7 @@
   transition: transform 300ms ease;
 }
 
-.accordion-item--open .med-rotate {
+.accordion-item--open .med-rotate,
+.med-accordion-item--open .med-rotate {
   --rotate: rotate(180deg);
 }

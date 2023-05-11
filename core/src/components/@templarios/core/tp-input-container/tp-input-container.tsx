@@ -18,7 +18,7 @@ import { generateMedColor } from "../../../../@templarios/utilities/color";
 export class TpInputContainer {
   @Element() host!: HTMLElement;
   hostWidth: number | undefined;
-  @State() selectClicked: boolean = false;
+  @State() selectWithPopoverClicked: boolean = false;
   @State() pointerOnSelect: boolean = false;
   readonly selectAndPopoverDiffWidth: number = 2;
 
@@ -62,11 +62,16 @@ export class TpInputContainer {
     if (this.disabled) return;
 
     const target = e.target as Node;
-    this.selectClicked =
+    const ionSelect = this.host.querySelector(
+      "ion-select"
+    ) as HTMLIonSelectElement;
+
+    this.selectWithPopoverClicked =
       this.host.contains(target) &&
-      this.host.querySelector("ion-select") !== null;
+      ionSelect !== null &&
+      ionSelect.interface === "popover";
     // querySelector vai garantir que só seja afetado o tp-input-container usado como container de um ion-select
-    if (this.selectClicked) {
+    if (this.selectWithPopoverClicked) {
       this.hostWidth = this.host.clientWidth + this.selectAndPopoverDiffWidth;
     }
   }
@@ -74,24 +79,23 @@ export class TpInputContainer {
   @Listen("click")
   catchSelectIconClick(e: MouseEvent) {
     const target = e.target as Node;
-    const shouldPropagateClick =
+    const ionSelect = this.host.querySelector(
+      "ion-select"
+    ) as HTMLIonSelectElement;
+    const shouldOpenOverlay =
       this.host.contains(target) &&
+      ionSelect.hasAttribute("interface") &&
       (target.nodeName === "ION-ICON" ||
         target.nodeName === "TP-INPUT-CONTAINER");
 
-    if (shouldPropagateClick) {
-      const event = new MouseEvent("click", {
-        view: window,
-        bubbles: true,
-      });
-      const ionSelect = this.host.querySelector("ION-SELECT");
-      ionSelect?.dispatchEvent(event);
+    if (shouldOpenOverlay) {
+      ionSelect.open(e);
     }
   }
 
   @Listen("resize", { target: "window" })
   setPopoverWidthOnResize() {
-    if (!this.selectClicked) return;
+    if (!this.selectWithPopoverClicked) return;
 
     const popoverElement = document.querySelector(
       ".select-popover"
@@ -106,7 +110,7 @@ export class TpInputContainer {
   setPopoverCharacteristics() {
     // setTimeout para animação acontecer de forma suave
     setTimeout(() => {
-      if (!this.selectClicked) return;
+      if (!this.selectWithPopoverClicked) return;
 
       const popoverElement = document.querySelector(
         ".select-popover"
@@ -121,28 +125,38 @@ export class TpInputContainer {
         this.inverted = true;
       }
 
+      const { top, left } = this.host.getBoundingClientRect();
       if (this.inverted) {
         popoverElement.classList.add("tp-popover--inverted");
-        const { top, left } = this.host.getBoundingClientRect();
         popoverElement?.style.setProperty("--left", `${left}px`);
         popoverElement?.style.setProperty(
           "--bottom",
           `${window.innerHeight - top}px`
         );
+      } else {
+        popoverElement?.style.setProperty("--left", `${left + 1}px`);
       }
     }, 0);
   }
 
   @Listen("ionPopoverWillDismiss", { target: "body" })
   unsetClikedState() {
-    if (!this.selectClicked) return;
+    if (!this.selectWithPopoverClicked) return;
 
-    this.selectClicked = false;
+    this.selectWithPopoverClicked = false;
   }
 
   componentDidLoad() {
-    if (this.host.querySelector("ION-SELECT")) {
+    const ionSelect = this.host.querySelector(
+      "ION-SELECT"
+    ) as HTMLIonSelectElement;
+
+    if (ionSelect) {
       this.pointerOnSelect = true;
+
+      if (!ionSelect.hasAttribute("interface")) {
+        ionSelect.interfaceOptions = { cssClass: "tp-hide" };
+      }
     }
   }
 
@@ -150,7 +164,7 @@ export class TpInputContainer {
     const {
       dsColor,
       dsName,
-      selectClicked,
+      selectWithPopoverClicked,
       pointerOnSelect,
       inverted,
       disabled,
@@ -164,7 +178,8 @@ export class TpInputContainer {
         class={generateMedColor(dsColor, {
           "tp-input-container": true,
           "tp-input-container--with-select": pointerOnSelect,
-          [`tp-input-container--select-clicked`]: selectClicked,
+          [`tp-input-container--select-popover-clicked`]:
+            selectWithPopoverClicked,
           [`tp-input-container--inverted`]: inverted,
           "tp-input-container--disabled": disabled,
           "tp-input-container--feedback": feedback,

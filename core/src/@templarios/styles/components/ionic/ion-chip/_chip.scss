@@ -56,6 +56,49 @@ ion-chip {
   }
 }
 
+// simple
+ion-chip[simple] {
+  &[ds-size="md"] {
+    height: 32px;
+    padding: 4px 12px;
+    border-radius: 50px;
+
+    ion-label {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      padding: 4px 2px;
+    }
+
+    ion-icon {
+      --icon-color: var(--color);
+      --icon-background: transparent;
+      margin: 0;
+      padding: 4px;
+    }
+  }
+
+  &[ds-size="lg"] {
+    height: 40px;
+    padding: 8px 16px;
+    border-radius: 50px;
+
+    ion-label {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 16px;
+      padding: 4px 2px;
+    }
+
+    ion-icon {
+      --icon-color: var(--color);
+      --icon-background: transparent;
+      margin: 0;
+      padding: 4px;
+    }
+  }
+}
+
 // states
 ion-chip {
   &[disabled] {
