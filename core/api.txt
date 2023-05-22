@@ -1477,6 +1477,9 @@ med-alternativas-b,event,medGalleryRequest,MedAlternativaInterface,true
 med-alternativas-b,event,medRiscada,MedAlternativaInterface,true
 
 med-autocomplete,scoped
+med-autocomplete,prop,debounceTime,number,0,false,true
+med-autocomplete,prop,dropdown,boolean,undefined,true,true
+med-autocomplete,method,toggleDropdown,toggleDropdown() => Promise<void>
 
 med-avatar,shadow
 med-avatar,prop,dsColor,string | undefined,undefined,false,true
@@ -1866,11 +1869,33 @@ simulado-modal,scoped
 
 text-area-modal,scoped
 
+tp-accordion,shadow
+tp-accordion,prop,disabled,boolean,false,false,false
+tp-accordion,prop,mode,"ios" | "md",undefined,false,false
+tp-accordion,prop,readonly,boolean,false,false,false
+tp-accordion,prop,toggleIcon,string,chevronDown,false,false
+tp-accordion,prop,toggleIconSlot,"end" | "start","end",false,false
+tp-accordion,prop,value,string,`ion-accordion-${accordionIds++}`,false,false
+tp-accordion,part,content
+tp-accordion,part,expanded
+tp-accordion,part,header
+
+tp-accordion-group,shadow
+tp-accordion-group,prop,animated,boolean,true,false,false
+tp-accordion-group,prop,disabled,boolean,false,false,false
+tp-accordion-group,prop,expand,"compact" | "inset","compact",false,false
+tp-accordion-group,prop,mode,"ios" | "md",undefined,false,false
+tp-accordion-group,prop,multiple,boolean | undefined,undefined,false,false
+tp-accordion-group,prop,readonly,boolean,false,false,false
+tp-accordion-group,prop,value,null | string | string[] | undefined,undefined,false,false
+tp-accordion-group,event,ionChange,TpAccordionGroupChangeEventDetail<any>,true
+
 tp-chart-bar,scoped
 tp-chart-bar,prop,bar,TpChartBarItem,{
     color: "med-color-brand-4",
     value: 0,
   },false,false
+tp-chart-bar,prop,deactivated,boolean,false,false,true
 tp-chart-bar,prop,dsColor,string | undefined,undefined,false,true
 tp-chart-bar,prop,dsName,"secondary" | undefined,undefined,false,true
 tp-chart-bar,prop,hasMarker,boolean,false,false,true

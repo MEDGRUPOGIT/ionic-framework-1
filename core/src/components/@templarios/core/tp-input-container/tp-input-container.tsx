@@ -16,11 +16,38 @@ import { generateMedColor } from "../../../../@templarios/utilities/color";
   scoped: true,
 })
 export class TpInputContainer {
-  @Element() host!: HTMLElement;
+  /**
+   * Quando usado em conjunto com Select, representa a largura
+   * do Select definida dinamicamente
+   */
   hostWidth: number | undefined;
-  @State() selectWithPopoverClicked: boolean = false;
-  @State() pointerOnSelect: boolean = false;
+
+  /**
+   * Acrescimo ao hostWidth necessário para contabilizar as bordas
+   */
   readonly selectAndPopoverDiffWidth: number = 2;
+
+  /**
+   * Referência ao componente no DOM
+   */
+  @Element() host!: HTMLElement;
+
+  /**
+   * Alvo do evento de click. Evita bugs nos casos em que há mais de um
+   * Select na mesma página
+   */
+  @State() clickTarget!: Node;
+
+  /**
+   * Monitoria se o Select foi clicado e está ativo. A propriedade é usada para
+   * aplicar estilização e evitar processamentos desnecessários em alguns métodos
+   */
+  @State() selectWithPopoverClicked: boolean = false;
+
+  /**
+   * todo
+   */
+  @State() pointerOnSelect: boolean = false;
 
   /**
    * todo
@@ -58,22 +85,10 @@ export class TpInputContainer {
   @Prop({ reflect: true }) hasIcon?: "start" | "end" | "both";
 
   @Listen("click", { target: "body" })
-  getTpInputContainerWidth(e: MouseEvent) {
+  setClickTarget(e: MouseEvent) {
     if (this.disabled) return;
 
-    const target = e.target as Node;
-    const ionSelect = this.host.querySelector(
-      "ion-select"
-    ) as HTMLIonSelectElement;
-
-    this.selectWithPopoverClicked =
-      this.host.contains(target) &&
-      ionSelect !== null &&
-      ionSelect.interface === "popover";
-    // querySelector vai garantir que só seja afetado o tp-input-container usado como container de um ion-select
-    if (this.selectWithPopoverClicked) {
-      this.hostWidth = this.host.clientWidth + this.selectAndPopoverDiffWidth;
-    }
+    this.clickTarget = e.target as Node;
   }
 
   @Listen("click")
@@ -82,6 +97,7 @@ export class TpInputContainer {
     const ionSelect = this.host.querySelector(
       "ion-select"
     ) as HTMLIonSelectElement;
+
     const shouldOpenOverlay =
       this.host.contains(target) &&
       ionSelect.hasAttribute("interface") &&
@@ -100,6 +116,7 @@ export class TpInputContainer {
     const popoverElement = document.querySelector(
       ".select-popover"
     ) as HTMLElement;
+
     popoverElement?.style.setProperty(
       "--width",
       `${this.host.clientWidth + this.selectAndPopoverDiffWidth}px`
@@ -108,41 +125,41 @@ export class TpInputContainer {
 
   @Listen("ionPopoverWillPresent", { target: "body" })
   setPopoverCharacteristics() {
-    // setTimeout para animação acontecer de forma suave
-    setTimeout(() => {
-      if (!this.selectWithPopoverClicked) return;
+    if (!this.host.contains(this.clickTarget)) return;
 
-      const popoverElement = document.querySelector(
-        ".select-popover"
-      ) as HTMLElement;
-      popoverElement?.style.setProperty("--width", `${this.hostWidth}px`);
+    this.selectWithPopoverClicked = true;
+    this.hostWidth = this.host.clientWidth + this.selectAndPopoverDiffWidth;
 
-      if (this.dsName === "secondary") {
-        popoverElement.classList.add("tp-popover--secondary");
-      }
+    const popoverElement = document.querySelector(
+      ".select-popover"
+    ) as HTMLElement;
+    popoverElement?.style.setProperty("--width", `${this.hostWidth}px`);
 
-      if (popoverElement.classList.contains("popover-bottom")) {
-        this.inverted = true;
-      }
+    if (this.dsName === "secondary") {
+      popoverElement.classList.add("tp-popover--secondary");
+    }
 
-      const { top, left } = this.host.getBoundingClientRect();
-      if (this.inverted) {
-        popoverElement.classList.add("tp-popover--inverted");
-        popoverElement?.style.setProperty("--left", `${left}px`);
-        popoverElement?.style.setProperty(
-          "--bottom",
-          `${window.innerHeight - top}px`
-        );
-      } else {
-        popoverElement?.style.setProperty("--left", `${left + 1}px`);
-      }
-    }, 0);
+    if (popoverElement.classList.contains("popover-bottom")) {
+      this.inverted = true;
+    }
+
+    const { top, bottom, left } = this.host.getBoundingClientRect();
+    if (this.inverted) {
+      popoverElement.classList.add("tp-popover--inverted");
+
+      popoverElement?.style.setProperty("--left", `${left}px`);
+      popoverElement?.style.setProperty(
+        "--bottom",
+        `${window.innerHeight - top}px`
+      );
+    } else {
+      popoverElement?.style.setProperty("--left", `${left + 1}px`);
+      popoverElement?.style.setProperty("--top", `${bottom}px`);
+    }
   }
 
   @Listen("ionPopoverWillDismiss", { target: "body" })
   unsetClikedState() {
-    if (!this.selectWithPopoverClicked) return;
-
     this.selectWithPopoverClicked = false;
   }
 
