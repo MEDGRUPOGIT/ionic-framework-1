@@ -38,6 +38,27 @@ export const FiltroModal = /*@__PURE__*/ defineContainer<JSX.FiltroModal>('filtr
 export const InformativoModal = /*@__PURE__*/ defineContainer<JSX.InformativoModal>('informativo-modal');
 
 
+export const IonAccordion = /*@__PURE__*/ defineContainer<JSX.IonAccordion>('ion-accordion', [
+  'value',
+  'disabled',
+  'readonly',
+  'toggleIcon',
+  'toggleIconSlot'
+]);
+
+
+export const IonAccordionGroup = /*@__PURE__*/ defineContainer<JSX.IonAccordionGroup>('ion-accordion-group', [
+  'animated',
+  'multiple',
+  'value',
+  'disabled',
+  'readonly',
+  'expand',
+  'ionChange',
+  'ionValueChange'
+]);
+
+
 export const IonAvatar = /*@__PURE__*/ defineContainer<JSX.IonAvatar>('ion-avatar');
 
 

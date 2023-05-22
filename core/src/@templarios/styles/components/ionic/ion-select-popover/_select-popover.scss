@@ -9,6 +9,7 @@ ion-popover.tp-popover {
     --border-radius: 0 0 8px 8px;
     --max-height: 220px;
     left: var(--left) !important;
+    top: var(--top) !important;
     border-radius: var(--border-radius) !important;
     transform: translateX(-1px) !important;
   }

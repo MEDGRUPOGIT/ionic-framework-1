@@ -17,6 +17,12 @@ const Template = ({
   const interfaceOpts = { cssClass: "tp-popover" };
 
   return html`
+    <style>
+      tp-input-container {
+        // margin-left: auto;
+      }
+    </style>
+
     <ion-app>
       <ion-content>
         <div class="ion-padding">
@@ -92,9 +98,9 @@ const Template = ({
               interface="popover"
               .interfaceOptions=${interfaceOpts}
             >
-              <ion-select-option> Option 1 </ion-select-option>
-              <ion-select-option> Option 2 </ion-select-option>
-              <ion-select-option> Option 3 </ion-select-option>
+              <ion-select-option value="opt-1"> Option 1 </ion-select-option>
+              <ion-select-option value="opt-2"> Option 2 </ion-select-option>
+              <ion-select-option value="opt-3"> Option 3 </ion-select-option>
             </ion-select>
             <ion-icon class="med-icon" slot="end" name="med-baixo"></ion-icon>
           </tp-input-container>
@@ -108,8 +114,7 @@ export const Default = Template.bind({});
 Default.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/01.-Componentes?node-id=9341%3A58123",
+    url: "https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/01.-Componentes?node-id=9341%3A58123",
   },
 };
 Default.argTypes = {

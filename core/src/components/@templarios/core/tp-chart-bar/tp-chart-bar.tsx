@@ -52,6 +52,11 @@ export class TpChartBar {
   /**
    * todo
    */
+  @Prop({ reflect: true }) deactivated = false;
+
+  /**
+   * todo
+   */
   @Prop({ reflect: true }) marker: TpChartBarItem = {
     color: "med-color-fb-caution",
     value: 0,
@@ -66,6 +71,7 @@ export class TpChartBar {
       height,
       bar,
       hasMarker,
+      deactivated,
       marker,
     } = this;
 
@@ -75,6 +81,7 @@ export class TpChartBar {
           "tp-chart-bar": true,
           "tp-chart-bar--no-marker": !hasMarker,
           "tp-chart-bar--secondary": dsName === "secondary",
+          "tp-chart-bar--deactivated": deactivated,
         })}
         style={{
           "--label-size": `${labelSize}px`,

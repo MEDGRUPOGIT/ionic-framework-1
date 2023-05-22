@@ -12,6 +12,8 @@ export const DIRECTIVES = [
   d.ExcluirModal,
   d.FiltroModal,
   d.InformativoModal,
+  d.IonAccordion,
+  d.IonAccordionGroup,
   d.IonApp,
   d.IonAvatar,
   d.IonBackButton,
