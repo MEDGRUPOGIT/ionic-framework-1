@@ -66,7 +66,7 @@ export namespace Components {
           * @param data Any data to emit in the dismiss events.
           * @param role The role of the element that is dismissing the action sheet. This can be useful in a button handler for determining which button was clicked to dismiss the action sheet. Some examples include: ``"cancel"`, `"destructive"`, "selected"`, and `"backdrop"`.
          */
-        "dismiss": (data?: any, role?: string) => Promise<boolean>;
+        "dismiss": (data?: any, role?: string | undefined) => Promise<boolean>;
         /**
           * Animation to use when the action sheet is presented.
          */
@@ -131,7 +131,7 @@ export namespace Components {
           * @param data Any data to emit in the dismiss events.
           * @param role The role of the element that is dismissing the alert. This can be useful in a button handler for determining which button was clicked to dismiss the alert. Some examples include: ``"cancel"`, `"destructive"`, "selected"`, and `"backdrop"`.
          */
-        "dismiss": (data?: any, role?: string) => Promise<boolean>;
+        "dismiss": (data?: any, role?: string | undefined) => Promise<boolean>;
         /**
           * Animation to use when the alert is presented.
          */
@@ -1202,7 +1202,7 @@ export namespace Components {
           * @param data Any data to emit in the dismiss events.
           * @param role The role of the element that is dismissing the loading. This can be useful in a button handler for determining which button was clicked to dismiss the loading. Some examples include: ``"cancel"`, `"destructive"`, "selected"`, and `"backdrop"`.
          */
-        "dismiss": (data?: any, role?: string) => Promise<boolean>;
+        "dismiss": (data?: any, role?: string | undefined) => Promise<boolean>;
         /**
           * Number of milliseconds to wait before dismissing the loading indicator.
          */
@@ -1370,7 +1370,7 @@ export namespace Components {
           * @param data Any data to emit in the dismiss events.
           * @param role The role of the element that is dismissing the modal. For example, 'cancel' or 'backdrop'.
          */
-        "dismiss": (data?: any, role?: string) => Promise<boolean>;
+        "dismiss": (data?: any, role?: string | undefined) => Promise<boolean>;
         /**
           * Animation to use when the modal is presented.
          */
@@ -1426,7 +1426,7 @@ export namespace Components {
           * Returns `true` if the current view can go back.
           * @param view The view to check.
          */
-        "canGoBack": (view?: ViewController) => Promise<boolean>;
+        "canGoBack": (view?: ViewController | undefined) => Promise<boolean>;
         "delegate"?: FrameworkDelegate;
         /**
           * Get the active view.
@@ -1441,7 +1441,7 @@ export namespace Components {
           * Get the previous view.
           * @param view The view to get.
          */
-        "getPrevious": (view?: ViewController) => Promise<ViewController | undefined>;
+        "getPrevious": (view?: ViewController | undefined) => Promise<ViewController | undefined>;
         "getRouteId": () => Promise<RouteID | undefined>;
         /**
           * Inserts a component into the navigation stack at the specified index. This is useful to add a component at any point in the navigation stack.
@@ -1451,7 +1451,7 @@ export namespace Components {
           * @param opts The navigation options.
           * @param done The transition complete function.
          */
-        "insert": <T extends NavComponent>(insertIndex: number, component: T, componentProps?: ComponentProps<T> | null, opts?: NavOptions | null, done?: TransitionDoneFn) => Promise<boolean>;
+        "insert": <T extends NavComponent>(insertIndex: number, component: T, componentProps?: ComponentProps<T> | null | undefined, opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>;
         /**
           * Inserts an array of components into the navigation stack at the specified index. The last component in the array will become instantiated as a view, and animate in to become the active view.
           * @param insertIndex The index to insert the components at in the stack.
@@ -1459,26 +1459,26 @@ export namespace Components {
           * @param opts The navigation options.
           * @param done The transition complete function.
          */
-        "insertPages": (insertIndex: number, insertComponents: NavComponent[] | NavComponentWithProps[], opts?: NavOptions | null, done?: TransitionDoneFn) => Promise<boolean>;
+        "insertPages": (insertIndex: number, insertComponents: NavComponent[] | NavComponentWithProps[], opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>;
         /**
           * Pop a component off of the navigation stack. Navigates back from the current component.
           * @param opts The navigation options.
           * @param done The transition complete function.
          */
-        "pop": (opts?: NavOptions | null, done?: TransitionDoneFn) => Promise<boolean>;
+        "pop": (opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>;
         /**
           * Pop to a specific index in the navigation stack.
           * @param indexOrViewCtrl The index or view controller to pop to.
           * @param opts The navigation options.
           * @param done The transition complete function.
          */
-        "popTo": (indexOrViewCtrl: number | ViewController, opts?: NavOptions | null, done?: TransitionDoneFn) => Promise<boolean>;
+        "popTo": (indexOrViewCtrl: number | ViewController, opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>;
         /**
           * Navigate back to the root of the stack, no matter how far back that is.
           * @param opts The navigation options.
           * @param done The transition complete function.
          */
-        "popToRoot": (opts?: NavOptions | null, done?: TransitionDoneFn) => Promise<boolean>;
+        "popToRoot": (opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>;
         /**
           * Push a new component onto the current navigation stack. Pass any additional information along as an object. This additional information is accessible through NavParams.
           * @param component The component to push onto the navigation stack.
@@ -1486,7 +1486,7 @@ export namespace Components {
           * @param opts The navigation options.
           * @param done The transition complete function.
          */
-        "push": <T extends NavComponent>(component: T, componentProps?: ComponentProps<T> | null, opts?: NavOptions | null, done?: TransitionDoneFn) => Promise<boolean>;
+        "push": <T extends NavComponent>(component: T, componentProps?: ComponentProps<T> | null | undefined, opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>;
         /**
           * Removes a component from the navigation stack at the specified index.
           * @param startIndex The number to begin removal at.
@@ -1494,7 +1494,7 @@ export namespace Components {
           * @param opts The navigation options.
           * @param done The transition complete function.
          */
-        "removeIndex": (startIndex: number, removeCount?: number, opts?: NavOptions | null, done?: TransitionDoneFn) => Promise<boolean>;
+        "removeIndex": (startIndex: number, removeCount?: number, opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>;
         /**
           * Root NavComponent to load
          */
@@ -1509,7 +1509,7 @@ export namespace Components {
           * @param opts The navigation options.
           * @param done The transition complete function.
          */
-        "setPages": (views: NavComponent[] | NavComponentWithProps[], opts?: NavOptions | null, done?: TransitionDoneFn) => Promise<boolean>;
+        "setPages": (views: NavComponent[] | NavComponentWithProps[], opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>;
         /**
           * Set the root for the current navigation stack to a component.
           * @param component The component to set as the root of the navigation stack.
@@ -1517,8 +1517,8 @@ export namespace Components {
           * @param opts The navigation options.
           * @param done The transition complete function.
          */
-        "setRoot": <T extends NavComponent>(component: T, componentProps?: ComponentProps<T> | null, opts?: NavOptions | null, done?: TransitionDoneFn) => Promise<boolean>;
-        "setRouteId": (id: string, params: ComponentProps | undefined, direction: RouterDirection, animation?: AnimationBuilder) => Promise<RouteWrite>;
+        "setRoot": <T extends NavComponent>(component: T, componentProps?: ComponentProps<T> | null | undefined, opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>;
+        "setRouteId": (id: string, params: ComponentProps | undefined, direction: RouterDirection, animation?: AnimationBuilder | undefined) => Promise<RouteWrite>;
         /**
           * If the nav component should allow for swipe-to-go-back.
          */
@@ -1578,7 +1578,7 @@ export namespace Components {
           * @param data Any data to emit in the dismiss events.
           * @param role The role of the element that is dismissing the picker. This can be useful in a button handler for determining which button was clicked to dismiss the picker. Some examples include: ``"cancel"`, `"destructive"`, "selected"`, and `"backdrop"`.
          */
-        "dismiss": (data?: any, role?: string) => Promise<boolean>;
+        "dismiss": (data?: any, role?: string | undefined) => Promise<boolean>;
         /**
           * Number of milliseconds to wait before dismissing the picker.
          */
@@ -1655,7 +1655,7 @@ export namespace Components {
           * @param data Any data to emit in the dismiss events.
           * @param role The role of the element that is dismissing the popover. For example, 'cancel' or 'backdrop'.
          */
-        "dismiss": (data?: any, role?: string) => Promise<boolean>;
+        "dismiss": (data?: any, role?: string | undefined) => Promise<boolean>;
         /**
           * Animation to use when the popover is presented.
          */
@@ -1883,7 +1883,7 @@ export namespace Components {
           * Completes the reorder operation. Must be called by the `ionItemReorder` event.  If a list of items is passed, the list will be reordered and returned in the proper order.  If no parameters are passed or if `true` is passed in, the reorder will complete and the item will remain in the position it was dragged to. If `false` is passed, the reorder will complete and the item will bounce back to its original position.
           * @param listOrReorder A list of items to be sorted and returned in the new order or a boolean of whether or not the reorder should reposition the item.
          */
-        "complete": (listOrReorder?: boolean | any[]) => Promise<any>;
+        "complete": (listOrReorder?: boolean | any[] | undefined) => Promise<any>;
         /**
           * If `true`, the reorder will be hidden.
          */
@@ -1946,7 +1946,7 @@ export namespace Components {
           * @param url The url to navigate to.
           * @param direction The direction of the animation. Defaults to `"forward"`.
          */
-        "push": (url: string, direction?: RouterDirection, animation?: AnimationBuilder) => Promise<boolean>;
+        "push": (url: string, direction?: RouterDirection, animation?: AnimationBuilder | undefined) => Promise<boolean>;
         /**
           * By default `ion-router` will match the routes at the root path ("/"). That can be changed when
          */
@@ -1991,14 +1991,14 @@ export namespace Components {
           * By default `ion-nav` animates transition between pages based in the mode (ios or material design). However, this property allows to create custom transition using `AnimateBuilder` functions.
          */
         "animation"?: AnimationBuilder;
-        "commit": (enteringEl: HTMLElement, leavingEl: HTMLElement | undefined, opts?: RouterOutletOptions) => Promise<boolean>;
+        "commit": (enteringEl: HTMLElement, leavingEl: HTMLElement | undefined, opts?: RouterOutletOptions | undefined) => Promise<boolean>;
         "delegate"?: FrameworkDelegate;
         "getRouteId": () => Promise<RouteID | undefined>;
         /**
           * The mode determines which platform styles to use.
          */
-        "mode": "ios" | "md";
-        "setRouteId": (id: string, params: ComponentProps | undefined, direction: RouterDirection, animation?: AnimationBuilder) => Promise<RouteWrite>;
+        "mode": "md" | "ios";
+        "setRouteId": (id: string, params: ComponentProps | undefined, direction: RouterDirection, animation?: AnimationBuilder | undefined) => Promise<RouteWrite>;
         "swipeHandler"?: SwipeGestureHandler;
     }
     interface IonRow {
@@ -2178,7 +2178,7 @@ export namespace Components {
           * Open the select overlay. The overlay is either an alert, action sheet, or popover, depending on the `interface` property on the `ion-select`.
           * @param event The user interface event that called the open.
          */
-        "open": (event?: UIEvent) => Promise<any>;
+        "open": (event?: UIEvent | undefined) => Promise<any>;
         /**
           * The text to display when the select is empty.
          */
@@ -2289,20 +2289,20 @@ export namespace Components {
           * @param speed The transition duration (in ms).
           * @param runCallbacks If true, the transition will produce [Transition/SlideChange][Start/End] transition events.
          */
-        "slideNext": (speed?: number, runCallbacks?: boolean) => Promise<void>;
+        "slideNext": (speed?: number | undefined, runCallbacks?: boolean | undefined) => Promise<void>;
         /**
           * Transition to the previous slide.
           * @param speed The transition duration (in ms).
           * @param runCallbacks If true, the transition will produce the [Transition/SlideChange][Start/End] transition events.
          */
-        "slidePrev": (speed?: number, runCallbacks?: boolean) => Promise<void>;
+        "slidePrev": (speed?: number | undefined, runCallbacks?: boolean | undefined) => Promise<void>;
         /**
           * Transition to the specified slide.
           * @param index The index of the slide to transition to.
           * @param speed The transition duration (in ms).
           * @param runCallbacks If true, the transition will produce [Transition/SlideChange][Start/End] transition events.
          */
-        "slideTo": (index: number, speed?: number, runCallbacks?: boolean) => Promise<void>;
+        "slideTo": (index: number, speed?: number | undefined, runCallbacks?: boolean | undefined) => Promise<void>;
         /**
           * Start auto play.
          */
@@ -2319,7 +2319,7 @@ export namespace Components {
           * Force swiper to update its height (when autoHeight is enabled) for the duration equal to 'speed' parameter.
           * @param speed The transition duration (in ms).
          */
-        "updateAutoHeight": (speed?: number) => Promise<void>;
+        "updateAutoHeight": (speed?: number | undefined) => Promise<void>;
     }
     interface IonSpinner {
         /**
@@ -2590,7 +2590,7 @@ export namespace Components {
           * @param data Any data to emit in the dismiss events.
           * @param role The role of the element that is dismissing the toast. This can be useful in a button handler for determining which button was clicked to dismiss the toast. Some examples include: ``"cancel"`, `"destructive"`, "selected"`, and `"backdrop"`.
          */
-        "dismiss": (data?: any, role?: string) => Promise<boolean>;
+        "dismiss": (data?: any, role?: string | undefined) => Promise<boolean>;
         /**
           * How many milliseconds to wait before hiding the toast. By default, it will show until `dismiss()` is called.
          */
@@ -2820,7 +2820,7 @@ export namespace Components {
         /**
           * todo
          */
-        "toggle": (event?: Event) => Promise<void>;
+        "toggle": (event?: Event | undefined) => Promise<void>;
     }
     interface MedAlert {
         /**
@@ -3399,7 +3399,7 @@ export namespace Components {
         /**
           * todo
          */
-        "toggle": (event?: Event) => Promise<void>;
+        "toggle": (event?: Event | undefined) => Promise<void>;
     }
     interface MedDownloadButton {
         /**
@@ -3642,7 +3642,7 @@ export namespace Components {
         /**
           * todo
          */
-        "toggle": (event?: Event) => Promise<void>;
+        "toggle": (event?: Event | undefined) => Promise<void>;
     }
     interface MedLista {
         /**
@@ -3777,7 +3777,7 @@ export namespace Components {
         /**
           * todo
          */
-        "toggle": (event?: Event) => Promise<void>;
+        "toggle": (event?: Event | undefined) => Promise<void>;
         /**
           * todo
          */
@@ -3819,7 +3819,7 @@ export namespace Components {
         /**
           * todo
          */
-        "toggle": (event?: Event) => Promise<void>;
+        "toggle": (event?: Event | undefined) => Promise<void>;
     }
     interface MedRateBar {
         /**
@@ -4207,258 +4207,6 @@ export namespace Components {
     }
     interface UnidadesModal {
     }
-}
-export interface IonActionSheetCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonActionSheetElement;
-}
-export interface IonAlertCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonAlertElement;
-}
-export interface IonBackdropCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonBackdropElement;
-}
-export interface IonButtonCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonButtonElement;
-}
-export interface IonCheckboxCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonCheckboxElement;
-}
-export interface IonContentCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonContentElement;
-}
-export interface IonDatetimeCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonDatetimeElement;
-}
-export interface IonFabButtonCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonFabButtonElement;
-}
-export interface IonImgCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonImgElement;
-}
-export interface IonInfiniteScrollCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonInfiniteScrollElement;
-}
-export interface IonInputCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonInputElement;
-}
-export interface IonItemOptionsCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonItemOptionsElement;
-}
-export interface IonItemSlidingCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonItemSlidingElement;
-}
-export interface IonLabelCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonLabelElement;
-}
-export interface IonLoadingCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonLoadingElement;
-}
-export interface IonMenuCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonMenuElement;
-}
-export interface IonModalCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonModalElement;
-}
-export interface IonNavCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonNavElement;
-}
-export interface IonPickerCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonPickerElement;
-}
-export interface IonPickerColumnCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonPickerColumnElement;
-}
-export interface IonPopoverCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonPopoverElement;
-}
-export interface IonRadioCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonRadioElement;
-}
-export interface IonRadioGroupCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonRadioGroupElement;
-}
-export interface IonRangeCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonRangeElement;
-}
-export interface IonRefresherCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonRefresherElement;
-}
-export interface IonReorderGroupCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonReorderGroupElement;
-}
-export interface IonRouteCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonRouteElement;
-}
-export interface IonRouteRedirectCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonRouteRedirectElement;
-}
-export interface IonRouterCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonRouterElement;
-}
-export interface IonRouterOutletCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonRouterOutletElement;
-}
-export interface IonSearchbarCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonSearchbarElement;
-}
-export interface IonSegmentCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonSegmentElement;
-}
-export interface IonSelectCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonSelectElement;
-}
-export interface IonSlidesCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonSlidesElement;
-}
-export interface IonSplitPaneCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonSplitPaneElement;
-}
-export interface IonTabBarCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonTabBarElement;
-}
-export interface IonTabButtonCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonTabButtonElement;
-}
-export interface IonTabsCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonTabsElement;
-}
-export interface IonTextareaCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonTextareaElement;
-}
-export interface IonTitleCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonTitleElement;
-}
-export interface IonToastCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonToastElement;
-}
-export interface IonToggleCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLIonToggleElement;
-}
-export interface MedAccordionItemCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLMedAccordionItemElement;
-}
-export interface MedAlternativasCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLMedAlternativasElement;
-}
-export interface MedAlternativasACustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLMedAlternativasAElement;
-}
-export interface MedAlternativasBCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLMedAlternativasBElement;
-}
-export interface MedBannerCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLMedBannerElement;
-}
-export interface MedCalendarCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLMedCalendarElement;
-}
-export interface MedCheckCardCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLMedCheckCardElement;
-}
-export interface MedChipCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLMedChipElement;
-}
-export interface MedDownloadButtonCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLMedDownloadButtonElement;
-}
-export interface MedEnunciadoCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLMedEnunciadoElement;
-}
-export interface MedEnunciadoDiscursivaCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLMedEnunciadoDiscursivaElement;
-}
-export interface MedHeaderCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLMedHeaderElement;
-}
-export interface MedNavCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLMedNavElement;
-}
-export interface MedNavItemCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLMedNavItemElement;
-}
-export interface MedNavSimpleCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLMedNavSimpleElement;
-}
-export interface MedOfflineCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLMedOfflineElement;
-}
-export interface MedPlusminusCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLMedPlusminusElement;
-}
-export interface MedRateLikeCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLMedRateLikeElement;
-}
-export interface MedThemesCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLMedThemesElement;
-}
-export interface MedTooltipCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLMedTooltipElement;
-}
-export interface TpAccordionGroupCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLTpAccordionGroupElement;
 }
 declare global {
     interface HTMLAjudaModalElement extends Components.AjudaModal, HTMLStencilElement {
@@ -5799,19 +5547,19 @@ declare namespace LocalJSX {
         /**
           * Emitted after the alert has dismissed.
          */
-        "onIonActionSheetDidDismiss"?: (event: IonActionSheetCustomEvent<OverlayEventDetail>) => void;
+        "onIonActionSheetDidDismiss"?: (event: CustomEvent<OverlayEventDetail>) => void;
         /**
           * Emitted after the alert has presented.
          */
-        "onIonActionSheetDidPresent"?: (event: IonActionSheetCustomEvent<void>) => void;
+        "onIonActionSheetDidPresent"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted before the alert has dismissed.
          */
-        "onIonActionSheetWillDismiss"?: (event: IonActionSheetCustomEvent<OverlayEventDetail>) => void;
+        "onIonActionSheetWillDismiss"?: (event: CustomEvent<OverlayEventDetail>) => void;
         /**
           * Emitted before the alert has presented.
          */
-        "onIonActionSheetWillPresent"?: (event: IonActionSheetCustomEvent<void>) => void;
+        "onIonActionSheetWillPresent"?: (event: CustomEvent<void>) => void;
         "overlayIndex": number;
         /**
           * Subtitle for the action sheet.
@@ -5870,19 +5618,19 @@ declare namespace LocalJSX {
         /**
           * Emitted after the alert has dismissed.
          */
-        "onIonAlertDidDismiss"?: (event: IonAlertCustomEvent<OverlayEventDetail>) => void;
+        "onIonAlertDidDismiss"?: (event: CustomEvent<OverlayEventDetail>) => void;
         /**
           * Emitted after the alert has presented.
          */
-        "onIonAlertDidPresent"?: (event: IonAlertCustomEvent<void>) => void;
+        "onIonAlertDidPresent"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted before the alert has dismissed.
          */
-        "onIonAlertWillDismiss"?: (event: IonAlertCustomEvent<OverlayEventDetail>) => void;
+        "onIonAlertWillDismiss"?: (event: CustomEvent<OverlayEventDetail>) => void;
         /**
           * Emitted before the alert has presented.
          */
-        "onIonAlertWillPresent"?: (event: IonAlertCustomEvent<void>) => void;
+        "onIonAlertWillPresent"?: (event: CustomEvent<void>) => void;
         "overlayIndex": number;
         /**
           * The subtitle in the heading of the alert. Displayed under the title.
@@ -5935,7 +5683,7 @@ declare namespace LocalJSX {
         /**
           * Emitted when the backdrop is tapped.
          */
-        "onIonBackdropTap"?: (event: IonBackdropCustomEvent<void>) => void;
+        "onIonBackdropTap"?: (event: CustomEvent<void>) => void;
         /**
           * If `true`, the backdrop will stop propagation on tap.
          */
@@ -5995,11 +5743,11 @@ declare namespace LocalJSX {
         /**
           * Emitted when the button loses focus.
          */
-        "onIonBlur"?: (event: IonButtonCustomEvent<void>) => void;
+        "onIonBlur"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the button has focus.
          */
-        "onIonFocus"?: (event: IonButtonCustomEvent<void>) => void;
+        "onIonFocus"?: (event: CustomEvent<void>) => void;
         /**
           * Specifies the relationship of the target object to the link object. The value is a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types).
          */
@@ -6153,19 +5901,19 @@ declare namespace LocalJSX {
         /**
           * Emitted when the checkbox loses focus.
          */
-        "onIonBlur"?: (event: IonCheckboxCustomEvent<void>) => void;
+        "onIonBlur"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the checked property has changed.
          */
-        "onIonChange"?: (event: IonCheckboxCustomEvent<CheckboxChangeEventDetail>) => void;
+        "onIonChange"?: (event: CustomEvent<CheckboxChangeEventDetail>) => void;
         /**
           * Emitted when the checkbox has focus.
          */
-        "onIonFocus"?: (event: IonCheckboxCustomEvent<void>) => void;
+        "onIonFocus"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the styles change.
          */
-        "onIonStyle"?: (event: IonCheckboxCustomEvent<StyleEventDetail>) => void;
+        "onIonStyle"?: (event: CustomEvent<StyleEventDetail>) => void;
         /**
           * The value of the checkbox does not mean if it's checked or not, use the `checked` property for that.  The value of a checkbox is analogous to the value of an `<input type="checkbox">`, it's only used when the checkbox participates in a native `<form>`.
          */
@@ -6303,15 +6051,15 @@ declare namespace LocalJSX {
         /**
           * Emitted while scrolling. This event is disabled by default. Look at the property: `scrollEvents`
          */
-        "onIonScroll"?: (event: IonContentCustomEvent<ScrollDetail>) => void;
+        "onIonScroll"?: (event: CustomEvent<ScrollDetail>) => void;
         /**
           * Emitted when the scroll has ended.
          */
-        "onIonScrollEnd"?: (event: IonContentCustomEvent<ScrollBaseDetail>) => void;
+        "onIonScrollEnd"?: (event: CustomEvent<ScrollBaseDetail>) => void;
         /**
           * Emitted when the scroll has started.
          */
-        "onIonScrollStart"?: (event: IonContentCustomEvent<ScrollBaseDetail>) => void;
+        "onIonScrollStart"?: (event: CustomEvent<ScrollBaseDetail>) => void;
         /**
           * Because of performance reasons, ionScroll events are disabled by default, in order to enable them and start listening from (ionScroll), set this property to `true`.
          */
@@ -6397,23 +6145,23 @@ declare namespace LocalJSX {
         /**
           * Emitted when the datetime loses focus.
          */
-        "onIonBlur"?: (event: IonDatetimeCustomEvent<void>) => void;
+        "onIonBlur"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the datetime selection was cancelled.
          */
-        "onIonCancel"?: (event: IonDatetimeCustomEvent<void>) => void;
+        "onIonCancel"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the value (selected date) has changed.
          */
-        "onIonChange"?: (event: IonDatetimeCustomEvent<DatetimeChangeEventDetail>) => void;
+        "onIonChange"?: (event: CustomEvent<DatetimeChangeEventDetail>) => void;
         /**
           * Emitted when the datetime has focus.
          */
-        "onIonFocus"?: (event: IonDatetimeCustomEvent<void>) => void;
+        "onIonFocus"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the styles change.
          */
-        "onIonStyle"?: (event: IonDatetimeCustomEvent<StyleEventDetail>) => void;
+        "onIonStyle"?: (event: CustomEvent<StyleEventDetail>) => void;
         /**
           * The format of the date and time picker columns the user selects. A datetime input can have one or many datetime parts, each getting their own column which allow individual selection of that particular datetime part. For example, year and month columns are two individually selectable columns which help choose an exact date from the datetime picker. Each column follows the string parse format. Defaults to use `displayFormat`.
          */
@@ -6489,11 +6237,11 @@ declare namespace LocalJSX {
         /**
           * Emitted when the button loses focus.
          */
-        "onIonBlur"?: (event: IonFabButtonCustomEvent<void>) => void;
+        "onIonBlur"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the button has focus.
          */
-        "onIonFocus"?: (event: IonFabButtonCustomEvent<void>) => void;
+        "onIonFocus"?: (event: CustomEvent<void>) => void;
         /**
           * Specifies the relationship of the target object to the link object. The value is a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types).
          */
@@ -6575,15 +6323,15 @@ declare namespace LocalJSX {
         /**
           * Emitted when the img fails to load
          */
-        "onIonError"?: (event: IonImgCustomEvent<void>) => void;
+        "onIonError"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the image has finished loading
          */
-        "onIonImgDidLoad"?: (event: IonImgCustomEvent<void>) => void;
+        "onIonImgDidLoad"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the img src has been set
          */
-        "onIonImgWillLoad"?: (event: IonImgCustomEvent<void>) => void;
+        "onIonImgWillLoad"?: (event: CustomEvent<void>) => void;
         /**
           * The image URL. This attribute is mandatory for the `<img>` element.
          */
@@ -6597,7 +6345,7 @@ declare namespace LocalJSX {
         /**
           * Emitted when the scroll reaches the threshold distance. From within your infinite handler, you must call the infinite scroll's `complete()` method when your async operation has completed.
          */
-        "onIonInfinite"?: (event: IonInfiniteScrollCustomEvent<void>) => void;
+        "onIonInfinite"?: (event: CustomEvent<void>) => void;
         /**
           * The position of the infinite scroll element. The value can be either `top` or `bottom`.
          */
@@ -6701,23 +6449,23 @@ declare namespace LocalJSX {
         /**
           * Emitted when the input loses focus.
          */
-        "onIonBlur"?: (event: IonInputCustomEvent<FocusEvent>) => void;
+        "onIonBlur"?: (event: CustomEvent<FocusEvent>) => void;
         /**
           * Emitted when the value has changed.
          */
-        "onIonChange"?: (event: IonInputCustomEvent<InputChangeEventDetail>) => void;
+        "onIonChange"?: (event: CustomEvent<InputChangeEventDetail>) => void;
         /**
           * Emitted when the input has focus.
          */
-        "onIonFocus"?: (event: IonInputCustomEvent<FocusEvent>) => void;
+        "onIonFocus"?: (event: CustomEvent<FocusEvent>) => void;
         /**
           * Emitted when a keyboard input occurred.
          */
-        "onIonInput"?: (event: IonInputCustomEvent<KeyboardEvent>) => void;
+        "onIonInput"?: (event: CustomEvent<KeyboardEvent>) => void;
         /**
           * Emitted when the styles change.
          */
-        "onIonStyle"?: (event: IonInputCustomEvent<StyleEventDetail>) => void;
+        "onIonStyle"?: (event: CustomEvent<StyleEventDetail>) => void;
         /**
           * A regular expression that the value is checked against. The pattern must match the entire value, not just some subset. Use the title attribute to describe the pattern to help the user. This attribute applies when the value of the type attribute is `"text"`, `"search"`, `"tel"`, `"url"`, `"email"`, `"date"`, or `"password"`, otherwise it is ignored. When the type attribute is `"date"`, `pattern` will only be used in browsers that do not support the `"date"` input type natively. See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date for more information.
          */
@@ -6871,7 +6619,7 @@ declare namespace LocalJSX {
         /**
           * Emitted when the item has been fully swiped.
          */
-        "onIonSwipe"?: (event: IonItemOptionsCustomEvent<any>) => void;
+        "onIonSwipe"?: (event: CustomEvent<any>) => void;
         /**
           * The side the option button should be on. Possible values: `"start"` and `"end"`. If you have multiple `ion-item-options`, a side must be provided for each.
          */
@@ -6885,7 +6633,7 @@ declare namespace LocalJSX {
         /**
           * Emitted when the sliding position changes.
          */
-        "onIonDrag"?: (event: IonItemSlidingCustomEvent<any>) => void;
+        "onIonDrag"?: (event: CustomEvent<any>) => void;
     }
     interface IonLabel {
         /**
@@ -6899,11 +6647,11 @@ declare namespace LocalJSX {
         /**
           * Emitted when the color changes.
          */
-        "onIonColor"?: (event: IonLabelCustomEvent<StyleEventDetail>) => void;
+        "onIonColor"?: (event: CustomEvent<StyleEventDetail>) => void;
         /**
           * Emitted when the styles change.
          */
-        "onIonStyle"?: (event: IonLabelCustomEvent<StyleEventDetail>) => void;
+        "onIonStyle"?: (event: CustomEvent<StyleEventDetail>) => void;
         /**
           * The position determines where and how the label behaves inside an item.
          */
@@ -6977,19 +6725,19 @@ declare namespace LocalJSX {
         /**
           * Emitted after the loading has dismissed.
          */
-        "onIonLoadingDidDismiss"?: (event: IonLoadingCustomEvent<OverlayEventDetail>) => void;
+        "onIonLoadingDidDismiss"?: (event: CustomEvent<OverlayEventDetail>) => void;
         /**
           * Emitted after the loading has presented.
          */
-        "onIonLoadingDidPresent"?: (event: IonLoadingCustomEvent<void>) => void;
+        "onIonLoadingDidPresent"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted before the loading has dismissed.
          */
-        "onIonLoadingWillDismiss"?: (event: IonLoadingCustomEvent<OverlayEventDetail>) => void;
+        "onIonLoadingWillDismiss"?: (event: CustomEvent<OverlayEventDetail>) => void;
         /**
           * Emitted before the loading has presented.
          */
-        "onIonLoadingWillPresent"?: (event: IonLoadingCustomEvent<void>) => void;
+        "onIonLoadingWillPresent"?: (event: CustomEvent<void>) => void;
         "overlayIndex": number;
         /**
           * If `true`, a backdrop will be displayed behind the loading indicator.
@@ -7024,23 +6772,23 @@ declare namespace LocalJSX {
         /**
           * Emitted when the menu is closed.
          */
-        "onIonDidClose"?: (event: IonMenuCustomEvent<void>) => void;
+        "onIonDidClose"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the menu is open.
          */
-        "onIonDidOpen"?: (event: IonMenuCustomEvent<void>) => void;
+        "onIonDidOpen"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the menu state is changed.
          */
-        "onIonMenuChange"?: (event: IonMenuCustomEvent<MenuChangeEventDetail>) => void;
+        "onIonMenuChange"?: (event: CustomEvent<MenuChangeEventDetail>) => void;
         /**
           * Emitted when the menu is about to be closed.
          */
-        "onIonWillClose"?: (event: IonMenuCustomEvent<void>) => void;
+        "onIonWillClose"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the menu is about to be opened.
          */
-        "onIonWillOpen"?: (event: IonMenuCustomEvent<void>) => void;
+        "onIonWillOpen"?: (event: CustomEvent<void>) => void;
         /**
           * Which side of the view the menu should be placed.
          */
@@ -7131,19 +6879,19 @@ declare namespace LocalJSX {
         /**
           * Emitted after the modal has dismissed.
          */
-        "onIonModalDidDismiss"?: (event: IonModalCustomEvent<OverlayEventDetail>) => void;
+        "onIonModalDidDismiss"?: (event: CustomEvent<OverlayEventDetail>) => void;
         /**
           * Emitted after the modal has presented.
          */
-        "onIonModalDidPresent"?: (event: IonModalCustomEvent<void>) => void;
+        "onIonModalDidPresent"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted before the modal has dismissed.
          */
-        "onIonModalWillDismiss"?: (event: IonModalCustomEvent<OverlayEventDetail>) => void;
+        "onIonModalWillDismiss"?: (event: CustomEvent<OverlayEventDetail>) => void;
         /**
           * Emitted before the modal has presented.
          */
-        "onIonModalWillPresent"?: (event: IonModalCustomEvent<void>) => void;
+        "onIonModalWillPresent"?: (event: CustomEvent<void>) => void;
         "overlayIndex": number;
         /**
           * The element that presented the modal. This is used for card presentation effects and for stacking multiple modals on top of each other. Only applies in iOS mode.
@@ -7171,15 +6919,15 @@ declare namespace LocalJSX {
         /**
           * Event fired when the nav has changed components
          */
-        "onIonNavDidChange"?: (event: IonNavCustomEvent<void>) => void;
+        "onIonNavDidChange"?: (event: CustomEvent<void>) => void;
         /**
           * Event fired when the nav will change components
          */
-        "onIonNavWillChange"?: (event: IonNavCustomEvent<void>) => void;
+        "onIonNavWillChange"?: (event: CustomEvent<void>) => void;
         /**
           * Event fired when Nav will load a component
          */
-        "onIonNavWillLoad"?: (event: IonNavCustomEvent<void>) => void;
+        "onIonNavWillLoad"?: (event: CustomEvent<void>) => void;
         /**
           * Root NavComponent to load
          */
@@ -7265,19 +7013,19 @@ declare namespace LocalJSX {
         /**
           * Emitted after the picker has dismissed.
          */
-        "onIonPickerDidDismiss"?: (event: IonPickerCustomEvent<OverlayEventDetail>) => void;
+        "onIonPickerDidDismiss"?: (event: CustomEvent<OverlayEventDetail>) => void;
         /**
           * Emitted after the picker has presented.
          */
-        "onIonPickerDidPresent"?: (event: IonPickerCustomEvent<void>) => void;
+        "onIonPickerDidPresent"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted before the picker has dismissed.
          */
-        "onIonPickerWillDismiss"?: (event: IonPickerCustomEvent<OverlayEventDetail>) => void;
+        "onIonPickerWillDismiss"?: (event: CustomEvent<OverlayEventDetail>) => void;
         /**
           * Emitted before the picker has presented.
          */
-        "onIonPickerWillPresent"?: (event: IonPickerCustomEvent<void>) => void;
+        "onIonPickerWillPresent"?: (event: CustomEvent<void>) => void;
         "overlayIndex": number;
         /**
           * If `true`, a backdrop will be displayed behind the picker.
@@ -7292,7 +7040,7 @@ declare namespace LocalJSX {
         /**
           * Emitted when the selected value has changed
          */
-        "onIonPickerColChange"?: (event: IonPickerColumnCustomEvent<PickerColumn>) => void;
+        "onIonPickerColChange"?: (event: CustomEvent<PickerColumn>) => void;
     }
     interface IonPopover {
         /**
@@ -7339,19 +7087,19 @@ declare namespace LocalJSX {
         /**
           * Emitted after the popover has dismissed.
          */
-        "onIonPopoverDidDismiss"?: (event: IonPopoverCustomEvent<OverlayEventDetail>) => void;
+        "onIonPopoverDidDismiss"?: (event: CustomEvent<OverlayEventDetail>) => void;
         /**
           * Emitted after the popover has presented.
          */
-        "onIonPopoverDidPresent"?: (event: IonPopoverCustomEvent<void>) => void;
+        "onIonPopoverDidPresent"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted before the popover has dismissed.
          */
-        "onIonPopoverWillDismiss"?: (event: IonPopoverCustomEvent<OverlayEventDetail>) => void;
+        "onIonPopoverWillDismiss"?: (event: CustomEvent<OverlayEventDetail>) => void;
         /**
           * Emitted before the popover has presented.
          */
-        "onIonPopoverWillPresent"?: (event: IonPopoverCustomEvent<void>) => void;
+        "onIonPopoverWillPresent"?: (event: CustomEvent<void>) => void;
         "overlayIndex": number;
         /**
           * If `true`, a backdrop will be displayed behind the popover.
@@ -7412,15 +7160,15 @@ declare namespace LocalJSX {
         /**
           * Emitted when the radio button loses focus.
          */
-        "onIonBlur"?: (event: IonRadioCustomEvent<void>) => void;
+        "onIonBlur"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the radio button has focus.
          */
-        "onIonFocus"?: (event: IonRadioCustomEvent<void>) => void;
+        "onIonFocus"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the styles change.
          */
-        "onIonStyle"?: (event: IonRadioCustomEvent<StyleEventDetail>) => void;
+        "onIonStyle"?: (event: CustomEvent<StyleEventDetail>) => void;
         /**
           * the value of the radio.
          */
@@ -7438,7 +7186,7 @@ declare namespace LocalJSX {
         /**
           * Emitted when the value has changed.
          */
-        "onIonChange"?: (event: IonRadioGroupCustomEvent<RadioGroupChangeEventDetail>) => void;
+        "onIonChange"?: (event: CustomEvent<RadioGroupChangeEventDetail>) => void;
         /**
           * the value of the radio group.
          */
@@ -7480,19 +7228,19 @@ declare namespace LocalJSX {
         /**
           * Emitted when the range loses focus.
          */
-        "onIonBlur"?: (event: IonRangeCustomEvent<void>) => void;
+        "onIonBlur"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the value property has changed.
          */
-        "onIonChange"?: (event: IonRangeCustomEvent<RangeChangeEventDetail>) => void;
+        "onIonChange"?: (event: CustomEvent<RangeChangeEventDetail>) => void;
         /**
           * Emitted when the range has focus.
          */
-        "onIonFocus"?: (event: IonRangeCustomEvent<void>) => void;
+        "onIonFocus"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the styles change.
          */
-        "onIonStyle"?: (event: IonRangeCustomEvent<StyleEventDetail>) => void;
+        "onIonStyle"?: (event: CustomEvent<StyleEventDetail>) => void;
         /**
           * If `true`, a pin with integer value is shown when the knob is pressed.
          */
@@ -7526,15 +7274,15 @@ declare namespace LocalJSX {
         /**
           * Emitted while the user is pulling down the content and exposing the refresher.
          */
-        "onIonPull"?: (event: IonRefresherCustomEvent<void>) => void;
+        "onIonPull"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the user lets go of the content and has pulled down further than the `pullMin` or pulls the content down and exceeds the pullMax. Updates the refresher state to `refreshing`. The `complete()` method should be called when the async operation has completed.
          */
-        "onIonRefresh"?: (event: IonRefresherCustomEvent<RefresherEventDetail>) => void;
+        "onIonRefresh"?: (event: CustomEvent<RefresherEventDetail>) => void;
         /**
           * Emitted when the user begins to start pulling down.
          */
-        "onIonStart"?: (event: IonRefresherCustomEvent<void>) => void;
+        "onIonStart"?: (event: CustomEvent<void>) => void;
         /**
           * How much to multiply the pull speed by. To slow the pull animation down, pass a number less than `1`. To speed up the pull, pass a number greater than `1`. The default value is `1` which is equal to the speed of the cursor. If a negative value is passed in, the factor will be `1` instead.  For example: If the value passed is `1.2` and the content is dragged by `10` pixels, instead of `10` pixels the content will be pulled by `12` pixels (an increase of 20 percent). If the value passed is `0.8`, the dragged amount will be `8` pixels, less than the amount the cursor has moved.  Does not apply when the refresher content uses a spinner, enabling the native refresher.
          */
@@ -7580,7 +7328,7 @@ declare namespace LocalJSX {
         /**
           * Event that needs to be listened to in order to complete the reorder action. Once the event has been emitted, the `complete()` method then needs to be called in order to finalize the reorder action.
          */
-        "onIonItemReorder"?: (event: IonReorderGroupCustomEvent<ItemReorderEventDetail>) => void;
+        "onIonItemReorder"?: (event: CustomEvent<ItemReorderEventDetail>) => void;
     }
     interface IonRippleEffect {
         /**
@@ -7608,7 +7356,7 @@ declare namespace LocalJSX {
         /**
           * Used internally by `ion-router` to know when this route did change.
          */
-        "onIonRouteDataChanged"?: (event: IonRouteCustomEvent<any>) => void;
+        "onIonRouteDataChanged"?: (event: CustomEvent<any>) => void;
         /**
           * Relative path that needs to match in order for this route to apply.  Accepts paths similar to expressjs so that you can define parameters in the url /foo/:bar where bar would be available in incoming props.
          */
@@ -7622,7 +7370,7 @@ declare namespace LocalJSX {
         /**
           * Internal event that fires when any value of this rule is added/removed from the DOM, or any of his public properties changes.  `ion-router` captures this event in order to update his internal registry of router rules.
          */
-        "onIonRouteRedirectChanged"?: (event: IonRouteRedirectCustomEvent<any>) => void;
+        "onIonRouteRedirectChanged"?: (event: CustomEvent<any>) => void;
         /**
           * A redirect route, redirects "from" a URL "to" another URL. This property is that "to" URL. When the defined `ion-route-redirect` rule matches, the router will redirect to the path specified in this property.  The value of this property is always an absolute path inside the scope of routes defined in `ion-router` it can't be used with another router or to perform a redirection to a different domain.  Note that this is a virtual redirect, it will not cause a real browser refresh, again, it's a redirect inside the context of ion-router.  When this property is not specified or his value is `undefined` the whole redirect route is noop, even if the "from" value matches.
          */
@@ -7632,11 +7380,11 @@ declare namespace LocalJSX {
         /**
           * Emitted when the route had changed
          */
-        "onIonRouteDidChange"?: (event: IonRouterCustomEvent<RouterEventDetail>) => void;
+        "onIonRouteDidChange"?: (event: CustomEvent<RouterEventDetail>) => void;
         /**
           * Event emitted when the route is about to change
          */
-        "onIonRouteWillChange"?: (event: IonRouterCustomEvent<RouterEventDetail>) => void;
+        "onIonRouteWillChange"?: (event: CustomEvent<RouterEventDetail>) => void;
         /**
           * By default `ion-router` will match the routes at the root path ("/"). That can be changed when
          */
@@ -7685,10 +7433,10 @@ declare namespace LocalJSX {
         /**
           * The mode determines which platform styles to use.
          */
-        "mode"?: "ios" | "md";
-        "onIonNavDidChange"?: (event: IonRouterOutletCustomEvent<void>) => void;
-        "onIonNavWillChange"?: (event: IonRouterOutletCustomEvent<void>) => void;
-        "onIonNavWillLoad"?: (event: IonRouterOutletCustomEvent<void>) => void;
+        "mode"?: "md" | "ios";
+        "onIonNavDidChange"?: (event: CustomEvent<void>) => void;
+        "onIonNavWillChange"?: (event: CustomEvent<void>) => void;
+        "onIonNavWillLoad"?: (event: CustomEvent<void>) => void;
         "swipeHandler"?: SwipeGestureHandler;
     }
     interface IonRow {
@@ -7745,31 +7493,31 @@ declare namespace LocalJSX {
         /**
           * Emitted when the input loses focus.
          */
-        "onIonBlur"?: (event: IonSearchbarCustomEvent<void>) => void;
+        "onIonBlur"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the cancel button is clicked.
          */
-        "onIonCancel"?: (event: IonSearchbarCustomEvent<void>) => void;
+        "onIonCancel"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the value has changed.
          */
-        "onIonChange"?: (event: IonSearchbarCustomEvent<SearchbarChangeEventDetail>) => void;
+        "onIonChange"?: (event: CustomEvent<SearchbarChangeEventDetail>) => void;
         /**
           * Emitted when the clear input button is clicked.
          */
-        "onIonClear"?: (event: IonSearchbarCustomEvent<void>) => void;
+        "onIonClear"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the input has focus.
          */
-        "onIonFocus"?: (event: IonSearchbarCustomEvent<void>) => void;
+        "onIonFocus"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when a keyboard input occurred.
          */
-        "onIonInput"?: (event: IonSearchbarCustomEvent<KeyboardEvent>) => void;
+        "onIonInput"?: (event: CustomEvent<KeyboardEvent>) => void;
         /**
           * Emitted when the styles change.
          */
-        "onIonStyle"?: (event: IonSearchbarCustomEvent<StyleEventDetail>) => void;
+        "onIonStyle"?: (event: CustomEvent<StyleEventDetail>) => void;
         /**
           * Set the input's placeholder. `placeholder` can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example `<Ionic>` would become `&lt;Ionic&gt;`  For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
          */
@@ -7815,15 +7563,15 @@ declare namespace LocalJSX {
         /**
           * Emitted when the value property has changed and any dragging pointer has been released from `ion-segment`.
          */
-        "onIonChange"?: (event: IonSegmentCustomEvent<SegmentChangeEventDetail>) => void;
+        "onIonChange"?: (event: CustomEvent<SegmentChangeEventDetail>) => void;
         /**
           * Emitted when user has dragged over a new button
          */
-        "onIonSelect"?: (event: IonSegmentCustomEvent<SegmentChangeEventDetail>) => void;
+        "onIonSelect"?: (event: CustomEvent<SegmentChangeEventDetail>) => void;
         /**
           * Emitted when the styles change.
          */
-        "onIonStyle"?: (event: IonSegmentCustomEvent<StyleEventDetail>) => void;
+        "onIonStyle"?: (event: CustomEvent<StyleEventDetail>) => void;
         /**
           * If `true`, the segment buttons will overflow and the user can swipe to see them. In addition, this will disable the gesture to drag the indicator between the buttons in order to swipe to see hidden buttons.
          */
@@ -7899,23 +7647,23 @@ declare namespace LocalJSX {
         /**
           * Emitted when the select loses focus.
          */
-        "onIonBlur"?: (event: IonSelectCustomEvent<void>) => void;
+        "onIonBlur"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the selection is cancelled.
          */
-        "onIonCancel"?: (event: IonSelectCustomEvent<void>) => void;
+        "onIonCancel"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the value has changed.
          */
-        "onIonChange"?: (event: IonSelectCustomEvent<SelectChangeEventDetail>) => void;
+        "onIonChange"?: (event: CustomEvent<SelectChangeEventDetail>) => void;
         /**
           * Emitted when the select has focus.
          */
-        "onIonFocus"?: (event: IonSelectCustomEvent<void>) => void;
+        "onIonFocus"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the styles change.
          */
-        "onIonStyle"?: (event: IonSelectCustomEvent<StyleEventDetail>) => void;
+        "onIonStyle"?: (event: CustomEvent<StyleEventDetail>) => void;
         /**
           * The text to display when the select is empty.
          */
@@ -7973,67 +7721,67 @@ declare namespace LocalJSX {
         /**
           * Emitted after the active slide has changed.
          */
-        "onIonSlideDidChange"?: (event: IonSlidesCustomEvent<void>) => void;
+        "onIonSlideDidChange"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the user double taps on the slide's container.
          */
-        "onIonSlideDoubleTap"?: (event: IonSlidesCustomEvent<void>) => void;
+        "onIonSlideDoubleTap"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the slider is actively being moved.
          */
-        "onIonSlideDrag"?: (event: IonSlidesCustomEvent<void>) => void;
+        "onIonSlideDrag"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the next slide has ended.
          */
-        "onIonSlideNextEnd"?: (event: IonSlidesCustomEvent<void>) => void;
+        "onIonSlideNextEnd"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the next slide has started.
          */
-        "onIonSlideNextStart"?: (event: IonSlidesCustomEvent<void>) => void;
+        "onIonSlideNextStart"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the previous slide has ended.
          */
-        "onIonSlidePrevEnd"?: (event: IonSlidesCustomEvent<void>) => void;
+        "onIonSlidePrevEnd"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the previous slide has started.
          */
-        "onIonSlidePrevStart"?: (event: IonSlidesCustomEvent<void>) => void;
+        "onIonSlidePrevStart"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the slider is at the last slide.
          */
-        "onIonSlideReachEnd"?: (event: IonSlidesCustomEvent<void>) => void;
+        "onIonSlideReachEnd"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the slider is at its initial position.
          */
-        "onIonSlideReachStart"?: (event: IonSlidesCustomEvent<void>) => void;
+        "onIonSlideReachStart"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the user taps/clicks on the slide's container.
          */
-        "onIonSlideTap"?: (event: IonSlidesCustomEvent<void>) => void;
+        "onIonSlideTap"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the user releases the touch.
          */
-        "onIonSlideTouchEnd"?: (event: IonSlidesCustomEvent<void>) => void;
+        "onIonSlideTouchEnd"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the user first touches the slider.
          */
-        "onIonSlideTouchStart"?: (event: IonSlidesCustomEvent<void>) => void;
+        "onIonSlideTouchStart"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the slide transition has ended.
          */
-        "onIonSlideTransitionEnd"?: (event: IonSlidesCustomEvent<void>) => void;
+        "onIonSlideTransitionEnd"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the slide transition has started.
          */
-        "onIonSlideTransitionStart"?: (event: IonSlidesCustomEvent<void>) => void;
+        "onIonSlideTransitionStart"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted before the active slide has changed.
          */
-        "onIonSlideWillChange"?: (event: IonSlidesCustomEvent<void>) => void;
+        "onIonSlideWillChange"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted after Swiper initialization
          */
-        "onIonSlidesDidLoad"?: (event: IonSlidesCustomEvent<void>) => void;
+        "onIonSlidesDidLoad"?: (event: CustomEvent<void>) => void;
         /**
           * Options to pass to the swiper instance. See http://idangero.us/swiper/api/ for valid options
          */
@@ -8077,7 +7825,7 @@ declare namespace LocalJSX {
         /**
           * Expression to be called when the split-pane visibility has changed
          */
-        "onIonSplitPaneVisible"?: (event: IonSplitPaneCustomEvent<{visible: boolean}>) => void;
+        "onIonSplitPaneVisible"?: (event: CustomEvent<{visible: boolean}>) => void;
         /**
           * When the split-pane should be shown. Can be a CSS media query expression, or a shortcut expression. Can also be a boolean expression.
          */
@@ -8104,7 +7852,7 @@ declare namespace LocalJSX {
           * The mode determines which platform styles to use.
          */
         "mode"?: "ios" | "md";
-        "onIonTabBarChanged"?: (event: IonTabBarCustomEvent<TabBarChangedEventDetail>) => void;
+        "onIonTabBarChanged"?: (event: CustomEvent<TabBarChangedEventDetail>) => void;
         /**
           * The selected tab component
          */
@@ -8138,7 +7886,7 @@ declare namespace LocalJSX {
         /**
           * Emitted when the tab bar is clicked
          */
-        "onIonTabButtonClick"?: (event: IonTabButtonCustomEvent<TabButtonClickEventDetail>) => void;
+        "onIonTabButtonClick"?: (event: CustomEvent<TabButtonClickEventDetail>) => void;
         /**
           * Specifies the relationship of the target object to the link object. The value is a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types).
          */
@@ -8160,15 +7908,15 @@ declare namespace LocalJSX {
         /**
           * Emitted when the navigation will load a component.
          */
-        "onIonNavWillLoad"?: (event: IonTabsCustomEvent<void>) => void;
+        "onIonNavWillLoad"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the navigation has finished transitioning to a new component.
          */
-        "onIonTabsDidChange"?: (event: IonTabsCustomEvent<{tab: string}>) => void;
+        "onIonTabsDidChange"?: (event: CustomEvent<{tab: string}>) => void;
         /**
           * Emitted when the navigation is about to transition to a new component.
          */
-        "onIonTabsWillChange"?: (event: IonTabsCustomEvent<{tab: string}>) => void;
+        "onIonTabsWillChange"?: (event: CustomEvent<{tab: string}>) => void;
         "useRouter"?: boolean;
     }
     interface IonText {
@@ -8245,23 +7993,23 @@ declare namespace LocalJSX {
         /**
           * Emitted when the input loses focus.
          */
-        "onIonBlur"?: (event: IonTextareaCustomEvent<FocusEvent>) => void;
+        "onIonBlur"?: (event: CustomEvent<FocusEvent>) => void;
         /**
           * Emitted when the input value has changed.
          */
-        "onIonChange"?: (event: IonTextareaCustomEvent<TextareaChangeEventDetail>) => void;
+        "onIonChange"?: (event: CustomEvent<TextareaChangeEventDetail>) => void;
         /**
           * Emitted when the input has focus.
          */
-        "onIonFocus"?: (event: IonTextareaCustomEvent<FocusEvent>) => void;
+        "onIonFocus"?: (event: CustomEvent<FocusEvent>) => void;
         /**
           * Emitted when a keyboard input occurred.
          */
-        "onIonInput"?: (event: IonTextareaCustomEvent<KeyboardEvent>) => void;
+        "onIonInput"?: (event: CustomEvent<KeyboardEvent>) => void;
         /**
           * Emitted when the styles change.
          */
-        "onIonStyle"?: (event: IonTextareaCustomEvent<StyleEventDetail>) => void;
+        "onIonStyle"?: (event: CustomEvent<StyleEventDetail>) => void;
         /**
           * Instructional text that shows before the input has a value.
          */
@@ -8301,7 +8049,7 @@ declare namespace LocalJSX {
         /**
           * Emitted when the styles change.
          */
-        "onIonStyle"?: (event: IonTitleCustomEvent<StyleEventDetail>) => void;
+        "onIonStyle"?: (event: CustomEvent<StyleEventDetail>) => void;
         /**
           * The size of the toolbar title.
          */
@@ -8355,19 +8103,19 @@ declare namespace LocalJSX {
         /**
           * Emitted after the toast has dismissed.
          */
-        "onIonToastDidDismiss"?: (event: IonToastCustomEvent<OverlayEventDetail>) => void;
+        "onIonToastDidDismiss"?: (event: CustomEvent<OverlayEventDetail>) => void;
         /**
           * Emitted after the toast has presented.
          */
-        "onIonToastDidPresent"?: (event: IonToastCustomEvent<void>) => void;
+        "onIonToastDidPresent"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted before the toast has dismissed.
          */
-        "onIonToastWillDismiss"?: (event: IonToastCustomEvent<OverlayEventDetail>) => void;
+        "onIonToastWillDismiss"?: (event: CustomEvent<OverlayEventDetail>) => void;
         /**
           * Emitted before the toast has presented.
          */
-        "onIonToastWillPresent"?: (event: IonToastCustomEvent<void>) => void;
+        "onIonToastWillPresent"?: (event: CustomEvent<void>) => void;
         "overlayIndex": number;
         /**
           * The position of the toast on the screen.
@@ -8402,19 +8150,19 @@ declare namespace LocalJSX {
         /**
           * Emitted when the toggle loses focus.
          */
-        "onIonBlur"?: (event: IonToggleCustomEvent<void>) => void;
+        "onIonBlur"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the value property has changed.
          */
-        "onIonChange"?: (event: IonToggleCustomEvent<ToggleChangeEventDetail>) => void;
+        "onIonChange"?: (event: CustomEvent<ToggleChangeEventDetail>) => void;
         /**
           * Emitted when the toggle has focus.
          */
-        "onIonFocus"?: (event: IonToggleCustomEvent<void>) => void;
+        "onIonFocus"?: (event: CustomEvent<void>) => void;
         /**
           * Emitted when the styles change.
          */
-        "onIonStyle"?: (event: IonToggleCustomEvent<StyleEventDetail>) => void;
+        "onIonStyle"?: (event: CustomEvent<StyleEventDetail>) => void;
         /**
           * The value of the toggle does not mean if it's checked or not, use the `checked` property for that.  The value of a toggle is analogous to the value of a `<input type="checkbox">`, it's only used when the toggle participates in a native `<form>`.
          */
@@ -8511,15 +8259,15 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onMedClick"?: (event: MedAccordionItemCustomEvent<any>) => void;
+        "onMedClick"?: (event: CustomEvent<any>) => void;
         /**
           * todo
          */
-        "onOpened"?: (event: MedAccordionItemCustomEvent<any>) => void;
+        "onOpened"?: (event: CustomEvent<any>) => void;
         /**
           * todo
          */
-        "onToggle"?: (event: MedAccordionItemCustomEvent<any>) => void;
+        "onToggle"?: (event: CustomEvent<any>) => void;
         /**
           * todo
          */
@@ -8655,15 +8403,15 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onMedChange"?: (event: MedAlternativasCustomEvent<MedAlternativaInterface>) => void;
+        "onMedChange"?: (event: CustomEvent<MedAlternativaInterface>) => void;
         /**
           * todo
          */
-        "onMedGalleryRequest"?: (event: MedAlternativasCustomEvent<MedAlternativaInterface>) => void;
+        "onMedGalleryRequest"?: (event: CustomEvent<MedAlternativaInterface>) => void;
         /**
           * todo
          */
-        "onMedRiscada"?: (event: MedAlternativasCustomEvent<MedAlternativaInterface>) => void;
+        "onMedRiscada"?: (event: CustomEvent<MedAlternativaInterface>) => void;
         /**
           * todo
          */
@@ -8721,15 +8469,15 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onMedChange"?: (event: MedAlternativasACustomEvent<MedAlternativaInterface>) => void;
+        "onMedChange"?: (event: CustomEvent<MedAlternativaInterface>) => void;
         /**
           * todo
          */
-        "onMedGalleryRequest"?: (event: MedAlternativasACustomEvent<MedAlternativaInterface>) => void;
+        "onMedGalleryRequest"?: (event: CustomEvent<MedAlternativaInterface>) => void;
         /**
           * todo
          */
-        "onMedRiscada"?: (event: MedAlternativasACustomEvent<MedAlternativaInterface>) => void;
+        "onMedRiscada"?: (event: CustomEvent<MedAlternativaInterface>) => void;
         /**
           * todo
          */
@@ -8787,15 +8535,15 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onMedChange"?: (event: MedAlternativasBCustomEvent<MedAlternativaInterface>) => void;
+        "onMedChange"?: (event: CustomEvent<MedAlternativaInterface>) => void;
         /**
           * todo
          */
-        "onMedGalleryRequest"?: (event: MedAlternativasBCustomEvent<MedAlternativaInterface>) => void;
+        "onMedGalleryRequest"?: (event: CustomEvent<MedAlternativaInterface>) => void;
         /**
           * todo
          */
-        "onMedRiscada"?: (event: MedAlternativasBCustomEvent<MedAlternativaInterface>) => void;
+        "onMedRiscada"?: (event: CustomEvent<MedAlternativaInterface>) => void;
         /**
           * todo
          */
@@ -8857,11 +8605,11 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onBtnLeftClick"?: (event: MedBannerCustomEvent<void>) => void;
+        "onBtnLeftClick"?: (event: CustomEvent<void>) => void;
         /**
           * todo
          */
-        "onBtnRightClick"?: (event: MedBannerCustomEvent<void>) => void;
+        "onBtnRightClick"?: (event: CustomEvent<void>) => void;
         /**
           * todo
          */
@@ -8921,11 +8669,11 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onMedClick"?: (event: MedCalendarCustomEvent<any>) => void;
+        "onMedClick"?: (event: CustomEvent<any>) => void;
         /**
           * todo
          */
-        "onMedSwipe"?: (event: MedCalendarCustomEvent<any>) => void;
+        "onMedSwipe"?: (event: CustomEvent<any>) => void;
     }
     interface MedCalendarDay {
         /**
@@ -9142,11 +8890,11 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onMedClick"?: (event: MedCheckCardCustomEvent<any>) => void;
+        "onMedClick"?: (event: CustomEvent<any>) => void;
         /**
           * todo
          */
-        "onMedTooltipClose"?: (event: MedCheckCardCustomEvent<any>) => void;
+        "onMedTooltipClose"?: (event: CustomEvent<any>) => void;
         /**
           * todo
          */
@@ -9188,15 +8936,15 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onMedBlur"?: (event: MedChipCustomEvent<void>) => void;
+        "onMedBlur"?: (event: CustomEvent<void>) => void;
         /**
           * todo
          */
-        "onMedClick"?: (event: MedChipCustomEvent<void>) => void;
+        "onMedClick"?: (event: CustomEvent<void>) => void;
         /**
           * todo
          */
-        "onMedFocus"?: (event: MedChipCustomEvent<void>) => void;
+        "onMedFocus"?: (event: CustomEvent<void>) => void;
     }
     interface MedConfig {
         /**
@@ -9249,7 +8997,7 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onMedDownloadRequested"?: (event: MedDownloadButtonCustomEvent<any>) => void;
+        "onMedDownloadRequested"?: (event: CustomEvent<any>) => void;
         /**
           * todo
          */
@@ -9275,7 +9023,7 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onMedGalleryRequest"?: (event: MedEnunciadoCustomEvent<string>) => void;
+        "onMedGalleryRequest"?: (event: CustomEvent<string>) => void;
     }
     interface MedEnunciadoDiscursiva {
         /**
@@ -9285,7 +9033,7 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onMedGalleryRequest"?: (event: MedEnunciadoDiscursivaCustomEvent<string>) => void;
+        "onMedGalleryRequest"?: (event: CustomEvent<string>) => void;
     }
     interface MedFontZoom {
         /**
@@ -9301,7 +9049,7 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onMedResize"?: (event: MedHeaderCustomEvent<headerResizeEventDetail>) => void;
+        "onMedResize"?: (event: CustomEvent<headerResizeEventDetail>) => void;
     }
     interface MedImageZoom {
         /**
@@ -9490,7 +9238,7 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onClicked"?: (event: MedNavCustomEvent<any>) => void;
+        "onClicked"?: (event: CustomEvent<any>) => void;
         /**
           * todo
          */
@@ -9527,15 +9275,15 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onMedBlur"?: (event: MedNavItemCustomEvent<void>) => void;
+        "onMedBlur"?: (event: CustomEvent<void>) => void;
         /**
           * todo
          */
-        "onMedClick"?: (event: MedNavItemCustomEvent<void>) => void;
+        "onMedClick"?: (event: CustomEvent<void>) => void;
         /**
           * todo
          */
-        "onMedFocus"?: (event: MedNavItemCustomEvent<void>) => void;
+        "onMedFocus"?: (event: CustomEvent<void>) => void;
         /**
           * todo
          */
@@ -9557,7 +9305,7 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onClose"?: (event: MedNavSimpleCustomEvent<any>) => void;
+        "onClose"?: (event: CustomEvent<any>) => void;
     }
     interface MedNavbar {
         /**
@@ -9573,7 +9321,7 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onMedClick"?: (event: MedOfflineCustomEvent<void>) => void;
+        "onMedClick"?: (event: CustomEvent<void>) => void;
     }
     interface MedOption {
         /**
@@ -9643,7 +9391,7 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onMedChange"?: (event: MedPlusminusCustomEvent<PlusMinusStatus>) => void;
+        "onMedChange"?: (event: CustomEvent<PlusMinusStatus>) => void;
     }
     interface MedQuestion {
         /**
@@ -9675,7 +9423,7 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onMedChange"?: (event: MedRateLikeCustomEvent<RateStatus>) => void;
+        "onMedChange"?: (event: CustomEvent<RateStatus>) => void;
         /**
           * todo
          */
@@ -9773,7 +9521,7 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onMedChange"?: (event: MedThemesCustomEvent<string>) => void;
+        "onMedChange"?: (event: CustomEvent<string>) => void;
         /**
           * todo
          */
@@ -9850,11 +9598,11 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onBtnLeftClick"?: (event: MedTooltipCustomEvent<void>) => void;
+        "onBtnLeftClick"?: (event: CustomEvent<void>) => void;
         /**
           * todo
          */
-        "onBtnRightClick"?: (event: MedTooltipCustomEvent<void>) => void;
+        "onBtnRightClick"?: (event: CustomEvent<void>) => void;
         /**
           * todo
          */
@@ -9974,11 +9722,11 @@ declare namespace LocalJSX {
         /**
           * Emitted when the value property has changed as a result of a user action such as a click. This event will not emit when programmatically setting the value property.
          */
-        "onIonChange"?: (event: TpAccordionGroupCustomEvent<TpAccordionGroupChangeEventDetail>) => void;
+        "onIonChange"?: (event: CustomEvent<TpAccordionGroupChangeEventDetail>) => void;
         /**
           * Emitted when the value property has changed. This is used to ensure that ion-accordion can respond to any value property changes.
          */
-        "onIonValueChange"?: (event: TpAccordionGroupCustomEvent<TpAccordionGroupChangeEventDetail>) => void;
+        "onIonValueChange"?: (event: CustomEvent<TpAccordionGroupChangeEventDetail>) => void;
         /**
           * If `true`, the accordion group cannot be interacted with, but does not alter the opacity.
          */

@@ -104,30 +104,6 @@ export class InformativoModal {
     this.el = r.nativeElement;
   }
 }
-export declare interface IonAccordion extends Components.IonAccordion {
-}
-@ProxyCmp({ inputs: ["disabled", "mode", "readonly", "toggleIcon", "toggleIconSlot", "value"] })
-@Component({ selector: "ion-accordion", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled", "mode", "readonly", "toggleIcon", "toggleIconSlot", "value"] })
-export class IonAccordion {
-  protected el: HTMLElement;
-  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
-    c.detach();
-    this.el = r.nativeElement;
-  }
-}
-export declare interface IonAccordionGroup extends Components.IonAccordionGroup {
-}
-@ProxyCmp({ inputs: ["animated", "disabled", "expand", "mode", "multiple", "readonly", "value"] })
-@Component({ selector: "ion-accordion-group", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["animated", "disabled", "expand", "mode", "multiple", "readonly", "value"] })
-export class IonAccordionGroup {
-  ionChange!: EventEmitter<CustomEvent>;
-  protected el: HTMLElement;
-  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
-    c.detach();
-    this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ["ionChange"]);
-  }
-}
 export declare interface IonApp extends Components.IonApp {
 }
 @Component({ selector: "ion-app", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
@@ -1130,7 +1106,8 @@ export class MedAlternativasB {
 }
 export declare interface MedAutocomplete extends Components.MedAutocomplete {
 }
-@Component({ selector: "med-autocomplete", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+@ProxyCmp({ inputs: ["debounceTime", "dropdown"], "methods": ["toggleDropdown"] })
+@Component({ selector: "med-autocomplete", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["debounceTime", "dropdown"] })
 export class MedAutocomplete {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1902,10 +1879,34 @@ export class TextAreaModal {
     this.el = r.nativeElement;
   }
 }
+export declare interface TpAccordion extends Components.TpAccordion {
+}
+@ProxyCmp({ inputs: ["disabled", "mode", "readonly", "toggleIcon", "toggleIconSlot", "value"] })
+@Component({ selector: "tp-accordion", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["disabled", "mode", "readonly", "toggleIcon", "toggleIconSlot", "value"] })
+export class TpAccordion {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface TpAccordionGroup extends Components.TpAccordionGroup {
+}
+@ProxyCmp({ inputs: ["animated", "disabled", "expand", "mode", "multiple", "readonly", "value"] })
+@Component({ selector: "tp-accordion-group", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["animated", "disabled", "expand", "mode", "multiple", "readonly", "value"] })
+export class TpAccordionGroup {
+  ionChange!: EventEmitter<CustomEvent>;
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ["ionChange"]);
+  }
+}
 export declare interface TpChartBar extends Components.TpChartBar {
 }
-@ProxyCmp({ inputs: ["bar", "dsColor", "dsName", "hasMarker", "height", "label", "labelSize", "marker"] })
-@Component({ selector: "tp-chart-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["bar", "dsColor", "dsName", "hasMarker", "height", "label", "labelSize", "marker"] })
+@ProxyCmp({ inputs: ["bar", "deactivated", "dsColor", "dsName", "hasMarker", "height", "label", "labelSize", "marker"] })
+@Component({ selector: "tp-chart-bar", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["bar", "deactivated", "dsColor", "dsName", "hasMarker", "height", "label", "labelSize", "marker"] })
 export class TpChartBar {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {

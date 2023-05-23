@@ -38,27 +38,6 @@ export const FiltroModal = /*@__PURE__*/ defineContainer<JSX.FiltroModal>('filtr
 export const InformativoModal = /*@__PURE__*/ defineContainer<JSX.InformativoModal>('informativo-modal');
 
 
-export const IonAccordion = /*@__PURE__*/ defineContainer<JSX.IonAccordion>('ion-accordion', [
-  'value',
-  'disabled',
-  'readonly',
-  'toggleIcon',
-  'toggleIconSlot'
-]);
-
-
-export const IonAccordionGroup = /*@__PURE__*/ defineContainer<JSX.IonAccordionGroup>('ion-accordion-group', [
-  'animated',
-  'multiple',
-  'value',
-  'disabled',
-  'readonly',
-  'expand',
-  'ionChange',
-  'ionValueChange'
-]);
-
-
 export const IonAvatar = /*@__PURE__*/ defineContainer<JSX.IonAvatar>('ion-avatar');
 
 
@@ -964,7 +943,10 @@ export const MedAlternativasB = /*@__PURE__*/ defineContainer<JSX.MedAlternativa
 ]);
 
 
-export const MedAutocomplete = /*@__PURE__*/ defineContainer<JSX.MedAutocomplete>('med-autocomplete');
+export const MedAutocomplete = /*@__PURE__*/ defineContainer<JSX.MedAutocomplete>('med-autocomplete', [
+  'dropdown',
+  'debounceTime'
+]);
 
 
 export const MedAvatar = /*@__PURE__*/ defineContainer<JSX.MedAvatar>('med-avatar', [
@@ -1466,6 +1448,27 @@ export const SimuladoModal = /*@__PURE__*/ defineContainer<JSX.SimuladoModal>('s
 export const TextAreaModal = /*@__PURE__*/ defineContainer<JSX.TextAreaModal>('text-area-modal');
 
 
+export const TpAccordion = /*@__PURE__*/ defineContainer<JSX.TpAccordion>('tp-accordion', [
+  'value',
+  'disabled',
+  'readonly',
+  'toggleIcon',
+  'toggleIconSlot'
+]);
+
+
+export const TpAccordionGroup = /*@__PURE__*/ defineContainer<JSX.TpAccordionGroup>('tp-accordion-group', [
+  'animated',
+  'multiple',
+  'value',
+  'disabled',
+  'readonly',
+  'expand',
+  'ionChange',
+  'ionValueChange'
+]);
+
+
 export const TpChartBar = /*@__PURE__*/ defineContainer<JSX.TpChartBar>('tp-chart-bar', [
   'dsColor',
   'dsName',
@@ -1474,6 +1477,7 @@ export const TpChartBar = /*@__PURE__*/ defineContainer<JSX.TpChartBar>('tp-char
   'height',
   'bar',
   'hasMarker',
+  'deactivated',
   'marker'
 ]);
 
