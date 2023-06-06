@@ -105,3 +105,35 @@ ion-badge {
     }
   }
 }
+
+//
+// Devido atualização dos designers do dia 09/05/2023 o badge deveria receber apenas duas cores
+// Porem nosso componentes sao feitos para que recebam qualquer cor de paleta.
+// Portanto as duas cores que eles especificaram no figma https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/01.-Componentes?type=design&node-id=18777-36310&t=jwX6I5PlI7P2vg7o-0
+// serão tratadas aqui. O restante das cores continuará como anteriormente
+//
+
+ion-badge,
+ion-badge[ds-color='brand'] {
+  --background: hsl(var(--med-color-brand-2));
+  --color:  hsl(var(--med-color-neutral-10));
+
+  &[fill='outline'] {
+    --background: transparent;
+    --color: hsl(var(--med-color-brand-3));
+
+    border: 1px solid hsl(var(--med-color-brand-3));
+  }
+}
+
+ion-badge[ds-color='neutral-2'] {
+  --background: hsl(var(--med-color-neutral-2));
+  --color: hsl(var(--med-color-neutral-8));
+
+  &[fill='outline'] {
+    --background: transparent;
+    --color: hsl(var(--med-color-neutral-8));
+
+    border: 1px solid hsl(var(--med-color-neutral-8));
+  }
+}

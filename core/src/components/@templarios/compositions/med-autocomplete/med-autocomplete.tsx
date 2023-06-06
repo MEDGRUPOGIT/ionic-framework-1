@@ -103,7 +103,7 @@ export class MedAutocomplete {
   }
 
   @Method()
-  toggleDropdown() {
+  async toggleDropdown() {
     this.open = !this.open;
   }
 
