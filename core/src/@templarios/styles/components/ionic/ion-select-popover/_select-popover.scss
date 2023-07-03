@@ -81,3 +81,117 @@ ion-popover.tp-popover {
     }
   }
 }
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(ion-popover, $color, $i) {
+      .popover-content {
+        --background: #{tp-color($color, $i)};
+        --tp-scroll-color-content: #{tp-contrast-color($i)};
+
+        &::-webkit-scrollbar-thumb {
+          color: #{tp-contrast-color($i)};
+        }
+      }
+
+      .sc-ion-select-popover {
+        background: #{tp-color($color, $i)};
+      }
+
+      .select-interface-option {
+        --background: #{tp-color($color, $i)};
+        --color: #{tp-contrast-color($i)};
+
+        &:not(:last-child) {
+          border-bottom: 1px solid #{tp-contrast-color($i)};
+        }
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-popover, neutral-#{$i}, $i) {
+    .popover-content {
+      --background: #{tp-neutral($i)};
+      --tp-scroll-color-content: #{tp-contrast-neutral($i)};
+
+      &::-webkit-scrollbar-thumb {
+        color: #{tp-contrast-neutral($i)};
+      }
+    }
+
+    .sc-ion-select-popover {
+      background: #{tp-neutral($i)};
+    }
+
+    .select-interface-option {
+      --background: #{tp-neutral($i)};
+      --color: #{tp-contrast-neutral($i)};
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #{tp-contrast-neutral($i)};
+      }
+    }
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-popover, neutral-#{$i}#{5}, $i) {
+    .popover-content {
+      --background: #{tp-neutral($i, 5)};
+      --tp-scroll-color-content: #{tp-contrast-neutral($i)};
+
+      &::-webkit-scrollbar-thumb {
+        color: #{tp-contrast-neutral($i)};
+      }
+    }
+
+    .sc-ion-select-popover {
+      background: #{tp-neutral($i, 5)};
+    }
+
+    .select-interface-option {
+      --background: #{tp-neutral($i, 5)};
+      --color: #{tp-contrast-neutral($i)};
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #{tp-contrast-neutral($i)};
+      }
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(ion-popover, fb-#{$color}, $color) {
+    .popover-content {
+      --background: #{tp-feedback($color)};
+      --tp-scroll-color-content: hsl(var(--med-color-neutral-1));
+
+      &::-webkit-scrollbar-thumb {
+        color: hsl(var(--med-color-neutral-1));
+      }
+    }
+
+    .sc-ion-select-popover {
+      background: #{tp-feedback($color)};
+    }
+
+    .select-interface-option {
+      --background: #{tp-feedback($color)};
+      --color: hsl(var(--med-color-neutral-1));
+
+      &:not(:last-child) {
+        border-bottom: 1px solid hsl(var(--med-color-neutral-1));
+      }
+    }
+  }
+}
