@@ -1,15 +1,17 @@
 import { Component, Event, EventEmitter, h, Host, Prop } from '@stencil/core';
 import { MedSkin } from '../../../../../@templarios/templarios';
 import { MedColor } from '../../../../../@templarios/types/color.type';
-import { MedAlternativaInterface, MedAlternativasInterface } from '../../../../../@templarios/interfaces/alternativas.interface';
+import {
+  MedAlternativaInterface,
+  MedAlternativasInterface
+} from '../../../../../@templarios/interfaces/alternativas.interface';
 
 @Component({
   tag: 'med-alternativas',
   styleUrl: 'med-alternativas.scss',
-  shadow: true,
+  shadow: true
 })
 export class MedAlternativas implements MedAlternativasInterface {
-
   /**
    * todo
    */
@@ -73,16 +75,6 @@ export class MedAlternativas implements MedAlternativasInterface {
   /**
    * todo
    */
-  @Event() medChange!: EventEmitter<MedAlternativaInterface>;
-
-  /**
-   * todo
-   */
-  @Event() medRiscada!: EventEmitter<MedAlternativaInterface>;
-
-  /**
-   * todo
-   */
   @Event() medGalleryRequest!: EventEmitter<MedAlternativaInterface>;
 
   render() {
@@ -103,43 +95,42 @@ export class MedAlternativas implements MedAlternativasInterface {
 
     return (
       <Host from-stencil>
-        {dsSkinConfig.alternativas === MedSkin.A  && <med-alternativas-a
-          dsSkinConfig={dsSkinConfig}
-          dsColor={dsColor}
-          alternativas={alternativas}
-          keyAlternativa={keyAlternativa}
-          keyEnunciado={keyEnunciado}
-          keyImagem={keyImagem}
-          keyPorcentagem={keyPorcentagem}
-          keyRiscada={keyRiscada}
-          respostaCorreta={respostaCorreta}
-          mostraResposta={mostraResposta}
-          alternativaSelecionada={alternativaSelecionada}
-          permiteRiscar={permiteRiscar}
-          onMedChange={ev => this.medChange.emit(ev.detail)}
-          onMedRiscada={(ev) => {this.medRiscada.emit(ev.detail)}}
-          onMedGalleryRequest={ev => this.medGalleryRequest.emit(ev.detail)}
-        ></med-alternativas-a>}
+        {dsSkinConfig.alternativas === MedSkin.A && (
+          <med-alternativas-a
+            dsSkinConfig={dsSkinConfig}
+            dsColor={dsColor}
+            alternativas={alternativas}
+            keyAlternativa={keyAlternativa}
+            keyEnunciado={keyEnunciado}
+            keyImagem={keyImagem}
+            keyPorcentagem={keyPorcentagem}
+            keyRiscada={keyRiscada}
+            respostaCorreta={respostaCorreta}
+            mostraResposta={mostraResposta}
+            alternativaSelecionada={alternativaSelecionada}
+            permiteRiscar={permiteRiscar}
+            onMedGalleryRequest={(ev) => this.medGalleryRequest.emit(ev.detail)}
+          ></med-alternativas-a>
+        )}
 
-        {dsSkinConfig.alternativas === MedSkin.B  && <med-alternativas-b
-          dsSkinConfig={dsSkinConfig}
-          dsColor={dsColor}
-          alternativas={alternativas}
-          keyAlternativa={keyAlternativa}
-          keyEnunciado={keyEnunciado}
-          keyImagem={keyImagem}
-          keyPorcentagem={keyPorcentagem}
-          keyRiscada={keyRiscada}
-          respostaCorreta={respostaCorreta}
-          mostraResposta={mostraResposta}
-          alternativaSelecionada={alternativaSelecionada}
-          permiteRiscar={permiteRiscar}
-          onMedChange={ev => this.medChange.emit(ev.detail)}
-          onMedRiscada={ev => this.medRiscada.emit(ev.detail)}
-          onMedGalleryRequest={ev => this.medGalleryRequest.emit(ev.detail)}
-        ></med-alternativas-b>}
+        {dsSkinConfig.alternativas === MedSkin.B && (
+          <med-alternativas-b
+            dsSkinConfig={dsSkinConfig}
+            dsColor={dsColor}
+            alternativas={alternativas}
+            keyAlternativa={keyAlternativa}
+            keyEnunciado={keyEnunciado}
+            keyImagem={keyImagem}
+            keyPorcentagem={keyPorcentagem}
+            keyRiscada={keyRiscada}
+            respostaCorreta={respostaCorreta}
+            mostraResposta={mostraResposta}
+            alternativaSelecionada={alternativaSelecionada}
+            permiteRiscar={permiteRiscar}
+            onMedGalleryRequest={(ev) => this.medGalleryRequest.emit(ev.detail)}
+          ></med-alternativas-b>
+        )}
       </Host>
     );
   }
-
 }

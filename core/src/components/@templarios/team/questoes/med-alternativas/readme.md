@@ -29,7 +29,6 @@
 | ------------------- | ----------- | -------------------------------------- |
 | `medChange`         | todo        | `CustomEvent<MedAlternativaInterface>` |
 | `medGalleryRequest` | todo        | `CustomEvent<MedAlternativaInterface>` |
-| `medRiscada`        | todo        | `CustomEvent<MedAlternativaInterface>` |
 
 
 ## Dependencies
