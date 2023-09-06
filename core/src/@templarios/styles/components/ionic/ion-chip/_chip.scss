@@ -329,3 +329,39 @@ ion-chip {
     }
   }
 }
+
+//
+// Devido atualização dos designers do dia 09/05/2023 o chip
+// deve ter por default a cor neutral-25 para as bordas e neutral 7 para o texto na versão simple.
+// https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/01.-Componentes?type=design&node-id=18777-37476&mode=design&t=tIw1m9SjOBxs3RtX-0
+//
+
+ion-chip {
+  --color: hsl(var(--med-color-neutral-7));
+  --border-color: hsl(var(--med-color-neutral-25));
+
+  &:hover {
+    --border-color: hsl(var(--med-color-neutral-7));
+    --background: hsl(var(--med-color-neutral-7));
+    --color: hsl(var(--med-color-neutral-2));
+
+    .med-icon {
+      --icon-color: hsl(var(--med-color-neutral-2));
+    }
+  }
+
+  .med-icon {
+    --icon-color: hsl(var(--med-color-neutral-7));
+    --icon-background: transparent;
+  }
+
+  &[active] {
+    --border-color: hsl(var(--med-color-neutral-7));
+    --background: hsl(var(--med-color-neutral-7));
+    --color: hsl(var(--med-color-neutral-2));
+
+    .med-icon {
+      --icon-color: hsl(var(--med-color-neutral-2));
+    }
+  }
+}

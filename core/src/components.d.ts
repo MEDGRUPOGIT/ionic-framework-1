@@ -8663,10 +8663,6 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onMedRiscada"?: (event: MedAlternativasCustomEvent<MedAlternativaInterface>) => void;
-        /**
-          * todo
-         */
         "permiteRiscar"?: boolean;
         /**
           * todo

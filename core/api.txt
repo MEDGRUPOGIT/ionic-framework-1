@@ -1438,7 +1438,6 @@ med-alternativas,prop,permiteRiscar,boolean,true,false,false
 med-alternativas,prop,respostaCorreta,string,undefined,true,true
 med-alternativas,event,medChange,MedAlternativaInterface,true
 med-alternativas,event,medGalleryRequest,MedAlternativaInterface,true
-med-alternativas,event,medRiscada,MedAlternativaInterface,true
 
 med-alternativas-a,shadow
 med-alternativas-a,prop,alternativaSelecionada,string,undefined,true,true

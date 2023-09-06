@@ -219,6 +219,11 @@
 :host(.med-tooltip--end:not(.med-tooltip--right):not(.med-tooltip--left)) .med-tooltip__input-container::after {
   left: unset;
   right: -6px;
+
+  //fix para centralizar after com o icone da tooltip abaixo de SM
+  @include breakpoint-down('sm') {
+    right: -10px;
+  }
 }
 
 //////////////////////////////

@@ -17,6 +17,9 @@ ion-item {
   --tp-label-line-height: 14px;
   --tp-label-margin: 0;
   contain: content;
+
+  //Fix para remover padding de 10px do item-inner
+  --inner-padding-end: 0 !important;
 }
 
 //

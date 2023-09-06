@@ -154,6 +154,10 @@ html {
   background-color: var(--storybook-color-code) !important;
 }
 
+.sbdocs .css-14m39zm tbody td {
+  background-color: var(--storybook-color-code) !important;
+}
+
 .sbdocs .css-16d4d7t {
   color: #fff !important;
   background-color: var(--storybook-color-code) !important;
