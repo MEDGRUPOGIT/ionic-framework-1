@@ -24,13 +24,18 @@ export class MedEnunciado {
    */
   @Prop({ reflect: true }) dsName?: 'skin';
 
+  /**
+ * todo
+ */
+  @Prop({ reflect: true }) content?: string;
+
   private imageRequest(imagem: string) {
     this.medGalleryRequest.emit(imagem);
   }
 
   render() {
     let imagens;
-    const { dsName } = this;
+    const { content, dsName } = this;
 
     if (this.imagens) {
       this.imagens = typeof this.imagens === 'string' ? JSON.parse(this.imagens) : this.imagens;
@@ -57,6 +62,10 @@ export class MedEnunciado {
           [`med-enunciado--${dsName}`]: dsName !== undefined,
         })}>
         <slot></slot>
+        {content &&
+          <span innerHTML={content}>
+          </span>
+        }
         { imagens }
       </Host>
     );
