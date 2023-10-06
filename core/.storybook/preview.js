@@ -24,6 +24,7 @@ import "./assets/color-system.stories.css";
 import "../templarios/css/themes/default.css";
 import "../templarios/css/themes/medsoft.css";
 import "../templarios/css/themes/extensivo.css";
+import "../templarios/css/themes/recursos.css";
 import "../templarios/css/schemes/light.css";
 import "../templarios/css/templarios.css";
 import "../templarios/css/templarios-css-framework.css";
@@ -67,6 +68,16 @@ export const parameters = {
       {
         name: "Theme Extensivo / Scheme Light",
         class: ["theme-extensivo", "scheme-light"],
+        color: "#63fd68",
+      },
+      {
+        name: "Theme Recursos",
+        class: ["theme-recursos", "scheme-dark"],
+        color: "#63fd68",
+      },
+      {
+        name: "Theme Recursos / Scheme Light",
+        class: ["theme-recursos", "scheme-light"],
         color: "#63fd68",
       },
     ],
