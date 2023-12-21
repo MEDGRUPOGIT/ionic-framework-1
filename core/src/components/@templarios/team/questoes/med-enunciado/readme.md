@@ -9,6 +9,7 @@
 
 | Property               | Attribute | Description | Type                  | Default     |
 | ---------------------- | --------- | ----------- | --------------------- | ----------- |
+| `content`              | `content` | todo        | `string \| undefined` | `undefined` |
 | `dsName`               | `ds-name` | todo        | `"skin" \| undefined` | `undefined` |
 | `imagens` _(required)_ | `imagens` | todo        | `string \| string[]`  | `undefined` |
 

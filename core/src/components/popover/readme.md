@@ -375,7 +375,7 @@ export default defineComponent({
 
 ## Methods
 
-### `dismiss(data?: any, role?: string | undefined) => Promise<boolean>`
+### `dismiss(data?: any, role?: string) => Promise<boolean>`
 
 Dismiss the popover overlay after it has been presented.
 

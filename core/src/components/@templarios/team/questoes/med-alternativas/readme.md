@@ -27,7 +27,6 @@
 
 | Event               | Description | Type                                   |
 | ------------------- | ----------- | -------------------------------------- |
-| `medChange`         | todo        | `CustomEvent<MedAlternativaInterface>` |
 | `medGalleryRequest` | todo        | `CustomEvent<MedAlternativaInterface>` |
 
 

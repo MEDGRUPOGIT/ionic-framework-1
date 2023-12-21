@@ -897,8 +897,6 @@ export const MedAlternativas = /*@__PURE__*/ defineContainer<JSX.MedAlternativas
   'mostraResposta',
   'alternativaSelecionada',
   'permiteRiscar',
-  'medChange',
-  'medRiscada',
   'medGalleryRequest'
 ]);
 
@@ -1018,7 +1016,9 @@ export const MedCartaoRespostaItem = /*@__PURE__*/ defineContainer<JSX.MedCartao
 ]);
 
 
-export const MedCartaoRespostaLista = /*@__PURE__*/ defineContainer<JSX.MedCartaoRespostaLista>('med-cartao-resposta-lista');
+export const MedCartaoRespostaLista = /*@__PURE__*/ defineContainer<JSX.MedCartaoRespostaLista>('med-cartao-resposta-lista', [
+  'isFlex'
+]);
 
 
 export const MedChartBar = /*@__PURE__*/ defineContainer<JSX.MedChartBar>('med-chart-bar', [
@@ -1139,6 +1139,7 @@ export const MedDropdownContainer = /*@__PURE__*/ defineContainer<JSX.MedDropdow
 export const MedEnunciado = /*@__PURE__*/ defineContainer<JSX.MedEnunciado>('med-enunciado', [
   'imagens',
   'dsName',
+  'content',
   'medGalleryRequest'
 ]);
 
@@ -1294,7 +1295,13 @@ export const MedPlusminus = /*@__PURE__*/ defineContainer<JSX.MedPlusminus>('med
   'dsColor',
   'dsSize',
   'disabled',
-  'medChange'
+  'automaticDisabled',
+  'useSlot',
+  'value',
+  'min',
+  'max',
+  'medChange',
+  'medChangeAlt'
 ]);
 
 
