@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'med-cartao-resposta-lista',
@@ -6,11 +6,17 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class MedCartaoRespostaLista {
+  /**
+   * Define a estilização do componente
+   */
+  @Prop({ reflect: true }) isFlex = false;
 
   render() {
+    const { isFlex } = this;
+
     return (
       <Host from-stencil>
-        <div class="wrapper">
+        <div class={`wrapper ${isFlex ? 'wrapper--flex' : ''}`}>
           <slot></slot>
         </div>
       </Host>

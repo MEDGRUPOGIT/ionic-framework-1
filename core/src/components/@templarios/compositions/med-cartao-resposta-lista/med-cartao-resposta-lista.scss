@@ -29,5 +29,10 @@
     @include breakpoint-down('xs') {
       grid-template-columns: repeat(auto-fit, 19vw);
     }
+
+    &--flex {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 }

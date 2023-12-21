@@ -121,6 +121,8 @@ export class TpInputContainer {
       '--width',
       `${this.host.clientWidth + this.selectAndPopoverDiffWidth}px`
     );
+
+    this.setPopoverPosition();
   }
 
   @Listen('ionPopoverWillPresent', { target: 'body' })
@@ -148,19 +150,7 @@ export class TpInputContainer {
       this.inverted = true;
     }
 
-    const { top, bottom, left } = this.host.getBoundingClientRect();
-    if (this.inverted) {
-      popoverElement.classList.add('tp-popover--inverted');
-
-      popoverElement?.style.setProperty('--left', `${left}px`);
-      popoverElement?.style.setProperty(
-        '--bottom',
-        `${window.innerHeight - top}px`
-      );
-    } else {
-      popoverElement?.style.setProperty('--left', `${left + 1}px`);
-      popoverElement?.style.setProperty('--top', `${bottom}px`);
-    }
+    this.setPopoverPosition();
   }
 
   // fix para conflito com popover API do chrome
@@ -190,6 +180,27 @@ export class TpInputContainer {
       if (!ionSelect.hasAttribute('interface')) {
         ionSelect.interfaceOptions = { cssClass: 'tp-hide' };
       }
+    }
+  }
+
+  setPopoverPosition() {
+    const popoverElement = document.querySelector(
+      '.select-popover'
+    ) as HTMLElement;
+
+    const { top, bottom, left } = this.host.getBoundingClientRect();
+
+    if (this.inverted) {
+      popoverElement.classList.add('tp-popover--inverted');
+
+      popoverElement?.style.setProperty('--left', `${left}px`);
+      popoverElement?.style.setProperty(
+        '--bottom',
+        `${window.innerHeight - top}px`
+      );
+    } else {
+      popoverElement?.style.setProperty('--left', `${left + 1}px`);
+      popoverElement?.style.setProperty('--top', `${bottom}px`);
     }
   }
 
