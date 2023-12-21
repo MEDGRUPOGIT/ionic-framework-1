@@ -1,3 +1,4 @@
+import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
 import { BaseGap, BaseRadius, BaseSpacing, MedColors } from '../../../../templarios';
 
@@ -13,7 +14,10 @@ const Template = ({
   'spacing-v': spacingV,
   'spacing-h': spacingH,
 }) => {
-  return `
+  const interfaceOpts = { cssClass: "tp-popover" };
+  const pickerOptions = { cssClass: "tp-datetime" };
+
+  return html`
     <ion-app>
       <ion-content>
 
@@ -239,7 +243,7 @@ const Template = ({
           <ion-row>
             <ion-col>
 
-              <ion-label token="h24">Input</ion-label>
+              <ion-label token="h24">Inputs</ion-label>
 
               <ion-item
                 ds-color=${dsColor}
@@ -249,52 +253,74 @@ const Template = ({
                 spacing-h=${spacingH}
                 mode="ios"
                 lines="none">
-                <ion-label>Description</ion-label>
-                <tp-input-container>
-                  <ion-datetime
-                    mode="ios"
-                    placeholder="dd/mm/aaaa">
-                  </ion-datetime>
-                  <ion-icon class="med-icon" slot="end" name="med-cronograma"></ion-icon>
+                <div>
+                  <ion-label>Datetime</ion-label>
+                  <tp-input-container>
+                    <ion-datetime
+                      mode="ios"
+                      .pickerOptions=${pickerOptions}
+                      placeholder="dd/mm/aaaa">
+                    </ion-datetime>
+                    <ion-icon class="med-icon" slot="end" name="med-cronograma"></ion-icon>
+                  </tp-input-container>
+                </div>
+              </ion-item>
+
+              <ion-item
+                ds-color=${dsColor}
+                radius=${radius}
+                gap=${gap}
+                spacing-v=${spacingV}
+                spacing-h=${spacingH}
+                mode="ios"
+                lines="none">
+                <div>
+                <ion-label token="p14">Select</ion-label>
+                <tp-input-container has-icon="end">
+                  <ion-select
+                    mode="md"
+                    placeholder="Lorem ipsum dolor"
+                    interface="popover"
+                    .interfaceOptions=${interfaceOpts}>
+                    <ion-select-option> Option 1 </ion-select-option>
+                    <ion-select-option> Option 2 </ion-select-option>
+                    <ion-select-option> Option 3 </ion-select-option>
+                    <ion-select-option> Option 4 </ion-select-option>
+                    <ion-select-option> Option 5 </ion-select-option>
+                    <ion-select-option> Option 6 </ion-select-option>
+                    <ion-select-option> Option 7 </ion-select-option>
+                  </ion-select>
+                  <ion-icon class="med-icon" slot="end" name="med-baixo"></ion-icon>
                 </tp-input-container>
+                </div>
               </ion-item>
 
-              <ion-item>
-                <ion-label position="floating">Select</ion-label>
-                <ion-select mode="md">
-                  <ion-select-option value="">No Game Console</ion-select-option>
-                  <ion-select-option value="nes">NES</ion-select-option>
-                  <ion-select-option value="n64" selected>Nintendo64</ion-select-option>
-                  <ion-select-option value="ps">PlayStation</ion-select-option>
-                  <ion-select-option value="genesis">Sega Genesis</ion-select-option>
-                  <ion-select-option value="saturn">Sega Saturn</ion-select-option>
-                  <ion-select-option value="snes">SNES</ion-select-option>
-                </ion-select>
+              <ion-item
+                ds-color=${dsColor}
+                radius=${radius}
+                gap=${gap}
+                spacing-v=${spacingV}
+                spacing-h=${spacingH}
+                mode="ios"
+                lines="none">
+                <div>
+                  <ion-label>Input com Placeholder</ion-label>
+                  <ion-input mode="md" placeholder="Placeholder"></ion-input>
+                </div>
               </ion-item>
 
-              <ion-item>
-                <ion-label>Toggle</ion-label>
-                <ion-toggle slot="end"></ion-toggle>
-              </ion-item>
-
-              <ion-item>
-                <ion-label position="floating">Floating Input</ion-label>
-                <ion-input mode="md"></ion-input>
-              </ion-item>
-
-              <ion-item>
-                <ion-label>Input (placeholder)</ion-label>
-                <ion-input mode="md" placeholder="Placeholder"></ion-input>
-              </ion-item>
-
-              <ion-item>
-                <ion-label>Checkbox</ion-label>
-                <ion-checkbox slot="start"></ion-checkbox>
-              </ion-item>
-
-              <ion-item>
-                <ion-label>Range</ion-label>
-                <ion-range></ion-range>
+              <ion-item
+                ds-color=${dsColor}
+                radius=${radius}
+                gap=${gap}
+                spacing-v=${spacingV}
+                spacing-h=${spacingH}
+                mode="ios"
+                lines="none">
+                <div>
+                  <ion-label>Range</ion-label>
+                  <ion-range></ion-range>
+                </div>
               </ion-item>
 
             </ion-col>

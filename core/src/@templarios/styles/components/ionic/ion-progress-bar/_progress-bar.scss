@@ -1,6 +1,11 @@
 ion-progress-bar {
   --progress-background: hsl(var(--med-color-brand-4));
   --background: hsl(var(--med-color-brand-1));
+  --progress-correct-background: hsl(var(--med-color-brand-4));
+}
+
+ion-progress-bar[value="0"] {
+  --background: hsl(var(--med-color-neutral-8));
 }
 
 //
@@ -11,6 +16,11 @@ ion-progress-bar {
     @include generate-component-color(ion-progress-bar, $color, $i) {
       --progress-background: #{tp-color($color, 4)};
       --background: #{tp-color($color, 1)};
+      --progress-correct-background: #{tp-color($color, 4)};
+
+      &[value="0"] {
+        --background: hsl(var(--med-color-neutral-8));
+      }
     }
   }
 }
@@ -22,12 +32,22 @@ ion-progress-bar {
   @include generate-component-neutral(ion-progress-bar, neutral-#{$i}, $i) {
     --progress-background: #{tp-neutral($i)};
     --background: #{tp-contrast-neutral($i)};
+    --progress-correct-background: #{tp-neutral($i)};
+
+    &[value="0"] {
+      --background: hsl(var(--med-color-neutral-8));
+    }
   }
 }
 @for $i from 1 through 9 {
   @include generate-component-neutral(ion-progress-bar, neutral-#{$i}#{5}, $i) {
     --progress-background: #{tp-neutral($i, 5)};
     --background: #{tp-contrast-neutral($i)};
+    --progress-correct-background: #{tp-neutral($i, 5)};
+
+    &[value="0"] {
+      --background: hsl(var(--med-color-neutral-8));
+    }
   }
 }
 
@@ -38,5 +58,10 @@ ion-progress-bar {
   @include generate-component-feedback(ion-progress-bar, fb-#{$color}, $color) {
     --progress-background: #{tp-feedback($color)};
     --background: hsl(var(--med-color-neutral-1));
+    --progress-correct-background: #{tp-feedback($color)};
+
+    &[value="0"] {
+      --background: hsl(var(--med-color-neutral-8));
+    }
   }
 }
