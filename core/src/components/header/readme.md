@@ -215,6 +215,7 @@ export default defineComponent({
  - [medreader-pro-modal](../@templarios/ionic-1-migracao/apostila/medreader-pro-modal)
  - [realizacoes-modal](../@templarios/ionic-1-migracao/simulados/realizacoes-modal)
  - [sheet-content-test](../@templarios/testes/sheet-content-test)
+ - [sheet-ia](../@templarios/testes/sheet-ia)
  - [sheet-test](../@templarios/testes/sheet-test)
  - [simulado-modal](../@templarios/ionic-1-migracao/duvidas-academicas/simulado-modal)
  - [text-area-modal](../@templarios/ionic-1-migracao/duvidas-academicas/text-area-modal)
@@ -239,6 +240,7 @@ graph TD;
   medreader-pro-modal --> ion-header
   realizacoes-modal --> ion-header
   sheet-content-test --> ion-header
+  sheet-ia --> ion-header
   sheet-test --> ion-header
   simulado-modal --> ion-header
   text-area-modal --> ion-header

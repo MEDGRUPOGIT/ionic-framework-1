@@ -393,8 +393,10 @@ export default defineComponent({
  - [medreader-pro-modal](../@templarios/ionic-1-migracao/apostila/medreader-pro-modal)
  - [realizacoes-modal](../@templarios/ionic-1-migracao/simulados/realizacoes-modal)
  - [sheet-content-test](../@templarios/testes/sheet-content-test)
+ - [sheet-ia](../@templarios/testes/sheet-ia)
  - [sheet-test](../@templarios/testes/sheet-test)
  - [simulado-modal](../@templarios/ionic-1-migracao/duvidas-academicas/simulado-modal)
+ - [snackbar-test](../@templarios/testes/snackbar-test)
  - [text-area-modal](../@templarios/ionic-1-migracao/duvidas-academicas/text-area-modal)
  - [tutorial-modal](../@templarios/ionic-1-migracao/simulados/tutorial-modal)
  - [unidades-modal](../@templarios/ionic-1-migracao/simulados/unidades-modal)
@@ -433,8 +435,10 @@ graph TD;
   medreader-pro-modal --> ion-button
   realizacoes-modal --> ion-button
   sheet-content-test --> ion-button
+  sheet-ia --> ion-button
   sheet-test --> ion-button
   simulado-modal --> ion-button
+  snackbar-test --> ion-button
   text-area-modal --> ion-button
   tutorial-modal --> ion-button
   unidades-modal --> ion-button

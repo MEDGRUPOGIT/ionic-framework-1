@@ -1,6 +1,7 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
 import { MedColors } from '../../../../../templarios';
+import { modalController } from '../../../../../../../dist/ionic/index.esm';
 
 export default {
   title: 'Components/Team/Questões/Alternativas/Skins/Skin B',
@@ -18,12 +19,33 @@ const Template = ({ alternativas, dsColor }) => {
     }
   }, 3000);
 
+  const createModal = async (imagemUrl) => {
+    modalController.create({
+      component: 'med-image-zoom',
+      cssClass: 'med-image-zoom',
+      componentProps:{
+        imagens: [
+          {
+            src: imagemUrl,
+            legenda: ""
+          },
+        ],
+      }
+    }).then((modal)=>{
+      modal.present()
+    });
+  }
+
+  window.addEventListener('medGalleryRequest', (e) => {
+    createModal(e?.detail?.Imagem);
+  });
+
   return html`
     <ion-app>
       <ion-content>
 
         <!-- component markdown -->
-        <med-alternativas-b id=${id} .dsColor=${dsColor}></med-alternativas-b>
+        <med-alternativas-b id=${id} .dsColor=${dsColor} @click="${createModal}"></med-alternativas-b>
         <!-- component markdown -->
 
       </ion-content>

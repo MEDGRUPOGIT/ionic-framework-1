@@ -896,8 +896,7 @@ export const MedAlternativas = /*@__PURE__*/ defineContainer<JSX.MedAlternativas
   'respostaCorreta',
   'mostraResposta',
   'alternativaSelecionada',
-  'permiteRiscar',
-  'medGalleryRequest'
+  'permiteRiscar'
 ]);
 
 
@@ -1446,10 +1445,16 @@ export const SelectTest = /*@__PURE__*/ defineContainer<JSX.SelectTest>('select-
 export const SheetContentTest = /*@__PURE__*/ defineContainer<JSX.SheetContentTest>('sheet-content-test');
 
 
+export const SheetIa = /*@__PURE__*/ defineContainer<JSX.SheetIa>('sheet-ia');
+
+
 export const SheetTest = /*@__PURE__*/ defineContainer<JSX.SheetTest>('sheet-test');
 
 
 export const SimuladoModal = /*@__PURE__*/ defineContainer<JSX.SimuladoModal>('simulado-modal');
+
+
+export const SnackbarTest = /*@__PURE__*/ defineContainer<JSX.SnackbarTest>('snackbar-test');
 
 
 export const TextAreaModal = /*@__PURE__*/ defineContainer<JSX.TextAreaModal>('text-area-modal');

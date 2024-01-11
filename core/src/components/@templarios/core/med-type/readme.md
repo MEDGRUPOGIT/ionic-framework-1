@@ -42,6 +42,7 @@
  - [med-tooltip](../../compositions/med-tooltip)
  - [sheet-content-test](../../testes/sheet-content-test)
  - [sheet-test](../../testes/sheet-test)
+ - [snackbar-test](../../testes/snackbar-test)
 
 ### Graph
 ```mermaid
@@ -70,6 +71,7 @@ graph TD;
   med-tooltip --> med-type
   sheet-content-test --> med-type
   sheet-test --> med-type
+  snackbar-test --> med-type
   style med-type fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

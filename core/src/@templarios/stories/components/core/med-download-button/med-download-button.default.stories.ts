@@ -50,7 +50,7 @@ Default.argTypes = {
     },
   },
   value: {
-    defaultValue: '50',
+    defaultValue: 50,
     control: { type: 'range', min: 0, max: 100, step: 1 },
     description: 'Define o valor da progress bar do componente.'
   },

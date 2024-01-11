@@ -70,6 +70,7 @@
 // modal
 @import "./components/ionic/ion-modal/dialog";
 @import "./components/ionic/ion-modal/modal";
+@import "./components/ionic/ion-modal/snackbar";
 
 // popover
 @import "./components/ionic/ion-select-popover/select-popover";
@@ -104,6 +105,9 @@
 // tab-button
 @import "./components/ionic/ion-tab-button/tab-button";
 
+// text
+@import "./components/ionic/ion-text/text";
+
 // textarea
 @import "./components/ionic/ion-textarea/textarea";
 
@@ -115,6 +119,11 @@
 
 // toggle
 @import "./components/ionic/ion-toggle/toggle";
+
+//
+// TODO: REMOVER DEPOIS
+//
+@import "./components/ionic/estrutura-medsoft/estrutura-medsoft";
 
 //
 // legado
