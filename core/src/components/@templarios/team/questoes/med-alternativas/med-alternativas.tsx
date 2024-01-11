@@ -1,4 +1,4 @@
-import { Component, Event, EventEmitter, h, Host, Prop } from '@stencil/core';
+import { Component, h, Host, Prop } from '@stencil/core';
 import { MedSkin } from '../../../../../@templarios/templarios';
 import { MedColor } from '../../../../../@templarios/types/color.type';
 import {
@@ -72,11 +72,6 @@ export class MedAlternativas implements MedAlternativasInterface {
    */
   @Prop({ mutable: true }) permiteRiscar = true;
 
-  /**
-   * todo
-   */
-  @Event() medGalleryRequest!: EventEmitter<MedAlternativaInterface>;
-
   render() {
     const {
       dsSkinConfig,
@@ -109,7 +104,6 @@ export class MedAlternativas implements MedAlternativasInterface {
             mostraResposta={mostraResposta}
             alternativaSelecionada={alternativaSelecionada}
             permiteRiscar={permiteRiscar}
-            onMedGalleryRequest={(ev) => this.medGalleryRequest.emit(ev.detail)}
           ></med-alternativas-a>
         )}
 
@@ -127,7 +121,6 @@ export class MedAlternativas implements MedAlternativasInterface {
             mostraResposta={mostraResposta}
             alternativaSelecionada={alternativaSelecionada}
             permiteRiscar={permiteRiscar}
-            onMedGalleryRequest={(ev) => this.medGalleryRequest.emit(ev.detail)}
           ></med-alternativas-b>
         )}
       </Host>

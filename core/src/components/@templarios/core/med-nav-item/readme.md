@@ -30,6 +30,10 @@
 
 ## Dependencies
 
+### Used by
+
+ - [sheet-ia](../../testes/sheet-ia)
+
 ### Depends on
 
 - ion-icon
@@ -40,6 +44,7 @@
 graph TD;
   med-nav-item --> ion-icon
   med-nav-item --> med-type
+  sheet-ia --> med-nav-item
   style med-nav-item fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

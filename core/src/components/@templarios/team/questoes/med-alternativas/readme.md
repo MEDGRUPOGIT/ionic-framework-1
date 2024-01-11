@@ -23,14 +23,6 @@
 | `respostaCorreta` _(required)_        | `resposta-correta`        | todo        | `string`              | `undefined`     |
 
 
-## Events
-
-| Event               | Description | Type                                   |
-| ------------------- | ----------- | -------------------------------------- |
-| `medChange`         | todo        | `CustomEvent<MedAlternativaInterface>` |
-| `medGalleryRequest` | todo        | `CustomEvent<MedAlternativaInterface>` |
-
-
 ## Dependencies
 
 ### Depends on

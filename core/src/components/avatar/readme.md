@@ -140,6 +140,19 @@ export default defineComponent({
 | `--border-radius` | Border radius of the avatar and inner image |
 
 
+## Dependencies
+
+### Used by
+
+ - [snackbar-test](../@templarios/testes/snackbar-test)
+
+### Graph
+```mermaid
+graph TD;
+  snackbar-test --> ion-avatar
+  style ion-avatar fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

@@ -3180,6 +3180,10 @@ export namespace Components {
         "impressa": boolean;
     }
     interface MedCartaoRespostaLista {
+        /**
+          * Define a estilização do componente
+         */
+        "isFlex": boolean;
     }
     interface MedChartBar {
         /**
@@ -3444,6 +3448,10 @@ export namespace Components {
     interface MedDropdownContainer {
     }
     interface MedEnunciado {
+        /**
+          * todo
+         */
+        "content"?: string;
         /**
           * todo
          */
@@ -3785,6 +3793,10 @@ export namespace Components {
     }
     interface MedPlusminus {
         /**
+          * true se deve desabilitar os controles automaticamente
+         */
+        "automaticDisabled": boolean;
+        /**
           * todo
          */
         "disabled"?: 'minus' | 'plus' | 'both';
@@ -3796,6 +3808,22 @@ export namespace Components {
           * todo
          */
         "dsSize"?: 'xl';
+        /**
+          * O valor máximo
+         */
+        "max"?: number;
+        /**
+          * O valor mínimo
+         */
+        "min"?: number;
+        /**
+          * Deverá ser true se o valor atual vai ser passado por slot, false se vai ser passado por prop
+         */
+        "useSlot": boolean;
+        /**
+          * O valor atual (apenas se useSlot é false)
+         */
+        "value"?: number;
     }
     interface MedQuestion {
         /**
@@ -4063,9 +4091,13 @@ export namespace Components {
     }
     interface SheetContentTest {
     }
+    interface SheetIa {
+    }
     interface SheetTest {
     }
     interface SimuladoModal {
+    }
+    interface SnackbarTest {
     }
     interface TextAreaModal {
     }
@@ -4379,10 +4411,6 @@ export interface IonToggleCustomEvent<T> extends CustomEvent<T> {
 export interface MedAccordionItemCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLMedAccordionItemElement;
-}
-export interface MedAlternativasCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLMedAlternativasElement;
 }
 export interface MedAlternativasACustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -5493,6 +5521,12 @@ declare global {
         prototype: HTMLSheetContentTestElement;
         new (): HTMLSheetContentTestElement;
     };
+    interface HTMLSheetIaElement extends Components.SheetIa, HTMLStencilElement {
+    }
+    var HTMLSheetIaElement: {
+        prototype: HTMLSheetIaElement;
+        new (): HTMLSheetIaElement;
+    };
     interface HTMLSheetTestElement extends Components.SheetTest, HTMLStencilElement {
     }
     var HTMLSheetTestElement: {
@@ -5504,6 +5538,12 @@ declare global {
     var HTMLSimuladoModalElement: {
         prototype: HTMLSimuladoModalElement;
         new (): HTMLSimuladoModalElement;
+    };
+    interface HTMLSnackbarTestElement extends Components.SnackbarTest, HTMLStencilElement {
+    }
+    var HTMLSnackbarTestElement: {
+        prototype: HTMLSnackbarTestElement;
+        new (): HTMLSnackbarTestElement;
     };
     interface HTMLTextAreaModalElement extends Components.TextAreaModal, HTMLStencilElement {
     }
@@ -5726,8 +5766,10 @@ declare global {
         "realizacoes-modal": HTMLRealizacoesModalElement;
         "select-test": HTMLSelectTestElement;
         "sheet-content-test": HTMLSheetContentTestElement;
+        "sheet-ia": HTMLSheetIaElement;
         "sheet-test": HTMLSheetTestElement;
         "simulado-modal": HTMLSimuladoModalElement;
+        "snackbar-test": HTMLSnackbarTestElement;
         "text-area-modal": HTMLTextAreaModalElement;
         "tp-accordion": HTMLTpAccordionElement;
         "tp-accordion-group": HTMLTpAccordionGroupElement;
@@ -8655,14 +8697,6 @@ declare namespace LocalJSX {
         /**
           * todo
          */
-        "onMedChange"?: (event: MedAlternativasCustomEvent<MedAlternativaInterface>) => void;
-        /**
-          * todo
-         */
-        "onMedGalleryRequest"?: (event: MedAlternativasCustomEvent<MedAlternativaInterface>) => void;
-        /**
-          * todo
-         */
         "permiteRiscar"?: boolean;
         /**
           * todo
@@ -8976,6 +9010,10 @@ declare namespace LocalJSX {
         "impressa"?: boolean;
     }
     interface MedCartaoRespostaLista {
+        /**
+          * Define a estilização do componente
+         */
+        "isFlex"?: boolean;
     }
     interface MedChartBar {
         /**
@@ -9260,6 +9298,10 @@ declare namespace LocalJSX {
     interface MedDropdownContainer {
     }
     interface MedEnunciado {
+        /**
+          * todo
+         */
+        "content"?: string;
         /**
           * todo
          */
@@ -9625,6 +9667,10 @@ declare namespace LocalJSX {
     }
     interface MedPlusminus {
         /**
+          * true se deve desabilitar os controles automaticamente
+         */
+        "automaticDisabled"?: boolean;
+        /**
           * todo
          */
         "disabled"?: 'minus' | 'plus' | 'both';
@@ -9637,9 +9683,29 @@ declare namespace LocalJSX {
          */
         "dsSize"?: 'xl';
         /**
+          * O valor máximo
+         */
+        "max"?: number;
+        /**
+          * O valor mínimo
+         */
+        "min"?: number;
+        /**
           * todo
          */
         "onMedChange"?: (event: MedPlusminusCustomEvent<PlusMinusStatus>) => void;
+        /**
+          * todo
+         */
+        "onMedChangeAlt"?: (event: MedPlusminusCustomEvent<number>) => void;
+        /**
+          * Deverá ser true se o valor atual vai ser passado por slot, false se vai ser passado por prop
+         */
+        "useSlot"?: boolean;
+        /**
+          * O valor atual (apenas se useSlot é false)
+         */
+        "value"?: number;
     }
     interface MedQuestion {
         /**
@@ -9914,9 +9980,13 @@ declare namespace LocalJSX {
     }
     interface SheetContentTest {
     }
+    interface SheetIa {
+    }
     interface SheetTest {
     }
     interface SimuladoModal {
+    }
+    interface SnackbarTest {
     }
     interface TextAreaModal {
     }
@@ -10234,8 +10304,10 @@ declare namespace LocalJSX {
         "realizacoes-modal": RealizacoesModal;
         "select-test": SelectTest;
         "sheet-content-test": SheetContentTest;
+        "sheet-ia": SheetIa;
         "sheet-test": SheetTest;
         "simulado-modal": SimuladoModal;
+        "snackbar-test": SnackbarTest;
         "text-area-modal": TextAreaModal;
         "tp-accordion": TpAccordion;
         "tp-accordion-group": TpAccordionGroup;
@@ -10422,8 +10494,10 @@ declare module "@stencil/core" {
             "realizacoes-modal": LocalJSX.RealizacoesModal & JSXBase.HTMLAttributes<HTMLRealizacoesModalElement>;
             "select-test": LocalJSX.SelectTest & JSXBase.HTMLAttributes<HTMLSelectTestElement>;
             "sheet-content-test": LocalJSX.SheetContentTest & JSXBase.HTMLAttributes<HTMLSheetContentTestElement>;
+            "sheet-ia": LocalJSX.SheetIa & JSXBase.HTMLAttributes<HTMLSheetIaElement>;
             "sheet-test": LocalJSX.SheetTest & JSXBase.HTMLAttributes<HTMLSheetTestElement>;
             "simulado-modal": LocalJSX.SimuladoModal & JSXBase.HTMLAttributes<HTMLSimuladoModalElement>;
+            "snackbar-test": LocalJSX.SnackbarTest & JSXBase.HTMLAttributes<HTMLSnackbarTestElement>;
             "text-area-modal": LocalJSX.TextAreaModal & JSXBase.HTMLAttributes<HTMLTextAreaModalElement>;
             "tp-accordion": LocalJSX.TpAccordion & JSXBase.HTMLAttributes<HTMLTpAccordionElement>;
             "tp-accordion-group": LocalJSX.TpAccordionGroup & JSXBase.HTMLAttributes<HTMLTpAccordionGroupElement>;

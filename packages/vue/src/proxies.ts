@@ -38,27 +38,6 @@ export const FiltroModal = /*@__PURE__*/ defineContainer<JSX.FiltroModal>('filtr
 export const InformativoModal = /*@__PURE__*/ defineContainer<JSX.InformativoModal>('informativo-modal');
 
 
-export const IonAccordion = /*@__PURE__*/ defineContainer<JSX.IonAccordion>('ion-accordion', [
-  'value',
-  'disabled',
-  'readonly',
-  'toggleIcon',
-  'toggleIconSlot'
-]);
-
-
-export const IonAccordionGroup = /*@__PURE__*/ defineContainer<JSX.IonAccordionGroup>('ion-accordion-group', [
-  'animated',
-  'multiple',
-  'value',
-  'disabled',
-  'readonly',
-  'expand',
-  'ionChange',
-  'ionValueChange'
-]);
-
-
 export const IonAvatar = /*@__PURE__*/ defineContainer<JSX.IonAvatar>('ion-avatar');
 
 
@@ -917,10 +896,7 @@ export const MedAlternativas = /*@__PURE__*/ defineContainer<JSX.MedAlternativas
   'respostaCorreta',
   'mostraResposta',
   'alternativaSelecionada',
-  'permiteRiscar',
-  'medChange',
-  'medRiscada',
-  'medGalleryRequest'
+  'permiteRiscar'
 ]);
 
 
@@ -964,7 +940,10 @@ export const MedAlternativasB = /*@__PURE__*/ defineContainer<JSX.MedAlternativa
 ]);
 
 
-export const MedAutocomplete = /*@__PURE__*/ defineContainer<JSX.MedAutocomplete>('med-autocomplete');
+export const MedAutocomplete = /*@__PURE__*/ defineContainer<JSX.MedAutocomplete>('med-autocomplete', [
+  'dropdown',
+  'debounceTime'
+]);
 
 
 export const MedAvatar = /*@__PURE__*/ defineContainer<JSX.MedAvatar>('med-avatar', [
@@ -1036,7 +1015,9 @@ export const MedCartaoRespostaItem = /*@__PURE__*/ defineContainer<JSX.MedCartao
 ]);
 
 
-export const MedCartaoRespostaLista = /*@__PURE__*/ defineContainer<JSX.MedCartaoRespostaLista>('med-cartao-resposta-lista');
+export const MedCartaoRespostaLista = /*@__PURE__*/ defineContainer<JSX.MedCartaoRespostaLista>('med-cartao-resposta-lista', [
+  'isFlex'
+]);
 
 
 export const MedChartBar = /*@__PURE__*/ defineContainer<JSX.MedChartBar>('med-chart-bar', [
@@ -1157,6 +1138,7 @@ export const MedDropdownContainer = /*@__PURE__*/ defineContainer<JSX.MedDropdow
 export const MedEnunciado = /*@__PURE__*/ defineContainer<JSX.MedEnunciado>('med-enunciado', [
   'imagens',
   'dsName',
+  'content',
   'medGalleryRequest'
 ]);
 
@@ -1312,7 +1294,13 @@ export const MedPlusminus = /*@__PURE__*/ defineContainer<JSX.MedPlusminus>('med
   'dsColor',
   'dsSize',
   'disabled',
-  'medChange'
+  'automaticDisabled',
+  'useSlot',
+  'value',
+  'min',
+  'max',
+  'medChange',
+  'medChangeAlt'
 ]);
 
 
@@ -1457,13 +1445,40 @@ export const SelectTest = /*@__PURE__*/ defineContainer<JSX.SelectTest>('select-
 export const SheetContentTest = /*@__PURE__*/ defineContainer<JSX.SheetContentTest>('sheet-content-test');
 
 
+export const SheetIa = /*@__PURE__*/ defineContainer<JSX.SheetIa>('sheet-ia');
+
+
 export const SheetTest = /*@__PURE__*/ defineContainer<JSX.SheetTest>('sheet-test');
 
 
 export const SimuladoModal = /*@__PURE__*/ defineContainer<JSX.SimuladoModal>('simulado-modal');
 
 
+export const SnackbarTest = /*@__PURE__*/ defineContainer<JSX.SnackbarTest>('snackbar-test');
+
+
 export const TextAreaModal = /*@__PURE__*/ defineContainer<JSX.TextAreaModal>('text-area-modal');
+
+
+export const TpAccordion = /*@__PURE__*/ defineContainer<JSX.TpAccordion>('tp-accordion', [
+  'value',
+  'disabled',
+  'readonly',
+  'toggleIcon',
+  'toggleIconSlot'
+]);
+
+
+export const TpAccordionGroup = /*@__PURE__*/ defineContainer<JSX.TpAccordionGroup>('tp-accordion-group', [
+  'animated',
+  'multiple',
+  'value',
+  'disabled',
+  'readonly',
+  'expand',
+  'ionChange',
+  'ionValueChange'
+]);
 
 
 export const TpChartBar = /*@__PURE__*/ defineContainer<JSX.TpChartBar>('tp-chart-bar', [
@@ -1474,6 +1489,7 @@ export const TpChartBar = /*@__PURE__*/ defineContainer<JSX.TpChartBar>('tp-char
   'height',
   'bar',
   'hasMarker',
+  'deactivated',
   'marker'
 ]);
 
