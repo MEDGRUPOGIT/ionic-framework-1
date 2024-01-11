@@ -35,6 +35,10 @@ ion-text.ion-color a {
   @for $i from 1 through 5 {
     @include generate-component-color(ion-text, $color, $i) {
       color: #{tp-color($color, $i)} !important;
+
+      * {
+        color: #{tp-color($color, $i)} !important;
+      }
     }
   }
 }
@@ -45,12 +49,20 @@ ion-text.ion-color a {
 @for $i from 1 through 10 {
   @include generate-component-neutral(ion-text, neutral-#{$i}, $i) {
     color: #{tp-neutral($i)} !important;
+
+    * {
+      color: #{tp-neutral($i)} !important;
+    }
   }
 }
 
 @for $i from 1 through 9 {
   @include generate-component-neutral(ion-text, neutral-#{$i}#{5}, $i) {
     color: #{tp-neutral($i, 5)} !important;
+
+    * {
+      color: #{tp-neutral($i, 5)} !important;
+    }
   }
 }
 
@@ -60,5 +72,9 @@ ion-text.ion-color a {
 @each $color in $tp-feedback {
   @include generate-component-feedback(ion-text, fb-#{$color}, $color) {
     color: #{tp-feedback($color)} !important;
+
+    * {
+      color: #{tp-feedback($color)} !important;
+    }
   }
 }
