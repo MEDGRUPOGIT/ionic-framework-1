@@ -34,7 +34,7 @@ const createSheetMobile = async () => {
 
 const Template = () => {
   return html`
-    <ion-app>
+   <!-- <ion-app>
       <ion-tabs class="general">
         <div class="modo-desktop">
             <div class="content__general">
@@ -312,13 +312,13 @@ const Template = () => {
               </div>
 
               <div class="content__right">
-                <!-- content__desktop-lateral - código duplicado para atender layout e scroll no desktop e mobile -->
+               content__desktop-lateral - código duplicado para atender layout e scroll no desktop e mobile
                 <div class="content__desktop-lateral content__desktop-lateral--desktop lateral-ia">
-                <!-- <div class="lateral-ia__menu-collapsed">
+                <div class="lateral-ia__menu-collapsed">
                         <ion-button mode="ios" icon-only fill="clear" ds-size="xxs">
                           <ion-icon class="med-icon" name="med-menu2"></ion-icon>
                         </ion-button>
-                      </div> -->
+                      </div>
 
                   <div class="lateral-ia__itens">
                     <ion-content>
@@ -397,7 +397,7 @@ const Template = () => {
           </ion-tab-button>
         </ion-tab-bar>
       </ion-tabs>
-    </ion-app>
+    </ion-app> -->
   `;
 };
 
