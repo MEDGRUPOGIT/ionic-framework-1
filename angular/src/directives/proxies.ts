@@ -1061,21 +1061,19 @@ export class MedAlertFixed {
 }
 export declare interface MedAlternativas extends Components.MedAlternativas {
 }
-@ProxyCmp({ inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteRiscar", "respostaCorreta"] })
-@Component({ selector: "med-alternativas", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteRiscar", "respostaCorreta"] })
+@ProxyCmp({ inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteDesmarcar", "permiteRiscar", "respostaCorreta"] })
+@Component({ selector: "med-alternativas", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteDesmarcar", "permiteRiscar", "respostaCorreta"] })
 export class MedAlternativas {
-  medGalleryRequest!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ["medGalleryRequest"]);
   }
 }
 export declare interface MedAlternativasA extends Components.MedAlternativasA {
 }
-@ProxyCmp({ inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkin", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteRiscar", "respostaCorreta"] })
-@Component({ selector: "med-alternativas-a", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkin", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteRiscar", "respostaCorreta"] })
+@ProxyCmp({ inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkin", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteDesmarcar", "permiteRiscar", "respostaCorreta"] })
+@Component({ selector: "med-alternativas-a", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkin", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteDesmarcar", "permiteRiscar", "respostaCorreta"] })
 export class MedAlternativasA {
   medChange!: EventEmitter<CustomEvent>;
   medRiscada!: EventEmitter<CustomEvent>;
@@ -1089,8 +1087,8 @@ export class MedAlternativasA {
 }
 export declare interface MedAlternativasB extends Components.MedAlternativasB {
 }
-@ProxyCmp({ inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkin", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteRiscar", "respostaCorreta"] })
-@Component({ selector: "med-alternativas-b", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkin", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteRiscar", "respostaCorreta"] })
+@ProxyCmp({ inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkin", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteDesmarcar", "permiteRiscar", "respostaCorreta"] })
+@Component({ selector: "med-alternativas-b", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkin", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteDesmarcar", "permiteRiscar", "respostaCorreta"] })
 export class MedAlternativasB {
   medChange!: EventEmitter<CustomEvent>;
   medRiscada!: EventEmitter<CustomEvent>;
@@ -1849,6 +1847,16 @@ export class SheetContentTest {
     this.el = r.nativeElement;
   }
 }
+export declare interface SheetIa extends Components.SheetIa {
+}
+@Component({ selector: "sheet-ia", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class SheetIa {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
 export declare interface SheetTest extends Components.SheetTest {
 }
 @Component({ selector: "sheet-test", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
@@ -1863,6 +1871,16 @@ export declare interface SimuladoModal extends Components.SimuladoModal {
 }
 @Component({ selector: "simulado-modal", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
 export class SimuladoModal {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+export declare interface SnackbarTest extends Components.SnackbarTest {
+}
+@Component({ selector: "snackbar-test", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+export class SnackbarTest {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
