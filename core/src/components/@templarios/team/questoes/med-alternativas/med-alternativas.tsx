@@ -72,6 +72,11 @@ export class MedAlternativas implements MedAlternativasInterface {
    */
   @Prop({ mutable: true }) permiteRiscar = true;
 
+  /**
+   * todo
+   */
+  @Prop({ mutable: true }) permiteDesmarcar = false;
+
   render() {
     const {
       dsSkinConfig,
@@ -85,7 +90,8 @@ export class MedAlternativas implements MedAlternativasInterface {
       respostaCorreta,
       mostraResposta,
       alternativaSelecionada,
-      permiteRiscar
+      permiteRiscar,
+      permiteDesmarcar
     } = this;
 
     return (
@@ -104,6 +110,7 @@ export class MedAlternativas implements MedAlternativasInterface {
             mostraResposta={mostraResposta}
             alternativaSelecionada={alternativaSelecionada}
             permiteRiscar={permiteRiscar}
+            permiteDesmarcar={permiteDesmarcar}
           ></med-alternativas-a>
         )}
 
@@ -121,6 +128,7 @@ export class MedAlternativas implements MedAlternativasInterface {
             mostraResposta={mostraResposta}
             alternativaSelecionada={alternativaSelecionada}
             permiteRiscar={permiteRiscar}
+            permiteDesmarcar={permiteDesmarcar}
           ></med-alternativas-b>
         )}
       </Host>
