@@ -1,0 +1,29 @@
+.slides {
+  // altera a configuração geral do background do ion-content
+  --background: hsl(var(--med-color-neutral-15)) !important;
+
+  &__content {
+    margin: 0 auto;
+    padding: 32px 40px;
+    width: 100%;
+    height: 100%;
+    max-width: 1096px;
+
+    @include breakpoint-down('sm') {
+      padding: 24px;
+    }
+  }
+
+  &__container {
+    height: 95%;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  &__contador {
+    text-align: center;
+    margin-top: 8px;
+  }
+}

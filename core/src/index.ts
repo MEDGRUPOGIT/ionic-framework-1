@@ -30,3 +30,6 @@ export {
   toastController,
 } from './utils/overlays';
 export { IonicSlides } from './components/slides/IonicSlides';
+
+// templarios
+export * from './@templarios/templarios';

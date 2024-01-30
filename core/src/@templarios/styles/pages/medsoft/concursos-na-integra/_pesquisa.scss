@@ -1,0 +1,23 @@
+.concursos-pesquisa {
+  // altera a configuração geral do background do ion-content
+  --background: hsl(var(--med-color-neutral-15)) !important;
+
+  &__content {
+    padding: 32px 40px 64px;
+    max-width: 1096px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include breakpoint-down('sm') {
+      padding: 24px 24px 40px;
+    }
+  }
+
+  &__tiles {
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}

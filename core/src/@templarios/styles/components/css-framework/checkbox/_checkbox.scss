@@ -1,0 +1,197 @@
+[tp-container-checkbox] {
+  --border-color-label: hsl(var(--med-color-neutral-3));
+  --checkmark-color: hsl(var(--med-color-neutral-2));
+  --background: transparent;
+  --border-color: hsl(var(--med-color-brand-4));
+  --border-color-checked: hsl(var(--med-color-brand-4));
+  --background-checked: hsl(var(--med-color-brand-4));
+  --checkmark-color: hsl(var(--med-color-neutral-2));
+  --border-radius: 4px;
+  --size: 20px;
+  --size-icon: 16px;
+  --transition: background-color 300ms ease-out, border-color 300ms ease-out;
+  --transition-icon: opacity 300ms ease-out;
+  --margin: 0 8px 0 0;
+  --opacity-icon: 0;
+
+  display: flex;
+  align-items: center;
+
+  [tp-label] {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  [tp-checkbox-frame] {
+    height: var(--size);
+    width: var(--size);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--border-color);
+    background: var(--background);
+    margin: var(--margin);
+    transition: var(--transition);
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .med-icon {
+      --ionicon-stroke-width: 3px;
+      height: var(--size-icon);
+      width: var(--size-icon);
+      stroke: var(--checkmark-color);
+      opacity: var(--opacity-icon);
+      transition: var(--transition-icon);
+    }
+  }
+}
+
+[tp-checkbox] {
+  display: none;
+
+  & + [tp-label] {
+    cursor: pointer;
+  }
+
+  &:checked + [tp-label] {
+    [tp-checkbox-frame] {
+      --background: var(--background-checked);
+
+      .med-icon {
+        --opacity-icon: 1;
+      }
+    }
+  }
+}
+
+//
+// inverted
+//
+[inverted] [tp-checkbox] + [tp-label] [tp-checkbox-frame] {
+  --margin: 0 0 0 auto;
+
+  order: 1;
+}
+
+//
+// states
+//
+[tp-checkbox] + [tp-label] {
+  &:hover,
+  &:focus {
+    --border-color: hsl(var(--med-color-brand-5));
+    --border-color-checked: hsl(var(--med-color-brand-5));
+    --background-checked: hsl(var(--med-color-brand-5));
+  }
+}
+
+//
+// disabled
+//
+[tp-container-checkbox][disabled] {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color([tp-container-checkbox], $color, $i) {
+      [tp-label] {
+        --border-color: #{tp-color($color, 4)};
+        --border-color-checked: #{tp-color($color, 4)};
+        --background-checked: #{tp-color($color, 4)};
+
+        &:hover,
+        &:focus {
+          --border-color: #{tp-color($color, 5)};
+          --border-color-checked: #{tp-color($color, 5)};
+          --background-checked: #{tp-color($color, 5)};
+        }
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(
+    [tp-container-checkbox],
+    neutral-#{$i},
+    $i
+  ) {
+    [tp-label] {
+      --border-color: #{tp-neutral($i)};
+      --border-color-checked: #{tp-neutral($i)};
+      --background-checked: #{tp-neutral($i)};
+
+      &:hover,
+      &:focus {
+        --border-color: #{tp-neutral($i)};
+        --border-color-checked: #{tp-neutral($i)};
+        --background-checked: #{tp-neutral($i)};
+      }
+    }
+
+    [tp-checkbox]:checked + [tp-label] {
+      .med-icon {
+        --checkmark-color: #{tp-contrast-neutral($i)};
+      }
+    }
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(
+    [tp-container-checkbox],
+    neutral-#{$i}#{5},
+    $i
+  ) {
+    [tp-label] {
+      --border-color: #{tp-neutral($i, 5)};
+      --border-color-checked: #{tp-neutral($i, 5)};
+      --background-checked: #{tp-neutral($i, 5)};
+
+      &:hover,
+      &:focus {
+        --border-color: #{tp-neutral($i, 5)};
+        --border-color-checked: #{tp-neutral($i, 5)};
+        --background-checked: #{tp-neutral($i, 5)};
+      }
+    }
+
+    [tp-checkbox]:checked + [tp-label] {
+      .med-icon {
+        --checkmark-color: #{tp-contrast-neutral($i)};
+      }
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(
+    [tp-container-checkbox],
+    fb-#{$color},
+    $color
+  ) {
+    [tp-label] {
+      --border-color: #{tp-feedback($color)};
+      --border-color-checked: #{tp-feedback($color)};
+      --background-checked: #{tp-feedback($color)};
+
+      &:hover,
+      &:focus {
+        --border-color: #{tp-feedback($color)};
+        --border-color-checked: #{tp-feedback($color)};
+        --background-checked: #{tp-feedback($color)};
+      }
+    }
+  }
+}

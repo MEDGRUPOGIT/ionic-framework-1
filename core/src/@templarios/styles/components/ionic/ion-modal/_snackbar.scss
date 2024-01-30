@@ -1,0 +1,99 @@
+.tp-snackbar {
+  --backdrop-opacity: var(--ion-backdrop-opacity, 0) !important;
+  --background: var(--tp-snackbar-background, hsl(var(--med-color-neutral-15)))  !important;
+  --border-radius: 8px !important;
+  --max-height: initial !important;
+  --height: fit-content !important;
+  --width: fit-content !important;
+  --min-width: 382px !important;
+  background: transparent !important;
+  align-items: flex-start !important;
+  padding-top: calc(16px + var(--ion-safe-area-top));
+  padding-right: calc(16px + var(--ion-safe-area-right));
+  padding-left: calc(16px + var(--ion-safe-area-left));
+  min-width: 382px;
+  width: fit-content;
+  height: fit-content;
+  left: initial !important;
+  contain: initial !important;
+
+  @include breakpoint-down("sm") {
+    --width: 100% !important;
+    width: 100%;
+  }
+
+  ion-backdrop {
+    height: 0;
+    width: 0;
+  }
+
+  .modal-wrapper {
+    padding: 16px;
+  }
+
+  .ion-page {
+    left: unset;
+    bottom: unset;
+    top: unset;
+    right: unset;
+    position: initial;
+    display: block;
+    contain: unset;
+    background: transparent;
+  }
+}
+
+.tp-snackbar {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+  }
+
+  &__avatar {
+    display: flex;
+  }
+
+  &__text.sc-med-type-h {
+    margin: 0 16px;
+  }
+
+  &__button {
+    margin: 0;
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color('.tp-snackbar', $color, $i, $class: true) {
+      --tp-snackbar-background: #{tp-color($color, $i)} !important;
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral('.tp-snackbar', neutral-#{$i}, $i, $class: true) {
+    --tp-snackbar-background: #{tp-neutral($i)} !important;
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral('.tp-snackbar', neutral-#{$i}#{5}, $i, $class: true) {
+    --tp-snackbar-background: #{tp-neutral($i, 5)} !important;
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback('.tp-snackbar', fb-#{$color}, $color) {
+    --tp-snackbar-background: #{tp-feedback($color)} !important;
+  }
+}

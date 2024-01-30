@@ -122,7 +122,17 @@ export const config: Config = {
     { components: ['ion-breadcrumb', 'ion-breadcrumbs'] },
   ],
   plugins: [
-    sass(),
+    sass(
+      {
+        injectGlobalPaths: [
+          'src/@templarios/styles/variables/breakpoints.scss',
+          'src/@templarios/styles/variables/components.scss',
+          'src/@templarios/styles/functions/breakpoints.scss',
+          'src/@templarios/styles/functions/color-stencil.scss',
+          'src/@templarios/styles/mixins/breakpoints.scss',
+        ]
+      }
+    ),
   ],
   outputTargets: [
     reactOutputTarget({

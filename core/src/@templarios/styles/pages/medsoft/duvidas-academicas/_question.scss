@@ -1,0 +1,43 @@
+.question {
+  border-radius: 8px;
+
+  &__container {
+    padding: 16px 8px 8px 8px;
+  }
+
+  &__text-container {
+    margin-bottom: 16px;
+  }
+
+  &__subtitle {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__text {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__alternativas {
+    margin-bottom: 16px;
+  }
+
+  &__video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__thumbnail {
+    --width: 80% !important;
+    --height: auto !important;
+    align-self: center;
+  }
+}

@@ -1,0 +1,100 @@
+[tp-loader] {
+  --stroke: hsl(var(--med-color-neutral-10));
+  height: 94px;
+  width: 94px;
+}
+
+[tp-loader-circle],
+[tp-loader-polyline],
+[tp-loader-line] {
+  fill:none;
+  stroke:var(--stroke);
+  stroke-width:6;
+  stroke-miterlimit:10;
+}
+
+[tp-loader-rect] {
+  fill:var(--stroke);
+}
+
+[tp-loader-circle] {
+  animation: loadingcircle 1s linear infinite alternate,
+             rotate 2s linear infinite;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  transform-origin: 50px 50px;
+}
+
+[tp-loader-line]  {
+  animation: loading 1s cubic-bezier(0.83, 0, 0.17, 1) infinite alternate;
+  stroke-dasharray: 25;
+  stroke-dashoffset: 25;
+}
+[tp-loader-line]:nth-of-type(2) {animation-delay:.1s}
+[tp-loader-line]:nth-of-type(3) {animation-delay:.2s}
+[tp-loader-line]:nth-of-type(4) {animation-delay:.3s}
+[tp-loader-line]:nth-of-type(5) {animation-delay:.4s}
+[tp-loader-line]:nth-of-type(6) {animation-delay:.5s}
+[tp-loader-line]:nth-of-type(7) {animation-delay:.6s}
+[tp-loader-line]:nth-of-type(8) {animation-delay:.7s}
+
+[tp-loader-polyline] {
+  animation: loading 1s cubic-bezier(0.83, 0, 0.17, 1) infinite alternate;
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+}
+[tp-loader-polyline]:nth-of-type(2) {animation-delay:.2s}
+[tp-loader-polyline]:nth-of-type(3) {animation-delay:.4s}
+[tp-loader-polyline]:nth-of-type(4) {animation-delay:.6s}
+
+@keyframes loading {
+  50% {stroke-dashoffset: 0}
+  100% {stroke-dashoffset: 0}
+}
+@keyframes loadingcircle {
+  to {stroke-dashoffset: 0}
+}
+@keyframes rotate {
+  to {transform:rotate(1turn)}
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color([tp-loader], $color, $i) {
+      --stroke: #{tp-color($color, $i)};
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral([tp-loader],
+    neutral-#{$i},
+    $i ) {
+    --stroke: #{tp-neutral($i)};
+  }
+}
+
+@for $i from 1 through 9 {
+  @include generate-component-neutral([tp-loader],
+    neutral-#{$i}#{5},
+    $i ) {
+      --stroke: #{tp-neutral($i, 5)};
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback([tp-loader],
+    fb-#{$color},
+    $color ) {
+    --stroke: #{tp-feedback($color)};
+  }
+}

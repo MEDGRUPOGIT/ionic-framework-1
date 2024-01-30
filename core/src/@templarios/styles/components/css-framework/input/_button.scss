@@ -1,0 +1,101 @@
+[tp-container-input] {
+    --border-container: 1px solid transparent;
+    border: var(--border-container);
+
+  [tp-input]:not(:first-child) {
+    margin: 0;
+  }
+
+  [tp-button] {
+    margin: 0 8px;
+  }
+}
+
+//
+// state
+//
+[tp-container-input][state="attention"] {
+  --border-container: 1px solid hsl(var(--med-color-fb-attention));  
+}
+
+[tp-container-input][state="caution"] {
+  --border-container: 1px solid hsl(var(--med-color-fb-caution));  
+}
+
+[tp-container-input][state="warning"] {
+  --border-container: 1px solid hsl(var(--med-color-fb-warning));  
+}
+
+[tp-container-input][state="success"] {
+  --border-container: 1px solid hsl(var(--med-color-fb-success));  
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral([tp-container-input], neutral-#{$i}, $i) {
+    [tp-button] {
+      --color: #{tp-contrast-neutral($i)};
+
+      .med-icon {
+        stroke: var(--color);
+      }
+
+      &:hover,
+      &:focus {
+        .med-icon {
+          stroke: var(--color);
+        }
+      }
+    }
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(
+    [tp-container-input],
+    neutral-#{$i}#{5},
+    $i
+  ) {
+    [tp-button] {
+      --color: #{tp-contrast-neutral($i)};
+
+      .med-icon {
+        stroke: var(--color);
+      }
+
+      &:hover,
+      &:focus {
+        .med-icon {
+          stroke: var(--color);
+        }
+      }
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(
+    [tp-container-input],
+    fb-#{$color},
+    $color
+  ) {
+    [tp-button] {
+      --color: hsl(var(--med-color-neutral-1));
+
+      .med-icon {
+        stroke: var(--color);
+      }
+
+      &:hover,
+      &:focus {
+        .med-icon {
+          stroke: var(--color);
+        }
+      }
+    }
+  }
+}

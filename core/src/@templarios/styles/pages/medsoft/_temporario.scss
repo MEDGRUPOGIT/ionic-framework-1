@@ -1,0 +1,91 @@
+// fix devido a config global do medsoft
+ion-content {
+  --background: hsl(var(--med-color-neutral-1)) !important;
+  height: 100%;
+}
+
+.ion-page {
+  background: hsl(var(--med-color-neutral-1));
+}
+
+.subheader {
+  background: hsl(var(--med-color-neutral-2));
+
+  &--subtitle {
+    .subheader__content {
+      padding: 8px 40px;
+
+      @include breakpoint-down('sm') {
+        padding: 8px 24px;
+      }
+    }
+  }
+
+  &__content {
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1096px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include breakpoint-down('sm') {
+      padding: 16px 24px;
+    }
+  }
+}
+
+.ano {
+  background: hsl(var(--med-color-neutral-25));
+  display: block;
+  text-align: center;
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  &--concursos {
+    top: -16px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  margin: 0 auto;
+  padding: 32px 40px;
+  max-width: 1096px;
+
+  &__tiles {
+    cursor: pointer;
+  }
+}
+
+// responsividade
+
+@include breakpoint-down('lg') {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@include breakpoint-down('md') {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@include breakpoint-down('sm') {
+  .container--resumo-simulado {
+    height: calc(100vh - 128px);
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 24px;
+  }
+}

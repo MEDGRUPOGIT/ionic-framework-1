@@ -1,0 +1,253 @@
+[tp-button] {
+  --background: hsl(var(--med-color-brand-3));
+  --background-hover: hsl(var(--med-color-brand-2));
+  --color: hsl(var(--med-color-neutral-10));
+  --padding: 16px 32px;
+  --font-size: 16px;
+  --line-height: 16px;
+  --height: 48px;
+  --width: initial;
+  --height-icon: 24px;
+  --width-icon: 24px;
+  --border: 1px solid transparent;
+  --border-radius: 100px;
+  --transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  --icon-transition: stroke 0.3s;
+
+  cursor: pointer;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  font-size: var(--font-size);
+  font-weight: 600;
+  color: var(--color);
+  background-color: var(--background);
+  line-height: var(--line-height);
+  height: var(--height);
+  width: var(--width);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  position: relative;
+
+  .med-icon {
+    height: var(--height-icon);
+    width: var(--width-icon);
+    min-width: var(--width-icon);
+    stroke: var(--color);
+
+    &:first-child {
+      margin-left: -8px;
+      margin-right: 8px;
+    }
+
+    &:last-child {
+      margin-right: -8px;
+      margin-left: 8px;
+    }
+  }
+
+  &[icon-only] {
+    --height: 48px;
+    --width: 48px;
+    --padding: 12px;
+
+    .med-icon {
+      margin: 0;
+    }
+  }
+
+  &::after {
+    content: "";
+    height: calc(100% + 2px);
+    width: calc(100% + 2px);
+    border-radius: var(--border-radius);
+    background: transparent;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    overflow: hidden;
+  }
+}
+
+//
+// states
+//
+[tp-button]:hover {
+  --background: var(--background-hover);
+}
+
+//
+// disabled
+//
+[tp-button]:disabled {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+
+  pointer-events: none;
+}
+
+//
+// size
+//
+[tp-button] {
+  &[ds-size="sm"] {
+    --padding: 12px 32px;
+    --height: 40px;
+
+    &[icon-only] {
+      --width: 40px;
+      --padding: 8px;
+    }
+  }
+
+  &[ds-size="xs"] {
+    --padding: 8px 24px;
+    --height: 32px;
+    --font-size: 14px;
+
+    .med-icon {
+      &:first-child,
+      &:last-child {
+        --height-icon: 16px;
+        --width-icon: 16px;
+      }
+    }
+
+    &[icon-only] {
+      --width: 32px;
+      --padding: 4px;
+
+      .med-icon {
+        --height-icon: 24px;
+        --width-icon: 24px;
+      }
+    }
+  }
+
+  &[ds-size="xxs"] {
+    --padding: 6px 16px;
+    --height: 24px;
+    --font-size: 12px;
+    --line-height: 12px;
+
+    .med-icon {
+      --height-icon: 16px;
+      --width-icon: 16px;
+
+      &:first-child {
+        margin-left: -4px;
+      }
+
+      &:last-child {
+        margin-right: -4px;
+      }
+    }
+
+    &[icon-only] {
+      --width: 24px;
+      --padding: 4px;
+
+      .med-icon {
+        margin: 0;
+      }
+    }
+  }
+}
+
+// block
+[tp-button][expand="block"] {
+  --width: 100%;
+  --display: block;
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color([tp-button], $color, $i) {
+      --background: #{tp-color($color, $i)};
+      --background-hover: #{tp-color($color, 2)};
+      --color: #{tp-contrast-color($i)};
+      --color-hover: #{tp-contrast-color(2)};
+
+      &[disabled] {
+        --background: hsl(var(--med-color-neutral-3));
+        --color: hsl(var(--med-color-neutral-5));
+      }
+
+      &:hover {
+        --background: var(--background-hover);
+        --color: var(--color-hover);
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral([tp-button], neutral-#{$i}, $i) {
+    --background: #{tp-neutral($i)};
+    --background-activated: #{tp-contrast-neutral($i, 0.08)};
+    --background-hover: #{tp-contrast-neutral($i, 0.08)};
+    --color: #{tp-contrast-neutral($i)};
+    --color-activated: #{tp-contrast-neutral($i)};
+    --color-hover: #{tp-contrast-neutral($i)};
+
+    &[disabled] {
+      --background: hsl(var(--med-color-neutral-3));
+      --color: hsl(var(--med-color-neutral-5));
+    }
+
+    &:hover::after {
+      background: var(--background-hover);
+    }
+  }
+}
+
+@for $i from 1 through 9 {
+  @include generate-component-neutral([tp-button], neutral-#{$i}#{5}, $i) {
+    --background: #{tp-neutral($i, 5)};
+    --background-activated: #{tp-contrast-neutral($i, 0.08)};
+    --background-hover: #{tp-contrast-neutral($i, 0.08)};
+    --color: #{tp-contrast-neutral($i)};
+    --color-activated: #{tp-contrast-neutral($i)};
+    --color-hover: #{tp-contrast-neutral($i)};
+
+    &[disabled] {
+      --background: hsl(var(--med-color-neutral-3));
+      --color: hsl(var(--med-color-neutral-5));
+    }
+
+    &:hover::after {
+      background: var(--background-hover);
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback([tp-button], fb-#{$color}, $color) {
+    --background: #{tp-feedback($color)};
+    --background-activated: hsla(var(--med-color-neutral-1), 0.08);
+    --background-hover: hsla(var(--med-color-neutral-1), 0.08);
+    --color: hsl(var(--med-color-neutral-1));
+    --color-activated: hsl(var(--med-color-neutral-1));
+    --color-hover: hsl(var(--med-color-neutral-1));
+
+    &[disabled] {
+      --background: hsl(var(--med-color-neutral-3));
+      --color: hsl(var(--med-color-neutral-5));
+    }
+
+    &:hover::after {
+      background: var(--background-hover);
+    }
+  }
+}

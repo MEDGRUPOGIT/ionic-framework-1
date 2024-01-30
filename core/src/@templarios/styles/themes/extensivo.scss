@@ -1,0 +1,13 @@
+@import '../functions/color-stencil';
+@import '../mixins/color';
+
+.theme-extensivo {
+  --brand-hue: 266;
+  --neutral-hue: 188;
+  --color-saturation: 50%;
+  --color-luminosity-1: 56%;
+  --color-luminosity-2: 56%;
+  --color-luminosity-3: 56%;
+  --color-luminosity-4: 56%;
+  --color-luminosity-5: 56%;
+}

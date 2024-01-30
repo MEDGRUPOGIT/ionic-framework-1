@@ -1,0 +1,251 @@
+[tp-item] {
+  --background: transparent;
+  --padding-top: 16px;
+  --padding-end: 16px;
+  --padding-bottom: 16px;
+  --padding-start: 16px;
+  --min-height: auto;
+  --color: hsl(var(--med-color-neutral-10));
+
+  display: flex;
+  align-items: center;
+  background: var(--background);
+  padding-top: var(--padding-top);
+  padding-right: var(--padding-end);
+  padding-bottom: var(--padding-bottom);
+  padding-left: var(--padding-start);
+  min-height: var(--min-height);
+  color: var(--color);
+
+  & ion-icon:last-child {
+    margin: 0 0 0 auto !important;
+  }
+
+  & button:last-child {
+    margin: 0 0 0 auto !important;
+  }
+}
+
+//
+// radius
+//
+// $tp-base-radius in src/@templarios/styles/variables/_components.scss
+@each $radius-value,
+$radius in $tp-base-radius {
+  [tp-item][radius="#{$radius-value}"] {
+    border-radius: #{$radius};
+  }
+}
+
+//
+// spacing
+//
+// $tp-base-spacing in src/@templarios/styles/variables/_components.scss
+@each $spacing-value,
+$spacing in $tp-base-spacing {
+  [tp-item][spacing-v="#{$spacing-value}"] {
+    --padding-bottom: #{$spacing};
+    --padding-top: #{$spacing};
+  }
+
+  [tp-item][spacing-h="#{$spacing-value}"] {
+    --padding-end: #{$spacing};
+    --padding-start: #{$spacing};
+  }
+}
+
+// slotted label
+[tp-item] {
+  label {
+    --color: hsl(var(--med-color-neutral-10));
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    margin: 0;
+    text-overflow: initial;
+    white-space: normal;
+    overflow: unset;
+    color: var(--color);
+  }
+}
+
+// slotted icon
+[tp-item] {
+  ion-icon {
+    font-size: 24px;
+    stroke: hsl(var(--med-color-neutral-10));
+  }
+}
+
+// slotted checkbox/radio/toggle
+[tp-item] {
+
+  [tp-checkbox],
+  [tp-radio],
+  [tp-toggle],
+  ion-icon,
+  [tp-button] {
+    &:first-child {
+      margin: 0 8px 0 0;
+    }
+
+    &:last-child {
+      margin: 0 0 0 8px;
+    }
+  }
+
+  [tp-button] ion-icon,
+  [tp-container-checkbox] ion-icon {
+    margin: 0;
+  }
+}
+
+//
+// gap
+//
+// $tp-base-gap in src/@templarios/styles/variables/_components.scss
+@each $gap-value,
+$gap in $tp-base-gap {
+
+  // slotted checkbox/radio/toggle
+  [tp-item][gap="#{$gap-value}"] {
+
+    [tp-checkbox],
+    [tp-radio],
+    [tp-toggle],
+    ion-icon,
+    [tp-button] {
+      &:first-child {
+        margin: 0 $gap 0 0;
+      }
+
+      &:last-child {
+        margin: 0 0 0 $gap;
+      }
+    }
+
+    [tp-button] ion-icon,
+    [tp-container-checkbox] ion-icon {
+      margin: 0;
+    }
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color([tp-item], $color, $i) {
+      --background: #{tp-color($color, $i)};
+
+      // slotted label
+      & label {
+        --color: #{tp-contrast-color($i)};
+      }
+
+      // slotted icon/ button
+      ion-icon {
+        stroke: #{tp-contrast-color($i)};
+      }
+
+      // slotted radio
+      [tp-container-radio] {
+        --background-checked: #{tp-contrast-color($i)};
+        --border-color: #{tp-contrast-color($i)};
+      }
+
+      // slotted checkbox
+      [tp-container-checkbox] {
+
+        &+[tp-label] {
+          --border-color: #{tp-contrast-color($i)};
+          --border-color-checked: #{tp-contrast-color($i)};
+          --background-checked: #{tp-contrast-color($i)};
+
+          &:hover,
+          &:focus {
+            --border-color: #{tp-contrast-color($i)};
+            --border-color-checked: #{tp-contrast-color($i)};
+            --background-checked: #{tp-contrast-color($i)};
+          }
+        }
+
+        & .med-icon {
+          stroke: transparent;
+        }
+      }
+
+      [tp-checkbox]:checked+[tp-label] {
+        .med-icon {
+          stroke: #{tp-contrast-color($i)};
+        }
+      }
+
+      // slotted toggle
+      [tp-toggle-slider] {
+        --background-checked: #{tp-contrast-color($i)};
+
+        &::before {
+          --background-round: #{tp-color($color, $i)};
+          ;
+        }
+      }
+
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral([tp-item], neutral-#{$i}, $i) {
+    --background: #{tp-neutral($i)};
+
+    // slotted label
+    & label {
+      --color: #{tp-contrast-neutral($i)};
+    }
+
+    // slotted icon
+    ion-icon {
+      stroke: #{tp-contrast-neutral($i)};
+    }
+  }
+}
+
+@for $i from 1 through 9 {
+  @include generate-component-neutral([tp-item], neutral-#{$i}#{5}, $i) {
+    --background: #{tp-neutral($i, 5)};
+
+    // slotted label
+    & label {
+      --color: #{tp-contrast-neutral($i)};
+    }
+
+    // slotted icon
+    ion-icon {
+      stroke: #{tp-contrast-neutral($i)};
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback([tp-item], fb-#{$color}, $color) {
+    --background: #{tp-feedback($color)};
+
+    // slotted label
+    & label {
+      --color: hsl(var(--med-color-neutral-1));
+    }
+
+    // slotted icon
+    ion-icon {
+      stroke: hsl(var(--med-color-neutral-1));
+    }
+  }
+}

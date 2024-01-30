@@ -1,0 +1,42 @@
+.marcador {
+  position: absolute;
+  bottom: 56px;
+  right: 24px;
+  width: auto;
+  padding: 12px;
+  background: hsl(var(--med-color-neutral-3));
+  display: none;
+
+  @include breakpoint-down('sm') {
+    right: 10px;
+  }
+
+  &--open {
+    display: flex;
+  }
+
+  &__item {
+    width: 24px;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+
+    &--warning {
+      background: hsl(var(--med-color-fb-warning));
+    }
+
+    &--attention {
+      background: hsl(var(--med-color-fb-attention));
+    }
+
+    &--success {
+      background: hsl(var(--med-color-fb-success));
+    }
+
+    &--brand {
+      background: hsl(var(--med-color-brand-4));
+    }
+  }
+}

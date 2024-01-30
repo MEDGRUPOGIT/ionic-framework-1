@@ -1,0 +1,74 @@
+.slide-de-aula {
+  padding: 16px;
+  height: calc(100% - 104px);
+  overflow: scroll;
+
+  &__item {
+    --inner-padding-end: 0px;
+    --min-height: 32px;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 24px !important;
+    text-transform: uppercase;
+  }
+}
+
+.accordion {
+  --align-items: center;
+  overflow: hidden;
+
+  &__title {
+    text-transform: uppercase;
+  }
+}
+
+.materia {
+  &__ano {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: hsl(var(--med-color-neutral-25));
+  }
+
+  &__list-container {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid hsl(var(--med-color-neutral-3));
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+
+  &__item-left {
+    flex: 0 25%;
+    text-align: right;
+    border-right: 1px solid hsl(var(--med-color-neutral-3));
+  }
+
+  &__item-right {
+    flex: 0 75%;
+  }
+
+  &__codigo {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 24px !important;
+  }
+
+  &__descricao {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 16px !important;
+  }
+}
+

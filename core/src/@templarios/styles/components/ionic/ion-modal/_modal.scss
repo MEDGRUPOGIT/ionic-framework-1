@@ -1,0 +1,78 @@
+@import "../../../../../components/modal/modal.vars";
+
+.tp-modal {
+  --background: hsl(var(--med-color-neutral-1)) !important;
+  --height: 100% !important;
+  --min-height: 50px !important;
+  --width: 100% !important;
+  --max-width: 640px !important;
+  backdrop-filter: blur(10px);
+
+  ion-backdrop {
+    --ion-backdrop-color: hsl(var(--med-color-neutral-1)) !important;
+    --backdrop-opacity: 0.9 !important;
+  }
+
+  .modal-wrapper {
+    transform: initial;
+  }
+}
+
+@include platform("mac") {
+  .tp-modal {
+    ion-backdrop {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+}
+
+@include platform("windows") {
+  .tp-modal {
+    ion-backdrop {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+}
+
+@include breakpoint-up("sm") {
+  .tp-modal {
+    --max-width: 880px !important;
+    --max-height: 600px !important;
+
+    .ion-page {
+      left: unset;
+      bottom: unset;
+      top: unset;
+      right: unset;
+      position: initial;
+      display: block;
+      contain: unset;
+      height: 100%;
+    }
+  }
+}
+
+@include breakpoint-down("sm") {
+  .tp-modal {
+    --max-width: 100% !important;
+    --min-height: 100% !important;
+  }
+}
+
+//
+// custom
+//
+
+@media only screen and (min-width: $modal-inset-min-width) and (min-height: $modal-inset-min-height-small) {
+  .med-image-zoom {
+    --width: 100% !important;
+    --height: 100% !important;
+  }
+}
+
+@media only screen and (min-width: $modal-inset-min-width) and (min-height: $modal-inset-min-height-large) {
+  .med-image-zoom {
+    --width: 100% !important;
+    --height: 100% !important;
+  }
+}

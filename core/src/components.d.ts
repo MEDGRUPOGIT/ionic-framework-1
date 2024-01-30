@@ -41,6 +41,7 @@ import { TabBarChangedEventDetail, TabButtonClickEventDetail, TabButtonLayout } 
 import { TextareaChangeEventDetail, TextareaInputEventDetail } from "./components/textarea/textarea-interface";
 import { ToastButton, ToastDismissOptions, ToastLayout, ToastPosition, ToastPresentOptions, ToastSwipeGestureDirection } from "./components/toast/toast-interface";
 import { ToggleChangeEventDetail } from "./components/toggle/toggle-interface";
+import { MedColor } from "@templarios/types/color.type";
 export { AccordionGroupChangeEventDetail } from "./components/accordion-group/accordion-group-interface";
 export { AnimationBuilder, AutocompleteTypes, Color, ComponentProps, ComponentRef, FrameworkDelegate, StyleEventDetail, TextFieldTypes } from "./interface";
 export { ActionSheetButton } from "./components/action-sheet/action-sheet-interface";
@@ -77,6 +78,7 @@ export { TabBarChangedEventDetail, TabButtonClickEventDetail, TabButtonLayout } 
 export { TextareaChangeEventDetail, TextareaInputEventDetail } from "./components/textarea/textarea-interface";
 export { ToastButton, ToastDismissOptions, ToastLayout, ToastPosition, ToastPresentOptions, ToastSwipeGestureDirection } from "./components/toast/toast-interface";
 export { ToggleChangeEventDetail } from "./components/toggle/toggle-interface";
+export { MedColor } from "@templarios/types/color.type";
 export namespace Components {
     interface IonAccordion {
         /**
@@ -3249,6 +3251,13 @@ export namespace Components {
          */
         "mode"?: "ios" | "md";
     }
+    interface MedAgrupador {
+        "collapsed": boolean;
+        "dsColor"?: MedColor;
+        "labelAlternativo": string;
+        "labelDefault": string;
+        "toggle": (event?: Event) => Promise<void>;
+    }
 }
 export interface IonAccordionGroupCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -4620,6 +4629,12 @@ declare global {
         prototype: HTMLIonToolbarElement;
         new (): HTMLIonToolbarElement;
     };
+    interface HTMLMedAgrupadorElement extends Components.MedAgrupador, HTMLStencilElement {
+    }
+    var HTMLMedAgrupadorElement: {
+        prototype: HTMLMedAgrupadorElement;
+        new (): HTMLMedAgrupadorElement;
+    };
     interface HTMLElementTagNameMap {
         "ion-accordion": HTMLIonAccordionElement;
         "ion-accordion-group": HTMLIonAccordionGroupElement;
@@ -4712,6 +4727,7 @@ declare global {
         "ion-toast": HTMLIonToastElement;
         "ion-toggle": HTMLIonToggleElement;
         "ion-toolbar": HTMLIonToolbarElement;
+        "med-agrupador": HTMLMedAgrupadorElement;
     }
 }
 declare namespace LocalJSX {
@@ -8075,6 +8091,12 @@ declare namespace LocalJSX {
          */
         "mode"?: "ios" | "md";
     }
+    interface MedAgrupador {
+        "collapsed"?: boolean;
+        "dsColor"?: MedColor;
+        "labelAlternativo"?: string;
+        "labelDefault"?: string;
+    }
     interface IntrinsicElements {
         "ion-accordion": IonAccordion;
         "ion-accordion-group": IonAccordionGroup;
@@ -8167,6 +8189,7 @@ declare namespace LocalJSX {
         "ion-toast": IonToast;
         "ion-toggle": IonToggle;
         "ion-toolbar": IonToolbar;
+        "med-agrupador": MedAgrupador;
     }
 }
 export { LocalJSX as JSX };
@@ -8264,6 +8287,7 @@ declare module "@stencil/core" {
             "ion-toast": LocalJSX.IonToast & JSXBase.HTMLAttributes<HTMLIonToastElement>;
             "ion-toggle": LocalJSX.IonToggle & JSXBase.HTMLAttributes<HTMLIonToggleElement>;
             "ion-toolbar": LocalJSX.IonToolbar & JSXBase.HTMLAttributes<HTMLIonToolbarElement>;
+            "med-agrupador": LocalJSX.MedAgrupador & JSXBase.HTMLAttributes<HTMLMedAgrupadorElement>;
         }
     }
 }

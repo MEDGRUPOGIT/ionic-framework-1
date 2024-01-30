@@ -1,0 +1,12 @@
+.concursos-resultados {
+  // altera a configuração geral do background do ion-content
+  --background: hsl(var(--med-color-neutral-15)) !important;
+
+  &__content {
+    padding: 0 0 64px;
+
+    @include breakpoint-down('sm') {
+      padding: 0 0 40px;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.historico {
+  // altera a configuração geral do background do ion-content
+  --background: hsl(var(--med-color-neutral-15)) !important;
+}
+
+.filtro-limpo {
+  height: 100%;
+  background: hsl(var(--med-color-neutral-15));
+  // display: flex;
+  display: none;
+  justify-content: center;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto 0;
+  }
+
+  .med-icon {
+    stroke: hsl(var(--med-color-neutral-10));
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+  }
+}
+
+.resultados {
+  margin: 0 auto;
+  padding: 32px 40px 64px;
+  width: 100%;
+  max-width: 1096px;
+
+  @include breakpoint-down('sm') {
+    padding: 24px 24px 40px;
+  }
+
+  &__item {
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__container-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__informacao {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+
+  &__data {
+    font-weight: 600 !important;
+  }
+
+  &__cor {
+    margin-left: 8px;
+    height: 10px;
+    width: 10px;
+    border-radius: 100px;
+
+    &--warning {
+      background: hsl(var(--med-color-fb-warning));
+    }
+
+    &--attention {
+      background: hsl(var(--med-color-fb-attention));
+    }
+
+    &--success {
+      background: hsl(var(--med-color-fb-success));
+    }
+
+    &--brand {
+      background: hsl(var(--med-color-brand-4));
+    }
+  }
+
+  &__text {
+    display: -webkit-box !important;
+    max-width: inherit;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.historico-footer {
+  .med-icon {
+    width: 24px;
+    height: 24px;
+    stroke: hsl(var(--med-color-neutral-10));
+  }
+
+  &__item {
+    --padding-end: 0;
+    --padding-start: 0;
+  }
+
+  &__marcador-rotate {
+    transform: rotate(90deg);
+  }
+}

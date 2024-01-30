@@ -31,7 +31,9 @@
     "paths": {
       "@utils/*": ["src/utils/*"],
       "@utils/test": ["src/utils/test/utils"]
-    }
+    },
+    // templarios
+    "skipLibCheck": true
   },
   "include": [
     "src",

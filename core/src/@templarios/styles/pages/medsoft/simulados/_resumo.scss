@@ -1,0 +1,131 @@
+.resumo-top {
+  &__button {
+    margin: 0 auto;
+  }
+}
+
+.resumo {
+  // altera a configuração geral do background do ion-content
+  --background: hsl(var(--med-color-neutral-15)) !important;
+
+  &__container {
+    margin: 0 auto;
+    padding: 32px 40px;
+    width: 100%;
+    max-width: 1096px;
+
+    @include breakpoint-down('sm') {
+      padding: 24px;
+    }
+  }
+
+  &__classificacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint-down('sm') {
+      flex-direction: column;
+    }
+  }
+
+  &__linha {
+    display: flex;
+    align-items: center;
+  }
+
+  &__opcoes {
+    margin: 0;
+    height: 16px;
+  }
+
+  &__range-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: 40px 0 48px;
+    padding: 4px 0;
+
+    .med-icon {
+      stroke: hsl(var(--med-color-neutral-10));
+    }
+  }
+
+  &__progress {
+    position: relative;
+    flex: 1;
+  }
+
+  &__icon {
+    min-width: 24px;
+    min-height: 24px;
+    stroke: hsl(var(--med-color-neutral-10));
+    fill: transparent;
+
+    &--start {
+      margin-right: 16px;
+    }
+
+    &--end {
+      margin-left: 16px;
+    }
+  }
+
+  &__posicao-container {
+    display: flex;
+    position: absolute;
+    top: -20px;
+    left: calc(var(--porcentagem) * 1%);
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(-50%);
+    min-width: 80px;
+  }
+
+  &__posicao {
+    margin-bottom: 14px;
+  }
+
+  &__sua-nota {
+    text-transform: uppercase;
+  }
+
+  &__participantes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  &__questoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}
+
+.resumo-bottom {
+  &__modo-container {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+
+    @include breakpoint-down('sm') {
+      flex-direction: column;
+    }
+  }
+
+  &__modo {
+    &:not(:last-child) {
+      margin-right: 16px;
+
+      @include breakpoint-down('sm') {
+        margin-right: 0;
+      }
+    }
+  }
+}
