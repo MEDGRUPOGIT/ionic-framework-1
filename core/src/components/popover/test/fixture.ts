@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import type { E2EPage, E2EPageOptions, ScreenshotFn } from '@utils/test/playwright';
+import type { E2EPage, E2EPageOptions, ScreenshotFn } from '../../../utils/test/playwright';
 
 export class PopoverFixture {
   readonly page: E2EPage;

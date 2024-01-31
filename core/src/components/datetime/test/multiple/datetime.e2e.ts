@@ -1,7 +1,7 @@
 import { expect } from '@playwright/test';
 import type { Locator } from '@playwright/test';
-import type { E2EPage, E2EPageOptions, ScreenshotFn } from '@utils/test/playwright';
-import { configs, test } from '@utils/test/playwright';
+import type { E2EPage, E2EPageOptions, ScreenshotFn } from '../../../../utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 const SINGLE_DATE = '2022-06-01';
 const MULTIPLE_DATES = ['2022-06-01', '2022-06-02', '2022-06-03'];

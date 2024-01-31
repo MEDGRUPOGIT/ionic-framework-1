@@ -1,4 +1,4 @@
-import { GESTURE } from '@utils/overlays';
+import { GESTURE } from '../../../utils/overlays';
 
 import type { Animation } from '../../../interface';
 

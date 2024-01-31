@@ -1,9 +1,9 @@
 import type { ComponentInterface, EventEmitter } from '@stencil/core';
 import { Component, Element, Event, Host, Listen, Prop, State, Watch, h, writeTask } from '@stencil/core';
-import type { Gesture, GestureDetail } from '@utils/gesture';
-import { raf } from '@utils/helpers';
-import { isRTL } from '@utils/rtl';
-import { createColorClasses, hostContext } from '@utils/theme';
+import type { Gesture, GestureDetail } from '../../utils/gesture';
+import { raf } from '../../utils/helpers';
+import { isRTL } from '../../utils/rtl';
+import { createColorClasses, hostContext } from '../../utils/theme';
 
 import { getIonMode } from '../../global/ionic-global';
 import type { Color, StyleEventDetail } from '../../interface';

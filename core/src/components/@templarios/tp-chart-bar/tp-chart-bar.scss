@@ -1,0 +1,135 @@
+//
+// ds-color
+//
+:host {
+  --background: #{color("neutral", "2")};
+  --label-color: #{color("neutral", "95")};
+}
+
+:host(.med-color) {
+  --label-color: #{curr-color("color", "4")};
+}
+
+:host(.med-color-neutral) {
+  --label-color: #{curr-color("neutral")};
+}
+
+:host(.med-color-feedback) {
+  --label-color: #{curr-color("feedback")};
+}
+
+//
+// estilização
+//
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  --label-size: 10px;
+  --height: 200px;
+  --value-bar: 0%;
+  --value-marker: 0%;
+  --display-marker: initial;
+  --opacity: 1;
+}
+
+.tp-chart-bar {
+  &__bar-container {
+    position: relative;
+    background: var(--background);
+    height: var(--height);
+    width: 8px;
+    margin: 0 auto;
+    border-radius: 4px;
+  }
+
+  &__bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    border-radius: 4px;
+    background: var(--color-bar);
+    animation: load-bar 1s forwards ease-in-out;
+
+    //
+    // dsColor
+    //
+    &[class^="tp-chart-bar__bar med-color"] {
+      --color-bar: #{curr-color("color", "4")};
+    }
+
+    &[class^="tp-chart-bar__bar med-color-neutral"] {
+      --color-bar: #{curr-color("neutral")};
+    }
+
+    &[class^="tp-chart-bar__bar med-color-fb"] {
+      --color-bar: #{curr-color("feedback")};
+    }
+  }
+
+  &__marker {
+    position: absolute;
+    left: 0;
+    bottom: var(--value-marker);
+    display: var(--display-marker);
+    width: 24px;
+    height: 6px;
+    transform: translate(-8px, 50%);
+    border-radius: 3px;
+    background: var(--color-marker);
+
+    //
+    // dsColor
+    //
+    &[class^="tp-chart-bar__marker med-color"] {
+      --color-marker: #{curr-color("color", "4")};
+    }
+
+    &[class^="tp-chart-bar__marker med-color-neutral"] {
+      --color-marker: #{curr-color("neutral")};
+    }
+
+    &[class^="tp-chart-bar__marker med-color-fb"] {
+      --color-marker: #{curr-color("feedback")};
+    }
+  }
+
+  &__label {
+    margin-top: 10px;
+    font-size: var(--label-size);
+    line-height: 1;
+    color: var(--label-color) !important;
+  }
+}
+
+:host(.tp-chart-bar--no-marker) {
+  --display-marker: none;
+}
+
+:host(.tp-chart-bar--secondary) {
+  --background: hsl(var(--med-color-neutral-3));
+}
+
+:host(.tp-chart-bar--deactivated) {
+  --background: hsl(var(--med-color-neutral-15));
+}
+
+:host(.tp-chart-bar--deactivated) {
+  .tp-chart-bar__bar {
+    --color-bar: hsl(var(--med-color-neutral-5));
+  }
+}
+
+@keyframes load-bar {
+  from {
+    height: 0%;
+  }
+
+  to {
+    height: var(--value-bar);
+  }
+}

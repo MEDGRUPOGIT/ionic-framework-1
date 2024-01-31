@@ -2,7 +2,7 @@ import { h } from '@stencil/core';
 import { newSpecPage } from '@stencil/core/testing';
 
 import { config } from '../../../global/config';
-import { createAnimation } from '@utils/animation/animation';
+import { createAnimation } from '../../../utils/animation/animation';
 import { Toast } from '../toast';
 
 describe('toast: custom html', () => {

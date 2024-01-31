@@ -1,0 +1,59 @@
+:host {
+  --color-realizado: #{color('brand', '4')};
+  --chart-track-background: #{color('neutral', '1')};
+}
+
+:host {
+  display: block;
+}
+
+.med-chart-categoria {
+  &__header {
+    display: flex;
+  }
+
+  &__info {
+    display: flex;
+    margin-left: auto;
+    padding-left: 16px;
+  }
+
+  &__info-type {
+    margin-left: 3px;
+
+    &--realizado {
+      --color: var(--color-realizado);
+    }
+  }
+
+  &__meta {
+    display: flex;
+  }
+
+  &__realizado {
+    display: flex;
+    margin-left: 30px;
+  }
+
+  &__chart {
+    padding-top: 8px;
+    --track-background: var(--chart-track-background);
+  }
+}
+
+
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-color) {
+  --color-realizado: #{curr-color('color', '4')};
+}
+
+:host(.med-color-neutral) {
+  --color-realizado: #{curr-color('neutral')};
+}
+
+:host(.med-color-feedback) {
+  --color-realizado: #{curr-color('feedback')};
+}

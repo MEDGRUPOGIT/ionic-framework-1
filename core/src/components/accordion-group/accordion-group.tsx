@@ -1,6 +1,6 @@
 import type { ComponentInterface, EventEmitter } from '@stencil/core';
 import { Component, Element, Event, Host, Listen, Method, Prop, Watch, h } from '@stencil/core';
-import { printIonWarning } from '@utils/logging';
+import { printIonWarning } from '../../utils/logging';
 
 import { getIonMode } from '../../global/ionic-global';
 

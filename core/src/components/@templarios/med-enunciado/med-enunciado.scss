@@ -1,0 +1,85 @@
+@import "../../../../../themes/ionic.mixins.scss";
+
+:host {
+  --font-size: 16px;
+  --font-weight: 400;
+  --line-height: 200%;
+  --color: #{color('neutral', '10')};
+  --text-align: justify;
+  --image-list-padding-top: 16px;
+
+  display: block;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  color: var(--color);
+  text-align: var(--text-align);
+
+  .list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: var(--image-list-padding-top);
+    flex-direction: column;
+
+    @include media-breakpoint-up('md', $med-grid-breakpoints) {
+      flex-direction: row;
+    }
+
+    @include media-breakpoint-up('lg', $med-grid-breakpoints) {
+      flex-direction: row;
+    }
+
+    &__item {
+      max-width: 100%;
+      cursor: pointer;
+      position: relative;
+      max-height: 250px;
+      margin-bottom: 15px;
+
+      @include media-breakpoint-up('md', $med-grid-breakpoints) {
+        max-width: 50%;
+      }
+
+      @include media-breakpoint-up('lg', $med-grid-breakpoints) {
+        max-width: 33.33%;
+      }
+    }
+
+    &__image {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 250px;
+    }
+
+    .image__zoom {
+      background: #{color('brand', '1')};
+      width: 24px;
+      height: 24px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+
+      .med-icon {
+        stroke: #{color('neutral', '10')};
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+//////////////////////////////
+// skin
+//////////////////////////////
+
+:host(.med-enunciado--skin) {
+  --font-size: 14px;
+  --line-height: #{line-height(14px)};
+}

@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import type { E2EPage, ScreenshotFn } from '@utils/test/playwright';
+import type { E2EPage, ScreenshotFn } from '../../../utils/test/playwright';
 
 /**
  * Visual regression tests for picker-column.

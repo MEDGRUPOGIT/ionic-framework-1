@@ -22,13 +22,13 @@ This guide details best practices that should be followed when writing E2E tests
 
 <h2 id="practice-test">Use the customized `test` function</h2>
 
-Do not import the `test` fixture from `@playwright/test`. Instead, use the `test` fixture defined in `@utils/test/playwright`. This is a custom Playwright fixture that extends the built-in `test` fixture and has logic to wait for the Stencil app to load before proceeding with the test. If you do not use this test fixture, your screenshots will likely be blank.
+Do not import the `test` fixture from `@playwright/test`. Instead, use the `test` fixture defined in `../../../../utils/test/playwright`. This is a custom Playwright fixture that extends the built-in `test` fixture and has logic to wait for the Stencil app to load before proceeding with the test. If you do not use this test fixture, your screenshots will likely be blank.
 
 Since this fixture extends the built in `test` fixture, all of the normal methods found in the Playwright documentation still apply.
 
 This is the only custom fixture you need. All of the other fixtures such as `expect` can be imported from `@playwright/test`.
 
-**Note**: `@utils` is an alias defined in `tsconfig.json` that points to `/src/utils`. This lets us avoid doing `../../../../` if we are several folders deep when importing.
+**Note**: `../../utils` is an alias defined in `tsconfig.json` that points to `/src/utils`. This lets us avoid doing `../../../../` if we are several folders deep when importing.
 
 <h2 id="practice-per-feature">Break up test directories per-feature</h2>
 
@@ -94,7 +94,7 @@ Each E2E test file should have at least 1 `test.describe` block which defines th
 ```tsx
 // src/components/button/test/basic/button.e2e.ts
 
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 configs().forEach(({ title }) => {
   test.describe(title('button: disabled state'), () => {
@@ -110,7 +110,7 @@ There should be one or more `test` blocks which have individual tests. The test 
 ```jsx
  // src/components/button/test/basic/button.e2e.ts
 
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 configs().forEach(({ title }) => {
   test.describe(title('button: disabled state'), () => {
@@ -128,7 +128,7 @@ The `configs()` generator should be done outside of the `test.describe` block. T
 ❌ Incorrect
 
 ```typescript
-import { configs test } from '@utils/test/playwright';
+import { configs test } from '../../../../utils/test/playwright';
 
 test.describe('button: disabled state', () => {
   configs().forEach(({ config, title }) => {
@@ -151,7 +151,7 @@ test.describe('button: disabled state', () => {
 ✅ Correct
 
 ```typescript
-import { configs test } from '@utils/test/playwright';
+import { configs test } from '../../../../utils/test/playwright';
 
 configs().forEach(({ config, title }) => {
   test.describe(title('button: disabled state'), () => {
@@ -193,7 +193,7 @@ For this scenario, developers must write tests that target the tablet viewport. 
 **Example:** 
 
 ```javascript
-import { configs, test, Viewports } from '@utils/test/playwright';
+import { configs, test, Viewports } from '../../../../utils/test/playwright';
 
 configs().forEach(({ config, title }) => {
   test.describe(title('thing: rendering'), () => {

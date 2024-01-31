@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
-import { configs, test } from '@utils/test/playwright';
-import type { E2EPage } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
+import type { E2EPage } from '../../../../utils/test/playwright';
 
 /**
  * Safe area tests only check top and bottom edges. RTL checks are not required here.

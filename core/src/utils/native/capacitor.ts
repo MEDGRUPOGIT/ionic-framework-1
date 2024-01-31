@@ -1,5 +1,5 @@
 import type { CapacitorGlobal } from '@capacitor/core';
-import { win } from '@utils/browser';
+import { win } from '../../utils/browser';
 
 export const getCapacitor = () => {
   if (win !== undefined) {

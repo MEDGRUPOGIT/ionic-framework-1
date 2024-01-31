@@ -29,8 +29,8 @@
     "target": "es2017",
     "baseUrl": ".",
     "paths": {
-      "@utils/*": ["src/utils/*"],
-      "@utils/test": ["src/utils/test/utils"]
+      "../../utils/*": ["src/utils/*"],
+      "../../utils/test": ["src/utils/test/utils"]
     },
     // templarios
     "skipLibCheck": true

@@ -1,8 +1,8 @@
 import type { ComponentInterface, EventEmitter } from '@stencil/core';
 import { Watch, Component, Element, Event, Host, Method, Prop, h } from '@stencil/core';
-import { ENABLE_HTML_CONTENT_DEFAULT } from '@utils/config';
-import { raf } from '@utils/helpers';
-import { createLockController } from '@utils/lock-controller';
+import { ENABLE_HTML_CONTENT_DEFAULT } from '../../utils/config';
+import { raf } from '../../utils/helpers';
+import { createLockController } from '../../utils/lock-controller';
 import {
   BACKDROP,
   dismiss,
@@ -12,9 +12,9 @@ import {
   createDelegateController,
   createTriggerController,
   setOverlayId,
-} from '@utils/overlays';
-import { sanitizeDOMString } from '@utils/sanitization';
-import { getClassMap } from '@utils/theme';
+} from '../../utils/overlays';
+import { sanitizeDOMString } from '../../utils/sanitization';
+import { getClassMap } from '../../utils/theme';
 
 import { config } from '../../global/config';
 import { getIonMode } from '../../global/ionic-global';

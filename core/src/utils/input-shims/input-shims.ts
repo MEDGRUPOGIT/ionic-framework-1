@@ -1,4 +1,4 @@
-import { doc } from '@utils/browser';
+import { doc } from '../../utils/browser';
 
 import type { Config } from '../../interface';
 import { findClosestIonContent } from '../content';

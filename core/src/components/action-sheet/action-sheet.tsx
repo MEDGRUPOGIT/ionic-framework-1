@@ -1,9 +1,9 @@
 import type { ComponentInterface, EventEmitter } from '@stencil/core';
 import { Watch, Component, Element, Event, Host, Method, Prop, h, readTask } from '@stencil/core';
-import type { Gesture } from '@utils/gesture';
-import { createButtonActiveGesture } from '@utils/gesture/button-active';
-import { raf } from '@utils/helpers';
-import { createLockController } from '@utils/lock-controller';
+import type { Gesture } from '../../utils/gesture';
+import { createButtonActiveGesture } from '../../utils/gesture/button-active';
+import { raf } from '../../utils/helpers';
+import { createLockController } from '../../utils/lock-controller';
 import {
   BACKDROP,
   createDelegateController,
@@ -15,8 +15,8 @@ import {
   present,
   safeCall,
   setOverlayId,
-} from '@utils/overlays';
-import { getClassMap } from '@utils/theme';
+} from '../../utils/overlays';
+import { getClassMap } from '../../utils/theme';
 
 import { getIonMode } from '../../global/ionic-global';
 import type { AnimationBuilder, CssClassMap, FrameworkDelegate, OverlayInterface } from '../../interface';

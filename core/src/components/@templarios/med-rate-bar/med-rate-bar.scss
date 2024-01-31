@@ -1,0 +1,34 @@
+
+
+:host {
+  --spacing: 8px 16px;
+  --background: #{color('neutral', '2')};
+  --font-size: 16px;
+  --font-weight: 600;
+  --line-height: 100%;
+  --color: #{color('neutral', '2', 'contrast')};
+
+  padding: var(--spacing);
+  background: var(--background);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  color: #{color('neutral', '2', 'contrast')};
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// ////////////////////
+// neutral
+// ////////////////////
+
+:host(.med-color-neutral) {
+  --background: #{curr-color('neutral')};
+  --color: #{curr-color('neutral', null, 'contrast')};
+}
+
+:host(.med-color-neutral) ::slotted(med-rate-like) {
+  --color: #{curr-color('neutral', null, 'contrast')};
+}

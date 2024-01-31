@@ -1,5 +1,5 @@
-import { configs, test } from '@utils/test/playwright';
-import type { E2EPage } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
+import type { E2EPage } from '../../../../utils/test/playwright';
 
 configs({ modes: ['md'], directions: ['ltr'] }).forEach(({ title, config }) => {
   test.describe(title('animation: basic'), async () => {

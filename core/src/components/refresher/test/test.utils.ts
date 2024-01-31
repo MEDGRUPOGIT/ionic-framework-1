@@ -1,5 +1,5 @@
-import type { E2EPage } from '@utils/test/playwright';
-import { dragElementByYAxis } from '@utils/test/playwright';
+import type { E2EPage } from '../../../utils/test/playwright';
+import { dragElementByYAxis } from '../../../utils/test/playwright';
 
 /**
  * Emulates a pull-to-refresh drag gesture (pulls down and releases).

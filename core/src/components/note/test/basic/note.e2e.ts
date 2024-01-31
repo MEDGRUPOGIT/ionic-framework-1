@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 /**
  * Note has no custom RTL logic

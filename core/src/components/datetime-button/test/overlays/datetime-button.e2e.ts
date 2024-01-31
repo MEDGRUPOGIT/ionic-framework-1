@@ -1,7 +1,7 @@
 import { expect } from '@playwright/test';
 import type { Locator } from '@playwright/test';
-import { configs, test } from '@utils/test/playwright';
-import type { EventSpy } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
+import type { EventSpy } from '../../../../utils/test/playwright';
 
 /**
  * This behavior does not vary across directions.

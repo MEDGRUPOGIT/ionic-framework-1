@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
-import { configs, test } from '@utils/test/playwright';
-import type { E2ELocator } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
+import type { E2ELocator } from '../../../../utils/test/playwright';
 
 /**
  * This checks that certain overlays open correctly. While the

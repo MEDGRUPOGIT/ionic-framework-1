@@ -1,5 +1,5 @@
-import { dragElementBy } from '@utils/test/playwright';
-import type { E2EPage, EventSpy, E2EPageOptions } from '@utils/test/playwright';
+import { dragElementBy } from '../../../utils/test/playwright';
+import type { E2EPage, EventSpy, E2EPageOptions } from '../../../utils/test/playwright';
 
 export class CardModalPage {
   private ionModalDidPresent!: EventSpy;

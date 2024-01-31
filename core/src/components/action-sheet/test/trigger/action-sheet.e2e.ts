@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 configs({ directions: ['ltr'], modes: ['ios'] }).forEach(({ config, title }) => {
   test.describe(title('action sheet: trigger'), () => {

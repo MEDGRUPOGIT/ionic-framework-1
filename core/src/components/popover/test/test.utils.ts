@@ -1,6 +1,6 @@
 import type { Locator } from '@playwright/test';
 import { expect } from '@playwright/test';
-import type { E2EPage, ScreenshotFn } from '@utils/test/playwright';
+import type { E2EPage, ScreenshotFn } from '../../../utils/test/playwright';
 
 export const openPopover = async (page: E2EPage, buttonID: string, useEvalClick = false) => {
   const ionPopoverDidPresent = await page.spyOnEvent('ionPopoverDidPresent');

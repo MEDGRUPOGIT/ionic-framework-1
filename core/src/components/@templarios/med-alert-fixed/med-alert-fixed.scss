@@ -1,0 +1,61 @@
+:host {
+  --padding: 12px;
+}
+
+:host {
+  padding: var(--padding);
+  background: var(--background);
+  display: block;
+
+  .med-icon {
+    margin-right: 16px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.med-alert-fixed {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    --font-size: 12px;
+    --line-height: 16px;
+    --font-weight: 400;
+  }
+}
+
+:host(.med-alert-fixed--offline) {
+  --background: #{color('feedback', 'warning')};
+
+  .med-icon {
+    stroke: color('neutral', '10');
+  }
+}
+
+:host(.med-alert-fixed--atualizar) {
+  --background: #{color('provas', '4')};
+
+  .med-icon {
+    stroke: color('neutral', '10');
+  }
+}
+
+//////////////////////////////
+// dsColors
+//////////////////////////////
+
+:host(.med-color) {
+  --background: #{curr-color('color', '3')};
+}
+
+:host(.med-color-neutral) {
+  --background: #{curr-color('neutral')};
+}
+
+:host(.med-color-feedback) {
+  --background: #{curr-color('feedback')};
+}

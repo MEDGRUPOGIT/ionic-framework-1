@@ -1,12 +1,12 @@
 import type { ComponentInterface, EventEmitter } from '@stencil/core';
 import { Component, Element, Event, Host, Method, Prop, State, Watch, h, writeTask } from '@stencil/core';
-import { findIonContent, printIonContentErrorMsg } from '@utils/content';
-import { CoreDelegate, attachComponent, detachComponent } from '@utils/framework-delegate';
-import { raf, inheritAttributes, hasLazyBuild } from '@utils/helpers';
-import type { Attributes } from '@utils/helpers';
-import { createLockController } from '@utils/lock-controller';
-import { printIonWarning } from '@utils/logging';
-import { Style as StatusBarStyle, StatusBar } from '@utils/native/status-bar';
+import { findIonContent, printIonContentErrorMsg } from '../../utils/content';
+import { CoreDelegate, attachComponent, detachComponent } from '../../utils/framework-delegate';
+import { raf, inheritAttributes, hasLazyBuild } from '../../utils/helpers';
+import type { Attributes } from '../../utils/helpers';
+import { createLockController } from '../../utils/lock-controller';
+import { printIonWarning } from '../../utils/logging';
+import { Style as StatusBarStyle, StatusBar } from '../../utils/native/status-bar';
 import {
   GESTURE,
   BACKDROP,
@@ -17,9 +17,9 @@ import {
   present,
   createTriggerController,
   setOverlayId,
-} from '@utils/overlays';
-import { getClassMap } from '@utils/theme';
-import { deepReady, waitForMount } from '@utils/transition';
+} from '../../utils/overlays';
+import { getClassMap } from '../../utils/theme';
+import { deepReady, waitForMount } from '../../utils/transition';
 
 import { config } from '../../global/config';
 import { getIonMode } from '../../global/ionic-global';

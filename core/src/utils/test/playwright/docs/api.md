@@ -25,7 +25,7 @@ The default [`test` function](https://playwright.dev/docs/api/class-test) has be
 **`page`**
 
 ```typescript
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 configs().forEach(({ config, title }) => {
   test.describe(title('my test block'), () => {
@@ -41,7 +41,7 @@ configs().forEach(({ config, title }) => {
 Deprecated: Use a [generator](#generators) instead.
 
 ```typescript
-import { test } from '@utils/test/playwright';
+import { test } from '../../../../utils/test/playwright';
 
 test('my custom test', ({ page, skip }) => {
   skip.mode('md', 'This test is iOS-specific.');
@@ -55,7 +55,7 @@ test('my custom test', ({ page, skip }) => {
 Deprecated: Use a [generator](#generators) instead.
 
 ```typescript
-import { test } from '@utils/test/playwright';
+import { test } from '../../../../utils/test/playwright';
 
 test('my custom test', ({ page, skip }) => {
   skip.rtl('This test does not have RTL-specific behaviors.');
@@ -66,7 +66,7 @@ test('my custom test', ({ page, skip }) => {
 
 **`skip.browser`**
 ```typescript
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 configs().forEach(({ config, title }) => {
   test.describe(title('my test block'), () => {
@@ -81,7 +81,7 @@ configs().forEach(({ config, title }) => {
 
 **`skip.browser` with callback**
 ```typescript
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 configs().forEach(({ config, title }) => {
   test.describe(title('my test block'), () => {
@@ -116,7 +116,7 @@ The [page fixture](https://playwright.dev/docs/test-fixtures) has been extended 
 ### Using `goto`
 
 ```typescript
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 configs().forEach(({ config, title }) => {
   test.describe(title('my test block'), () => {
@@ -132,7 +132,7 @@ configs().forEach(({ config, title }) => {
 `setContent` should be used when you only need to render a small amount of markup.
 
 ```typescript
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 configs().forEach(({ config, title }) => {
   test.describe(title('my test block'), () => {
@@ -155,7 +155,7 @@ configs().forEach(({ config, title }) => {
 Locators can be used even if the target element is not in the DOM yet.
 
 ```typescript
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 configs().forEach(({ config, title }) => {
   test.describe(title('my test block'), () => {
@@ -179,7 +179,7 @@ configs().forEach(({ config, title }) => {
 `setIonViewport` is only needed when a) you are using `ion-content` and b) you need to take a screenshot of the full page (including content that may overflow offscreen).
 
 ```typescript
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 configs().forEach(({ config, screenshot, title }) => {
   test.describe(title('my test block'), () => {
@@ -199,7 +199,7 @@ configs().forEach(({ config, screenshot, title }) => {
 `waitForChanges` is only needed when you must wait for Stencil to re-render before proceeding. This is commonly used when manually updating properties on Stencil components.
 
 ```typescript
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 configs().forEach(({ config, title }) => {
   test.describe(title('my test block'), () => {
@@ -220,7 +220,7 @@ configs().forEach(({ config, title }) => {
 ### Using `spyOnEvent`
 
 ```typescript
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 configs().forEach(({ config, screenshot, title }) => {
   test.describe(title('my test block'), () => {
@@ -255,7 +255,7 @@ The `configs` function accepts an object containing all the configurations you w
 
 **Example 1: Default config**
 ```typescript
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 /**
  * This will generate the following test configs
@@ -275,7 +275,7 @@ configs().forEach(({ config, title }) => {
 
 **Example 2: Configuring the mode**
 ```typescript
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 /**
  * This will generate the following test configs
@@ -293,7 +293,7 @@ configs({ mode: ['ios'] }).forEach(({ config, title }) => {
 
 **Example 3: Configuring the direction**
 ```typescript
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 /**
  * This will generate the following test configs
@@ -327,7 +327,7 @@ Each value in the array returns by `configs` contains the following information:
 
 **Example**
 ```typescript
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 configs().forEach(({ config, title }) => {
   /**
@@ -381,7 +381,7 @@ Playwright comes with [a set of matchers to do test assertions](https://playwrig
 ### Using `toHaveReceivedEvent`
 
 ```typescript
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 configs().forEach(({ config, screenshot, title }) => {
   test.describe(title('my test block'), () => {
@@ -405,7 +405,7 @@ configs().forEach(({ config, screenshot, title }) => {
 ### Using `toHaveReceivedEventDetail`
 
 ```typescript
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 configs().forEach(({ config, screenshot, title }) => {
   test.describe(title('my test block'), () => {
@@ -429,7 +429,7 @@ configs().forEach(({ config, screenshot, title }) => {
 ### Using `toHaveReceivedEventTimes`
 
 ```typescript
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 configs().forEach(({ config, screenshot, title }) => {
   test.describe(title('my test block'), () => {

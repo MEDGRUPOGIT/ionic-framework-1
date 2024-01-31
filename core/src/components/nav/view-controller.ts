@@ -1,5 +1,5 @@
-import { attachComponent } from '@utils/framework-delegate';
-import { assert, shallowEqualStringMap } from '@utils/helpers';
+import { attachComponent } from '../../utils/framework-delegate';
+import { assert, shallowEqualStringMap } from '../../utils/helpers';
 
 import type { AnimationBuilder, ComponentProps, FrameworkDelegate, NavComponentWithProps } from '../../interface';
 

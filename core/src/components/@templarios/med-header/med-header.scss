@@ -1,0 +1,11 @@
+:host {
+  --background: #{color('neutral', '1')};
+}
+
+:host {
+  background: var(--background);
+  display: block;
+  padding-top: var(--ion-safe-area-top);
+}
+
+

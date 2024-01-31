@@ -13,20 +13,20 @@ import {
   h,
   writeTask,
 } from '@stencil/core';
-import type { LegacyFormController, NotchController } from '@utils/forms';
-import { createLegacyFormController, createNotchController } from '@utils/forms';
-import type { Attributes } from '@utils/helpers';
+import type { LegacyFormController, NotchController } from '../../utils/forms';
+import { createLegacyFormController, createNotchController } from '../../utils/forms';
+import type { Attributes } from '../../utils/helpers';
 import {
   inheritAriaAttributes,
   debounceEvent,
   findItemLabel,
   inheritAttributes,
   componentOnReady,
-} from '@utils/helpers';
-import { printIonWarning } from '@utils/logging';
-import { createSlotMutationController } from '@utils/slot-mutation-controller';
-import type { SlotMutationController } from '@utils/slot-mutation-controller';
-import { createColorClasses, hostContext } from '@utils/theme';
+} from '../../utils/helpers';
+import { printIonWarning } from '../../utils/logging';
+import { createSlotMutationController } from '../../utils/slot-mutation-controller';
+import type { SlotMutationController } from '../../utils/slot-mutation-controller';
+import { createColorClasses, hostContext } from '../../utils/theme';
 
 import { getIonMode } from '../../global/ionic-global';
 import type { Color, StyleEventDetail } from '../../interface';

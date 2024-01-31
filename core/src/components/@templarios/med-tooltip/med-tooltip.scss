@@ -1,0 +1,262 @@
+:host {
+  --background: #{color('neutral', '3')};
+  --text-color: #{color('neutral', '3', 'contrast')};
+  --z-index: 1;
+  --box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.2);
+  --border-radius: 8px;
+  --padding: 16px;
+  --min-width: 285px;
+  --max-width: 285px;
+  --arrow-distance: 12px;
+  --arrow-size: 9px;
+  --arrow-size-2: 12px;
+}
+
+:host {
+  display: inline-block;
+  position: relative;
+
+  .med-tooltip {
+    &__content {
+      z-index: var(--z-index);
+      position: absolute;
+      background: var(--background);
+      border-radius: var(--border-radius);
+      padding: var(--padding);
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 300ms ease-in-out;
+      top: calc(100% + var(--arrow-distance));
+      min-width: var(--min-width);
+      max-width: var(--max-width);
+      width: 100%;
+      left: -20px;
+    }
+
+    &__input-container {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 13px;
+        width: 0;
+        height: 0;
+        border-left: var(--arrow-size) solid transparent;
+        border-right: var(--arrow-size) solid transparent;
+        border-bottom: var(--arrow-size-2) solid var(--background);
+        clear: both;
+        transition: opacity 300ms ease-in-out;
+        top: 100%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      align-items: flex-start;
+    }
+
+    &__titulo {
+      --font-size: 16px;
+      --font-weight: 600;
+      --line-height: 24px;
+      --color: var(--text-color);
+      margin-right: 8px;
+    }
+
+    &__text {
+      --font-size: 14px;
+      --font-weight: 400;
+      --line-height: 20px;
+      --color: var(--text-color);
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+    &__button {
+      --color-hover: #{color('neutral', '10')};
+      --color-focused: #{color('neutral', '10')};
+      --color-activated: #{color('neutral', '10')};
+    }
+
+    &__button-fechar {
+      stroke: var(--text-color);
+    }
+  }
+}
+
+/////////////////////////////
+// state
+/////////////////////////////
+
+:host(.med-tooltip--collapsed) {
+  .med-tooltip__content {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+
+  .med-tooltip__input-container::after {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+}
+
+/////////////////////////////
+// placement
+/////////////////////////////
+
+//////////
+// bottom
+//////////
+
+:host(.med-tooltip--bottom) .med-tooltip__input-container::after {
+  border-left: var(--arrow-size) solid transparent;
+  border-right: var(--arrow-size) solid transparent;
+  border-bottom: var(--arrow-size-2) solid var(--background);
+}
+
+:host(.med-tooltip--bottom) .med-tooltip__content {
+  top: calc(100% + var(--arrow-distance));
+}
+
+//////////
+// top
+//////////
+
+:host(.med-tooltip--top) .med-tooltip__input-container::after {
+  bottom: 100%;
+  top: auto;
+  border-left: var(--arrow-size) solid transparent;
+  border-right: var(--arrow-size) solid transparent;
+  border-top: var(--arrow-size-2) solid var(--background);
+  border-bottom: 0;
+}
+
+:host(.med-tooltip--top) .med-tooltip__content {
+  bottom: calc(100% + var(--arrow-distance));
+  top: auto;
+}
+
+//////////
+// left
+//////////
+
+:host(.med-tooltip--left) .med-tooltip__input-container::after {
+  border-top: var(--arrow-size) solid transparent;
+  border-bottom: var(--arrow-size) solid transparent;
+  border-left: var(--arrow-size-2) solid var(--background);
+  border-right: 0;
+  right: 100%;
+  left: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+:host(.med-tooltip--left) .med-tooltip__content {
+  right: calc(100% + var(--arrow-distance));
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+}
+
+//////////
+// right
+//////////
+
+:host(.med-tooltip--right) .med-tooltip__input-container::after {
+  border-top: var(--arrow-size) solid transparent;
+  border-bottom: var(--arrow-size) solid transparent;
+  border-right: var(--arrow-size-2) solid var(--background);
+  border-left: 0;
+  right: auto;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+:host(.med-tooltip--right) .med-tooltip__content {
+  left: calc(100% + var(--arrow-distance));
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+////////////////////
+// position
+////////////////////
+
+//////////
+// center
+//////////
+
+:host(.med-tooltip--center:not(.med-tooltip--right):not(.med-tooltip--left)) .med-tooltip__content {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+:host(.med-tooltip--center:not(.med-tooltip--right):not(.med-tooltip--left)) .med-tooltip__input-container::after {
+  left: 50%;
+}
+
+//////////
+// end
+//////////
+
+:host(.med-tooltip--end:not(.med-tooltip--right):not(.med-tooltip--left)) .med-tooltip__content {
+  left: unset;
+  right: -20px;
+}
+
+:host(.med-tooltip--end:not(.med-tooltip--right):not(.med-tooltip--left)) .med-tooltip__input-container::after {
+  left: unset;
+  right: -6px;
+
+  //fix para centralizar after com o icone da tooltip abaixo de SM
+  @include breakpoint-down('sm') {
+    right: -10px;
+  }
+}
+
+//////////////////////////////
+// codsColor
+//////////////////////////////
+
+:host(.med-color) {
+  --background: #{curr-color('color', '4')};
+  --text-color: #{curr-color('color', '4', 'contrast')};
+
+  ion-button {
+    --color: #{curr-color('color', '4', 'contrast')};
+    --color-hover: #{curr-color('color', '4', 'contrast')};
+  }
+}
+
+:host(.med-color-neutral) {
+  --background: #{curr-color('neutral')};
+  --text-color: #{curr-color('neutral', null, 'contrast')};
+
+  ion-button {
+    --color: #{curr-color('neutral', null, 'contrast')};
+    --color-hover: #{curr-color('neutral', null, 'contrast')};
+  }
+}
+
+:host(.med-color-feedback) {
+  --background: #{curr-color('feedback')};
+  --text-color: #{curr-color('feedback', null, 'contrast')};
+
+  ion-button {
+    --color: #{curr-color('feedback', null, 'contrast')};
+    --color-hover: #{curr-color('feedback', null, 'contrast')};
+  }
+}
+

@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { configs, test, Viewports } from '@utils/test/playwright';
+import { configs, test, Viewports } from '../../../../utils/test/playwright';
 
 configs({ modes: ['ios'], directions: ['ltr'] }).forEach(({ title, config }) => {
   test.describe(title('split-pane: multiple'), () => {

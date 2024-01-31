@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { configs, test, dragElementBy } from '@utils/test/playwright';
+import { configs, test, dragElementBy } from '../../../../utils/test/playwright';
 
 configs({ directions: ['ltr'] }).forEach(({ title, screenshot, config }) => {
   test.describe(title('sheet modal: rendering'), () => {

@@ -1,5 +1,5 @@
 import type { Page, TestInfo } from '@playwright/test';
-import type { E2EPageOptions, Mode, Direction } from '@utils/test/playwright';
+import type { E2EPageOptions, Mode, Direction } from '../../../../../utils/test/playwright';
 
 /**
  * This is an extended version of Playwright's

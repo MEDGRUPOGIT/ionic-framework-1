@@ -1,0 +1,64 @@
+:host {
+  --height-label: 18;
+  --background: #{color('brand', '3')};
+  --background-track: #{color('neutral', '2')};
+  --padding-label: 6px;
+}
+
+:host {
+  overflow: hidden;
+  height: calc(var(--height) + var(--height-label) * 1px);
+  border-radius: 2px;
+}
+
+.med-chart-bar {
+  &__label {
+    height: calc(var(--height-label) * 1px);
+  }
+
+  &__container {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    transform: translateY(calc(var(--value) * 1px));
+  }
+
+  &__progress {
+    height: calc(var(--value) * 1px);
+    background: var(--background);
+    width: calc(var(--width) * 1px);
+    height: calc(var(--height) * 1px);
+    border-radius: 2px;
+  }
+}
+
+//////////////////////////////
+// no-label
+//////////////////////////////
+:host(.med-chart-bar[no-label]) {
+  background: var(--background-track);
+}
+
+//////////////////////////////
+// slotted
+//////////////////////////////
+
+::slotted(med-type) {
+  padding-bottom: var(--padding-label);
+}
+
+//////////////////////////////
+// dsColor
+//////////////////////////////
+
+:host(.med-color) {
+  --background: #{curr-color('color', '3')};
+}
+
+:host(.med-color-neutral) {
+  --background: #{curr-color('neutral')};
+}
+
+:host(.med-color-feedback) {
+  --background: #{curr-color('feedback')};
+}

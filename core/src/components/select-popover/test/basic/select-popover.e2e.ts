@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 import type { SelectPopoverOption } from '../../select-popover-interface';
 import { SelectPopoverPage } from '../fixtures';

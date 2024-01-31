@@ -1,5 +1,5 @@
-import { createGesture } from '@utils/gesture';
-import { clamp, raf } from '@utils/helpers';
+import { createGesture } from '../../../utils/gesture';
+import { clamp, raf } from '../../../utils/helpers';
 
 import type { Animation } from '../../../interface';
 import type { GestureDetail } from '../../../utils/gesture';

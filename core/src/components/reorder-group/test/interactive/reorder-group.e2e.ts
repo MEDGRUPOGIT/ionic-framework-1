@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { configs, test, dragElementBy } from '@utils/test/playwright';
+import { configs, test, dragElementBy } from '../../../../utils/test/playwright';
 
 /**
  * Reorder group does not have per-mode styles

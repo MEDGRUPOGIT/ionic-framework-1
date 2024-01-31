@@ -1,6 +1,6 @@
 import type { ComponentInterface } from '@stencil/core';
 import { Component, Host, Listen, Prop, forceUpdate, h } from '@stencil/core';
-import { matchBreakpoint } from '@utils/media';
+import { matchBreakpoint } from '../../utils/media';
 
 import { getIonMode } from '../../global/ionic-global';
 

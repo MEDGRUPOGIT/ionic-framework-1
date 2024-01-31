@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../../utils/test/playwright';
 
 configs().forEach(({ title, screenshot, config }) => {
   test.describe(title('select: custom'), () => {

@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import type { E2EPage, ScreenshotFn } from '@utils/test/playwright';
+import type { E2EPage, ScreenshotFn } from '../../../utils/test/playwright';
 
 /**
  * Warning: This function will fail when in RTL mode.

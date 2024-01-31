@@ -1,0 +1,150 @@
+:host {
+  --color-label: #{color('neutral', '2')};
+  --stroke-background: #{color('neutral', '2')};
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  svg {
+    width: var(--size);
+    height: var(--size);
+  }
+
+  circle {
+    stroke-dashoffset: 0;
+    stroke: var(--stroke-background);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    transition: 1s ease-in-out;
+    transform: rotate(-90deg);
+    transform-origin: 18px 18px;
+
+    &.size {
+      stroke-dasharray: var(--size) 100;
+      stroke: var(--stroke-background);
+    }
+
+    //////////////////////////////
+    // dsColor
+    //////////////////////////////
+
+    &[class^="size med-color"] {
+      stroke: #{curr-color('color', '4')};
+    }
+
+    &[class^="size med-color-neutral"] {
+      stroke: #{curr-color('neutral')};
+    }
+
+    &[class^="size med-color-fb"] {
+      stroke: #{curr-color('feedback')};
+    }
+  }
+}
+
+.med-chart-radial {
+  &__text-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__subtitulo {
+    --color: #{color('neutral', '7')};
+  }
+}
+
+//////////////////////////////
+// Sizes
+//////////////////////////////
+
+:host(.med-chart-radial--xs) {
+  --size: 48px;
+}
+
+:host(.med-chart-radial--sm) {
+  --size: 56px;
+}
+
+:host(.med-chart-radial--md) {
+  --size: 80px;
+}
+
+:host(.med-chart-radial--lg) {
+  --size: 108px;
+}
+
+:host(.med-chart-radial--xs) .med-chart-radial__titulo {
+  --font-size: 12px;
+  --line-height: 12px;
+  --font-weight: 600;
+}
+
+:host(.med-chart-radial--sm) .med-chart-radial__titulo {
+  --font-size: 14px;
+  --line-height: 16px;
+  --font-weight: 600;
+}
+
+:host(.med-chart-radial--md) .med-chart-radial__titulo {
+  --font-size: 16px;
+  --line-height: 16px;
+  --font-weight: 600;
+}
+
+:host(.med-chart-radial--lg) .med-chart-radial__titulo {
+  --font-size: 20px;
+  --line-height: 20px;
+  --font-weight: 600;
+}
+
+:host(.med-chart-radial--xs) .med-chart-radial__subtitulo {
+  display: none;
+}
+
+:host(.med-chart-radial--sm) .med-chart-radial__subtitulo {
+  display: none;
+}
+
+:host(.med-chart-radial--md) .med-chart-radial__subtitulo {
+  --font-size: 10px;
+  --line-height: 12px;
+  --font-weight: 400;
+}
+
+:host(.med-chart-radial--lg) .med-chart-radial__subtitulo {
+  --font-size: 12px;
+  --line-height: 12px;
+  --font-weight: 400;
+}
+
+//////////////////////////////
+// dsColors
+//////////////////////////////
+
+:host(.med-color) .med-chart-radial__titulo {
+  --color: #{curr-color('color', '4')};
+}
+
+:host(.med-color-neutral) .med-chart-radial__titulo {
+  --color: #{curr-color('neutral')};
+}
+
+:host(.med-color-feedback) .med-chart-radial__titulo {
+  --color: #{curr-color('feedback')};
+}
+
+//////////////////////////////
+// dsName
+//////////////////////////////
+
+:host(.med-chart-radial--secondary) {
+  --stroke-background: #{color('neutral', '1')};
+}

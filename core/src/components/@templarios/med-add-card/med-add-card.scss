@@ -1,0 +1,16 @@
+:host {
+  cursor: pointer;
+  display: block;
+}
+
+.med-add-card {
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    stroke: color('neutral', '10');
+    margin-right: 16px;
+  }
+}

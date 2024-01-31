@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
-import { configs, test } from '@utils/test/playwright';
-import type { E2ELocator } from '@utils/test/playwright/page/utils/locator';
+import { configs, test } from '../../../../utils/test/playwright';
+import type { E2ELocator } from '../../../../utils/test/playwright/page/utils/locator';
 
 /**
  * This behavior does not vary across modes/directions.

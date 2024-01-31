@@ -1,10 +1,10 @@
 import type { ComponentInterface, EventEmitter } from '@stencil/core';
 import { Component, Element, Event, Host, Method, Prop, State, Watch, h, writeTask } from '@stencil/core';
-import { startFocusVisible } from '@utils/focus-visible';
-import { getElementRoot, raf, renderHiddenInput } from '@utils/helpers';
-import { printIonError, printIonWarning } from '@utils/logging';
-import { isRTL } from '@utils/rtl';
-import { createColorClasses } from '@utils/theme';
+import { startFocusVisible } from '../../utils/focus-visible';
+import { getElementRoot, raf, renderHiddenInput } from '../../utils/helpers';
+import { printIonError, printIonWarning } from '../../utils/logging';
+import { isRTL } from '../../utils/rtl';
+import { createColorClasses } from '../../utils/theme';
 import { caretDownSharp, caretUpSharp, chevronBack, chevronDown, chevronForward } from 'ionicons/icons';
 
 import { getIonMode } from '../../global/ionic-global';

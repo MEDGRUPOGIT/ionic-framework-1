@@ -1,0 +1,117 @@
+@import '../../../themes/ionic.mixins.scss';
+
+:host {
+  --padding: 8px 16px;
+  --background: transparent;
+  --border-radius: 0;
+}
+
+:host {
+  @include font-smoothing();
+  display: block;
+  padding: var(--padding);
+  position: relative;
+  background-color: var(--background);
+  outline: none;
+  border-radius: var(--border-radius);
+}
+
+:host(.med-item--no-padding) {
+  --padding: 8px 0;
+}
+
+.item-inner {
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper {
+  flex: 1;
+}
+
+.item-native {
+  @include text-inherit();
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  width: 100%;
+  border: 0;
+  text-align: left;
+  outline: none;
+}
+
+.item-native::-moz-focus-inner {
+  border: 0;
+}
+
+.item-native::after {
+  @include button-state();
+  z-index: -1;
+}
+
+button, a {
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.item-highlight,
+.item-inner-highlight {
+  @include position(null, 0, 0, 0);
+  position: absolute;
+  z-index: 1;
+}
+
+:host(.med-item-multiple-inputs) ::slotted(ion-checkbox),
+:host(.med-item-multiple-inputs) ::slotted(ion-datetime),
+:host(.med-item-multiple-inputs) ::slotted(ion-radio),
+:host(.med-item-multiple-inputs) ::slotted(ion-select),
+:host(.med-item-multiple-inputs) ::slotted(ion-toggle) {
+  position: relative;
+}
+
+//////////////////////////////
+// states
+//////////////////////////////
+
+:host(.med-item-disabled) {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+//////////////////////////////
+// slottted
+//////////////////////////////
+
+::slotted([slot="start"]) {
+  margin-right: 16px;
+}
+
+::slotted([slot="end"]) {
+  margin-left: 16px;
+}
+
+::slotted(ion-icon) {
+  stroke: color('neutral', '10');
+}
+
+//////////////////////////////
+// dsColor
+//////////////////////////////
+
+:host(.med-color) {
+  --background: #{curr-color('color', '3')};
+}
+
+:host(.med-color-neutral) {
+  --background: #{curr-color('neutral')};
+}
+
+:host(.med-color-feedback) {
+  --background: #{curr-color('feedback')};
+}

@@ -1,6 +1,6 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect } from '@playwright/test';
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 configs({ directions: ['ltr'] }).forEach(({ title, config, screenshot }) => {
   test.describe(title('textarea: a11y'), () => {

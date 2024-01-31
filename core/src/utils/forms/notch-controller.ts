@@ -1,5 +1,5 @@
-import { win } from '@utils/browser';
-import { raf } from '@utils/helpers';
+import { win } from '../../utils/browser';
+import { raf } from '../../utils/helpers';
 
 type NotchElement = HTMLIonInputElement | HTMLIonSelectElement | HTMLIonTextareaElement;
 

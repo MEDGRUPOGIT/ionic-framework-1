@@ -1,0 +1,119 @@
+:host {
+  --background-header: linear-gradient(to right, #{color('brand', '1')}, #{color('neutral', '2')}, #{color('neutral', '2')});
+  --background-content: #{color('neutral', '2')};
+  --icon-color: #{color('neutral', '10')};
+  --border-radius: 8px;
+  --padding: 16px;
+  --icon-font-size: 24px;
+  --align-items: initial;
+}
+
+:host(.med-accordion-item) {
+  display: block;
+  border-radius: var(--border-radius);
+
+  .med-accordion-item__header-container {
+    width: 100%;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    align-items: var(--align-items);
+  }
+
+  .med-accordion-item__header {
+    box-sizing: border-box;
+    padding: var(--padding);
+    background: var(--background-header);
+    border-radius: var(--border-radius);
+    position: relative;
+    width: 100%;
+    //overflow: hidden;
+    transition: background 0.5s linear;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+  }
+
+  .med-accordion-item__heading {
+    width: 100%;
+  }
+
+  .med-accordion-item__icon-container {
+    display: flex;
+
+    &--left {
+      padding-right: 8px;
+    }
+
+    &--right {
+      padding-left: 8px;
+      margin-left: auto;
+    }
+  }
+
+  .med-accordion-item__content {
+    display: none;
+    // overflow: auto;
+    background: var(--background-content);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    z-index: 0;
+  }
+
+  .header-container__end {
+    margin-left: auto;
+  }
+
+  .header-container__middle {
+    width: var(--middle-width);
+  }
+}
+
+// ////////////////////
+// border
+// ////////////////////
+
+:host(.med-accordion-item--no-border) {
+  --border-radius: 0;
+}
+
+:host(.med-accordion-item--keep-border) .med-accordion-item__header {
+  border-bottom-left-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+}
+
+// ////////////////////
+// Slotted
+// ////////////////////
+
+::slotted(ion-progress-bar) {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+// ////////////////////
+// state
+// ////////////////////
+
+:host(.med-accordion-item--open.med-accordion-item--background) {
+  .med-accordion-item__header {
+    background-position: 0 0;
+  }
+}
+
+:host(.med-accordion-item--open) {
+  ::slotted(ion-progress-bar) {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-color.med-accordion-item--background) {
+  --background-header: linear-gradient(to right, #{curr-color('color', '1')}, #{color('neutral', '2')}, #{color('neutral', '2')});
+}

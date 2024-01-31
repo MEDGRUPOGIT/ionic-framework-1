@@ -1,0 +1,67 @@
+:host {
+  --font-size: 16px;
+  --font-weight: 400;
+  --line-height: 100%;
+  --color: #{color('neutral', '10')};
+}
+
+:host {
+  display: block;
+}
+
+::slotted(*) {
+  font-size: var(--font-size) !important;
+  font-weight: var(--font-weight) !important;
+  line-height: var(--line-height) !important;
+  color: var(--color) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+// ////////////////////
+// sizes
+// ////////////////////
+
+:host(.med-caption--xxs) {
+  --font-size: 10px;
+}
+
+:host(.med-caption--xs) {
+  --font-size: 12px;
+}
+
+:host(.med-caption--sm) {
+  --font-size: 14px;
+}
+
+:host(.med-caption--lg) {
+  --font-size: 20px;
+}
+
+:host(.med-caption--xl) {
+  --font-size: 24px;
+}
+
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-color) {
+  --color: #{curr-color('color', '3')};
+}
+
+// ////////////////////
+// neutral
+// ////////////////////
+
+:host(.med-color-neutral) {
+  --color: #{curr-color('neutral')};
+}
+
+// //////////
+// feedback
+// //////////
+
+:host(.med-color-feedback) {
+  --color: #{curr-color('feedback')};
+}

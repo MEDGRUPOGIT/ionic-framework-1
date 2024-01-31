@@ -78,5 +78,6 @@ export const DIRECTIVES = [
   d.IonTitle,
   d.IonToast,
   d.IonToggle,
-  d.IonToolbar
+  d.IonToolbar,
+  d.MedAgrupador
 ];

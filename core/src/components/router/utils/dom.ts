@@ -1,4 +1,4 @@
-import { componentOnReady } from '@utils/helpers';
+import { componentOnReady } from '../../../utils/helpers';
 
 import type { AnimationBuilder } from '../../../interface';
 

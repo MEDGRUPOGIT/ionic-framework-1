@@ -1,4 +1,4 @@
-import { configs, test, dragElementBy } from '@utils/test/playwright';
+import { configs, test, dragElementBy } from '../../../../utils/test/playwright';
 
 /**
  * This behavior does not vary across modes and directions.

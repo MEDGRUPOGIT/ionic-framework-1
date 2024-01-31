@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { configs, dragElementBy, test } from '@utils/test/playwright';
+import { configs, dragElementBy, test } from '../../../utils/test/playwright';
 
 /**
  * This behavior does not vary across modes/directions.

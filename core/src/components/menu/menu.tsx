@@ -1,11 +1,11 @@
 import type { ComponentInterface, EventEmitter } from '@stencil/core';
 import { Build, Component, Element, Event, Host, Listen, Method, Prop, State, Watch, h } from '@stencil/core';
-import { getTimeGivenProgression } from '@utils/animation/cubic-bezier';
-import { GESTURE_CONTROLLER } from '@utils/gesture';
-import type { Attributes } from '@utils/helpers';
-import { inheritAriaAttributes, assert, clamp, isEndSide as isEnd } from '@utils/helpers';
-import { menuController } from '@utils/menu-controller';
-import { getPresentedOverlay } from '@utils/overlays';
+import { getTimeGivenProgression } from '../../utils/animation/cubic-bezier';
+import { GESTURE_CONTROLLER } from '../../utils/gesture';
+import type { Attributes } from '../../utils/helpers';
+import { inheritAriaAttributes, assert, clamp, isEndSide as isEnd } from '../../utils/helpers';
+import { menuController } from '../../utils/menu-controller';
+import { getPresentedOverlay } from '../../utils/overlays';
 
 import { config } from '../../global/config';
 import { getIonMode } from '../../global/ionic-global';

@@ -1,13 +1,13 @@
 import type { ComponentInterface, EventEmitter } from '@stencil/core';
 import { Component, Element, Event, Host, Prop, State, Watch, h } from '@stencil/core';
-import { findClosestIonContent, disableContentScrollY, resetContentScrollY } from '@utils/content';
-import type { LegacyFormController } from '@utils/forms';
-import { createLegacyFormController } from '@utils/forms';
-import type { Attributes } from '@utils/helpers';
-import { inheritAriaAttributes, clamp, debounceEvent, getAriaLabel, renderHiddenInput } from '@utils/helpers';
-import { printIonWarning } from '@utils/logging';
-import { isRTL } from '@utils/rtl';
-import { createColorClasses, hostContext } from '@utils/theme';
+import { findClosestIonContent, disableContentScrollY, resetContentScrollY } from '../../utils/content';
+import type { LegacyFormController } from '../../utils/forms';
+import { createLegacyFormController } from '../../utils/forms';
+import type { Attributes } from '../../utils/helpers';
+import { inheritAriaAttributes, clamp, debounceEvent, getAriaLabel, renderHiddenInput } from '../../utils/helpers';
+import { printIonWarning } from '../../utils/logging';
+import { isRTL } from '../../utils/rtl';
+import { createColorClasses, hostContext } from '../../utils/theme';
 
 import { getIonMode } from '../../global/ionic-global';
 import type { Color, Gesture, GestureDetail, StyleEventDetail } from '../../interface';

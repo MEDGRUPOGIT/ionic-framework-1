@@ -8,7 +8,6 @@ import { generateMedColor } from '../../../@templarios/utilities/color';
   shadow: true,
 })
 export class MedAgrupador {
-
   @Prop({ reflect: true }) dsColor?: MedColor;
 
   @Prop({ reflect: true }) labelDefault = 'Expandir a lista';

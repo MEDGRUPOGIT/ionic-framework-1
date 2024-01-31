@@ -1,5 +1,5 @@
-import { win } from '@utils/browser';
-import { raf } from '@utils/helpers';
+import { win } from '../utils/browser';
+import { raf } from '../utils/helpers';
 /**
  * Used to update a scoped component that uses emulated slots. This fires when
  * content is passed into the slot or when the content inside of a slot changes.

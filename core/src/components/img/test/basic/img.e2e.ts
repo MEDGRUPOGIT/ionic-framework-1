@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
-import type { EventSpy } from '@utils/test/playwright';
-import { configs, test } from '@utils/test/playwright';
+import type { EventSpy } from '../../../../utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 configs({ modes: ['md'], directions: ['ltr'] }).forEach(({ title, config }) => {
   test.describe(title('img: basic'), () => {

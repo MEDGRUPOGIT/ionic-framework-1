@@ -1,10 +1,10 @@
 import type { ComponentInterface, EventEmitter } from '@stencil/core';
 import { Component, Element, Event, Host, Prop, Watch, h } from '@stencil/core';
-import type { AnchorInterface, ButtonInterface } from '@utils/element-interface';
-import type { Attributes } from '@utils/helpers';
-import { inheritAriaAttributes, hasShadowDom } from '@utils/helpers';
-import { printIonWarning } from '@utils/logging';
-import { createColorClasses, hostContext, openURL } from '@utils/theme';
+import type { AnchorInterface, ButtonInterface } from '../../utils/element-interface';
+import type { Attributes } from '../../utils/helpers';
+import { inheritAriaAttributes, hasShadowDom } from '../../utils/helpers';
+import { printIonWarning } from '../../utils/logging';
+import { createColorClasses, hostContext, openURL } from '../../utils/theme';
 
 import { getIonMode } from '../../global/ionic-global';
 import type { AnimationBuilder, Color } from '../../interface';

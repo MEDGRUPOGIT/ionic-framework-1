@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { configs, dragElementBy, test } from '@utils/test/playwright';
+import { configs, dragElementBy, test } from '../../../../utils/test/playwright';
 
 /**
  * item-sliding doesn't have mode-specific styling,

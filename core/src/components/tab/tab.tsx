@@ -1,6 +1,6 @@
 import type { ComponentInterface } from '@stencil/core';
 import { Build, Component, Element, Host, Method, Prop, Watch, h } from '@stencil/core';
-import { attachComponent } from '@utils/framework-delegate';
+import { attachComponent } from '../../utils/framework-delegate';
 
 import type { ComponentRef, FrameworkDelegate } from '../../interface';
 

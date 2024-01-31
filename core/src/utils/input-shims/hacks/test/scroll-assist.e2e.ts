@@ -1,8 +1,8 @@
 import { expect } from '@playwright/test';
 import type { Locator } from '@playwright/test';
-import { KeyboardResize } from '@utils/native/keyboard';
-import type { E2EPage, E2EPageOptions } from '@utils/test/playwright';
-import { configs, test } from '@utils/test/playwright';
+import { KeyboardResize } from '../../../../utils/native/keyboard';
+import type { E2EPage, E2EPageOptions } from '../../../../utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 const getScrollPosition = async (contentEl: Locator) => {
   return await contentEl.evaluate(async (el: HTMLIonContentElement) => {

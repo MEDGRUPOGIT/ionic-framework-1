@@ -1,4 +1,4 @@
-import { findItemLabel } from '@utils/helpers';
+import { findItemLabel } from '../../utils/helpers';
 
 type HTMLLegacyFormControlElement = HTMLElement & { label?: string; legacy?: boolean };
 

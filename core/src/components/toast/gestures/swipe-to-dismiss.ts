@@ -1,9 +1,9 @@
 import { Build } from '@stencil/core';
-import { createAnimation } from '@utils/animation/animation';
-import { createGesture } from '@utils/gesture';
-import type { GestureDetail } from '@utils/gesture';
-import { getElementRoot } from '@utils/helpers';
-import { OVERLAY_GESTURE_PRIORITY } from '@utils/overlays';
+import { createAnimation } from '../../../utils/animation/animation';
+import { createGesture } from '../../../utils/gesture';
+import type { GestureDetail } from '../../../utils/gesture';
+import { getElementRoot } from '../../../utils/helpers';
+import { OVERLAY_GESTURE_PRIORITY } from '../../../utils/overlays';
 
 import { getOffsetForMiddlePosition } from '../animations/utils';
 import type { ToastAnimationPosition } from '../toast-interface';

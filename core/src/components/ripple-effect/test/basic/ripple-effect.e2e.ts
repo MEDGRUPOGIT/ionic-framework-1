@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
-import type { E2EPage, E2EPageOptions } from '@utils/test/playwright';
-import { configs, test } from '@utils/test/playwright';
+import type { E2EPage, E2EPageOptions } from '../../../../utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 configs({ modes: ['md'], directions: ['ltr'] }).forEach(({ title, config }) => {
   test.describe(title('ripple-effect: basic'), () => {

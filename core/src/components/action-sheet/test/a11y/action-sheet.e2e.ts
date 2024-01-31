@@ -1,7 +1,7 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect } from '@playwright/test';
-import type { E2EPage } from '@utils/test/playwright';
-import { configs, test } from '@utils/test/playwright';
+import type { E2EPage } from '../../../../utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 const testAria = async (page: E2EPage, buttonID: string, expectedAriaLabelledBy: string | null) => {
   const didPresent = await page.spyOnEvent('ionActionSheetDidPresent');

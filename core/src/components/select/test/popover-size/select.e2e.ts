@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
-import { configs, test } from '@utils/test/playwright';
-import type { E2EPage, E2EPageOptions } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
+import type { E2EPage, E2EPageOptions } from '../../../../utils/test/playwright';
 
 class SelectPopoverSizeFixture {
   readonly page: E2EPage;

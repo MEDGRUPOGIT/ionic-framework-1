@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
-import type { E2EPage, ScreenshotFn } from '@utils/test/playwright';
-import { configs, test } from '@utils/test/playwright';
+import type { E2EPage, ScreenshotFn } from '../../../../utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 const runVisualTest = async (page: E2EPage, selector: string, screenshot: ScreenshotFn, screenshotModifier: string) => {
   const ionLoadingDidPresent = await page.spyOnEvent('ionLoadingDidPresent');

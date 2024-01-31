@@ -1,0 +1,61 @@
+:host {
+  --spacing: 16px;
+  --padding: 8px;
+  --background: #{color('neutral', '7')};
+  --border-radius: 8px;
+  --height: 32px;
+
+  --label-font-size: 16px;
+  --label-font-weight: 500;
+  --label-line-height: 100%;
+  --label-color: #{color('neutral', '10')};
+  --label-spacing: 4px;
+
+  height: var(--height);
+
+  .option {
+    padding: var(--padding);
+    background: var(--background);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+[name="label"]::slotted(*) {
+  text-align: center;
+  width: 16px;
+  font-size: var(--label-font-size);
+  font-weight: var(--label-font-weight);
+  line-height: var(--label-line-height);
+  color: var(--label-color);
+  padding-left: var(--label-spacing);
+}
+
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-color) {
+  --background: #{curr-color('color', '3')};
+  --label-color: #{curr-color('color', '3', 'contrast')};
+}
+
+// ////////////////////
+// neutral
+// ////////////////////
+
+:host(.med-color-neutral) {
+  --background: #{curr-color('neutral')};
+  --label-color: #{curr-color('neutral', null, 'contrast')};
+}
+
+// //////////
+// feedback
+// //////////
+
+:host(.med-color-feedback) {
+  --background: #{curr-color('feedback')};
+  --label-color: #{curr-color('feedback', null, 'contrast')};
+}

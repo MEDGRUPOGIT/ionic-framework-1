@@ -1,4 +1,4 @@
-import type { BackButtonEvent } from '@utils/hardware-back-button';
+import type { BackButtonEvent } from '../../utils/hardware-back-button';
 
 /**
  * When accessing the document or window, it is important

@@ -1,9 +1,9 @@
 import type { ComponentInterface, EventEmitter } from '@stencil/core';
 import { Build, Component, Element, Event, Host, Listen, Method, Prop, forceUpdate, h, readTask } from '@stencil/core';
-import { componentOnReady, hasLazyBuild } from '@utils/helpers';
-import { isPlatform } from '@utils/platform';
-import { isRTL } from '@utils/rtl';
-import { createColorClasses, hostContext } from '@utils/theme';
+import { componentOnReady, hasLazyBuild } from '../../utils/helpers';
+import { isPlatform } from '../../utils/platform';
+import { isRTL } from '../../utils/rtl';
+import { createColorClasses, hostContext } from '../../utils/theme';
 
 import { getIonMode } from '../../global/ionic-global';
 import type { Color } from '../../interface';

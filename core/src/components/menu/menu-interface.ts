@@ -1,4 +1,4 @@
-import type { Animation, AnimationBuilder } from '@utils/animation/animation-interface';
+import type { Animation, AnimationBuilder } from '../../utils/animation/animation-interface';
 
 export type Side = 'start' | 'end';
 

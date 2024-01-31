@@ -1,10 +1,10 @@
 import type { ComponentInterface } from '@stencil/core';
 import { Component, Element, Host, Listen, Prop, State, h } from '@stencil/core';
-import type { ButtonInterface } from '@utils/element-interface';
-import type { Attributes } from '@utils/helpers';
-import { inheritAriaAttributes } from '@utils/helpers';
-import { menuController } from '@utils/menu-controller';
-import { createColorClasses, hostContext } from '@utils/theme';
+import type { ButtonInterface } from '../../utils/element-interface';
+import type { Attributes } from '../../utils/helpers';
+import { inheritAriaAttributes } from '../../utils/helpers';
+import { menuController } from '../../utils/menu-controller';
+import { createColorClasses, hostContext } from '../../utils/theme';
 import { menuOutline, menuSharp } from 'ionicons/icons';
 
 import { config } from '../../global/config';

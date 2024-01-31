@@ -1,8 +1,8 @@
 import type { ComponentInterface, EventEmitter } from '@stencil/core';
 import { Component, Element, Event, Host, Prop, State, Watch, h } from '@stencil/core';
-import type { KeyboardController } from '@utils/keyboard/keyboard-controller';
-import { createKeyboardController } from '@utils/keyboard/keyboard-controller';
-import { createColorClasses } from '@utils/theme';
+import type { KeyboardController } from '../../utils/keyboard/keyboard-controller';
+import { createKeyboardController } from '../../utils/keyboard/keyboard-controller';
+import { createColorClasses } from '../../utils/theme';
 
 import { getIonMode } from '../../global/ionic-global';
 import type { Color } from '../../interface';

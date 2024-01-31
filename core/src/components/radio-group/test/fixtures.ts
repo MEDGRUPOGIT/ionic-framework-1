@@ -1,6 +1,6 @@
 import type { Locator } from '@playwright/test';
 import { expect } from '@playwright/test';
-import type { E2EPage } from '@utils/test/playwright';
+import type { E2EPage } from '../../../utils/test/playwright';
 
 export class RadioFixture {
   readonly page: E2EPage;

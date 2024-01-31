@@ -1,7 +1,7 @@
-import { doc } from '@utils/browser';
-import type { BackButtonEvent } from '@utils/hardware-back-button';
-import { MENU_BACK_BUTTON_PRIORITY } from '@utils/hardware-back-button';
-import { printIonWarning } from '@utils/logging';
+import { doc } from '../../utils/browser';
+import type { BackButtonEvent } from '../../utils/hardware-back-button';
+import { MENU_BACK_BUTTON_PRIORITY } from '../../utils/hardware-back-button';
+import { printIonWarning } from '../../utils/logging';
 
 import type { MenuI, MenuControllerI } from '../../components/menu/menu-interface';
 import type { AnimationBuilder } from '../../interface';

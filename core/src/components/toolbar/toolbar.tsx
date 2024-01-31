@@ -1,6 +1,6 @@
 import type { ComponentInterface } from '@stencil/core';
 import { Component, Element, Host, Listen, Prop, forceUpdate, h } from '@stencil/core';
-import { createColorClasses, hostContext } from '@utils/theme';
+import { createColorClasses, hostContext } from '../../utils/theme';
 
 import { getIonMode } from '../../global/ionic-global';
 import type { Color, CssClassMap, StyleEventDetail } from '../../interface';

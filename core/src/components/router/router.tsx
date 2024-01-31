@@ -1,7 +1,7 @@
 import type { ComponentInterface, EventEmitter } from '@stencil/core';
 import { Component, Element, Event, Listen, Method, Prop } from '@stencil/core';
-import type { BackButtonEvent } from '@utils/hardware-back-button';
-import { debounce } from '@utils/helpers';
+import type { BackButtonEvent } from '../../utils/hardware-back-button';
+import { debounce } from '../../utils/helpers';
 
 import type { AnimationBuilder } from '../../interface';
 import type { NavigationHookResult } from '../route/route-interface';

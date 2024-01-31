@@ -1,7 +1,7 @@
 import type { ComponentInterface } from '@stencil/core';
 import { Build, Component, Element, Host, Method, h } from '@stencil/core';
-import type { FocusVisibleUtility } from '@utils/focus-visible';
-import { isPlatform } from '@utils/platform';
+import type { FocusVisibleUtility } from '../../utils/focus-visible';
+import { isPlatform } from '../../utils/platform';
 
 import { config } from '../../global/config';
 import { getIonMode } from '../../global/ionic-global';

@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
-import { configs, test, Viewports } from '@utils/test/playwright';
-import type { E2EPage } from '@utils/test/playwright';
+import { configs, test, Viewports } from '../../../../utils/test/playwright';
+import type { E2EPage } from '../../../../utils/test/playwright';
 
 configs().forEach(({ title, screenshot, config }) => {
   test.describe(title('modal: custom rendering'), () => {

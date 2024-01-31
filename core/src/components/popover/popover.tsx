@@ -1,9 +1,9 @@
 import type { ComponentInterface, EventEmitter } from '@stencil/core';
 import { Component, Element, Event, Host, Method, Prop, State, Watch, h } from '@stencil/core';
-import { CoreDelegate, attachComponent, detachComponent } from '@utils/framework-delegate';
-import { addEventListener, raf, hasLazyBuild } from '@utils/helpers';
-import { createLockController } from '@utils/lock-controller';
-import { printIonWarning } from '@utils/logging';
+import { CoreDelegate, attachComponent, detachComponent } from '../../utils/framework-delegate';
+import { addEventListener, raf, hasLazyBuild } from '../../utils/helpers';
+import { createLockController } from '../../utils/lock-controller';
+import { printIonWarning } from '../../utils/logging';
 import {
   BACKDROP,
   dismiss,
@@ -12,10 +12,10 @@ import {
   prepareOverlay,
   present,
   setOverlayId,
-} from '@utils/overlays';
-import { isPlatform } from '@utils/platform';
-import { getClassMap } from '@utils/theme';
-import { deepReady, waitForMount } from '@utils/transition';
+} from '../../utils/overlays';
+import { isPlatform } from '../../utils/platform';
+import { getClassMap } from '../../utils/theme';
+import { deepReady, waitForMount } from '../../utils/transition';
 
 import { getIonMode } from '../../global/ionic-global';
 import type { AnimationBuilder, ComponentProps, ComponentRef, FrameworkDelegate } from '../../interface';

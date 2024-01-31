@@ -1,4 +1,4 @@
-import { doc, win } from '@utils/browser';
+import { doc, win } from '../../utils/browser';
 
 import { Keyboard, KeyboardResize } from '../native/keyboard';
 

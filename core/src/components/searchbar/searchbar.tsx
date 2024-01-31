@@ -1,8 +1,8 @@
 import type { ComponentInterface, EventEmitter } from '@stencil/core';
 import { Component, Element, Event, Host, Method, Prop, State, Watch, forceUpdate, h } from '@stencil/core';
-import { debounceEvent, raf, componentOnReady } from '@utils/helpers';
-import { isRTL } from '@utils/rtl';
-import { createColorClasses } from '@utils/theme';
+import { debounceEvent, raf, componentOnReady } from '../../utils/helpers';
+import { isRTL } from '../../utils/rtl';
+import { createColorClasses } from '../../utils/theme';
 import { arrowBackSharp, closeCircle, closeSharp, searchOutline, searchSharp } from 'ionicons/icons';
 
 import { config } from '../../global/config';

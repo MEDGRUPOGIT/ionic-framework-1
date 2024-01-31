@@ -1,7 +1,7 @@
 import { expect } from '@playwright/test';
 import type { Locator } from '@playwright/test';
-import type { E2EPage, E2EPageOptions, ScreenshotFn } from '@utils/test/playwright';
-import { configs, test } from '@utils/test/playwright';
+import type { E2EPage, E2EPageOptions, ScreenshotFn } from '../../../../utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 /**
  * This is testing text content of the

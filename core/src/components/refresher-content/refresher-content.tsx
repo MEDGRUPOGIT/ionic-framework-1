@@ -1,7 +1,7 @@
 import type { ComponentInterface } from '@stencil/core';
 import { Component, Element, Host, Prop, h } from '@stencil/core';
-import { ENABLE_HTML_CONTENT_DEFAULT } from '@utils/config';
-import { sanitizeDOMString } from '@utils/sanitization';
+import { ENABLE_HTML_CONTENT_DEFAULT } from '../../utils/config';
+import { sanitizeDOMString } from '../../utils/sanitization';
 import { arrowDown, caretBackSharp } from 'ionicons/icons';
 
 import { config } from '../../global/config';

@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { test, configs } from '@utils/test/playwright';
+import { test, configs } from '../../../../utils/test/playwright';
 
 const IGNORED_KEYS = ['Enter', 'Tab', 'Shift', 'Meta', 'Alt', 'Control'];
 

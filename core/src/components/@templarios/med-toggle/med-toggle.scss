@@ -1,0 +1,79 @@
+:host {
+  --background: #{color('neutral', '2')};
+  --color: #{color('neutral', '10')};
+  --padding: 24px;
+  --border-radius: 0;
+  --initial-max-height: 20px;
+}
+
+:host {
+  background: var(--background);
+  color: var(--color);
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+:host .med-toggle__content {
+  max-height: var(--initial-max-height);
+  overflow: hidden;
+  transition: all .3s;
+}
+
+:host .med-toggle__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+:host .med-toggle__icon {
+  align-self: center;
+  margin-top: 8px;
+  font-size: 24px;
+  stroke: var(--color);
+  transition: .3s transform ease;
+}
+
+// ////////////////////
+// state
+// ////////////////////
+
+:host(.med-toggle--collapsed) .med-toggle__icon {
+  transform: rotate(180deg);
+}
+
+// ////////////////////
+// icon-click
+// ////////////////////
+
+:host(.med-toggle--icon-click) {
+  cursor: unset;
+}
+
+:host(.med-toggle--icon-click) .med-toggle__bottom {
+  cursor: pointer;
+}
+
+// ////////////////////
+// dsColor
+// ////////////////////
+
+:host(.med-color) {
+  --color: #{curr-color('color', null, 'contrast')};
+  --background: #{curr-color('color', '1')};
+}
+
+:host(.med-color-neutral) {
+  --color: #{curr-color('neutral', null, 'contrast')};
+  --background: #{curr-color('neutral')};
+}
+
+:host(.med-color-feedback) {
+  --color: #{curr-color('feedback', null, 'contrast')};
+  --background: #{curr-color('feedback')};
+}

@@ -1,8 +1,8 @@
-import { getTimeGivenProgression } from '@utils/animation/cubic-bezier';
-import { isIonContent, findClosestIonContent, disableContentScrollY, resetContentScrollY } from '@utils/content';
-import { createGesture } from '@utils/gesture';
-import { clamp, getElementRoot } from '@utils/helpers';
-import { OVERLAY_GESTURE_PRIORITY } from '@utils/overlays';
+import { getTimeGivenProgression } from '../../../utils/animation/cubic-bezier';
+import { isIonContent, findClosestIonContent, disableContentScrollY, resetContentScrollY } from '../../../utils/content';
+import { createGesture } from '../../../utils/gesture';
+import { clamp, getElementRoot } from '../../../utils/helpers';
+import { OVERLAY_GESTURE_PRIORITY } from '../../../utils/overlays';
 
 import type { Animation } from '../../../interface';
 import type { GestureDetail } from '../../../utils/gesture';

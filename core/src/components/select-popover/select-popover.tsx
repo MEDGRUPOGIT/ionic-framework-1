@@ -1,7 +1,7 @@
 import type { ComponentInterface } from '@stencil/core';
 import { Element, Component, Host, Prop, h, forceUpdate } from '@stencil/core';
-import { safeCall } from '@utils/overlays';
-import { getClassMap } from '@utils/theme';
+import { safeCall } from '../../utils/overlays';
+import { getClassMap } from '../../utils/theme';
 
 import { getIonMode } from '../../global/ionic-global';
 import type { CheckboxCustomEvent } from '../checkbox/checkbox-interface';

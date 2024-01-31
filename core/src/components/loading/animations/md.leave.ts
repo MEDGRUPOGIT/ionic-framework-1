@@ -1,4 +1,4 @@
-import { createAnimation } from '@utils/animation/animation';
+import { createAnimation } from '../../../utils/animation/animation';
 
 import type { Animation } from '../../../interface';
 

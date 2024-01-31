@@ -1,10 +1,10 @@
 import type { ComponentInterface, EventEmitter } from '@stencil/core';
 import { Component, Element, Event, Host, Listen, Method, Prop, Watch, forceUpdate, h } from '@stencil/core';
-import { ENABLE_HTML_CONTENT_DEFAULT } from '@utils/config';
-import type { Gesture } from '@utils/gesture';
-import { createButtonActiveGesture } from '@utils/gesture/button-active';
-import { raf } from '@utils/helpers';
-import { createLockController } from '@utils/lock-controller';
+import { ENABLE_HTML_CONTENT_DEFAULT } from '../../utils/config';
+import type { Gesture } from '../../utils/gesture';
+import { createButtonActiveGesture } from '../../utils/gesture/button-active';
+import { raf } from '../../utils/helpers';
+import { createLockController } from '../../utils/lock-controller';
 import {
   createDelegateController,
   createTriggerController,
@@ -16,9 +16,9 @@ import {
   present,
   safeCall,
   setOverlayId,
-} from '@utils/overlays';
-import { sanitizeDOMString } from '@utils/sanitization';
-import { getClassMap } from '@utils/theme';
+} from '../../utils/overlays';
+import { sanitizeDOMString } from '../../utils/sanitization';
+import { getClassMap } from '../../utils/theme';
 
 import { config } from '../../global/config';
 import { getIonMode } from '../../global/ionic-global';

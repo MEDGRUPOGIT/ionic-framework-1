@@ -1,0 +1,60 @@
+:host {
+  --color: #{color('neutral', 10)};
+  --font-size-label: 10px;
+  --font-size-number: 24px;
+}
+
+:host(.med-chart-radial-content) {
+  text-align: center;
+
+  .med-chart-radial-content__label {
+    font-size: var(--font-size-label);
+    color: var(--color);
+    font-weight: 700;
+    display: flex;
+    padding-bottom: 2px;
+    justify-content: center;
+    line-height: 100%;
+  }
+
+  .med-chart-radial-content__number {
+    font-weight: 700;
+    font-size: var(--font-size-number);
+    color: var(--color);
+    line-height: 100%;
+
+    &--small {
+      font-size: 16px;
+    }
+  }
+}
+
+// ////////////////////
+// color
+// ////////////////////
+
+:host(.med-color) {
+  --color: #{curr-color('color', '3')};
+}
+
+// ////////////////////
+// neutral
+// ////////////////////
+
+:host(.med-color-neutral) {
+  color: #{curr-color('neutral')};
+}
+
+// //////////
+// feedback
+// //////////
+
+:host(.med-color-feedback) {
+  color: #{curr-color('feedback')};
+}
+
+
+:host(.med-chart-radial-content--lg) {
+  --font-size-label: 12px;
+  --font-size-number: 32px;
+}

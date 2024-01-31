@@ -1,7 +1,7 @@
 import { expect } from '@playwright/test';
 import type { Locator } from '@playwright/test';
-import type { E2EPage } from '@utils/test/playwright';
-import { configs, test } from '@utils/test/playwright';
+import type { E2EPage } from '../../../../utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 configs({ directions: ['ltr'] }).forEach(({ config, screenshot, title }) => {
   test.describe(title('alert: basic'), () => {

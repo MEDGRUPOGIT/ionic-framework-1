@@ -1,7 +1,7 @@
 import type { Locator } from '@playwright/test';
 import { expect } from '@playwright/test';
-import type { E2EPage, ScreenshotFn } from '@utils/test/playwright';
-import { configs, test } from '@utils/test/playwright';
+import type { E2EPage, ScreenshotFn } from '../../../../utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 configs().forEach(({ title, config, screenshot }) => {
   test.describe(title('menu: rendering'), () => {

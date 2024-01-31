@@ -1,0 +1,18 @@
+@import "../../../../themes/ionic.globals";
+@import "../tp-accordion/tp-accordion.vars";
+
+// Accordion Group
+// --------------------------------------------------
+
+:host {
+  display: block;
+}
+
+:host(.accordion-group-expand-inset) {
+  @include margin(
+    $accordion-inset-margin,
+    $accordion-inset-margin,
+    $accordion-inset-margin,
+    $accordion-inset-margin
+  );
+}

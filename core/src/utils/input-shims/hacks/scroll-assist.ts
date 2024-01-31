@@ -1,5 +1,5 @@
 import type { KeyboardResizeOptions } from '@capacitor/keyboard';
-import { win } from '@utils/browser';
+import { win } from '../../../utils/browser';
 
 import { getScrollElement, scrollByPoint } from '../../content';
 import { raf } from '../../helpers';

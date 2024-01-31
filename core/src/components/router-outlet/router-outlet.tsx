@@ -1,10 +1,10 @@
 import type { ComponentInterface, EventEmitter } from '@stencil/core';
 import { Component, Element, Event, Method, Prop, Watch, h } from '@stencil/core';
-import { getTimeGivenProgression } from '@utils/animation/cubic-bezier';
-import { attachComponent, detachComponent } from '@utils/framework-delegate';
-import { shallowEqualStringMap, hasLazyBuild } from '@utils/helpers';
-import { createLockController } from '@utils/lock-controller';
-import { transition } from '@utils/transition';
+import { getTimeGivenProgression } from '../../utils/animation/cubic-bezier';
+import { attachComponent, detachComponent } from '../../utils/framework-delegate';
+import { shallowEqualStringMap, hasLazyBuild } from '../../utils/helpers';
+import { createLockController } from '../../utils/lock-controller';
+import { transition } from '../../utils/transition';
 
 import { config } from '../../global/config';
 import { getIonMode } from '../../global/ionic-global';

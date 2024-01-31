@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../utils/test/playwright';
 
 // NOTE: these tests cannot be re-written as spec tests because the `getAccordions` method in accordion-group.tsx uses a `:scope` selector
 configs({ modes: ['md'], directions: ['ltr'] }).forEach(({ config, title }) => {

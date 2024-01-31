@@ -1,5 +1,5 @@
-import { createAnimation } from '@utils/animation/animation';
-import { getElementRoot } from '@utils/helpers';
+import { createAnimation } from '../../../utils/animation/animation';
+import { getElementRoot } from '../../../utils/helpers';
 
 import type { Animation } from '../../../interface';
 

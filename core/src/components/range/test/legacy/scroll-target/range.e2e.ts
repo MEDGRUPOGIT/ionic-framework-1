@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { configs, test } from '@utils/test/playwright';
+import { configs, test } from '../../../../../utils/test/playwright';
 
 // TODO FW-2873
 configs({ modes: ['ios'], directions: ['ltr'] }).forEach(({ title, config }) => {

@@ -1,5 +1,5 @@
 import type { Page, TestInfo } from '@playwright/test';
-import type { E2EPageOptions, Mode, Direction, Theme } from '@utils/test/playwright';
+import type { E2EPageOptions, Mode, Direction, Theme } from '../../../../../utils/test/playwright';
 
 /**
  * Overwrites the default Playwright page.setContent method.

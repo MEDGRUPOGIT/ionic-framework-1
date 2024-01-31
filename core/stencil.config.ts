@@ -228,7 +228,11 @@ export const config: Config = {
     },
     {
       type: 'dist',
-      esmLoaderPath: '../loader'
+      esmLoaderPath: '../loader',
+      // templarios
+      copy: [
+        { src: 'svg', dest: 'svg' }
+      ]
     },
     {
       type: 'dist-custom-elements',
@@ -259,8 +263,8 @@ export const config: Config = {
   buildEs5: 'prod',
   testing: {
     moduleNameMapper: {
-      "@utils/test": ["<rootDir>/src/utils/test/utils"],
-      "@utils/logging": ["<rootDir>/src/utils/logging"],
+      "../../utils/test": ["<rootDir>/src/utils/test/utils"],
+      "../../utils/logging": ["<rootDir>/src/utils/logging"],
     },
     setupFilesAfterEnv: ['./setupJest.js']
   },
