@@ -59,8 +59,9 @@ export class MedPlusminus {
       this.max === undefined ||
       this.value === undefined ||
       !this.automaticDisabled
-    )
+    ) {
       return;
+    }
 
     if (newValue === this.min && newValue === this.max) {
       return (this.disabled = 'both');
@@ -75,6 +76,8 @@ export class MedPlusminus {
     }
 
     this.disabled = undefined;
+
+    return;
   }
 
   private onClick = (status: PlusMinusStatus) => {
@@ -92,6 +95,8 @@ export class MedPlusminus {
 
     const increment = status === PlusMinusStatus.MINUS ? -1 : 1;
     this.medChangeAlt.emit(this.value + increment);
+
+    return;
   };
 
   componentDidLoad() {

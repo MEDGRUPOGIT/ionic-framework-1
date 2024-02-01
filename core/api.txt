@@ -548,7 +548,7 @@ ion-infinite-scroll-content,prop,loadingText,IonicSafeString | string | undefine
 ion-input,scoped
 ion-input,prop,accept,string | undefined,undefined,false,false
 ion-input,prop,autocapitalize,string,'off',false,false
-ion-input,prop,autocomplete,"name" | "email" | "tel" | "url" | "on" | "off" | "additional-name" | "address-level1" | "address-level2" | "address-level3" | "address-level4" | "address-line1" | "address-line2" | "address-line3" | "bday-day" | "bday-month" | "bday-year" | "cc-csc" | "cc-exp" | "cc-exp-month" | "cc-exp-year" | "cc-family-name" | "cc-given-name" | "cc-name" | "cc-number" | "cc-type" | "country" | "country-name" | "current-password" | "family-name" | "given-name" | "honorific-prefix" | "honorific-suffix" | "new-password" | "one-time-code" | "organization" | "postal-code" | "street-address" | "transaction-amount" | "transaction-currency" | "username" | "tel-area-code" | "tel-country-code" | "tel-extension" | "tel-local" | "tel-national" | "nickname" | "organization-title" | "cc-additional-name" | "language" | "bday" | "sex" | "impp" | "photo",'off',false,false
+ion-input,prop,autocomplete,"name" | "email" | "tel" | "url" | "off" | "on" | "additional-name" | "address-level1" | "address-level2" | "address-level3" | "address-level4" | "address-line1" | "address-line2" | "address-line3" | "bday-day" | "bday-month" | "bday-year" | "cc-csc" | "cc-exp" | "cc-exp-month" | "cc-exp-year" | "cc-family-name" | "cc-given-name" | "cc-name" | "cc-number" | "cc-type" | "country" | "country-name" | "current-password" | "family-name" | "given-name" | "honorific-prefix" | "honorific-suffix" | "new-password" | "one-time-code" | "organization" | "postal-code" | "street-address" | "transaction-amount" | "transaction-currency" | "username" | "tel-area-code" | "tel-country-code" | "tel-extension" | "tel-local" | "tel-national" | "nickname" | "organization-title" | "cc-additional-name" | "language" | "bday" | "sex" | "impp" | "photo",'off',false,false
 ion-input,prop,autocorrect,"off" | "on",'off',false,false
 ion-input,prop,autofocus,boolean,false,false,false
 ion-input,prop,clearInput,boolean,false,false,false
@@ -1157,7 +1157,7 @@ ion-row,shadow
 
 ion-searchbar,scoped
 ion-searchbar,prop,animated,boolean,false,false,false
-ion-searchbar,prop,autocomplete,"name" | "email" | "tel" | "url" | "on" | "off" | "additional-name" | "address-level1" | "address-level2" | "address-level3" | "address-level4" | "address-line1" | "address-line2" | "address-line3" | "bday-day" | "bday-month" | "bday-year" | "cc-csc" | "cc-exp" | "cc-exp-month" | "cc-exp-year" | "cc-family-name" | "cc-given-name" | "cc-name" | "cc-number" | "cc-type" | "country" | "country-name" | "current-password" | "family-name" | "given-name" | "honorific-prefix" | "honorific-suffix" | "new-password" | "one-time-code" | "organization" | "postal-code" | "street-address" | "transaction-amount" | "transaction-currency" | "username" | "tel-area-code" | "tel-country-code" | "tel-extension" | "tel-local" | "tel-national" | "nickname" | "organization-title" | "cc-additional-name" | "language" | "bday" | "sex" | "impp" | "photo",'off',false,false
+ion-searchbar,prop,autocomplete,"name" | "email" | "tel" | "url" | "off" | "on" | "additional-name" | "address-level1" | "address-level2" | "address-level3" | "address-level4" | "address-line1" | "address-line2" | "address-line3" | "bday-day" | "bday-month" | "bday-year" | "cc-csc" | "cc-exp" | "cc-exp-month" | "cc-exp-year" | "cc-family-name" | "cc-given-name" | "cc-name" | "cc-number" | "cc-type" | "country" | "country-name" | "current-password" | "family-name" | "given-name" | "honorific-prefix" | "honorific-suffix" | "new-password" | "one-time-code" | "organization" | "postal-code" | "street-address" | "transaction-amount" | "transaction-currency" | "username" | "tel-area-code" | "tel-country-code" | "tel-extension" | "tel-local" | "tel-national" | "nickname" | "organization-title" | "cc-additional-name" | "language" | "bday" | "sex" | "impp" | "photo",'off',false,false
 ion-searchbar,prop,autocorrect,"off" | "on",'off',false,false
 ion-searchbar,prop,cancelButtonIcon,string,config.get('backButtonIcon', arrowBackSharp) as string,false,false
 ion-searchbar,prop,cancelButtonText,string,'Cancel',false,false
@@ -1536,9 +1536,392 @@ ion-toolbar,css-prop,--padding-end
 ion-toolbar,css-prop,--padding-start
 ion-toolbar,css-prop,--padding-top
 
+med-accordion-item,shadow
+med-accordion-item,prop,background,boolean,false,false,true
+med-accordion-item,prop,canCollapse,boolean,true,false,true
+med-accordion-item,prop,dsColor,string | undefined,undefined,false,true
+med-accordion-item,prop,isOpened,boolean,false,false,true
+med-accordion-item,prop,noBorder,boolean,false,false,true
+med-accordion-item,prop,slotsToggle,"end"[] | "middle" | "start",[],false,true
+med-accordion-item,event,medClick,any,true
+med-accordion-item,event,opened,any,true
+med-accordion-item,event,toggle,any,true
+
+med-accordion-list,shadow
+med-accordion-list,prop,margin,"lg" | "md" | "sm" | "xs" | undefined,undefined,false,false
+med-accordion-list,prop,noAnimation,boolean,false,false,true
+med-accordion-list,prop,noBorder,boolean,false,false,true
+med-accordion-list,prop,singleOpen,boolean,true,false,true
+
+med-add-card,scoped
+med-add-card,prop,iconName,string | undefined,undefined,false,true
+med-add-card,prop,titulo,string | undefined,undefined,false,true
+
 med-agrupador,shadow
 med-agrupador,prop,collapsed,boolean,false,false,true
 med-agrupador,prop,dsColor,string | undefined,undefined,false,true
 med-agrupador,prop,labelAlternativo,string,'Ocultar a lista',false,true
 med-agrupador,prop,labelDefault,string,'Expandir a lista',false,true
 med-agrupador,method,toggle,toggle(event?: Event) => Promise<void>
+
+med-alert-fixed,shadow
+med-alert-fixed,prop,dsColor,string | undefined,undefined,false,true
+med-alert-fixed,prop,dsName,"atualizar" | "offline" | undefined,undefined,false,true
+med-alert-fixed,prop,labelAtualizar,string,'Versão desatualizada',false,true
+med-alert-fixed,prop,labelOffline,string,'Você está offline. Conecte-se para acessar o conteúdo.',false,true
+
+med-alternativas,shadow
+med-alternativas,prop,alternativaSelecionada,string,undefined,true,true
+med-alternativas,prop,alternativas,any,[],false,false
+med-alternativas,prop,dsColor,string | undefined,undefined,false,false
+med-alternativas,prop,dsSkinConfig,any,undefined,true,false
+med-alternativas,prop,keyAlternativa,string,'Alternativa',false,false
+med-alternativas,prop,keyEnunciado,string,'Enunciado',false,false
+med-alternativas,prop,keyImagem,string,'Imagem',false,false
+med-alternativas,prop,keyPorcentagem,string,'Porcentagem',false,false
+med-alternativas,prop,keyRiscada,string,'Riscada',false,false
+med-alternativas,prop,mostraResposta,boolean,undefined,true,true
+med-alternativas,prop,permiteDesmarcar,boolean,false,false,false
+med-alternativas,prop,permiteRiscar,boolean,true,false,false
+med-alternativas,prop,respostaCorreta,string,undefined,true,true
+
+med-alternativas-a,shadow
+med-alternativas-a,prop,alternativaSelecionada,string,undefined,true,true
+med-alternativas-a,prop,alternativas,any,[],false,false
+med-alternativas-a,prop,dsColor,string | undefined,undefined,false,false
+med-alternativas-a,prop,dsSkin,any,undefined,false,false
+med-alternativas-a,prop,dsSkinConfig,any,undefined,false,false
+med-alternativas-a,prop,keyAlternativa,string,'Alternativa',false,false
+med-alternativas-a,prop,keyEnunciado,string,'Enunciado',false,false
+med-alternativas-a,prop,keyImagem,string,'Imagem',false,false
+med-alternativas-a,prop,keyPorcentagem,string,'Porcentagem',false,false
+med-alternativas-a,prop,keyRiscada,string,'Riscada',false,false
+med-alternativas-a,prop,mostraResposta,boolean,undefined,true,true
+med-alternativas-a,prop,permiteDesmarcar,boolean,false,false,false
+med-alternativas-a,prop,permiteRiscar,boolean,true,false,false
+med-alternativas-a,prop,respostaCorreta,string,undefined,true,true
+med-alternativas-a,event,medChange,MedAlternativaInterface,true
+med-alternativas-a,event,medGalleryRequest,MedAlternativaInterface,true
+med-alternativas-a,event,medRiscada,MedAlternativaInterface,true
+
+med-alternativas-b,shadow
+med-alternativas-b,prop,alternativaSelecionada,string,undefined,true,true
+med-alternativas-b,prop,alternativas,any,[],false,false
+med-alternativas-b,prop,dsColor,string | undefined,undefined,false,false
+med-alternativas-b,prop,dsSkin,any,undefined,false,false
+med-alternativas-b,prop,dsSkinConfig,any,undefined,false,false
+med-alternativas-b,prop,keyAlternativa,string,'Alternativa',false,false
+med-alternativas-b,prop,keyEnunciado,string,'Enunciado',false,false
+med-alternativas-b,prop,keyImagem,string,'Imagem',false,false
+med-alternativas-b,prop,keyPorcentagem,string,'Porcentagem',false,false
+med-alternativas-b,prop,keyRiscada,string,'Riscada',false,false
+med-alternativas-b,prop,mostraResposta,boolean,undefined,true,true
+med-alternativas-b,prop,permiteDesmarcar,boolean,false,false,false
+med-alternativas-b,prop,permiteRiscar,boolean,true,false,false
+med-alternativas-b,prop,respostaCorreta,string,undefined,true,true
+med-alternativas-b,event,medChange,MedAlternativaInterface,true
+med-alternativas-b,event,medGalleryRequest,MedAlternativaInterface,true
+med-alternativas-b,event,medRiscada,MedAlternativaInterface,true
+
+med-autocomplete,scoped
+med-autocomplete,prop,debounceTime,number,0,false,true
+med-autocomplete,prop,dropdown,boolean,undefined,true,true
+med-autocomplete,method,toggleDropdown,toggleDropdown() => Promise<void>
+
+med-base,scoped
+med-base,prop,dsColor,string | undefined,undefined,false,true
+med-base,prop,gap,string | undefined,undefined,false,true
+med-base,prop,radius,string | undefined,undefined,false,true
+med-base,prop,spacingH,string | undefined,undefined,false,true
+med-base,prop,spacingV,string | undefined,undefined,false,true
+
+med-calendar,scoped
+med-calendar,prop,ano,string | undefined,undefined,false,true
+med-calendar,prop,choice,string,'Semana',false,true
+med-calendar,prop,container,string | undefined,undefined,false,true
+med-calendar,prop,disable,boolean,false,false,true
+med-calendar,prop,dsColor,string | undefined,undefined,false,true
+med-calendar,prop,mes,string | undefined,undefined,false,true
+med-calendar,event,medClick,any,true
+med-calendar,event,medSwipe,any,true
+
+med-calendar-day,shadow
+med-calendar-day,prop,active,boolean,false,false,true
+med-calendar-day,prop,dsColor,string | undefined,undefined,false,true
+med-calendar-day,prop,fill,"outline" | undefined,undefined,false,true
+
+med-caption,shadow
+med-caption,prop,dsColor,string | undefined,undefined,false,true
+med-caption,prop,dsSize,"lg" | "md" | "sm" | "xl" | "xs" | "xxs" | undefined,undefined,false,true
+
+med-cartao-resposta-item,shadow
+med-cartao-resposta-item,prop,anulada,boolean,false,false,true
+med-cartao-resposta-item,prop,ativa,boolean,false,false,true
+med-cartao-resposta-item,prop,dsColor,string | undefined,undefined,false,true
+med-cartao-resposta-item,prop,impressa,boolean,false,false,true
+
+med-cartao-resposta-lista,shadow
+med-cartao-resposta-lista,prop,isFlex,boolean,false,false,true
+
+med-chart-bar,shadow
+med-chart-bar,prop,dsColor,string | undefined,undefined,false,true
+med-chart-bar,prop,height,number,50,false,true
+med-chart-bar,prop,noLabel,boolean,false,false,true
+med-chart-bar,prop,value,number,0,false,true
+med-chart-bar,prop,width,number,32,false,true
+
+med-chart-bar-horizontal,shadow
+med-chart-bar-horizontal,prop,dsColor,string | undefined,undefined,false,true
+med-chart-bar-horizontal,prop,dsSize,"md" | undefined,undefined,false,false
+med-chart-bar-horizontal,prop,hideValue,boolean,false,false,true
+med-chart-bar-horizontal,prop,label,boolean,true,false,true
+med-chart-bar-horizontal,prop,labelContent,string | undefined,undefined,false,true
+med-chart-bar-horizontal,prop,value,number,0,false,true
+
+med-chart-categoria,scoped
+med-chart-categoria,prop,dsColor,string | undefined,undefined,false,true
+med-chart-categoria,prop,meta,string | undefined,undefined,false,true
+med-chart-categoria,prop,realizado,string | undefined,undefined,false,true
+med-chart-categoria,prop,titulo,string | undefined,undefined,false,true
+med-chart-categoria,prop,value,number,0,false,true
+
+med-chart-radial,scoped
+med-chart-radial,prop,dsColor,string | undefined,undefined,false,true
+med-chart-radial,prop,dsName,"secondary" | undefined,undefined,false,true
+med-chart-radial,prop,dsSize,"lg" | "md" | "sm" | "xs" | undefined,undefined,false,false
+med-chart-radial,prop,subtitulo,string | undefined,undefined,false,false
+med-chart-radial,prop,titulo,string | undefined,undefined,false,false
+med-chart-radial,prop,valores,MedChartRadiaItem[],[],false,false
+
+med-chart-radial-content,shadow
+med-chart-radial-content,prop,dsColor,string | undefined,undefined,false,true
+med-chart-radial-content,prop,dsSize,"lg" | undefined,undefined,false,false
+med-chart-radial-content,prop,total,number,0,false,true
+
+med-chart-radial-label,scoped
+med-chart-radial-label,prop,dsColor,string | undefined,undefined,false,true
+med-chart-radial-label,prop,dsSize,"lg" | undefined,undefined,false,false
+med-chart-radial-label,prop,valores,MedChartRadiaItem[],[],false,false
+
+med-check-card,scoped
+med-check-card,prop,alert,boolean,false,false,true
+med-check-card,prop,categoria,string | undefined,undefined,false,true
+med-check-card,prop,dataFinal,string | undefined,undefined,false,true
+med-check-card,prop,dataInicial,string | undefined,undefined,false,true
+med-check-card,prop,dsColor,string | undefined,undefined,false,true
+med-check-card,prop,finalizada,string | undefined,undefined,false,true
+med-check-card,prop,horaFinal,string | undefined,undefined,false,true
+med-check-card,prop,horaInicial,string | undefined,undefined,false,true
+med-check-card,prop,iconName,string | undefined,undefined,false,true
+med-check-card,prop,titulo,string | undefined,undefined,false,true
+med-check-card,event,medClick,any,true
+med-check-card,event,medTooltipClose,any,true
+
+med-context-menu,scoped
+med-context-menu,prop,collapsed,boolean,true,false,true
+med-context-menu,method,toggle,toggle(event?: Event) => Promise<void>
+
+med-download-button,shadow
+med-download-button,prop,disabled,boolean,false,false,true
+med-download-button,prop,downloaded,boolean,false,false,true
+med-download-button,prop,downloading,boolean,false,false,true
+med-download-button,prop,dsColor,string | undefined,undefined,false,true
+med-download-button,prop,dsSize,"lg" | undefined,undefined,false,true
+med-download-button,prop,identification,number | string | undefined,undefined,false,true
+med-download-button,prop,index,number | undefined,undefined,false,true
+med-download-button,prop,value,number,0,false,true
+med-download-button,event,medDownloadRequested,any,true
+
+med-dropdown,shadow
+med-dropdown,prop,dsName,"secondary" | undefined,undefined,false,true
+
+med-enunciado,shadow
+med-enunciado,prop,content,string | undefined,undefined,false,true
+med-enunciado,prop,dsName,"skin" | undefined,undefined,false,true
+med-enunciado,prop,imagens,string | string[],undefined,true,true
+med-enunciado,event,medGalleryRequest,string,true
+
+med-enunciado-discursiva,shadow
+med-enunciado-discursiva,prop,imagens,string | string[],undefined,true,true
+med-enunciado-discursiva,event,medGalleryRequest,string,true
+
+med-font-zoom,scoped
+med-font-zoom,prop,emitter,{ emit: (value: MedFontSize) => void; },undefined,true,false
+med-font-zoom,prop,value,MedFontSize.MD | MedFontSize.SM | MedFontSize.XS | MedFontSize.XXS | MedFontSize.XXXS,MedFontSize.XS,false,false
+
+med-header,shadow
+med-header,event,medResize,headerResizeEventDetail,true
+
+med-image-zoom,scoped
+med-image-zoom,prop,imagens,any,[],false,true
+med-image-zoom,prop,initialSlide,number | undefined,0,false,true
+med-image-zoom,prop,marcaAguaInferior,string | undefined,undefined,false,true
+med-image-zoom,prop,marcaAguaSuperior,string | undefined,undefined,false,true
+med-image-zoom,prop,titulo,string | undefined,undefined,false,true
+
+med-item,shadow
+med-item,prop,button,boolean,false,false,false
+med-item,prop,contain,boolean,false,false,false
+med-item,prop,detail,boolean | undefined,undefined,false,false
+med-item,prop,detailIcon,string,'chevron-forward',false,false
+med-item,prop,disabled,boolean,false,false,false
+med-item,prop,download,string | undefined,undefined,false,false
+med-item,prop,dsColor,string | undefined,undefined,false,false
+med-item,prop,href,string | undefined,undefined,false,false
+med-item,prop,lines,"full" | "inset" | "none" | undefined,undefined,false,false
+med-item,prop,mode,"ios" | "md",undefined,false,false
+med-item,prop,noPadding,boolean,false,false,false
+med-item,prop,rel,string | undefined,undefined,false,false
+med-item,prop,routerAnimation,((baseEl: any, opts?: any) => Animation) | undefined,undefined,false,false
+med-item,prop,routerDirection,"back" | "forward" | "root",'forward',false,false
+med-item,prop,target,string | undefined,undefined,false,false
+med-item,prop,type,"button" | "reset" | "submit",'button',false,false
+med-item,part,detail-icon
+med-item,part,native
+
+med-list,shadow
+med-list,prop,dsColor,string | undefined,undefined,false,true
+med-list,prop,margin,"lg" | "md" | "sm" | "xs" | undefined,undefined,false,false
+
+med-list-item,shadow
+med-list-item,prop,border,boolean,false,false,true
+med-list-item,prop,disabled,boolean,false,false,true
+med-list-item,prop,dsColor,string | undefined,undefined,false,true
+med-list-item,prop,dsSize,"md" | "sm" | "xs" | undefined,undefined,false,false
+med-list-item,prop,label,string | undefined,undefined,false,false
+med-list-item,prop,selected,boolean,false,false,true
+med-list-item,prop,titulo,string | undefined,undefined,false,false
+
+med-list-item-accordion,scoped
+med-list-item-accordion,prop,border,boolean,false,false,true
+med-list-item-accordion,prop,collapsed,boolean,true,false,true
+med-list-item-accordion,prop,disabled,boolean,false,false,true
+med-list-item-accordion,prop,dsColor,string | undefined,undefined,false,true
+med-list-item-accordion,prop,dsSize,"md" | "sm" | "xs" | undefined,undefined,false,false
+med-list-item-accordion,prop,label,string | undefined,undefined,false,false
+med-list-item-accordion,prop,margin,"lg" | "md" | "sm" | "xs" | undefined,undefined,false,false
+med-list-item-accordion,prop,selected,boolean,false,false,true
+med-list-item-accordion,prop,titulo,string | undefined,undefined,false,false
+med-list-item-accordion,method,toggle,toggle(event?: Event) => Promise<void>
+
+med-navbar,shadow
+med-navbar,prop,dsColor,string | undefined,undefined,false,true
+med-navbar,prop,dsName,"secondary" | "transparent" | undefined,undefined,false,false
+
+med-offline,scoped
+med-offline,event,medClick,void,true
+
+med-option,shadow
+med-option,prop,dsColor,string | undefined,undefined,false,true
+
+med-plusminus,scoped
+med-plusminus,prop,automaticDisabled,boolean,false,false,true
+med-plusminus,prop,disabled,"both" | "minus" | "plus" | undefined,undefined,false,true
+med-plusminus,prop,dsColor,string | undefined,undefined,false,true
+med-plusminus,prop,dsSize,"xl" | undefined,undefined,false,true
+med-plusminus,prop,max,number | undefined,undefined,false,true
+med-plusminus,prop,min,number | undefined,undefined,false,true
+med-plusminus,prop,useSlot,boolean,true,false,true
+med-plusminus,prop,value,number | undefined,undefined,false,true
+med-plusminus,event,medChange,PlusMinusStatus.MINUS | PlusMinusStatus.PLUS,true
+med-plusminus,event,medChangeAlt,number,true
+
+med-rate-bar,shadow
+med-rate-bar,prop,dsColor,string | undefined,undefined,false,true
+
+med-rate-like,shadow
+med-rate-like,prop,status,RateStatus.DISLIKE | RateStatus.LIKE | undefined,undefined,false,true
+med-rate-like,event,medChange,RateStatus.DISLIKE | RateStatus.LIKE,true
+
+med-tiles,shadow
+med-tiles,prop,badge,string | undefined,undefined,false,false
+med-tiles,prop,dsColor,string | undefined,undefined,false,true
+med-tiles,prop,label,string | undefined,undefined,false,false
+med-tiles,prop,selected,boolean,false,false,true
+med-tiles,prop,solid,boolean,false,false,false
+med-tiles,prop,titulo,string | undefined,undefined,false,false
+
+med-toggle,scoped
+med-toggle,prop,collapsed,boolean,true,false,true
+med-toggle,prop,dsColor,string | undefined,undefined,false,true
+med-toggle,prop,iconClick,boolean,false,false,true
+
+med-toolbar,shadow
+med-toolbar,prop,dsColor,string | undefined,undefined,false,true
+
+med-tooltip,scoped
+med-tooltip,prop,btnLeft,string | undefined,undefined,false,false
+med-tooltip,prop,btnRight,string | undefined,undefined,false,false
+med-tooltip,prop,collapsed,boolean,true,false,true
+med-tooltip,prop,content,string | undefined,undefined,false,true
+med-tooltip,prop,dsColor,string | undefined,undefined,false,true
+med-tooltip,prop,enableHover,boolean | undefined,undefined,false,false
+med-tooltip,prop,placement,"bottom" | "left" | "right" | "top" | undefined,undefined,false,true
+med-tooltip,prop,position,"center" | "end" | "start" | undefined,undefined,false,true
+med-tooltip,prop,titulo,string | undefined,undefined,false,true
+med-tooltip,method,toggle,toggle(event?: any) => Promise<void>
+med-tooltip,method,toggleOnHover,toggleOnHover(event?: any) => Promise<void>
+med-tooltip,event,btnLeftClick,void,true
+med-tooltip,event,btnRightClick,void,true
+
+med-type,scoped
+med-type,prop,dsColor,string | undefined,undefined,false,true
+med-type,prop,tag,string | undefined,'span',false,true
+med-type,prop,token,string | undefined,undefined,false,true
+
+med-video-thumbnail,scoped
+med-video-thumbnail,prop,dsColor,string | undefined,undefined,false,true
+med-video-thumbnail,prop,url,string | undefined,undefined,false,true
+med-video-thumbnail,prop,value,number,0,false,true
+
+tp-accordion,shadow
+tp-accordion,prop,disabled,boolean,false,false,false
+tp-accordion,prop,mode,"ios" | "md",undefined,false,false
+tp-accordion,prop,readonly,boolean,false,false,false
+tp-accordion,prop,toggleIcon,string,chevronDown,false,false
+tp-accordion,prop,toggleIconSlot,"end" | "start","end",false,false
+tp-accordion,prop,value,string,`ion-accordion-${accordionIds++}`,false,false
+tp-accordion,part,content
+tp-accordion,part,expanded
+tp-accordion,part,header
+
+tp-accordion-group,shadow
+tp-accordion-group,prop,animated,boolean,true,false,false
+tp-accordion-group,prop,disabled,boolean,false,false,false
+tp-accordion-group,prop,expand,"compact" | "inset","compact",false,false
+tp-accordion-group,prop,mode,"ios" | "md",undefined,false,false
+tp-accordion-group,prop,multiple,boolean | undefined,undefined,false,false
+tp-accordion-group,prop,readonly,boolean,false,false,false
+tp-accordion-group,prop,value,null | string | string[] | undefined,undefined,false,false
+tp-accordion-group,event,ionChange,TpAccordionGroupChangeEventDetail<any>,true
+
+tp-chart-bar,scoped
+tp-chart-bar,prop,bar,TpChartBarItem,{
+    color: "med-color-brand-4",
+    value: 0,
+  },false,false
+tp-chart-bar,prop,deactivated,boolean,false,false,true
+tp-chart-bar,prop,dsColor,string | undefined,undefined,false,true
+tp-chart-bar,prop,dsName,"secondary" | undefined,undefined,false,true
+tp-chart-bar,prop,hasMarker,boolean,false,false,true
+tp-chart-bar,prop,height,number,200,false,true
+tp-chart-bar,prop,label,string | undefined,undefined,false,true
+tp-chart-bar,prop,labelSize,number,10,false,true
+tp-chart-bar,prop,marker,TpChartBarItem,{
+    color: "med-color-fb-caution",
+    value: 0,
+  },false,false
+
+tp-input-container,scoped
+tp-input-container,prop,disabled,boolean,false,false,true
+tp-input-container,prop,dsColor,string | undefined,undefined,false,true
+tp-input-container,prop,dsName,"secondary" | undefined,undefined,false,true
+tp-input-container,prop,feedback,boolean,false,false,true
+tp-input-container,prop,hasButton,"both" | "end" | "start" | undefined,undefined,false,true
+tp-input-container,prop,hasIcon,"both" | "end" | "start" | undefined,undefined,false,true
+tp-input-container,prop,inverted,boolean,false,false,true
+
+tp-loader,scoped
+tp-loader,prop,dsColor,string | undefined,undefined,false,true
+tp-loader,prop,dsName,"secondary" | undefined,undefined,false,true
+tp-loader,prop,fixed,boolean,false,false,true

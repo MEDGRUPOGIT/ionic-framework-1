@@ -1,10 +1,8 @@
 import { html } from 'lit-html';
-import { withDesign } from 'storybook-addon-designs';
-import { MedColors } from '../../../../../../@templarios/templarios';
+import { MedColors } from '../../../../@templarios/templarios';
 
 export default {
-  title: 'Components/Alternativas',
-  decorators: [withDesign],
+  title: 'Components/Alternativas'
 };
 
 const TemplateDefault = ({ alternativas, dsColor}) => {

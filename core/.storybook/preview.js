@@ -36,6 +36,22 @@ const preview = {
         date: /Date$/i,
       },
     },
+    themes: {
+      target: 'root',
+      default: 'MedSoft',
+      list: [
+        {
+          name: 'MedSoft',
+          class: ['theme-medsoft', 'scheme-dark'],
+          color: '#14A2B8',
+        },
+        {
+          name: 'MedSoft Light',
+          class: ['theme-medsoft', 'scheme-light'],
+          color: '#3D848F',
+        },
+      ]
+    },
   },
 };
 

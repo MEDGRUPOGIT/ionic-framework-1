@@ -6,7 +6,7 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { AccordionGroupChangeEventDetail } from "./components/accordion-group/accordion-group-interface";
-import { AnimationBuilder, AutocompleteTypes, Color, ComponentProps, ComponentRef, FrameworkDelegate, StyleEventDetail, TextFieldTypes } from "./interface";
+import { AnimationBuilder, AutocompleteTypes, Color, ComponentProps, ComponentRef, FrameworkDelegate, RouterDirection as RouterDirection1, StyleEventDetail, TextFieldTypes } from "./interface";
 import { ActionSheetButton } from "./components/action-sheet/action-sheet-interface";
 import { OverlayEventDetail } from "./utils/overlays-interface";
 import { IonicSafeString } from "./utils/sanitization";
@@ -42,8 +42,18 @@ import { TextareaChangeEventDetail, TextareaInputEventDetail } from "./component
 import { ToastButton, ToastDismissOptions, ToastLayout, ToastPosition, ToastPresentOptions, ToastSwipeGestureDirection } from "./components/toast/toast-interface";
 import { ToggleChangeEventDetail } from "./components/toggle/toggle-interface";
 import { MedColor } from "@templarios/types/color.type";
+import { MedAlternativaInterface } from "@templarios/interfaces/alternativas.interface";
+import { MedChartRadiaItem } from "@templarios/interfaces/chart-radial.interface";
+import { MedFontSize } from "@templarios/templarios";
+import { headerResizeEventDetail } from "@templarios/interfaces/header.interface";
+import { MedImageZoomItemInterface } from "@templarios/interfaces/image-zoom.interface";
+import { PlusMinusStatus } from "@templarios/enums/plusminus.enum";
+import { RateStatus } from "@templarios/enums/rate-like.enum";
+import { MedTypeTag, MedTypeToken } from "@templarios/types/type.type";
+import { TpAccordionGroupChangeEventDetail } from "./components/@templarios/tp-accordion-group/tp-accordion-group-interface";
+import { TpChartBarItem } from "@templarios/interfaces/chart-bar.interface";
 export { AccordionGroupChangeEventDetail } from "./components/accordion-group/accordion-group-interface";
-export { AnimationBuilder, AutocompleteTypes, Color, ComponentProps, ComponentRef, FrameworkDelegate, StyleEventDetail, TextFieldTypes } from "./interface";
+export { AnimationBuilder, AutocompleteTypes, Color, ComponentProps, ComponentRef, FrameworkDelegate, RouterDirection as RouterDirection1, StyleEventDetail, TextFieldTypes } from "./interface";
 export { ActionSheetButton } from "./components/action-sheet/action-sheet-interface";
 export { OverlayEventDetail } from "./utils/overlays-interface";
 export { IonicSafeString } from "./utils/sanitization";
@@ -79,6 +89,16 @@ export { TextareaChangeEventDetail, TextareaInputEventDetail } from "./component
 export { ToastButton, ToastDismissOptions, ToastLayout, ToastPosition, ToastPresentOptions, ToastSwipeGestureDirection } from "./components/toast/toast-interface";
 export { ToggleChangeEventDetail } from "./components/toggle/toggle-interface";
 export { MedColor } from "@templarios/types/color.type";
+export { MedAlternativaInterface } from "@templarios/interfaces/alternativas.interface";
+export { MedChartRadiaItem } from "@templarios/interfaces/chart-radial.interface";
+export { MedFontSize } from "@templarios/templarios";
+export { headerResizeEventDetail } from "@templarios/interfaces/header.interface";
+export { MedImageZoomItemInterface } from "@templarios/interfaces/image-zoom.interface";
+export { PlusMinusStatus } from "@templarios/enums/plusminus.enum";
+export { RateStatus } from "@templarios/enums/rate-like.enum";
+export { MedTypeTag, MedTypeToken } from "@templarios/types/type.type";
+export { TpAccordionGroupChangeEventDetail } from "./components/@templarios/tp-accordion-group/tp-accordion-group-interface";
+export { TpChartBarItem } from "@templarios/interfaces/chart-bar.interface";
 export namespace Components {
     interface IonAccordion {
         /**
@@ -3251,12 +3271,486 @@ export namespace Components {
          */
         "mode"?: "ios" | "md";
     }
+    interface MedAccordionItem {
+        "background": boolean;
+        "canCollapse": boolean;
+        "dsColor"?: MedColor;
+        "isOpened": boolean;
+        "noBorder": boolean;
+        "slotsToggle": 'start' | 'middle' | 'end'[];
+    }
+    interface MedAccordionList {
+        "margin"?: 'xs' | 'sm' | 'md' | 'lg';
+        "noAnimation": boolean;
+        "noBorder": boolean;
+        "singleOpen": boolean;
+    }
+    interface MedAddCard {
+        "iconName"?: string;
+        "titulo"?: string;
+    }
     interface MedAgrupador {
         "collapsed": boolean;
         "dsColor"?: MedColor;
         "labelAlternativo": string;
         "labelDefault": string;
         "toggle": (event?: Event) => Promise<void>;
+    }
+    interface MedAlertFixed {
+        "dsColor"?: MedColor;
+        "dsName"?: 'offline' | 'atualizar';
+        "labelAtualizar": string;
+        "labelOffline": string;
+    }
+    interface MedAlternativas {
+        "alternativaSelecionada": string;
+        "alternativas": MedAlternativaInterface | any;
+        "dsColor"?: MedColor;
+        "dsSkinConfig": any;
+        "keyAlternativa": string;
+        "keyEnunciado": string;
+        "keyImagem": string;
+        "keyPorcentagem": string;
+        "keyRiscada": string;
+        "mostraResposta": boolean;
+        "permiteDesmarcar": boolean;
+        "permiteRiscar": boolean;
+        "respostaCorreta": string;
+    }
+    interface MedAlternativasA {
+        "alternativaSelecionada": string;
+        "alternativas": MedAlternativaInterface | any;
+        "dsColor"?: MedColor;
+        "dsSkin"?: any;
+        "dsSkinConfig"?: any;
+        "keyAlternativa": string;
+        "keyEnunciado": string;
+        "keyImagem": string;
+        "keyPorcentagem": string;
+        "keyRiscada": string;
+        "mostraResposta": boolean;
+        "permiteDesmarcar": boolean;
+        "permiteRiscar": boolean;
+        "respostaCorreta": string;
+    }
+    interface MedAlternativasB {
+        "alternativaSelecionada": string;
+        "alternativas": MedAlternativaInterface | any;
+        "dsColor"?: MedColor;
+        "dsSkin"?: any;
+        "dsSkinConfig"?: any;
+        "keyAlternativa": string;
+        "keyEnunciado": string;
+        "keyImagem": string;
+        "keyPorcentagem": string;
+        "keyRiscada": string;
+        "mostraResposta": boolean;
+        "permiteDesmarcar": boolean;
+        "permiteRiscar": boolean;
+        "respostaCorreta": string;
+    }
+    interface MedAutocomplete {
+        /**
+          * Se a pesquisa por items possuir debounce time até o item ser inserido  no dom, deve ser indicado por essa propriedade (defaults to 0)
+         */
+        "debounceTime": number;
+        /**
+          * Indica se o componente deve ser renderizado mostrando o dropdown ou não
+         */
+        "dropdown": boolean;
+        "toggleDropdown": () => Promise<void>;
+    }
+    interface MedBase {
+        "dsColor"?: MedColor;
+        "gap"?: 's00' | 's02' | 's04' | 's08' | string;
+        "radius"?: 's00' | 's02' | 's04' | 's08' | string;
+        "spacingH"?: 's00' | 's02' | 's04' | 's08' | 's12' | 's16' | 's24' | string;
+        "spacingV"?: 's00' | 's02' | 's04' | 's08' | 's12' | 's16' | 's24' | string;
+    }
+    interface MedCalendar {
+        "ano"?: string;
+        "choice": string;
+        "container"?: string;
+        "disable": boolean;
+        "dsColor"?: MedColor;
+        "mes"?: string;
+    }
+    interface MedCalendarDay {
+        "active": boolean;
+        "dsColor"?: MedColor;
+        "fill"?: 'outline';
+    }
+    interface MedCaption {
+        "dsColor"?: MedColor;
+        "dsSize"?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    }
+    interface MedCartaoRespostaItem {
+        "anulada": boolean;
+        "ativa": boolean;
+        "dsColor"?: MedColor;
+        "impressa": boolean;
+    }
+    interface MedCartaoRespostaLista {
+        /**
+          * Define a estilização do componente
+         */
+        "isFlex": boolean;
+    }
+    interface MedChartBar {
+        "dsColor"?: MedColor;
+        "height": number;
+        "noLabel": boolean;
+        "value": number;
+        "width": number;
+    }
+    interface MedChartBarHorizontal {
+        "dsColor"?: MedColor;
+        "dsSize"?: 'md';
+        "hideValue": boolean;
+        "label": boolean;
+        "labelContent": string | undefined;
+        "value": number;
+    }
+    interface MedChartCategoria {
+        "dsColor"?: MedColor;
+        "meta"?: string;
+        "realizado"?: string;
+        "titulo"?: string;
+        "value": number;
+    }
+    interface MedChartRadial {
+        "dsColor"?: MedColor;
+        "dsName"?: 'secondary';
+        "dsSize"?: 'xs' | 'sm' | 'md' | 'lg';
+        "subtitulo"?: string;
+        "titulo"?: string;
+        "valores": MedChartRadiaItem[];
+    }
+    interface MedChartRadialContent {
+        "dsColor"?: MedColor;
+        "dsSize"?: 'lg';
+        "total": number;
+    }
+    interface MedChartRadialLabel {
+        "dsColor"?: MedColor;
+        "dsSize"?: 'lg';
+        "valores": MedChartRadiaItem[];
+    }
+    interface MedCheckCard {
+        "alert": boolean;
+        "categoria"?: string;
+        "dataFinal"?: string;
+        "dataInicial"?: string;
+        "dsColor"?: MedColor;
+        "finalizada"?: string;
+        "horaFinal"?: string;
+        "horaInicial"?: string;
+        "iconName"?: string;
+        "titulo"?: string;
+    }
+    interface MedContextMenu {
+        "collapsed": boolean;
+        "toggle": (event?: Event) => Promise<void>;
+    }
+    interface MedDownloadButton {
+        "disabled": boolean;
+        "downloaded": boolean;
+        "downloading": boolean;
+        "dsColor"?: MedColor;
+        "dsSize"?: 'lg';
+        /**
+          * remover
+         */
+        "identification"?: string|number|undefined;
+        /**
+          * remover
+         */
+        "index"?: number;
+        "value": number;
+    }
+    interface MedDropdown {
+        "dsName"?: 'secondary';
+    }
+    interface MedEnunciado {
+        "content"?: string;
+        "dsName"?: 'skin';
+        "imagens": string[] | string;
+    }
+    interface MedEnunciadoDiscursiva {
+        /**
+          * todo
+         */
+        "imagens": string[] | string;
+    }
+    interface MedFontZoom {
+        "emitter": { emit: (value: MedFontSize) => void };
+        "value": MedFontSize;
+    }
+    interface MedHeader {
+    }
+    interface MedImageZoom {
+        "imagens": | MedImageZoomItemInterface[]
+    | any;
+        "initialSlide"?: number | undefined;
+        "marcaAguaInferior"?: string;
+        "marcaAguaSuperior"?: string;
+        "titulo"?: string;
+    }
+    interface MedItem {
+        /**
+          * If `true`, a button tag will be rendered and the item will be tappable.
+         */
+        "button": boolean;
+        /**
+          * todo
+         */
+        "contain": boolean;
+        /**
+          * If `true`, a detail arrow will appear on the item. Defaults to `false` unless the `mode` is `ios` and an `href` or `button` property is present.
+         */
+        "detail"?: boolean;
+        /**
+          * The icon to use when `detail` is set to `true`.
+         */
+        "detailIcon": string;
+        /**
+          * If `true`, the user cannot interact with the item.
+         */
+        "disabled": boolean;
+        /**
+          * This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want).
+         */
+        "download": string | undefined;
+        /**
+          * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered.
+         */
+        "href": string | undefined;
+        /**
+          * How the bottom border should be displayed on the item.
+         */
+        "lines"?: 'full' | 'inset' | 'none';
+        /**
+          * The mode determines which platform styles to use.
+         */
+        "mode"?: "ios" | "md";
+        /**
+          * todo
+         */
+        "noPadding": boolean;
+        /**
+          * Specifies the relationship of the target object to the link object. The value is a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types).
+         */
+        "rel": string | undefined;
+        /**
+          * When using a router, it specifies the transition animation when navigating to another page using `href`.
+         */
+        "routerAnimation": AnimationBuilder | undefined;
+        /**
+          * When using a router, it specifies the transition direction when navigating to another page using `href`.
+         */
+        "routerDirection": RouterDirection1;
+        /**
+          * Specifies where to display the linked URL. Only applies when an `href` is provided. Special keywords: `"_blank"`, `"_self"`, `"_parent"`, `"_top"`.
+         */
+        "target": string | undefined;
+        /**
+          * The type of the button. Only used when an `onclick` or `button` property is present.
+         */
+        "type": 'submit' | 'reset' | 'button';
+    }
+    interface MedList {
+        "dsColor"?: MedColor;
+        "margin"?: 'xs' | 'sm' | 'md' | 'lg';
+    }
+    interface MedListItem {
+        "border": boolean;
+        "disabled": boolean;
+        "dsColor"?: MedColor;
+        "dsSize"?: 'xs' | 'sm' | 'md';
+        "label"?: string;
+        "selected": boolean;
+        "titulo"?: string;
+    }
+    interface MedListItemAccordion {
+        "border": boolean;
+        "collapsed": boolean;
+        "disabled": boolean;
+        "dsColor"?: MedColor;
+        "dsSize"?: 'xs' | 'sm' | 'md';
+        "label"?: string;
+        "margin"?: 'xs' | 'sm' | 'md' | 'lg';
+        "selected": boolean;
+        "titulo"?: string;
+        "toggle": (event?: Event) => Promise<void>;
+    }
+    interface MedNavbar {
+        "dsColor"?: MedColor;
+        "dsName"?: 'secondary' | 'transparent';
+    }
+    interface MedOffline {
+    }
+    interface MedOption {
+        "dsColor"?: MedColor;
+    }
+    interface MedPlusminus {
+        /**
+          * true se deve desabilitar os controles automaticamente
+         */
+        "automaticDisabled": boolean;
+        "disabled"?: 'minus' | 'plus' | 'both';
+        "dsColor"?: MedColor;
+        "dsSize"?: 'xl';
+        /**
+          * O valor máximo
+         */
+        "max"?: number;
+        /**
+          * O valor mínimo
+         */
+        "min"?: number;
+        /**
+          * Deverá ser true se o valor atual vai ser passado por slot, false se vai ser passado por prop
+         */
+        "useSlot": boolean;
+        /**
+          * O valor atual (apenas se useSlot é false)
+         */
+        "value"?: number;
+    }
+    interface MedRateBar {
+        "dsColor"?: MedColor;
+    }
+    interface MedRateLike {
+        "status"?: RateStatus;
+    }
+    interface MedTiles {
+        "badge"?: string;
+        "dsColor"?: MedColor;
+        "label"?: string;
+        "selected": boolean;
+        "solid": boolean;
+        "titulo"?: string;
+    }
+    interface MedToggle {
+        "collapsed": boolean;
+        "dsColor"?: MedColor;
+        "iconClick": boolean;
+    }
+    interface MedToolbar {
+        "dsColor"?: MedColor;
+    }
+    interface MedTooltip {
+        "btnLeft"?: string;
+        "btnRight"?: string;
+        "collapsed": boolean;
+        "content"?: string;
+        "dsColor"?: MedColor;
+        "enableHover"?: boolean;
+        "placement"?: 'top' | 'bottom' | 'left' | 'right';
+        "position"?: 'start' | 'center' | 'end';
+        "titulo"?: string;
+        "toggle": (event?: any) => Promise<void>;
+        "toggleOnHover": (event?: any) => Promise<void>;
+    }
+    interface MedType {
+        "dsColor"?: MedColor;
+        "tag"?: MedTypeTag;
+        "token"?: MedTypeToken;
+    }
+    interface MedVideoThumbnail {
+        "dsColor"?: MedColor;
+        "url"?: string;
+        "value": number;
+    }
+    interface TpAccordion {
+        /**
+          * If `true`, the accordion cannot be interacted with.
+         */
+        "disabled": boolean;
+        /**
+          * The mode determines which platform styles to use.
+         */
+        "mode"?: "ios" | "md";
+        /**
+          * If `true`, the accordion cannot be interacted with, but does not alter the opacity.
+         */
+        "readonly": boolean;
+        /**
+          * The toggle icon to use. This icon will be rotated when the accordion is expanded or collapsed.
+         */
+        "toggleIcon": string;
+        /**
+          * The slot inside of `ion-item` to place the toggle icon. Defaults to `"end"`.
+         */
+        "toggleIconSlot": "start" | "end";
+        /**
+          * The value of the accordion. Defaults to an autogenerated value.
+         */
+        "value": string;
+    }
+    interface TpAccordionGroup {
+        /**
+          * If `true`, all accordions inside of the accordion group will animate when expanding or collapsing.
+         */
+        "animated": boolean;
+        /**
+          * If `true`, the accordion group cannot be interacted with.
+         */
+        "disabled": boolean;
+        /**
+          * Describes the expansion behavior for each accordion. Possible values are `"compact"` and `"inset"`. Defaults to `"compact"`.
+         */
+        "expand": "compact" | "inset";
+        "getAccordions": () => Promise<any>;
+        /**
+          * The mode determines which platform styles to use.
+         */
+        "mode"?: "ios" | "md";
+        /**
+          * If `true`, the accordion group can have multiple accordion components expanded at the same time.
+         */
+        "multiple"?: boolean;
+        /**
+          * If `true`, the accordion group cannot be interacted with, but does not alter the opacity.
+         */
+        "readonly": boolean;
+        /**
+          * This method is used to ensure that the value of ion-accordion-group is being set in a valid way. This method should only be called in response to a user generated action.
+         */
+        "requestAccordionToggle": (accordionValue: string | undefined, accordionExpand: boolean) => Promise<void>;
+        /**
+          * The value of the accordion group. This controls which accordions are expanded. This should be an array of strings only when `multiple="true"`
+         */
+        "value"?: string | string[] | null;
+    }
+    interface TpChartBar {
+        "bar": TpChartBarItem;
+        "deactivated": boolean;
+        "dsColor"?: MedColor;
+        "dsName"?: "secondary";
+        "hasMarker": boolean;
+        "height": number;
+        "label"?: string;
+        "labelSize": number;
+        "marker": TpChartBarItem;
+    }
+    interface TpInputContainer {
+        "disabled": boolean;
+        "dsColor"?: MedColor;
+        "dsName"?: 'secondary';
+        "feedback": boolean;
+        "hasButton"?: 'start' | 'end' | 'both';
+        "hasIcon"?: 'start' | 'end' | 'both';
+        "inverted": boolean;
+    }
+    interface TpLoader {
+        "dsColor"?: MedColor;
+        "dsName"?: "secondary";
+        "fixed": boolean;
     }
 }
 export interface IonAccordionGroupCustomEvent<T> extends CustomEvent<T> {
@@ -3446,6 +3940,62 @@ export interface IonToastCustomEvent<T> extends CustomEvent<T> {
 export interface IonToggleCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLIonToggleElement;
+}
+export interface MedAccordionItemCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLMedAccordionItemElement;
+}
+export interface MedAlternativasACustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLMedAlternativasAElement;
+}
+export interface MedAlternativasBCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLMedAlternativasBElement;
+}
+export interface MedCalendarCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLMedCalendarElement;
+}
+export interface MedCheckCardCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLMedCheckCardElement;
+}
+export interface MedDownloadButtonCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLMedDownloadButtonElement;
+}
+export interface MedEnunciadoCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLMedEnunciadoElement;
+}
+export interface MedEnunciadoDiscursivaCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLMedEnunciadoDiscursivaElement;
+}
+export interface MedHeaderCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLMedHeaderElement;
+}
+export interface MedOfflineCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLMedOfflineElement;
+}
+export interface MedPlusminusCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLMedPlusminusElement;
+}
+export interface MedRateLikeCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLMedRateLikeElement;
+}
+export interface MedTooltipCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLMedTooltipElement;
+}
+export interface TpAccordionGroupCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLTpAccordionGroupElement;
 }
 declare global {
     interface HTMLIonAccordionElement extends Components.IonAccordion, HTMLStencilElement {
@@ -4629,11 +5179,476 @@ declare global {
         prototype: HTMLIonToolbarElement;
         new (): HTMLIonToolbarElement;
     };
+    interface HTMLMedAccordionItemElementEventMap {
+        "toggle": any;
+        "opened": any;
+        "medClick": any;
+    }
+    interface HTMLMedAccordionItemElement extends Components.MedAccordionItem, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLMedAccordionItemElementEventMap>(type: K, listener: (this: HTMLMedAccordionItemElement, ev: MedAccordionItemCustomEvent<HTMLMedAccordionItemElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLMedAccordionItemElementEventMap>(type: K, listener: (this: HTMLMedAccordionItemElement, ev: MedAccordionItemCustomEvent<HTMLMedAccordionItemElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLMedAccordionItemElement: {
+        prototype: HTMLMedAccordionItemElement;
+        new (): HTMLMedAccordionItemElement;
+    };
+    interface HTMLMedAccordionListElement extends Components.MedAccordionList, HTMLStencilElement {
+    }
+    var HTMLMedAccordionListElement: {
+        prototype: HTMLMedAccordionListElement;
+        new (): HTMLMedAccordionListElement;
+    };
+    interface HTMLMedAddCardElement extends Components.MedAddCard, HTMLStencilElement {
+    }
+    var HTMLMedAddCardElement: {
+        prototype: HTMLMedAddCardElement;
+        new (): HTMLMedAddCardElement;
+    };
     interface HTMLMedAgrupadorElement extends Components.MedAgrupador, HTMLStencilElement {
     }
     var HTMLMedAgrupadorElement: {
         prototype: HTMLMedAgrupadorElement;
         new (): HTMLMedAgrupadorElement;
+    };
+    interface HTMLMedAlertFixedElement extends Components.MedAlertFixed, HTMLStencilElement {
+    }
+    var HTMLMedAlertFixedElement: {
+        prototype: HTMLMedAlertFixedElement;
+        new (): HTMLMedAlertFixedElement;
+    };
+    interface HTMLMedAlternativasElement extends Components.MedAlternativas, HTMLStencilElement {
+    }
+    var HTMLMedAlternativasElement: {
+        prototype: HTMLMedAlternativasElement;
+        new (): HTMLMedAlternativasElement;
+    };
+    interface HTMLMedAlternativasAElementEventMap {
+        "medChange": MedAlternativaInterface;
+        "medRiscada": MedAlternativaInterface;
+        "medGalleryRequest": MedAlternativaInterface;
+    }
+    interface HTMLMedAlternativasAElement extends Components.MedAlternativasA, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLMedAlternativasAElementEventMap>(type: K, listener: (this: HTMLMedAlternativasAElement, ev: MedAlternativasACustomEvent<HTMLMedAlternativasAElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLMedAlternativasAElementEventMap>(type: K, listener: (this: HTMLMedAlternativasAElement, ev: MedAlternativasACustomEvent<HTMLMedAlternativasAElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLMedAlternativasAElement: {
+        prototype: HTMLMedAlternativasAElement;
+        new (): HTMLMedAlternativasAElement;
+    };
+    interface HTMLMedAlternativasBElementEventMap {
+        "medChange": MedAlternativaInterface;
+        "medRiscada": MedAlternativaInterface;
+        "medGalleryRequest": MedAlternativaInterface;
+    }
+    interface HTMLMedAlternativasBElement extends Components.MedAlternativasB, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLMedAlternativasBElementEventMap>(type: K, listener: (this: HTMLMedAlternativasBElement, ev: MedAlternativasBCustomEvent<HTMLMedAlternativasBElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLMedAlternativasBElementEventMap>(type: K, listener: (this: HTMLMedAlternativasBElement, ev: MedAlternativasBCustomEvent<HTMLMedAlternativasBElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLMedAlternativasBElement: {
+        prototype: HTMLMedAlternativasBElement;
+        new (): HTMLMedAlternativasBElement;
+    };
+    interface HTMLMedAutocompleteElement extends Components.MedAutocomplete, HTMLStencilElement {
+    }
+    var HTMLMedAutocompleteElement: {
+        prototype: HTMLMedAutocompleteElement;
+        new (): HTMLMedAutocompleteElement;
+    };
+    interface HTMLMedBaseElement extends Components.MedBase, HTMLStencilElement {
+    }
+    var HTMLMedBaseElement: {
+        prototype: HTMLMedBaseElement;
+        new (): HTMLMedBaseElement;
+    };
+    interface HTMLMedCalendarElementEventMap {
+        "medClick": any;
+        "medSwipe": any;
+    }
+    interface HTMLMedCalendarElement extends Components.MedCalendar, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLMedCalendarElementEventMap>(type: K, listener: (this: HTMLMedCalendarElement, ev: MedCalendarCustomEvent<HTMLMedCalendarElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLMedCalendarElementEventMap>(type: K, listener: (this: HTMLMedCalendarElement, ev: MedCalendarCustomEvent<HTMLMedCalendarElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLMedCalendarElement: {
+        prototype: HTMLMedCalendarElement;
+        new (): HTMLMedCalendarElement;
+    };
+    interface HTMLMedCalendarDayElement extends Components.MedCalendarDay, HTMLStencilElement {
+    }
+    var HTMLMedCalendarDayElement: {
+        prototype: HTMLMedCalendarDayElement;
+        new (): HTMLMedCalendarDayElement;
+    };
+    interface HTMLMedCaptionElement extends Components.MedCaption, HTMLStencilElement {
+    }
+    var HTMLMedCaptionElement: {
+        prototype: HTMLMedCaptionElement;
+        new (): HTMLMedCaptionElement;
+    };
+    interface HTMLMedCartaoRespostaItemElement extends Components.MedCartaoRespostaItem, HTMLStencilElement {
+    }
+    var HTMLMedCartaoRespostaItemElement: {
+        prototype: HTMLMedCartaoRespostaItemElement;
+        new (): HTMLMedCartaoRespostaItemElement;
+    };
+    interface HTMLMedCartaoRespostaListaElement extends Components.MedCartaoRespostaLista, HTMLStencilElement {
+    }
+    var HTMLMedCartaoRespostaListaElement: {
+        prototype: HTMLMedCartaoRespostaListaElement;
+        new (): HTMLMedCartaoRespostaListaElement;
+    };
+    interface HTMLMedChartBarElement extends Components.MedChartBar, HTMLStencilElement {
+    }
+    var HTMLMedChartBarElement: {
+        prototype: HTMLMedChartBarElement;
+        new (): HTMLMedChartBarElement;
+    };
+    interface HTMLMedChartBarHorizontalElement extends Components.MedChartBarHorizontal, HTMLStencilElement {
+    }
+    var HTMLMedChartBarHorizontalElement: {
+        prototype: HTMLMedChartBarHorizontalElement;
+        new (): HTMLMedChartBarHorizontalElement;
+    };
+    interface HTMLMedChartCategoriaElement extends Components.MedChartCategoria, HTMLStencilElement {
+    }
+    var HTMLMedChartCategoriaElement: {
+        prototype: HTMLMedChartCategoriaElement;
+        new (): HTMLMedChartCategoriaElement;
+    };
+    interface HTMLMedChartRadialElement extends Components.MedChartRadial, HTMLStencilElement {
+    }
+    var HTMLMedChartRadialElement: {
+        prototype: HTMLMedChartRadialElement;
+        new (): HTMLMedChartRadialElement;
+    };
+    interface HTMLMedChartRadialContentElement extends Components.MedChartRadialContent, HTMLStencilElement {
+    }
+    var HTMLMedChartRadialContentElement: {
+        prototype: HTMLMedChartRadialContentElement;
+        new (): HTMLMedChartRadialContentElement;
+    };
+    interface HTMLMedChartRadialLabelElement extends Components.MedChartRadialLabel, HTMLStencilElement {
+    }
+    var HTMLMedChartRadialLabelElement: {
+        prototype: HTMLMedChartRadialLabelElement;
+        new (): HTMLMedChartRadialLabelElement;
+    };
+    interface HTMLMedCheckCardElementEventMap {
+        "medClick": any;
+        "medTooltipClose": any;
+    }
+    interface HTMLMedCheckCardElement extends Components.MedCheckCard, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLMedCheckCardElementEventMap>(type: K, listener: (this: HTMLMedCheckCardElement, ev: MedCheckCardCustomEvent<HTMLMedCheckCardElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLMedCheckCardElementEventMap>(type: K, listener: (this: HTMLMedCheckCardElement, ev: MedCheckCardCustomEvent<HTMLMedCheckCardElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLMedCheckCardElement: {
+        prototype: HTMLMedCheckCardElement;
+        new (): HTMLMedCheckCardElement;
+    };
+    interface HTMLMedContextMenuElement extends Components.MedContextMenu, HTMLStencilElement {
+    }
+    var HTMLMedContextMenuElement: {
+        prototype: HTMLMedContextMenuElement;
+        new (): HTMLMedContextMenuElement;
+    };
+    interface HTMLMedDownloadButtonElementEventMap {
+        "medDownloadRequested": any;
+    }
+    interface HTMLMedDownloadButtonElement extends Components.MedDownloadButton, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLMedDownloadButtonElementEventMap>(type: K, listener: (this: HTMLMedDownloadButtonElement, ev: MedDownloadButtonCustomEvent<HTMLMedDownloadButtonElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLMedDownloadButtonElementEventMap>(type: K, listener: (this: HTMLMedDownloadButtonElement, ev: MedDownloadButtonCustomEvent<HTMLMedDownloadButtonElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLMedDownloadButtonElement: {
+        prototype: HTMLMedDownloadButtonElement;
+        new (): HTMLMedDownloadButtonElement;
+    };
+    interface HTMLMedDropdownElement extends Components.MedDropdown, HTMLStencilElement {
+    }
+    var HTMLMedDropdownElement: {
+        prototype: HTMLMedDropdownElement;
+        new (): HTMLMedDropdownElement;
+    };
+    interface HTMLMedEnunciadoElementEventMap {
+        "medGalleryRequest": string;
+    }
+    interface HTMLMedEnunciadoElement extends Components.MedEnunciado, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLMedEnunciadoElementEventMap>(type: K, listener: (this: HTMLMedEnunciadoElement, ev: MedEnunciadoCustomEvent<HTMLMedEnunciadoElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLMedEnunciadoElementEventMap>(type: K, listener: (this: HTMLMedEnunciadoElement, ev: MedEnunciadoCustomEvent<HTMLMedEnunciadoElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLMedEnunciadoElement: {
+        prototype: HTMLMedEnunciadoElement;
+        new (): HTMLMedEnunciadoElement;
+    };
+    interface HTMLMedEnunciadoDiscursivaElementEventMap {
+        "medGalleryRequest": string;
+    }
+    interface HTMLMedEnunciadoDiscursivaElement extends Components.MedEnunciadoDiscursiva, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLMedEnunciadoDiscursivaElementEventMap>(type: K, listener: (this: HTMLMedEnunciadoDiscursivaElement, ev: MedEnunciadoDiscursivaCustomEvent<HTMLMedEnunciadoDiscursivaElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLMedEnunciadoDiscursivaElementEventMap>(type: K, listener: (this: HTMLMedEnunciadoDiscursivaElement, ev: MedEnunciadoDiscursivaCustomEvent<HTMLMedEnunciadoDiscursivaElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLMedEnunciadoDiscursivaElement: {
+        prototype: HTMLMedEnunciadoDiscursivaElement;
+        new (): HTMLMedEnunciadoDiscursivaElement;
+    };
+    interface HTMLMedFontZoomElement extends Components.MedFontZoom, HTMLStencilElement {
+    }
+    var HTMLMedFontZoomElement: {
+        prototype: HTMLMedFontZoomElement;
+        new (): HTMLMedFontZoomElement;
+    };
+    interface HTMLMedHeaderElementEventMap {
+        "medResize": headerResizeEventDetail;
+    }
+    interface HTMLMedHeaderElement extends Components.MedHeader, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLMedHeaderElementEventMap>(type: K, listener: (this: HTMLMedHeaderElement, ev: MedHeaderCustomEvent<HTMLMedHeaderElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLMedHeaderElementEventMap>(type: K, listener: (this: HTMLMedHeaderElement, ev: MedHeaderCustomEvent<HTMLMedHeaderElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLMedHeaderElement: {
+        prototype: HTMLMedHeaderElement;
+        new (): HTMLMedHeaderElement;
+    };
+    interface HTMLMedImageZoomElement extends Components.MedImageZoom, HTMLStencilElement {
+    }
+    var HTMLMedImageZoomElement: {
+        prototype: HTMLMedImageZoomElement;
+        new (): HTMLMedImageZoomElement;
+    };
+    interface HTMLMedItemElement extends Components.MedItem, HTMLStencilElement {
+    }
+    var HTMLMedItemElement: {
+        prototype: HTMLMedItemElement;
+        new (): HTMLMedItemElement;
+    };
+    interface HTMLMedListElement extends Components.MedList, HTMLStencilElement {
+    }
+    var HTMLMedListElement: {
+        prototype: HTMLMedListElement;
+        new (): HTMLMedListElement;
+    };
+    interface HTMLMedListItemElement extends Components.MedListItem, HTMLStencilElement {
+    }
+    var HTMLMedListItemElement: {
+        prototype: HTMLMedListItemElement;
+        new (): HTMLMedListItemElement;
+    };
+    interface HTMLMedListItemAccordionElement extends Components.MedListItemAccordion, HTMLStencilElement {
+    }
+    var HTMLMedListItemAccordionElement: {
+        prototype: HTMLMedListItemAccordionElement;
+        new (): HTMLMedListItemAccordionElement;
+    };
+    interface HTMLMedNavbarElement extends Components.MedNavbar, HTMLStencilElement {
+    }
+    var HTMLMedNavbarElement: {
+        prototype: HTMLMedNavbarElement;
+        new (): HTMLMedNavbarElement;
+    };
+    interface HTMLMedOfflineElementEventMap {
+        "medClick": void;
+    }
+    interface HTMLMedOfflineElement extends Components.MedOffline, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLMedOfflineElementEventMap>(type: K, listener: (this: HTMLMedOfflineElement, ev: MedOfflineCustomEvent<HTMLMedOfflineElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLMedOfflineElementEventMap>(type: K, listener: (this: HTMLMedOfflineElement, ev: MedOfflineCustomEvent<HTMLMedOfflineElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLMedOfflineElement: {
+        prototype: HTMLMedOfflineElement;
+        new (): HTMLMedOfflineElement;
+    };
+    interface HTMLMedOptionElement extends Components.MedOption, HTMLStencilElement {
+    }
+    var HTMLMedOptionElement: {
+        prototype: HTMLMedOptionElement;
+        new (): HTMLMedOptionElement;
+    };
+    interface HTMLMedPlusminusElementEventMap {
+        "medChange": PlusMinusStatus;
+        "medChangeAlt": number;
+    }
+    interface HTMLMedPlusminusElement extends Components.MedPlusminus, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLMedPlusminusElementEventMap>(type: K, listener: (this: HTMLMedPlusminusElement, ev: MedPlusminusCustomEvent<HTMLMedPlusminusElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLMedPlusminusElementEventMap>(type: K, listener: (this: HTMLMedPlusminusElement, ev: MedPlusminusCustomEvent<HTMLMedPlusminusElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLMedPlusminusElement: {
+        prototype: HTMLMedPlusminusElement;
+        new (): HTMLMedPlusminusElement;
+    };
+    interface HTMLMedRateBarElement extends Components.MedRateBar, HTMLStencilElement {
+    }
+    var HTMLMedRateBarElement: {
+        prototype: HTMLMedRateBarElement;
+        new (): HTMLMedRateBarElement;
+    };
+    interface HTMLMedRateLikeElementEventMap {
+        "medChange": RateStatus;
+    }
+    interface HTMLMedRateLikeElement extends Components.MedRateLike, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLMedRateLikeElementEventMap>(type: K, listener: (this: HTMLMedRateLikeElement, ev: MedRateLikeCustomEvent<HTMLMedRateLikeElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLMedRateLikeElementEventMap>(type: K, listener: (this: HTMLMedRateLikeElement, ev: MedRateLikeCustomEvent<HTMLMedRateLikeElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLMedRateLikeElement: {
+        prototype: HTMLMedRateLikeElement;
+        new (): HTMLMedRateLikeElement;
+    };
+    interface HTMLMedTilesElement extends Components.MedTiles, HTMLStencilElement {
+    }
+    var HTMLMedTilesElement: {
+        prototype: HTMLMedTilesElement;
+        new (): HTMLMedTilesElement;
+    };
+    interface HTMLMedToggleElement extends Components.MedToggle, HTMLStencilElement {
+    }
+    var HTMLMedToggleElement: {
+        prototype: HTMLMedToggleElement;
+        new (): HTMLMedToggleElement;
+    };
+    interface HTMLMedToolbarElement extends Components.MedToolbar, HTMLStencilElement {
+    }
+    var HTMLMedToolbarElement: {
+        prototype: HTMLMedToolbarElement;
+        new (): HTMLMedToolbarElement;
+    };
+    interface HTMLMedTooltipElementEventMap {
+        "btnLeftClick": void;
+        "btnRightClick": void;
+    }
+    interface HTMLMedTooltipElement extends Components.MedTooltip, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLMedTooltipElementEventMap>(type: K, listener: (this: HTMLMedTooltipElement, ev: MedTooltipCustomEvent<HTMLMedTooltipElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLMedTooltipElementEventMap>(type: K, listener: (this: HTMLMedTooltipElement, ev: MedTooltipCustomEvent<HTMLMedTooltipElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLMedTooltipElement: {
+        prototype: HTMLMedTooltipElement;
+        new (): HTMLMedTooltipElement;
+    };
+    interface HTMLMedTypeElement extends Components.MedType, HTMLStencilElement {
+    }
+    var HTMLMedTypeElement: {
+        prototype: HTMLMedTypeElement;
+        new (): HTMLMedTypeElement;
+    };
+    interface HTMLMedVideoThumbnailElement extends Components.MedVideoThumbnail, HTMLStencilElement {
+    }
+    var HTMLMedVideoThumbnailElement: {
+        prototype: HTMLMedVideoThumbnailElement;
+        new (): HTMLMedVideoThumbnailElement;
+    };
+    interface HTMLTpAccordionElement extends Components.TpAccordion, HTMLStencilElement {
+    }
+    var HTMLTpAccordionElement: {
+        prototype: HTMLTpAccordionElement;
+        new (): HTMLTpAccordionElement;
+    };
+    interface HTMLTpAccordionGroupElementEventMap {
+        "ionChange": TpAccordionGroupChangeEventDetail;
+        "ionValueChange": TpAccordionGroupChangeEventDetail;
+    }
+    interface HTMLTpAccordionGroupElement extends Components.TpAccordionGroup, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLTpAccordionGroupElementEventMap>(type: K, listener: (this: HTMLTpAccordionGroupElement, ev: TpAccordionGroupCustomEvent<HTMLTpAccordionGroupElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLTpAccordionGroupElementEventMap>(type: K, listener: (this: HTMLTpAccordionGroupElement, ev: TpAccordionGroupCustomEvent<HTMLTpAccordionGroupElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLTpAccordionGroupElement: {
+        prototype: HTMLTpAccordionGroupElement;
+        new (): HTMLTpAccordionGroupElement;
+    };
+    interface HTMLTpChartBarElement extends Components.TpChartBar, HTMLStencilElement {
+    }
+    var HTMLTpChartBarElement: {
+        prototype: HTMLTpChartBarElement;
+        new (): HTMLTpChartBarElement;
+    };
+    interface HTMLTpInputContainerElement extends Components.TpInputContainer, HTMLStencilElement {
+    }
+    var HTMLTpInputContainerElement: {
+        prototype: HTMLTpInputContainerElement;
+        new (): HTMLTpInputContainerElement;
+    };
+    interface HTMLTpLoaderElement extends Components.TpLoader, HTMLStencilElement {
+    }
+    var HTMLTpLoaderElement: {
+        prototype: HTMLTpLoaderElement;
+        new (): HTMLTpLoaderElement;
     };
     interface HTMLElementTagNameMap {
         "ion-accordion": HTMLIonAccordionElement;
@@ -4727,7 +5742,57 @@ declare global {
         "ion-toast": HTMLIonToastElement;
         "ion-toggle": HTMLIonToggleElement;
         "ion-toolbar": HTMLIonToolbarElement;
+        "med-accordion-item": HTMLMedAccordionItemElement;
+        "med-accordion-list": HTMLMedAccordionListElement;
+        "med-add-card": HTMLMedAddCardElement;
         "med-agrupador": HTMLMedAgrupadorElement;
+        "med-alert-fixed": HTMLMedAlertFixedElement;
+        "med-alternativas": HTMLMedAlternativasElement;
+        "med-alternativas-a": HTMLMedAlternativasAElement;
+        "med-alternativas-b": HTMLMedAlternativasBElement;
+        "med-autocomplete": HTMLMedAutocompleteElement;
+        "med-base": HTMLMedBaseElement;
+        "med-calendar": HTMLMedCalendarElement;
+        "med-calendar-day": HTMLMedCalendarDayElement;
+        "med-caption": HTMLMedCaptionElement;
+        "med-cartao-resposta-item": HTMLMedCartaoRespostaItemElement;
+        "med-cartao-resposta-lista": HTMLMedCartaoRespostaListaElement;
+        "med-chart-bar": HTMLMedChartBarElement;
+        "med-chart-bar-horizontal": HTMLMedChartBarHorizontalElement;
+        "med-chart-categoria": HTMLMedChartCategoriaElement;
+        "med-chart-radial": HTMLMedChartRadialElement;
+        "med-chart-radial-content": HTMLMedChartRadialContentElement;
+        "med-chart-radial-label": HTMLMedChartRadialLabelElement;
+        "med-check-card": HTMLMedCheckCardElement;
+        "med-context-menu": HTMLMedContextMenuElement;
+        "med-download-button": HTMLMedDownloadButtonElement;
+        "med-dropdown": HTMLMedDropdownElement;
+        "med-enunciado": HTMLMedEnunciadoElement;
+        "med-enunciado-discursiva": HTMLMedEnunciadoDiscursivaElement;
+        "med-font-zoom": HTMLMedFontZoomElement;
+        "med-header": HTMLMedHeaderElement;
+        "med-image-zoom": HTMLMedImageZoomElement;
+        "med-item": HTMLMedItemElement;
+        "med-list": HTMLMedListElement;
+        "med-list-item": HTMLMedListItemElement;
+        "med-list-item-accordion": HTMLMedListItemAccordionElement;
+        "med-navbar": HTMLMedNavbarElement;
+        "med-offline": HTMLMedOfflineElement;
+        "med-option": HTMLMedOptionElement;
+        "med-plusminus": HTMLMedPlusminusElement;
+        "med-rate-bar": HTMLMedRateBarElement;
+        "med-rate-like": HTMLMedRateLikeElement;
+        "med-tiles": HTMLMedTilesElement;
+        "med-toggle": HTMLMedToggleElement;
+        "med-toolbar": HTMLMedToolbarElement;
+        "med-tooltip": HTMLMedTooltipElement;
+        "med-type": HTMLMedTypeElement;
+        "med-video-thumbnail": HTMLMedVideoThumbnailElement;
+        "tp-accordion": HTMLTpAccordionElement;
+        "tp-accordion-group": HTMLTpAccordionGroupElement;
+        "tp-chart-bar": HTMLTpChartBarElement;
+        "tp-input-container": HTMLTpInputContainerElement;
+        "tp-loader": HTMLTpLoaderElement;
     }
 }
 declare namespace LocalJSX {
@@ -8091,11 +9156,512 @@ declare namespace LocalJSX {
          */
         "mode"?: "ios" | "md";
     }
+    interface MedAccordionItem {
+        "background"?: boolean;
+        "canCollapse"?: boolean;
+        "dsColor"?: MedColor;
+        "isOpened"?: boolean;
+        "noBorder"?: boolean;
+        "onMedClick"?: (event: MedAccordionItemCustomEvent<any>) => void;
+        "onOpened"?: (event: MedAccordionItemCustomEvent<any>) => void;
+        "onToggle"?: (event: MedAccordionItemCustomEvent<any>) => void;
+        "slotsToggle"?: 'start' | 'middle' | 'end'[];
+    }
+    interface MedAccordionList {
+        "margin"?: 'xs' | 'sm' | 'md' | 'lg';
+        "noAnimation"?: boolean;
+        "noBorder"?: boolean;
+        "singleOpen"?: boolean;
+    }
+    interface MedAddCard {
+        "iconName"?: string;
+        "titulo"?: string;
+    }
     interface MedAgrupador {
         "collapsed"?: boolean;
         "dsColor"?: MedColor;
         "labelAlternativo"?: string;
         "labelDefault"?: string;
+    }
+    interface MedAlertFixed {
+        "dsColor"?: MedColor;
+        "dsName"?: 'offline' | 'atualizar';
+        "labelAtualizar"?: string;
+        "labelOffline"?: string;
+    }
+    interface MedAlternativas {
+        "alternativaSelecionada": string;
+        "alternativas"?: MedAlternativaInterface | any;
+        "dsColor"?: MedColor;
+        "dsSkinConfig": any;
+        "keyAlternativa"?: string;
+        "keyEnunciado"?: string;
+        "keyImagem"?: string;
+        "keyPorcentagem"?: string;
+        "keyRiscada"?: string;
+        "mostraResposta": boolean;
+        "permiteDesmarcar"?: boolean;
+        "permiteRiscar"?: boolean;
+        "respostaCorreta": string;
+    }
+    interface MedAlternativasA {
+        "alternativaSelecionada": string;
+        "alternativas"?: MedAlternativaInterface | any;
+        "dsColor"?: MedColor;
+        "dsSkin"?: any;
+        "dsSkinConfig"?: any;
+        "keyAlternativa"?: string;
+        "keyEnunciado"?: string;
+        "keyImagem"?: string;
+        "keyPorcentagem"?: string;
+        "keyRiscada"?: string;
+        "mostraResposta": boolean;
+        "onMedChange"?: (event: MedAlternativasACustomEvent<MedAlternativaInterface>) => void;
+        "onMedGalleryRequest"?: (event: MedAlternativasACustomEvent<MedAlternativaInterface>) => void;
+        "onMedRiscada"?: (event: MedAlternativasACustomEvent<MedAlternativaInterface>) => void;
+        "permiteDesmarcar"?: boolean;
+        "permiteRiscar"?: boolean;
+        "respostaCorreta": string;
+    }
+    interface MedAlternativasB {
+        "alternativaSelecionada": string;
+        "alternativas"?: MedAlternativaInterface | any;
+        "dsColor"?: MedColor;
+        "dsSkin"?: any;
+        "dsSkinConfig"?: any;
+        "keyAlternativa"?: string;
+        "keyEnunciado"?: string;
+        "keyImagem"?: string;
+        "keyPorcentagem"?: string;
+        "keyRiscada"?: string;
+        "mostraResposta": boolean;
+        "onMedChange"?: (event: MedAlternativasBCustomEvent<MedAlternativaInterface>) => void;
+        "onMedGalleryRequest"?: (event: MedAlternativasBCustomEvent<MedAlternativaInterface>) => void;
+        "onMedRiscada"?: (event: MedAlternativasBCustomEvent<MedAlternativaInterface>) => void;
+        "permiteDesmarcar"?: boolean;
+        "permiteRiscar"?: boolean;
+        "respostaCorreta": string;
+    }
+    interface MedAutocomplete {
+        /**
+          * Se a pesquisa por items possuir debounce time até o item ser inserido  no dom, deve ser indicado por essa propriedade (defaults to 0)
+         */
+        "debounceTime"?: number;
+        /**
+          * Indica se o componente deve ser renderizado mostrando o dropdown ou não
+         */
+        "dropdown": boolean;
+    }
+    interface MedBase {
+        "dsColor"?: MedColor;
+        "gap"?: 's00' | 's02' | 's04' | 's08' | string;
+        "radius"?: 's00' | 's02' | 's04' | 's08' | string;
+        "spacingH"?: 's00' | 's02' | 's04' | 's08' | 's12' | 's16' | 's24' | string;
+        "spacingV"?: 's00' | 's02' | 's04' | 's08' | 's12' | 's16' | 's24' | string;
+    }
+    interface MedCalendar {
+        "ano"?: string;
+        "choice"?: string;
+        "container"?: string;
+        "disable"?: boolean;
+        "dsColor"?: MedColor;
+        "mes"?: string;
+        "onMedClick"?: (event: MedCalendarCustomEvent<any>) => void;
+        "onMedSwipe"?: (event: MedCalendarCustomEvent<any>) => void;
+    }
+    interface MedCalendarDay {
+        "active"?: boolean;
+        "dsColor"?: MedColor;
+        "fill"?: 'outline';
+    }
+    interface MedCaption {
+        "dsColor"?: MedColor;
+        "dsSize"?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    }
+    interface MedCartaoRespostaItem {
+        "anulada"?: boolean;
+        "ativa"?: boolean;
+        "dsColor"?: MedColor;
+        "impressa"?: boolean;
+    }
+    interface MedCartaoRespostaLista {
+        /**
+          * Define a estilização do componente
+         */
+        "isFlex"?: boolean;
+    }
+    interface MedChartBar {
+        "dsColor"?: MedColor;
+        "height"?: number;
+        "noLabel"?: boolean;
+        "value"?: number;
+        "width"?: number;
+    }
+    interface MedChartBarHorizontal {
+        "dsColor"?: MedColor;
+        "dsSize"?: 'md';
+        "hideValue"?: boolean;
+        "label"?: boolean;
+        "labelContent"?: string | undefined;
+        "value"?: number;
+    }
+    interface MedChartCategoria {
+        "dsColor"?: MedColor;
+        "meta"?: string;
+        "realizado"?: string;
+        "titulo"?: string;
+        "value"?: number;
+    }
+    interface MedChartRadial {
+        "dsColor"?: MedColor;
+        "dsName"?: 'secondary';
+        "dsSize"?: 'xs' | 'sm' | 'md' | 'lg';
+        "subtitulo"?: string;
+        "titulo"?: string;
+        "valores"?: MedChartRadiaItem[];
+    }
+    interface MedChartRadialContent {
+        "dsColor"?: MedColor;
+        "dsSize"?: 'lg';
+        "total"?: number;
+    }
+    interface MedChartRadialLabel {
+        "dsColor"?: MedColor;
+        "dsSize"?: 'lg';
+        "valores"?: MedChartRadiaItem[];
+    }
+    interface MedCheckCard {
+        "alert"?: boolean;
+        "categoria"?: string;
+        "dataFinal"?: string;
+        "dataInicial"?: string;
+        "dsColor"?: MedColor;
+        "finalizada"?: string;
+        "horaFinal"?: string;
+        "horaInicial"?: string;
+        "iconName"?: string;
+        "onMedClick"?: (event: MedCheckCardCustomEvent<any>) => void;
+        "onMedTooltipClose"?: (event: MedCheckCardCustomEvent<any>) => void;
+        "titulo"?: string;
+    }
+    interface MedContextMenu {
+        "collapsed"?: boolean;
+    }
+    interface MedDownloadButton {
+        "disabled"?: boolean;
+        "downloaded"?: boolean;
+        "downloading"?: boolean;
+        "dsColor"?: MedColor;
+        "dsSize"?: 'lg';
+        /**
+          * remover
+         */
+        "identification"?: string|number|undefined;
+        /**
+          * remover
+         */
+        "index"?: number;
+        "onMedDownloadRequested"?: (event: MedDownloadButtonCustomEvent<any>) => void;
+        "value"?: number;
+    }
+    interface MedDropdown {
+        "dsName"?: 'secondary';
+    }
+    interface MedEnunciado {
+        "content"?: string;
+        "dsName"?: 'skin';
+        "imagens": string[] | string;
+        "onMedGalleryRequest"?: (event: MedEnunciadoCustomEvent<string>) => void;
+    }
+    interface MedEnunciadoDiscursiva {
+        /**
+          * todo
+         */
+        "imagens": string[] | string;
+        /**
+          * todo
+         */
+        "onMedGalleryRequest"?: (event: MedEnunciadoDiscursivaCustomEvent<string>) => void;
+    }
+    interface MedFontZoom {
+        "emitter": { emit: (value: MedFontSize) => void };
+        "value"?: MedFontSize;
+    }
+    interface MedHeader {
+        /**
+          * todo
+         */
+        "onMedResize"?: (event: MedHeaderCustomEvent<headerResizeEventDetail>) => void;
+    }
+    interface MedImageZoom {
+        "imagens"?: | MedImageZoomItemInterface[]
+    | any;
+        "initialSlide"?: number | undefined;
+        "marcaAguaInferior"?: string;
+        "marcaAguaSuperior"?: string;
+        "titulo"?: string;
+    }
+    interface MedItem {
+        /**
+          * If `true`, a button tag will be rendered and the item will be tappable.
+         */
+        "button"?: boolean;
+        /**
+          * todo
+         */
+        "contain"?: boolean;
+        /**
+          * If `true`, a detail arrow will appear on the item. Defaults to `false` unless the `mode` is `ios` and an `href` or `button` property is present.
+         */
+        "detail"?: boolean;
+        /**
+          * The icon to use when `detail` is set to `true`.
+         */
+        "detailIcon"?: string;
+        /**
+          * If `true`, the user cannot interact with the item.
+         */
+        "disabled"?: boolean;
+        /**
+          * This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want).
+         */
+        "download"?: string | undefined;
+        /**
+          * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
+         */
+        "dsColor"?: MedColor;
+        /**
+          * Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered.
+         */
+        "href"?: string | undefined;
+        /**
+          * How the bottom border should be displayed on the item.
+         */
+        "lines"?: 'full' | 'inset' | 'none';
+        /**
+          * The mode determines which platform styles to use.
+         */
+        "mode"?: "ios" | "md";
+        /**
+          * todo
+         */
+        "noPadding"?: boolean;
+        /**
+          * Specifies the relationship of the target object to the link object. The value is a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types).
+         */
+        "rel"?: string | undefined;
+        /**
+          * When using a router, it specifies the transition animation when navigating to another page using `href`.
+         */
+        "routerAnimation"?: AnimationBuilder | undefined;
+        /**
+          * When using a router, it specifies the transition direction when navigating to another page using `href`.
+         */
+        "routerDirection"?: RouterDirection1;
+        /**
+          * Specifies where to display the linked URL. Only applies when an `href` is provided. Special keywords: `"_blank"`, `"_self"`, `"_parent"`, `"_top"`.
+         */
+        "target"?: string | undefined;
+        /**
+          * The type of the button. Only used when an `onclick` or `button` property is present.
+         */
+        "type"?: 'submit' | 'reset' | 'button';
+    }
+    interface MedList {
+        "dsColor"?: MedColor;
+        "margin"?: 'xs' | 'sm' | 'md' | 'lg';
+    }
+    interface MedListItem {
+        "border"?: boolean;
+        "disabled"?: boolean;
+        "dsColor"?: MedColor;
+        "dsSize"?: 'xs' | 'sm' | 'md';
+        "label"?: string;
+        "selected"?: boolean;
+        "titulo"?: string;
+    }
+    interface MedListItemAccordion {
+        "border"?: boolean;
+        "collapsed"?: boolean;
+        "disabled"?: boolean;
+        "dsColor"?: MedColor;
+        "dsSize"?: 'xs' | 'sm' | 'md';
+        "label"?: string;
+        "margin"?: 'xs' | 'sm' | 'md' | 'lg';
+        "selected"?: boolean;
+        "titulo"?: string;
+    }
+    interface MedNavbar {
+        "dsColor"?: MedColor;
+        "dsName"?: 'secondary' | 'transparent';
+    }
+    interface MedOffline {
+        "onMedClick"?: (event: MedOfflineCustomEvent<void>) => void;
+    }
+    interface MedOption {
+        "dsColor"?: MedColor;
+    }
+    interface MedPlusminus {
+        /**
+          * true se deve desabilitar os controles automaticamente
+         */
+        "automaticDisabled"?: boolean;
+        "disabled"?: 'minus' | 'plus' | 'both';
+        "dsColor"?: MedColor;
+        "dsSize"?: 'xl';
+        /**
+          * O valor máximo
+         */
+        "max"?: number;
+        /**
+          * O valor mínimo
+         */
+        "min"?: number;
+        "onMedChange"?: (event: MedPlusminusCustomEvent<PlusMinusStatus>) => void;
+        "onMedChangeAlt"?: (event: MedPlusminusCustomEvent<number>) => void;
+        /**
+          * Deverá ser true se o valor atual vai ser passado por slot, false se vai ser passado por prop
+         */
+        "useSlot"?: boolean;
+        /**
+          * O valor atual (apenas se useSlot é false)
+         */
+        "value"?: number;
+    }
+    interface MedRateBar {
+        "dsColor"?: MedColor;
+    }
+    interface MedRateLike {
+        "onMedChange"?: (event: MedRateLikeCustomEvent<RateStatus>) => void;
+        "status"?: RateStatus;
+    }
+    interface MedTiles {
+        "badge"?: string;
+        "dsColor"?: MedColor;
+        "label"?: string;
+        "selected"?: boolean;
+        "solid"?: boolean;
+        "titulo"?: string;
+    }
+    interface MedToggle {
+        "collapsed"?: boolean;
+        "dsColor"?: MedColor;
+        "iconClick"?: boolean;
+    }
+    interface MedToolbar {
+        "dsColor"?: MedColor;
+    }
+    interface MedTooltip {
+        "btnLeft"?: string;
+        "btnRight"?: string;
+        "collapsed"?: boolean;
+        "content"?: string;
+        "dsColor"?: MedColor;
+        "enableHover"?: boolean;
+        "onBtnLeftClick"?: (event: MedTooltipCustomEvent<void>) => void;
+        "onBtnRightClick"?: (event: MedTooltipCustomEvent<void>) => void;
+        "placement"?: 'top' | 'bottom' | 'left' | 'right';
+        "position"?: 'start' | 'center' | 'end';
+        "titulo"?: string;
+    }
+    interface MedType {
+        "dsColor"?: MedColor;
+        "tag"?: MedTypeTag;
+        "token"?: MedTypeToken;
+    }
+    interface MedVideoThumbnail {
+        "dsColor"?: MedColor;
+        "url"?: string;
+        "value"?: number;
+    }
+    interface TpAccordion {
+        /**
+          * If `true`, the accordion cannot be interacted with.
+         */
+        "disabled"?: boolean;
+        /**
+          * The mode determines which platform styles to use.
+         */
+        "mode"?: "ios" | "md";
+        /**
+          * If `true`, the accordion cannot be interacted with, but does not alter the opacity.
+         */
+        "readonly"?: boolean;
+        /**
+          * The toggle icon to use. This icon will be rotated when the accordion is expanded or collapsed.
+         */
+        "toggleIcon"?: string;
+        /**
+          * The slot inside of `ion-item` to place the toggle icon. Defaults to `"end"`.
+         */
+        "toggleIconSlot"?: "start" | "end";
+        /**
+          * The value of the accordion. Defaults to an autogenerated value.
+         */
+        "value"?: string;
+    }
+    interface TpAccordionGroup {
+        /**
+          * If `true`, all accordions inside of the accordion group will animate when expanding or collapsing.
+         */
+        "animated"?: boolean;
+        /**
+          * If `true`, the accordion group cannot be interacted with.
+         */
+        "disabled"?: boolean;
+        /**
+          * Describes the expansion behavior for each accordion. Possible values are `"compact"` and `"inset"`. Defaults to `"compact"`.
+         */
+        "expand"?: "compact" | "inset";
+        /**
+          * The mode determines which platform styles to use.
+         */
+        "mode"?: "ios" | "md";
+        /**
+          * If `true`, the accordion group can have multiple accordion components expanded at the same time.
+         */
+        "multiple"?: boolean;
+        /**
+          * Emitted when the value property has changed as a result of a user action such as a click. This event will not emit when programmatically setting the value property.
+         */
+        "onIonChange"?: (event: TpAccordionGroupCustomEvent<TpAccordionGroupChangeEventDetail>) => void;
+        /**
+          * Emitted when the value property has changed. This is used to ensure that ion-accordion can respond to any value property changes.
+         */
+        "onIonValueChange"?: (event: TpAccordionGroupCustomEvent<TpAccordionGroupChangeEventDetail>) => void;
+        /**
+          * If `true`, the accordion group cannot be interacted with, but does not alter the opacity.
+         */
+        "readonly"?: boolean;
+        /**
+          * The value of the accordion group. This controls which accordions are expanded. This should be an array of strings only when `multiple="true"`
+         */
+        "value"?: string | string[] | null;
+    }
+    interface TpChartBar {
+        "bar"?: TpChartBarItem;
+        "deactivated"?: boolean;
+        "dsColor"?: MedColor;
+        "dsName"?: "secondary";
+        "hasMarker"?: boolean;
+        "height"?: number;
+        "label"?: string;
+        "labelSize"?: number;
+        "marker"?: TpChartBarItem;
+    }
+    interface TpInputContainer {
+        "disabled"?: boolean;
+        "dsColor"?: MedColor;
+        "dsName"?: 'secondary';
+        "feedback"?: boolean;
+        "hasButton"?: 'start' | 'end' | 'both';
+        "hasIcon"?: 'start' | 'end' | 'both';
+        "inverted"?: boolean;
+    }
+    interface TpLoader {
+        "dsColor"?: MedColor;
+        "dsName"?: "secondary";
+        "fixed"?: boolean;
     }
     interface IntrinsicElements {
         "ion-accordion": IonAccordion;
@@ -8189,7 +9755,57 @@ declare namespace LocalJSX {
         "ion-toast": IonToast;
         "ion-toggle": IonToggle;
         "ion-toolbar": IonToolbar;
+        "med-accordion-item": MedAccordionItem;
+        "med-accordion-list": MedAccordionList;
+        "med-add-card": MedAddCard;
         "med-agrupador": MedAgrupador;
+        "med-alert-fixed": MedAlertFixed;
+        "med-alternativas": MedAlternativas;
+        "med-alternativas-a": MedAlternativasA;
+        "med-alternativas-b": MedAlternativasB;
+        "med-autocomplete": MedAutocomplete;
+        "med-base": MedBase;
+        "med-calendar": MedCalendar;
+        "med-calendar-day": MedCalendarDay;
+        "med-caption": MedCaption;
+        "med-cartao-resposta-item": MedCartaoRespostaItem;
+        "med-cartao-resposta-lista": MedCartaoRespostaLista;
+        "med-chart-bar": MedChartBar;
+        "med-chart-bar-horizontal": MedChartBarHorizontal;
+        "med-chart-categoria": MedChartCategoria;
+        "med-chart-radial": MedChartRadial;
+        "med-chart-radial-content": MedChartRadialContent;
+        "med-chart-radial-label": MedChartRadialLabel;
+        "med-check-card": MedCheckCard;
+        "med-context-menu": MedContextMenu;
+        "med-download-button": MedDownloadButton;
+        "med-dropdown": MedDropdown;
+        "med-enunciado": MedEnunciado;
+        "med-enunciado-discursiva": MedEnunciadoDiscursiva;
+        "med-font-zoom": MedFontZoom;
+        "med-header": MedHeader;
+        "med-image-zoom": MedImageZoom;
+        "med-item": MedItem;
+        "med-list": MedList;
+        "med-list-item": MedListItem;
+        "med-list-item-accordion": MedListItemAccordion;
+        "med-navbar": MedNavbar;
+        "med-offline": MedOffline;
+        "med-option": MedOption;
+        "med-plusminus": MedPlusminus;
+        "med-rate-bar": MedRateBar;
+        "med-rate-like": MedRateLike;
+        "med-tiles": MedTiles;
+        "med-toggle": MedToggle;
+        "med-toolbar": MedToolbar;
+        "med-tooltip": MedTooltip;
+        "med-type": MedType;
+        "med-video-thumbnail": MedVideoThumbnail;
+        "tp-accordion": TpAccordion;
+        "tp-accordion-group": TpAccordionGroup;
+        "tp-chart-bar": TpChartBar;
+        "tp-input-container": TpInputContainer;
+        "tp-loader": TpLoader;
     }
 }
 export { LocalJSX as JSX };
@@ -8287,7 +9903,57 @@ declare module "@stencil/core" {
             "ion-toast": LocalJSX.IonToast & JSXBase.HTMLAttributes<HTMLIonToastElement>;
             "ion-toggle": LocalJSX.IonToggle & JSXBase.HTMLAttributes<HTMLIonToggleElement>;
             "ion-toolbar": LocalJSX.IonToolbar & JSXBase.HTMLAttributes<HTMLIonToolbarElement>;
+            "med-accordion-item": LocalJSX.MedAccordionItem & JSXBase.HTMLAttributes<HTMLMedAccordionItemElement>;
+            "med-accordion-list": LocalJSX.MedAccordionList & JSXBase.HTMLAttributes<HTMLMedAccordionListElement>;
+            "med-add-card": LocalJSX.MedAddCard & JSXBase.HTMLAttributes<HTMLMedAddCardElement>;
             "med-agrupador": LocalJSX.MedAgrupador & JSXBase.HTMLAttributes<HTMLMedAgrupadorElement>;
+            "med-alert-fixed": LocalJSX.MedAlertFixed & JSXBase.HTMLAttributes<HTMLMedAlertFixedElement>;
+            "med-alternativas": LocalJSX.MedAlternativas & JSXBase.HTMLAttributes<HTMLMedAlternativasElement>;
+            "med-alternativas-a": LocalJSX.MedAlternativasA & JSXBase.HTMLAttributes<HTMLMedAlternativasAElement>;
+            "med-alternativas-b": LocalJSX.MedAlternativasB & JSXBase.HTMLAttributes<HTMLMedAlternativasBElement>;
+            "med-autocomplete": LocalJSX.MedAutocomplete & JSXBase.HTMLAttributes<HTMLMedAutocompleteElement>;
+            "med-base": LocalJSX.MedBase & JSXBase.HTMLAttributes<HTMLMedBaseElement>;
+            "med-calendar": LocalJSX.MedCalendar & JSXBase.HTMLAttributes<HTMLMedCalendarElement>;
+            "med-calendar-day": LocalJSX.MedCalendarDay & JSXBase.HTMLAttributes<HTMLMedCalendarDayElement>;
+            "med-caption": LocalJSX.MedCaption & JSXBase.HTMLAttributes<HTMLMedCaptionElement>;
+            "med-cartao-resposta-item": LocalJSX.MedCartaoRespostaItem & JSXBase.HTMLAttributes<HTMLMedCartaoRespostaItemElement>;
+            "med-cartao-resposta-lista": LocalJSX.MedCartaoRespostaLista & JSXBase.HTMLAttributes<HTMLMedCartaoRespostaListaElement>;
+            "med-chart-bar": LocalJSX.MedChartBar & JSXBase.HTMLAttributes<HTMLMedChartBarElement>;
+            "med-chart-bar-horizontal": LocalJSX.MedChartBarHorizontal & JSXBase.HTMLAttributes<HTMLMedChartBarHorizontalElement>;
+            "med-chart-categoria": LocalJSX.MedChartCategoria & JSXBase.HTMLAttributes<HTMLMedChartCategoriaElement>;
+            "med-chart-radial": LocalJSX.MedChartRadial & JSXBase.HTMLAttributes<HTMLMedChartRadialElement>;
+            "med-chart-radial-content": LocalJSX.MedChartRadialContent & JSXBase.HTMLAttributes<HTMLMedChartRadialContentElement>;
+            "med-chart-radial-label": LocalJSX.MedChartRadialLabel & JSXBase.HTMLAttributes<HTMLMedChartRadialLabelElement>;
+            "med-check-card": LocalJSX.MedCheckCard & JSXBase.HTMLAttributes<HTMLMedCheckCardElement>;
+            "med-context-menu": LocalJSX.MedContextMenu & JSXBase.HTMLAttributes<HTMLMedContextMenuElement>;
+            "med-download-button": LocalJSX.MedDownloadButton & JSXBase.HTMLAttributes<HTMLMedDownloadButtonElement>;
+            "med-dropdown": LocalJSX.MedDropdown & JSXBase.HTMLAttributes<HTMLMedDropdownElement>;
+            "med-enunciado": LocalJSX.MedEnunciado & JSXBase.HTMLAttributes<HTMLMedEnunciadoElement>;
+            "med-enunciado-discursiva": LocalJSX.MedEnunciadoDiscursiva & JSXBase.HTMLAttributes<HTMLMedEnunciadoDiscursivaElement>;
+            "med-font-zoom": LocalJSX.MedFontZoom & JSXBase.HTMLAttributes<HTMLMedFontZoomElement>;
+            "med-header": LocalJSX.MedHeader & JSXBase.HTMLAttributes<HTMLMedHeaderElement>;
+            "med-image-zoom": LocalJSX.MedImageZoom & JSXBase.HTMLAttributes<HTMLMedImageZoomElement>;
+            "med-item": LocalJSX.MedItem & JSXBase.HTMLAttributes<HTMLMedItemElement>;
+            "med-list": LocalJSX.MedList & JSXBase.HTMLAttributes<HTMLMedListElement>;
+            "med-list-item": LocalJSX.MedListItem & JSXBase.HTMLAttributes<HTMLMedListItemElement>;
+            "med-list-item-accordion": LocalJSX.MedListItemAccordion & JSXBase.HTMLAttributes<HTMLMedListItemAccordionElement>;
+            "med-navbar": LocalJSX.MedNavbar & JSXBase.HTMLAttributes<HTMLMedNavbarElement>;
+            "med-offline": LocalJSX.MedOffline & JSXBase.HTMLAttributes<HTMLMedOfflineElement>;
+            "med-option": LocalJSX.MedOption & JSXBase.HTMLAttributes<HTMLMedOptionElement>;
+            "med-plusminus": LocalJSX.MedPlusminus & JSXBase.HTMLAttributes<HTMLMedPlusminusElement>;
+            "med-rate-bar": LocalJSX.MedRateBar & JSXBase.HTMLAttributes<HTMLMedRateBarElement>;
+            "med-rate-like": LocalJSX.MedRateLike & JSXBase.HTMLAttributes<HTMLMedRateLikeElement>;
+            "med-tiles": LocalJSX.MedTiles & JSXBase.HTMLAttributes<HTMLMedTilesElement>;
+            "med-toggle": LocalJSX.MedToggle & JSXBase.HTMLAttributes<HTMLMedToggleElement>;
+            "med-toolbar": LocalJSX.MedToolbar & JSXBase.HTMLAttributes<HTMLMedToolbarElement>;
+            "med-tooltip": LocalJSX.MedTooltip & JSXBase.HTMLAttributes<HTMLMedTooltipElement>;
+            "med-type": LocalJSX.MedType & JSXBase.HTMLAttributes<HTMLMedTypeElement>;
+            "med-video-thumbnail": LocalJSX.MedVideoThumbnail & JSXBase.HTMLAttributes<HTMLMedVideoThumbnailElement>;
+            "tp-accordion": LocalJSX.TpAccordion & JSXBase.HTMLAttributes<HTMLTpAccordionElement>;
+            "tp-accordion-group": LocalJSX.TpAccordionGroup & JSXBase.HTMLAttributes<HTMLTpAccordionGroupElement>;
+            "tp-chart-bar": LocalJSX.TpChartBar & JSXBase.HTMLAttributes<HTMLTpChartBarElement>;
+            "tp-input-container": LocalJSX.TpInputContainer & JSXBase.HTMLAttributes<HTMLTpInputContainerElement>;
+            "tp-loader": LocalJSX.TpLoader & JSXBase.HTMLAttributes<HTMLTpLoaderElement>;
         }
     }
 }

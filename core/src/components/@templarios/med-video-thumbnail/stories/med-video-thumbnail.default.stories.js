@@ -1,5 +1,5 @@
 import { html } from 'lit-html';
-import { MedColors } from '../../../@templarios/templarios';
+import { MedColors } from '../../../../@templarios/templarios';
 
 export default {
   title: 'Components/Compositions/Video Thumbnail',

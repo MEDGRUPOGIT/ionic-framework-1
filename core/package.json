@@ -80,6 +80,7 @@
     "serve": "^14.0.1",
     "shx": "^0.3.4",
     "storybook": "^7.6.10",
+    "storybook-addon-themes": "^6.1.0",
     "stylelint": "^13.13.1",
     "stylelint-order": "^4.1.0"
   },

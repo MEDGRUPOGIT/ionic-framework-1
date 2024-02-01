@@ -74,7 +74,57 @@ import { defineCustomElement as defineIonThumbnail } from '@ionic/core/component
 import { defineCustomElement as defineIonTitle } from '@ionic/core/components/ion-title.js';
 import { defineCustomElement as defineIonToggle } from '@ionic/core/components/ion-toggle.js';
 import { defineCustomElement as defineIonToolbar } from '@ionic/core/components/ion-toolbar.js';
+import { defineCustomElement as defineMedAccordionItem } from '@ionic/core/components/med-accordion-item.js';
+import { defineCustomElement as defineMedAccordionList } from '@ionic/core/components/med-accordion-list.js';
+import { defineCustomElement as defineMedAddCard } from '@ionic/core/components/med-add-card.js';
 import { defineCustomElement as defineMedAgrupador } from '@ionic/core/components/med-agrupador.js';
+import { defineCustomElement as defineMedAlertFixed } from '@ionic/core/components/med-alert-fixed.js';
+import { defineCustomElement as defineMedAlternativas } from '@ionic/core/components/med-alternativas.js';
+import { defineCustomElement as defineMedAlternativasA } from '@ionic/core/components/med-alternativas-a.js';
+import { defineCustomElement as defineMedAlternativasB } from '@ionic/core/components/med-alternativas-b.js';
+import { defineCustomElement as defineMedAutocomplete } from '@ionic/core/components/med-autocomplete.js';
+import { defineCustomElement as defineMedBase } from '@ionic/core/components/med-base.js';
+import { defineCustomElement as defineMedCalendar } from '@ionic/core/components/med-calendar.js';
+import { defineCustomElement as defineMedCalendarDay } from '@ionic/core/components/med-calendar-day.js';
+import { defineCustomElement as defineMedCaption } from '@ionic/core/components/med-caption.js';
+import { defineCustomElement as defineMedCartaoRespostaItem } from '@ionic/core/components/med-cartao-resposta-item.js';
+import { defineCustomElement as defineMedCartaoRespostaLista } from '@ionic/core/components/med-cartao-resposta-lista.js';
+import { defineCustomElement as defineMedChartBar } from '@ionic/core/components/med-chart-bar.js';
+import { defineCustomElement as defineMedChartBarHorizontal } from '@ionic/core/components/med-chart-bar-horizontal.js';
+import { defineCustomElement as defineMedChartCategoria } from '@ionic/core/components/med-chart-categoria.js';
+import { defineCustomElement as defineMedChartRadial } from '@ionic/core/components/med-chart-radial.js';
+import { defineCustomElement as defineMedChartRadialContent } from '@ionic/core/components/med-chart-radial-content.js';
+import { defineCustomElement as defineMedChartRadialLabel } from '@ionic/core/components/med-chart-radial-label.js';
+import { defineCustomElement as defineMedCheckCard } from '@ionic/core/components/med-check-card.js';
+import { defineCustomElement as defineMedContextMenu } from '@ionic/core/components/med-context-menu.js';
+import { defineCustomElement as defineMedDownloadButton } from '@ionic/core/components/med-download-button.js';
+import { defineCustomElement as defineMedDropdown } from '@ionic/core/components/med-dropdown.js';
+import { defineCustomElement as defineMedEnunciado } from '@ionic/core/components/med-enunciado.js';
+import { defineCustomElement as defineMedEnunciadoDiscursiva } from '@ionic/core/components/med-enunciado-discursiva.js';
+import { defineCustomElement as defineMedFontZoom } from '@ionic/core/components/med-font-zoom.js';
+import { defineCustomElement as defineMedHeader } from '@ionic/core/components/med-header.js';
+import { defineCustomElement as defineMedImageZoom } from '@ionic/core/components/med-image-zoom.js';
+import { defineCustomElement as defineMedItem } from '@ionic/core/components/med-item.js';
+import { defineCustomElement as defineMedList } from '@ionic/core/components/med-list.js';
+import { defineCustomElement as defineMedListItem } from '@ionic/core/components/med-list-item.js';
+import { defineCustomElement as defineMedListItemAccordion } from '@ionic/core/components/med-list-item-accordion.js';
+import { defineCustomElement as defineMedNavbar } from '@ionic/core/components/med-navbar.js';
+import { defineCustomElement as defineMedOffline } from '@ionic/core/components/med-offline.js';
+import { defineCustomElement as defineMedOption } from '@ionic/core/components/med-option.js';
+import { defineCustomElement as defineMedPlusminus } from '@ionic/core/components/med-plusminus.js';
+import { defineCustomElement as defineMedRateBar } from '@ionic/core/components/med-rate-bar.js';
+import { defineCustomElement as defineMedRateLike } from '@ionic/core/components/med-rate-like.js';
+import { defineCustomElement as defineMedTiles } from '@ionic/core/components/med-tiles.js';
+import { defineCustomElement as defineMedToggle } from '@ionic/core/components/med-toggle.js';
+import { defineCustomElement as defineMedToolbar } from '@ionic/core/components/med-toolbar.js';
+import { defineCustomElement as defineMedTooltip } from '@ionic/core/components/med-tooltip.js';
+import { defineCustomElement as defineMedType } from '@ionic/core/components/med-type.js';
+import { defineCustomElement as defineMedVideoThumbnail } from '@ionic/core/components/med-video-thumbnail.js';
+import { defineCustomElement as defineTpAccordion } from '@ionic/core/components/tp-accordion.js';
+import { defineCustomElement as defineTpAccordionGroup } from '@ionic/core/components/tp-accordion-group.js';
+import { defineCustomElement as defineTpChartBar } from '@ionic/core/components/tp-chart-bar.js';
+import { defineCustomElement as defineTpInputContainer } from '@ionic/core/components/tp-input-container.js';
+import { defineCustomElement as defineTpLoader } from '@ionic/core/components/tp-loader.js';
 
 
 export const IonAccordion = /*@__PURE__*/ defineContainer<JSX.IonAccordion>('ion-accordion', defineIonAccordion, [
@@ -864,10 +914,475 @@ export const IonToolbar = /*@__PURE__*/ defineContainer<JSX.IonToolbar>('ion-too
 ]);
 
 
+export const MedAccordionItem = /*@__PURE__*/ defineContainer<JSX.MedAccordionItem>('med-accordion-item', defineMedAccordionItem, [
+  'dsColor',
+  'noBorder',
+  'background',
+  'canCollapse',
+  'isOpened',
+  'slotsToggle',
+  'toggle',
+  'opened',
+  'medClick'
+]);
+
+
+export const MedAccordionList = /*@__PURE__*/ defineContainer<JSX.MedAccordionList>('med-accordion-list', defineMedAccordionList, [
+  'margin',
+  'singleOpen',
+  'noBorder',
+  'noAnimation'
+]);
+
+
+export const MedAddCard = /*@__PURE__*/ defineContainer<JSX.MedAddCard>('med-add-card', defineMedAddCard, [
+  'titulo',
+  'iconName'
+]);
+
+
 export const MedAgrupador = /*@__PURE__*/ defineContainer<JSX.MedAgrupador>('med-agrupador', defineMedAgrupador, [
   'dsColor',
   'labelDefault',
   'labelAlternativo',
   'collapsed'
+]);
+
+
+export const MedAlertFixed = /*@__PURE__*/ defineContainer<JSX.MedAlertFixed>('med-alert-fixed', defineMedAlertFixed, [
+  'dsColor',
+  'dsName',
+  'labelOffline',
+  'labelAtualizar'
+]);
+
+
+export const MedAlternativas = /*@__PURE__*/ defineContainer<JSX.MedAlternativas>('med-alternativas', defineMedAlternativas, [
+  'dsColor',
+  'alternativas',
+  'dsSkinConfig',
+  'keyAlternativa',
+  'keyEnunciado',
+  'keyImagem',
+  'keyPorcentagem',
+  'keyRiscada',
+  'respostaCorreta',
+  'mostraResposta',
+  'alternativaSelecionada',
+  'permiteRiscar',
+  'permiteDesmarcar'
+]);
+
+
+export const MedAlternativasA = /*@__PURE__*/ defineContainer<JSX.MedAlternativasA>('med-alternativas-a', defineMedAlternativasA, [
+  'dsSkin',
+  'dsSkinConfig',
+  'dsColor',
+  'alternativas',
+  'keyAlternativa',
+  'keyEnunciado',
+  'keyImagem',
+  'keyPorcentagem',
+  'keyRiscada',
+  'respostaCorreta',
+  'mostraResposta',
+  'alternativaSelecionada',
+  'permiteRiscar',
+  'permiteDesmarcar',
+  'medChange',
+  'medRiscada',
+  'medGalleryRequest'
+]);
+
+
+export const MedAlternativasB = /*@__PURE__*/ defineContainer<JSX.MedAlternativasB>('med-alternativas-b', defineMedAlternativasB, [
+  'dsColor',
+  'dsSkin',
+  'dsSkinConfig',
+  'alternativas',
+  'keyAlternativa',
+  'keyEnunciado',
+  'keyImagem',
+  'keyPorcentagem',
+  'keyRiscada',
+  'respostaCorreta',
+  'mostraResposta',
+  'alternativaSelecionada',
+  'permiteRiscar',
+  'permiteDesmarcar',
+  'medChange',
+  'medRiscada',
+  'medGalleryRequest'
+]);
+
+
+export const MedAutocomplete = /*@__PURE__*/ defineContainer<JSX.MedAutocomplete>('med-autocomplete', defineMedAutocomplete, [
+  'dropdown',
+  'debounceTime'
+]);
+
+
+export const MedBase = /*@__PURE__*/ defineContainer<JSX.MedBase>('med-base', defineMedBase, [
+  'dsColor',
+  'radius',
+  'gap',
+  'spacingV',
+  'spacingH'
+]);
+
+
+export const MedCalendar = /*@__PURE__*/ defineContainer<JSX.MedCalendar>('med-calendar', defineMedCalendar, [
+  'dsColor',
+  'mes',
+  'ano',
+  'container',
+  'disable',
+  'choice',
+  'medClick',
+  'medSwipe'
+]);
+
+
+export const MedCalendarDay = /*@__PURE__*/ defineContainer<JSX.MedCalendarDay>('med-calendar-day', defineMedCalendarDay, [
+  'dsColor',
+  'active',
+  'fill'
+]);
+
+
+export const MedCaption = /*@__PURE__*/ defineContainer<JSX.MedCaption>('med-caption', defineMedCaption, [
+  'dsColor',
+  'dsSize'
+]);
+
+
+export const MedCartaoRespostaItem = /*@__PURE__*/ defineContainer<JSX.MedCartaoRespostaItem>('med-cartao-resposta-item', defineMedCartaoRespostaItem, [
+  'dsColor',
+  'anulada',
+  'impressa',
+  'ativa'
+]);
+
+
+export const MedCartaoRespostaLista = /*@__PURE__*/ defineContainer<JSX.MedCartaoRespostaLista>('med-cartao-resposta-lista', defineMedCartaoRespostaLista, [
+  'isFlex'
+]);
+
+
+export const MedChartBar = /*@__PURE__*/ defineContainer<JSX.MedChartBar>('med-chart-bar', defineMedChartBar, [
+  'dsColor',
+  'value',
+  'height',
+  'width',
+  'noLabel'
+]);
+
+
+export const MedChartBarHorizontal = /*@__PURE__*/ defineContainer<JSX.MedChartBarHorizontal>('med-chart-bar-horizontal', defineMedChartBarHorizontal, [
+  'dsColor',
+  'dsSize',
+  'label',
+  'hideValue',
+  'value',
+  'labelContent'
+]);
+
+
+export const MedChartCategoria = /*@__PURE__*/ defineContainer<JSX.MedChartCategoria>('med-chart-categoria', defineMedChartCategoria, [
+  'dsColor',
+  'value',
+  'titulo',
+  'meta',
+  'realizado'
+]);
+
+
+export const MedChartRadial = /*@__PURE__*/ defineContainer<JSX.MedChartRadial>('med-chart-radial', defineMedChartRadial, [
+  'dsColor',
+  'dsName',
+  'dsSize',
+  'valores',
+  'titulo',
+  'subtitulo'
+]);
+
+
+export const MedChartRadialContent = /*@__PURE__*/ defineContainer<JSX.MedChartRadialContent>('med-chart-radial-content', defineMedChartRadialContent, [
+  'total',
+  'dsColor',
+  'dsSize'
+]);
+
+
+export const MedChartRadialLabel = /*@__PURE__*/ defineContainer<JSX.MedChartRadialLabel>('med-chart-radial-label', defineMedChartRadialLabel, [
+  'valores',
+  'dsColor',
+  'dsSize'
+]);
+
+
+export const MedCheckCard = /*@__PURE__*/ defineContainer<JSX.MedCheckCard>('med-check-card', defineMedCheckCard, [
+  'dsColor',
+  'alert',
+  'titulo',
+  'categoria',
+  'horaInicial',
+  'horaFinal',
+  'dataInicial',
+  'dataFinal',
+  'finalizada',
+  'iconName',
+  'medClick',
+  'medTooltipClose'
+]);
+
+
+export const MedContextMenu = /*@__PURE__*/ defineContainer<JSX.MedContextMenu>('med-context-menu', defineMedContextMenu, [
+  'collapsed'
+]);
+
+
+export const MedDownloadButton = /*@__PURE__*/ defineContainer<JSX.MedDownloadButton>('med-download-button', defineMedDownloadButton, [
+  'dsColor',
+  'value',
+  'downloading',
+  'downloaded',
+  'disabled',
+  'dsSize',
+  'index',
+  'identification',
+  'medDownloadRequested'
+]);
+
+
+export const MedDropdown = /*@__PURE__*/ defineContainer<JSX.MedDropdown>('med-dropdown', defineMedDropdown, [
+  'dsName'
+]);
+
+
+export const MedEnunciado = /*@__PURE__*/ defineContainer<JSX.MedEnunciado>('med-enunciado', defineMedEnunciado, [
+  'imagens',
+  'dsName',
+  'content',
+  'medGalleryRequest'
+]);
+
+
+export const MedEnunciadoDiscursiva = /*@__PURE__*/ defineContainer<JSX.MedEnunciadoDiscursiva>('med-enunciado-discursiva', defineMedEnunciadoDiscursiva, [
+  'imagens',
+  'medGalleryRequest'
+]);
+
+
+export const MedFontZoom = /*@__PURE__*/ defineContainer<JSX.MedFontZoom>('med-font-zoom', defineMedFontZoom, [
+  'emitter',
+  'value'
+]);
+
+
+export const MedHeader = /*@__PURE__*/ defineContainer<JSX.MedHeader>('med-header', defineMedHeader, [
+  'medResize'
+]);
+
+
+export const MedImageZoom = /*@__PURE__*/ defineContainer<JSX.MedImageZoom>('med-image-zoom', defineMedImageZoom, [
+  'imagens',
+  'marcaAguaSuperior',
+  'marcaAguaInferior',
+  'titulo',
+  'initialSlide'
+]);
+
+
+export const MedItem = /*@__PURE__*/ defineContainer<JSX.MedItem>('med-item', defineMedItem, [
+  'dsColor',
+  'contain',
+  'noPadding',
+  'button',
+  'detail',
+  'detailIcon',
+  'disabled',
+  'download',
+  'href',
+  'rel',
+  'lines',
+  'routerAnimation',
+  'routerDirection',
+  'target',
+  'type'
+]);
+
+
+export const MedList = /*@__PURE__*/ defineContainer<JSX.MedList>('med-list', defineMedList, [
+  'dsColor',
+  'margin'
+]);
+
+
+export const MedListItem = /*@__PURE__*/ defineContainer<JSX.MedListItem>('med-list-item', defineMedListItem, [
+  'dsColor',
+  'titulo',
+  'label',
+  'selected',
+  'dsSize',
+  'border',
+  'disabled'
+]);
+
+
+export const MedListItemAccordion = /*@__PURE__*/ defineContainer<JSX.MedListItemAccordion>('med-list-item-accordion', defineMedListItemAccordion, [
+  'titulo',
+  'label',
+  'dsColor',
+  'selected',
+  'dsSize',
+  'margin',
+  'border',
+  'collapsed',
+  'disabled'
+]);
+
+
+export const MedNavbar = /*@__PURE__*/ defineContainer<JSX.MedNavbar>('med-navbar', defineMedNavbar, [
+  'dsColor',
+  'dsName'
+]);
+
+
+export const MedOffline = /*@__PURE__*/ defineContainer<JSX.MedOffline>('med-offline', defineMedOffline, [
+  'medClick'
+]);
+
+
+export const MedOption = /*@__PURE__*/ defineContainer<JSX.MedOption>('med-option', defineMedOption, [
+  'dsColor'
+]);
+
+
+export const MedPlusminus = /*@__PURE__*/ defineContainer<JSX.MedPlusminus>('med-plusminus', defineMedPlusminus, [
+  'dsColor',
+  'dsSize',
+  'disabled',
+  'automaticDisabled',
+  'useSlot',
+  'value',
+  'min',
+  'max',
+  'medChange',
+  'medChangeAlt'
+]);
+
+
+export const MedRateBar = /*@__PURE__*/ defineContainer<JSX.MedRateBar>('med-rate-bar', defineMedRateBar, [
+  'dsColor'
+]);
+
+
+export const MedRateLike = /*@__PURE__*/ defineContainer<JSX.MedRateLike>('med-rate-like', defineMedRateLike, [
+  'status',
+  'medChange'
+]);
+
+
+export const MedTiles = /*@__PURE__*/ defineContainer<JSX.MedTiles>('med-tiles', defineMedTiles, [
+  'dsColor',
+  'titulo',
+  'label',
+  'badge',
+  'solid',
+  'selected'
+]);
+
+
+export const MedToggle = /*@__PURE__*/ defineContainer<JSX.MedToggle>('med-toggle', defineMedToggle, [
+  'dsColor',
+  'collapsed',
+  'iconClick'
+]);
+
+
+export const MedToolbar = /*@__PURE__*/ defineContainer<JSX.MedToolbar>('med-toolbar', defineMedToolbar, [
+  'dsColor'
+]);
+
+
+export const MedTooltip = /*@__PURE__*/ defineContainer<JSX.MedTooltip>('med-tooltip', defineMedTooltip, [
+  'enableHover',
+  'dsColor',
+  'placement',
+  'position',
+  'titulo',
+  'content',
+  'btnLeft',
+  'btnRight',
+  'collapsed',
+  'btnLeftClick',
+  'btnRightClick'
+]);
+
+
+export const MedType = /*@__PURE__*/ defineContainer<JSX.MedType>('med-type', defineMedType, [
+  'dsColor',
+  'token',
+  'tag'
+]);
+
+
+export const MedVideoThumbnail = /*@__PURE__*/ defineContainer<JSX.MedVideoThumbnail>('med-video-thumbnail', defineMedVideoThumbnail, [
+  'dsColor',
+  'url',
+  'value'
+]);
+
+
+export const TpAccordion = /*@__PURE__*/ defineContainer<JSX.TpAccordion>('tp-accordion', defineTpAccordion, [
+  'value',
+  'disabled',
+  'readonly',
+  'toggleIcon',
+  'toggleIconSlot'
+]);
+
+
+export const TpAccordionGroup = /*@__PURE__*/ defineContainer<JSX.TpAccordionGroup>('tp-accordion-group', defineTpAccordionGroup, [
+  'animated',
+  'multiple',
+  'value',
+  'disabled',
+  'readonly',
+  'expand',
+  'ionChange',
+  'ionValueChange'
+]);
+
+
+export const TpChartBar = /*@__PURE__*/ defineContainer<JSX.TpChartBar>('tp-chart-bar', defineTpChartBar, [
+  'dsColor',
+  'dsName',
+  'label',
+  'labelSize',
+  'height',
+  'bar',
+  'hasMarker',
+  'deactivated',
+  'marker'
+]);
+
+
+export const TpInputContainer = /*@__PURE__*/ defineContainer<JSX.TpInputContainer>('tp-input-container', defineTpInputContainer, [
+  'dsColor',
+  'dsName',
+  'disabled',
+  'feedback',
+  'inverted',
+  'hasButton',
+  'hasIcon'
+]);
+
+
+export const TpLoader = /*@__PURE__*/ defineContainer<JSX.TpLoader>('tp-loader', defineTpLoader, [
+  'dsColor',
+  'fixed',
+  'dsName'
 ]);
 

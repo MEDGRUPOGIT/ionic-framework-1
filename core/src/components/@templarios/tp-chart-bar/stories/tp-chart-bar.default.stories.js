@@ -1,5 +1,5 @@
 import { html } from "lit-html";
-import { MedColors } from "../../../@templarios/templarios";
+import { MedColors } from "../../../../@templarios/templarios";
 
 export default {
   title: "Components/Tp Chart Bar",
@@ -16,12 +16,14 @@ const Template = ({
   deactivated,
   marker,
 }) => {
-  setInterval(() => {
+
+
+ /*  setInterval(() => {
     const chartBar = document.querySelector("tp-chart-bar");
 
     chartBar.bar = bar.valores;
     chartBar.marker = marker.valores;
-  }, 0);
+  }, 0); */
 
   return html`
     <style>
@@ -56,12 +58,6 @@ const Template = ({
 };
 
 export const Default = Template.bind({});
-Default.parameters = {
-  design: {
-    type: "figma",
-    url: "https://www.figma.com/file/2j9jNt3PmQXpzD3IQJkyZe/Componentes?node-id=11906%3A47663",
-  },
-};
 Default.argTypes = {
   dsColor: {
     options: Object.values(MedColors),

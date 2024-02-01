@@ -1,10 +1,8 @@
 import { html } from "lit-html";
-import { withDesign } from "storybook-addon-designs";
-import { MedColors } from "../../../@templarios/templarios";
+import { MedColors } from "../../../../@templarios/templarios";
 
 export default {
-  title: "Components/Loader",
-  decorators: [withDesign],
+  title: "Components/Loader"
 };
 
 const Template = ({ "ds-color": dsColor, fixed }) => {

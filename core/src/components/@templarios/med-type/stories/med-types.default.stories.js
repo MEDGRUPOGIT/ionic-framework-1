@@ -1,5 +1,5 @@
 import { html } from 'lit-html';
-import { MedColors, MedType, MedTypeTag } from '../../../@templarios/templarios';
+import { MedColors, MedType, MedTypeTag } from '../../../../@templarios/templarios';
 
 export default {
   title: 'Components/Type',
