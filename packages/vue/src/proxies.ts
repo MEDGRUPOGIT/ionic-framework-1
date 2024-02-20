@@ -1269,6 +1269,9 @@ export const MedNavbar = /*@__PURE__*/ defineContainer<JSX.MedNavbar>('med-navba
 
 
 export const MedOffline = /*@__PURE__*/ defineContainer<JSX.MedOffline>('med-offline', [
+  'titulo',
+  'subtitulo',
+  'texto',
   'medClick'
 ]);
 

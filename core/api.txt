@@ -1735,6 +1735,9 @@ med-navbar,prop,dsColor,string | undefined,undefined,false,true
 med-navbar,prop,dsName,"secondary" | "transparent" | undefined,undefined,false,false
 
 med-offline,scoped
+med-offline,prop,subtitulo,string,'Você está offline',false,true
+med-offline,prop,texto,string,'Conecte-se à internet para visualizar esse conteúdo',false,true
+med-offline,prop,titulo,string,'Página Indisponível',false,true
 med-offline,event,medClick,void,true
 
 med-option,shadow

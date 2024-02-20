@@ -5,6 +5,15 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property    | Attribute   | Description | Type     | Default                                                 |
+| ----------- | ----------- | ----------- | -------- | ------------------------------------------------------- |
+| `subtitulo` | `subtitulo` | todo        | `string` | `'Você está offline'`                                   |
+| `texto`     | `texto`     | todo        | `string` | `'Conecte-se à internet para visualizar esse conteúdo'` |
+| `titulo`    | `titulo`    | todo        | `string` | `'Página Indisponível'`                                 |
+
+
 ## Events
 
 | Event      | Description | Type                |

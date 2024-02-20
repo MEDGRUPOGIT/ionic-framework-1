@@ -1557,7 +1557,8 @@ export class MedNavbar {
 }
 export declare interface MedOffline extends Components.MedOffline {
 }
-@Component({ selector: "med-offline", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>" })
+@ProxyCmp({ inputs: ["subtitulo", "texto", "titulo"] })
+@Component({ selector: "med-offline", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["subtitulo", "texto", "titulo"] })
 export class MedOffline {
   medClick!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
