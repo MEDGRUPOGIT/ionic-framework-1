@@ -1,4 +1,4 @@
-import { Component, Event, EventEmitter, h, Host } from '@stencil/core';
+import { Component, Event, EventEmitter, h, Host, Prop } from '@stencil/core';
 
 @Component({
   tag: 'med-offline',
@@ -6,6 +6,20 @@ import { Component, Event, EventEmitter, h, Host } from '@stencil/core';
   scoped: true,
 })
 export class MedOffline {
+  /**
+   * todo
+   */
+     @Prop({ reflect: true }) titulo: string = 'Página Indisponível';
+
+  /**
+   * todo
+   */
+   @Prop({ reflect: true }) subtitulo: string = 'Você está offline';
+
+  /**
+   * todo
+   */
+   @Prop({ reflect: true }) texto: string = 'Conecte-se à internet para visualizar esse conteúdo';
 
   /**
    * todo
@@ -17,6 +31,8 @@ export class MedOffline {
   }
 
   render() {
+    const { titulo, subtitulo, texto } = this;
+
     return (
       <Host from-stencil>
         <div class="wrapper">
@@ -27,10 +43,13 @@ export class MedOffline {
               </ion-button>
             </med-navbar>
           </med-header>
+
+          <h1 class="title">{titulo}</h1>
+
           <div class="wrapper__content">
-            <ion-icon class="med-icon med-icon--lg icon-path" name="med-offline2" ></ion-icon>
-            <p class="title">Você está offline</p>
-            <p class="text">Conecte-se à internet para visualizar esse conteúdo</p>
+            <ion-icon class="med-icon med-icon--lg wrapper__icon" name="med-offline2" ></ion-icon>
+            <p class="subtitle">{subtitulo}</p>
+            <p class="text">{texto}</p>
           </div>
         </div>
       </Host>

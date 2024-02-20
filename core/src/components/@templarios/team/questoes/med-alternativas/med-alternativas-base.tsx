@@ -73,7 +73,7 @@ export class MedAlternativasBase {
     if (alternativa.Riscada && this.parent.permiteRiscar) {
       return;
     }
-    console.log('permiteDesmarcar..........', this.parent.permiteDesmarcar);
+
     if (this.parent.alternativaSelecionada === alternativa.Alternativa && this.parent.permiteDesmarcar) {
       this.parent.alternativaSelecionada = '';
       return this.parent.medChange?.emit({...alternativa, Alternativa: ''});
