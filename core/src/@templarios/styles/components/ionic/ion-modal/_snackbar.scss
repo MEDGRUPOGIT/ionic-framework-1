@@ -17,6 +17,15 @@
   left: initial !important;
   contain: initial !important;
 
+  &--transparent {
+    --tp-snackbar-background: transparent;
+    --box-shadow: none !important;
+  }
+
+  &--limited-width {
+    --max-width: 520px;
+  }
+
   @include breakpoint-down("sm") {
     --width: 100% !important;
     width: 100%;
