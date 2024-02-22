@@ -17,6 +17,11 @@
   left: initial !important;
   contain: initial !important;
 
+  @include breakpoint-down('sm') {
+    min-width: 100% !important;
+    --min-width: 100% !important;
+  }
+
   &--transparent {
     --tp-snackbar-background: transparent !important;
     --background: transparent !important;
@@ -37,9 +42,9 @@
     width: 0;
   }
 
-  .modal-wrapper {
-    padding: 16px;
-  }
+  // .modal-wrapper {
+  //   padding: 16px;
+  // }
 
   .ion-page {
     left: unset;
