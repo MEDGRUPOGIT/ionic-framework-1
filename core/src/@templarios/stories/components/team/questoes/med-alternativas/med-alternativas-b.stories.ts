@@ -17,7 +17,7 @@ const Template = ({ alternativas, dsColor }) => {
     for (const key in alternativas) {
       alternativasEl[key] = alternativas[key];
     }
-  }, 3000);
+  }, 0);
 
   const createModal = async (imagemUrl) => {
     modalController.create({
