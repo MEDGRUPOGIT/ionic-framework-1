@@ -2906,6 +2906,10 @@ export namespace Components {
         /**
           * todo
          */
+        "permiteDesmarcar": boolean;
+        /**
+          * todo
+         */
         "permiteRiscar": boolean;
         /**
           * todo
@@ -2960,6 +2964,10 @@ export namespace Components {
         /**
           * todo
          */
+        "permiteDesmarcar": boolean;
+        /**
+          * todo
+         */
         "permiteRiscar": boolean;
         /**
           * todo
@@ -3011,6 +3019,10 @@ export namespace Components {
           * todo
          */
         "mostraResposta": boolean;
+        /**
+          * todo
+         */
+        "permiteDesmarcar": boolean;
         /**
           * todo
          */
@@ -3734,6 +3746,18 @@ export namespace Components {
         "dsName"?: 'secondary' | 'transparent';
     }
     interface MedOffline {
+        /**
+          * todo
+         */
+        "subtitulo": string;
+        /**
+          * todo
+         */
+        "texto": string;
+        /**
+          * todo
+         */
+        "titulo": string;
     }
     interface MedOption {
         /**
@@ -8697,6 +8721,10 @@ declare namespace LocalJSX {
         /**
           * todo
          */
+        "permiteDesmarcar"?: boolean;
+        /**
+          * todo
+         */
         "permiteRiscar"?: boolean;
         /**
           * todo
@@ -8763,6 +8791,10 @@ declare namespace LocalJSX {
         /**
           * todo
          */
+        "permiteDesmarcar"?: boolean;
+        /**
+          * todo
+         */
         "permiteRiscar"?: boolean;
         /**
           * todo
@@ -8826,6 +8858,10 @@ declare namespace LocalJSX {
           * todo
          */
         "onMedRiscada"?: (event: MedAlternativasBCustomEvent<MedAlternativaInterface>) => void;
+        /**
+          * todo
+         */
+        "permiteDesmarcar"?: boolean;
         /**
           * todo
          */
@@ -9612,6 +9648,18 @@ declare namespace LocalJSX {
           * todo
          */
         "onMedClick"?: (event: MedOfflineCustomEvent<void>) => void;
+        /**
+          * todo
+         */
+        "subtitulo"?: string;
+        /**
+          * todo
+         */
+        "texto"?: string;
+        /**
+          * todo
+         */
+        "titulo"?: string;
     }
     interface MedOption {
         /**
