@@ -7,6 +7,7 @@ import {
   distanciaEuclidiana,
   getPositionFromEvent
 } from '../../../../../@templarios/utilities/position';
+import { isPlatform } from '../../../../../utils/platform';
 
 export class MedAlternativasBase {
   private dataStart!: Date;
@@ -42,6 +43,8 @@ export class MedAlternativasBase {
   }
 
   public onTouchStart(event: any, indice: number) {
+    if (isPlatform('mobile') && event.type !== 'touchstart') return;
+
     if (
       event.target
         .closest('.med-alternativas__riscar')
@@ -66,6 +69,8 @@ export class MedAlternativasBase {
   }
 
   public onTouchEnd(event: any, alternativa: MedAlternativaInterface) {
+    if (isPlatform('mobile') && event.type !== 'touchend') return;
+
     if (
       event.target
         .closest('.med-alternativas__riscar')
