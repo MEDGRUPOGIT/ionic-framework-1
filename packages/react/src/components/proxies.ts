@@ -69,6 +69,8 @@ import { defineCustomElement as defineIonThumbnail } from '@ionic/core/component
 import { defineCustomElement as defineIonTitle } from '@ionic/core/components/ion-title.js';
 import { defineCustomElement as defineIonToggle } from '@ionic/core/components/ion-toggle.js';
 import { defineCustomElement as defineIonToolbar } from '@ionic/core/components/ion-toolbar.js';
+import { defineCustomElement as defineMedAccordion } from '@ionic/core/components/med-accordion.js';
+import { defineCustomElement as defineMedAccordionGroup } from '@ionic/core/components/med-accordion-group.js';
 import { defineCustomElement as defineMedAccordionItem } from '@ionic/core/components/med-accordion-item.js';
 import { defineCustomElement as defineMedAccordionList } from '@ionic/core/components/med-accordion-list.js';
 import { defineCustomElement as defineMedAddCard } from '@ionic/core/components/med-add-card.js';
@@ -85,6 +87,7 @@ import { defineCustomElement as defineMedCaption } from '@ionic/core/components/
 import { defineCustomElement as defineMedCartaoRespostaItem } from '@ionic/core/components/med-cartao-resposta-item.js';
 import { defineCustomElement as defineMedCartaoRespostaLista } from '@ionic/core/components/med-cartao-resposta-lista.js';
 import { defineCustomElement as defineMedChartBar } from '@ionic/core/components/med-chart-bar.js';
+import { defineCustomElement as defineMedChartBar2 } from '@ionic/core/components/med-chart-bar-2.js';
 import { defineCustomElement as defineMedChartBarHorizontal } from '@ionic/core/components/med-chart-bar-horizontal.js';
 import { defineCustomElement as defineMedChartCategoria } from '@ionic/core/components/med-chart-categoria.js';
 import { defineCustomElement as defineMedChartRadial } from '@ionic/core/components/med-chart-radial.js';
@@ -103,6 +106,7 @@ import { defineCustomElement as defineMedItem } from '@ionic/core/components/med
 import { defineCustomElement as defineMedList } from '@ionic/core/components/med-list.js';
 import { defineCustomElement as defineMedListItem } from '@ionic/core/components/med-list-item.js';
 import { defineCustomElement as defineMedListItemAccordion } from '@ionic/core/components/med-list-item-accordion.js';
+import { defineCustomElement as defineMedLoader } from '@ionic/core/components/med-loader.js';
 import { defineCustomElement as defineMedNavbar } from '@ionic/core/components/med-navbar.js';
 import { defineCustomElement as defineMedOffline } from '@ionic/core/components/med-offline.js';
 import { defineCustomElement as defineMedOption } from '@ionic/core/components/med-option.js';
@@ -115,11 +119,6 @@ import { defineCustomElement as defineMedToolbar } from '@ionic/core/components/
 import { defineCustomElement as defineMedTooltip } from '@ionic/core/components/med-tooltip.js';
 import { defineCustomElement as defineMedType } from '@ionic/core/components/med-type.js';
 import { defineCustomElement as defineMedVideoThumbnail } from '@ionic/core/components/med-video-thumbnail.js';
-import { defineCustomElement as defineTpAccordion } from '@ionic/core/components/tp-accordion.js';
-import { defineCustomElement as defineTpAccordionGroup } from '@ionic/core/components/tp-accordion-group.js';
-import { defineCustomElement as defineTpChartBar } from '@ionic/core/components/tp-chart-bar.js';
-import { defineCustomElement as defineTpInputContainer } from '@ionic/core/components/tp-input-container.js';
-import { defineCustomElement as defineTpLoader } from '@ionic/core/components/tp-loader.js';
 
 export const IonAccordion = /*@__PURE__*/createReactComponent<JSX.IonAccordion, HTMLIonAccordionElement>('ion-accordion', undefined, undefined, defineIonAccordion);
 export const IonAccordionGroup = /*@__PURE__*/createReactComponent<JSX.IonAccordionGroup, HTMLIonAccordionGroupElement>('ion-accordion-group', undefined, undefined, defineIonAccordionGroup);
@@ -185,6 +184,8 @@ export const IonThumbnail = /*@__PURE__*/createReactComponent<JSX.IonThumbnail, 
 export const IonTitle = /*@__PURE__*/createReactComponent<JSX.IonTitle, HTMLIonTitleElement>('ion-title', undefined, undefined, defineIonTitle);
 export const IonToggle = /*@__PURE__*/createReactComponent<JSX.IonToggle, HTMLIonToggleElement>('ion-toggle', undefined, undefined, defineIonToggle);
 export const IonToolbar = /*@__PURE__*/createReactComponent<JSX.IonToolbar, HTMLIonToolbarElement>('ion-toolbar', undefined, undefined, defineIonToolbar);
+export const MedAccordion = /*@__PURE__*/createReactComponent<JSX.MedAccordion, HTMLMedAccordionElement>('med-accordion', undefined, undefined, defineMedAccordion);
+export const MedAccordionGroup = /*@__PURE__*/createReactComponent<JSX.MedAccordionGroup, HTMLMedAccordionGroupElement>('med-accordion-group', undefined, undefined, defineMedAccordionGroup);
 export const MedAccordionItem = /*@__PURE__*/createReactComponent<JSX.MedAccordionItem, HTMLMedAccordionItemElement>('med-accordion-item', undefined, undefined, defineMedAccordionItem);
 export const MedAccordionList = /*@__PURE__*/createReactComponent<JSX.MedAccordionList, HTMLMedAccordionListElement>('med-accordion-list', undefined, undefined, defineMedAccordionList);
 export const MedAddCard = /*@__PURE__*/createReactComponent<JSX.MedAddCard, HTMLMedAddCardElement>('med-add-card', undefined, undefined, defineMedAddCard);
@@ -201,6 +202,7 @@ export const MedCaption = /*@__PURE__*/createReactComponent<JSX.MedCaption, HTML
 export const MedCartaoRespostaItem = /*@__PURE__*/createReactComponent<JSX.MedCartaoRespostaItem, HTMLMedCartaoRespostaItemElement>('med-cartao-resposta-item', undefined, undefined, defineMedCartaoRespostaItem);
 export const MedCartaoRespostaLista = /*@__PURE__*/createReactComponent<JSX.MedCartaoRespostaLista, HTMLMedCartaoRespostaListaElement>('med-cartao-resposta-lista', undefined, undefined, defineMedCartaoRespostaLista);
 export const MedChartBar = /*@__PURE__*/createReactComponent<JSX.MedChartBar, HTMLMedChartBarElement>('med-chart-bar', undefined, undefined, defineMedChartBar);
+export const MedChartBar2 = /*@__PURE__*/createReactComponent<JSX.MedChartBar2, HTMLMedChartBar2Element>('med-chart-bar-2', undefined, undefined, defineMedChartBar2);
 export const MedChartBarHorizontal = /*@__PURE__*/createReactComponent<JSX.MedChartBarHorizontal, HTMLMedChartBarHorizontalElement>('med-chart-bar-horizontal', undefined, undefined, defineMedChartBarHorizontal);
 export const MedChartCategoria = /*@__PURE__*/createReactComponent<JSX.MedChartCategoria, HTMLMedChartCategoriaElement>('med-chart-categoria', undefined, undefined, defineMedChartCategoria);
 export const MedChartRadial = /*@__PURE__*/createReactComponent<JSX.MedChartRadial, HTMLMedChartRadialElement>('med-chart-radial', undefined, undefined, defineMedChartRadial);
@@ -219,6 +221,7 @@ export const MedItem = /*@__PURE__*/createReactComponent<JSX.MedItem, HTMLMedIte
 export const MedList = /*@__PURE__*/createReactComponent<JSX.MedList, HTMLMedListElement>('med-list', undefined, undefined, defineMedList);
 export const MedListItem = /*@__PURE__*/createReactComponent<JSX.MedListItem, HTMLMedListItemElement>('med-list-item', undefined, undefined, defineMedListItem);
 export const MedListItemAccordion = /*@__PURE__*/createReactComponent<JSX.MedListItemAccordion, HTMLMedListItemAccordionElement>('med-list-item-accordion', undefined, undefined, defineMedListItemAccordion);
+export const MedLoader = /*@__PURE__*/createReactComponent<JSX.MedLoader, HTMLMedLoaderElement>('med-loader', undefined, undefined, defineMedLoader);
 export const MedNavbar = /*@__PURE__*/createReactComponent<JSX.MedNavbar, HTMLMedNavbarElement>('med-navbar', undefined, undefined, defineMedNavbar);
 export const MedOffline = /*@__PURE__*/createReactComponent<JSX.MedOffline, HTMLMedOfflineElement>('med-offline', undefined, undefined, defineMedOffline);
 export const MedOption = /*@__PURE__*/createReactComponent<JSX.MedOption, HTMLMedOptionElement>('med-option', undefined, undefined, defineMedOption);
@@ -231,8 +234,3 @@ export const MedToolbar = /*@__PURE__*/createReactComponent<JSX.MedToolbar, HTML
 export const MedTooltip = /*@__PURE__*/createReactComponent<JSX.MedTooltip, HTMLMedTooltipElement>('med-tooltip', undefined, undefined, defineMedTooltip);
 export const MedType = /*@__PURE__*/createReactComponent<JSX.MedType, HTMLMedTypeElement>('med-type', undefined, undefined, defineMedType);
 export const MedVideoThumbnail = /*@__PURE__*/createReactComponent<JSX.MedVideoThumbnail, HTMLMedVideoThumbnailElement>('med-video-thumbnail', undefined, undefined, defineMedVideoThumbnail);
-export const TpAccordion = /*@__PURE__*/createReactComponent<JSX.TpAccordion, HTMLTpAccordionElement>('tp-accordion', undefined, undefined, defineTpAccordion);
-export const TpAccordionGroup = /*@__PURE__*/createReactComponent<JSX.TpAccordionGroup, HTMLTpAccordionGroupElement>('tp-accordion-group', undefined, undefined, defineTpAccordionGroup);
-export const TpChartBar = /*@__PURE__*/createReactComponent<JSX.TpChartBar, HTMLTpChartBarElement>('tp-chart-bar', undefined, undefined, defineTpChartBar);
-export const TpInputContainer = /*@__PURE__*/createReactComponent<JSX.TpInputContainer, HTMLTpInputContainerElement>('tp-input-container', undefined, undefined, defineTpInputContainer);
-export const TpLoader = /*@__PURE__*/createReactComponent<JSX.TpLoader, HTMLTpLoaderElement>('tp-loader', undefined, undefined, defineTpLoader);

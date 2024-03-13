@@ -1,31 +1,21 @@
-import type { ComponentInterface, EventEmitter } from "@stencil/core";
-import {
-  Component,
-  Element,
-  Event,
-  Host,
-  Listen,
-  Method,
-  Prop,
-  Watch,
-  h,
-} from "@stencil/core";
-import { getIonMode } from "../../../global/ionic-global";
-import { printIonWarning } from "../../../utils/logging";
-import type { TpAccordionGroupChangeEventDetail } from "./tp-accordion-group-interface";
+import type { ComponentInterface, EventEmitter } from '@stencil/core';
+import { Component, Element, Event, Host, Listen, Method, Prop, Watch, h } from '@stencil/core';
+import { getIonMode } from '../../../global/ionic-global';
+import { printIonWarning } from '../../../utils/logging';
+import type { TpAccordionGroupChangeEventDetail } from './tp-accordion-group-interface';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
  */
 @Component({
-  tag: "tp-accordion-group",
+  tag: 'med-accordion-group',
   styleUrls: {
-    ios: "tp-accordion-group.ios.scss",
-    md: "tp-accordion-group.md.scss",
+    ios: 'tp-accordion-group.ios.scss',
+    md: 'tp-accordion-group.md.scss',
   },
   shadow: true,
 })
-export class TpAccordionGroup implements ComponentInterface {
+export class MedAccordionGroup implements ComponentInterface {
   @Element() el!: any;
 
   /**
@@ -64,7 +54,7 @@ export class TpAccordionGroup implements ComponentInterface {
    * Possible values are `"compact"` and `"inset"`.
    * Defaults to `"compact"`.
    */
-  @Prop() expand: "compact" | "inset" = "compact";
+  @Prop() expand: 'compact' | 'inset' = 'compact';
 
   /**
    * Emitted when the value property has changed
@@ -82,7 +72,7 @@ export class TpAccordionGroup implements ComponentInterface {
    */
   @Event() ionValueChange!: EventEmitter<TpAccordionGroupChangeEventDetail>;
 
-  @Watch("value")
+  @Watch('value')
   valueChanged() {
     const { value, multiple } = this;
 
@@ -98,7 +88,7 @@ export class TpAccordionGroup implements ComponentInterface {
       printIonWarning(
         `ion-accordion-group was passed an array of values, but multiple="false". This is incorrect usage and may result in unexpected behaviors. To dismiss this warning, pass a string to the "value" property when multiple="false".
 
-  Value Passed: [${value.map((v) => `'${v}'`).join(", ")}]
+  Value Passed: [${value.map((v) => `'${v}'`).join(', ')}]
 `,
         this.el
       );
@@ -111,7 +101,7 @@ export class TpAccordionGroup implements ComponentInterface {
     this.ionValueChange.emit({ value: this.value });
   }
 
-  @Watch("disabled")
+  @Watch('disabled')
   async disabledChanged() {
     const { disabled } = this;
     const accordions = await this.getAccordions();
@@ -120,7 +110,7 @@ export class TpAccordionGroup implements ComponentInterface {
     }
   }
 
-  @Watch("readonly")
+  @Watch('readonly')
   async readonlyChanged() {
     const { readonly } = this;
     const accordions = await this.getAccordions();
@@ -129,7 +119,7 @@ export class TpAccordionGroup implements ComponentInterface {
     }
   }
 
-  @Listen("keydown")
+  @Listen('keydown')
   async onKeydown(ev: KeyboardEvent) {
     const activeElement = document.activeElement;
     if (!activeElement) {
@@ -142,22 +132,18 @@ export class TpAccordionGroup implements ComponentInterface {
      * interaction doesn't get stolen by the accordion. Example: using up/down keys
      * in ion-textarea.
      */
-    const activeAccordionHeader = activeElement.closest(
-      'ion-accordion [slot="header"]'
-    );
+    const activeAccordionHeader = activeElement.closest('ion-accordion [slot="header"]');
     if (!activeAccordionHeader) {
       return;
     }
 
     const accordionEl =
-      activeElement.tagName === "ION-ACCORDION"
-        ? activeElement
-        : activeElement.closest("ion-accordion");
+      activeElement.tagName === 'ION-ACCORDION' ? activeElement : activeElement.closest('ion-accordion');
     if (!accordionEl) {
       return;
     }
 
-    const closestGroup = accordionEl.closest("ion-accordion-group");
+    const closestGroup = accordionEl.closest('ion-accordion-group');
     if (closestGroup !== this.el) {
       return;
     }
@@ -170,13 +156,13 @@ export class TpAccordionGroup implements ComponentInterface {
     }
 
     let accordion: any | undefined;
-    if (ev.key === "ArrowDown") {
+    if (ev.key === 'ArrowDown') {
       accordion = this.findNextAccordion(accordions, startingIndex);
-    } else if (ev.key === "ArrowUp") {
+    } else if (ev.key === 'ArrowUp') {
       accordion = this.findPreviousAccordion(accordions, startingIndex);
-    } else if (ev.key === "Home") {
+    } else if (ev.key === 'Home') {
       accordion = accordions[0];
-    } else if (ev.key === "End") {
+    } else if (ev.key === 'End') {
       accordion = accordions[accordions.length - 1];
     }
 
@@ -215,10 +201,7 @@ export class TpAccordionGroup implements ComponentInterface {
    * @internal
    */
   @Method()
-  async requestAccordionToggle(
-    accordionValue: string | undefined,
-    accordionExpand: boolean
-  ) {
+  async requestAccordionToggle(accordionValue: string | undefined, accordionExpand: boolean) {
     const { multiple, value, readonly, disabled } = this;
     if (readonly || disabled) {
       return;
@@ -233,9 +216,7 @@ export class TpAccordionGroup implements ComponentInterface {
        */
       if (multiple) {
         const groupValue = value ?? [];
-        const processedValue = Array.isArray(groupValue)
-          ? groupValue
-          : [groupValue];
+        const processedValue = Array.isArray(groupValue) ? groupValue : [groupValue];
         const valueExists = processedValue.find((v) => v === accordionValue);
         if (valueExists === undefined && accordionValue !== undefined) {
           this.setValue([...processedValue, accordionValue]);
@@ -250,9 +231,7 @@ export class TpAccordionGroup implements ComponentInterface {
        */
       if (multiple) {
         const groupValue = value ?? [];
-        const processedValue = Array.isArray(groupValue)
-          ? groupValue
-          : [groupValue];
+        const processedValue = Array.isArray(groupValue) ? groupValue : [groupValue];
         this.setValue(processedValue.filter((v) => v !== accordionValue));
       } else {
         this.setValue(undefined);
@@ -260,10 +239,7 @@ export class TpAccordionGroup implements ComponentInterface {
     }
   }
 
-  private findNextAccordion(
-    accordions: any,
-    startingIndex: number
-  ) {
+  private findNextAccordion(accordions: any, startingIndex: number) {
     const nextAccordion = accordions[startingIndex + 1];
     if (nextAccordion === undefined) {
       return accordions[0];
@@ -272,10 +248,7 @@ export class TpAccordionGroup implements ComponentInterface {
     return nextAccordion;
   }
 
-  private findPreviousAccordion(
-    accordions: any,
-    startingIndex: number
-  ) {
+  private findPreviousAccordion(accordions: any, startingIndex: number) {
     const prevAccordion = accordions[startingIndex - 1];
     if (prevAccordion === undefined) {
       return accordions[accordions.length - 1];
@@ -289,9 +262,7 @@ export class TpAccordionGroup implements ComponentInterface {
    */
   @Method()
   async getAccordions() {
-    return Array.from(
-      this.el.querySelectorAll(":scope > ion-accordion")
-    ) as any;
+    return Array.from(this.el.querySelectorAll(':scope > ion-accordion')) as any;
   }
 
   render() {
@@ -302,8 +273,8 @@ export class TpAccordionGroup implements ComponentInterface {
       <Host
         class={{
           [mode]: true,
-          "accordion-group-disabled": disabled,
-          "accordion-group-readonly": readonly,
+          'accordion-group-disabled': disabled,
+          'accordion-group-readonly': readonly,
           [`accordion-group-expand-${expand}`]: true,
         }}
         role="presentation"

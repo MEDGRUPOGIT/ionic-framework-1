@@ -1,28 +1,28 @@
-import { Component, h, Host, Prop } from "@stencil/core";
-import { generateMedColor } from "../../../@templarios/utilities/color";
-import { MedColor } from "../../../@templarios/types/color.type";
+import { Component, h, Host, Prop } from '@stencil/core';
+import { generateMedColor } from '../../../@templarios/utilities/color';
+import { MedColor } from '../../../@templarios/types/color.type';
 
 @Component({
-  tag: "tp-loader",
-  styleUrl: "tp-loader.scss",
+  tag: 'med-loader',
+  styleUrl: 'tp-loader.scss',
   scoped: true,
 })
-export class TpLoader {
+export class MedLoader {
   @Prop({ reflect: true }) dsColor?: MedColor;
 
   @Prop({ reflect: true }) fixed = false;
 
-  @Prop({ reflect: true }) dsName?: "secondary";
+  @Prop({ reflect: true }) dsName?: 'secondary';
 
   render() {
     const { dsColor, fixed, dsName } = this;
 
-    return dsName === "secondary" ? (
+    return dsName === 'secondary' ? (
       <Host
         tp-loader-secondary
         ds-color={dsColor}
         class={generateMedColor(dsColor, {
-          "tp-loader-secondary": true,
+          'tp-loader-secondary': true,
         })}
       >
         <div></div>
@@ -39,16 +39,12 @@ export class TpLoader {
         tp-loader
         ds-color={dsColor}
         class={generateMedColor(dsColor, {
-          "tp-loader-secondary": false,
-          "tp-loader--fixed": fixed,
+          'tp-loader-secondary': false,
+          'tp-loader--fixed': fixed,
         })}
       >
         <div class="loader-container">
-          <svg
-            tp-loader-svg
-            viewBox="0 0 100 100"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg tp-loader-svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <circle tp-loader-circle cx="50" cy="50" r="47" />
 
             <polyline tp-loader-polyline points="85,37 63,37 63,15 " />

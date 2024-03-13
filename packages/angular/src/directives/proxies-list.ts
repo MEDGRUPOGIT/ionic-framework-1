@@ -79,6 +79,8 @@ export const DIRECTIVES = [
   d.IonToast,
   d.IonToggle,
   d.IonToolbar,
+  d.MedAccordion,
+  d.MedAccordionGroup,
   d.MedAccordionItem,
   d.MedAccordionList,
   d.MedAddCard,
@@ -95,6 +97,7 @@ export const DIRECTIVES = [
   d.MedCartaoRespostaItem,
   d.MedCartaoRespostaLista,
   d.MedChartBar,
+  d.MedChartBar2,
   d.MedChartBarHorizontal,
   d.MedChartCategoria,
   d.MedChartRadial,
@@ -113,6 +116,7 @@ export const DIRECTIVES = [
   d.MedList,
   d.MedListItem,
   d.MedListItemAccordion,
+  d.MedLoader,
   d.MedNavbar,
   d.MedOffline,
   d.MedOption,
@@ -124,10 +128,5 @@ export const DIRECTIVES = [
   d.MedToolbar,
   d.MedTooltip,
   d.MedType,
-  d.MedVideoThumbnail,
-  d.TpAccordion,
-  d.TpAccordionGroup,
-  d.TpChartBar,
-  d.TpInputContainer,
-  d.TpLoader
+  d.MedVideoThumbnail
 ];

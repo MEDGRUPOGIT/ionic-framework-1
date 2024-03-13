@@ -1536,6 +1536,27 @@ ion-toolbar,css-prop,--padding-end
 ion-toolbar,css-prop,--padding-start
 ion-toolbar,css-prop,--padding-top
 
+med-accordion,shadow
+med-accordion,prop,disabled,boolean,false,false,false
+med-accordion,prop,mode,"ios" | "md",undefined,false,false
+med-accordion,prop,readonly,boolean,false,false,false
+med-accordion,prop,toggleIcon,string,chevronDown,false,false
+med-accordion,prop,toggleIconSlot,"end" | "start",'end',false,false
+med-accordion,prop,value,string,`ion-accordion-${accordionIds++}`,false,false
+med-accordion,part,content
+med-accordion,part,expanded
+med-accordion,part,header
+
+med-accordion-group,shadow
+med-accordion-group,prop,animated,boolean,true,false,false
+med-accordion-group,prop,disabled,boolean,false,false,false
+med-accordion-group,prop,expand,"compact" | "inset",'compact',false,false
+med-accordion-group,prop,mode,"ios" | "md",undefined,false,false
+med-accordion-group,prop,multiple,boolean | undefined,undefined,false,false
+med-accordion-group,prop,readonly,boolean,false,false,false
+med-accordion-group,prop,value,null | string | string[] | undefined,undefined,false,false
+med-accordion-group,event,ionChange,TpAccordionGroupChangeEventDetail<any>,true
+
 med-accordion-item,shadow
 med-accordion-item,prop,background,boolean,false,false,true
 med-accordion-item,prop,canCollapse,boolean,true,false,true
@@ -1669,6 +1690,23 @@ med-chart-bar,prop,height,number,50,false,true
 med-chart-bar,prop,noLabel,boolean,false,false,true
 med-chart-bar,prop,value,number,0,false,true
 med-chart-bar,prop,width,number,32,false,true
+
+med-chart-bar-2,scoped
+med-chart-bar-2,prop,bar,TpChartBarItem,{
+    color: 'med-color-brand-4',
+    value: 0,
+  },false,false
+med-chart-bar-2,prop,deactivated,boolean,false,false,true
+med-chart-bar-2,prop,dsColor,string | undefined,undefined,false,true
+med-chart-bar-2,prop,dsName,"secondary" | undefined,undefined,false,true
+med-chart-bar-2,prop,hasMarker,boolean,false,false,true
+med-chart-bar-2,prop,height,number,200,false,true
+med-chart-bar-2,prop,label,string | undefined,undefined,false,true
+med-chart-bar-2,prop,labelSize,number,10,false,true
+med-chart-bar-2,prop,marker,TpChartBarItem,{
+    color: 'med-color-fb-caution',
+    value: 0,
+  },false,false
 
 med-chart-bar-horizontal,shadow
 med-chart-bar-horizontal,prop,dsColor,string | undefined,undefined,false,true
@@ -1804,6 +1842,11 @@ med-list-item-accordion,prop,selected,boolean,false,false,true
 med-list-item-accordion,prop,titulo,string | undefined,undefined,false,false
 med-list-item-accordion,method,toggle,toggle(event?: Event) => Promise<void>
 
+med-loader,scoped
+med-loader,prop,dsColor,string | undefined,undefined,false,true
+med-loader,prop,dsName,"secondary" | undefined,undefined,false,true
+med-loader,prop,fixed,boolean,false,false,true
+
 med-navbar,shadow
 med-navbar,prop,dsColor,string | undefined,undefined,false,true
 med-navbar,prop,dsName,"secondary" | "transparent" | undefined,undefined,false,false
@@ -1873,55 +1916,3 @@ med-video-thumbnail,scoped
 med-video-thumbnail,prop,dsColor,string | undefined,undefined,false,true
 med-video-thumbnail,prop,url,string | undefined,undefined,false,true
 med-video-thumbnail,prop,value,number,0,false,true
-
-tp-accordion,shadow
-tp-accordion,prop,disabled,boolean,false,false,false
-tp-accordion,prop,mode,"ios" | "md",undefined,false,false
-tp-accordion,prop,readonly,boolean,false,false,false
-tp-accordion,prop,toggleIcon,string,chevronDown,false,false
-tp-accordion,prop,toggleIconSlot,"end" | "start","end",false,false
-tp-accordion,prop,value,string,`ion-accordion-${accordionIds++}`,false,false
-tp-accordion,part,content
-tp-accordion,part,expanded
-tp-accordion,part,header
-
-tp-accordion-group,shadow
-tp-accordion-group,prop,animated,boolean,true,false,false
-tp-accordion-group,prop,disabled,boolean,false,false,false
-tp-accordion-group,prop,expand,"compact" | "inset","compact",false,false
-tp-accordion-group,prop,mode,"ios" | "md",undefined,false,false
-tp-accordion-group,prop,multiple,boolean | undefined,undefined,false,false
-tp-accordion-group,prop,readonly,boolean,false,false,false
-tp-accordion-group,prop,value,null | string | string[] | undefined,undefined,false,false
-tp-accordion-group,event,ionChange,TpAccordionGroupChangeEventDetail<any>,true
-
-tp-chart-bar,scoped
-tp-chart-bar,prop,bar,TpChartBarItem,{
-    color: "med-color-brand-4",
-    value: 0,
-  },false,false
-tp-chart-bar,prop,deactivated,boolean,false,false,true
-tp-chart-bar,prop,dsColor,string | undefined,undefined,false,true
-tp-chart-bar,prop,dsName,"secondary" | undefined,undefined,false,true
-tp-chart-bar,prop,hasMarker,boolean,false,false,true
-tp-chart-bar,prop,height,number,200,false,true
-tp-chart-bar,prop,label,string | undefined,undefined,false,true
-tp-chart-bar,prop,labelSize,number,10,false,true
-tp-chart-bar,prop,marker,TpChartBarItem,{
-    color: "med-color-fb-caution",
-    value: 0,
-  },false,false
-
-tp-input-container,scoped
-tp-input-container,prop,disabled,boolean,false,false,true
-tp-input-container,prop,dsColor,string | undefined,undefined,false,true
-tp-input-container,prop,dsName,"secondary" | undefined,undefined,false,true
-tp-input-container,prop,feedback,boolean,false,false,true
-tp-input-container,prop,hasButton,"both" | "end" | "start" | undefined,undefined,false,true
-tp-input-container,prop,hasIcon,"both" | "end" | "start" | undefined,undefined,false,true
-tp-input-container,prop,inverted,boolean,false,false,true
-
-tp-loader,scoped
-tp-loader,prop,dsColor,string | undefined,undefined,false,true
-tp-loader,prop,dsName,"secondary" | undefined,undefined,false,true
-tp-loader,prop,fixed,boolean,false,false,true

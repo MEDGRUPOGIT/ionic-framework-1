@@ -2325,6 +2325,61 @@ export declare interface IonToolbar extends Components.IonToolbar {}
 
 
 @ProxyCmp({
+  inputs: ['disabled', 'mode', 'readonly', 'toggleIcon', 'toggleIconSlot', 'value']
+})
+@Component({
+  selector: 'med-accordion',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['disabled', 'mode', 'readonly', 'toggleIcon', 'toggleIconSlot', 'value'],
+})
+export class MedAccordion {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface MedAccordion extends Components.MedAccordion {}
+
+
+@ProxyCmp({
+  inputs: ['animated', 'disabled', 'expand', 'mode', 'multiple', 'readonly', 'value']
+})
+@Component({
+  selector: 'med-accordion-group',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['animated', 'disabled', 'expand', 'mode', 'multiple', 'readonly', 'value'],
+})
+export class MedAccordionGroup {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ionChange']);
+  }
+}
+
+
+import type { TpAccordionGroupChangeEventDetail as IMedAccordionGroupTpAccordionGroupChangeEventDetail } from '@ionic/core';
+
+export declare interface MedAccordionGroup extends Components.MedAccordionGroup {
+  /**
+   * Emitted when the value property has changed
+as a result of a user action such as a click.
+This event will not emit when programmatically setting
+the value property.
+   */
+  ionChange: EventEmitter<CustomEvent<IMedAccordionGroupTpAccordionGroupChangeEventDetail>>;
+}
+
+
+@ProxyCmp({
   inputs: ['background', 'canCollapse', 'dsColor', 'isOpened', 'noBorder', 'slotsToggle']
 })
 @Component({
@@ -2710,6 +2765,28 @@ export class MedChartBar {
 
 
 export declare interface MedChartBar extends Components.MedChartBar {}
+
+
+@ProxyCmp({
+  inputs: ['bar', 'deactivated', 'dsColor', 'dsName', 'hasMarker', 'height', 'label', 'labelSize', 'marker']
+})
+@Component({
+  selector: 'med-chart-bar-2',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['bar', 'deactivated', 'dsColor', 'dsName', 'hasMarker', 'height', 'label', 'labelSize', 'marker'],
+})
+export class MedChartBar2 {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface MedChartBar2 extends Components.MedChartBar2 {}
 
 
 @ProxyCmp({
@@ -3138,6 +3215,28 @@ export declare interface MedListItemAccordion extends Components.MedListItemAcco
 
 
 @ProxyCmp({
+  inputs: ['dsColor', 'dsName', 'fixed']
+})
+@Component({
+  selector: 'med-loader',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['dsColor', 'dsName', 'fixed'],
+})
+export class MedLoader {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface MedLoader extends Components.MedLoader {}
+
+
+@ProxyCmp({
   inputs: ['dsColor', 'dsName']
 })
 @Component({
@@ -3423,126 +3522,5 @@ export class MedVideoThumbnail {
 
 
 export declare interface MedVideoThumbnail extends Components.MedVideoThumbnail {}
-
-
-@ProxyCmp({
-  inputs: ['disabled', 'mode', 'readonly', 'toggleIcon', 'toggleIconSlot', 'value']
-})
-@Component({
-  selector: 'tp-accordion',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: '<ng-content></ng-content>',
-  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['disabled', 'mode', 'readonly', 'toggleIcon', 'toggleIconSlot', 'value'],
-})
-export class TpAccordion {
-  protected el: HTMLElement;
-  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
-    c.detach();
-    this.el = r.nativeElement;
-  }
-}
-
-
-export declare interface TpAccordion extends Components.TpAccordion {}
-
-
-@ProxyCmp({
-  inputs: ['animated', 'disabled', 'expand', 'mode', 'multiple', 'readonly', 'value']
-})
-@Component({
-  selector: 'tp-accordion-group',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: '<ng-content></ng-content>',
-  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['animated', 'disabled', 'expand', 'mode', 'multiple', 'readonly', 'value'],
-})
-export class TpAccordionGroup {
-  protected el: HTMLElement;
-  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
-    c.detach();
-    this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['ionChange']);
-  }
-}
-
-
-import type { TpAccordionGroupChangeEventDetail as ITpAccordionGroupTpAccordionGroupChangeEventDetail } from '@ionic/core';
-
-export declare interface TpAccordionGroup extends Components.TpAccordionGroup {
-  /**
-   * Emitted when the value property has changed
-as a result of a user action such as a click.
-This event will not emit when programmatically setting
-the value property.
-   */
-  ionChange: EventEmitter<CustomEvent<ITpAccordionGroupTpAccordionGroupChangeEventDetail>>;
-}
-
-
-@ProxyCmp({
-  inputs: ['bar', 'deactivated', 'dsColor', 'dsName', 'hasMarker', 'height', 'label', 'labelSize', 'marker']
-})
-@Component({
-  selector: 'tp-chart-bar',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: '<ng-content></ng-content>',
-  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['bar', 'deactivated', 'dsColor', 'dsName', 'hasMarker', 'height', 'label', 'labelSize', 'marker'],
-})
-export class TpChartBar {
-  protected el: HTMLElement;
-  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
-    c.detach();
-    this.el = r.nativeElement;
-  }
-}
-
-
-export declare interface TpChartBar extends Components.TpChartBar {}
-
-
-@ProxyCmp({
-  inputs: ['disabled', 'dsColor', 'dsName', 'feedback', 'hasButton', 'hasIcon', 'inverted']
-})
-@Component({
-  selector: 'tp-input-container',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: '<ng-content></ng-content>',
-  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['disabled', 'dsColor', 'dsName', 'feedback', 'hasButton', 'hasIcon', 'inverted'],
-})
-export class TpInputContainer {
-  protected el: HTMLElement;
-  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
-    c.detach();
-    this.el = r.nativeElement;
-  }
-}
-
-
-export declare interface TpInputContainer extends Components.TpInputContainer {}
-
-
-@ProxyCmp({
-  inputs: ['dsColor', 'dsName', 'fixed']
-})
-@Component({
-  selector: 'tp-loader',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: '<ng-content></ng-content>',
-  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['dsColor', 'dsName', 'fixed'],
-})
-export class TpLoader {
-  protected el: HTMLElement;
-  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
-    c.detach();
-    this.el = r.nativeElement;
-  }
-}
-
-
-export declare interface TpLoader extends Components.TpLoader {}
 
 
