@@ -1434,7 +1434,6 @@ med-alternativas,prop,keyImagem,string,'Imagem',false,false
 med-alternativas,prop,keyPorcentagem,string,'Porcentagem',false,false
 med-alternativas,prop,keyRiscada,string,'Riscada',false,false
 med-alternativas,prop,mostraResposta,boolean,undefined,true,true
-med-alternativas,prop,permiteDesmarcar,boolean,false,false,false
 med-alternativas,prop,permiteRiscar,boolean,true,false,false
 med-alternativas,prop,respostaCorreta,string,undefined,true,true
 
@@ -1450,7 +1449,6 @@ med-alternativas-a,prop,keyImagem,string,'Imagem',false,false
 med-alternativas-a,prop,keyPorcentagem,string,'Porcentagem',false,false
 med-alternativas-a,prop,keyRiscada,string,'Riscada',false,false
 med-alternativas-a,prop,mostraResposta,boolean,undefined,true,true
-med-alternativas-a,prop,permiteDesmarcar,boolean,false,false,false
 med-alternativas-a,prop,permiteRiscar,boolean,true,false,false
 med-alternativas-a,prop,respostaCorreta,string,undefined,true,true
 med-alternativas-a,event,medChange,MedAlternativaInterface,true
@@ -1469,7 +1467,6 @@ med-alternativas-b,prop,keyImagem,string,'Imagem',false,false
 med-alternativas-b,prop,keyPorcentagem,string,'Porcentagem',false,false
 med-alternativas-b,prop,keyRiscada,string,'Riscada',false,false
 med-alternativas-b,prop,mostraResposta,boolean,undefined,true,true
-med-alternativas-b,prop,permiteDesmarcar,boolean,false,false,false
 med-alternativas-b,prop,permiteRiscar,boolean,true,false,false
 med-alternativas-b,prop,respostaCorreta,string,undefined,true,true
 med-alternativas-b,event,medChange,MedAlternativaInterface,true
