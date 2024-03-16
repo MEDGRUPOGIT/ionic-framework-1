@@ -1061,8 +1061,8 @@ export class MedAlertFixed {
 }
 export declare interface MedAlternativas extends Components.MedAlternativas {
 }
-@ProxyCmp({ inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteDesmarcar", "permiteRiscar", "respostaCorreta"] })
-@Component({ selector: "med-alternativas", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteDesmarcar", "permiteRiscar", "respostaCorreta"] })
+@ProxyCmp({ inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteRiscar", "respostaCorreta"] })
+@Component({ selector: "med-alternativas", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteRiscar", "respostaCorreta"] })
 export class MedAlternativas {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
@@ -1072,8 +1072,8 @@ export class MedAlternativas {
 }
 export declare interface MedAlternativasA extends Components.MedAlternativasA {
 }
-@ProxyCmp({ inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkin", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteDesmarcar", "permiteRiscar", "respostaCorreta"] })
-@Component({ selector: "med-alternativas-a", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkin", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteDesmarcar", "permiteRiscar", "respostaCorreta"] })
+@ProxyCmp({ inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkin", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteRiscar", "respostaCorreta"] })
+@Component({ selector: "med-alternativas-a", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkin", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteRiscar", "respostaCorreta"] })
 export class MedAlternativasA {
   medChange!: EventEmitter<CustomEvent>;
   medRiscada!: EventEmitter<CustomEvent>;
@@ -1087,8 +1087,8 @@ export class MedAlternativasA {
 }
 export declare interface MedAlternativasB extends Components.MedAlternativasB {
 }
-@ProxyCmp({ inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkin", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteDesmarcar", "permiteRiscar", "respostaCorreta"] })
-@Component({ selector: "med-alternativas-b", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkin", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteDesmarcar", "permiteRiscar", "respostaCorreta"] })
+@ProxyCmp({ inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkin", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteRiscar", "respostaCorreta"] })
+@Component({ selector: "med-alternativas-b", changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-content></ng-content>", inputs: ["alternativaSelecionada", "alternativas", "dsColor", "dsSkin", "dsSkinConfig", "keyAlternativa", "keyEnunciado", "keyImagem", "keyPorcentagem", "keyRiscada", "mostraResposta", "permiteRiscar", "respostaCorreta"] })
 export class MedAlternativasB {
   medChange!: EventEmitter<CustomEvent>;
   medRiscada!: EventEmitter<CustomEvent>;

@@ -896,8 +896,7 @@ export const MedAlternativas = /*@__PURE__*/ defineContainer<JSX.MedAlternativas
   'respostaCorreta',
   'mostraResposta',
   'alternativaSelecionada',
-  'permiteRiscar',
-  'permiteDesmarcar'
+  'permiteRiscar'
 ]);
 
 
@@ -915,7 +914,6 @@ export const MedAlternativasA = /*@__PURE__*/ defineContainer<JSX.MedAlternativa
   'mostraResposta',
   'alternativaSelecionada',
   'permiteRiscar',
-  'permiteDesmarcar',
   'medChange',
   'medRiscada',
   'medGalleryRequest'
@@ -936,7 +934,6 @@ export const MedAlternativasB = /*@__PURE__*/ defineContainer<JSX.MedAlternativa
   'mostraResposta',
   'alternativaSelecionada',
   'permiteRiscar',
-  'permiteDesmarcar',
   'medChange',
   'medRiscada',
   'medGalleryRequest'
