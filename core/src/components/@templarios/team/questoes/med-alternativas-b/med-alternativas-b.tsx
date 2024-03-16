@@ -80,11 +80,6 @@ export class MedAlternativasB implements MedAlternativasInternoInterface {
   /**
    * todo
    */
-  @Prop({ mutable: true }) permiteDesmarcar = false;
-
-  /**
-   * todo
-   */
   @Event() medChange!: EventEmitter<MedAlternativaInterface>;
 
   /**
