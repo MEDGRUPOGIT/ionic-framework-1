@@ -1,5 +1,12 @@
-import { MedAlternativaInterface, MedAlternativasInternoInterface } from "../../../../../@templarios/interfaces/alternativas.interface";
-import { Coordenada, distanciaEuclidiana, getPositionFromEvent } from '../../../../../@templarios/utilities/position';
+import {
+  MedAlternativaInterface,
+  MedAlternativasInternoInterface
+} from '../../../../../@templarios/interfaces/alternativas.interface';
+import {
+  Coordenada,
+  distanciaEuclidiana,
+  getPositionFromEvent
+} from '../../../../../@templarios/utilities/position';
 
 export class MedAlternativasBase {
   private dataStart!: Date;
@@ -9,7 +16,7 @@ export class MedAlternativasBase {
   private tempoLongPress = 1000;
   private timer!: any;
 
-  constructor(public parent: MedAlternativasInternoInterface) { }
+  constructor(public parent: MedAlternativasInternoInterface) {}
 
   public resetState() {
     this.parent.riscarAtivoIndice = -1;
@@ -17,19 +24,35 @@ export class MedAlternativasBase {
   }
 
   handleClick(event: any) {
-    if (!event.target.classList.contains('med-alternativas') && event.target.tagName !== 'MED-ALTERNATIVAS') {
+    if (
+      !event.target.classList.contains('med-alternativas') &&
+      event.target.tagName !== 'MED-ALTERNATIVAS'
+    ) {
       this.resetState();
     }
   }
 
-  onAlternativasChanged(newValue: MedAlternativaInterface | any, oldValue: MedAlternativaInterface | any) {
+  onAlternativasChanged(
+    newValue: MedAlternativaInterface | any,
+    oldValue: MedAlternativaInterface | any
+  ) {
     if (newValue != oldValue) {
       this.resetState();
     }
   }
 
   public onTouchStart(event: any, indice: number) {
-    if (event.target.closest('.med-alternativas__riscar')?.classList.contains('med-alternativas__riscar')) {
+    if (event.type === 'mousedown' && this.parent.blockMouseEvents) return;
+
+    if (event.type === 'touchstart') {
+      this.parent.blockMouseEvents = true;
+    }
+
+    if (
+      event.target
+        .closest('.med-alternativas__riscar')
+        ?.classList.contains('med-alternativas__riscar')
+    ) {
       return;
     }
 
@@ -46,20 +69,30 @@ export class MedAlternativasBase {
         this.parent.permiteAlterar = false;
       }
     }, this.tempoLongPress);
-
   }
 
   public onTouchEnd(event: any, alternativa: MedAlternativaInterface) {
-    if (event.target.closest('.med-alternativas__riscar')?.classList.contains('med-alternativas__riscar')) {
+    if (event.type === 'mouseup' && this.parent.blockMouseEvents) {
+      this.parent.blockMouseEvents = false;
+      return;
+    }
+
+    if (
+      event.target
+        .closest('.med-alternativas__riscar')
+        ?.classList.contains('med-alternativas__riscar')
+    ) {
       return;
     }
 
     const positionEnd = getPositionFromEvent(event);
 
     clearTimeout(this.timer);
-    if (this.parent.permiteAlterar &&
+    if (
+      this.parent.permiteAlterar &&
       distanciaEuclidiana(this.positionStart, positionEnd) <
-      this.distanciaMinimaClick) {
+        this.distanciaMinimaClick
+    ) {
       this.parent.riscarAtivoIndice = -1;
       this.alterarAlternativa(alternativa);
     }
@@ -74,12 +107,30 @@ export class MedAlternativasBase {
       return;
     }
 
+    if (
+      this.parent.alternativaSelecionada === alternativa.Alternativa &&
+      this.parent.permiteDesmarcar
+    ) {
+      this.parent.alternativaSelecionada = '';
+      return this.parent.medChange?.emit({ ...alternativa, Alternativa: '' });
+    }
+
     this.parent.alternativaSelecionada = alternativa.Alternativa;
     this.parent.medChange?.emit(alternativa);
   }
 
   public riscar(event: any, alternativa: any) {
     event.stopPropagation();
+
+    const naoRiscadas = this.parent.alternativas.filter((alt) => !alt.Riscada);
+
+    if (
+      naoRiscadas.length === 1 &&
+      naoRiscadas.some(
+        (alt: any) => alternativa.Alternativa === alt.Alternativa
+      )
+    )
+      return;
 
     alternativa[this.parent.keyRiscada] = !alternativa[this.parent.keyRiscada];
 
@@ -97,5 +148,4 @@ export class MedAlternativasBase {
 
     this.parent.medGalleryRequest?.emit(alternativa);
   }
-
 }
