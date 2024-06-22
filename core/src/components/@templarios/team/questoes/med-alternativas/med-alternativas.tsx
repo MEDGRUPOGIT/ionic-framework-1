@@ -1,15 +1,15 @@
-import { Component, h, Host, Prop, State } from '@stencil/core';
+import { Component, h, Host, Prop, State } from "@stencil/core";
 import {
   MedAlternativaInterface,
-  MedAlternativasInterface
-} from '../../../../../@templarios/interfaces/alternativas.interface';
-import { MedSkin } from '../../../../../@templarios/templarios';
-import { MedColor } from '../../../../../@templarios/types/color.type';
+  MedAlternativasInterface,
+} from "../../../../../@templarios/interfaces/alternativas.interface";
+import { MedSkin } from "../../../../../@templarios/templarios";
+import { MedColor } from "../../../../../@templarios/types/color.type";
 
 @Component({
-  tag: 'med-alternativas',
-  styleUrl: 'med-alternativas.scss',
-  shadow: true
+  tag: "med-alternativas",
+  styleUrl: "med-alternativas.scss",
+  shadow: true,
 })
 export class MedAlternativas implements MedAlternativasInterface {
   /**
@@ -30,27 +30,27 @@ export class MedAlternativas implements MedAlternativasInterface {
   /**
    * todo
    */
-  @Prop() keyAlternativa = 'Alternativa';
+  @Prop() keyAlternativa = "Alternativa";
 
   /**
    * todo
    */
-  @Prop() keyEnunciado = 'Enunciado';
+  @Prop() keyEnunciado = "Enunciado";
 
   /**
    * todo
    */
-  @Prop() keyImagem = 'Imagem';
+  @Prop() keyImagem = "Imagem";
 
   /**
    * todo
    */
-  @Prop() keyPorcentagem = 'Porcentagem';
+  @Prop() keyPorcentagem = "Porcentagem";
 
   /**
    * todo
    */
-  @Prop() keyRiscada = 'Riscada';
+  @Prop() keyRiscada = "Riscada";
 
   /**
    * todo
@@ -80,6 +80,11 @@ export class MedAlternativas implements MedAlternativasInterface {
   /**
    * todo
    */
+  @Prop({ mutable: true, reflect: true }) mostrarProgressBar = true;
+
+  /**
+   * todo
+   */
   @State() blockMouseEvents = false;
 
   render() {
@@ -96,7 +101,8 @@ export class MedAlternativas implements MedAlternativasInterface {
       mostraResposta,
       alternativaSelecionada,
       permiteRiscar,
-      permiteDesmarcar
+      permiteDesmarcar,
+      mostrarProgressBar,
     } = this;
 
     return (
@@ -116,6 +122,7 @@ export class MedAlternativas implements MedAlternativasInterface {
             alternativaSelecionada={alternativaSelecionada}
             permiteRiscar={permiteRiscar}
             permiteDesmarcar={permiteDesmarcar}
+            mostrarProgressBar={mostrarProgressBar}
           ></med-alternativas-a>
         )}
 
@@ -134,6 +141,7 @@ export class MedAlternativas implements MedAlternativasInterface {
             alternativaSelecionada={alternativaSelecionada}
             permiteRiscar={permiteRiscar}
             permiteDesmarcar={permiteDesmarcar}
+            mostrarProgressBar={mostrarProgressBar}
           ></med-alternativas-b>
         )}
       </Host>

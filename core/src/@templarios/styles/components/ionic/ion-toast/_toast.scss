@@ -8,7 +8,7 @@
   --spacing: 16px;
   --border-radius: 8px;
 
-  @include breakpoint-up('md') {
+  @include breakpoint-up("md") {
     --border-radius: 0px;
     --max-width: 400px;
     --start: unset;
@@ -55,5 +55,18 @@
   &.tp-toast--success {
     --background: hsl(var(--med-color-fb-success));
     --color: hsl(var(--med-color-neutral-1));
+  }
+}
+
+.tp-toast {
+  &.tp-toast--icon-start {
+    .toast-button-group:first-child {
+      margin-left: 0;
+      margin-right: 8px;
+
+      .toast-button {
+        pointer-events: none;
+      }
+    }
   }
 }

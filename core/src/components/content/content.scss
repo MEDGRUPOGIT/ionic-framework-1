@@ -35,6 +35,9 @@
   --height: 7px;
   --padding: 10px;
 
+  --tp-display: block;
+  --tp-flex-direction: column;
+
   display: block;
   position: relative;
 
@@ -98,6 +101,9 @@
   box-sizing: border-box;
 
   overflow: hidden;
+
+  display: var(--tp-display);
+  flex-direction: var(--tp-flex-direction);
 }
 
 .scroll-y,
@@ -227,6 +233,9 @@
   --tp-scroll-color-content: hsl(var(--med-color-neutral-3));
   --tp-scroll-width: 9px;
 
+  --tp-display: block;
+  --tp-flex-direction: column;
+
   scroll-snap-type: both mandatory;
   scroll-padding-top: 30px;
   scroll-behavior: smooth;
@@ -240,6 +249,14 @@
 @media (max-width: 576px) {
   ::-webkit-scrollbar {
     width: 0;
+  }
+}
+
+:host(.show-scroll-bar-modile) {
+  @media (max-width: 576px) {
+    ::-webkit-scrollbar {
+      width: var(--tp-scroll-width);
+    }
   }
 }
 
