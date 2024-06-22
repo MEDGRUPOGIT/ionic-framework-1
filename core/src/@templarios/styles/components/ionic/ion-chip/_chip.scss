@@ -8,10 +8,9 @@ ion-chip {
 
   border: 1px solid var(--border-color);
   font-weight: 600;
-  font-size: 12px;
-  line-height: 12px;
-  height: 28px;
-  padding: 7px;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 4px 12px;
 
   ion-label {
     color: var(--color);
@@ -42,7 +41,7 @@ ion-chip {
 // ds-size
 ion-chip {
   &[ds-size="md"] {
-    height: 32px;
+    padding: 8px 16px;
 
     ion-label {
       font-weight: 600;

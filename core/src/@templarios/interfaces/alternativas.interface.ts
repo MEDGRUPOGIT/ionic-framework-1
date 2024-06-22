@@ -1,4 +1,4 @@
-import { EventEmitter } from "@stencil/core";
+import { EventEmitter } from '@stencil/core';
 
 export interface MedAlternativaInterface {
   Alternativa: string;
@@ -10,6 +10,7 @@ export interface MedAlternativaInterface {
 export interface MedAlternativasInterface {
   blockMouseEvents?: boolean;
   permiteDesmarcar?: boolean;
+  mostrarProgressBar?: boolean;
   alternativas: MedAlternativaInterface[] | any[];
   keyAlternativa?: 'Alternativa' | string;
   keyEnunciado?: 'Enunciado' | string;
@@ -20,12 +21,13 @@ export interface MedAlternativasInterface {
   mostraResposta: boolean;
   alternativaSelecionada?: string;
   permiteRiscar?: boolean;
-  dsSkinConfig?: { aleternativas: string }
+  dsSkinConfig?: { aleternativas: string };
 }
 
-export interface MedAlternativasInternoInterface extends MedAlternativasInterface{
-  permiteAlterar:boolean;
-  riscarAtivoIndice:number;
+export interface MedAlternativasInternoInterface
+  extends MedAlternativasInterface {
+  permiteAlterar: boolean;
+  riscarAtivoIndice: number;
   medChange?: EventEmitter<MedAlternativaInterface>;
   medRiscada?: EventEmitter<MedAlternativaInterface>;
   medGalleryRequest?: EventEmitter<MedAlternativaInterface>;

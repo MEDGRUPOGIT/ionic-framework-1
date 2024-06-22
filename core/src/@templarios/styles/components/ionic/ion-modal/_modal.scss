@@ -7,6 +7,11 @@
   --width: 100% !important;
   --max-width: 640px !important;
   backdrop-filter: blur(10px);
+  padding: 32px;
+
+  @include breakpoint-down("sm") {
+    padding: 0;
+  }
 
   ion-backdrop {
     --ion-backdrop-color: hsl(var(--med-color-neutral-1)) !important;
@@ -38,6 +43,10 @@
   .tp-modal {
     --max-width: 880px !important;
     --max-height: 600px !important;
+
+    &--h800 {
+      --max-height: 800px !important;
+    }
 
     .ion-page {
       left: unset;

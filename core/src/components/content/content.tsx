@@ -1,10 +1,23 @@
-import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Listen, Method, Prop, forceUpdate, h, readTask } from '@stencil/core';
+import {
+  Component,
+  ComponentInterface,
+  Element,
+  Event,
+  EventEmitter,
+  Host,
+  Listen,
+  Method,
+  Prop,
+  forceUpdate,
+  h,
+  readTask,
+} from "@stencil/core";
 
-import { config } from '../../global/config';
-import { getIonMode } from '../../global/ionic-global';
-import { Color, ScrollBaseDetail, ScrollDetail } from '../../interface';
-import { isPlatform } from '../../utils/platform';
-import { createColorClasses, hostContext } from '../../utils/theme';
+import { config } from "../../global/config";
+import { getIonMode } from "../../global/ionic-global";
+import { Color, ScrollBaseDetail, ScrollDetail } from "../../interface";
+import { isPlatform } from "../../utils/platform";
+import { createColorClasses, hostContext } from "../../utils/theme";
 
 /**
  * @slot - Content is placed in the scrollable area if provided without a slot.
@@ -14,12 +27,11 @@ import { createColorClasses, hostContext } from '../../utils/theme';
  * @part scroll - The scrollable container of the content.
  */
 @Component({
-  tag: 'ion-content',
-  styleUrl: 'content.scss',
-  shadow: true
+  tag: "ion-content",
+  styleUrl: "content.scss",
+  shadow: true,
 })
 export class Content implements ComponentInterface {
-
   private watchDog: any;
   private isScrolling = false;
   private lastScroll = 0;
@@ -34,7 +46,7 @@ export class Content implements ComponentInterface {
   private detail: ScrollDetail = {
     scrollTop: 0,
     scrollLeft: 0,
-    type: 'scroll',
+    type: "scroll",
     event: undefined!,
     startX: 0,
     startY: 0,
@@ -89,6 +101,13 @@ export class Content implements ComponentInterface {
    */
   @Prop() scrollEvents = false;
 
+  // templarios
+  /**
+   * Show the scroll bar below breakpoint sm (576px)
+   */
+  @Prop({ reflect: true }) showScrollBarMobile = false;
+  // ! templarios
+
   /**
    * Emitted when the scroll has started.
    */
@@ -109,12 +128,12 @@ export class Content implements ComponentInterface {
     this.onScrollEnd();
   }
 
-  @Listen('appload', { target: 'window' })
+  @Listen("appload", { target: "window" })
   onAppLoad() {
     this.resize();
   }
 
-  @Listen('click', { capture: true })
+  @Listen("click", { capture: true })
   onClick(ev: Event) {
     if (this.isScrolling) {
       ev.preventDefault();
@@ -126,7 +145,7 @@ export class Content implements ComponentInterface {
     const { forceOverscroll } = this;
     const mode = getIonMode(this);
     return forceOverscroll === undefined
-      ? mode === 'ios' && isPlatform('ios')
+      ? mode === "ios" && isPlatform("ios")
       : forceOverscroll;
   }
 
@@ -157,11 +176,10 @@ export class Content implements ComponentInterface {
     this.lastScroll = timeStamp;
     if (shouldStart) {
       this.onScrollStart();
-
     }
     if (!this.queued && this.scrollEvents) {
       this.queued = true;
-      readTask(ts => {
+      readTask((ts) => {
         this.queued = false;
         this.detail.event = ev;
         updateScrollDetail(this.detail, this.scrollEl, ts, shouldStart);
@@ -213,7 +231,11 @@ export class Content implements ComponentInterface {
    */
   @Method()
   scrollByPoint(x: number, y: number, duration: number): Promise<void> {
-    return this.scrollToPoint(x + this.scrollEl.scrollLeft, y + this.scrollEl.scrollTop, duration);
+    return this.scrollToPoint(
+      x + this.scrollEl.scrollLeft,
+      y + this.scrollEl.scrollTop,
+      duration
+    );
   }
 
   /**
@@ -224,7 +246,11 @@ export class Content implements ComponentInterface {
    * @param duration The amount of time to take scrolling to that point. Defaults to `0`.
    */
   @Method()
-  async scrollToPoint(x: number | undefined | null, y: number | undefined | null, duration = 0): Promise<void> {
+  async scrollToPoint(
+    x: number | undefined | null,
+    y: number | undefined | null,
+    duration = 0
+  ): Promise<void> {
     const el = this.scrollEl;
     if (duration < 32) {
       if (y != null) {
@@ -238,7 +264,7 @@ export class Content implements ComponentInterface {
 
     let resolve!: () => void;
     let startTime = 0;
-    const promise = new Promise<void>(r => resolve = r);
+    const promise = new Promise<void>((r) => (resolve = r));
     const fromY = el.scrollTop;
     const fromX = el.scrollLeft;
 
@@ -247,14 +273,14 @@ export class Content implements ComponentInterface {
 
     // scroll loop
     const step = (timeStamp: number) => {
-      const linearTime = Math.min(1, ((timeStamp - startTime) / duration)) - 1;
+      const linearTime = Math.min(1, (timeStamp - startTime) / duration) - 1;
       const easedT = Math.pow(linearTime, 3) + 1;
 
       if (deltaY !== 0) {
-        el.scrollTop = Math.floor((easedT * deltaY) + fromY);
+        el.scrollTop = Math.floor(easedT * deltaY + fromY);
       }
       if (deltaX !== 0) {
-        el.scrollLeft = Math.floor((easedT * deltaX) + fromX);
+        el.scrollLeft = Math.floor(easedT * deltaX + fromX);
       }
 
       if (easedT < 1) {
@@ -262,13 +288,12 @@ export class Content implements ComponentInterface {
         // must use nativeRaf in order to fire in the next frame
         // TODO: remove as any
         requestAnimationFrame(step);
-
       } else {
         resolve();
       }
     };
     // chill out for a frame first
-    requestAnimationFrame(ts => {
+    requestAnimationFrame((ts) => {
       startTime = ts;
       step(ts);
     });
@@ -278,7 +303,7 @@ export class Content implements ComponentInterface {
   private onScrollStart() {
     this.isScrolling = true;
     this.ionScrollStart.emit({
-      isScrolling: true
+      isScrolling: true,
     });
 
     if (this.watchDog) {
@@ -298,16 +323,17 @@ export class Content implements ComponentInterface {
     if (this.isScrolling) {
       this.isScrolling = false;
       this.ionScrollEnd.emit({
-        isScrolling: false
+        isScrolling: false,
       });
     }
   }
 
   render() {
-    const { scrollX, scrollY } = this;
+    const { scrollX, scrollY, showScrollBarMobile } = this;
     const mode = getIonMode(this);
     const forceOverscroll = this.shouldForceOverscroll();
-    const transitionShadow = (mode === 'ios' && config.getBoolean('experimentalTransitionShadow', true));
+    const transitionShadow =
+      mode === "ios" && config.getBoolean("experimentalTransitionShadow", true);
 
     this.resize();
 
@@ -315,24 +341,27 @@ export class Content implements ComponentInterface {
       <Host
         class={createColorClasses(this.color, {
           [mode]: true,
-          'content-sizing': hostContext('ion-popover', this.el),
-          'overscroll': forceOverscroll,
+          "content-sizing": hostContext("ion-popover", this.el),
+          overscroll: forceOverscroll,
+          // templarios
+          "show-scroll-bar-modile": showScrollBarMobile,
+          // ! templarios
         })}
         style={{
-          '--offset-top': `${this.cTop}px`,
-          '--offset-bottom': `${this.cBottom}px`,
+          "--offset-top": `${this.cTop}px`,
+          "--offset-bottom": `${this.cBottom}px`,
         }}
       >
         <div id="background-content" part="background"></div>
         <main
           class={{
-            'inner-scroll': true,
-            'scroll-x': scrollX,
-            'scroll-y': scrollY,
-            'overscroll': (scrollX || scrollY) && forceOverscroll
+            "inner-scroll": true,
+            "scroll-x": scrollX,
+            "scroll-y": scrollY,
+            overscroll: (scrollX || scrollY) && forceOverscroll,
           }}
-          ref={el => this.scrollEl = el!}
-          onScroll={(this.scrollEvents) ? ev => this.onScroll(ev) : undefined}
+          ref={(el) => (this.scrollEl = el!)}
+          onScroll={this.scrollEvents ? (ev) => this.onScroll(ev) : undefined}
           part="scroll"
         >
           <slot></slot>
@@ -364,11 +393,11 @@ const getParentElement = (el: any) => {
 };
 
 const getPageElement = (el: HTMLElement) => {
-  const tabs = el.closest('ion-tabs');
+  const tabs = el.closest("ion-tabs");
   if (tabs) {
     return tabs;
   }
-  const page = el.closest('ion-app,ion-page,.ion-page,page-inner');
+  const page = el.closest("ion-app,ion-page,.ion-page,page-inner");
   if (page) {
     return page;
   }

@@ -23,9 +23,15 @@
     transition: background-color 300ms ease-out;
     border: 0;
     width: 100%;
+    outline: initial;
 
     &::-moz-focus-inner {
       border: 0;
+      outline: initial;
+    }
+
+    &:focus {
+      outline: initial;
     }
   }
 
@@ -37,7 +43,7 @@
 
   &__text {
     --color: #{color('neutral', '7')};
-    margin-left: var(--margin-left-text);
+    margin-left: var(--margin-left-text) !important;
   }
 }
 

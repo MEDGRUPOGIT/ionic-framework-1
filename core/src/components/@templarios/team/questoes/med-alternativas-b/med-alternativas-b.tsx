@@ -96,7 +96,10 @@ export class MedAlternativasB implements MedAlternativasInternoInterface {
    */
   @Prop({ mutable: true }) permiteDesmarcar = false;
 
-
+  /**
+   * todo
+   */
+  @Prop({ mutable: true, reflect: true }) mostrarProgressBar = true;
 
   /**
    * todo
@@ -144,8 +147,13 @@ export class MedAlternativasB implements MedAlternativasInternoInterface {
   }
 
   render() {
-    const { dsColor, permiteRiscar, mostraResposta, alternativaSelecionada } =
-      this;
+    const {
+      dsColor,
+      permiteRiscar,
+      mostraResposta,
+      alternativaSelecionada,
+      mostrarProgressBar
+    } = this;
     const exibeAcerto = this.alternativaSelecionada && mostraResposta;
 
     return (
@@ -269,7 +277,7 @@ export class MedAlternativasB implements MedAlternativasInternoInterface {
                 class={`
                 med-alternativas__progress-bar
                 ${
-                  mostraResposta && alternativaSelecionada
+                  mostraResposta && alternativaSelecionada && mostrarProgressBar
                     ? 'med-alternativas__progress-bar--toggle'
                     : ''
                 }

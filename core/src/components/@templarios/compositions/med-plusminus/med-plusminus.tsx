@@ -93,6 +93,8 @@ export class MedPlusminus {
   }
 
   private onClick = (status: PlusMinusStatus) => {
+    if (this.disabled === status) return;
+
     if (
       this.min === undefined ||
       this.max === undefined ||

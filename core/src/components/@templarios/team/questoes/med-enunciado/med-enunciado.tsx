@@ -4,7 +4,7 @@ import { generateMedColor } from '../../../../../@templarios/utilities/color';
 @Component({
   tag: 'med-enunciado',
   styleUrl: 'med-enunciado.scss',
-  shadow: true,
+  scoped: true,
 })
 
 export class MedEnunciado {
