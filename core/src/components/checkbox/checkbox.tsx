@@ -143,7 +143,7 @@ export class Checkbox implements ComponentInterface {
 
     if (mode === 'md') {
       path = indeterminate
-        ? <path d="M2 12H22" part="mark" />
+        ? <path d="M4 12H20" part="mark" />
         : <path d="M1.73,12.91 8.1,19.28 22.79,4.59" part="mark" />;
     }
 

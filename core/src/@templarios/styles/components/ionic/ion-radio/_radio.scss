@@ -1,10 +1,10 @@
 ion-radio {
-  --color: hsl(var(--med-color-brand-4));
+  --color: hsl(var(--med-color-neutral-4));
   --color-checked: hsl(var(--med-color-brand-4));
 
   &:hover,
   &:focus {
-    --color: hsl(var(--med-color-brand-5));
+    --color: hsl(var(--med-color-neutral-95));
     --color-checked: hsl(var(--med-color-brand-5));
   }
 

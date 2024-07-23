@@ -1,8 +1,9 @@
 tp-accordion {
   --margin-bottom: 8px;
+  --tp-background: hsl(var(--med-color-neutral-2));
 
   border-radius: 8px;
-  background: hsl(var(--med-color-neutral-2));
+  background: var(--tp-background);
 
   &:not(:last-child) {
     margin-bottom: var(--margin-bottom);
@@ -36,5 +37,79 @@ tp-accordion {
     ion-item[slot="header"] {
       --background: hsl(var(--med-color-neutral-3));
     }
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(tp-accordion, $color, $i) {
+      --tp-background: #{tp-color($color, $i)};
+
+       // slotted label
+       ion-item .sc-ion-label-ios-h {
+        --color: #{tp-contrast-color($i)};
+      }
+
+      // slotted icon
+      ion-icon {
+        stroke: #{tp-contrast-color($i)};
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(tp-accordion, neutral-#{$i}, $i) {
+    --tp-background: #{tp-neutral($i)};
+
+       // slotted label
+       ion-item .sc-ion-label-ios-h {
+        --color: #{tp-contrast-neutral($i)};
+      }
+
+      // slotted icon
+      ion-icon {
+        stroke: #{tp-contrast-neutral($i)};
+      }
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(tp-accordion, neutral-#{$i}#{5}, $i) {
+    --tp-background: #{tp-neutral($i, 5)};
+
+        // slotted label
+        ion-item .sc-ion-label-ios-h {
+          --color: #{tp-contrast-neutral($i)};
+        }
+
+        // slotted icon
+        ion-icon {
+          stroke: #{tp-contrast-neutral($i)};
+        }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(tp-accordion, fb-#{$color}, $color) {
+    --tp-background: #{tp-feedback($color)};
+
+        // slotted label
+        ion-item .sc-ion-label-ios-h {
+          --color: hsl(var(--med-color-neutral-1));
+        }
+
+        // slotted icon
+        ion-icon {
+          stroke: hsl(var(--med-color-neutral-1));
+        }
   }
 }
