@@ -78,3 +78,15 @@
     }
   }
 }
+
+@for $i from 1 through 10 {
+  .tp-sheet.med-color-neutral-#{$i} {
+    --background: hsl(var(--med-color-neutral-#{$i})) !important;
+  }
+}
+
+@for $i from 1 through 9 {
+  .tp-sheet.med-color-neutral-#{$i}5 {
+    --background: hsl(var(--med-color-neutral-#{$i}5)) !important;
+  }
+}

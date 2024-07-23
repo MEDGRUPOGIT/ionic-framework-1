@@ -6,14 +6,13 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ dsName }) => {
+const Template = ({ dsName, 'ds-color': dsColor }) => {
   return `
     <ion-app>
       <ion-content>
         <tp-accordion-group>
-          <tp-accordion value="first" ds-name=${dsName}>
+          <tp-accordion value="first" ds-name=${dsName} ds-color=${dsColor}>
             <ion-item
-            ds-color="neutral-2"
             radius="s08"
             gap="s16"
             mode="ios"
@@ -28,9 +27,8 @@ const Template = ({ dsName }) => {
             </div>
           </tp-accordion>
 
-          <tp-accordion value="second" ds-name=${dsName}>
+          <tp-accordion value="second" ds-name=${dsName} ds-color=${dsColor}>
             <ion-item
-            ds-color="neutral-2"
             radius="s08"
             gap="s16"
             mode="ios"
@@ -45,9 +43,8 @@ const Template = ({ dsName }) => {
             </div>
           </tp-accordion>
 
-          <tp-accordion value="third" ds-name=${dsName}>
+          <tp-accordion value="third" ds-name=${dsName} ds-color=${dsColor}>
             <ion-item
-            ds-color="neutral-2"
             radius="s08"
             gap="s16"
             mode="ios"
@@ -82,6 +79,16 @@ Default.argTypes = {
     table: {
       type: { summary: "secondary" },
       defaultValue: { summary: "undefined" },
+    },
+  },
+  'ds-color': {
+    options: [undefined, ...Object.values(MedColors)],
+    control: { type: 'select' },
+    description: 'Define a cor do componente.',
+    defaultValue: undefined,
+    table: {
+      type: { summary: Object.values(MedColors).join(' |') },
+      defaultValue: { summary: 'undefined' },
     },
   },
 };

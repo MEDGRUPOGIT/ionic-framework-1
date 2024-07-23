@@ -18,6 +18,11 @@ ion-checkbox {
   &.checkbox-disabled {
     opacity: 0.5;
   }
+
+  &[indeterminate] {
+    --background-checked: transparent;
+    --checkmark-color: hsl(var(--med-color-brand-4));
+  }
 }
 
 //
