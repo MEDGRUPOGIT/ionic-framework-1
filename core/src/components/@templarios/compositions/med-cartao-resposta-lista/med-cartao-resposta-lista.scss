@@ -10,29 +10,33 @@
     // justify-content: center;
     grid-template-columns: repeat(auto-fit, 10vw);
 
-    @include breakpoint-down('xl') {
+    @include breakpoint-down("xl") {
       grid-template-columns: repeat(auto-fit, 10vw);
     }
 
-    @include breakpoint-down('lg') {
+    @include breakpoint-down("lg") {
       grid-template-columns: repeat(auto-fit, 13vw);
     }
 
-    @include breakpoint-down('md') {
+    @include breakpoint-down("md") {
       grid-template-columns: repeat(auto-fit, 14vw);
     }
 
-    @include breakpoint-down('sm') {
+    @include breakpoint-down("sm") {
       grid-template-columns: repeat(auto-fit, 17vw);
     }
 
-    @include breakpoint-down('xs') {
+    @include breakpoint-down("xs") {
       grid-template-columns: repeat(auto-fit, 19vw);
     }
 
     &--flex {
       display: flex;
       flex-wrap: wrap;
+    }
+
+    &--justify-center {
+      justify-content: center;
     }
   }
 }
