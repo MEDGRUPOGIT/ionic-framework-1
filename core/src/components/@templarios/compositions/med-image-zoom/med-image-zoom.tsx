@@ -1,6 +1,7 @@
 import { Component, h, Host, Prop, State } from "@stencil/core";
 import { MedImageZoomItemInterface } from "../../../../@templarios/interfaces/image-zoom.interface";
 import { modalController } from "../../../../utils/overlays";
+import { isPlatform } from "../../../../utils/platform";
 
 @Component({
   tag: "med-image-zoom",
@@ -37,17 +38,31 @@ export class MedImageZoom {
   @Prop({ mutable: true, reflect: true }) initialSlide? = 0;
 
   /**
+   * Zoom maximo na imagem em desktop
+   */
+  @Prop({ reflect: true }) maxRatioDesktop = 2;
+
+  /**
+   * Zoom maximo na imagem em Mobile
+   */
+  @Prop({ reflect: true }) maxRatioMobile = 4;
+
+  /**
    * todo
    */
   @State() slider!: any;
 
-  defaultMaxRatio = 4;
   aplicandoZoom = false;
 
   /**
    * todo
    */
-  @State() sliderOpts = this.getSliderOpts(this.defaultMaxRatio);
+  @State() sliderOpts: any;
+
+  componentWillLoad(){
+    const isDesktop = isPlatform('desktop');
+    this.sliderOpts = this.getSliderOpts(isDesktop ? +this.maxRatioDesktop : +this.maxRatioMobile);
+  }
 
   getSliderOpts(maxRatio: number) {
     const sliderOpts = {
