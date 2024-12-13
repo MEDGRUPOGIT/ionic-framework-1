@@ -19,9 +19,13 @@ export class MedFontZoom {
    */
   @Prop({mutable: true}) value: MedFontSize = MedFontSize.XS;
 
+  /**
+  * todo
+   */
+  @Prop({ reflect: true }) step = false;
+
   readonly min: number = 1;
   readonly max: number = 5;
-  readonly step: number = 1;
 
   fontSizeToValue = (fontSize: MedFontSize): RangeValue => {
     switch (fontSize) {
@@ -86,8 +90,10 @@ export class MedFontZoom {
           onIonChange={(ev) => this.onRangeChange(ev.detail.value)}
           min={this.min}
           max={this.max}
-          step={this.step}
+          step={this.step ? (this.max - this.min) / 4 : 1}
+          snaps={this.step}
           value={this.fontSizeToValue(this.value)}
+          class="container"
         >
           <ion-icon class="med-icon" slot="start" name="med-fontemenor"></ion-icon>
           <ion-icon class="med-icon" slot="end" name="med-fontemaior"></ion-icon>
