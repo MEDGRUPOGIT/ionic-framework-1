@@ -48,11 +48,6 @@ export class MedImageZoom {
   @Prop({ reflect: true }) maxRatioMobile = 4;
 
   /**
-   * Define o ajuste no bug da sobreposição do botão de zoom sobre a imagem (somente ios)
-   */
-    @Prop({ reflect: true }) fixButtonOverlap = false;
-
-  /**
    * Referência ao componente no DOM
    */
   @Element() host!: HTMLElement;
@@ -80,7 +75,7 @@ export class MedImageZoom {
 
   updateZoomButton() {
     const zoomButtonContainer = this.host.querySelector('.zoom-button-container') as HTMLElement
-    if(zoomButtonContainer && this.fixButtonOverlap){
+    if(zoomButtonContainer){
       zoomButtonContainer.style.marginRight = '1px';
     }
   }
