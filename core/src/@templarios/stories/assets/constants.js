@@ -118,6 +118,7 @@ export const MedIcons = [
   "med-direita",
 
   "med-discursiva",
+  "med-discursiva2",
   "med-dislike",
   "med-download-mobile",
   "med-download",
