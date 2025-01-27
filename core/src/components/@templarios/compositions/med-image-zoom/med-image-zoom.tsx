@@ -76,7 +76,7 @@ export class MedImageZoom {
   updateZoomButton() {
     const zoomButtonContainer = this.host.querySelector('.zoom-button-container') as HTMLElement
     if(zoomButtonContainer){
-      zoomButtonContainer.style.marginRight = '1px';
+      zoomButtonContainer.classList.add('zoom-button-container--will-change');
     }
   }
 
